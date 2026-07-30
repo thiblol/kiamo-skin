@@ -1,4 +1,5 @@
 ---
+import Button from './Button.astro';
 import NapBlock from './NapBlock.astro';
 import { business } from '../config/business';
 import { treatmentLinks, primaryNav, CTA_LABEL } from '../config/nav';
@@ -11,14 +12,7 @@ const year = 2026;
     <div>
       <p class="font-display text-[1.5rem] uppercase tracking-[0.14em]">Kiamo</p>
       <p class="t-eyebrow mt-3 text-porcelain/60">Skin &amp; Scalp Health</p>
-      <a
-        href={business.bookingUrl}
-        target="_blank"
-        rel="noopener"
-        class="t-button mt-9 inline-flex rounded-full bg-rose px-[32px] py-[15px] text-porcelain transition-colors duration-300 hover:bg-rose-deep"
-      >
-        {CTA_LABEL}
-      </a>
+      <Button href={business.bookingUrl} external class="mt-9">{CTA_LABEL}</Button>
     </div>
 
     <div>

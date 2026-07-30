@@ -22,3 +22,14 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# source image renders — 45MB of originals; the site imports from src/assets/
+website-images/
+
+# editor + agent local state
+.vscode/
+.claude/
+
+# raw research — contains unpublishable client identifiers
+docs/research/
+local_seo_info/

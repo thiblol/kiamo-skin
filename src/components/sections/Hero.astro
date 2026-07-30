@@ -23,16 +23,20 @@ const wideAvif = await getImage({
 const fallback = await getImage({ src: heroWide, format: 'jpeg', width: 1920, quality: 72 });
 ---
 
-<section class="relative isolate min-h-[92svh] overflow-hidden md:min-h-[88svh]">
-  {/* Spec §4.1 sets image overlay opacity to 0, and on the wide desktop crop that
-      holds — the copy sits on empty wall. The tall mobile crop puts its wall at the
-      TOP and the subject across the bottom, exactly where the copy goes, so ink text
-      landed on skin and linen and stopped being readable on a phone.
+{/*
+  Two compositions, not one composition squeezed.
 
-      The mobile fix is a porcelain fade, not a dark scrim: the bottom of that frame
-      is already cream linen, so fading it into the page colour is close to invisible
-      while giving the text full contrast. Desktop keeps overlay 0. */}
-  <picture>
+  Desktop (≥640px): copy overlays the wide frame, which has empty wall on the left
+  exactly where the text sits. Overlay opacity stays 0 per spec §4.1.
+
+  Mobile (<640px): the tall crop puts its wall at the TOP and the subject across the
+  bottom — the copy's only landing zone. Overlaying it meant either unreadable text
+  or a scrim that washed out the photograph. Splitting instead gives the image a
+  clean, uncovered frame and the copy full contrast on porcelain. No scrim, no
+  compromise on either half.
+*/}
+<section class="relative isolate overflow-hidden">
+  <picture class="block h-[56svh] w-full sm:absolute sm:inset-0 sm:h-full">
     <source media="(max-width: 639px)" srcset={tallAvif.srcSet.attribute} type="image/avif" />
     <source media="(min-width: 640px)" srcset={wideAvif.srcSet.attribute} type="image/avif" />
     <img
@@ -42,53 +46,29 @@ const fallback = await getImage({ src: heroWide, format: 'jpeg', width: 1920, qu
       alt=""
       fetchpriority="high"
       decoding="async"
-      class="ken-burns absolute inset-0 size-full object-cover"
+      class="ken-burns size-full object-cover"
     />
   </picture>
 
-  <div class="hero-fade absolute inset-x-0 bottom-0 h-[70%] sm:hidden" aria-hidden="true"></div>
-
   <div
-    class="wrap relative flex min-h-[92svh] flex-col justify-end pt-[60px] pb-20 md:min-h-[88svh] md:pb-28"
+    class="wrap relative flex flex-col justify-end pt-12 pb-16 sm:min-h-[92svh] sm:pt-[60px] sm:pb-20 md:min-h-[88svh] md:pb-28"
   >
-    <p class="t-eyebrow text-ink">San Diego · {business.address.neighborhood}</p>
-    <h1 class="t-hero mt-5 max-w-[18ch]">Skin that behaves like itself again.</h1>
-    <p class="t-body mt-6">
+    <p class="t-eyebrow text-ink-soft sm:text-ink">San Diego · {business.address.neighborhood}</p>
+    <h1 class="t-hero mt-4 max-w-[16ch] sm:mt-5 sm:max-w-[18ch]">
+      Skin that behaves like itself again.
+    </h1>
+    <p class="t-body mt-5 max-w-[46ch] sm:mt-6">
       Corrective facials and scalp therapy for acne, scarring and pigmentation — built around
       how your skin actually functions.
     </p>
-    {/* On a phone two pills side by side read as a slab of chrome, so the secondary
-        action drops to a text link and only the booking CTA keeps its fill. Both
-        return to pills from sm up, where there is room. */}
-    <div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-4">
+    <div class="mt-8 flex flex-wrap items-center gap-3 sm:mt-9">
       <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
-      <Button variant="ghost" href="/treatments" class="hidden sm:inline-flex">
-        View treatments
-      </Button>
-      <a
-        href="/treatments"
-        class="t-button tracking-[0.11em] border-b border-ink pb-1 sm:hidden"
-      >
-        View treatments
-      </a>
+      <Button variant="ghost" href="/treatments">View treatments</Button>
     </div>
   </div>
 </section>
 
 <style>
-  /* Weighted stops rather than a linear ramp: solid where the copy actually sits,
-     then away fast so the frame is untouched above the headline. */
-  .hero-fade {
-    background: linear-gradient(
-      to top,
-      var(--color-porcelain) 0%,
-      var(--color-porcelain) 30%,
-      color-mix(in oklab, var(--color-porcelain) 82%, transparent) 52%,
-      color-mix(in oklab, var(--color-porcelain) 40%, transparent) 76%,
-      transparent 100%
-    );
-  }
-
   /* Spec §9: ken-burns scale 1 → 1.06 over 20s. */
   .ken-burns {
     animation: ken-burns 20s ease-out forwards;
