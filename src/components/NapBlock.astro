@@ -1,0 +1,45 @@
+---
+import { business } from '../config/business';
+
+interface Props {
+  /** `dark` inverts type for the espresso footer. */
+  tone?: 'light' | 'dark';
+  showCancellation?: boolean;
+}
+
+const { tone = 'light', showCancellation = false } = Astro.props;
+
+const muted = tone === 'dark' ? 'text-porcelain/70' : 'text-ink-soft';
+const link = tone === 'dark' ? 'hover:text-blush' : 'hover:text-rose';
+
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  `${business.name}, ${business.address.full}`,
+)}`;
+---
+
+<address class="not-italic">
+  <a href={mapsUrl} target="_blank" rel="noopener" class={`t-body ${link}`}>
+    {business.address.street}<br />
+    {business.address.city}, {business.address.region} {business.address.postalCode}
+  </a>
+
+  <p class={`t-meta mt-3 ${muted}`}>{business.address.neighborhood}</p>
+
+  <p class="t-body mt-5">
+    <a href={business.phone.href} class={link}>{business.phone.display}</a>
+  </p>
+  <p class="t-body">
+    <a href={`mailto:${business.email}`} class={link}>{business.email}</a>
+  </p>
+
+  {/* No opening hours: none were ever verified. This is the honest substitute. */}
+  <p class={`t-meta mt-5 ${muted}`}>
+    {business.visit.appointmentOnly} · {business.visit.parking}
+  </p>
+
+  {
+    showCancellation && (
+      <p class={`t-body mt-5 text-[0.9375rem] ${muted}`}>{business.cancellation}</p>
+    )
+  }
+</address>

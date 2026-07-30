@@ -1,0 +1,41 @@
+---
+interface Props {
+  as?: 'div' | 'section' | 'li' | 'article' | 'figure';
+  class?: string;
+}
+
+const { as: Tag = 'div', class: className = '' }: Props = Astro.props;
+---
+
+<Tag data-reveal class={className}><slot /></Tag>
+
+<script>
+  // Spec §9: y 24px → 0, 600ms. `power2.out` is GSAP's closest named ease to the
+  // spec's cubic-bezier(0,0,.3,1); GSAP has no cubic-bezier string, and pulling in
+  // CustomEase for a 24px move is not worth the payload.
+  const els = document.querySelectorAll<HTMLElement>('[data-reveal]');
+
+  if (els.length) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      els.forEach((el) => (el.style.opacity = '1'));
+    } else {
+      const { gsap } = await import('gsap');
+      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+      gsap.registerPlugin(ScrollTrigger);
+
+      els.forEach((el) => {
+        gsap.fromTo(
+          el,
+          { opacity: 0, y: 24 },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.6,
+            ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 88%', once: true },
+          },
+        );
+      });
+    }
+  }
+</script>

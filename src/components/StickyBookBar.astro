@@ -1,0 +1,35 @@
+---
+import { business } from '../config/business';
+import { CTA_LABEL } from '../config/nav';
+---
+
+<div
+  id="sticky-book"
+  data-visible="false"
+  class="fixed inset-x-0 bottom-0 z-30 translate-y-full transition-transform duration-[400ms] ease-out data-[visible=true]:translate-y-0 sm:hidden"
+  style="padding-bottom: env(safe-area-inset-bottom);"
+>
+  <a
+    href={business.bookingUrl}
+    target="_blank"
+    rel="noopener"
+    class="t-button flex h-[56px] items-center justify-center bg-rose text-porcelain"
+  >
+    {CTA_LABEL}
+  </a>
+</div>
+
+<script>
+  // "Past the hero" is approximated as 60% of the first viewport. Every page with
+  // a hero is full-bleed, so this is stable without coupling the bar to an element
+  // inner pages do not have.
+  const bar = document.getElementById('sticky-book');
+  if (bar) {
+    const sync = () => {
+      bar.dataset.visible = String(window.scrollY > window.innerHeight * 0.6);
+    };
+    sync();
+    window.addEventListener('scroll', sync, { passive: true });
+    window.addEventListener('resize', sync, { passive: true });
+  }
+</script>

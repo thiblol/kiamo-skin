@@ -1,0 +1,133 @@
+---
+import { primaryNav, treatmentLinks, CTA_LABEL } from '../config/nav';
+import { business } from '../config/business';
+---
+
+<div id="menu-overlay" hidden class="fixed inset-0 z-50 overflow-y-auto bg-blush">
+  <div class="wrap flex h-[60px] items-center justify-between">
+    <span class="font-display text-[1.25rem] uppercase tracking-[0.14em]">Kiamo</span>
+    <button type="button" id="menu-close" class="flex size-11 items-center justify-center">
+      <span class="sr-only">Close menu</span>
+      <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M1 1l14 14M15 1L1 15" stroke="currentColor" stroke-width="1"></path>
+      </svg>
+    </button>
+  </div>
+
+  <nav class="wrap pt-12 pb-24" aria-label="Main">
+    <ul class="m-0 list-none p-0">
+      {
+        primaryNav.map((item, i) => (
+          <li class="stagger border-b border-line" style={`--i:${i}`}>
+            <a href={item.href} class="t-h3 block py-5">
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="t-eyebrow mt-12 text-ink-soft">Treatments</p>
+    <ul class="m-0 mt-4 list-none p-0">
+      {
+        treatmentLinks.map((item, i) => (
+          <li class="stagger" style={`--i:${i + primaryNav.length}`}>
+            <a href={item.href} class="t-body block py-2 hover:text-rose">
+              {item.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <a
+      href={business.bookingUrl}
+      target="_blank"
+      rel="noopener"
+      class="t-button mt-12 inline-flex rounded-full bg-rose px-[32px] py-[15px] text-porcelain"
+    >
+      {CTA_LABEL}
+    </a>
+  </nav>
+</div>
+
+<style>
+  /* Spec §6 §1: links stagger in at 60ms. */
+  .stagger {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  #menu-overlay[data-open='true'] .stagger {
+    animation: stagger-in 420ms cubic-bezier(0, 0, 0.3, 1) forwards;
+    animation-delay: calc(var(--i) * 60ms);
+  }
+
+  @keyframes stagger-in {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .stagger {
+      opacity: 1;
+      transform: none;
+    }
+
+    #menu-overlay[data-open='true'] .stagger {
+      animation: none;
+    }
+  }
+</style>
+
+<script>
+  const overlay = document.getElementById('menu-overlay');
+  const openBtn = document.getElementById('menu-open');
+  const closeBtn = document.getElementById('menu-close');
+
+  if (overlay && openBtn && closeBtn) {
+    const focusable = () => [...overlay.querySelectorAll<HTMLElement>('a[href], button')];
+
+    const open = () => {
+      overlay.hidden = false;
+      overlay.dataset.open = 'true';
+      openBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+      focusable()[0]?.focus();
+    };
+
+    const close = () => {
+      overlay.hidden = true;
+      delete overlay.dataset.open;
+      openBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+      openBtn.focus();
+    };
+
+    openBtn.addEventListener('click', open);
+    closeBtn.addEventListener('click', close);
+
+    document.addEventListener('keydown', (e) => {
+      if (overlay.hidden) return;
+      if (e.key === 'Escape') {
+        close();
+        return;
+      }
+      // Trap focus inside the overlay while it is open.
+      if (e.key !== 'Tab') return;
+      const items = focusable();
+      if (!items.length) return;
+      const first = items[0];
+      const last = items[items.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    });
+  }
+</script>

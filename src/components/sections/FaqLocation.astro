@@ -1,0 +1,79 @@
+---
+import { Image } from 'astro:assets';
+import NapBlock from '../NapBlock.astro';
+import Button from '../Button.astro';
+import FaqSchema from '../schema/FaqSchema.astro';
+import { faqs } from '../../data/faqs';
+import { business } from '../../config/business';
+import { CTA_LABEL } from '../../config/nav';
+import studio from '../../assets/studio-interior.jpg';
+
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  `${business.name}, ${business.address.full}`,
+)}`;
+---
+
+<FaqSchema />
+
+<section class="bg-ivory">
+  <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.8fr] md:gap-20">
+    <div>
+      <p class="t-eyebrow text-ink-soft">Before you book</p>
+      <h2 class="t-h2 mt-5">Questions</h2>
+
+      <dl class="mt-12 m-0">
+        {
+          faqs.map((faq) => (
+            <div class="border-b border-line">
+              <details class="group">
+                <summary
+                  class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]"
+                >
+                  <dt>{faq.question}</dt>
+                  <span
+                    aria-hidden="true"
+                    class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                  >
+                    +
+                  </span>
+                </summary>
+                <dd class="t-body m-0 pb-6 text-[0.9375rem]">{faq.answer}</dd>
+              </details>
+            </div>
+          ))
+        }
+      </dl>
+    </div>
+
+    <div>
+      <p class="t-eyebrow text-ink-soft">The studio</p>
+      <h2 class="t-h2 mt-5 text-[2rem] md:text-[2.5rem]">{business.address.neighborhood}</h2>
+
+      <a href={mapsUrl} target="_blank" rel="noopener" class="mt-8 block">
+        <Image
+          src={studio}
+          alt="Inside the KIAMO Skin treatment room in Mission Hills, San Diego"
+          widths={[400, 800, 1200]}
+          sizes="(min-width: 840px) 36vw, 90vw"
+          loading="lazy"
+          class="aspect-4/3 w-full object-cover"
+        />
+      </a>
+
+      <div class="mt-8">
+        <NapBlock tone="light" showCancellation />
+      </div>
+
+      <div class="mt-9">
+        <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Safari still needs this to drop the disclosure triangle. */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

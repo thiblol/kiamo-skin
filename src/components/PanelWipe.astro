@@ -1,0 +1,45 @@
+---
+interface Props {
+  class?: string;
+  /** Direction the panel exits. */
+  from?: 'left' | 'right';
+}
+
+const { class: className = '', from = 'left' } = Astro.props;
+---
+
+<div data-wipe data-wipe-from={from} class={`relative overflow-hidden ${className}`}>
+  <slot />
+  <div data-wipe-panel aria-hidden="true" class="pointer-events-none absolute inset-0 bg-blush">
+  </div>
+</div>
+
+<script>
+  // Spec §9 signature move: --blush panel slides off images on scroll-in,
+  // 900ms power3.inOut — echoes the logo field.
+  const wraps = document.querySelectorAll<HTMLElement>('[data-wipe]');
+
+  if (wraps.length) {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      wraps.forEach((w) => {
+        const panel = w.querySelector<HTMLElement>('[data-wipe-panel]');
+        if (panel) panel.style.display = 'none';
+      });
+    } else {
+      const { gsap } = await import('gsap');
+      const { ScrollTrigger } = await import('gsap/ScrollTrigger');
+      gsap.registerPlugin(ScrollTrigger);
+
+      wraps.forEach((w) => {
+        const panel = w.querySelector<HTMLElement>('[data-wipe-panel]');
+        if (!panel) return;
+        gsap.to(panel, {
+          xPercent: w.dataset.wipeFrom === 'right' ? 100 : -100,
+          duration: 0.9,
+          ease: 'power3.inOut',
+          scrollTrigger: { trigger: w, start: 'top 85%', once: true },
+        });
+      });
+    }
+  }
+</script>

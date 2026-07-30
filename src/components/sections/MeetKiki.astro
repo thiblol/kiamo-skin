@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets';
+import Reveal from '../Reveal.astro';
+import PanelWipe from '../PanelWipe.astro';
+import Button from '../Button.astro';
+import portrait from '../../assets/kiki-portrait.jpg';
+import { business } from '../../config/business';
+
+/* All copy here is pronoun-free — spec §2. Kiki has never published pronouns,
+   and the guard suite fails the build on she/her. */
+---
+
+<Reveal as="section" class="bg-blush">
+  <div class="wrap section-y grid items-center gap-12 md:grid-cols-[0.85fr_1fr] md:gap-20">
+    <PanelWipe class="aspect-3/4">
+      <Image
+        src={portrait}
+        alt="Kiki, licensed esthetician and owner of KIAMO Skin, in the treatment room"
+        widths={[400, 800, 1600]}
+        sizes="(min-width: 840px) 40vw, 90vw"
+        loading="lazy"
+        class="size-full object-cover"
+      />
+    </PanelWipe>
+
+    <div>
+      <p class="t-eyebrow text-ink-soft">Meet {business.ownerName}</p>
+      <h2 class="t-h2 mt-5 max-w-[22ch]">Trust the process. Your skin can heal.</h2>
+
+      <p class="t-body mt-7">
+        {business.ownerName} brings {business.experience} of work in acne, skin barrier damage,
+        pigmentation and age management, licensed and certified through the California State
+        Board of Barbering &amp; Cosmetology. The specialism is melanin-rich skin — protocols
+        chosen for how Black and brown skin actually behaves, not adapted after the fact.
+      </p>
+
+      <p class="t-body mt-5">
+        At KIAMO Skin, we are proud to be a Black-owned business committed to creating an
+        inclusive space where everyone feels seen, valued, and cared for. Education, intention,
+        and consistency are at the core of everything we do.
+      </p>
+
+      <div class="mt-9">
+        <Button variant="ghost" href="/about">More about the studio</Button>
+      </div>
+    </div>
+  </div>
+</Reveal>

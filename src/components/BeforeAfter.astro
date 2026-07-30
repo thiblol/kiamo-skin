@@ -1,0 +1,120 @@
+---
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+
+interface Props {
+  before: ImageMetadata;
+  after: ImageMetadata;
+  beforeAlt: string;
+  afterAlt: string;
+  id: string;
+}
+
+const { before, after, beforeAlt, afterAlt, id } = Astro.props;
+---
+
+{/* Without JS the "before" layer and the slider are hidden by CSS, leaving the
+    "after" frame and its caption — a static, honest fallback. */}
+<div class="ba" data-ba style="--pos:55%">
+  <div class="relative aspect-square overflow-hidden">
+    <Image
+      src={after}
+      alt={afterAlt}
+      widths={[400, 800, 1200]}
+      sizes="(min-width: 840px) 45vw, 90vw"
+      loading="lazy"
+      class="absolute inset-0 size-full object-cover"
+    />
+    <div class="ba-before absolute inset-0">
+      <Image
+        src={before}
+        alt={beforeAlt}
+        widths={[400, 800, 1200]}
+        sizes="(min-width: 840px) 45vw, 90vw"
+        loading="lazy"
+        class="absolute inset-0 size-full object-cover"
+      />
+    </div>
+
+    <div class="ba-divider" aria-hidden="true"></div>
+
+    <p class="t-meta ba-label absolute top-4 left-4 bg-porcelain/85 px-2 py-1">Before</p>
+    <p class="t-meta absolute top-4 right-4 bg-porcelain/85 px-2 py-1">After</p>
+  </div>
+
+  <label class="ba-control mt-4 block">
+    <span class="t-meta">Drag to compare</span>
+    <input
+      type="range"
+      min="0"
+      max="100"
+      value="55"
+      id={id}
+      class="mt-2 w-full accent-[var(--color-rose)]"
+      aria-label="Reveal the before and after image"
+    />
+  </label>
+</div>
+
+<style>
+  .ba-before {
+    display: none;
+    clip-path: inset(0 calc(100% - var(--pos)) 0 0);
+  }
+
+  .ba-divider,
+  .ba-label,
+  .ba-control {
+    display: none;
+  }
+
+  /* Only enable the comparison once JS can drive it. */
+  :global([data-js]) .ba-before,
+  :global([data-js]) .ba-divider,
+  :global([data-js]) .ba-label,
+  :global([data-js]) .ba-control {
+    display: block;
+  }
+
+  .ba-divider {
+    position: absolute;
+    inset-block: 0;
+    left: var(--pos);
+    width: 1px;
+    background: var(--color-porcelain);
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 0.08);
+  }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-ba]').forEach((root) => {
+    const input = root.querySelector<HTMLInputElement>('input[type="range"]');
+    if (!input) return;
+
+    const sync = () => root.style.setProperty('--pos', `${input.value}%`);
+    input.addEventListener('input', sync);
+    sync();
+
+    // Dragging anywhere on the image drives the same input, so the native range
+    // keeps ownership of keyboard and ARIA state.
+    const frame = root.firstElementChild as HTMLElement | null;
+    if (!frame) return;
+
+    let dragging = false;
+    const move = (clientX: number) => {
+      const rect = frame.getBoundingClientRect();
+      const pct = ((clientX - rect.left) / rect.width) * 100;
+      input.value = String(Math.max(0, Math.min(100, Math.round(pct))));
+      sync();
+    };
+
+    frame.addEventListener('pointerdown', (e) => {
+      dragging = true;
+      frame.setPointerCapture(e.pointerId);
+      move(e.clientX);
+    });
+    frame.addEventListener('pointermove', (e) => dragging && move(e.clientX));
+    frame.addEventListener('pointerup', () => (dragging = false));
+    frame.addEventListener('pointercancel', () => (dragging = false));
+  });
+</script>

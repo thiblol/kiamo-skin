@@ -1,0 +1,74 @@
+---
+import { Image } from 'astro:assets';
+import Reveal from '../Reveal.astro';
+import PanelWipe from '../PanelWipe.astro';
+import pigmentation from '../../assets/concern-pigmentation.jpg';
+import acne from '../../assets/concern-acne.jpg';
+import barrier from '../../assets/concern-barrier.jpg';
+import scalp from '../../assets/concern-scalp.jpg';
+
+/**
+ * Spec §10: tiles show the RESOLVED state. The label names the concern; the image
+ * shows where treatment gets you. Visible damage appears only in the matched
+ * before/after pairs further down the page.
+ *
+ * Alt text therefore describes what is actually in the frame, not the label.
+ */
+const tiles = [
+  {
+    label: 'Pigmentation & Melasma',
+    href: '/treatments/lira-peels',
+    image: pigmentation,
+    alt: 'Close portrait of even, clear skin in warm natural light',
+  },
+  {
+    label: 'Acne & Scarring',
+    href: '/treatments/procell-microchanneling',
+    image: acne,
+    alt: 'Profile portrait of smooth, healthy cheek and jawline',
+  },
+  {
+    label: 'Barrier & Dehydration',
+    href: '/treatments/dmk-enzyme-therapy',
+    image: barrier,
+    alt: 'Side-lit portrait of calm, well-hydrated skin with visible natural texture',
+  },
+  {
+    label: 'Scalp Health',
+    href: '/treatments/keravive-scalp',
+    image: scalp,
+    alt: 'Detail of a healthy scalp and hairline at the part',
+  },
+];
+---
+
+<section class="bg-porcelain">
+  <div class="wrap section-y">
+    <p class="t-eyebrow text-ink-soft">Where to start</p>
+    <h2 class="t-h2 mt-5 max-w-[24ch]">Tell us what your skin is doing.</h2>
+
+    <ul class="mt-14 grid list-none grid-cols-2 gap-x-5 gap-y-10 p-0 md:grid-cols-4 md:gap-x-8">
+      {
+        tiles.map((tile, i) => (
+          <Reveal as="li">
+            <a href={tile.href} class="group block">
+              <PanelWipe from={i % 2 === 0 ? 'left' : 'right'} class="aspect-3/4">
+                <Image
+                  src={tile.image}
+                  alt={tile.alt}
+                  widths={[400, 800, 1200]}
+                  sizes="(min-width: 840px) 22vw, 45vw"
+                  loading="lazy"
+                  class="size-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105"
+                />
+              </PanelWipe>
+              <p class="t-service mt-5 text-[1rem] transition-colors duration-300 group-hover:text-rose">
+                {tile.label}
+              </p>
+            </a>
+          </Reveal>
+        ))
+      }
+    </ul>
+  </div>
+</section>

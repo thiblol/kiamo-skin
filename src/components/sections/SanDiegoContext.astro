@@ -1,0 +1,74 @@
+---
+import { Image } from 'astro:assets';
+import Reveal from '../Reveal.astro';
+import uv from '../../assets/journal-uv.jpg';
+import water from '../../assets/journal-water.jpg';
+import barrier from '../../assets/concern-barrier.jpg';
+
+/**
+ * Spec §8 asks for three local-context columns each linking onward. The journal
+ * only has two articles (§5), so the Santa Ana column links to the treatment that
+ * actually answers it — DMK enzyme therapy for barrier repair — rather than a
+ * stub article. Flagged to the client in CLIENT-INPUTS.md.
+ */
+const columns = [
+  {
+    heading: 'June gloom is not sun protection',
+    body: 'The marine layer scatters light, it does not stop it. UV still reaches 8–10 on the index through overcast mornings, which is exactly how pigmentation quietly deepens in a city that feels mild.',
+    href: '/journal/june-gloom-is-not-sun-protection',
+    linkLabel: 'Read the article',
+    image: uv,
+    alt: 'Overcast San Diego coastline under a bright marine layer',
+  },
+  {
+    heading: 'Hard water, dry scalp',
+    body: 'San Diego water runs around 16 grains per gallon — hard by any measure. Mineral residue builds on the scalp and hair, which shows up as flaking, itch and product that stops working.',
+    href: '/journal/san-diego-hard-water-and-your-scalp',
+    linkLabel: 'Read the article',
+    image: water,
+    alt: 'Water falling over a hand, lit from the side',
+  },
+  {
+    heading: 'Santa Ana winds and your barrier',
+    body: 'Humidity can drop into single digits within hours. A compromised barrier loses water faster than it can hold it, and skin that was calm all summer starts stinging in October.',
+    href: '/treatments/dmk-enzyme-therapy',
+    linkLabel: 'See barrier repair',
+    image: barrier,
+    alt: 'Portrait in dry, warm light with visible natural skin texture',
+  },
+];
+---
+
+<section class="bg-espresso text-porcelain">
+  <div class="wrap section-y">
+    <p class="t-eyebrow text-porcelain/60">Treating skin in San Diego</p>
+    <h2 class="t-h2 mt-5 max-w-[26ch]">
+      Your climate is part of your protocol.
+    </h2>
+
+    <ul class="mt-14 grid list-none gap-12 p-0 md:grid-cols-3 md:gap-10">
+      {
+        columns.map((col) => (
+          <Reveal as="li">
+            <Image
+              src={col.image}
+              alt={col.alt}
+              widths={[400, 800]}
+              sizes="(min-width: 840px) 30vw, 90vw"
+              loading="lazy"
+              class="aspect-4/3 w-full object-cover"
+            />
+            <h3 class="t-h3 mt-7 text-[1.375rem] md:text-[1.625rem]">{col.heading}</h3>
+            <p class="t-body mt-4 text-[0.9375rem] text-porcelain/75">{col.body}</p>
+            <a
+              href={col.href}
+              class="t-button mt-6 inline-block border-b border-porcelain/40 pb-1 hover:border-porcelain"
+            >
+              {col.linkLabel}
+            </a>
+          </Reveal>
+        ))
+      }
+    </ul>
+  </div>
+</section>

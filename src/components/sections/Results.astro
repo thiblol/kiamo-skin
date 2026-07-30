@@ -1,0 +1,65 @@
+---
+import Reveal from '../Reveal.astro';
+import BeforeAfter from '../BeforeAfter.astro';
+import { testimonials } from '../../data/testimonials';
+import pigBefore from '../../assets/result-pigmentation-before.jpg';
+import pigAfter from '../../assets/result-pigmentation-after.jpg';
+import scalpBefore from '../../assets/result-scalp-before.jpg';
+import scalpAfter from '../../assets/result-scalp-after.jpg';
+---
+
+<section class="bg-porcelain">
+  <div class="wrap section-y">
+    <p class="t-eyebrow text-ink-soft">Progress, not promises</p>
+    <h2 class="t-h2 mt-5 max-w-[26ch]">Skin doesn’t change overnight. It changes with consistency.</h2>
+
+    <div class="mt-14 grid gap-12 md:grid-cols-2 md:gap-16">
+      <Reveal>
+        <BeforeAfter
+          id="ba-pigmentation"
+          before={pigBefore}
+          after={pigAfter}
+          beforeAlt="Cheek with uneven tone and dark patches before a course of treatment"
+          afterAlt="The same cheek with noticeably more even tone after a course of treatment"
+        />
+        <p class="t-service mt-6 text-[1rem]">Pigmentation &amp; tone</p>
+        <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">
+          A course of Lira peels paired with home care.
+        </p>
+      </Reveal>
+
+      <Reveal>
+        <BeforeAfter
+          id="ba-scalp"
+          before={scalpBefore}
+          after={scalpAfter}
+          beforeAlt="Dry, flaking scalp at the part before treatment"
+          afterAlt="The same scalp looking clear and calm after treatment"
+        />
+        <p class="t-service mt-6 text-[1rem]">Scalp &amp; density</p>
+        <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">
+          HydraFacial Keravive across a multi-session plan.
+        </p>
+      </Reveal>
+    </div>
+
+    {/* Required disclaimer — these frames are illustrative renders for the demo,
+        not photographs of clients. Spec §10. */}
+    <p class="t-meta mt-8 max-w-[60ch] text-ink-soft">
+      Results vary from person to person. Images are illustrative and do not depict a specific
+      client outcome.
+    </p>
+
+    <ul class="mt-20 grid list-none gap-10 p-0 md:grid-cols-3 md:gap-12">
+      {
+        testimonials.map((t) => (
+          <Reveal as="li">
+            <blockquote class="t-h3 text-[1.375rem] md:text-[1.5rem]">“{t.quote}”</blockquote>
+            {/* No stars, no averages — spec §2 forbids any rating display. */}
+            <p class="t-meta mt-5">— {t.attribution}</p>
+          </Reveal>
+        ))
+      }
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,83 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import NapBlock from '../components/NapBlock.astro';
+import studio from '../assets/studio-interior.jpg';
+import { business } from '../config/business';
+import { CTA_LABEL } from '../config/nav';
+
+const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+  `${business.name}, ${business.address.full}`,
+)}`;
+---
+
+<BaseLayout
+  title="Contact KIAMO Skin — Mission Hills, San Diego"
+  description="Contact KIAMO Skin at 3067 Reynard Way, San Diego, CA 92103. Call (310) 595-0872 or request an appointment online. Appointment-only, free parking."
+>
+  <header class="bg-blush">
+    <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+      <p class="t-eyebrow text-ink-soft">Contact</p>
+      <h1 class="t-h2 mt-6 max-w-[20ch] text-[2.5rem] md:text-[4rem]">Come and see us.</h1>
+      <p class="t-body mt-7 max-w-[62ch]">
+        The studio is in {business.address.neighborhood}, minutes from Hillcrest, Bankers Hill and
+        Little Italy, with free parking on site.
+      </p>
+    </div>
+  </header>
+
+  <section class="bg-porcelain">
+    <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_1fr] md:gap-20">
+      <div>
+        <NapBlock tone="light" showCancellation />
+
+        <dl class="mt-12 m-0 space-y-8">
+          <div class="border-t border-line pt-6">
+            <dt class="t-eyebrow text-ink-soft">Phone</dt>
+            <dd class="t-service m-0 mt-3 text-[1.125rem]">
+              <a href={business.phone.href} class="hover:text-rose">{business.phone.display}</a>
+            </dd>
+          </div>
+          <div class="border-t border-line pt-6">
+            <dt class="t-eyebrow text-ink-soft">Email</dt>
+            <dd class="t-service m-0 mt-3 text-[1.125rem]">
+              <a href={`mailto:${business.email}`} class="break-all hover:text-rose"
+                >{business.email}</a
+              >
+            </dd>
+          </div>
+          <div class="border-t border-line pt-6">
+            <dt class="t-eyebrow text-ink-soft">Instagram</dt>
+            <dd class="t-service m-0 mt-3 text-[1.125rem]">
+              <a href={business.instagram.url} target="_blank" rel="noopener" class="hover:text-rose"
+                >{business.instagram.handle}</a
+              >
+            </dd>
+          </div>
+        </dl>
+
+        <div class="mt-12 flex flex-wrap gap-3">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <Button variant="ghost" href={mapsUrl}>Get directions</Button>
+        </div>
+      </div>
+
+      <div>
+        <a href={mapsUrl} target="_blank" rel="noopener" class="block">
+          <Image
+            src={studio}
+            alt="Inside the KIAMO Skin treatment room in Mission Hills, San Diego"
+            widths={[400, 800, 1200]}
+            sizes="(min-width: 840px) 45vw, 90vw"
+            loading="lazy"
+            class="aspect-3/4 w-full object-cover"
+          />
+        </a>
+
+        <h2 class="t-eyebrow mt-10 text-ink-soft">Areas served</h2>
+        <p class="t-body mt-4 text-[0.9375rem]">{business.areaServed.join(' · ')}</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

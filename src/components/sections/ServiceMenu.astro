@@ -1,0 +1,107 @@
+---
+import { services, categories } from '../../data/services';
+import { business } from '../../config/business';
+---
+
+<section class="bg-ivory">
+  <div class="wrap section-y">
+    <p class="t-eyebrow text-ink-soft">The menu</p>
+    <h2 class="t-h2 mt-5">Treatments</h2>
+
+    <div
+      role="tablist"
+      aria-label="Filter treatments by category"
+      class="mt-12 flex flex-wrap gap-x-8 gap-y-2 border-b border-line"
+    >
+      <button
+        type="button"
+        role="tab"
+        aria-selected="true"
+        data-filter="all"
+        class="t-eyebrow -mb-px border-b-2 border-transparent py-4 aria-selected:border-rose aria-selected:text-rose"
+      >
+        All
+      </button>
+      {
+        categories.map((c) => (
+          <button
+            type="button"
+            role="tab"
+            aria-selected="false"
+            data-filter={c}
+            class="t-eyebrow -mb-px border-b-2 border-transparent py-4 aria-selected:border-rose aria-selected:text-rose"
+          >
+            {c}
+          </button>
+        ))
+      }
+    </div>
+
+    {/* All rows render in the HTML and are visible by default, so the section
+        works with JS disabled. The tabs only ever hide rows. */}
+    <ul id="service-rows" class="m-0 list-none p-0">
+      {
+        services.map((s) => (
+          <li data-category={s.category} class="border-b border-line">
+            <div class="group grid grid-cols-1 items-baseline gap-y-3 py-7 transition-colors duration-[280ms] ease-out hover:bg-porcelain md:grid-cols-[minmax(0,1fr)_auto_auto] md:gap-x-10">
+              <div class="min-w-0">
+                <h3 class="t-service text-[1.0625rem] md:text-[1.3125rem]">
+                  {s.href ? (
+                    <a href={s.href} class="hover:text-rose">
+                      {s.name}
+                    </a>
+                  ) : (
+                    s.name
+                  )}
+                </h3>
+                <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{s.description}</p>
+              </div>
+
+              {/* Only rendered where spec §2 verified a duration. */}
+              <p class="t-meta md:text-right">{s.duration ?? ''}</p>
+
+              <div class="flex items-center gap-6 md:justify-end">
+                <p class="t-price whitespace-nowrap transition-colors duration-[280ms] group-hover:text-rose">
+                  {s.price}
+                </p>
+                <a
+                  href={business.bookingUrl}
+                  target="_blank"
+                  rel="noopener"
+                  class="t-button shrink-0 border-b border-ink pb-1 hover:border-rose hover:text-rose"
+                >
+                  Book<span class="sr-only"> {s.name}</span>
+                </a>
+              </div>
+            </div>
+          </li>
+        ))
+      }
+    </ul>
+  </div>
+</section>
+
+<script>
+  const tabs = document.querySelectorAll<HTMLButtonElement>('[role="tab"][data-filter]');
+  const rows = document.querySelectorAll<HTMLElement>('#service-rows > li');
+
+  const apply = (filter: string) => {
+    rows.forEach((row) => {
+      row.hidden = filter !== 'all' && row.dataset.category !== filter;
+    });
+    tabs.forEach((t) => t.setAttribute('aria-selected', String(t.dataset.filter === filter)));
+  };
+
+  tabs.forEach((tab, i) => {
+    tab.addEventListener('click', () => apply(tab.dataset.filter!));
+
+    tab.addEventListener('keydown', (e) => {
+      const dir = e.key === 'ArrowRight' ? 1 : e.key === 'ArrowLeft' ? -1 : 0;
+      if (!dir) return;
+      e.preventDefault();
+      const next = tabs[(i + dir + tabs.length) % tabs.length];
+      next.focus();
+      apply(next.dataset.filter!);
+    });
+  });
+</script>

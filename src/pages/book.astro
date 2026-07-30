@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Reveal from '../components/Reveal.astro';
+import Button from '../components/Button.astro';
+import NapBlock from '../components/NapBlock.astro';
+import { services } from '../data/services';
+import { business } from '../config/business';
+import { CTA_LABEL } from '../config/nav';
+
+/**
+ * Booking through Vagaro is a REQUEST, not an instant confirmation. Spec §2 — the
+ * page has to say so plainly, or the demo sets a false expectation.
+ */
+const steps = [
+  {
+    title: 'Send the request',
+    body: 'Pick the treatment you think you need and send it through. If you are not sure which one, choose the First-Time Client Treatment — that visit exists to work it out.',
+  },
+  {
+    title: 'Wait for confirmation',
+    body: 'Requests are reviewed and confirmed directly, so the time you pick is not booked until you hear back. Check your email and phone for the confirmation.',
+  },
+  {
+    title: 'Arrive with clean skin',
+    body: 'No makeup if you can manage it, and bring a list of everything you are currently using — including anything you have stopped.',
+  },
+];
+
+const firstVisit = services.find((s) => s.name === 'First-Time Client Treatment');
+---
+
+<BaseLayout
+  title="Request an Appointment | KIAMO Skin San Diego"
+  description="Request an appointment at KIAMO Skin in Mission Hills, San Diego. Appointment-only studio for corrective facials, peels and scalp therapy."
+>
+  <header class="bg-blush">
+    <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+      <p class="t-eyebrow text-ink-soft">Booking</p>
+      <h1 class="t-h2 mt-6 max-w-[20ch] text-[2.5rem] md:text-[4rem]">
+        Request an appointment.
+      </h1>
+      <p class="t-body mt-7 max-w-[62ch]">
+        KIAMO Skin is {business.visit.appointmentOnly.toLowerCase()}. Booking runs through Vagaro
+        as a request — you choose a time, and it is confirmed back to you rather than held
+        automatically.
+      </p>
+      <div class="mt-9 flex flex-wrap gap-3">
+        <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+        <Button variant="ghost" href={business.phone.href}>Call {business.phone.display}</Button>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-porcelain">
+    <div class="wrap section-y">
+      <h2 class="t-h3">How it works</h2>
+      <ol class="mt-12 m-0 grid list-none gap-12 p-0 md:grid-cols-3 md:gap-10">
+        {
+          steps.map((step, i) => (
+            <Reveal as="li" class="border-t border-line pt-8">
+              <p class="t-meta text-rose">{String(i + 1).padStart(2, '0')}</p>
+              <h3 class="t-service mt-4 text-[1.125rem] md:text-[1.3125rem]">{step.title}</h3>
+              <p class="t-body mt-4 text-[0.9375rem]">{step.body}</p>
+            </Reveal>
+          ))
+        }
+      </ol>
+    </div>
+  </section>
+
+  <section class="bg-ivory">
+    <div class="wrap section-y grid gap-16 md:grid-cols-2 md:gap-20">
+      <div>
+        <h2 class="t-h3">First time here?</h2>
+        <p class="t-body mt-6">
+          The First-Time Client Treatment is a full consultation and treatment together: a proper
+          look at what your skin is doing, a plan for the next few months, and a deep dive into
+          the right routine to run at home.
+        </p>
+        <p class="t-price mt-7">{firstVisit?.price}</p>
+        <p class="t-body mt-3 text-[0.875rem] text-ink-soft">
+          Most pricing is confirmed at consultation, because the protocol depends on what your
+          skin can take. The three set prices are listed on the
+          <a href="/treatments" class="border-b border-ink hover:border-rose hover:text-rose"
+            >treatments page</a
+          >.
+        </p>
+      </div>
+
+      <div>
+        <h2 class="t-h3">Cancellations</h2>
+        <p class="t-body mt-6">{business.cancellation}</p>
+        <div class="mt-10">
+          <NapBlock tone="light" />
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

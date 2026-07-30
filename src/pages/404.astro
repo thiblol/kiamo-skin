@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+import { primaryNav } from '../config/nav';
+---
+
+<BaseLayout title="Page not found | KIAMO Skin" description="That page could not be found." noindex>
+  <section class="bg-blush">
+    <div class="wrap flex min-h-[80svh] flex-col justify-center pt-[60px] pb-24">
+      <p class="t-eyebrow text-ink-soft">404</p>
+      <h1 class="t-h2 mt-6 max-w-[20ch] text-[2.5rem] md:text-[4rem]">
+        That page isn’t here.
+      </h1>
+      <p class="t-body mt-7 max-w-[52ch]">
+        The link may be out of date. Everything else is still where you left it.
+      </p>
+
+      <ul class="mt-10 flex list-none flex-wrap gap-x-8 gap-y-3 p-0">
+        {
+          primaryNav.map((link) => (
+            <li>
+              <a href={link.href} class="t-button border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <div class="mt-12">
+        <Button href="/">Back to the homepage</Button>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

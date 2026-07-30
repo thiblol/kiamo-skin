@@ -1,0 +1,82 @@
+---
+import { business, verifiedPrices } from '../../config/business';
+
+const site = Astro.site?.href ?? '';
+const entityId = `${site}#business`;
+
+/** Only the three verified prices carry a price. The rest are listed so the
+    catalogue is complete, but with nothing invented. */
+const services = [
+  { name: 'Deluxe HydraFacial', url: 'treatments/hydrafacial', priced: 'hydrafacial-deluxe' },
+  { name: 'HydraFacial Keravive Scalp Treatment', url: 'treatments/keravive-scalp', priced: 'keravive-scalp' },
+  { name: 'Express HydraFacial', url: 'treatments/hydrafacial', priced: 'hydrafacial-express' },
+  { name: 'Procell Microchanneling', url: 'treatments/procell-microchanneling', priced: null },
+  { name: 'DMK Enzyme Therapy', url: 'treatments/dmk-enzyme-therapy', priced: null },
+  { name: 'Lira Chemical Peels', url: 'treatments/lira-peels', priced: null },
+] as const;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': ['LocalBusiness', 'MedicalBusiness', 'HealthAndBeautyBusiness'],
+  '@id': entityId,
+  name: business.name,
+  description:
+    'Corrective facials and scalp therapy for acne, scarring and pigmentation, specialising in melanin-rich skin and barrier health.',
+  url: site,
+  telephone: business.phone.display,
+  email: business.email,
+  priceRange: business.priceRange,
+  currenciesAccepted: 'USD',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: business.address.street,
+    addressLocality: business.address.city,
+    addressRegion: business.address.region,
+    postalCode: business.address.postalCode,
+    addressCountry: business.address.country,
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: business.geo.latitude,
+    longitude: business.geo.longitude,
+  },
+  areaServed: business.areaServed.map((name) => ({ '@type': 'Place', name })),
+  // Vagaro is request-based; this is the request entry point, not instant booking.
+  potentialAction: {
+    '@type': 'ReserveAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: business.bookingUrl,
+      actionPlatform: [
+        'http://schema.org/DesktopWebPlatform',
+        'http://schema.org/MobileWebPlatform',
+      ],
+    },
+    result: { '@type': 'Reservation', name: 'Appointment request' },
+  },
+  sameAs: [business.instagram.url, business.bookingUrl, business.yelpUrl],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Treatments',
+    itemListElement: services.map((s) => {
+      const itemOffered = {
+        '@type': 'Service',
+        name: s.name,
+        url: `${site}${s.url}`,
+        provider: { '@id': entityId },
+      };
+      if (!s.priced) return { '@type': 'Offer', itemOffered };
+      const { price, duration } = verifiedPrices[s.priced];
+      return {
+        '@type': 'Offer',
+        price: price.replace('$', ''),
+        priceCurrency: 'USD',
+        itemOffered: { ...itemOffered, termsOfService: duration },
+      };
+    }),
+  },
+  // NOTE: no aggregateRating (spec §2), no openingHoursSpecification (unverified).
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

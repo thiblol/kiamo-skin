@@ -1,0 +1,75 @@
+---
+import NapBlock from './NapBlock.astro';
+import { business } from '../config/business';
+import { treatmentLinks, primaryNav, CTA_LABEL } from '../config/nav';
+
+const year = 2026;
+---
+
+<footer class="bg-espresso text-porcelain">
+  <div class="wrap grid gap-14 pt-[112px] pb-16 md:grid-cols-[1.2fr_1fr_1fr] md:pt-[176px]">
+    <div>
+      <p class="font-display text-[1.5rem] uppercase tracking-[0.14em]">Kiamo</p>
+      <p class="t-eyebrow mt-3 text-porcelain/60">Skin &amp; Scalp Health</p>
+      <a
+        href={business.bookingUrl}
+        target="_blank"
+        rel="noopener"
+        class="t-button mt-9 inline-flex rounded-full bg-rose px-[32px] py-[15px] text-porcelain transition-colors duration-300 hover:bg-rose-deep"
+      >
+        {CTA_LABEL}
+      </a>
+    </div>
+
+    <div>
+      <p class="t-eyebrow text-porcelain/60">Visit</p>
+      <div class="mt-5">
+        <NapBlock tone="dark" showCancellation />
+      </div>
+    </div>
+
+    <div>
+      <p class="t-eyebrow text-porcelain/60">Treatments</p>
+      <ul class="m-0 mt-5 list-none p-0">
+        {
+          treatmentLinks.map((t) => (
+            <li>
+              <a href={t.href} class="t-body block py-1 hover:text-blush">
+                {t.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+
+      <p class="t-eyebrow mt-10 text-porcelain/60">More</p>
+      <ul class="m-0 mt-5 list-none p-0">
+        {
+          primaryNav.map((n) => (
+            <li>
+              <a href={n.href} class="t-body block py-1 hover:text-blush">
+                {n.label}
+              </a>
+            </li>
+          ))
+        }
+        <li>
+          <a
+            href={business.instagram.url}
+            target="_blank"
+            rel="noopener"
+            class="t-body block py-1 hover:text-blush"
+          >
+            Instagram {business.instagram.handle}
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap border-t border-porcelain/15 py-8 pb-[76px] sm:pb-8">
+    <p class="t-meta text-porcelain/50">
+      © {year} {business.name} · Black-owned, {business.address.neighborhood}, San Diego
+    </p>
+  </div>
+</footer>

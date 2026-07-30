@@ -1,0 +1,55 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Reveal from '../../components/Reveal.astro';
+import PanelWipe from '../../components/PanelWipe.astro';
+import { articles } from '../../data/articles';
+---
+
+<BaseLayout
+  title="Journal — Skin & Scalp Notes | KIAMO Skin San Diego"
+  description="Notes on treating skin and scalp in San Diego — the marine layer, hard water, and what the local climate does to a routine."
+>
+  <header class="bg-blush">
+    <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+      <p class="t-eyebrow text-ink-soft">Journal</p>
+      <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">
+        Notes from the treatment room.
+      </h1>
+      <p class="t-body mt-7 max-w-[58ch]">
+        Written for people being treated in San Diego, where the climate is a bigger factor in how
+        skin behaves than most routines account for.
+      </p>
+    </div>
+  </header>
+
+  <section class="bg-porcelain">
+    <div class="wrap section-y">
+      <ul class="m-0 grid list-none gap-x-10 gap-y-16 p-0 md:grid-cols-2">
+        {
+          articles.map((article, i) => (
+            <Reveal as="li">
+              <a href={`/journal/${article.slug}`} class="group block">
+                <PanelWipe from={i % 2 === 0 ? 'left' : 'right'} class="aspect-4/3">
+                  <Image
+                    src={article.image}
+                    alt={article.imageAlt}
+                    widths={[400, 800, 1200]}
+                    sizes="(min-width: 840px) 45vw, 90vw"
+                    loading="lazy"
+                    class="size-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105"
+                  />
+                </PanelWipe>
+                <p class="t-meta mt-6">{article.readingTime}</p>
+                <h2 class="t-h3 mt-3 text-[1.5rem] transition-colors duration-300 group-hover:text-rose md:text-[1.75rem]">
+                  {article.headline}
+                </h2>
+                <p class="t-body mt-4 text-[0.9375rem] text-ink-soft">{article.standfirst}</p>
+              </a>
+            </Reveal>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

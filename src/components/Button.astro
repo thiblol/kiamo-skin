@@ -1,0 +1,49 @@
+---
+interface Props {
+  variant?: 'primary' | 'ghost';
+  href?: string;
+  /** Set for the Vagaro link — external, request-based booking. */
+  external?: boolean;
+  class?: string;
+}
+
+const { variant = 'primary', href, external = false, class: className = '' } = Astro.props;
+
+/**
+ * Three deliberate departures from a plain centred pill:
+ *
+ * 1. Asymmetric block padding. `.t-button` sets line-height 1, and uppercase text
+ *    carries no descenders, so the caps render ~2px above the optical centre with
+ *    symmetric padding. pt > pb pushes them back onto the centre line.
+ * 2. Tracking cut from 0.16em to 0.11em. At 19 characters, "Request Appointment"
+ *    was ~65% of a 375px row; the tighter tracking takes real width out without
+ *    shrinking the label, which is the part that has to stay readable.
+ * 3. text-indent compensates the trailing letter-space that letter-spacing adds
+ *    after the final glyph, which otherwise sits the label a hair left of centre.
+ *
+ * Height is 42px (12px line-box + 17 + 13) at both sizes.
+ */
+const base =
+  't-button inline-flex items-center justify-center rounded-full tracking-[0.11em] [text-indent:0.055em] px-[20px] pt-[17px] pb-[13px] transition-all duration-300 ease-out sm:px-[30px]';
+
+const variants = {
+  primary: 'bg-rose text-porcelain hover:bg-rose-deep hover:-translate-y-px',
+  ghost: 'border border-ink text-ink hover:bg-ink hover:text-porcelain',
+};
+
+const cls = `${base} ${variants[variant]} ${className}`;
+const rel = external ? 'noopener' : undefined;
+const target = external ? '_blank' : undefined;
+---
+
+{
+  href ? (
+    <a href={href} class={cls} {target} {rel}>
+      <slot />
+    </a>
+  ) : (
+    <button type="button" class={cls}>
+      <slot />
+    </button>
+  )
+}

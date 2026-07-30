@@ -1,0 +1,133 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Reveal from '../components/Reveal.astro';
+import PanelWipe from '../components/PanelWipe.astro';
+import Button from '../components/Button.astro';
+import NapBlock from '../components/NapBlock.astro';
+import portrait from '../assets/kiki-portrait.jpg';
+import studio from '../assets/studio-interior.jpg';
+import { business } from '../config/business';
+import { CTA_LABEL } from '../config/nav';
+
+/* Pronoun-free throughout — spec §2. */
+const values = [
+  {
+    title: 'Education first',
+    body: 'You should leave knowing what was done and why, and what to do at home. A treatment you do not understand is a treatment you will not repeat correctly.',
+  },
+  {
+    title: 'Melanin-rich skin as the default',
+    body: 'Protocols here are selected for how Black and brown skin pigments and scars — not adapted from a protocol designed for someone else.',
+  },
+  {
+    title: 'Consistency over intensity',
+    body: 'Skin does not change overnight. A sensible plan followed for months beats an aggressive treatment followed by nothing.',
+  },
+];
+---
+
+<BaseLayout
+  title="About KIAMO Skin — Esthetician in Mission Hills, San Diego"
+  description="KIAMO Skin is a Black-owned skin and scalp studio in Mission Hills, San Diego, specializing in acne, scarring and pigmentation in melanin-rich skin."
+>
+  <header class="bg-blush">
+    <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+      <p class="t-eyebrow text-ink-soft">About</p>
+      <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">
+        A studio built around correction.
+      </h1>
+      <p class="t-body mt-7 max-w-[62ch]">
+        KIAMO Skin is a private skin and scalp studio in {business.address.neighborhood}, San
+        Diego. One room, one practitioner, one appointment at a time — which is the only way to
+        treat skin properly.
+      </p>
+    </div>
+  </header>
+
+  <section class="bg-porcelain">
+    <div class="wrap section-y grid items-center gap-12 md:grid-cols-[0.85fr_1fr] md:gap-20">
+      <PanelWipe class="aspect-3/4">
+        <Image
+          src={portrait}
+          alt={`${business.ownerName}, licensed esthetician and owner of KIAMO Skin`}
+          widths={[400, 800, 1600]}
+          sizes="(min-width: 840px) 40vw, 90vw"
+          loading="lazy"
+          class="size-full object-cover"
+        />
+      </PanelWipe>
+
+      <div>
+        <p class="t-eyebrow text-ink-soft">{business.ownerName}</p>
+        <h2 class="t-h2 mt-5 text-[2rem] md:text-[2.75rem]">{business.ownerCredential}</h2>
+
+        <p class="t-body mt-7">
+          {business.experience} of clinical practice in acne, skin barrier damage, pigmentation
+          and age management. The training is in the modalities that do real work — DMK enzyme
+          therapy, Procell microchanneling, Lira peels, HydraFacial and Keravive — and the
+          judgement is in knowing which of them your skin can take right now.
+        </p>
+
+        <blockquote class="t-h3 mt-10 border-l-2 border-rose pl-7 text-[1.5rem] md:text-[1.75rem]">
+          This isn’t just a spa facial. This is strategy, correction, intention.
+        </blockquote>
+
+        <div class="mt-10">
+          <Button href="/treatments" variant="ghost">See the treatments</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-espresso text-porcelain">
+    <div class="wrap section-y">
+      <p class="t-eyebrow text-porcelain/60">How we work</p>
+      <h2 class="t-h2 mt-5 max-w-[24ch]">
+        An inclusive space where everyone feels seen.
+      </h2>
+      <p class="t-body mt-7 max-w-[62ch] text-porcelain/75">
+        At KIAMO Skin, we are proud to be a Black-owned business committed to creating an
+        inclusive space where everyone feels seen, valued, and cared for.
+      </p>
+
+      <ul class="mt-16 m-0 grid list-none gap-12 p-0 md:grid-cols-3 md:gap-10">
+        {
+          values.map((value, i) => (
+            <Reveal as="li">
+              <p class="t-meta text-rose">{String(i + 1).padStart(2, '0')}</p>
+              <h3 class="t-h3 mt-4 text-[1.375rem] md:text-[1.5rem]">{value.title}</h3>
+              <p class="t-body mt-4 text-[0.9375rem] text-porcelain/75">{value.body}</p>
+            </Reveal>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="bg-ivory">
+    <div class="wrap section-y grid gap-12 md:grid-cols-2 md:gap-20">
+      <PanelWipe class="aspect-4/3">
+        <Image
+          src={studio}
+          alt="Inside the KIAMO Skin treatment room in Mission Hills, San Diego"
+          widths={[400, 800, 1600]}
+          sizes="(min-width: 840px) 45vw, 90vw"
+          loading="lazy"
+          class="size-full object-cover"
+        />
+      </PanelWipe>
+
+      <div class="self-center">
+        <p class="t-eyebrow text-ink-soft">The studio</p>
+        <h2 class="t-h2 mt-5 text-[2rem] md:text-[2.5rem]">Visiting</h2>
+        <div class="mt-8">
+          <NapBlock tone="light" showCancellation />
+        </div>
+        <div class="mt-9">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

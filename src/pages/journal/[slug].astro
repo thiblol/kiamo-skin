@@ -1,0 +1,100 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
+import { articles } from '../../data/articles';
+import { business } from '../../config/business';
+import { CTA_LABEL } from '../../config/nav';
+
+export function getStaticPaths() {
+  return articles.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const others = articles.filter((a) => a.slug !== article.slug);
+---
+
+<BaseLayout title={article.title} description={article.description}>
+  <article>
+    <header class="bg-blush">
+      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+        <p class="t-eyebrow text-ink-soft">
+          <a href="/journal" class="hover:text-rose">Journal</a> · {article.readingTime}
+        </p>
+        <h1 class="t-h2 mt-6 max-w-[26ch] text-[2.25rem] md:text-[3.5rem]">{article.headline}</h1>
+        <p class="t-body mt-7 max-w-[58ch] text-[1.125rem]">{article.standfirst}</p>
+      </div>
+    </header>
+
+    <Image
+      src={article.image}
+      alt={article.imageAlt}
+      widths={[640, 1280, 1920]}
+      sizes="100vw"
+      loading="lazy"
+      class="aspect-4/3 w-full object-cover md:aspect-[21/9]"
+    />
+
+    <div class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="mx-auto max-w-[68ch]">
+          {
+            article.body.map((block) =>
+              'h2' in block ? (
+                <h2 class="t-h3 mt-16 first:mt-0">{block.h2}</h2>
+              ) : 'ul' in block ? (
+                <ul class="mt-8 m-0 list-none space-y-4 p-0">
+                  {block.ul.map((item) => (
+                    <li class="t-body flex gap-4">
+                      <span aria-hidden="true" class="text-rose">
+                        —
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p class="t-body mt-7 first:mt-0">{block.p}</p>
+              ),
+            )
+          }
+
+          <div class="mt-16 border-t border-line pt-12">
+            <p class="t-body">
+              Written for KIAMO Skin in {business.address.neighborhood}, San Diego.
+            </p>
+            <div class="mt-7 flex flex-wrap gap-3">
+              <Button href={article.cta.href} variant="ghost">{article.cta.label}</Button>
+              <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {
+      others.length > 0 && (
+        <div class="bg-ivory">
+          <div class="wrap section-y">
+            <h2 class="t-h3">Also in the journal</h2>
+            <ul class="mt-10 m-0 list-none p-0">
+              {others.map((other) => (
+                <li class="border-b border-line">
+                  <a href={`/journal/${other.slug}`} class="group block py-7">
+                    <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                      {other.headline}
+                    </h3>
+                    <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{other.standfirst}</p>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      )
+    }
+  </article>
+</BaseLayout>

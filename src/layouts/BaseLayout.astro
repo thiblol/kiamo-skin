@@ -1,0 +1,50 @@
+---
+import '../styles/global.css';
+import Head from '../components/Head.astro';
+import LocalBusinessSchema from '../components/schema/LocalBusinessSchema.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import StickyBookBar from '../components/StickyBookBar.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  noindex?: boolean;
+}
+
+const props = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <script is:inline>
+      // Gates the opacity:0 on animated elements, so no-JS still shows content.
+      document.documentElement.dataset.js = 'true';
+    </script>
+    <Head {...props} />
+    <LocalBusinessSchema />
+  </head>
+  <body class="bg-porcelain text-ink">
+    <a
+      href="#main"
+      class="t-button sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-porcelain focus:px-4 focus:py-3"
+    >
+      Skip to content
+    </a>
+
+    <Header />
+
+    <main id="main">
+      <slot />
+    </main>
+
+    <Footer />
+    <StickyBookBar />
+
+    <script>
+      import '../scripts/lenis-init';
+    </script>
+  </body>
+</html>
