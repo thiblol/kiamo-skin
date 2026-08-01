@@ -94,7 +94,7 @@ export const treatments: Treatment[] = [
     ],
     pricing: [
       { label: 'Keravive Scalp Treatment', price: verifiedPrices['keravive-scalp'] },
-      { label: '3 Treatment Series — per session', price: verifiedPrices['keravive-scalp-series'] },
+      { label: '3 Treatment Series — total', price: verifiedPrices['keravive-scalp-series'] },
     ],
     note: 'Scalp work is cumulative. A single session cleans; a series changes how the scalp behaves, which is why it is priced lower per session.',
   },

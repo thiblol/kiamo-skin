@@ -65,7 +65,7 @@ export const services: Service[] = [
     name: 'Keravive Scalp — 3 Treatment Series',
     category: 'Scalp',
     description:
-      'The same treatment, priced per session across a series of three. Scalp work is cumulative rather than one-off.',
+      'The same treatment across a series of three, priced as a package. Scalp work is cumulative rather than one-off.',
     price: verifiedPrices['keravive-scalp-series'],
     href: '/treatments/keravive-scalp',
   },

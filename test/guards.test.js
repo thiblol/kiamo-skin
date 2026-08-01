@@ -61,10 +61,13 @@ const forEachPage = (fn) => pages.forEach((page) => fn(page));
 
 describe('factual guards', () => {
   test('the closed Del Mar location appears nowhere', () => {
-    forEachPage(({ html, file }) => {
-      assert.doesNotMatch(html, /del\s*mar/i, file);
+    // Del Mar is an area served and may be named as such. What must never appear
+    // is the closed studio's address or any claim of a location there.
+    forEachPage(({ html, text, file }) => {
       assert.doesNotMatch(html, /9th\s*stret/i, file);
       assert.doesNotMatch(html, /92014/, file);
+      assert.doesNotMatch(text, /(studio|location|located|visit us)[^.]{0,40}\bdel\s*mar\b/i, file);
+      assert.doesNotMatch(text, /\bdel\s*mar\b[^.]{0,40}(studio|location)/i, file);
     });
   });
 
@@ -99,7 +102,7 @@ describe('factual guards', () => {
   });
 
   test('only verified prices appear', () => {
-    const allowed = new Set(['$199', '$249', '$259', '$279', '$299', '$475', '$499', '$599']);
+    const allowed = new Set(['$199', '$249', '$259', '$279', '$299', '$475', '$599', '$1,499']);
     forEachPage(({ text, file }) => {
       for (const match of text.match(/\$\d[\d,]*/g) ?? []) {
         assert.ok(allowed.has(match), `${file}: unverified price ${match}`);

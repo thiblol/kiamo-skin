@@ -62,15 +62,24 @@ export const business = {
   cancellation:
     'Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.',
 
-  /** Spec §8 areaServed. */
+  /**
+   * Validated against DataForSEO local search demand, capped at ~40 minutes'
+   * drive. Replaces the original list, which was seven neighbourhoods inside the
+   * city — four of them returning zero local searches.
+   *
+   * Del Mar is an area served, NOT a location. The Del Mar studio is closed and
+   * its address must still appear nowhere; see test/guards.test.js.
+   */
   areaServed: [
     'Mission Hills',
-    'Hillcrest',
-    'Bankers Hill',
-    'Little Italy',
     'North Park',
     'Pacific Beach',
     'La Jolla',
+    'La Mesa',
+    'Chula Vista',
+    'Del Mar',
+    'Encinitas',
+    'Carlsbad',
   ],
 } as const;
 
@@ -88,7 +97,8 @@ export const verifiedPrices = {
   'dmk-enzyme-1': '$279',
   'lira-light-peel': '$199',
   'keravive-scalp': '$599',
-  'keravive-scalp-series': '$499',
+  /** Package total for the series of three, not a per-session rate. */
+  'keravive-scalp-series': '$1,499',
   procell: '$475',
   'lira-advanced-peel': '$299',
 } as const;
