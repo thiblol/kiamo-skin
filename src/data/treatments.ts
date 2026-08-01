@@ -18,23 +18,18 @@ export interface Treatment {
   imageAlt: string;
   goodFor: string[];
   steps: { title: string; body: string }[];
-  /** Duration only appears where spec §2 verified it. */
-  pricing: { label: string; duration?: string; price: string }[];
+  pricing: { label: string; price: string }[];
   /** Honest caveats. Rendered as a closing note, never omitted where present. */
   note?: string;
 }
-
-const deluxe = verifiedPrices['hydrafacial-deluxe'];
-const express = verifiedPrices['hydrafacial-express'];
-const keravive = verifiedPrices['keravive-scalp'];
 
 export const treatments: Treatment[] = [
   {
     slug: 'hydrafacial',
     name: 'HydraFacial',
-    title: 'HydraFacial in San Diego — Deluxe & Express | KIAMO Skin',
+    title: 'HydraFacial in San Diego | KIAMO Skin',
     description:
-      'Deluxe and Express HydraFacial in Mission Hills, San Diego. Cleanse, extract and hydrate, with boosters, LED and microcurrent selected for your skin.',
+      'HydraFacial in Mission Hills, San Diego. Cleanse, extract and hydrate, with the booster and LED therapy selected for your skin. From $249.',
     headline: 'Cleanse, extract, hydrate — in one pass.',
     intro:
       'HydraFacial does three things at once: lifts away dead surface cells, vacuums out congestion, and floods the skin with serum while it is still open enough to take it. It is the most forgiving corrective treatment on the menu, which is why it is usually where a new plan starts.',
@@ -57,14 +52,14 @@ export const treatments: Treatment[] = [
       },
       {
         title: 'Boost',
-        body: 'On the Deluxe, a targeted booster is chosen for what your skin is doing that week — brightening, calming or barrier support — and finished with LED and microcurrent.',
+        body: 'A targeted booster is chosen for what your skin is doing that week — brightening, calming or barrier support.',
       },
     ],
     pricing: [
-      { label: 'Deluxe HydraFacial', duration: deluxe.duration, price: deluxe.price },
-      { label: 'Express HydraFacial', duration: express.duration, price: express.price },
+      { label: 'First Time Client Treatment', price: verifiedPrices['first-time-client'] },
+      { label: 'HydraFacial Treatment', price: verifiedPrices.hydrafacial },
     ],
-    note: 'The Express covers the core three steps. The Deluxe adds the booster, LED and microcurrent, and is the better first visit if you have not been treated before.',
+    note: 'The First Time Client treatment adds a full consultation, a customised booster with LED therapy and a jelly mask. It is the better first visit if you have not been treated here before.',
   },
   {
     slug: 'keravive-scalp',
@@ -97,8 +92,11 @@ export const treatments: Treatment[] = [
         body: 'You leave with the Keravive take-home spray. Using it is not optional — it is most of the result.',
       },
     ],
-    pricing: [{ label: 'HydraFacial Keravive', duration: keravive.duration, price: keravive.price }],
-    note: 'Scalp work is cumulative. A single session cleans; a plan changes how the scalp behaves.',
+    pricing: [
+      { label: 'Keravive Scalp Treatment', price: verifiedPrices['keravive-scalp'] },
+      { label: '3 Treatment Series — per session', price: verifiedPrices['keravive-scalp-series'] },
+    ],
+    note: 'Scalp work is cumulative. A single session cleans; a series changes how the scalp behaves, which is why it is priced lower per session.',
   },
   {
     slug: 'dmk-enzyme-therapy',
@@ -131,8 +129,11 @@ export const treatments: Treatment[] = [
         body: 'DMK is a system. The in-studio work is paired with a home routine, and results track how closely that is followed.',
       },
     ],
-    pricing: [{ label: 'DMK Enzyme Therapy', price: PRICE_ON_CONSULTATION }],
-    note: 'DMK is prescribed after a consultation rather than booked blind — the protocol and the number of sessions depend on the barrier’s current state.',
+    pricing: [
+      { label: 'DMK Level 1 Enzyme Treatment', price: verifiedPrices['dmk-enzyme-1'] },
+      { label: 'DMK Level 2 & 3 Enzyme Treatment', price: PRICE_ON_CONSULTATION },
+    ],
+    note: 'Level 1 comes first. Levels 2 and 3 layer the enzymes for deeper correction and are prescribed only once Level 1 has prepared the skin — so the protocol and the price are set at consultation.',
   },
   {
     slug: 'procell-microchanneling',
@@ -165,8 +166,8 @@ export const treatments: Treatment[] = [
         body: 'Expect to look flushed for a day or two. Sun protection for the following week is not negotiable, particularly in melanin-rich skin.',
       },
     ],
-    pricing: [{ label: 'Procell Microchanneling', price: PRICE_ON_CONSULTATION }],
-    note: 'Scarring responds to a series rather than a single session. The number is set at consultation, once the depth of the scarring is clear.',
+    pricing: [{ label: 'Procell Microchanneling', price: verifiedPrices.procell }],
+    note: 'Scarring responds to a series rather than a single session — three treatments spaced four to six weeks apart is the usual recommendation. The number is set at consultation, once the depth of the scarring is clear.',
   },
   {
     slug: 'lira-peels',
@@ -199,8 +200,11 @@ export const treatments: Treatment[] = [
         body: 'Daily SPF is what holds the result. Without it, pigmentation returns — and San Diego’s overcast mornings are the usual reason people stop applying it.',
       },
     ],
-    pricing: [{ label: 'Lira Chemical Peels', price: PRICE_ON_CONSULTATION }],
-    note: 'Peel strength is matched to your skin at consultation. Pigmentation is treated as a series with home care between visits — there is no single-session version of this.',
+    pricing: [
+      { label: 'LIRA Gentle Renewal Peel', price: verifiedPrices['lira-light-peel'] },
+      { label: 'LIRA Advanced Peel', price: verifiedPrices['lira-advanced-peel'] },
+    ],
+    note: 'Peel strength is matched to your skin at consultation. The Gentle Renewal Peel refreshes and maintains; the Advanced Peel goes deeper for pigmentation and scarring. Pigmentation is treated as a series with home care between visits — there is no single-session version of this.',
   },
 ];
 

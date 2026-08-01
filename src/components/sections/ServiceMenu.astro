@@ -43,7 +43,7 @@ import { business } from '../../config/business';
       {
         services.map((s) => (
           <li data-category={s.category} class="border-b border-line">
-            <div class="group grid grid-cols-1 items-baseline gap-y-3 py-7 transition-colors duration-[280ms] ease-out hover:bg-porcelain md:grid-cols-[minmax(0,1fr)_auto_auto] md:gap-x-10">
+            <div class="group grid grid-cols-1 items-baseline gap-y-3 py-7 transition-colors duration-[280ms] ease-out hover:bg-porcelain md:grid-cols-[minmax(0,1fr)_auto] md:gap-x-10">
               <div class="min-w-0">
                 <h3 class="t-service text-[1.0625rem] md:text-[1.3125rem]">
                   {s.href ? (
@@ -56,9 +56,6 @@ import { business } from '../../config/business';
                 </h3>
                 <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{s.description}</p>
               </div>
-
-              {/* Only rendered where spec §2 verified a duration. */}
-              <p class="t-meta md:text-right">{s.duration ?? ''}</p>
 
               <div class="flex items-center gap-6 md:justify-end">
                 <p class="t-price whitespace-nowrap transition-colors duration-[280ms] group-hover:text-rose">

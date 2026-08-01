@@ -4,15 +4,18 @@ import { business, verifiedPrices } from '../../config/business';
 const site = Astro.site?.href ?? '';
 const entityId = `${site}#business`;
 
-/** Only the three verified prices carry a price. The rest are listed so the
-    catalogue is complete, but with nothing invented. */
+/** Every service carries a price except DMK Level 2 & 3, which is prescribed at
+    consultation. It is still listed so the catalogue is complete. */
 const services = [
-  { name: 'Deluxe HydraFacial', url: 'treatments/hydrafacial', priced: 'hydrafacial-deluxe' },
-  { name: 'HydraFacial Keravive Scalp Treatment', url: 'treatments/keravive-scalp', priced: 'keravive-scalp' },
-  { name: 'Express HydraFacial', url: 'treatments/hydrafacial', priced: 'hydrafacial-express' },
-  { name: 'Procell Microchanneling', url: 'treatments/procell-microchanneling', priced: null },
-  { name: 'DMK Enzyme Therapy', url: 'treatments/dmk-enzyme-therapy', priced: null },
-  { name: 'Lira Chemical Peels', url: 'treatments/lira-peels', priced: null },
+  { name: 'First Time Client Treatment', url: 'treatments/hydrafacial', priced: 'first-time-client' },
+  { name: 'HydraFacial Treatment', url: 'treatments/hydrafacial', priced: 'hydrafacial' },
+  { name: 'Dermaplane Facial', url: 'treatments', priced: 'dermaplane-facial' },
+  { name: 'DMK Level 1 Enzyme Treatment', url: 'treatments/dmk-enzyme-therapy', priced: 'dmk-enzyme-1' },
+  { name: 'LIRA Gentle Renewal Peel', url: 'treatments/lira-peels', priced: 'lira-light-peel' },
+  { name: 'Keravive Scalp Treatment', url: 'treatments/keravive-scalp', priced: 'keravive-scalp' },
+  { name: 'Procell Microchanneling', url: 'treatments/procell-microchanneling', priced: 'procell' },
+  { name: 'LIRA Advanced Peel', url: 'treatments/lira-peels', priced: 'lira-advanced-peel' },
+  { name: 'DMK Level 2 & 3 Enzyme Treatment', url: 'treatments/dmk-enzyme-therapy', priced: null },
 ] as const;
 
 const schema = {
@@ -66,12 +69,11 @@ const schema = {
         provider: { '@id': entityId },
       };
       if (!s.priced) return { '@type': 'Offer', itemOffered };
-      const { price, duration } = verifiedPrices[s.priced];
       return {
         '@type': 'Offer',
-        price: price.replace('$', ''),
+        price: verifiedPrices[s.priced].replace('$', ''),
         priceCurrency: 'USD',
-        itemOffered: { ...itemOffered, termsOfService: duration },
+        itemOffered,
       };
     }),
   },

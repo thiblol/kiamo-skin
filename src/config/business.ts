@@ -74,9 +74,21 @@ export const business = {
   ],
 } as const;
 
-/** The ONLY three verified prices. Everything else is PRICE_ON_CONSULTATION. */
+/**
+ * Every verified price. Sourced from the live Vagaro menu, or confirmed directly
+ * by the client where Vagaro does not display one.
+ *
+ * Anything absent here renders PRICE_ON_CONSULTATION. Durations are not listed:
+ * Vagaro publishes none, and the guard suite forbids estimating them.
+ */
 export const verifiedPrices = {
-  'hydrafacial-express': { duration: '60 min', price: '$259' },
-  'hydrafacial-deluxe': { duration: '90 min', price: '$349' },
-  'keravive-scalp': { duration: '60 min', price: '$699' },
+  'first-time-client': '$249',
+  hydrafacial: '$259',
+  'dermaplane-facial': '$199',
+  'dmk-enzyme-1': '$279',
+  'lira-light-peel': '$199',
+  'keravive-scalp': '$599',
+  'keravive-scalp-series': '$499',
+  procell: '$475',
+  'lira-advanced-peel': '$299',
 } as const;
