@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   // Demo deploy target. NOT kiamoskin.com — that is the client's existing live
   // site. Canonical URLs, sitemap and OG tags all derive from this.
-  site: 'https://kiamo-demo.pages.dev',
+  site: 'https://kiamo-skin.vercel.app',
   integrations: [sitemap()],
   vite: { plugins: [tailwindcss()] },
   fonts: [
