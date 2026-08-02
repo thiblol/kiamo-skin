@@ -5,9 +5,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  // Demo deploy target. NOT kiamoskin.com — that is the client's existing live
-  // site. Canonical URLs, sitemap and OG tags all derive from this.
-  site: 'https://kiamo-skin.vercel.app',
+  // The live domain. Canonical URLs, sitemap and OG tags all derive from this.
+  site: 'https://kiamoskin.com',
   integrations: [sitemap()],
   vite: { plugins: [tailwindcss()] },
   fonts: [

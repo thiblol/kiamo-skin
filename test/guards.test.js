@@ -122,9 +122,20 @@ describe('factual guards', () => {
     });
   });
 
-  test('the demo never points at the client’s live domain', () => {
+  test('no page still points at the old demo host', () => {
+    // Inverted at the kiamoskin.com cutover. This guard used to block the live
+    // domain while the build was a demo; the risk now runs the other way — a
+    // stale vercel.app URL in a canonical, an OG tag or a JSON-LD @id splits the
+    // entity across two hosts. Everything derives from `site` in astro.config.mjs.
     forEachPage(({ html, file }) => {
-      assert.doesNotMatch(html, /kiamoskin\.com/i, file);
+      assert.doesNotMatch(html, /kiamo-skin\.vercel\.app/i, file);
+    });
+  });
+
+  test('canonical, OG and schema URLs all use the live domain', () => {
+    forEachPage(({ html, file }) => {
+      const canonical = html.match(/<link rel="canonical" href="([^"]+)"/)?.[1];
+      assert.ok(canonical?.startsWith('https://kiamoskin.com/'), `${file}: canonical is ${canonical}`);
     });
   });
 });
