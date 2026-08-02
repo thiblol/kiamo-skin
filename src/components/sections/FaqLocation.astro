@@ -21,7 +21,7 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
       <p class="t-eyebrow text-ink-soft">Before you book</p>
       <h2 class="t-h2 mt-5">Questions</h2>
 
-      <dl class="mt-12 m-0">
+      <div class="mt-12">
         {
           faqs.map((faq) => (
             <div class="border-b border-line">
@@ -29,7 +29,7 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
                 <summary
                   class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]"
                 >
-                  <dt>{faq.question}</dt>
+                  <span>{faq.question}</span>
                   <span
                     aria-hidden="true"
                     class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
@@ -37,12 +37,12 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
                     +
                   </span>
                 </summary>
-                <dd class="t-body m-0 pb-6 text-[0.9375rem]">{faq.answer}</dd>
+                <div class="t-body pb-6 text-[0.9375rem]">{faq.answer}</div>
               </details>
             </div>
           ))
         }
-      </dl>
+      </div>
     </div>
 
     <div>
