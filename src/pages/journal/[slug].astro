@@ -5,6 +5,8 @@ import Button from '../../components/Button.astro';
 import { articles } from '../../data/articles';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
+import ArticleSchema from '../../components/schema/ArticleSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 
 export function getStaticPaths() {
   return articles.map((article) => ({
@@ -17,7 +19,15 @@ const { article } = Astro.props;
 const others = articles.filter((a) => a.slug !== article.slug);
 ---
 
-<BaseLayout title={article.title} description={article.description}>
+<BaseLayout title={article.title} description={article.description} ogType="article">
+  <ArticleSchema slot="head" article={article} />
+  <BreadcrumbSchema
+    slot="head"
+    trail={[
+      { name: 'Journal', path: '/journal' },
+      { name: article.headline, path: `/journal/${article.slug}` },
+    ]}
+  />
   <article>
     <header class="bg-blush">
       <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">

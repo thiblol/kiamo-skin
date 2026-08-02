@@ -1,0 +1,23 @@
+---
+import { absolute, businessId, websiteId } from '../../config/urls';
+import { business } from '../../config/business';
+
+const site = Astro.site;
+const url = absolute('/contact', site);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  '@id': `${url}#webpage`,
+  url,
+  name: `Contact ${business.shortName} | Mission Hills San Diego`,
+  description: `${business.name} is at ${business.address.full}, in ${business.address.neighborhood}. ${business.visit.appointmentOnly}. ${business.visit.parking}.`,
+  isPartOf: { '@id': websiteId(site) },
+  about: { '@id': businessId(site) },
+  mainEntity: { '@id': businessId(site) },
+  inLanguage: 'en-US',
+  significantLink: [business.bookingUrl, business.phone.href],
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

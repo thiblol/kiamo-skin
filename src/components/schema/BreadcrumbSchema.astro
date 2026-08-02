@@ -1,0 +1,28 @@
+---
+/**
+ * Trail is everything after Home — Home is prepended here so no caller repeats it.
+ * Emitted on every page that is not the homepage.
+ */
+import { absolute } from '../../config/urls';
+
+interface Props {
+  trail: { name: string; path: string }[];
+}
+
+const { trail } = Astro.props;
+const site = Astro.site;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  '@id': `${absolute(Astro.url.pathname, site)}#breadcrumb`,
+  itemListElement: [{ name: 'Home', path: '/' }, ...trail].map((crumb, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    name: crumb.name,
+    item: absolute(crumb.path, site),
+  })),
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

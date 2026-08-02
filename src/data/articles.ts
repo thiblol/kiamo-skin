@@ -11,6 +11,9 @@ export interface Article {
   /** Editorial standfirst under the H1. */
   standfirst: string;
   readingTime: string;
+  /** ISO date. Taken from git history, never invented — Article schema needs it. */
+  datePublished: string;
+  dateModified: string;
   image: ImageMetadata;
   imageAlt: string;
   /** Simple ordered blocks — enough for two demo articles, no CMS needed. */
@@ -29,6 +32,8 @@ export const articles: Article[] = [
     standfirst:
       'The marine layer is the single most expensive misunderstanding in San Diego skincare. It looks like cover. It is not cover.',
     readingTime: '4 min read',
+    datePublished: '2026-07-30',
+    dateModified: '2026-07-30',
     image: uv,
     imageAlt: 'Overcast San Diego coastline under a bright marine layer',
     body: [
@@ -74,6 +79,8 @@ export const articles: Article[] = [
     standfirst:
       'If your scalp flakes, itches, or feels coated no matter what shampoo you buy, the shampoo may not be the variable worth changing.',
     readingTime: '4 min read',
+    datePublished: '2026-07-30',
+    dateModified: '2026-07-30',
     image: water,
     imageAlt: 'Water falling over a hand, lit from the side',
     body: [

@@ -1,6 +1,8 @@
 ---
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactSchema from '../components/schema/ContactSchema.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
 import Button from '../components/Button.astro';
 import NapBlock from '../components/NapBlock.astro';
 import studio from '../assets/studio-interior.jpg';
@@ -16,6 +18,8 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
   title="Contact KIAMO Skin — Mission Hills, San Diego"
   description="Contact KIAMO Skin at 3067 Reynard Way, San Diego, CA 92103. Call (310) 595-0872 or request an appointment online. Appointment-only, free parking."
 >
+  <ContactSchema slot="head" />
+  <BreadcrumbSchema slot="head" trail={[{ name: 'Contact', path: '/contact' }]} />
   <header class="bg-blush">
     <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
       <p class="t-eyebrow text-ink-soft">Contact</p>

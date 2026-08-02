@@ -1,0 +1,50 @@
+---
+/**
+ * About page: the Person node for Kiki, with the state licence as a credential.
+ * First name only — Vagaro and an LLC record disagree on the surname, so none
+ * is published anywhere.
+ */
+import { absolute, businessId, websiteId } from '../../config/urls';
+import { business } from '../../config/business';
+
+const site = Astro.site;
+const url = absolute('/about', site);
+const personId = `${url}#kiki`;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  '@id': `${url}#webpage`,
+  url,
+  name: `About ${business.shortName}`,
+  description:
+    'Kiki is a licensed esthetician in Mission Hills, San Diego, specialising in corrective work for acne, scarring and pigmentation on melanin-rich skin.',
+  isPartOf: { '@id': websiteId(site) },
+  about: { '@id': businessId(site) },
+  inLanguage: 'en-US',
+  mainEntity: { '@id': personId },
+};
+
+const person = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  '@id': personId,
+  name: business.ownerName,
+  jobTitle: 'Licensed Esthetician',
+  hasCredential: {
+    '@type': 'EducationalOccupationalCredential',
+    credentialCategory: 'license',
+    name: 'Licensed Esthetician',
+    recognizedBy: {
+      '@type': 'Organization',
+      name: 'California Board of Barbering & Cosmetology',
+    },
+  },
+  worksFor: { '@id': businessId(site) },
+  url,
+  sameAs: [business.instagram.url],
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
+<script type="application/ld+json" is:inline set:html={JSON.stringify(person)} />

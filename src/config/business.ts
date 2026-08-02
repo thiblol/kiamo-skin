@@ -50,7 +50,7 @@ export const business = {
     handle: '@kiamoskin',
     url: 'https://www.instagram.com/kiamoskin/',
   },
-  yelpUrl: 'https://www.yelp.com/biz/kiamo-skin-and-scalp-health-san-diego',
+  yelpUrl: 'https://www.yelp.com/biz/kiamo-skin-san-diego',
 
   priceRange: '$$$',
 

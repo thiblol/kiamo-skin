@@ -1,0 +1,37 @@
+---
+/**
+ * BlogPosting for journal articles. Dates come from git history, never invented.
+ * Author is the Person node on /about — first name only, no surname anywhere.
+ */
+import { absolute, businessId } from '../../config/urls';
+import { business } from '../../config/business';
+import type { Article } from '../../data/articles';
+
+interface Props {
+  article: Article;
+}
+
+const { article } = Astro.props;
+const site = Astro.site;
+const url = absolute(`/journal/${article.slug}`, site);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  '@id': `${url}#article`,
+  headline: article.headline,
+  description: article.description,
+  url,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+  image: new URL(article.image.src, site).href,
+  datePublished: article.datePublished,
+  dateModified: article.dateModified,
+  author: { '@id': `${absolute('/about', site)}#kiki` },
+  publisher: { '@id': businessId(site) },
+  inLanguage: 'en-US',
+  isAccessibleForFree: true,
+  about: business.address.city,
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
