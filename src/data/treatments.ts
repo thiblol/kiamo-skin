@@ -5,6 +5,9 @@ import scalp from '../assets/treatment-scalp.jpg';
 import enzyme from '../assets/treatment-enzyme.jpg';
 import acne from '../assets/concern-acne.jpg';
 import pigmentation from '../assets/concern-pigmentation.jpg';
+// No dedicated dermaplaning photograph exists yet. The barrier image is the
+// closest honest match — a clear, even skin surface. Swap when one is shot.
+import dermaplane from '../assets/concern-barrier.jpg';
 
 export interface Treatment {
   slug: string;
@@ -13,6 +16,12 @@ export interface Treatment {
   title: string;
   description: string;
   headline: string;
+  /**
+   * Query-restatement opener, rendered above `intro`. Answers the search the
+   * visitor just typed, in their words, before the page says anything else.
+   * Each one carries a fact only this page can carry — never interchangeable.
+   */
+  opener: string;
   intro: string;
   image: ImageMetadata;
   imageAlt: string;
@@ -21,16 +30,27 @@ export interface Treatment {
   pricing: { label: string; price: string; description?: string }[];
   /** Honest caveats. Rendered as a closing note, never omitted where present. */
   note?: string;
+  /** schema.org Service fields. Not rendered — structured data only. */
+  serviceType: string;
+  category: string;
+  alternateName?: string;
+  /** Area pages this treatment links to. Drives the treatment→area link graph. */
+  areas: string[];
 }
 
 export const treatments: Treatment[] = [
   {
     slug: 'hydrafacial',
     name: 'HydraFacial',
+    serviceType: 'HydraFacial',
+    category: 'Facial treatment',
+    areas: ['la-jolla', 'pacific-beach', 'del-mar'],
     title: 'HydraFacial in San Diego | KIAMO Skin',
     description:
       'HydraFacial in Mission Hills, San Diego. Cleanse, extract and hydrate, with the booster and LED therapy selected for your skin. From $249.',
     headline: 'The foundation of healthy skin.',
+    opener:
+      'Looking for a HydraFacial in San Diego? KIAMO SKIN is a licensed corrective skin studio in Mission Hills, five minutes from Hillcrest and Little Italy, and the HydraFacial here is $259.',
     intro:
       'HydraFacial does three things at once: lifts away dead surface cells, vacuums out congestion, and floods the skin with serum while it is still open enough to take it. It is the most forgiving corrective treatment on the menu, which is why it is usually where a new plan starts.',
     image: hydrafacial,
@@ -73,10 +93,15 @@ export const treatments: Treatment[] = [
   {
     slug: 'keravive-scalp',
     name: 'HydraFacial Keravive',
+    serviceType: 'Scalp treatment',
+    category: 'Scalp therapy',
+    areas: ['pacific-beach', 'la-jolla', 'encinitas'],
     title: 'Keravive Scalp Treatment in San Diego | KIAMO Skin',
     description:
       'Keravive scalp therapy in Mission Hills, San Diego. Corrective treatment for flaking, buildup and thinning — cleanse, exfoliate and hydrate the scalp.',
     headline: 'Your scalp is skin. Treat it that way.',
+    opener:
+      'Looking for scalp treatment in San Diego? Keravive is performed at a single studio in Mission Hills, and it is the treatment chosen for buildup, flaking and the mineral residue San Diego’s hard water leaves behind.',
     intro:
       'Keravive deeply cleanses, exfoliates, and hydrates the scalp while removing buildup that can contribute to dryness, flaking, and irritation. A healthier scalp creates a better environment for healthy hair growth. In San Diego, hard water can make scalp buildup especially common, making regular scalp care an important part of maintaining a healthy scalp. Every treatment includes a take home peptide spray to continue supporting scalp health between visits.',
     image: scalp,
@@ -110,10 +135,15 @@ export const treatments: Treatment[] = [
   {
     slug: 'dmk-enzyme-therapy',
     name: 'DMK Enzyme Therapy',
+    serviceType: 'Enzyme therapy',
+    category: 'Corrective skin treatment',
+    areas: ['mission-hills', 'la-jolla', 'la-mesa'],
     title: 'DMK Enzyme Therapy in San Diego | KIAMO Skin',
     description:
       'DMK enzyme therapy in Mission Hills, San Diego. Enzymatic resurfacing that works with the skin’s own function to rebuild a damaged barrier.',
     headline: 'Restore skin function from within.',
+    opener:
+      'Looking for DMK enzyme therapy in San Diego? Level 1 is $279 at the KIAMO SKIN studio in Mission Hills, and it is the treatment used when a barrier is too compromised to tolerate anything stronger.',
     intro:
       'DMK Enzyme Therapy is designed to restore healthy skin function rather than simply exfoliating the surface. By supporting the skin’s natural processes, it helps strengthen the skin barrier while encouraging healthy circulation and lymphatic activity. It’s especially beneficial for skin that feels over-exfoliated, sensitized, inflamed, or slow to heal.',
     image: enzyme,
@@ -147,10 +177,16 @@ export const treatments: Treatment[] = [
   {
     slug: 'procell-microchanneling',
     name: 'Procell Microchanneling',
+    serviceType: 'Microchanneling',
+    category: 'Corrective skin treatment',
+    alternateName: 'Microneedling alternative',
+    areas: ['la-jolla', 'carlsbad', 'del-mar'],
     title: 'Procell Microchanneling for Scarring | KIAMO Skin San Diego',
     description:
       'Procell microchanneling in Mission Hills, San Diego. Controlled micro-injury with growth factors for acne scarring and uneven texture in melanin-rich skin.',
     headline: 'Stimulate your skin’s natural repair process.',
+    opener:
+      'Looking for microneedling in San Diego? Procell microchanneling is the alternative offered here — a different modality from a needle pen, performed by a licensed esthetician in Mission Hills, with depth adjusted for melanin-rich skin.',
     intro:
       'Procell Microchanneling creates controlled microchannels that activate your skin’s natural repair response while delivering a specialized growth factor serum. Over time, new collagen helps improve acne scars, fine lines, wrinkles, and uneven skin texture for smoother, healthier-looking skin. Every treatment is customized for your skin goals and skin tone.',
     image: acne,
@@ -193,10 +229,15 @@ export const treatments: Treatment[] = [
   {
     slug: 'lira-peels',
     name: 'Lira Chemical Peels',
+    serviceType: 'Chemical peel',
+    category: 'Corrective skin treatment',
+    areas: ['chula-vista', 'la-jolla', 'north-park'],
     title: 'Chemical Peels for Melanin-Rich Skin | KIAMO Skin San Diego',
     description:
       'Lira professional chemical peels in Mission Hills, San Diego, selected for pigmentation, melasma and post-inflammatory marks in melanin-rich skin.',
     headline: 'Designed to brighten without compromising skin health.',
+    opener:
+      'Looking for a chemical peel in San Diego that is safe on melanin-rich skin? That is the work this studio was built around.',
     intro:
       'Pigmentation is the reason most people book, and it is also where the wrong treatment does lasting damage. Melanin-rich skin responds to trauma by producing more pigment, so the strength, the acid and the pacing all have to be selected deliberately. Lira’s professional range is built for that kind of control.',
     image: pigmentation,
@@ -226,6 +267,52 @@ export const treatments: Treatment[] = [
       { label: 'LIRA Advanced Peel', price: verifiedPrices['lira-advanced-peel'] },
     ],
     note: 'Peel strength is matched to your skin at consultation. The Gentle Renewal Peel refreshes and maintains; the Advanced Peel goes deeper for pigmentation and scarring. Pigmentation is treated as a series with home care between visits — there is no single-session version of this.',
+  },
+  {
+    slug: 'dermaplaning',
+    name: 'Dermaplane Facial',
+    serviceType: 'Dermaplaning',
+    category: 'Facial treatment',
+    areas: ['mission-hills', 'la-jolla', 'north-park'],
+    title: 'Dermaplaning in San Diego | KIAMO Skin',
+    description:
+      'Dermaplaning in Mission Hills, San Diego. Smoother texture and better product absorption with no downtime, performed by a licensed esthetician. $199.',
+    headline: 'A clean surface changes what everything else can do.',
+    opener:
+      'Looking for dermaplaning in San Diego? The dermaplane facial at KIAMO SKIN is performed by a licensed esthetician in Mission Hills, and it is $199.',
+    intro:
+      'Dermaplaning uses a sterile surgical blade to remove dead surface cells and the fine vellus hair that sits on top of them. Nothing is pulled from the follicle and nothing penetrates the skin. What changes is the surface: product reaches live tissue instead of sitting on debris, and makeup stops catching on texture.',
+    image: dermaplane,
+    imageAlt: 'A close portrait of smooth, even skin across the cheekbone',
+    goodFor: [
+      'Rough or uneven surface texture',
+      'Makeup that clings to fine facial hair',
+      'Skincare that seems to sit on the surface instead of absorbing',
+      'Anyone wanting a corrective treatment with no recovery time',
+    ],
+    steps: [
+      {
+        title: 'Cleanse and dry',
+        body: 'The skin is cleansed and taken completely dry. Dermaplaning is performed on a dry surface — any residual moisture changes how the blade sits.',
+      },
+      {
+        title: 'The pass',
+        body: 'The blade is held at a fixed angle and drawn across the skin in short, controlled strokes, section by section. Active or pustular acne is worked around rather than over.',
+      },
+      {
+        title: 'Treat and protect',
+        body: 'With the surface barrier of dead cells removed, serums are applied while absorption is at its highest, and the treatment closes with SPF.',
+      },
+    ],
+    pricing: [
+      {
+        label: 'Dermaplane Facial',
+        price: verifiedPrices['dermaplane-facial'],
+        description:
+          'A full facial with dermaplaning included — cleanse, dermaplane, treat and protect. Often paired with a peel, because a cleared surface lets the acid work evenly.',
+      },
+    ],
+    note: 'Dermaplaning is not appropriate over active or inflamed acne, and it is skipped in those areas. Vellus hair grows back exactly as it was — same texture, same colour. It cannot grow back thicker, because the blade does not touch the follicle.',
   },
 ];
 

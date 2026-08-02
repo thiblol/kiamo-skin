@@ -5,8 +5,13 @@ import Reveal from '../../components/Reveal.astro';
 import Button from '../../components/Button.astro';
 import NapBlock from '../../components/NapBlock.astro';
 import { treatments } from '../../data/treatments';
+import { treatmentFaqs } from '../../data/treatment-faqs';
+import { areas } from '../../data/areas';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
+import ServiceSchema from '../../components/schema/ServiceSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import FaqSchema from '../../components/schema/FaqSchema.astro';
 
 export function getStaticPaths() {
   return treatments.map((treatment) => ({
@@ -17,9 +22,23 @@ export function getStaticPaths() {
 
 const { treatment } = Astro.props;
 const others = treatments.filter((t) => t.slug !== treatment.slug);
+const faqs = treatmentFaqs[treatment.slug] ?? [];
+const localAreas = treatment.areas
+  .map((slug) => areas.find((a) => a.slug === slug))
+  .filter((a) => a !== undefined);
 ---
 
 <BaseLayout title={treatment.title} description={treatment.description}>
+  <ServiceSchema slot="head" treatment={treatment} />
+  <BreadcrumbSchema
+    slot="head"
+    trail={[
+      { name: 'Treatments', path: '/treatments' },
+      { name: treatment.name, path: `/treatments/${treatment.slug}` },
+    ]}
+  />
+  {faqs.length > 0 && <FaqSchema slot="head" faqs={faqs} />}
+
   <article>
     <header class="bg-blush">
       <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
@@ -27,9 +46,13 @@ const others = treatments.filter((t) => t.slug !== treatment.slug);
           <a href="/treatments" class="hover:text-rose">Treatments</a> · {treatment.name}
         </p>
         <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.5rem] md:text-[4rem]">{treatment.headline}</h1>
-        <p class="t-body mt-7 max-w-[62ch]">{treatment.intro}</p>
-        <div class="mt-9">
+        <p class="t-body mt-7 max-w-[62ch] text-[1.125rem]">{treatment.opener}</p>
+        <p class="t-body mt-5 max-w-[62ch]">{treatment.intro}</p>
+        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
           <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a href={business.phone.href} class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose">
+            {business.phone.display}
+          </a>
         </div>
       </div>
     </header>
@@ -80,7 +103,7 @@ const others = treatments.filter((t) => t.slug !== treatment.slug);
 
         <aside>
           <div class="border border-line bg-ivory p-8">
-            <h2 class="t-eyebrow text-ink-soft">Pricing</h2>
+            <h2 class="t-eyebrow text-ink-soft">Pricing in San Diego</h2>
             <dl class="mt-7 m-0 space-y-6">
               {
                 treatment.pricing.map((row) => (
@@ -111,6 +134,68 @@ const others = treatments.filter((t) => t.slug !== treatment.slug);
       </div>
     </div>
 
+    {
+      faqs.length > 0 && (
+        <div class="bg-ivory">
+          <div class="wrap section-y">
+            <p class="t-eyebrow text-ink-soft">Before you book</p>
+            <h2 class="t-h2 mt-5">{treatment.name} questions</h2>
+            <dl class="mt-12 m-0 max-w-[68ch]">
+              {faqs.map((faq) => (
+                <div class="border-b border-line">
+                  <details class="group">
+                    <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
+                      <dt>{faq.question}</dt>
+                      <span
+                        aria-hidden="true"
+                        class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                      >
+                        +
+                      </span>
+                    </summary>
+                    <dd class="t-body m-0 pb-6 text-[0.9375rem]">{faq.answer}</dd>
+                  </details>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </div>
+      )
+    }
+
+    {
+      localAreas.length > 0 && (
+        <div class="bg-porcelain">
+          <div class="wrap section-y">
+            <h2 class="t-h3">Travelling in for {treatment.name}</h2>
+            <p class="t-body mt-7 max-w-[62ch]">
+              The studio is in Mission Hills, and clients come in from across San Diego County.
+            </p>
+            <ul class="mt-10 m-0 flex list-none flex-wrap gap-x-3 gap-y-3 p-0">
+              {localAreas.map((area) => (
+                <li>
+                  <a
+                    href={`/service-areas/${area.slug}`}
+                    class="t-button inline-block rounded-full border border-line px-5 pt-[13px] pb-[10px] transition-colors duration-300 hover:border-rose hover:text-rose"
+                  >
+                    {area.name}
+                  </a>
+                </li>
+              ))}
+              <li>
+                <a
+                  href="/service-areas"
+                  class="t-button inline-block rounded-full border border-line px-5 pt-[13px] pb-[10px] transition-colors duration-300 hover:border-rose hover:text-rose"
+                >
+                  All areas
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      )
+    }
+
     <div class="bg-ivory">
       <div class="wrap section-y">
         <h2 class="t-h3">Other treatments</h2>
@@ -132,3 +217,10 @@ const others = treatments.filter((t) => t.slug !== treatment.slug);
     </div>
   </article>
 </BaseLayout>
+
+<style>
+  /* Safari still needs this to drop the disclosure triangle. */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

@@ -1,0 +1,41 @@
+---
+/**
+ * Hub pages: CollectionPage wrapping an ItemList of the pages they link to.
+ */
+import { absolute, businessId, websiteId } from '../../config/urls';
+
+interface Props {
+  name: string;
+  description: string;
+  items: { name: string; path: string }[];
+}
+
+const { name, description, items } = Astro.props;
+const site = Astro.site;
+const url = absolute(Astro.url.pathname, site);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'CollectionPage',
+  '@id': `${url}#webpage`,
+  url,
+  name,
+  description,
+  isPartOf: { '@id': websiteId(site) },
+  about: { '@id': businessId(site) },
+  inLanguage: 'en-US',
+  mainEntity: {
+    '@type': 'ItemList',
+    '@id': `${url}#list`,
+    numberOfItems: items.length,
+    itemListElement: items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      url: absolute(item.path, site),
+    })),
+  },
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

@@ -1,5 +1,13 @@
 ---
-import { faqs } from '../../data/faqs';
+import { faqs as homepageFaqs } from '../../data/faqs';
+import type { Faq } from '../../data/faqs';
+
+interface Props {
+  /** Defaults to the shared homepage set; treatment pages pass their own. */
+  faqs?: Faq[];
+}
+
+const { faqs = homepageFaqs } = Astro.props;
 
 const schema = {
   '@context': 'https://schema.org',

@@ -1,0 +1,71 @@
+---
+/**
+ * Page-level Service node for a treatment page.
+ *
+ * Prices come from the treatment's own pricing rows, so a menu change cannot
+ * leave the schema asserting a stale figure. Rows priced at consultation are
+ * omitted from `offers` rather than estimated.
+ */
+import { absolute, businessId } from '../../config/urls';
+import { business } from '../../config/business';
+import type { Treatment } from '../../data/treatments';
+
+interface Props {
+  treatment: Treatment;
+}
+
+const { treatment } = Astro.props;
+const site = Astro.site;
+const url = absolute(`/treatments/${treatment.slug}`, site);
+
+const numeric = treatment.pricing
+  .map((row) => ({ label: row.label, value: Number(row.price.replace(/[$,]/g, '')) }))
+  .filter((row) => Number.isFinite(row.value) && row.value > 0);
+
+const offers =
+  numeric.length > 1
+    ? {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'USD',
+        lowPrice: String(Math.min(...numeric.map((n) => n.value))),
+        highPrice: String(Math.max(...numeric.map((n) => n.value))),
+        offerCount: numeric.length,
+        availability: 'https://schema.org/InStock',
+        url: business.bookingUrl,
+        offers: numeric.map((row) => ({
+          '@type': 'Offer',
+          name: row.label,
+          price: String(row.value),
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+          url: business.bookingUrl,
+        })),
+      }
+    : numeric.length === 1
+      ? {
+          '@type': 'Offer',
+          name: numeric[0].label,
+          price: String(numeric[0].value),
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+          url: business.bookingUrl,
+        }
+      : undefined;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${url}#service`,
+  name: treatment.name,
+  serviceType: treatment.serviceType,
+  category: treatment.category,
+  ...(treatment.alternateName && { alternateName: treatment.alternateName }),
+  description: treatment.description,
+  url,
+  provider: { '@id': businessId(site) },
+  areaServed: business.areaServed.map((name) => ({ '@type': 'Place', name })),
+  ...(offers && { offers }),
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

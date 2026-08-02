@@ -5,13 +5,25 @@ import ServiceMenu from '../../components/sections/ServiceMenu.astro';
 import Reveal from '../../components/Reveal.astro';
 import PanelWipe from '../../components/PanelWipe.astro';
 import FaqLocation from '../../components/sections/FaqLocation.astro';
+import CollectionSchema from '../../components/schema/CollectionSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import { treatments } from '../../data/treatments';
 ---
 
 <BaseLayout
-  title="Treatments — Facials, Peels & Scalp Therapy | KIAMO Skin"
-  description="Corrective facials, DMK enzyme therapy, Procell microchanneling, Lira peels and Keravive scalp therapy in Mission Hills, San Diego."
+  title="Skin & Scalp Treatments in San Diego | KIAMO Skin"
+  description="Corrective facials, DMK enzyme therapy, Procell microchanneling, Lira peels, dermaplaning and Keravive scalp therapy in Mission Hills, San Diego."
 >
+  <CollectionSchema
+    slot="head"
+    name="Skin & Scalp Treatments in San Diego"
+    description="The full corrective treatment menu at KIAMO SKIN in Mission Hills, San Diego — facials, scalp therapy, enzyme therapy, microchanneling, peels and dermaplaning."
+    items={treatments.map((treatment) => ({
+      name: treatment.name,
+      path: `/treatments/${treatment.slug}`,
+    }))}
+  />
+  <BreadcrumbSchema slot="head" trail={[{ name: 'Treatments', path: '/treatments' }]} />
   <header class="bg-blush">
     <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
       <p class="t-eyebrow text-ink-soft">Treatments</p>
@@ -53,7 +65,7 @@ import { treatments } from '../../data/treatments';
                   />
                 </PanelWipe>
                 <h2 class="t-service mt-6 text-[1.125rem] transition-colors duration-300 group-hover:text-rose">
-                  {treatment.name}
+                  {treatment.name} in San Diego
                 </h2>
                 <p class="t-body mt-3 text-[0.9375rem] text-ink-soft">{treatment.headline}</p>
               </a>
@@ -61,6 +73,12 @@ import { treatments } from '../../data/treatments';
           ))
         }
       </ul>
+
+      <p class="t-body mt-14 text-[0.9375rem]">
+        <a href="/service-areas" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+          See the areas we serve across San Diego County
+        </a>
+      </p>
     </div>
   </section>
 
