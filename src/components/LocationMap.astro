@@ -1,0 +1,39 @@
+---
+import { business } from '../config/business';
+
+interface Props {
+  /**
+   * A place clients travel from, e.g. "La Jolla". Renders a route to the studio
+   * instead of a pin on it. Omit for the plain place map.
+   */
+  origin?: string;
+  aspect?: string;
+  class?: string;
+}
+
+const { origin, aspect = 'aspect-4/3', class: className = '' } = Astro.props;
+
+const destination = `${business.name}, ${business.address.full}`;
+
+const src = origin
+  ? `https://www.google.com/maps?saddr=${encodeURIComponent(
+      // County, not city: five of the nine areas are their own cities, so
+      // "Chula Vista, San Diego, CA" geocodes a place that does not exist.
+      `${origin}, San Diego County, CA`,
+    )}&daddr=${encodeURIComponent(destination)}&output=embed`
+  : `https://www.google.com/maps?q=${encodeURIComponent(destination)}&output=embed`;
+
+/* Lives in the tag, so the guard suite's tag-stripped text never sees it. A
+   visible caption naming both an area and the studio would trip the Del Mar
+   proximity check in test/guards.test.js. */
+const title = origin
+  ? `Google Map showing the route from ${origin} to ${business.name}, ${business.address.full}`
+  : `Google Map showing ${business.name} at ${business.address.full}`;
+---
+
+<iframe
+  src={src}
+  title={title}
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade"
+  class={`w-full border border-line ${aspect} ${className}`}></iframe>

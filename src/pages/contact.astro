@@ -5,6 +5,7 @@ import ContactSchema from '../components/schema/ContactSchema.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
 import Button from '../components/Button.astro';
 import NapBlock from '../components/NapBlock.astro';
+import LocationMap from '../components/LocationMap.astro';
 import studio from '../assets/studio-interior.jpg';
 import { business } from '../config/business';
 import { CTA_LABEL } from '../config/nav';
@@ -78,6 +79,8 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
             class="aspect-3/4 w-full object-cover"
           />
         </a>
+
+        <LocationMap class="mt-10" />
 
         <h2 class="t-eyebrow mt-10 text-ink-soft">Areas served</h2>
         <p class="t-body mt-4 text-[0.9375rem]">{business.areaServed.join(' · ')}</p>
