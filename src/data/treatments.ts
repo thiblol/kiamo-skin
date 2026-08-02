@@ -30,36 +30,36 @@ export const treatments: Treatment[] = [
     title: 'HydraFacial in San Diego | KIAMO Skin',
     description:
       'HydraFacial in Mission Hills, San Diego. Cleanse, extract and hydrate, with the booster and LED therapy selected for your skin. From $249.',
-    headline: 'Cleanse, extract, hydrate — in one pass.',
+    headline: 'The foundation of healthy skin.',
     intro:
       'HydraFacial does three things at once: lifts away dead surface cells, vacuums out congestion, and floods the skin with serum while it is still open enough to take it. It is the most forgiving corrective treatment on the menu, which is why it is usually where a new plan starts.',
     image: hydrafacial,
     imageAlt: 'A HydraFacial treatment in progress in the KIAMO Skin studio',
     goodFor: [
-      'Congestion and blackheads across the nose, chin and forehead',
-      'Dull, dehydrated skin that no longer holds product',
-      'Sensitive skin that reacts badly to manual extraction',
-      'A first corrective treatment before deciding on a longer plan',
+      'Congested pores and blackheads',
+      'Dull, dehydrated skin',
+      'Uneven skin texture',
+      'The foundation of a corrective treatment plan',
     ],
     steps: [
       {
-        title: 'Cleanse and resurface',
-        body: 'A gentle acid blend loosens dead cells so the skin underneath is reachable. No scrub, no grit.',
+        title: 'Cleanse & resurface',
+        body: 'A blend of gentle exfoliating acids lifts away dead skin cells—no scrubs, no harsh abrasion.',
       },
       {
-        title: 'Extract and hydrate',
-        body: 'Suction clears the pore of sebum and debris, then hyaluronic acid and antioxidants go straight back in.',
+        title: 'Extract & hydrate',
+        body: 'Gentle vortex extraction removes oil and debris before hydrating ingredients and antioxidants are infused into the skin.',
       },
       {
         title: 'Boost',
-        body: 'A targeted booster is chosen for what your skin is doing that week — brightening, calming or barrier support.',
+        body: 'A customized booster is selected based on your skin’s unique needs—from brightening to barrier support.',
       },
     ],
     pricing: [
-      { label: 'First Time Client Treatment', price: verifiedPrices['first-time-client'] },
+      { label: 'First-Time Client Treatment', price: verifiedPrices['first-time-client'] },
       { label: 'HydraFacial Treatment', price: verifiedPrices.hydrafacial },
     ],
-    note: 'The First Time Client treatment adds a full consultation, a customised booster with LED therapy and a jelly mask. It is the better first visit if you have not been treated here before.',
+    note: 'The First-Time Client Treatment is the best place to begin. It includes a comprehensive consultation, skin analysis, customized HydraFacial, personalized booster, microcurrent, LED Light Therapy, Hydrojelly Mask, and a long term treatment plan. The HydraFacial Treatment is a customized HydraFacial that deeply cleanses, exfoliates, extracts, and hydrates to support healthy skin and maintain your treatment results.',
   },
   {
     slug: 'keravive-scalp',
@@ -69,34 +69,34 @@ export const treatments: Treatment[] = [
       'Keravive scalp therapy in Mission Hills, San Diego. Corrective treatment for flaking, buildup and thinning — cleanse, exfoliate and hydrate the scalp.',
     headline: 'Your scalp is skin. Treat it that way.',
     intro:
-      'Keravive is not a shampoo and not a scalp massage. It cleanses, exfoliates and hydrates the scalp itself, then leaves you with a take-home spray that keeps the work going between visits. San Diego’s hard water makes buildup a genuine local problem, and buildup is where flaking, itch and weak growth usually start.',
+      'Keravive deeply cleanses, exfoliates, and hydrates the scalp while removing buildup that can contribute to dryness, flaking, and irritation. A healthier scalp creates a better environment for healthy hair growth. In San Diego, hard water can make scalp buildup especially common, making regular scalp care an important part of maintaining a healthy scalp. Every treatment includes a take home peptide spray to continue supporting scalp health between visits.',
     image: scalp,
     imageAlt: 'Scalp therapy being performed at the part line',
     goodFor: [
-      'Flaking, itching or tightness across the scalp',
-      'Heavy product and mineral buildup from hard water',
-      'Thinning or shedding where the scalp looks congested',
-      'Anyone who treats their face carefully and has never treated their scalp',
+      'Flaking, itching, or scalp tightness',
+      'Product buildup and hard water mineral deposits',
+      'Shedding accompanied by visible scalp buildup or irritation',
+      'Anyone who invests in their skincare but has never treated their scalp',
     ],
     steps: [
       {
         title: 'Cleanse',
-        body: 'Detachable tips work section by section, lifting sebum, dead skin and mineral residue off the scalp.',
+        body: 'Gently removes oil, dead skin, product buildup, and mineral buildup from the scalp.',
       },
       {
-        title: 'Stimulate',
-        body: 'Peptides and growth factors are delivered directly to the follicle rather than sitting on the hair.',
+        title: 'Nourish',
+        body: 'A concentrated peptide complex nourishes the scalp to support a healthier environment for healthy hair growth.',
       },
       {
         title: 'Continue at home',
-        body: 'You leave with the Keravive take-home spray. Using it is not optional — it is most of the result.',
+        body: 'Your take-home peptide spray helps nourish the scalp between treatments to extend and support your results.',
       },
     ],
     pricing: [
       { label: 'Keravive Scalp Treatment', price: verifiedPrices['keravive-scalp'] },
       { label: '3 Treatment Series — total', price: verifiedPrices['keravive-scalp-series'] },
     ],
-    note: 'Scalp work is cumulative. A single session cleans; a series changes how the scalp behaves, which is why it is priced lower per session.',
+    note: 'Healthy scalp takes consistency. While one treatment deeply cleanses and hydrates the scalp, a series provides the best opportunity to support long term scalp health.',
   },
   {
     slug: 'dmk-enzyme-therapy',
@@ -104,29 +104,29 @@ export const treatments: Treatment[] = [
     title: 'DMK Enzyme Therapy in San Diego | KIAMO Skin',
     description:
       'DMK enzyme therapy in Mission Hills, San Diego. Enzymatic resurfacing that works with the skin’s own function to rebuild a damaged barrier.',
-    headline: 'Rebuild the barrier instead of stripping it.',
+    headline: 'Restore skin function from within.',
     intro:
-      'DMK works on a different premise to most resurfacing: rather than removing tissue and waiting for repair, the enzyme masque puts the skin through a controlled flush that clears what should not be there and leaves what should. It is the treatment for skin that has been over-exfoliated, over-treated, or is reacting to everything.',
+      'DMK Enzyme Therapy is designed to restore healthy skin function rather than simply exfoliating the surface. By supporting the skin’s natural processes, it helps strengthen the skin barrier while encouraging healthy circulation and lymphatic activity. It’s especially beneficial for skin that feels over-exfoliated, sensitized, inflamed, or slow to heal.',
     image: enzyme,
     imageAlt: 'An enzyme masque setting during a treatment',
     goodFor: [
-      'A compromised barrier — stinging, redness, tightness after products',
-      'Skin damaged by aggressive at-home acids or scrubs',
-      'Dehydration that does not respond to moisturiser',
-      'Congestion alongside sensitivity, where a peel would be too much',
+      'A compromised skin barrier — stinging, redness, or tightness after products',
+      'Skin recovering from over-exfoliation or aggressive at-home products',
+      'Skin that stays dehydrated despite moisturizer',
+      'Congested, sensitive skin that needs a gentler corrective approach',
     ],
     steps: [
       {
         title: 'Assess',
-        body: 'The protocol is chosen from what the skin is doing on the day, not from a fixed menu.',
+        body: 'Every DMK treatment is customized to what your skin needs that day — not a fixed protocol.',
       },
       {
         title: 'The masque',
-        body: 'The enzyme masque sets firm and holds for the duration. You will feel a strong pulsing — that is the intended effect, not a reaction.',
+        body: 'As the enzyme masque sets, you’ll feel a tightening and rhythmic pulsing sensation. This is an expected part of the treatment and varies from person to person.',
       },
       {
-        title: 'Home prescriptive',
-        body: 'DMK is a system. The in-studio work is paired with a home routine, and results track how closely that is followed.',
+        title: 'Home care',
+        body: 'DMK is designed as a complete system. Your personalized home routine supports the work done in the treatment room, helping you achieve the best possible results between visits.',
       },
     ],
     pricing: [
@@ -141,33 +141,36 @@ export const treatments: Treatment[] = [
     title: 'Procell Microchanneling for Scarring | KIAMO Skin San Diego',
     description:
       'Procell microchanneling in Mission Hills, San Diego. Controlled micro-injury with growth factors for acne scarring and uneven texture in melanin-rich skin.',
-    headline: 'For scarring, the skin has to be asked to rebuild.',
+    headline: 'Stimulate your skin’s natural repair process.',
     intro:
-      'Microchanneling makes thousands of controlled micro-channels in the skin and delivers growth factors through them. The channels close within hours; the repair response runs for weeks. It is the most direct answer on the menu for acne scarring and textural change, and it is dose-controlled — which matters when you are treating deeper skin tones.',
+      'Procell Microchanneling creates controlled microchannels that activate your skin’s natural repair response while delivering a specialized growth factor serum. Over time, new collagen helps improve acne scars, fine lines, wrinkles, and uneven skin texture for smoother, healthier-looking skin. Every treatment is customized for your skin goals and skin tone.',
     image: acne,
     imageAlt: 'Portrait of smooth, healthy skin along the cheek and jaw',
     goodFor: [
-      'Acne scarring and post-inflammatory texture',
-      'Enlarged pores and uneven surface',
-      'Fine lines and early laxity',
-      'Skin that needs collagen stimulation without heat or light',
+      'Acne scars and uneven skin texture',
+      'Enlarged pores and rough skin texture',
+      'Fine lines and early loss of firmness',
+      'Skin that benefits from collagen stimulation without heat or light',
     ],
     steps: [
       {
         title: 'Prepare',
-        body: 'The skin is cleansed and, in most protocols, numbed before the pass begins.',
+        body: 'Your skin is thoroughly cleansed and prepared before treatment. Every Procell session is customized to your skin goals and concerns.',
       },
       {
         title: 'The pass',
-        body: 'Depth is set for the area and for your skin — deeper through scarred tissue, lighter across thinner areas.',
+        body: 'Treatment depth is adjusted for each area of your skin — deeper where correction is needed and lighter where skin is naturally thinner. A specialized growth factor serum is applied throughout the treatment to support your skin’s natural repair process.',
       },
       {
         title: 'Recover',
-        body: 'Expect to look flushed for a day or two. Sun protection for the following week is not negotiable, particularly in melanin-rich skin.',
+        body: 'Expect redness similar to a mild sunburn for 24–48 hours. Mild dryness or flaking may occur as your skin renews itself. Following your post-care instructions including daily SPF is essential to support healing and help minimize the risk of unwanted pigmentation, especially in melanin rich skin.',
       },
     ],
-    pricing: [{ label: 'Procell Microchanneling', price: verifiedPrices.procell }],
-    note: 'Scarring responds to a series rather than a single session — three treatments spaced four to six weeks apart is the usual recommendation. The number is set at consultation, once the depth of the scarring is clear.',
+    pricing: [
+      { label: 'Procell Microchanneling', price: verifiedPrices.procell },
+      { label: 'Procell Microchanneling 3-Treatment Series', price: verifiedPrices['procell-series'] },
+    ],
+    note: 'The best results are typically achieved with a series rather than a single treatment. Most clients begin with three sessions spaced 4–6 weeks apart, though your treatment plan is customized during your consultation based on your skin goals, concerns, and how your skin responds.',
   },
   {
     slug: 'lira-peels',
@@ -175,7 +178,7 @@ export const treatments: Treatment[] = [
     title: 'Chemical Peels for Melanin-Rich Skin | KIAMO Skin San Diego',
     description:
       'Lira professional chemical peels in Mission Hills, San Diego, selected for pigmentation, melasma and post-inflammatory marks in melanin-rich skin.',
-    headline: 'Peels chosen for how your skin pigments.',
+    headline: 'Designed to brighten without compromising skin health.',
     intro:
       'Pigmentation is the reason most people book, and it is also where the wrong treatment does lasting damage. Melanin-rich skin responds to trauma by producing more pigment, so the strength, the acid and the pacing all have to be selected deliberately. Lira’s professional range is built for that kind of control.',
     image: pigmentation,

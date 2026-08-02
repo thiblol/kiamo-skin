@@ -100,5 +100,7 @@ export const verifiedPrices = {
   /** Package total for the series of three, not a per-session rate. */
   'keravive-scalp-series': '$1,499',
   procell: '$475',
+  /** Package total for the series of three, not a per-session rate. */
+  'procell-series': '$1,199',
   'lira-advanced-peel': '$299',
 } as const;

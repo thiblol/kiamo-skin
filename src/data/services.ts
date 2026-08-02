@@ -15,10 +15,10 @@ export interface Service {
 /** Menu order: the entry point first, then each category from lightest to deepest. */
 export const services: Service[] = [
   {
-    name: 'First Time Client Treatment',
+    name: 'First-Time Client Treatment',
     category: 'Facials',
     description:
-      'A consultation and skin analysis, then a HydraFacial tailored to what comes out of it — booster, LED and jelly mask included.',
+      'The best place to begin. Includes a comprehensive consultation, skin analysis, customized HydraFacial, personalized booster, microcurrent, LED Light Therapy, Hydrojelly Mask, and a long term treatment plan.',
     price: verifiedPrices['first-time-client'],
     href: '/treatments/hydrafacial',
   },
@@ -26,7 +26,7 @@ export const services: Service[] = [
     name: 'HydraFacial Treatment',
     category: 'Facials',
     description:
-      'Cleanse, extract and hydrate in one pass. Non-irritating, customised to your skin, and no downtime after it.',
+      'A customized HydraFacial that deeply cleanses, exfoliates, extracts, and hydrates to support healthy skin and maintain your treatment results.',
     price: verifiedPrices.hydrafacial,
     href: '/treatments/hydrafacial',
   },
@@ -75,6 +75,14 @@ export const services: Service[] = [
     description:
       'Controlled micro-injury with growth factors, for acne scarring, texture and early laxity. Also treats the scalp.',
     price: verifiedPrices.procell,
+    href: '/treatments/procell-microchanneling',
+  },
+  {
+    name: 'Procell Microchanneling — 3 Treatment Series',
+    category: 'Advanced',
+    description:
+      'Designed for clients committed to long-term correction. A series of three treatments supports progressive collagen remodeling and is recommended for concerns such as acne scars, uneven texture, fine lines, and overall skin rejuvenation. Treatments are typically scheduled 4–6 weeks apart.',
+    price: verifiedPrices['procell-series'],
     href: '/treatments/procell-microchanneling',
   },
   {

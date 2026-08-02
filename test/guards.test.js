@@ -102,7 +102,7 @@ describe('factual guards', () => {
   });
 
   test('only verified prices appear', () => {
-    const allowed = new Set(['$199', '$249', '$259', '$279', '$299', '$475', '$599', '$1,499']);
+    const allowed = new Set(['$199', '$249', '$259', '$279', '$299', '$475', '$599', '$1,199', '$1,499']);
     forEachPage(({ text, file }) => {
       for (const match of text.match(/\$\d[\d,]*/g) ?? []) {
         assert.ok(allowed.has(match), `${file}: unverified price ${match}`);
