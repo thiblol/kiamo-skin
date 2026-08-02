@@ -57,6 +57,10 @@ export const business = {
   visit: {
     parking: 'Free parking',
     appointmentOnly: 'By appointment only',
+    /** Renders in NapBlock, so it ships on every page. Names the neighbourhoods
+        within a five-minute drive; the street is the one Reynard Way meets. */
+    orientation:
+      'Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.',
   },
 
   cancellation:

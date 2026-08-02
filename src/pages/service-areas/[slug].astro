@@ -60,6 +60,17 @@ const others = areas.filter((a) => a.slug !== area.slug);
           <Reveal>
             <h2 class="t-h3">{area.localConcern.heading}</h2>
             <p class="t-body mt-7">{area.localConcern.body}</p>
+            {
+              area.melaninNote && (
+                <p class="t-body mt-6">
+                  {area.melaninNote}{' '}
+                  <a href="/melanin-rich-skin" class="border-b border-ink pb-0.5 hover:border-rose hover:text-rose">
+                    facials for melanin-rich skin in San Diego
+                  </a>
+                  .
+                </p>
+              )
+            }
           </Reveal>
 
           <Reveal class="mt-16 block">

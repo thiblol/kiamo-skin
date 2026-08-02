@@ -30,6 +30,12 @@ export interface Treatment {
   pricing: { label: string; price: string; description?: string }[];
   /** Honest caveats. Rendered as a closing note, never omitted where present. */
   note?: string;
+  /**
+   * One sentence linking to /melanin-rich-skin, rendered under the note. Set only
+   * where the specialism genuinely bears on the treatment — a link on every page
+   * would be sitewide boilerplate, which is the thing hub anchors exist to avoid.
+   */
+  melaninNote?: string;
   /** schema.org Service fields. Not rendered — structured data only. */
   serviceType: string;
   category: string;
@@ -98,7 +104,7 @@ export const treatments: Treatment[] = [
     areas: ['pacific-beach', 'la-jolla', 'encinitas'],
     title: 'Keravive Scalp Treatment in San Diego | KIAMO Skin',
     description:
-      'Keravive scalp therapy in Mission Hills, San Diego. Corrective treatment for flaking, buildup and thinning — cleanse, exfoliate and hydrate the scalp.',
+      'Keravive scalp therapy in Mission Hills, San Diego. Corrective treatment for flaking, buildup and thinning of the scalp. $599, or $1,499 for three.',
     headline: 'Your scalp is skin. Treat it that way.',
     opener:
       'Looking for scalp treatment in San Diego? Keravive is performed at a single studio in Mission Hills, and it is the treatment chosen for buildup, flaking and the mineral residue San Diego’s hard water leaves behind.',
@@ -140,7 +146,7 @@ export const treatments: Treatment[] = [
     areas: ['mission-hills', 'la-jolla', 'la-mesa'],
     title: 'DMK Enzyme Therapy in San Diego | KIAMO Skin',
     description:
-      'DMK enzyme therapy in Mission Hills, San Diego. Enzymatic resurfacing that works with the skin’s own function to rebuild a damaged barrier.',
+      'DMK enzyme therapy in Mission Hills, San Diego. Enzymatic resurfacing that rebuilds a damaged barrier. Level 1 is $279; Level 2 and 3 at consultation.',
     headline: 'Restore skin function from within.',
     opener:
       'Looking for DMK enzyme therapy in San Diego? Level 1 is $279 at the KIAMO SKIN studio in Mission Hills, and it is the treatment used when a barrier is too compromised to tolerate anything stronger.',
@@ -183,7 +189,7 @@ export const treatments: Treatment[] = [
     areas: ['la-jolla', 'carlsbad', 'del-mar'],
     title: 'Procell Microchanneling for Scarring | KIAMO Skin San Diego',
     description:
-      'Procell microchanneling in Mission Hills, San Diego. Controlled micro-injury with growth factors for acne scarring and uneven texture in melanin-rich skin.',
+      'Procell microchanneling in Mission Hills, San Diego for acne scarring and texture in melanin-rich skin. $475, or $1,199 for a series of three.',
     headline: 'Stimulate your skin’s natural repair process.',
     opener:
       'Looking for microneedling in San Diego? Procell microchanneling is the alternative offered here — a different modality from a needle pen, performed by a licensed esthetician in Mission Hills, with depth adjusted for melanin-rich skin.',
@@ -225,6 +231,8 @@ export const treatments: Treatment[] = [
           'Designed for clients committed to long-term correction. A series of three treatments supports progressive collagen remodeling and is recommended for concerns such as acne scars, uneven texture, fine lines, and overall skin rejuvenation. Treatments are typically scheduled 4–6 weeks apart.',
       },
     ],
+    melaninNote:
+      'Microchanneling works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger.',
   },
   {
     slug: 'lira-peels',
@@ -234,7 +242,7 @@ export const treatments: Treatment[] = [
     areas: ['chula-vista', 'la-jolla', 'north-park'],
     title: 'Chemical Peels for Melanin-Rich Skin | KIAMO Skin San Diego',
     description:
-      'Lira professional chemical peels in Mission Hills, San Diego, selected for pigmentation, melasma and post-inflammatory marks in melanin-rich skin.',
+      'Lira chemical peels in Mission Hills, San Diego for pigmentation and melasma in melanin-rich skin. Gentle Renewal $199, Advanced Peel $299.',
     headline: 'Designed to brighten without compromising skin health.',
     opener:
       'Looking for a chemical peel in San Diego that is safe on melanin-rich skin? That is the work this studio was built around.',
@@ -267,6 +275,8 @@ export const treatments: Treatment[] = [
       { label: 'LIRA Advanced Peel', price: verifiedPrices['lira-advanced-peel'] },
     ],
     note: 'Peel strength is matched to your skin at consultation. The Gentle Renewal Peel refreshes and maintains; the Advanced Peel goes deeper for pigmentation and scarring. Pigmentation is treated as a series with home care between visits — there is no single-session version of this.',
+    melaninNote:
+      'Peels on Black and brown skin are chosen differently — the pacing is the whole point.',
   },
   {
     slug: 'dermaplaning',

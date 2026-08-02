@@ -1,0 +1,339 @@
+---
+/**
+ * The melanin-rich skin specialism page.
+ *
+ * Targets the practitioner- and business-identity half of the melanin cluster
+ * (`black esthetician san diego`, `black owned spa san diego`, `esthetician for
+ * black skin`, `facials for black skin`). The condition half — melasma,
+ * hyperpigmentation — deliberately stays on `/treatments/lira-peels`, which
+ * already ranks-targets `chemical peel san diego` at 210/mo. Splitting the
+ * intents keeps the two pages off each other's head terms.
+ *
+ * A geo H1 is correct here: like the area pages, the whole purpose of this page
+ * is the geographic claim. Treatment-page H1s stay bare.
+ *
+ * Sourced claims link inline to the AAD and NIH. Nothing is written from memory,
+ * and no outcome is promised.
+ */
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Reveal from '../components/Reveal.astro';
+import Button from '../components/Button.astro';
+import NapBlock from '../components/NapBlock.astro';
+import PanelWipe from '../components/PanelWipe.astro';
+import FaqSchema from '../components/schema/FaqSchema.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import { melaninFaqs } from '../data/melanin-faqs';
+import { treatments } from '../data/treatments';
+import { areas } from '../data/areas';
+import { business } from '../config/business';
+import { absolute, businessId, websiteId } from '../config/urls';
+import { CTA_LABEL } from '../config/nav';
+import pigmentation from '../assets/concern-pigmentation.jpg';
+
+const site = Astro.site;
+const url = absolute('/melanin-rich-skin', site);
+
+/* Ordered by how a client arrives at them, not by price. */
+const concerns = [
+  {
+    slug: 'lira-peels',
+    concern: 'Dark marks left behind by acne, and melasma',
+    body: 'Post-inflammatory marks and melasma are worked through with a series of gentle professional peels, with strength escalating only as the skin tolerates it. There is no single-session version of pigmentation work.',
+  },
+  {
+    slug: 'procell-microchanneling',
+    concern: 'Acne scarring and uneven texture',
+    body: 'Procell microchanneling stimulates repair without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger. Every pass is customised for skin tone.',
+  },
+  {
+    slug: 'dmk-enzyme-therapy',
+    concern: 'Skin that stings, flushes or reacts to everything',
+    body: 'A damaged barrier has to be rebuilt before any corrective work begins. Treating pigmentation on reactive skin is how the marks get worse instead of better.',
+  },
+  {
+    slug: 'hydrafacial',
+    concern: 'Congestion, blackheads and dullness',
+    body: 'Vortex extraction lifts congestion without the manual pressure that leaves marks behind on deeper skin tones. It is where most first visits start.',
+  },
+];
+
+const featured = concerns
+  .map((c) => {
+    const treatment = treatments.find((t) => t.slug === c.slug);
+    return treatment ? { ...c, treatment } : undefined;
+  })
+  .filter((c) => c !== undefined);
+
+/* The strongest melanin-rich catchments in the county, per the area research. */
+const catchments = ['chula-vista', 'north-park', 'la-mesa', 'mission-hills']
+  .map((slug) => areas.find((a) => a.slug === slug))
+  .filter((a) => a !== undefined);
+
+const title = 'Black Esthetician in San Diego | KIAMO Skin';
+const description =
+  'Black-owned skin studio in Mission Hills, San Diego. Facials, peels and corrective treatment for acne, scarring and pigmentation in melanin-rich skin.';
+
+const webpage = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${url}#webpage`,
+  url,
+  name: title,
+  description,
+  isPartOf: { '@id': websiteId(site) },
+  about: { '@id': businessId(site) },
+  inLanguage: 'en-US',
+};
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${url}#service`,
+  name: 'Corrective facials for melanin-rich skin',
+  serviceType: 'Corrective skin treatment for melanin-rich skin',
+  category: 'Skin care',
+  description:
+    'Corrective facial and scalp treatment for acne, scarring, melasma and post-inflammatory hyperpigmentation in Black and brown skin, at a Black-owned studio in Mission Hills, San Diego.',
+  url,
+  provider: { '@id': businessId(site) },
+  areaServed: business.areaServed.map((name) => ({ '@type': 'Place', name })),
+  audience: {
+    '@type': 'PeopleAudience',
+    name: 'Clients with melanin-rich skin',
+  },
+};
+---
+
+<BaseLayout {title} {description}>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(webpage)} slot="head" />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(service)} slot="head" />
+  <FaqSchema slot="head" faqs={melaninFaqs} />
+  <BreadcrumbSchema
+    slot="head"
+    trail={[{ name: 'Melanin-Rich Skin', path: '/melanin-rich-skin' }]}
+  />
+
+  <article>
+    <header class="bg-blush">
+      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+        <p class="t-eyebrow text-ink-soft">The specialism</p>
+        <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.5rem] md:text-[4rem]">
+          Facials for melanin-rich skin in San Diego
+        </h1>
+        <p class="t-body mt-7 max-w-[62ch] text-[1.125rem]">
+          Looking for a Black esthetician in San Diego? KIAMO SKIN is a Black-owned studio in
+          Mission Hills, and melanin-rich skin is not a service line here — it is the whole
+          practice.
+        </p>
+        <p class="t-body mt-5 max-w-[62ch]">
+          Acne, scarring and pigmentation in Black and brown skin behave differently, and the
+          treatments have to be chosen for that. Every appointment is one-to-one with a licensed
+          esthetician, in one treatment room, with free parking on site.
+        </p>
+        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a
+            href={business.phone.href}
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            {business.phone.display}
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y grid items-center gap-12 md:grid-cols-[1fr_0.85fr] md:gap-20">
+        <div>
+          <Reveal>
+            <h2 class="t-h3">Why dark marks behave differently</h2>
+            <p class="t-body mt-7">
+              Melanin-rich skin answers inflammation by producing more pigment. Post-inflammatory
+              hyperpigmentation is most common and most severe in <a
+                href="https://www.ncbi.nlm.nih.gov/books/NBK559150/"
+                target="_blank"
+                rel="noopener"
+                class="border-b border-ink/30 hover:border-rose hover:text-rose"
+                >Fitzpatrick skin types IV to VI</a
+              >, because those melanocytes are more reactive — and in people with darker skin who
+              have acne, the incidence runs as high as 65 percent.
+            </p>
+            <p class="t-body mt-6">
+              Depth decides the timeline. Pigment sitting in the surface layers usually clears over
+              six to twelve months; pigment that has dropped deeper can take years and resists
+              treatment far more stubbornly. That is the honest reason corrective work here is
+              planned as a series and paced deliberately, and why the cause gets controlled before
+              anyone starts fading the mark.
+            </p>
+            <p class="t-body mt-6">
+              It is also why an aggressive treatment is the wrong answer. Over-treating this skin
+              produces the exact pigmentation it was meant to clear, which is the single most
+              common way melanin-rich skin gets damaged in a treatment room.
+            </p>
+          </Reveal>
+        </div>
+
+        <PanelWipe class="aspect-3/4">
+          <Image
+            src={pigmentation}
+            alt="Close portrait of even, clear skin in warm natural light"
+            widths={[400, 800, 1200]}
+            sizes="(min-width: 840px) 40vw, 90vw"
+            loading="lazy"
+            class="size-full object-cover"
+          />
+        </PanelWipe>
+      </div>
+    </section>
+
+    <section class="bg-espresso text-porcelain">
+      <div class="wrap section-y">
+        <p class="t-eyebrow text-porcelain/60">How we work</p>
+        <h2 class="t-h2 mt-5 max-w-[24ch]">An inclusive space where everyone feels seen.</h2>
+        <p class="t-body mt-7 max-w-[62ch] text-porcelain/75">
+          KIAMO SKIN is proud to be a Black-owned business committed to creating an inclusive space
+          where everyone feels seen, valued, and cared for. That is the reason clients travel in
+          from across San Diego County — being assessed by someone who has treated skin like yours
+          before is not a small thing.
+        </p>
+        <div class="mt-10">
+          <Button href="/about" variant="ghost">Meet your esthetician</Button>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.7fr] md:gap-20">
+        <div>
+          <Reveal>
+            <h2 class="t-h3">Treatments chosen for melanin-rich skin</h2>
+            <p class="t-body mt-7 max-w-[62ch]">
+              The first visit is an assessment, not a fixed protocol. What gets used depends on what
+              the skin is doing on the day.
+            </p>
+            <ul class="mt-12 m-0 list-none p-0">
+              {
+                featured.map((item) => (
+                  <li class="border-b border-line">
+                    <a href={`/treatments/${item.treatment.slug}`} class="group block py-7">
+                      <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                        {item.concern}
+                      </h3>
+                      <p class="t-body mt-3 text-[0.9375rem] text-ink-soft">{item.body}</p>
+                      <p class="t-meta mt-3 text-rose">{item.treatment.name}</p>
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+            <p class="t-body mt-9 text-[0.9375rem]">
+              <a
+                href="/treatments"
+                class="border-b border-ink pb-1 hover:border-rose hover:text-rose"
+              >
+                See the full treatment menu in San Diego
+              </a>
+            </p>
+          </Reveal>
+
+          <Reveal class="mt-16 block">
+            <h2 class="t-h3">Protecting the result in San Diego</h2>
+            <p class="t-body mt-7">
+              Sunscreen is the treatment, not the afterthought. For deeper skin tones the American
+              Academy of Dermatology recommends a <a
+                href="https://www.aad.org/public/everyday-care/skin-care-secrets/routine/fade-dark-spots"
+                target="_blank"
+                rel="noopener"
+                class="border-b border-ink/30 hover:border-rose hover:text-rose"
+                >tinted sunscreen containing iron oxide</a
+              > at SPF 30 or higher, because iron oxide blocks visible light — and visible light worsens
+              melasma and dark spots in a way that a standard UVA/UVB sunscreen does not address.
+            </p>
+            <p class="t-body mt-6">
+              San Diego makes that harder than it sounds. The overcast mornings are the usual reason
+              people stop applying it, and the UV is still there behind the marine layer. The same
+              guidance is blunt about irritation: <a
+                href="https://www.aad.org/public/diseases/a-z/melasma-self-care"
+                target="_blank"
+                rel="noopener"
+                class="border-b border-ink/30 hover:border-rose hover:text-rose"
+                >stop any product that burns or stings</a
+              >, because irritating the skin may darken the spots you are trying to clear.
+            </p>
+          </Reveal>
+        </div>
+
+        <aside>
+          <div class="border border-line bg-porcelain p-8">
+            <h2 class="t-eyebrow text-ink-soft">The studio</h2>
+            <div class="mt-7">
+              <NapBlock tone="light" />
+            </div>
+            <div class="mt-8">
+              <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <p class="t-eyebrow text-ink-soft">Before you book</p>
+        <h2 class="t-h2 mt-5">Questions</h2>
+        <dl class="mt-12 m-0 max-w-[74ch]">
+          {
+            melaninFaqs.map((faq) => (
+              <div class="border-b border-line">
+                <details class="group">
+                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
+                    <dt>{faq.question}</dt>
+                    <span
+                      aria-hidden="true"
+                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <dd class="t-body m-0 pb-6 text-[0.9375rem]">{faq.answer}</dd>
+                </details>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <h2 class="t-h3">Travelling in across San Diego County</h2>
+        <p class="t-body mt-7 max-w-[62ch]">
+          The studio is in Mission Hills, and clients come in from across the county for this work.
+        </p>
+        <ul class="mt-10 m-0 grid list-none gap-x-10 gap-y-0 p-0 md:grid-cols-2">
+          {
+            catchments.map((area) => (
+              <li class="border-b border-line">
+                <a href={`/service-areas/${area.slug}`} class="group block py-7">
+                  <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                    Facials in {area.name}
+                  </h3>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <div class="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a
+            href={business.phone.href}
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            {business.phone.display}
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

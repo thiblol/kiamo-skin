@@ -23,7 +23,7 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
     {business.address.city}, {business.address.region} {business.address.postalCode}
   </a>
 
-  <p class={`t-meta mt-3 ${muted}`}>{business.address.neighborhood}</p>
+  <p class={`t-meta mt-3 ${muted}`}>{business.visit.orientation}</p>
 
   <p class="t-body mt-5">
     <a href={business.phone.href} class={link}>{business.phone.display}</a>

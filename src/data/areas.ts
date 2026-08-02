@@ -23,6 +23,12 @@ export interface Area {
   intro: string;
   gettingHere: string;
   localConcern: { heading: string; body: string };
+  /**
+   * One sentence linking to /melanin-rich-skin, rendered under localConcern. Set
+   * only where the area's own concern is genuinely a melanin-rich-skin one, so
+   * the link stays editorial rather than becoming sitewide boilerplate.
+   */
+  melaninNote?: string;
   /** One sentence for the Service schema node. */
   schemaDescription: string;
   /** Exactly three treatment slugs, most relevant to this area's concern. */
@@ -83,6 +89,8 @@ export const areas: Area[] = [
       heading: 'Why is melasma so common in the South Bay?',
       body: 'Chula Vista is San Diego County’s second-largest city, and roughly six in ten residents are Hispanic or Latino. Melasma concentrates in Fitzpatrick types III to V, and chronic UV is its most consistent trigger — so the county’s largest melanin-rich population is also its strongest melasma catchment. Lira chemical peels answer that, because strength escalates across a series rather than in one visit and the acid is matched to the skin at consultation. Aggressive resurfacing on this skin produces post-inflammatory pigment, which is the problem you walked in with, only worse.',
     },
+    melaninNote:
+      'Pigmentation in melanin-rich skin is what this studio was built around:',
     schemaDescription:
       'Pigmentation, melasma and corrective facial treatment for Chula Vista clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
     featured: ['lira-peels', 'dmk-enzyme-therapy', 'hydrafacial'],

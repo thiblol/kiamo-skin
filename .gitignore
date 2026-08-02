@@ -41,3 +41,7 @@ temp-service-info/
 # agent instruction files — local only
 CLAUDE.md
 AGENTS.md
+
+# internal working docs — build-status notes and unverified client details
+gaps.md
+CLIENT-INPUTS.md

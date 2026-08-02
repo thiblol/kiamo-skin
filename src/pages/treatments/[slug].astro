@@ -122,6 +122,18 @@ const localAreas = treatment.areas
 
             {treatment.note && <p class="t-body mt-7 text-[0.875rem] text-ink-soft">{treatment.note}</p>}
 
+            {
+              treatment.melaninNote && (
+                <p class="t-body mt-5 text-[0.875rem] text-ink-soft">
+                  {treatment.melaninNote}{' '}
+                  <a href="/melanin-rich-skin" class="border-b border-ink/40 hover:border-rose hover:text-rose">
+                    Facials for melanin-rich skin in San Diego
+                  </a>
+                  .
+                </p>
+              )
+            }
+
             <div class="mt-8">
               <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
             </div>
