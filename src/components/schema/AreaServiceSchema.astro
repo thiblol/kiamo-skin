@@ -1,0 +1,48 @@
+---
+/**
+ * Service node for an area page.
+ *
+ * Deliberately NOT a LocalBusiness. Emitting a second business node per area
+ * would create nine entities where one exists — the exact shape Google treats
+ * as location spam. One studio, nine areas served.
+ */
+import { absolute, businessId } from '../../config/urls';
+import { treatments } from '../../data/treatments';
+import type { Area } from '../../data/areas';
+
+interface Props {
+  area: Area;
+}
+
+const { area } = Astro.props;
+const site = Astro.site;
+const url = absolute(`/service-areas/${area.slug}`, site);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${url}#service`,
+  name: `Facials in ${area.name}`,
+  serviceType: 'Facial treatment',
+  category: 'Corrective skin and scalp treatment',
+  description: area.schemaDescription,
+  url,
+  provider: { '@id': businessId(site) },
+  areaServed: { '@type': 'Place', name: `${area.name}, San Diego County, CA` },
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: `Treatments available to ${area.name} clients`,
+    itemListElement: treatments.map((treatment) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: treatment.name,
+        url: absolute(`/treatments/${treatment.slug}`, site),
+        provider: { '@id': businessId(site) },
+      },
+    })),
+  },
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

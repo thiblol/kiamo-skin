@@ -1,0 +1,128 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Reveal from '../../components/Reveal.astro';
+import Button from '../../components/Button.astro';
+import NapBlock from '../../components/NapBlock.astro';
+import AreaServiceSchema from '../../components/schema/AreaServiceSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import { areas } from '../../data/areas';
+import { treatments } from '../../data/treatments';
+import { business } from '../../config/business';
+import { CTA_LABEL } from '../../config/nav';
+
+export function getStaticPaths() {
+  return areas.map((area) => ({
+    params: { slug: area.slug },
+    props: { area },
+  }));
+}
+
+const { area } = Astro.props;
+
+const featured = area.featured
+  .map((slug) => treatments.find((t) => t.slug === slug))
+  .filter((t) => t !== undefined);
+
+const others = areas.filter((a) => a.slug !== area.slug);
+---
+
+<BaseLayout title={area.title} description={area.description}>
+  <AreaServiceSchema slot="head" area={area} />
+  <BreadcrumbSchema
+    slot="head"
+    trail={[
+      { name: 'Areas We Serve', path: '/service-areas' },
+      { name: area.name, path: `/service-areas/${area.slug}` },
+    ]}
+  />
+
+  <article>
+    <header class="bg-blush">
+      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+        <p class="t-eyebrow text-ink-soft">
+          <a href="/service-areas" class="hover:text-rose">Areas we serve</a> · {area.name}
+        </p>
+        <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">{area.h1}</h1>
+        <p class="t-body mt-7 max-w-[62ch]">{area.intro}</p>
+        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a href={business.phone.href} class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose">
+            {business.phone.display}
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.7fr] md:gap-20">
+        <div>
+          <Reveal>
+            <h2 class="t-h3">{area.localConcern.heading}</h2>
+            <p class="t-body mt-7">{area.localConcern.body}</p>
+          </Reveal>
+
+          <Reveal class="mt-16 block">
+            {/* Not "Getting to the studio": tag-stripped, that heading runs into
+                the Del Mar page's opening line and trips the closed-location guard. */}
+            <h2 class="t-h3">Getting here</h2>
+            <p class="t-body mt-7">{area.gettingHere}</p>
+          </Reveal>
+
+          <Reveal class="mt-16 block">
+            <h2 class="t-h3">Treatments {area.name} clients book most</h2>
+            <ul class="mt-10 m-0 list-none p-0">
+              {
+                featured.map((treatment) => (
+                  <li class="border-b border-line">
+                    <a href={`/treatments/${treatment.slug}`} class="group block py-7">
+                      <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                        {treatment.name}
+                      </h3>
+                      <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{treatment.headline}</p>
+                    </a>
+                  </li>
+                ))
+              }
+            </ul>
+            <p class="t-body mt-9 text-[0.9375rem]">
+              <a href="/treatments" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                See the full treatment menu in San Diego
+              </a>
+            </p>
+          </Reveal>
+        </div>
+
+        <aside>
+          <div class="border border-line bg-ivory p-8">
+            <h2 class="t-eyebrow text-ink-soft">The studio</h2>
+            <div class="mt-7">
+              <NapBlock tone="light" />
+            </div>
+            <div class="mt-8">
+              <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <h2 class="t-h3">Also serving</h2>
+        <ul class="mt-10 m-0 grid list-none gap-x-10 gap-y-0 p-0 md:grid-cols-2">
+          {
+            others.map((other) => (
+              <li class="border-b border-line">
+                <a href={`/service-areas/${other.slug}`} class="group block py-7">
+                  <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                    Facials in {other.name}
+                  </h3>
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+  </article>
+</BaseLayout>

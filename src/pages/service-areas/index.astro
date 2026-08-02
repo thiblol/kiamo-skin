@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Reveal from '../../components/Reveal.astro';
+import Button from '../../components/Button.astro';
+import NapBlock from '../../components/NapBlock.astro';
+import CollectionSchema from '../../components/schema/CollectionSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import { areas } from '../../data/areas';
+import { business } from '../../config/business';
+import { CTA_LABEL } from '../../config/nav';
+---
+
+<BaseLayout
+  title="Areas We Serve Across San Diego County | KIAMO Skin"
+  description="KIAMO SKIN is one studio in Mission Hills, San Diego, serving clients from La Jolla, North Park, Pacific Beach, Chula Vista and across the county."
+>
+  <CollectionSchema
+    slot="head"
+    name="Areas We Serve Across San Diego County"
+    description="KIAMO SKIN is a single studio at 3067 Reynard Way in Mission Hills, San Diego, serving clients from across San Diego County."
+    items={areas.map((area) => ({
+      name: `Facials in ${area.name}`,
+      path: `/service-areas/${area.slug}`,
+    }))}
+  />
+  <BreadcrumbSchema slot="head" trail={[{ name: 'Areas We Serve', path: '/service-areas' }]} />
+
+  <header class="bg-blush">
+    <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+      <p class="t-eyebrow text-ink-soft">Areas we serve</p>
+      <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">
+        One studio, across the county.
+      </h1>
+      <p class="t-body mt-7 max-w-[62ch]">
+        KIAMO SKIN is a single treatment room in Mission Hills, San Diego. Clients travel in from
+        across San Diego County — some from ten minutes away in North Park, some from the north
+        coast. Every page below covers the route in, and the concerns that come up most from that
+        part of the county.
+      </p>
+      <div class="mt-9">
+        <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+      </div>
+    </div>
+  </header>
+
+  <section class="bg-porcelain">
+    <div class="wrap section-y">
+      <ul class="m-0 grid list-none gap-x-10 gap-y-0 p-0 md:grid-cols-2">
+        {
+          areas.map((area) => (
+            <Reveal as="li" class="border-b border-line">
+              <a href={`/service-areas/${area.slug}`} class="group block py-8">
+                <h2 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                  Facials in {area.name}
+                </h2>
+                <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">
+                  {area.localConcern.heading}
+                </p>
+              </a>
+            </Reveal>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  <section class="bg-ivory">
+    <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.8fr] md:gap-20">
+      <div>
+        <p class="t-eyebrow text-ink-soft">The studio</p>
+        <h2 class="t-h2 mt-5 text-[2rem] md:text-[2.5rem]">Mission Hills, San Diego</h2>
+        <p class="t-body mt-7 max-w-[62ch]">
+          Everything happens in one room on Reynard Way. There is no second location and no mobile
+          service — which is why the treatment plan can stay consistent from one visit to the next.
+        </p>
+        <p class="t-body mt-7 text-[0.9375rem]">
+          <a href="/treatments" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+            See corrective treatments in San Diego
+          </a>
+        </p>
+      </div>
+
+      <div>
+        <NapBlock tone="light" showCancellation />
+        <div class="mt-9">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
