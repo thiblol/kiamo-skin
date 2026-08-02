@@ -18,7 +18,7 @@ export interface Treatment {
   imageAlt: string;
   goodFor: string[];
   steps: { title: string; body: string }[];
-  pricing: { label: string; price: string }[];
+  pricing: { label: string; price: string; description?: string }[];
   /** Honest caveats. Rendered as a closing note, never omitted where present. */
   note?: string;
 }
@@ -56,10 +56,19 @@ export const treatments: Treatment[] = [
       },
     ],
     pricing: [
-      { label: 'First-Time Client Treatment', price: verifiedPrices['first-time-client'] },
-      { label: 'HydraFacial Treatment', price: verifiedPrices.hydrafacial },
+      {
+        label: 'First-Time Client Treatment',
+        price: verifiedPrices['first-time-client'],
+        description:
+          'The best place to begin. Includes a comprehensive consultation, skin analysis, customized HydraFacial, personalized booster, microcurrent, LED Light Therapy, Hydrojelly Mask, and a long term treatment plan.',
+      },
+      {
+        label: 'HydraFacial Treatment',
+        price: verifiedPrices.hydrafacial,
+        description:
+          'A customized HydraFacial that deeply cleanses, exfoliates, extracts, and hydrates to support healthy skin and maintain your treatment results.',
+      },
     ],
-    note: 'The First-Time Client Treatment is the best place to begin. It includes a comprehensive consultation, skin analysis, customized HydraFacial, personalized booster, microcurrent, LED Light Therapy, Hydrojelly Mask, and a long term treatment plan. The HydraFacial Treatment is a customized HydraFacial that deeply cleanses, exfoliates, extracts, and hydrates to support healthy skin and maintain your treatment results.',
   },
   {
     slug: 'keravive-scalp',
@@ -167,10 +176,19 @@ export const treatments: Treatment[] = [
       },
     ],
     pricing: [
-      { label: 'Procell Microchanneling', price: verifiedPrices.procell },
-      { label: 'Procell Microchanneling 3-Treatment Series', price: verifiedPrices['procell-series'] },
+      {
+        label: 'Procell Microchanneling',
+        price: verifiedPrices.procell,
+        description:
+          'The best results are typically achieved with a series rather than a single treatment. Most clients begin with three sessions spaced 4–6 weeks apart, though your treatment plan is customized during your consultation based on your skin goals, concerns, and how your skin responds.',
+      },
+      {
+        label: 'Procell Microchanneling 3-Treatment Series',
+        price: verifiedPrices['procell-series'],
+        description:
+          'Designed for clients committed to long-term correction. A series of three treatments supports progressive collagen remodeling and is recommended for concerns such as acne scars, uneven texture, fine lines, and overall skin rejuvenation. Treatments are typically scheduled 4–6 weeks apart.',
+      },
     ],
-    note: 'The best results are typically achieved with a series rather than a single treatment. Most clients begin with three sessions spaced 4–6 weeks apart, though your treatment plan is customized during your consultation based on your skin goals, concerns, and how your skin responds.',
   },
   {
     slug: 'lira-peels',

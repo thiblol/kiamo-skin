@@ -87,7 +87,11 @@ const others = treatments.filter((t) => t.slug !== treatment.slug);
                   <div class="border-b border-line pb-6 last:border-0 last:pb-0">
                     <dt class="t-service text-[1rem]">{row.label}</dt>
                     <dd class="t-price m-0 mt-2">{row.price}</dd>
-                    {row.duration && <dd class="t-meta m-0 mt-1">{row.duration}</dd>}
+                    {
+                      row.description && (
+                        <dd class="t-body m-0 mt-3 text-[0.875rem] text-ink-soft">{row.description}</dd>
+                      )
+                    }
                   </div>
                 ))
               }
