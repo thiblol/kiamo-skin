@@ -1,6 +1,6 @@
 ---
 import { business, verifiedPrices } from '../../config/business';
-import { absolute, businessId, websiteId } from '../../config/urls';
+import { absolute, businessId, websiteId, gbpListingUrl } from '../../config/urls';
 import ogImage from '../../assets/studio-interior.jpg';
 
 const site = Astro.site;
@@ -50,6 +50,37 @@ const schema = {
     latitude: business.geo.latitude,
     longitude: business.geo.longitude,
   },
+  // Ties the on-site entity to the Google Business Profile that ranks in the
+  // local pack. Both resolve to the same verified place ID.
+  hasMap: gbpListingUrl(business.gbpPlaceId),
+  slogan: 'Strategy, correction, intention.',
+  // Topics the studio is actually qualified on — the services it performs and
+  // the conditions it treats. Nothing here is a claim the site does not already
+  // make in prose.
+  knowsAbout: [
+    'Corrective facials',
+    'HydraFacial',
+    'HydraFacial Keravive scalp therapy',
+    'DMK enzyme therapy',
+    'Procell microchanneling',
+    'Chemical peels',
+    'Dermaplaning',
+    'Acne treatment',
+    'Acne scarring',
+    'Hyperpigmentation',
+    'Melasma',
+    'Post-inflammatory hyperpigmentation',
+    'Skin barrier repair',
+    'Melanin-rich skin',
+  ],
+  founder: {
+    '@type': 'Person',
+    // First name only, and no pronouns anywhere: a surname was never verified
+    // and the guard suite fails the build on either.
+    name: business.ownerName,
+    jobTitle: 'Licensed Esthetician',
+    worksFor: { '@id': entityId },
+  },
   areaServed: business.areaServed.map((name) => ({ '@type': 'Place', name })),
   // Vagaro is request-based; this is the request entry point, not instant booking.
   potentialAction: {
@@ -64,7 +95,12 @@ const schema = {
     },
     result: { '@type': 'Reservation', name: 'Appointment request' },
   },
-  sameAs: [business.instagram.url, business.bookingUrl, business.yelpUrl],
+  sameAs: [
+    business.instagram.url,
+    business.bookingUrl,
+    business.yelpUrl,
+    gbpListingUrl(business.gbpPlaceId),
+  ],
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Treatments',

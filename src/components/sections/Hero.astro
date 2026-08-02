@@ -53,13 +53,18 @@ const fallback = await getImage({ src: heroWide, format: 'jpeg', width: 1920, qu
   <div
     class="wrap relative flex flex-col justify-end pt-12 pb-16 sm:min-h-[92svh] sm:pt-[60px] sm:pb-20 md:min-h-[88svh] md:pb-28"
   >
-    <p class="t-eyebrow text-ink-soft sm:text-ink">San Diego · {business.address.neighborhood}</p>
+    {/* The brand line moves to the kicker so the H1 can carry the geo claim.
+        This is one of the two pages where a geo H1 is correct — strategy §1.13:
+        the homepage and the category mirrors state the geography, every
+        treatment H1 stays bare. */}
+    <p class="t-eyebrow text-ink-soft sm:text-ink">Skin that behaves like itself again.</p>
     <h1 class="t-hero mt-4 max-w-[16ch] sm:mt-5 sm:max-w-[18ch]">
-      Skin that behaves like itself again.
+      Corrective facials and scalp therapy in San Diego.
     </h1>
-    <p class="t-body mt-5 max-w-[46ch] sm:mt-6">
-      Corrective facials and scalp therapy for acne, scarring and pigmentation — built around
-      how your skin actually functions.
+    <p class="t-body mt-5 max-w-[52ch] sm:mt-6">
+      Looking for a facial in San Diego? KIAMO SKIN is a licensed corrective skin and scalp
+      studio in {business.address.neighborhood}, minutes from Hillcrest and Little Italy,
+      treating acne, scarring, pigmentation and barrier damage.
     </p>
     <div class="mt-8 flex flex-wrap items-center gap-3 sm:mt-9">
       <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>

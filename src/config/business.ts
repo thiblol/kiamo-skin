@@ -52,6 +52,17 @@ export const business = {
   },
   yelpUrl: 'https://www.yelp.com/biz/kiamo-skin-san-diego',
 
+  /**
+   * The Google Business Profile, verified live via the Maps API against
+   * 3067 Reynard Way. The place ID drives the reviews and directions deep links
+   * built in `urls.ts`.
+   *
+   * No rating or review count is stored here on purpose — the guard suite fails
+   * the build on either, and linking out to the listing is the only
+   * review-related element the spec permits.
+   */
+  gbpPlaceId: 'ChIJo2cuA-IJ3IARCItwkI34PGQ',
+
   priceRange: '$$$',
 
   visit: {

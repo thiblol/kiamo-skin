@@ -1,16 +1,15 @@
 ---
-import { Image } from 'astro:assets';
 import NapBlock from '../NapBlock.astro';
+import LocationMap from '../LocationMap.astro';
 import Button from '../Button.astro';
 import FaqSchema from '../schema/FaqSchema.astro';
 import { faqs } from '../../data/faqs';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
-import studio from '../../assets/studio-interior.jpg';
+import { gbpDirectionsUrl, gbpReviewsUrl } from '../../config/urls';
 
-const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  `${business.name}, ${business.address.full}`,
-)}`;
+const directionsUrl = gbpDirectionsUrl(business.gbpPlaceId, business.address.full);
+const reviewsUrl = gbpReviewsUrl(business.gbpPlaceId);
 ---
 
 <FaqSchema />
@@ -19,7 +18,7 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
   <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.8fr] md:gap-20">
     <div>
       <p class="t-eyebrow text-ink-soft">Before you book</p>
-      <h2 class="t-h2 mt-5">Questions</h2>
+      <h2 class="t-h2 mt-5 max-w-[20ch]">Facial questions, answered</h2>
 
       <div class="mt-12">
         {
@@ -47,25 +46,54 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
 
     <div>
       <p class="t-eyebrow text-ink-soft">The studio</p>
-      <h2 class="t-h2 mt-5 text-[2rem] md:text-[2.5rem]">{business.address.neighborhood}</h2>
+      <h2 class="t-h2 mt-5 text-[2rem] md:text-[2.5rem]">
+        Visit us in {business.address.neighborhood}
+      </h2>
 
-      <a href={mapsUrl} target="_blank" rel="noopener" class="mt-8 block">
-        <Image
-          src={studio}
-          alt="Inside the KIAMO Skin treatment room in Mission Hills, San Diego"
-          widths={[400, 800, 1200]}
-          sizes="(min-width: 840px) 36vw, 90vw"
-          loading="lazy"
-          class="aspect-4/3 w-full object-cover"
-        />
-      </a>
+      {/* A live map, not a photo linking to one. Scorpio embeds the map on the
+          homepage (§1.10) and it is the one conversion element that also
+          reinforces the pin the local pack ranks. */}
+      <div class="mt-8">
+        <LocationMap />
+      </div>
 
       <div class="mt-8">
         <NapBlock tone="light" showCancellation />
       </div>
 
-      <div class="mt-9">
+      <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
         <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+        {/* Dual CTA — T8. Different people convert differently, and a call is
+            the lower-friction half when booking is request-based. */}
+        <a
+          href={business.phone.href}
+          class="t-button border-b border-ink pb-1 hover:border-rose hover:text-rose"
+        >
+          Call {business.phone.display}
+        </a>
+      </div>
+
+      <div class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
+        <a
+          href={directionsUrl}
+          target="_blank"
+          rel="noopener"
+          class="t-button border-b border-ink pb-1 hover:border-rose hover:text-rose"
+        >
+          Get directions
+        </a>
+        {/* Points AT the Google Business Profile rather than reproducing
+            anything from it. Publishes no count and no rating, so it stays
+            inside the spec, and it feeds the review flywheel that gates the
+            local pack (T1, T8). */}
+        <a
+          href={reviewsUrl}
+          target="_blank"
+          rel="noopener"
+          class="t-button border-b border-ink pb-1 hover:border-rose hover:text-rose"
+        >
+          Read our Google reviews
+        </a>
       </div>
     </div>
   </div>

@@ -3,19 +3,27 @@ import { business } from '../config/business';
 import { CTA_LABEL } from '../config/nav';
 ---
 
+{/* Dual CTA — T8. Booking is request-based, so a call is the lower-friction
+    half, and mobile is where a tap-to-call is worth most. */}
 <div
   id="sticky-book"
   data-visible="false"
-  class="fixed inset-x-0 bottom-0 z-30 translate-y-full transition-transform duration-[400ms] ease-out data-[visible=true]:translate-y-0 sm:hidden"
+  class="fixed inset-x-0 bottom-0 z-30 flex translate-y-full transition-transform duration-[400ms] ease-out data-[visible=true]:translate-y-0 sm:hidden"
   style="padding-bottom: env(safe-area-inset-bottom);"
 >
   <a
     href={business.bookingUrl}
     target="_blank"
     rel="noopener"
-    class="t-button flex h-[56px] items-center justify-center bg-rose text-porcelain"
+    class="t-button flex h-[56px] flex-1 items-center justify-center bg-rose text-porcelain"
   >
     {CTA_LABEL}
+  </a>
+  <a
+    href={business.phone.href}
+    class="t-button flex h-[56px] shrink-0 items-center justify-center border-l border-porcelain/25 bg-rose px-6 text-porcelain"
+  >
+    Call
   </a>
 </div>
 

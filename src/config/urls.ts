@@ -19,3 +19,20 @@ export const absolute = (path: string, site: URL | undefined) => {
 export const businessId = (site: URL | undefined) => `${absolute('/', site)}#business`;
 
 export const websiteId = (site: URL | undefined) => `${absolute('/', site)}#website`;
+
+/**
+ * Google Business Profile deep links, built from the verified place ID.
+ *
+ * The place ID is the stable identifier for the listing, so these survive a name
+ * or category change on the profile. `reviews` opens the listing's review tab —
+ * it publishes no count and no rating, which is what keeps it inside the spec.
+ */
+const MAPS = 'https://www.google.com/maps';
+
+export const gbpListingUrl = (placeId: string) => `${MAPS}/place/?q=place_id:${placeId}`;
+
+export const gbpReviewsUrl = (placeId: string) =>
+  `${MAPS}/place/?q=place_id:${placeId}&hl=en#lrd=${placeId},1`;
+
+export const gbpDirectionsUrl = (placeId: string, address: string) =>
+  `${MAPS}/dir/?api=1&destination=${encodeURIComponent(address)}&destination_place_id=${placeId}`;

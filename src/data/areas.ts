@@ -31,6 +31,12 @@ export interface Area {
   melaninNote?: string;
   /** One sentence for the Service schema node. */
   schemaDescription: string;
+  /**
+   * Distance and drive time to the studio, condensed from `gettingHere` for the
+   * homepage proximity list. Off-peak, and every figure is already stated on the
+   * area page — this field restates, it never introduces a new claim.
+   */
+  proximity: string;
   /** Exactly three treatment slugs, most relevant to this area's concern. */
   featured: string[];
 }
@@ -53,6 +59,7 @@ export const areas: Area[] = [
     },
     schemaDescription:
       'Corrective facials and scalp therapy at the KIAMO SKIN studio on Reynard Way in Mission Hills, San Diego, with free parking on site.',
+    proximity: 'The studio itself — five minutes across the neighborhood',
     featured: ['hydrafacial', 'dmk-enzyme-therapy', 'dermaplaning'],
   },
   {
@@ -72,6 +79,7 @@ export const areas: Area[] = [
     },
     schemaDescription:
       'Corrective facials and scalp therapy for La Jolla clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
+    proximity: 'About twelve miles — roughly twenty minutes south on I-5',
     featured: ['keravive-scalp', 'hydrafacial', 'lira-peels'],
   },
   {
@@ -93,6 +101,7 @@ export const areas: Area[] = [
       'Pigmentation in melanin-rich skin is what this studio was built around:',
     schemaDescription:
       'Pigmentation, melasma and corrective facial treatment for Chula Vista clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
+    proximity: 'About thirteen miles — twenty to twenty-five minutes north off-peak',
     featured: ['lira-peels', 'dmk-enzyme-therapy', 'hydrafacial'],
   },
   {
@@ -112,6 +121,7 @@ export const areas: Area[] = [
     },
     schemaDescription:
       'Barrier repair, scalp therapy and corrective facials for Encinitas clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
+    proximity: 'About twenty-five miles — near thirty minutes on a clear I-5',
     featured: ['dmk-enzyme-therapy', 'keravive-scalp', 'hydrafacial'],
   },
   {
@@ -133,6 +143,7 @@ export const areas: Area[] = [
     // guard regex scans in both directions and the spec's own draft failed it.
     schemaDescription:
       'Corrective facials and scalp therapy at the KIAMO SKIN studio in Mission Hills, San Diego, for clients travelling from Del Mar.',
+    proximity: 'About twenty-two miles — twenty-five minutes south on I-5',
     featured: ['hydrafacial', 'procell-microchanneling', 'keravive-scalp'],
   },
   {
@@ -152,6 +163,7 @@ export const areas: Area[] = [
     },
     schemaDescription:
       'Corrective facials and scalp therapy for Carlsbad clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
+    proximity: 'About thirty-five miles — a genuine thirty-five to forty-five minutes',
     featured: ['procell-microchanneling', 'keravive-scalp', 'hydrafacial'],
   },
   {
@@ -171,6 +183,7 @@ export const areas: Area[] = [
     },
     schemaDescription:
       'Sun damage, barrier repair and scalp therapy for Pacific Beach clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
+    proximity: 'Roughly seven miles — about fifteen minutes east',
     featured: ['lira-peels', 'dmk-enzyme-therapy', 'keravive-scalp'],
   },
   {
@@ -190,6 +203,7 @@ export const areas: Area[] = [
     },
     schemaDescription:
       'Corrective facials for cumulative sun exposure and pigmentation, for La Mesa clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
+    proximity: 'Roughly eleven miles — fifteen to twenty minutes west on I-8',
     featured: ['lira-peels', 'hydrafacial', 'dmk-enzyme-therapy'],
   },
   {
@@ -209,6 +223,7 @@ export const areas: Area[] = [
     },
     schemaDescription:
       'Corrective facials and scalp therapy for North Park clients, ten minutes away at the KIAMO SKIN studio in Mission Hills, San Diego.',
+    proximity: 'Three and a half miles — about ten minutes, no freeway needed',
     featured: ['lira-peels', 'dermaplaning', 'hydrafacial'],
   },
 ];
