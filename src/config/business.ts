@@ -15,7 +15,7 @@
 export const PRICE_ON_CONSULTATION = 'Pricing at consultation.';
 
 export const business = {
-  name: 'KIAMO Skin & Scalp Health',
+  name: 'KIAMO SKIN',
   shortName: 'KIAMO Skin',
   /** Public-facing first name only. Never render a surname. */
   ownerName: 'Kiki',
@@ -45,7 +45,7 @@ export const business = {
   email: 'kiamoskin@gmail.com',
 
   /** Vagaro is request-based, not instant. CTAs must read "Request Appointment". */
-  bookingUrl: 'https://www.vagaro.com/us02/kiamoskin',
+  bookingUrl: 'https://www.vagaro.com/kiamoskin',
   instagram: {
     handle: '@kiamoskin',
     url: 'https://www.instagram.com/kiamoskin/',
