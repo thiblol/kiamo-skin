@@ -37,3 +37,7 @@ local_seo_info/
 # scratch — SEO pull scripts carry API credentials in plaintext
 .scratch/
 temp-service-info/
+
+# agent instruction files — local only
+CLAUDE.md
+AGENTS.md
