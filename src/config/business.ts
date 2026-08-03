@@ -20,7 +20,7 @@ export const business = {
   /** Public-facing first name only. Never render a surname. */
   ownerName: 'Kiki',
   ownerCredential: 'Licensed Esthetician, California Board of Barbering & Cosmetology',
-  experience: '5+ years',
+  experience: '7+ years',
 
   address: {
     street: '3067 Reynard Way',

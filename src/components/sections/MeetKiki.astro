@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import Reveal from '../Reveal.astro';
 import PanelWipe from '../PanelWipe.astro';
 import Button from '../Button.astro';
-import portrait from '../../assets/kiki-portrait.jpg';
+import portrait from '../../assets/meet-kiki.jpg';
 import { business } from '../../config/business';
 
 /* All copy here is pronoun-free — spec §2. Kiki has never published pronouns,
@@ -15,7 +15,7 @@ import { business } from '../../config/business';
     <PanelWipe class="aspect-3/4">
       <Image
         src={portrait}
-        alt="Kiki, licensed esthetician and owner of KIAMO Skin, in the treatment room"
+        alt="Kiki, licensed esthetician and owner of KIAMO Skin, beside the HydraFacial device in the treatment room"
         widths={[400, 800, 1600]}
         sizes="(min-width: 840px) 40vw, 90vw"
         loading="lazy"
@@ -28,16 +28,19 @@ import { business } from '../../config/business';
       <h2 class="t-h2 mt-5 max-w-[22ch]">Trust the process. Your skin can heal.</h2>
 
       <p class="t-body mt-7">
-        {business.ownerName} brings {business.experience} of work in acne, skin barrier damage,
-        pigmentation and age management, licensed and certified through the California State
-        Board of Barbering &amp; Cosmetology. The specialism is melanin-rich skin — protocols
-        chosen for how Black and brown skin actually behaves, not adapted after the fact.
+        {business.ownerName} is a California licensed esthetician with {business.experience} of
+        experience specializing in acne, acne scars, hyperpigmentation, melasma, skin barrier
+        repair, age management, HydraFacial, Procell Microchanneling, and scalp health. Every
+        treatment plan is customized using evidence-based techniques and professional-grade
+        technology to support healthy, long-term results — not quick fixes.
       </p>
 
       <p class="t-body mt-5">
-        At KIAMO Skin, we are proud to be a Black-owned business committed to creating an
-        inclusive space where everyone feels seen, valued, and cared for. Education, intention,
-        and consistency are at the core of everything we do.
+        At KIAMO Skin, we believe healthy skin starts with education, consistency, and
+        personalized care. We proudly welcome all skin tones, with extensive experience treating
+        melanin-rich skin, post-inflammatory hyperpigmentation, and skin concerns that require
+        specialized care. Every client receives a customized treatment plan designed around their
+        unique skin goals, lifestyle, and long-term skin health.
       </p>
 
       <div class="mt-9">
