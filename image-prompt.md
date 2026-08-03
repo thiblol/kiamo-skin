@@ -8,6 +8,37 @@ keeps the whole image set looking like one studio rather than a stock library.
 
 ## Scene library
 
+### Homepage hero — desktop (16:9, min 2400px → `src/assets/hero-desktop.jpg`)
+
+> A woman with warm tan skin in her early thirties lying back on a treatment bed,
+> head resting on soft ivory linen, eyes softly closed, face bare and unmade-up with
+> visible natural texture and a healthy sheen. Her hair is natural curls — defined,
+> voluminous, spilling loose across the linen around her head and shoulders, a few
+> curls catching the light at the edge. She occupies the right third of the frame,
+> head upright and clearly readable; the left two-thirds is soft, uncluttered ivory
+> wall and the blurred edge of a linen headrest, left empty for a headline. An
+> esthetician's hands, out of focus in the near foreground, rest lightly at the very
+> edge of frame. Shot slightly above eye level from beside the bed. Calm and
+> unhurried — she looks like she has been lying there a while.
+
+### Homepage hero — mobile (9:16, min 1400px → `src/assets/hero-mobile.jpg`)
+
+> Vertical portrait of a woman with warm tan skin in her early thirties lying back on
+> a treatment bed, photographed from her side at bed height — her head rests on soft
+> ivory linen in the lower third of the tall frame, face upright and clearly readable,
+> turned slightly toward the camera, eyes closed, expression calm. Natural curly hair
+> fanned out across the linen beneath and around her head. Bare skin, visible pores
+> and natural texture, no makeup. Above her the frame is filled with the soft
+> out-of-focus ivory of a linen-draped bed and a plain warm wall receding into gentle
+> shadow toward the top. Quiet, still, intimate — the emptiness above her carries the
+> composition.
+
+**Two rules for both hero frames.** State the head's position in the frame explicitly
+and never describe an overhead camera — "from directly above, looking down the length
+of the body" is what produced an upside-down face on the first mobile render. And keep
+the curls as curls: defined coils and natural volume with individual strands catching
+the edge light, never straightened, never a smooth uniform mass.
+
 ### Journal — "Three kinds of dark mark" (article hero, 21:9 safe)
 
 Primary — recommended:
@@ -59,39 +90,76 @@ That is the difference between an honest image and a whitewashed one.
 --- STYLE (do not change) ---
 
 CAMERA: Shot on Sony A7IV, 50mm f/1.8 prime lens (85mm macro for close-up skin/treatment
-detail shots).
+detail shots). Rendering reference: warm negative film — Kodak Portra 400. Rich and warm,
+never punchy or contrast-crushed.
 
 FOCAL LENGTH / APERTURE / DOF: 50mm at f/2.2 for environmental/portrait shots — subject
 sharp, background softly falling off, never fully blown out. 85mm at f/4 for close-up
 treatment/hands/skin detail shots — enough depth to keep the point of contact (fingertips,
 tool, skin) in crisp focus without flattening texture.
 
-LIGHTING: Soft, diffused natural light from a large north-facing window or softbox
-equivalent, key light at 45 degrees, gentle fill to lift shadows on skin — no harsh
-specular highlights, no ring-light catchlights, no clinical fluorescent overhead. Time of
-day reads as soft midday or early-afternoon light — bright but never harsh.
+LIGHTING: One large soft source — a tall window, or a big diffused equivalent — placed
+around 60–75 degrees off the camera axis and slightly behind the subject's plane, so the
+light wraps around the form and leaves a bright edge along the cheekbone, jaw or shoulder.
+Late-afternoon light: warm, angled, with somewhere for the shadows to go. Contrast around
+3:1 — the shadow side stays readable but is genuinely darker, never filled flat. Fill comes
+from ambient bounce off the walls and linens only, never a second lamp.
 
-COLOR GRADE / WHITE BALANCE: Warm-neutral white balance (5200–5600K), true-to-skin color
-rendering — no green or magenta cast. Grade lifts warmly into the ivory/terracotta palette
-(#F3EDE4, #C98B6E) in highlights and midtones, with charcoal (#2B2B29) reserved for deep
-shadow and any wardrobe/props. Sage (#9CA98C) appears only as a small accent (a plant,
-a folded towel, a product cap) — never dominant. Skin tones stay accurate and warm, never
-desaturated or blue-shifted — the ivory and terracotta cast lives in the light, linens and
-surroundings, never pushed onto the skin itself. Deep and medium skin tones render with
-their true undertone and natural luminosity, never ashy, never orange.
+Soft speculars are wanted, not avoided: sheen along the cheekbone, the brow, the bridge of
+the nose, the lower lip. That surface sheen is what makes skin read as living rather than
+powdered, and it matters most on deep skin, where matte renders as ashy. Speculars stay soft
+and shaped by the large source — never blown to paper white, never a hard hotspot.
 
-COMPOSITION: Generous negative space, subject off-center per rule of thirds, headroom left
-for text overlay when needed. Horizontal orientation for hero/service shots, square-safe
-crop for social reuse. Frames feel unhurried — nothing crowded, nothing staged-busy.
+Light must also land on the background: a gradient across the wall, a falloff into shadow at
+the frame edge, occasionally the soft shadow of a window frame or a plant. Air in the room,
+faint atmosphere, never a flat painted backdrop.
 
-TEXTURE / FINISH: Clean editorial finish. Real skin texture is visible and celebrated — no
-skin-smoothing, no HDR halos, no oversharpening, no glossy "stock photo" sheen. Fabrics,
-towels, and surfaces show natural texture and slight imperfection.
+The light reveals; it does not examine. No hard low-angle raking across skin — that is
+dermatological documentation lighting, and it is the wrong register here. Still no ring-light
+catchlights, no on-camera flash, no clinical fluorescent overhead.
+
+COLOR GRADE / WHITE BALANCE: Warm key around 5600K against cooler ambient shadow — the lit
+side warm, the shadow side drifting slightly to skylight blue. That split is what gives the
+image depth; a single flat white balance across the frame is what kills it. No green or
+magenta cast.
+
+Palette: ivory and terracotta (#F3EDE4, #C98B6E) live in the light, walls, linens and props —
+terracotta present as a real surface in frame, not only as a tint in the grade. Charcoal
+(#2B2B29) for deep shadow and wardrobe. Sage (#9CA98C) as a small accent only (a plant, a
+folded towel, a cap) — never dominant. Something in every frame reaches near-black, so the
+image has a floor and the highlights have somewhere to sing from.
+
+Skin tones stay accurate and warm, never desaturated or blue-shifted — the ivory and
+terracotta cast lives in the surroundings, never pushed onto the skin itself. Deep and medium
+skin tones render with their true undertone, natural luminosity and sheen. Never ashy, never
+orange, never matte.
+
+COMPOSITION: Subject off-center per rule of thirds, headroom left for text overlay when
+needed. Horizontal orientation for hero/service shots, square-safe crop for social reuse.
+Open space is lit space — a gradient, a falloff, light on a wall. Air, never a dead flat
+area of empty colour.
+
+PRESENCE: Every frame should read as one moment lifted out of a longer one, not a pose held
+for the camera. Something is underway — a half-turn, a hand mid-gesture, weight settling on
+one hip, fabric still falling, breath. Where a face is visible and the scene does not say
+otherwise: eyes open, gaze off-camera and occupied, the expression composed and warm rather
+than blank. A face at rest still has someone behind it.
+
+TEXTURE / FINISH: Clean editorial finish, not a clean digital one. Real skin texture is
+visible and celebrated — pores, fine vellus hair rimmed by the key light, flyaway hairs
+catching the edge light, the natural asymmetry of a real face. No skin-smoothing, no HDR
+halos, no oversharpening, no glossy "stock photo" plastic. Fine film grain rather than
+sterile digital cleanliness. Gentle optical character: slight corner falloff, a faint bloom
+where the light clips the frame edge. Fabrics, towels and surfaces show natural texture and
+slight imperfection.
 
 NEGATIVE (exclude always): no visible text, no logos, no watermarks, no distorted or extra
 fingers/hands, no uncanny-valley faces, no generic "stocky" spa cheesiness (no bamboo/zen
 gong cliches, no candles-and-rose-petals tropes), no harsh clinical white light, no
-oversaturated skin, no visible product branding unless explicitly requested.
+oversaturated skin, no visible product branding unless explicitly requested. Also: no matte
+or powdery skin, no flat frontal fill light, no shadowless midday flatness, no dead
+featureless backdrop, no waxy CGI skin, no vacant or sedated expression, and nothing that
+reads as clinical documentation of a condition.
 
 --- END STYLE ---
 
@@ -99,7 +167,13 @@ oversaturated skin, no visible product branding unless explicitly requested.
 
 ## After generating
 
-Save as `src/assets/journal-pigmentation.jpg`, then point the article at it:
+**Hero:** save the wide render as `src/assets/hero-desktop.jpg` and the tall one as
+`src/assets/hero-mobile.jpg`, overwriting what is there. `Hero.astro` imports both by
+name, so no code change is needed — but check the headline stays legible at 375px,
+640px and 1400px. Spec §4.1 forbids adding a scrim, so if the copy fights the image,
+regenerate with more empty wall rather than darkening the photograph.
+
+**Journal:** save as `src/assets/journal-pigmentation.jpg`, then point the article at it:
 
 ```ts
 // src/data/articles.ts
