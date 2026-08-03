@@ -31,6 +31,18 @@ export interface Treatment {
   /** Honest caveats. Rendered as a closing note, never omitted where present. */
   note?: string;
   /**
+   * One sentence linking to /membership, rendered under the note. Set only on
+   * treatments whose own copy already argues that results are cumulative —
+   * a link on every page would be sitewide boilerplate, which is the thing hub
+   * anchors exist to avoid.
+   *
+   * `membershipAnchor` is the link label. Each one differs: three pages
+   * carrying the identical anchor is a footprint, and the anchor should
+   * describe what the reader gets from *this* page's angle.
+   */
+  membershipNote?: string;
+  membershipAnchor?: string;
+  /**
    * One sentence linking to /melanin-rich-skin, rendered under the note. Set only
    * where the specialism genuinely bears on the treatment — a link on every page
    * would be sitewide boilerplate, which is the thing hub anchors exist to avoid.
@@ -95,6 +107,9 @@ export const treatments: Treatment[] = [
           'A customized HydraFacial that deeply cleanses, exfoliates, extracts, and hydrates to support healthy skin and maintain your treatment results.',
       },
     ],
+    membershipNote:
+      'The HydraFacial is the treatment included in every membership tier, from $199 a month against $259 booked one visit at a time.',
+    membershipAnchor: 'Compare the three membership tiers',
   },
   {
     slug: 'keravive-scalp',
@@ -137,6 +152,9 @@ export const treatments: Treatment[] = [
       { label: '3 Treatment Series — total', price: verifiedPrices['keravive-scalp-series'] },
     ],
     note: 'Healthy scalp takes consistency. While one treatment deeply cleanses and hydrates the scalp, a series provides the best opportunity to support long term scalp health.',
+    membershipNote:
+      'Scalp work is cumulative, which is the same reason the monthly plans exist — a membership treatment can be applied to scalp therapy by paying the difference.',
+    membershipAnchor: 'How the monthly membership works',
   },
   {
     slug: 'dmk-enzyme-therapy',
@@ -179,6 +197,9 @@ export const treatments: Treatment[] = [
       { label: 'DMK Level 2 & 3 Enzyme Treatment', price: PRICE_ON_CONSULTATION },
     ],
     note: 'Level 1 comes first. Levels 2 and 3 layer the enzymes for deeper correction and are prescribed only once Level 1 has prepared the skin — so the protocol and the price are set at consultation.',
+    membershipNote:
+      'A barrier rebuilds over months rather than visits, so this is treatment that suits a standing monthly slot.',
+    membershipAnchor: 'See the monthly membership plans',
   },
   {
     slug: 'procell-microchanneling',
@@ -233,6 +254,9 @@ export const treatments: Treatment[] = [
     ],
     melaninNote:
       'Microchanneling works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger.',
+    membershipNote:
+      'A series of three is the usual plan, and membership treatments can be applied to it by paying the difference.',
+    membershipAnchor: 'Membership pricing and what each plan includes',
   },
   {
     slug: 'lira-peels',
@@ -275,6 +299,9 @@ export const treatments: Treatment[] = [
       { label: 'LIRA Advanced Peel', price: verifiedPrices['lira-advanced-peel'] },
     ],
     note: 'Peel strength is matched to your skin at consultation. The Gentle Renewal Peel refreshes and maintains; the Advanced Peel goes deeper for pigmentation and scarring. Pigmentation is treated as a series with home care between visits — there is no single-session version of this.',
+    membershipNote:
+      'Because pigmentation is only ever treated as a series, a monthly membership is usually the cheaper way to run one.',
+    membershipAnchor: 'Monthly facial memberships in San Diego',
     melaninNote:
       'Peels on Black and brown skin are chosen differently — the pacing is the whole point.',
   },

@@ -134,6 +134,18 @@ const localAreas = treatment.areas
               )
             }
 
+            {
+              treatment.membershipNote && (
+                <p class="t-body mt-5 text-[0.875rem] text-ink-soft">
+                  {treatment.membershipNote}{' '}
+                  <a href="/membership" class="border-b border-ink/40 hover:border-rose hover:text-rose">
+                    {treatment.membershipAnchor}
+                  </a>
+                  .
+                </p>
+              )
+            }
+
             <div class="mt-8">
               <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
             </div>

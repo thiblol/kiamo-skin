@@ -157,6 +157,18 @@
     letter-spacing: 0.02em;
   }
 
+  /* The membership rate, and the only number on the site set in the display
+     face. `.t-price` is a menu row — correct at 15px beside a service name,
+     far too quiet when the figure IS the decision. Cormorant at this size
+     turns the rate into the editorial statement of the page. */
+  .t-tier-price {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: clamp(3.25rem, 5.5vw, 4.25rem);
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+  }
+
   .t-meta {
     font-family: var(--font-sans);
     font-weight: 300;

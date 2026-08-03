@@ -46,6 +46,11 @@ export const business = {
 
   /** Vagaro is request-based, not instant. CTAs must read "Request Appointment". */
   bookingUrl: 'https://www.vagaro.com/kiamoskin',
+  /**
+   * Memberships are purchased directly rather than requested — this is the one
+   * Vagaro path that completes a transaction, so its CTA is "Get" not "Request".
+   */
+  membershipUrl: 'https://www.vagaro.com/kiamoskin/memberships',
   instagram: {
     handle: '@kiamoskin',
     url: 'https://www.instagram.com/kiamoskin/',
@@ -118,4 +123,8 @@ export const verifiedPrices = {
   /** Package total for the series of three, not a per-session rate. */
   'procell-series': '$1,199',
   'lira-advanced-peel': '$299',
+  /** Monthly membership rates. Recurring, not per-visit — see data/memberships.ts. */
+  'membership-glow': '$199',
+  'membership-lux': '$299',
+  'membership-opulence': '$399',
 } as const;

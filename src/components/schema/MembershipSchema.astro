@@ -1,0 +1,78 @@
+---
+/**
+ * Page-level Service node for the membership page.
+ *
+ * Deliberately NOT a second LocalBusiness node — `BaseLayout` already emits the
+ * one canonical entity, and this references it by bare `@id`. Two business
+ * nodes with different addresses is the defect documented in the competitor
+ * teardown; the whole point of `businessId()` is that it cannot happen here.
+ *
+ * `ProgramMembership` and `MemberProgram` are the wrong types: the first models
+ * a person's existing enrolment record, the second models loyalty points.
+ * A recurring service sold at three rates is `Service` + `AggregateOffer`.
+ *
+ * Google has no rich result for subscription pricing, so `UnitPriceSpecification`
+ * here is for AI search and semantic clarity rather than for stars. Two rules
+ * that shape it: `price` stays at Offer level (Google ignores `priceSpecification`
+ * when `offers.price` is set), and `priceType` is never added (any value other
+ * than StrikethroughPrice makes Google drop the spec entirely).
+ */
+import { absolute, businessId } from '../../config/urls';
+import { business } from '../../config/business';
+import { tiers } from '../../data/memberships';
+
+const site = Astro.site;
+const url = absolute('/membership', site);
+
+const numeric = tiers.map((tier) => ({
+  tier,
+  value: Number(tier.price.replace(/[$,]/g, '')),
+}));
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${url}#service`,
+  name: 'KIAMO SKIN Membership',
+  serviceType: 'Skincare membership',
+  category: 'Facial membership',
+  description:
+    'Monthly facial membership in Mission Hills, San Diego. One personalized corrective treatment each month, 15% off retail, priority booking and progress assessments.',
+  url,
+  provider: { '@id': businessId(site) },
+  areaServed: business.areaServed.map((name) => ({ '@type': 'Place', name })),
+  offers: {
+    '@type': 'AggregateOffer',
+    priceCurrency: 'USD',
+    lowPrice: String(Math.min(...numeric.map((n) => n.value))),
+    highPrice: String(Math.max(...numeric.map((n) => n.value))),
+    offerCount: numeric.length,
+    availability: 'https://schema.org/InStock',
+    url: business.bookingUrl,
+    offers: numeric.map(({ tier, value }) => ({
+      '@type': 'Offer',
+      name: `${tier.name} — ${tier.position} Membership`,
+      description: tier.summary,
+      price: String(value),
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      url: business.bookingUrl,
+      seller: { '@id': businessId(site) },
+      priceSpecification: {
+        '@type': 'UnitPriceSpecification',
+        price: String(value),
+        priceCurrency: 'USD',
+        unitCode: 'MON',
+        referenceQuantity: {
+          '@type': 'QuantitativeValue',
+          value: 1,
+          unitCode: 'MON',
+        },
+        billingIncrement: 1,
+      },
+    })),
+  },
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

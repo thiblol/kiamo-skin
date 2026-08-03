@@ -1,0 +1,572 @@
+---
+/**
+ * The membership page.
+ *
+ * Target: `facial membership san diego` (10/mo, SD metro) — deliberately not a
+ * traffic play. At 112 indexed results the term is nearly empty, and the page
+ * exists because a member is worth six months of visits rather than one. Its
+ * job is conversion first, citation second.
+ *
+ * The citation half rides on a different term. `how often should you get a
+ * facial` runs 4,400/mo nationally with a live AI Overview currently citing
+ * small studio blogs — and that Overview repeats the industry's 28-day figure,
+ * which the primary literature does not support. Koster 2009 and Iizuka 1994
+ * both put adult epidermal turnover at 40–56 days. Being the sourced,
+ * contrarian answer is worth more than restating the consensus.
+ *
+ * A geo H1 would be wrong here. Like every treatment page, the H1 is a claim
+ * and the <title> is the search string.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import Reveal from '../components/Reveal.astro';
+import Button from '../components/Button.astro';
+import NapBlock from '../components/NapBlock.astro';
+import MembershipSchema from '../components/schema/MembershipSchema.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import FaqSchema from '../components/schema/FaqSchema.astro';
+import { tiers, memberBenefits, flexibility, ledger, firstMonths, terms } from '../data/memberships';
+import { membershipFaqs } from '../data/membership-faqs';
+import { business, verifiedPrices } from '../config/business';
+import { CTA_LABEL } from '../config/nav';
+import treatmentPhoto from '../assets/membership-treatment.jpg';
+import studioPhoto from '../assets/membership-studio.jpg';
+import resultPhoto from '../assets/membership-result-back.png';
+
+const title = 'Facial Membership in San Diego | KIAMO Skin';
+const description = `Monthly facial membership in Mission Hills, San Diego. One corrective treatment a month from ${verifiedPrices['membership-glow']}, 15% off retail and priority booking.`;
+---
+
+<BaseLayout {title} {description}>
+  <MembershipSchema slot="head" />
+  <BreadcrumbSchema slot="head" trail={[{ name: 'Membership', path: '/membership' }]} />
+  <FaqSchema slot="head" faqs={membershipFaqs} />
+
+  <article>
+    {/* 1 — Hero. Aspiration only; no pricing pressure this early. The photo
+        sits beside the copy rather than across the page: it is evidence the
+        room is real, not a banner, and at this size it never competes with
+        the headline. */}
+    <header class="bg-blush">
+      <div
+        class="wrap section-y grid items-center gap-12 pt-[calc(60px+72px)] md:grid-cols-[1fr_0.85fr] md:gap-14 md:pt-[calc(60px+112px)]"
+      >
+        <div>
+          <p class="t-eyebrow text-ink-soft">Membership</p>
+          <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[3.5rem]">
+            Skin doesn’t keep results. It rebuilds them.
+          </h1>
+          <p class="t-body mt-7 text-[1.125rem]">
+            Looking for a monthly facial membership in San Diego? KIAMO SKIN memberships start at
+            {' '}{verifiedPrices['membership-glow']} a month at the studio in Mission Hills — against
+            {' '}{verifiedPrices.hydrafacial} for the same HydraFacial booked one visit at a time.
+          </p>
+          <p class="t-body mt-5">
+            Every treatment on this menu is chosen to change something. What none of them can do is
+            hold that change alone, because the skin you are treating today will have replaced
+            itself before the next appointment. A membership is how the work compounds instead of
+            resetting.
+          </p>
+          {/* The hero CTA commits to the scroll rather than leaving for Vagaro.
+              Nobody buys a six-month plan before seeing the price, and sending
+              them to the booking flow here drops them out of the funnel. */}
+          <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <Button href="#plans">See the plans</Button>
+            <a
+              href={business.phone.href}
+              class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+            >
+              {business.phone.display}
+            </a>
+          </div>
+        </div>
+
+        <Image
+          src={treatmentPhoto}
+          alt="A HydraFacial being performed at the KIAMO Skin studio in Mission Hills, San Diego"
+          widths={[500, 800, 1200]}
+          sizes="(min-width: 52.5rem) 45vw, 100vw"
+          loading="eager"
+          class="aspect-[0.85] w-full object-cover object-[50%_30%]"
+        />
+      </div>
+    </header>
+
+    {/* 2 — The renewal argument. Written to be lifted: claim first, source on
+        the keyword, detail after. This is the answer capsule.
+
+        The before/after sits beside it because it is the argument made
+        visually: congestion and pigmentation clearing over a course of
+        treatment, not in one visit. It carries the same "Results vary"
+        disclaimer as every other result image on the site. */}
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">Why monthly</p>
+          <h2 class="t-h2 mt-5 max-w-[26ch]">Your skin is slower than San Diego spas say it is</h2>
+        </Reveal>
+
+        <div class="mt-12 grid gap-12 md:grid-cols-[1fr_0.9fr] md:items-start md:gap-16">
+          <Reveal>
+            <p class="t-body text-[1.125rem]">
+              Almost every spa in San Diego will tell you skin renews on a 28-day cycle. The
+              primary research does not say that. Reviewing the human data, <a
+                href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2861991/"
+                target="_blank"
+                rel="noopener"
+                class="border-b border-ink/40 hover:border-rose hover:text-rose"
+                >epidermal turnover is estimated at 40 to 56 days</a
+              >, and a compartment-by-compartment recalculation of the same measurements <a
+                href="https://pubmed.ncbi.nlm.nih.gov/7865480/"
+                target="_blank"
+                rel="noopener"
+                class="border-b border-ink/40 hover:border-rose hover:text-rose"
+                >puts it at 47 to 48 days</a
+              >. It slows further with age.
+            </p>
+            <p class="t-body mt-6">
+              That single correction changes the entire arithmetic of booking facials. A treatment
+              every three or four months does not land in the next cycle — it lands two cycles
+              later, on skin that has completely replaced the skin that was treated. Nothing
+              accumulates. You are paying full price to start again, and then judging the treatment
+              for not working.
+            </p>
+            <p class="t-body mt-6">
+              A monthly rhythm sits inside the cycle rather than outside it. Each visit works on
+              skin the last visit already changed, which is the only condition under which
+              correction is cumulative. It is also why the peel pages here say there is no
+              single-session version of pigmentation work, and why scalp therapy is priced as a
+              series. The membership is not a new idea. It is the delivery mechanism for what this
+              studio has been saying since the day it opened.
+            </p>
+          </Reveal>
+
+          <Reveal>
+            <figure class="m-0">
+              <Image
+                src={resultPhoto}
+                alt="Back congestion and pigmentation before and after a course of treatment at KIAMO Skin"
+                widths={[480, 760, 1100]}
+                sizes="(min-width: 52.5rem) 43vw, 100vw"
+                loading="lazy"
+                class="aspect-square w-full object-cover"
+              />
+              <figcaption class="t-meta mt-4 text-ink-soft">
+                Back congestion and pigmentation, across a course of treatment. Results vary.
+              </figcaption>
+            </figure>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    {/* 3 — Tiers. Research is unambiguous that pricing belongs in the top
+        third; nobody buries it. No tier prints its own saving.
+
+        This is the money block, so it carries the page's only real visual
+        weight: cards on porcelain against the ivory band, the rate set in the
+        display face, and the recommended tier physically lifted rather than
+        merely labelled. Everything around it stays quiet on purpose. */}
+    <section id="plans" class="scroll-mt-[72px] bg-ivory md:scroll-mt-[112px]">
+      <div class="wrap section-y">
+        <p class="t-eyebrow text-ink-soft">The memberships</p>
+          <h2 class="t-h2 mt-5 max-w-[24ch]">Three plans, one studio in Mission Hills</h2>
+          <p class="t-body mt-7 max-w-[62ch]">
+            Every plan includes one personalized treatment each month at the studio on Reynard Way
+            in Mission Hills — {business.visit.orientation.replace(/^Mission Hills, /, '')} Plans
+            differ by how much is done in that visit, and which one is right depends on whether
+            your skin is being maintained or actively corrected.
+          </p>
+
+        <ul class="mt-16 m-0 grid list-none gap-6 p-0 md:mt-20 md:grid-cols-3 md:items-start md:gap-5 lg:gap-7">
+          {
+            tiers.map((tier) => (
+              <Reveal
+                as="li"
+                class={`relative flex flex-col bg-porcelain p-8 lg:p-10 ${
+                  tier.recommended
+                    ? 'border border-rose/35 shadow-[0_18px_50px_-28px_rgba(43,43,41,0.4)] md:-mt-8 md:pt-14 lg:pb-14'
+                    : 'border border-line'
+                }`}
+              >
+                {/* The recommended marker sits ON the top edge, so the lift and
+                    the label are one gesture rather than two. */}
+                {tier.recommended && (
+                  <p class="t-eyebrow absolute -top-[9px] left-8 bg-rose px-3 pt-[7px] pb-[5px] text-porcelain lg:left-10">
+                    Most chosen
+                  </p>
+                )}
+
+                <p class="t-meta text-rose">{tier.numeral}</p>
+
+                <h3 class="t-service mt-4 text-[1.3125rem] md:text-[1.5rem]">{tier.name}</h3>
+                <p class="t-meta mt-2 text-ink-soft">{tier.position}</p>
+
+                <p class="t-tier-price mt-8 text-ink">
+                  {tier.price}
+                  <span class="t-meta ml-2 align-middle text-ink-soft">/ month</span>
+                </p>
+
+                <p class="t-body mt-7 text-[0.9375rem]">{tier.summary}</p>
+
+                <ul class="mt-8 m-0 list-none space-y-3 border-t border-line pt-7 p-0">
+                  {tier.includes.map((item) => (
+                    <li class="t-body flex gap-3 text-[0.9375rem]">
+                      <span aria-hidden="true" class="text-rose">
+                        —
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                {/* The comparison is stated, never summed. Two published menu
+                    prices next to one monthly rate; the reader does the rest. */}
+                {tier.compare && (
+                  <div class="mt-8 border-t border-line pt-6">
+                    <p class="t-meta text-ink-soft">Booked individually</p>
+                    <dl class="mt-3 m-0 space-y-2">
+                      {tier.compare.map((row) => (
+                        <div class="flex items-baseline justify-between gap-4">
+                          <dt class="t-body text-[0.875rem]">
+                            <a
+                              href={row.href}
+                              class="border-b border-ink/30 hover:border-rose hover:text-rose"
+                            >
+                              {row.label}
+                            </a>
+                          </dt>
+                          <dd class="t-body m-0 text-[0.875rem] text-ink-soft">{row.price}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                  </div>
+                )}
+
+                {/* The decision happens here, so the button does too. `mt-auto`
+                    holds it to the bottom of the card regardless of how many
+                    rows the tier above it carries. */}
+                <div class="mt-auto pt-10">
+                  <Button
+                    href={business.membershipUrl}
+                    external
+                    variant={tier.recommended ? 'primary' : 'ghost'}
+                    class="w-full"
+                  >
+                    Get {tier.name}
+                  </Button>
+                  <p class="t-meta mt-4 text-center text-ink-soft">
+                    Six months, then cancel anytime
+                  </p>
+                </div>
+              </Reveal>
+            ))
+          }
+        </ul>
+
+        <p class="t-body mt-12 text-[0.875rem] text-ink-soft">
+          Not sure which plan fits? The
+          {' '}<a
+            href="/book"
+            class="border-b border-ink/40 hover:border-rose hover:text-rose"
+            >first-time consultation in Mission Hills</a
+          >{' '}
+          assesses your skin first and the plan follows from it.
+        </p>
+      </div>
+    </section>
+
+    {/* 4 — Shared benefits. Confirmed universal, so they render once. */}
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">Every plan includes</p>
+          <h2 class="t-h2 mt-5 max-w-[24ch]">What being a member actually changes</h2>
+        </Reveal>
+        <ul class="mt-14 m-0 grid list-none gap-x-12 gap-y-0 p-0 md:grid-cols-2">
+          {
+            memberBenefits.map((benefit) => (
+              <Reveal as="li" class="border-b border-line py-7">
+                <h3 class="t-service text-[1.0625rem] md:text-[1.1875rem]">{benefit.title}</h3>
+                <p class="t-body mt-3 text-[0.9375rem] text-ink-soft">{benefit.body}</p>
+              </Reveal>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    {/* 5 — The ledger. Placed below the tiers on purpose: loss framing lands on
+        people already invested and reads as pressure to anyone still deciding.
+        Nothing is summed — every figure is a live menu price. */}
+    <section class="bg-espresso text-porcelain">
+      <div class="wrap section-y">
+        <Reveal>
+          <p class="t-eyebrow text-porcelain/60">The arithmetic</p>
+          <h2 class="t-h2 mt-5 max-w-[26ch]">The same two treatments, in the same room</h2>
+          <p class="t-body mt-7 max-w-[58ch] text-porcelain/80">
+            A HydraFacial and a dermaplane facial are the two most-booked treatments here. This is
+            what they cost separately, and what they cost together on the LUX membership.
+          </p>
+
+          <div class="mt-14 grid gap-12 md:grid-cols-2 md:gap-20">
+            <div>
+              <p class="t-eyebrow text-porcelain/60">Booked one at a time</p>
+              <dl class="mt-7 m-0">
+                {
+                  ledger.alacarte.map((row) => (
+                    <div class="flex items-baseline justify-between gap-6 border-b border-porcelain/15 py-5">
+                      <dt class="t-body text-porcelain/80">{row.label}</dt>
+                      <dd class="t-price m-0">{row.price}</dd>
+                    </div>
+                  ))
+                }
+              </dl>
+              <p class="t-body mt-6 text-[0.875rem] text-porcelain/60">
+                Two separate visits, two separate bookings, at whatever times are left.
+              </p>
+            </div>
+
+            <div>
+              <p class="t-eyebrow text-porcelain/60">On the LUX membership</p>
+              <dl class="mt-7 m-0">
+                <div class="flex items-baseline justify-between gap-6 border-b border-porcelain/15 py-5">
+                  <dt class="t-body text-porcelain/80">{ledger.member.label}</dt>
+                  <dd class="t-price m-0">{ledger.member.price}</dd>
+                </div>
+              </dl>
+              <p class="t-body mt-6 text-[0.875rem] text-porcelain/60">
+                One visit each month, booked before non-member times are released, with 15% off the
+                home care that holds the result.
+              </p>
+            </div>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+
+    {/* 6 — Objection handling. Every reason people give for not joining. */}
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">Flexibility</p>
+          <h2 class="t-h2 mt-5 max-w-[22ch]">When life gets in the way</h2>
+          <p class="t-body mt-7 max-w-[62ch]">
+            A membership you cannot use is not a saving. These are the four things that actually go
+            wrong, and what happens in each case.
+          </p>
+        </Reveal>
+        <ol class="mt-14 m-0 grid list-none gap-x-12 gap-y-0 p-0 md:grid-cols-2">
+          {
+            flexibility.map((item, i) => (
+              <Reveal as="li" class="border-t border-line py-8">
+                <p class="t-meta text-rose">{String(i + 1).padStart(2, '0')}</p>
+                <h3 class="t-service mt-3 text-[1.0625rem] md:text-[1.1875rem]">{item.question}</h3>
+                <p class="t-body mt-3 text-[0.9375rem]">{item.answer}</p>
+              </Reveal>
+            ))
+          }
+        </ol>
+      </div>
+    </section>
+
+    {/* 7 — Why six months. Every competitor buries the term in fine print;
+        this headlines it and defends it on the same evidence as section 2. */}
+    <section class="bg-blush">
+      <div class="wrap section-y">
+        <Reveal>
+          <div class="max-w-[68ch]">
+            <p class="t-eyebrow text-ink-soft">The commitment</p>
+            <h2 class="t-h2 mt-5 max-w-[24ch]">Six months is four renewal cycles</h2>
+            <p class="t-body mt-10 text-[1.125rem]">
+              Membership begins with a six-month commitment, and that is the part worth explaining
+              rather than hiding.
+            </p>
+            <p class="t-body mt-6">
+              At 40 to 56 days a cycle, six months is roughly four complete turnovers of the skin
+              being treated. Three months is two — enough to change surface texture, rarely enough
+              to move pigmentation or scarring, which are the two things most people arrive here
+              for. A commitment shorter than the biology would be easier to sell and would set you
+              up to conclude the treatment failed.
+            </p>
+            <p class="t-body mt-6">
+              After six months the membership continues month to month and can be cancelled online
+              at any time. There is no phone call to make and no letter to write.
+            </p>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+
+    {/* 8 — The proof slot. Every comparable page fills this with testimonials.
+        No rating or review is displayed anywhere on this site, so the proof
+        here is the protocol. */}
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">What you are buying</p>
+          <h2 class="t-h2 mt-5 max-w-[24ch]">Your first three months</h2>
+        </Reveal>
+        <ol class="mt-14 m-0 grid list-none gap-10 p-0 md:grid-cols-3">
+          {
+            firstMonths.map((month) => (
+              <Reveal as="li" class="border-t border-line pt-8">
+                <p class="t-meta text-rose">{month.month}</p>
+                <h3 class="t-service mt-4 text-[1.125rem] md:text-[1.3125rem]">{month.title}</h3>
+                <p class="t-body mt-4 text-[0.9375rem]">{month.body}</p>
+              </Reveal>
+            ))
+          }
+        </ol>
+        <div class="mt-16 grid gap-12 md:grid-cols-[1.15fr_1fr] md:items-center md:gap-16">
+          <Reveal>
+            <Image
+              src={studioPhoto}
+              alt="Kiki, licensed esthetician, at the front desk of the KIAMO Skin studio in Mission Hills"
+              widths={[600, 900, 1300]}
+              sizes="(min-width: 52.5rem) 54vw, 100vw"
+              loading="lazy"
+              class="aspect-[0.92] w-full object-cover"
+            />
+          </Reveal>
+          <Reveal>
+            <p class="t-body text-[0.9375rem] text-ink-soft">
+              Treatment is one-to-one with Kiki, a licensed esthetician registered with the
+              California Board of Barbering and Cosmetology. There is one esthetician and one
+              treatment room, which is the reason priority booking is worth something here rather
+              than being a perk on a list — member times are offered before the rest of the month
+              is released.
+            </p>
+            <p class="t-body mt-6 text-[0.9375rem] text-ink-soft">
+              Melanin-rich skin is the specialism rather than a service line — see
+              {' '}<a
+                href="/melanin-rich-skin"
+                class="border-b border-ink/40 hover:border-rose hover:text-rose"
+                >facials for melanin-rich skin in San Diego</a
+              >, or the full
+              {' '}<a
+                href="/treatments"
+                class="border-b border-ink/40 hover:border-rose hover:text-rose"
+                >corrective treatment menu in San Diego</a
+              >.
+            </p>
+            <p class="t-body mt-6 text-[0.9375rem] text-ink-soft">
+              Members travel in from across the county — see the
+              {' '}<a
+                href="/service-areas"
+                class="border-b border-ink/40 hover:border-rose hover:text-rose"
+                >areas served across San Diego County</a
+              >, or read about
+              {' '}<a
+                href="/service-areas/mission-hills"
+                class="border-b border-ink/40 hover:border-rose hover:text-rose"
+                >facials in Mission Hills</a
+              > if you are local to the studio.
+            </p>
+            <div class="mt-9">
+              <Button href={business.membershipUrl} external>Become a member</Button>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    {/* 9 — FAQ. Real PAA questions; none reused from the 49 already on the site. */}
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <p class="t-eyebrow text-ink-soft">Before you join</p>
+        <h2 class="t-h2 mt-5">Membership questions</h2>
+        <div class="mt-12 max-w-[68ch]">
+          {
+            membershipFaqs.map((faq) => (
+              <div class="border-b border-line">
+                <details class="group">
+                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
+                    <span>{faq.question}</span>
+                    <span
+                      aria-hidden="true"
+                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <div class="t-body pb-6 text-[0.9375rem]">{faq.answer}</div>
+                </details>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    {/* 10 — Terms and CTA. Rendered as a real section, not fine print:
+        California's Automatic Renewal Law requires the recurring amount, the
+        frequency, the minimum term and the cancellation method to be clear and
+        conspicuous. Signup and affirmative consent happen on Vagaro. */}
+    <section class="bg-porcelain">
+      <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.7fr] md:gap-20">
+        <div>
+          <p class="t-eyebrow text-ink-soft">Billing and cancellation</p>
+          <h2 class="t-h3 mt-5">Membership terms in San Diego</h2>
+          <ul class="mt-10 m-0 list-none space-y-4 p-0">
+            {
+              terms.map((term) => (
+                <li class="t-body flex gap-4 text-[0.9375rem]">
+                  <span aria-hidden="true" class="text-rose">
+                    —
+                  </span>
+                  <span>{term}</span>
+                </li>
+              ))
+            }
+          </ul>
+          <p class="t-body mt-10 max-w-[58ch] text-[0.9375rem] text-ink-soft">
+            Memberships are set up and managed through Vagaro, where the recurring charge is
+            confirmed before anything is billed. Appointments are requested rather than instantly
+            confirmed — {business.visit.appointmentOnly.toLowerCase()}, one licensed esthetician,
+            one treatment room. That is also why priority booking is worth something here: member
+            times are offered before the remainder is released.
+          </p>
+          {/* The closing ask is the membership, not an appointment. Anyone who
+              has read this far has read the case; sending them to the general
+              booking flow here would restart the decision. `Request
+              Appointment` stays available as the secondary path for people who
+              want to be assessed before committing to six months. */}
+          <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <Button href={business.membershipUrl} external>Become a member</Button>
+            <a
+              href={business.bookingUrl}
+              target="_blank"
+              rel="noopener"
+              class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+            >
+              {CTA_LABEL}
+            </a>
+            <a
+              href={business.phone.href}
+              class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+            >
+              {business.phone.display}
+            </a>
+          </div>
+        </div>
+
+        <aside>
+          <div class="border border-line bg-ivory p-8">
+            <h2 class="t-eyebrow text-ink-soft">Visit</h2>
+            <div class="mt-7">
+              <NapBlock tone="light" showCancellation />
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  /* Safari still needs this to drop the disclosure triangle. */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
