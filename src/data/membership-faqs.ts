@@ -40,7 +40,7 @@ export const membershipFaqs: Faq[] = [
   {
     question: 'Why is there a six-month commitment?',
     answer:
-      'Because six months is roughly four full skin renewal cycles, and corrective work is not visible in fewer. Epidermal turnover in adults runs closer to 40 to 56 days than the 28 days usually quoted, so a three-month trial covers about two cycles — enough to see a change in surface texture, rarely enough to move pigmentation or scarring. The commitment is not there to secure the booking. It is the honest minimum for the outcome, and after it the membership continues month to month and can be cancelled online.',
+      'Because six months is roughly four full skin renewal cycles, and corrective work is not visible in fewer. Epidermal turnover in adults runs closer to 40 to 56 days than the 28 days usually quoted, so a three-month trial covers about two cycles — enough to see a change in surface texture, rarely enough to move pigmentation or scarring. The commitment is not there to secure the booking. It is the honest minimum for the outcome, and after it the membership continues month to month and can be cancelled with 30 days notice.',
   },
   {
     question: 'What happens to my membership if I stop coming?',
@@ -50,7 +50,7 @@ export const membershipFaqs: Faq[] = [
   {
     question: 'How do I cancel a facial membership?',
     answer:
-      'Cancel online through your Vagaro account at any time after the initial six months. Cancellation takes effect at the end of the following billing cycle, and no written notice, phone call or in-person visit is required. A membership can also be cancelled and restarted later, though pricing and availability at that point are whatever is current rather than the rate held at signup.',
+      'After the initial six months you may cancel your membership by text or email. I just need 30 days notice before the next month to month cycle. A membership can also be cancelled and restarted later, though pricing and availability at that point are whatever is current rather than the rate held at signup.',
   },
   {
     question: 'Where is the studio, and is a monthly membership realistic if I do not live nearby?',

@@ -118,7 +118,7 @@ export const memberBenefits = [
   },
   {
     title: 'Priority booking',
-    body: 'One licensed esthetician, one room, appointment-only. Members are offered times first.',
+    body: 'One licensed esthetician, appointment-only. Members are offered times first.',
   },
   {
     title: 'Upgrade by paying the difference',
@@ -212,15 +212,15 @@ export const firstMonths = [
 /**
  * Billing and cancellation, rendered verbatim in the terms section.
  *
- * "Written notice" was deliberately removed: California §17602(d)(1) requires
- * that a membership which can be started online can be cancelled online, at
- * will, without further obstruction. Vagaro's customer self-cancellation must
- * stay enabled for this to remain true.
+ * Cancellation is by text or email with 30 days notice, per the owner. Note
+ * that California §17602(d)(1) requires a membership started online to be
+ * cancellable online without further obstruction, so this wording is worth a
+ * legal read before it stays permanently.
  */
 export const terms = [
   'Memberships are billed automatically within the first week of each month.',
   'Membership begins with a six-month commitment, then continues month to month.',
-  'After the first six months you can cancel online at any time. Cancellation takes effect at the end of the following billing cycle.',
+  'After the first six months you may cancel your membership with 30 days notice before the next month to month cycle. Text or email.',
   'Unused monthly treatments roll over while your membership is active, up to three at a time.',
   'Memberships cannot be paused. After the first six months a membership can be cancelled and restarted later, subject to current availability and pricing.',
   'Membership treatments are for one person. A single unused treatment may be gifted to one guest.',
