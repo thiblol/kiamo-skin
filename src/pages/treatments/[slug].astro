@@ -135,6 +135,21 @@ const localAreas = treatment.areas
             }
 
             {
+              treatment.guide && (
+                <p class="t-body mt-5 text-[0.875rem] text-ink-soft">
+                  {treatment.guide.lead}{' '}
+                  <a
+                    href={treatment.guide.href}
+                    class="border-b border-ink/40 hover:border-rose hover:text-rose"
+                  >
+                    {treatment.guide.label}
+                  </a>
+                  .
+                </p>
+              )
+            }
+
+            {
               treatment.membershipNote && (
                 <p class="t-body mt-5 text-[0.875rem] text-ink-soft">
                   {treatment.membershipNote}{' '}

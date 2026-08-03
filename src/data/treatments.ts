@@ -48,6 +48,12 @@ export interface Treatment {
    * would be sitewide boilerplate, which is the thing hub anchors exist to avoid.
    */
   melaninNote?: string;
+  /**
+   * Optional link to a journal article that explains the concern behind this
+   * treatment. Set only where the article genuinely answers a question the
+   * treatment page raises but does not have room to settle.
+   */
+  guide?: { label: string; href: string; lead: string };
   /** schema.org Service fields. Not rendered — structured data only. */
   serviceType: string;
   category: string;
@@ -304,6 +310,11 @@ export const treatments: Treatment[] = [
     membershipAnchor: 'Monthly facial memberships in San Diego',
     melaninNote:
       'Peels on Black and brown skin are chosen differently — the pacing is the whole point.',
+    guide: {
+      lead: 'Not sure which kind of pigmentation you have?',
+      label: 'How to tell post-inflammatory marks, melasma and sun damage apart',
+      href: '/journal/three-kinds-of-dark-mark',
+    },
   },
   {
     slug: 'dermaplaning',
