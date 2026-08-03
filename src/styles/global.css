@@ -178,6 +178,55 @@
     color: var(--color-ink-soft);
   }
 
+  /* Long-form reading type.
+     `.t-body` is weight 300 — right for a paragraph of marketing copy on a
+     luxury page, and genuinely tiring across a 2,000-word article. Reading
+     needs more ink on the page: weight 400, a longer line-height, and a
+     measure held near 68 characters. Used inside `.prose` only, so the rest
+     of the site keeps the lighter voice. */
+  .prose .t-body {
+    font-weight: 400;
+    font-size: 1.0625rem;
+    line-height: 1.75;
+    letter-spacing: 0.005em;
+    max-width: 68ch;
+  }
+
+  /* Inline links inside running text carry the citations, so they have to be
+     findable mid-paragraph without shouting. Rose plus an offset underline
+     reads as a link at a glance; the thin line keeps it from fragmenting the
+     paragraph the way a full-weight underline does. */
+  .prose p a,
+  .prose li a {
+    color: var(--color-rose);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    text-decoration-color: color-mix(in srgb, var(--color-rose) 40%, transparent);
+    transition:
+      text-decoration-color 250ms ease,
+      color 250ms ease;
+  }
+
+  .prose p a:hover,
+  .prose li a:hover {
+    color: var(--color-rose-deep);
+    text-decoration-color: currentColor;
+  }
+
+  /* A source that leaves the site says so. The reader deciding whether to
+     trust a claim benefits from seeing which links are evidence and which are
+     navigation — and it doubles as the standard "opens in a new tab" signal. */
+  .prose a[target='_blank']::after {
+    content: '↗';
+    display: inline-block;
+    margin-left: 0.15em;
+    font-size: 0.8em;
+    line-height: 1;
+    vertical-align: 0.15em;
+    text-decoration: none;
+  }
+
   /* Layout — spec §4.3 */
   .wrap {
     width: 100%;
@@ -193,6 +242,17 @@
   @media (width >= 52.5rem) {
     .t-body {
       font-size: 1.0625rem;
+    }
+
+    /* Reading size steps up on wider screens where the measure is comfortable. */
+    .prose .t-body {
+      font-size: 1.125rem;
+    }
+
+    /* Section headings in an article compete with 18px body text. At the base
+       1.25rem they read as bold paragraphs rather than as structure. */
+    .prose .t-h3 {
+      font-size: 1.625rem;
     }
 
     .wrap {
