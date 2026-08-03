@@ -160,12 +160,12 @@ export const flexibility = [
   {
     question: 'What if I cannot use it this month?',
     answer:
-      'Gift it to one guest. They create a Vagaro account and book their own appointment. It is one guest per treatment, so it stays a gift rather than becoming a second membership.',
+      'Gift it 1x to one guest. They create a Vagaro account and book their own appointment. It is one guest per treatment, so it stays a gift rather than becoming a second membership.',
   },
   {
     question: 'What if life gets in the way entirely?',
     answer:
-      'Pause it. A pause holds your rate and your banked treatments while the billing stops, which is a better outcome for your skin than cancelling and restarting from the beginning six months later.',
+      'Memberships cannot be paused but may be canceled after the 6 month and restarted later, subject to current availability and pricing.',
   },
 ];
 
@@ -222,7 +222,7 @@ export const terms = [
   'Membership begins with a six-month commitment, then continues month to month.',
   'After the first six months you can cancel online at any time. Cancellation takes effect at the end of the following billing cycle.',
   'Unused monthly treatments roll over while your membership is active, up to three at a time.',
-  'Memberships can be paused. Pausing holds your rate and any banked treatments while billing stops.',
+  'Memberships cannot be paused. After the first six months a membership can be cancelled and restarted later, subject to current availability and pricing.',
   'Membership treatments are for one person. A single unused treatment may be gifted to one guest.',
   'Member pricing cannot be combined with other promotions.',
 ] as const;

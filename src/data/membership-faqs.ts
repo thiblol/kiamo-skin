@@ -45,7 +45,7 @@ export const membershipFaqs: Faq[] = [
   {
     question: 'What happens to my membership if I stop coming?',
     answer:
-      'Unused treatments roll over while the membership is active, up to three at a time. Past three the monthly rhythm has already broken, and the better options are to pause the membership — which stops billing while holding your rate and anything banked — or to gift a single treatment to one guest. Memberships cannot roll over indefinitely, because a balance of unused treatments is not a skincare plan and pretending otherwise would not be doing anyone a favour.',
+      'Unused treatments roll over while the membership is active, up to three at a time. Past three the monthly rhythm has already broken, and the better options are to gift a single treatment to one guest or, after the first six months, to cancel and restart later at whatever pricing and availability are current. Memberships cannot be paused, and they cannot roll over indefinitely, because a balance of unused treatments is not a skincare plan and pretending otherwise would not be doing anyone a favour.',
   },
   {
     question: 'How do I cancel a facial membership?',
