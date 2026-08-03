@@ -1,0 +1,64 @@
+---
+/**
+ * VideoObject nodes for the homepage clips.
+ *
+ * Your schema template's homepage rule is LocalBusiness + WebSite + BreadcrumbList,
+ * all three of which the homepage already emits via LocalBusinessSchema. This adds
+ * the one type that rule does not cover: the clips themselves, which are eligible
+ * for video rich results and are otherwise invisible to a crawler that cannot
+ * decode MP4.
+ *
+ * Per the template's rules, and the spec's:
+ *   - NAP is not restated. Every node points at the one LocalBusiness @id via
+ *     `publisher`, so there is a single source of the address and no drift.
+ *   - No aggregateRating, no interactionStatistic. There is no real view or
+ *     rating data, and the guard suite fails the build on the former.
+ *   - Absolute URLs throughout, built by `absolute()` so they carry the trailing
+ *     slash the canonicals use.
+ *   - `uploadDate` is omitted where the source file carried no creation date,
+ *     rather than invented. It is a recommended field, not a required one.
+ *
+ * ItemList wraps the three so their on-page order is explicit rather than
+ * inferred from document position.
+ */
+import { absolute, businessId } from '../../config/urls';
+import { reels } from '../../data/reels';
+
+const site = Astro.site;
+const home = absolute('/', site);
+
+/** 12.63 → "PT13S". ISO 8601 permits a fractional final unit, but Google's
+    VideoObject examples are all whole, so the value is rounded rather than
+    handing the parser something it may or may not accept. */
+const iso = (seconds: number) => `PT${Math.round(seconds)}S`;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  '@id': `${home}#reels`,
+  name: 'From the treatment room',
+  itemListElement: reels.map((reel, i) => ({
+    '@type': 'ListItem',
+    position: i + 1,
+    item: {
+      '@type': 'VideoObject',
+      '@id': `${home}#${reel.slug}`,
+      name: reel.title,
+      description: reel.body,
+      thumbnailUrl: new URL(`/videos/${reel.slug}-poster.jpg`, site).href,
+      contentUrl: new URL(`/videos/${reel.slug}-720.mp4`, site).href,
+      encodingFormat: 'video/mp4',
+      duration: iso(reel.duration),
+      ...(reel.uploadDate && { uploadDate: reel.uploadDate }),
+      publisher: { '@id': businessId(site) },
+      // The clip plays inline on the homepage; there is no dedicated watch page.
+      embedUrl: home,
+      isFamilyFriendly: true,
+      inLanguage: 'en-US',
+      ...(reel.href && { about: { '@type': 'Service', url: absolute(reel.href, site) } }),
+    },
+  })),
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

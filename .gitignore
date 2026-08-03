@@ -26,6 +26,10 @@ pnpm-debug.log*
 # source image renders — 45MB of originals; the site imports from src/assets/
 website-images/
 
+# source video originals — 45MB of HEVC phone captures, unplayable in Chrome and
+# Firefox. The site serves the H.264 transcodes in public/videos/ instead.
+home-videos/
+
 # editor + agent local state
 .vscode/
 .claude/

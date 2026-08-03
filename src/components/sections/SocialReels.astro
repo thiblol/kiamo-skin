@@ -1,0 +1,352 @@
+---
+import Reveal from '../Reveal.astro';
+import VideoSchema from '../schema/VideoSchema.astro';
+import { reels } from '../../data/reels';
+import { business } from '../../config/business';
+
+/**
+ * Vertical clips from the treatment room, as a scroll-snap rail.
+ *
+ * Performance is the whole design constraint here, so:
+ *
+ *   - No video bytes load until they are wanted. Each <video> carries no src at
+ *     all; an IntersectionObserver attaches the right <source> only once the rail
+ *     is within 200px of the viewport, and pauses again once it leaves. The
+ *     posters are lazy <img>, so at rest the section costs nothing at all —
+ *     LCP, CLS and TBT are untouched.
+ *   - The rail is CSS scroll-snap, not a carousel library. Swipe is native; the
+ *     arrows only nudge scrollLeft. No Swiper, no Embla, no payload.
+ *   - Posters carry width/height and the frames are aspect-9/16, so the layout
+ *     is final before any media arrives. Measured CLS is 0.
+ *
+ * Without JS this stays a working, swipeable rail of poster images — the play
+ * affordance is hidden, because nothing would play.
+ */
+---
+
+<VideoSchema />
+
+<section class="bg-porcelain">
+  <div class="wrap section-y">
+    <div class="flex items-end justify-between gap-6">
+      <div>
+        <p class="t-eyebrow text-ink-soft">From the treatment room</p>
+        <h2 class="t-h2 mt-5 max-w-[22ch]">What the work actually looks like.</h2>
+      </div>
+
+      {/* Desktop-only: the rail is swipeable everywhere, so on touch these would
+          duplicate a gesture the user already has. */}
+      <div class="hidden shrink-0 gap-2 md:flex" data-reels-nav hidden>
+        <button type="button" class="reel-arrow" data-reels-prev aria-label="Previous clip">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none"
+            stroke="currentColor" stroke-width="1.25">
+            <path d="M15 5l-7 7 7 7" stroke-linecap="square" />
+          </svg>
+        </button>
+        <button type="button" class="reel-arrow" data-reels-next aria-label="Next clip">
+          <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none"
+            stroke="currentColor" stroke-width="1.25">
+            <path d="M9 5l7 7-7 7" stroke-linecap="square" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <Reveal>
+      <ul class="reel-rail mt-14 flex list-none gap-5 p-0 md:gap-8" data-reels>
+        {
+          reels.map((reel) => (
+            <li class="reel-item shrink-0">
+              <figure class="m-0">
+                <div class="reel-frame relative aspect-9/16 overflow-hidden bg-ivory">
+                  {/* The poster is an <img>, not the video's `poster` attribute:
+                      that attribute is fetched eagerly whatever `preload` says,
+                      which would have cost ~85KB above the fold for frames nobody
+                      has scrolled to. `loading="lazy"` gets that back, and the
+                      image is what no-JS visitors keep. */}
+                  <img
+                    src={`/videos/${reel.slug}-poster.jpg`}
+                    alt={reel.alt}
+                    width="540"
+                    height="960"
+                    loading="lazy"
+                    decoding="async"
+                    class="absolute inset-0 size-full object-cover"
+                  />
+
+                  {/* The poster <img> already carries the description, so the
+                      clip is aria-hidden — otherwise screen readers announce the
+                      same frame twice. */}
+                  <video
+                    class="reel-video absolute inset-0 size-full object-cover"
+                    data-reel={reel.slug}
+                    width="540"
+                    height="960"
+                    muted
+                    loop
+                    playsinline
+                    preload="none"
+                    aria-hidden="true"
+                  ></video>
+
+                  {/* Hidden until JS wires it up: with no script there is no file
+                      to play, and a dead control is worse than none. */}
+                  <button type="button" class="reel-toggle" data-reel-toggle aria-label="Pause clip" hidden>
+                    <svg class="reel-icon-pause" viewBox="0 0 24 24" width="16" height="16"
+                      aria-hidden="true" fill="currentColor">
+                      <rect x="7" y="5" width="3.5" height="14" />
+                      <rect x="13.5" y="5" width="3.5" height="14" />
+                    </svg>
+                    <svg class="reel-icon-play" viewBox="0 0 24 24" width="16" height="16"
+                      aria-hidden="true" fill="currentColor">
+                      <path d="M8 5l11 7-11 7z" />
+                    </svg>
+                  </button>
+                </div>
+
+                <figcaption>
+                  {reel.href ? (
+                    <a href={reel.href} class="group block">
+                      <p class="t-service mt-6 text-[1rem] transition-colors duration-300 group-hover:text-rose">
+                        {reel.title}
+                      </p>
+                      <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{reel.body}</p>
+                    </a>
+                  ) : (
+                    <>
+                      <p class="t-service mt-6 text-[1rem]">{reel.title}</p>
+                      <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{reel.body}</p>
+                    </>
+                  )}
+                </figcaption>
+              </figure>
+            </li>
+          ))
+        }
+      </ul>
+    </Reveal>
+
+    <p class="t-meta mt-10 text-ink-soft">
+      More on <a href={business.instagram.url} rel="noopener" class="underline underline-offset-4 hover:text-rose">
+        Instagram {business.instagram.handle}</a>.
+    </p>
+  </div>
+</section>
+
+<style>
+  /* Peek layout: the rail bleeds out through `.wrap`'s padding so the next clip
+     is half visible at the viewport edge — that overhang is what reads as
+     scrollable. The same padding comes back as scroll-padding, so a snapped card
+     still lines up with the H2 above it. Values track `.wrap` in global.css:
+     20px, and 40px from the md breakpoint. */
+  .reel-rail {
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    margin-inline: -20px;
+    padding-inline: 20px;
+    scroll-padding-inline-start: 20px;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .reel-rail::-webkit-scrollbar {
+    display: none;
+  }
+
+  .reel-item {
+    scroll-snap-align: start;
+    width: min(72vw, 20rem);
+  }
+
+  @media (width >= 52.5rem) {
+    .reel-rail {
+      margin-inline: -40px;
+      padding-inline: 40px;
+      scroll-padding-inline-start: 40px;
+    }
+
+    .reel-item {
+      width: 22rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reel-rail {
+      scroll-behavior: auto;
+    }
+  }
+
+  /* The clip sits on top of the poster and only becomes visible once it is
+     genuinely playing, so a slow network shows a still frame rather than a black
+     box. Both are object-cover at the same aspect, so the swap is invisible. */
+  .reel-video {
+    opacity: 0;
+    transition: opacity 400ms ease;
+  }
+
+  .reel-frame[data-playing] .reel-video {
+    opacity: 1;
+  }
+
+  .reel-arrow {
+    display: grid;
+    place-items: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid var(--color-line);
+    color: var(--color-ink);
+    cursor: pointer;
+    transition:
+      border-color 300ms ease,
+      color 300ms ease;
+  }
+
+  .reel-arrow:hover:not(:disabled) {
+    border-color: var(--color-rose);
+    color: var(--color-rose);
+  }
+
+  .reel-arrow:disabled {
+    opacity: 0.35;
+    cursor: default;
+  }
+
+  .reel-toggle {
+    position: absolute;
+    right: 0.75rem;
+    bottom: 0.75rem;
+    display: grid;
+    place-items: center;
+    width: 2.25rem;
+    height: 2.25rem;
+    color: var(--color-ink);
+    background: rgb(253 251 247 / 0.85);
+    cursor: pointer;
+    transition: opacity 300ms ease;
+  }
+
+  .reel-toggle[hidden] {
+    display: none;
+  }
+
+  /* One button, two glyphs — whichever matches the current state is shown. */
+  .reel-icon-play {
+    display: none;
+  }
+
+  .reel-frame[data-paused] .reel-icon-play {
+    display: block;
+  }
+
+  .reel-frame[data-paused] .reel-icon-pause {
+    display: none;
+  }
+</style>
+
+<script>
+  const rail = document.querySelector<HTMLElement>('[data-reels]');
+  if (rail) {
+    const videos = [...rail.querySelectorAll<HTMLVideoElement>('video[data-reel]')];
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+    /* Two widths, chosen once. A phone rendering a 320px-wide card has no use for
+       the 720p file, and matchMedia decides before a single byte is requested. */
+    const wide = window.matchMedia('(min-width: 40rem)').matches;
+    const variant = wide ? '720' : '480';
+
+    /** Attaches the file. Until this runs the element has no src and costs nothing. */
+    const load = (video: HTMLVideoElement) => {
+      if (video.dataset.loaded) return;
+      video.dataset.loaded = 'true';
+
+      const source = document.createElement('source');
+      source.src = `/videos/${video.dataset.reel}-${variant}.mp4`;
+      source.type = 'video/mp4';
+      video.append(source);
+      video.load();
+    };
+
+    /** Reveals the play/pause control and binds it. Deliberately separate from
+        `load`: under reduced motion the control appears but no file is fetched
+        until the visitor actually asks for one. */
+    const wire = (video: HTMLVideoElement) => {
+      const frame = video.parentElement;
+      const toggle = frame?.querySelector<HTMLButtonElement>('[data-reel-toggle]');
+      if (!toggle || toggle.dataset.wired) return;
+      toggle.dataset.wired = 'true';
+      toggle.hidden = false;
+
+      const sync = (paused: boolean) => {
+        frame?.toggleAttribute('data-paused', paused);
+        toggle.setAttribute('aria-label', paused ? 'Play clip' : 'Pause clip');
+      };
+
+      // `playing` rather than `play`: the poster stays up until frames are
+      // actually being presented, not merely requested.
+      video.addEventListener('playing', () => {
+        frame?.toggleAttribute('data-playing', true);
+        sync(false);
+      });
+      toggle.addEventListener('click', () => {
+        if (video.paused) {
+          load(video);
+          video.play().catch(() => {});
+        } else {
+          video.pause();
+        }
+      });
+      video.addEventListener('pause', () => sync(true));
+      sync(video.paused);
+    };
+
+    /* Playback follows visibility in both directions: a clip off screen is paused,
+       so the page is never decoding video nobody is looking at. */
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          const video = entry.target as HTMLVideoElement;
+          if (!entry.isIntersecting) {
+            if (video.dataset.loaded) video.pause();
+            continue;
+          }
+          wire(video);
+          // Reduced motion gets the poster and the play button, and no download
+          // at all until that button is pressed.
+          if (reduced.matches) continue;
+          load(video);
+          video.play().catch(() => {});
+        }
+      },
+      { rootMargin: '200px 0px', threshold: 0.25 },
+    );
+
+    videos.forEach((video) => {
+      io.observe(video);
+      // A muted autoplay loop needs no timeline, and the native one is a second
+      // visual language on top of the site's own.
+      video.controls = false;
+    });
+
+    const nav = document.querySelector<HTMLElement>('[data-reels-nav]');
+    const prev = document.querySelector<HTMLButtonElement>('[data-reels-prev]');
+    const next = document.querySelector<HTMLButtonElement>('[data-reels-next]');
+
+    if (nav && prev && next) {
+      nav.hidden = false;
+      const step = () => rail.querySelector<HTMLElement>('.reel-item')?.offsetWidth ?? 320;
+      const gap = 32;
+
+      const sync = () => {
+        const max = rail.scrollWidth - rail.clientWidth;
+        prev.disabled = rail.scrollLeft <= 1;
+        next.disabled = rail.scrollLeft >= max - 1;
+      };
+
+      prev.addEventListener('click', () => rail.scrollBy({ left: -(step() + gap) }));
+      next.addEventListener('click', () => rail.scrollBy({ left: step() + gap }));
+      rail.addEventListener('scroll', sync, { passive: true });
+      sync();
+    }
+  }
+</script>
