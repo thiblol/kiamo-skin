@@ -64,6 +64,11 @@ export const faqs: Faq[] = [
       'Tipping is customary at skin studios in San Diego, and somewhere around fifteen to twenty per cent is the usual range. It is genuinely never expected here, and it changes nothing about the treatment or the plan.',
   },
   {
+    question: 'Is KIAMO SKIN a facial spa or a skin care clinic?',
+    answer:
+      'Neither description is quite right on its own. KIAMO SKIN is a single-treatment-room studio in Mission Hills, San Diego, run by a licensed esthetician — more clinical than a day spa, and not a medical practice. The distinction that matters is the work: treatment is corrective and planned across a series, rather than a one-off relaxing facial. Nothing here is medical, and anything outside an esthetician’s scope is referred on.',
+  },
+  {
     question: 'Is there parking?',
     answer: `${business.visit.parking} is available at the Mission Hills studio at ${business.address.full}.`,
   },

@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Reveal from '../../components/Reveal.astro';
 import Button from '../../components/Button.astro';
@@ -6,10 +7,13 @@ import NapBlock from '../../components/NapBlock.astro';
 import LocationMap from '../../components/LocationMap.astro';
 import AreaServiceSchema from '../../components/schema/AreaServiceSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import FaqSchema from '../../components/schema/FaqSchema.astro';
 import { areas } from '../../data/areas';
+import { areaFaqs } from '../../data/area-faqs';
 import { treatments } from '../../data/treatments';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
+import studioInterior from '../../assets/studio-interior.jpg';
 
 export function getStaticPaths() {
   return areas.map((area) => ({
@@ -25,6 +29,17 @@ const featured = area.featured
   .filter((t) => t !== undefined);
 
 const others = areas.filter((a) => a.slug !== area.slug);
+const faqs = areaFaqs[area.slug] ?? [];
+
+/**
+ * The one image on the page, so the alt text is the only place the studio and
+ * the area appear in the same string. Mission Hills is the studio's own area —
+ * "clients travelling from Mission Hills" would be false — so it reads plainly.
+ */
+const imageAlt =
+  area.slug === 'mission-hills'
+    ? 'The KIAMO SKIN treatment room at 3067 Reynard Way in Mission Hills, San Diego'
+    : `The KIAMO SKIN treatment room in Mission Hills, San Diego, where ${area.name} clients are seen`;
 ---
 
 <BaseLayout title={area.title} description={area.description}>
@@ -36,6 +51,7 @@ const others = areas.filter((a) => a.slug !== area.slug);
       { name: area.name, path: `/service-areas/${area.slug}` },
     ]}
   />
+  {faqs.length > 0 && <FaqSchema slot="head" faqs={faqs} />}
 
   <article>
     <header class="bg-blush">
@@ -106,6 +122,14 @@ const others = areas.filter((a) => a.slug !== area.slug);
         </div>
 
         <aside>
+          <Image
+            src={studioInterior}
+            alt={imageAlt}
+            widths={[400, 600]}
+            sizes="(min-width: 768px) 30vw, 100vw"
+            loading="lazy"
+            class="mb-8 w-full"
+          />
           <div class="border border-line bg-ivory p-8">
             <h2 class="t-eyebrow text-ink-soft">The studio</h2>
             <div class="mt-7">
@@ -118,6 +142,59 @@ const others = areas.filter((a) => a.slug !== area.slug);
         </aside>
       </div>
     </section>
+
+    {/* Espresso band between two light sections. The homepage uses the same
+        treatment for local climate context, and a short dark band is what keeps
+        a run of pale sections from reading flat. */}
+    <section class="bg-espresso text-porcelain">
+      <div class="wrap section-y grid gap-14 md:grid-cols-[1.15fr_0.85fr] md:gap-20">
+        <div>
+          <p class="t-eyebrow text-porcelain/60">The area</p>
+          <h2 class="t-h2 mt-5">All about {area.name}</h2>
+          <p class="t-body mt-8 max-w-[58ch] text-porcelain/75">{area.allAbout.body}</p>
+        </div>
+
+        <dl class="m-0 self-end">
+          {
+            area.allAbout.facts.map((fact) => (
+              <div class="border-t border-porcelain/15 py-6">
+                <dt class="t-eyebrow text-porcelain/50">{fact.label}</dt>
+                <dd class="t-h3 m-0 mt-3 text-[1.5rem] text-porcelain">{fact.value}</dd>
+              </div>
+            ))
+          }
+        </dl>
+      </div>
+    </section>
+
+    {
+      faqs.length > 0 && (
+        <section class="bg-blush">
+          <div class="wrap section-y">
+            <p class="t-eyebrow text-ink-soft">Before you book</p>
+            <h2 class="t-h2 mt-5">{area.name} questions</h2>
+            <div class="mt-12 max-w-[68ch]">
+              {faqs.map((faq) => (
+                <div class="border-b border-line">
+                  <details class="group">
+                    <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
+                      <span>{faq.question}</span>
+                      <span
+                        aria-hidden="true"
+                        class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                      >
+                        +
+                      </span>
+                    </summary>
+                    <div class="t-body pb-6 text-[0.9375rem]">{faq.answer}</div>
+                  </details>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )
+    }
 
     <section class="bg-ivory">
       <div class="wrap section-y">

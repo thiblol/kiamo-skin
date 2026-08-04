@@ -32,6 +32,23 @@ export interface Area {
   /** One sentence for the Service schema node. */
   schemaDescription: string;
   /**
+   * The hyperlocal band. `body` is the place itself — geography, character, how
+   * people live there — where `localConcern` is the skin problem. Both draw on
+   * the same verified facts; neither invents one.
+   *
+   * `facts` is always three rows, same three labels across all nine areas, so
+   * the section reads as one system rather than nine one-offs. Every value
+   * restates something already stated elsewhere on the same page.
+   *
+   * Note the label is "To Mission Hills", never "the studio": on the Del Mar
+   * page the guard suite fails the build when studio, location, located or
+   * "visit us" lands within 40 characters of "Del Mar".
+   */
+  allAbout: {
+    body: string;
+    facts: { label: string; value: string }[];
+  };
+  /**
    * Distance and drive time to the studio, condensed from `gettingHere` for the
    * homepage proximity list. Off-peak, and every figure is already stated on the
    * area page — this field restates, it never introduces a new claim.
@@ -59,6 +76,15 @@ export const areas: Area[] = [
     },
     schemaDescription:
       'Corrective facials and scalp therapy at the KIAMO SKIN studio on Reynard Way in Mission Hills, San Diego, with free parking on site.',
+    allAbout: {
+      body:
+        'Mission Hills sits on the canyon rim above Old Town, one of San Diego’s oldest residential neighborhoods and still mostly single homes on quiet streets. Reynard Way runs down through it toward Middletown, which is why the studio is a five-minute drive from most of the neighborhood and a walk from parts of it. Washington Street carries everything else — Hillcrest one way, I-5 the other.',
+      facts: [
+        { label: 'To Mission Hills', value: 'You are here' },
+        { label: 'Setting', value: 'Canyon-rim streets above Old Town' },
+        { label: 'Booked most', value: 'HydraFacial and enzyme therapy' },
+      ],
+    },
     proximity: 'The studio itself — five minutes across the neighborhood',
     featured: ['hydrafacial', 'dmk-enzyme-therapy', 'dermaplaning'],
   },
@@ -79,6 +105,15 @@ export const areas: Area[] = [
     },
     schemaDescription:
       'Corrective facials and scalp therapy for La Jolla clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
+    allAbout: {
+      body:
+        'La Jolla wraps around seven miles of coast north of the city, from the Village and the Cove down through Bird Rock. It lives on the water — the Cove has hosted an open-water swim since 1916, and a pod swims there every day of the year. That is the useful thing to know about skin here: exposure is not seasonal, so neither is the barrier damage that follows it.',
+      facts: [
+        { label: 'To Mission Hills', value: 'Twelve miles, twenty minutes' },
+        { label: 'Setting', value: 'Coastal, year-round ocean swimming' },
+        { label: 'Booked most', value: 'Keravive scalp therapy' },
+      ],
+    },
     proximity: 'About twelve miles — roughly twenty minutes south on I-5',
     featured: ['keravive-scalp', 'hydrafacial', 'lira-peels'],
   },
@@ -101,6 +136,15 @@ export const areas: Area[] = [
       'Pigmentation in melanin-rich skin is what this studio was built around:',
     schemaDescription:
       'Pigmentation, melasma and corrective facial treatment for Chula Vista clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
+    allAbout: {
+      body:
+        'Chula Vista is the county’s second-largest city, spread between the bay and the foothills, and roughly six in ten residents are Hispanic or Latino. Western Chula Vista runs old and walkable around Third Avenue; Eastlake and Rancho del Rey are newer and further inland, where summers run hotter. That inland stretch matters, because cumulative UV is what drives the melasma this area books for.',
+      facts: [
+        { label: 'To Mission Hills', value: 'Thirteen miles, twenty-five minutes' },
+        { label: 'Setting', value: 'Bay to foothills, largest melanin-rich catchment' },
+        { label: 'Booked most', value: 'Lira peels for pigmentation' },
+      ],
+    },
     proximity: 'About thirteen miles — twenty to twenty-five minutes north off-peak',
     featured: ['lira-peels', 'dmk-enzyme-therapy', 'hydrafacial'],
   },
@@ -121,6 +165,15 @@ export const areas: Area[] = [
     },
     schemaDescription:
       'Barrier repair, scalp therapy and corrective facials for Encinitas clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
+    allAbout: {
+      body:
+        'Encinitas runs five miles of coast north of Del Mar, stacked on bluffs above the sand and split by Coast Highway 101 through Leucadia, downtown and Cardiff. It surfs year-round — Swami’s and Moonlight hold water in every season, and Surfer ranked the town third in the country. Skin here is usually reactive rather than pigmented, which is a different problem and a different plan.',
+      facts: [
+        { label: 'To Mission Hills', value: 'Twenty-five miles, thirty minutes' },
+        { label: 'Setting', value: 'Bluff-top surf town, year-round water' },
+        { label: 'Booked most', value: 'DMK enzyme therapy for the barrier' },
+      ],
+    },
     proximity: 'About twenty-five miles — near thirty minutes on a clear I-5',
     featured: ['dmk-enzyme-therapy', 'keravive-scalp', 'hydrafacial'],
   },
@@ -143,6 +196,17 @@ export const areas: Area[] = [
     // guard regex scans in both directions and the spec's own draft failed it.
     schemaDescription:
       'Corrective facials and scalp therapy at the KIAMO SKIN studio in Mission Hills, San Diego, for clients travelling from Del Mar.',
+    allAbout: {
+      // Same 40-character rule as schemaDescription above: "Del Mar" is kept
+      // clear of studio, location, located and "visit us" in both directions.
+      body:
+        'Del Mar is two and a half miles of coast between the bluffs and the racetrack, small enough to cross on foot and defined by its calendar. The county fair runs from June into early July, the summer race meet from mid-July into September, and the Fairgrounds set the rhythm of the year around them. Both are weeks of long afternoons in open sun, on a stretch where the marine layer clears by early afternoon.',
+      facts: [
+        { label: 'To Mission Hills', value: 'Twenty-two miles, twenty-five minutes' },
+        { label: 'Setting', value: 'Bluffs, racetrack and a summer calendar' },
+        { label: 'Booked most', value: 'Procell microchanneling for texture' },
+      ],
+    },
     proximity: 'About twenty-two miles — twenty-five minutes south on I-5',
     featured: ['hydrafacial', 'procell-microchanneling', 'keravive-scalp'],
   },
@@ -163,6 +227,15 @@ export const areas: Area[] = [
     },
     schemaDescription:
       'Corrective facials and scalp therapy for Carlsbad clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
+    allAbout: {
+      body:
+        'Carlsbad is the top of the county line, seven miles of coast from the Village down past Palomar Airport Road, far enough north that the drive south is a real one rather than an errand. The COASTER runs from Carlsbad Village to Santa Fe Depot in under an hour if you would rather not sit in it. Either way, distance is the thing that decides whether a treatment series gets finished.',
+      facts: [
+        { label: 'To Mission Hills', value: 'Thirty-five miles, forty minutes' },
+        { label: 'Setting', value: 'North county coast, COASTER line' },
+        { label: 'Booked most', value: 'Series work planned around the drive' },
+      ],
+    },
     proximity: 'About thirty-five miles — a genuine thirty-five to forty-five minutes',
     featured: ['procell-microchanneling', 'keravive-scalp', 'hydrafacial'],
   },
@@ -183,6 +256,15 @@ export const areas: Area[] = [
     },
     schemaDescription:
       'Sun damage, barrier repair and scalp therapy for Pacific Beach clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
+    allAbout: {
+      body:
+        'Pacific Beach runs from Law Street down to Mission Bay, with a boardwalk more than three miles long and Garnet Avenue cutting through the middle of it. It is the neighborhood that lives outdoors, which is the whole point: May Gray and June Gloom keep the mornings overcast, the sky burns off by early afternoon, and the UV underneath was never low. Damage here accumulates without ever looking like a burn.',
+      facts: [
+        { label: 'To Mission Hills', value: 'Seven miles, fifteen minutes' },
+        { label: 'Setting', value: 'Boardwalk, marine layer, outdoor daily' },
+        { label: 'Booked most', value: 'Lira peels for uneven tone' },
+      ],
+    },
     proximity: 'Roughly seven miles — about fifteen minutes east',
     featured: ['lira-peels', 'dmk-enzyme-therapy', 'keravive-scalp'],
   },
@@ -203,6 +285,15 @@ export const areas: Area[] = [
     },
     schemaDescription:
       'Corrective facials for cumulative sun exposure and pigmentation, for La Mesa clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
+    allAbout: {
+      body:
+        'La Mesa sits about ten miles inland, east of Mission Valley and built across hills around the village on La Mesa Boulevard. Ten miles is enough to miss the marine layer that keeps the coast gray through May and June, and summer afternoons run roughly eight to fifteen degrees warmer than La Jolla or Mission Beach. More clear days, year after year, is the quiet driver behind the pigmentation this area books for.',
+      facts: [
+        { label: 'To Mission Hills', value: 'Eleven miles, twenty minutes' },
+        { label: 'Setting', value: 'Inland hills, past the marine layer' },
+        { label: 'Booked most', value: 'Lira peels for cumulative sun damage' },
+      ],
+    },
     proximity: 'Roughly eleven miles — fifteen to twenty minutes west on I-8',
     featured: ['lira-peels', 'hydrafacial', 'dmk-enzyme-therapy'],
   },
@@ -223,6 +314,15 @@ export const areas: Area[] = [
     },
     schemaDescription:
       'Corrective facials and scalp therapy for North Park clients, ten minutes away at the KIAMO SKIN studio in Mission Hills, San Diego.',
+    allAbout: {
+      body:
+        'North Park is Uptown’s eastern half, built around the intersection of University and 30th, dense with craftsman bungalows and walkable in a way most of the county is not. Hillcrest sits between it and Mission Hills, which puts the two about three and a half miles apart with no freeway in between. That proximity is the practical advantage here, because corrective work runs on intervals and short trips are the ones people keep.',
+      facts: [
+        { label: 'To Mission Hills', value: 'Three and a half miles, ten minutes' },
+        { label: 'Setting', value: 'Uptown, walkable, no freeway needed' },
+        { label: 'Booked most', value: 'Peel series with dermaplaning' },
+      ],
+    },
     proximity: 'Three and a half miles — about ten minutes, no freeway needed',
     featured: ['lira-peels', 'dermaplaning', 'hydrafacial'],
   },

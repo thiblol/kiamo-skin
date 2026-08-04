@@ -81,7 +81,7 @@ const schema = {
     jobTitle: 'Licensed Esthetician',
     worksFor: { '@id': entityId },
   },
-  areaServed: business.areaServed.map((name) => ({ '@type': 'Place', name })),
+  areaServed: business.schemaAreaServed.map((name) => ({ '@type': 'Place', name })),
   // Vagaro is request-based; this is the request entry point, not instant booking.
   potentialAction: {
     '@type': 'ReserveAction',

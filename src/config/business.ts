@@ -87,6 +87,9 @@ export const business = {
    * drive. Replaces the original list, which was seven neighbourhoods inside the
    * city — four of them returning zero local searches.
    *
+   * These nine each have a page under /service-areas. `schemaAreaServed` below
+   * is the wider set and is the one the LocalBusiness node emits.
+   *
    * Del Mar is an area served, NOT a location. The Del Mar studio is closed and
    * its address must still appear nowhere; see test/guards.test.js.
    */
@@ -100,6 +103,38 @@ export const business = {
     'Del Mar',
     'Encinitas',
     'Carlsbad',
+  ],
+
+  /**
+   * What the LocalBusiness node claims to serve. Deliberately wider than
+   * `areaServed`, because a schema entry costs nothing and needs no page behind
+   * it, whereas a page with no search demand behind it is thin content.
+   *
+   * The four extra names are not a keyword play — every neighbourhood term
+   * tested (Hillcrest, Bankers Hill, Little Italy, Point Loma, and every outer
+   * city from Oceanside to Coronado) returns zero measured volume. They are here
+   * because the Google Business Profile description already names them, and the
+   * on-site entity should not claim a smaller footprint than the listing that
+   * ranks in the pack. Hillcrest, Bankers Hill and Little Italy are also named
+   * in `visit.orientation`, which ships on every page.
+   *
+   * Nothing goes in this list that the site does not already state as fact
+   * somewhere a client can read it.
+   */
+  schemaAreaServed: [
+    'Mission Hills',
+    'North Park',
+    'Pacific Beach',
+    'La Jolla',
+    'La Mesa',
+    'Chula Vista',
+    'Del Mar',
+    'Encinitas',
+    'Carlsbad',
+    'Hillcrest',
+    'Bankers Hill',
+    'Little Italy',
+    'Point Loma',
   ],
 } as const;
 
