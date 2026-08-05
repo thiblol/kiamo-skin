@@ -41,7 +41,7 @@ const faqs = article.faqs ?? [];
       >
         <div>
           <p class="t-eyebrow text-ink-soft">
-            <a href="/journal" class="hover:text-rose">Journal</a> · {article.readingTime}
+            <a href="/journal/" class="hover:text-rose">Journal</a> · {article.readingTime}
           </p>
           <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[3.5rem]">{article.headline}</h1>
           <p class="t-body mt-7 text-[1.125rem]">{article.standfirst}</p>
@@ -131,7 +131,7 @@ const faqs = article.faqs ?? [];
           <div class="mt-16 border-t border-line pt-12">
             <p class="t-meta">About the author</p>
             <p class="t-body mt-4">
-              Written by <a href="/about" class="underline hover:text-rose">{business.ownerName}</a>{
+              Written by <a href="/about/" class="underline hover:text-rose">{business.ownerName}</a>{
                 ', '
               }{business.ownerCredential}, with {business.experience} treating melanin-rich skin at
               KIAMO Skin in {business.address.neighborhood}, San Diego.
@@ -182,7 +182,7 @@ const faqs = article.faqs ?? [];
             <ul class="mt-10 m-0 list-none p-0">
               {others.map((other) => (
                 <li class="border-b border-line">
-                  <a href={`/journal/${other.slug}`} class="group block py-7">
+                  <a href={`/journal/${other.slug}/`} class="group block py-7">
                     <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
                       {other.headline}
                     </h3>

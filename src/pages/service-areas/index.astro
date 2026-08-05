@@ -49,7 +49,7 @@ import { CTA_LABEL } from '../../config/nav';
         {
           areas.map((area) => (
             <Reveal as="li" class="border-b border-line">
-              <a href={`/service-areas/${area.slug}`} class="group block py-8">
+              <a href={`/service-areas/${area.slug}/`} class="group block py-8">
                 <h2 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
                   Facials in {area.name}
                 </h2>
@@ -74,7 +74,7 @@ import { CTA_LABEL } from '../../config/nav';
           service — which is why the treatment plan can stay consistent from one visit to the next.
         </p>
         <p class="t-body mt-7 text-[0.9375rem]">
-          <a href="/treatments" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+          <a href="/treatments/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
             See corrective treatments in San Diego
           </a>
         </p>

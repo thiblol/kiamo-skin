@@ -34,7 +34,7 @@ import { treatments } from '../../data/treatments';
         At KIAMO, we don’t believe the most aggressive treatment is always the best treatment.
         Healthy skin is built through consistency, not constantly switching modalities — which is
         why most plans here run on a <a
-          href="/membership"
+          href="/membership/"
           class="border-b border-ink pb-0.5 hover:border-rose hover:text-rose"
           >monthly facial membership in San Diego</a
         > rather than one appointment at a time.
@@ -49,7 +49,7 @@ import { treatments } from '../../data/treatments';
         Every recommendation is based on what your skin needs today, while keeping your long-term
         goals in mind. Protocols are selected to support all skin tones, with specialised
         experience in <a
-          href="/melanin-rich-skin"
+          href="/melanin-rich-skin/"
           class="border-b border-ink pb-0.5 hover:border-rose hover:text-rose"
           >corrective treatment for melanin-rich skin</a
         >.
@@ -63,7 +63,7 @@ import { treatments } from '../../data/treatments';
         {
           treatments.map((treatment, i) => (
             <Reveal as="li">
-              <a href={`/treatments/${treatment.slug}`} class="group block">
+              <a href={`/treatments/${treatment.slug}/`} class="group block">
                 <PanelWipe from={i % 2 === 0 ? 'left' : 'right'} class="aspect-4/3">
                   <Image
                     src={treatment.image}
@@ -85,7 +85,7 @@ import { treatments } from '../../data/treatments';
       </ul>
 
       <p class="t-body mt-14 text-[0.9375rem]">
-        <a href="/service-areas" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+        <a href="/service-areas/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
           See the areas we serve across San Diego County
         </a>
       </p>

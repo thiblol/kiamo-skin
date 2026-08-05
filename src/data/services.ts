@@ -20,7 +20,7 @@ export const services: Service[] = [
     description:
       'The best place to begin. Includes a comprehensive consultation, skin analysis, customized HydraFacial, personalized booster, microcurrent, LED Light Therapy, Hydrojelly Mask, and a long term treatment plan.',
     price: verifiedPrices['first-time-client'],
-    href: '/treatments/hydrafacial',
+    href: '/treatments/hydrafacial/',
   },
   {
     name: 'HydraFacial Treatment',
@@ -28,7 +28,7 @@ export const services: Service[] = [
     description:
       'A customized HydraFacial that deeply cleanses, exfoliates, extracts, and hydrates to support healthy skin and maintain your treatment results.',
     price: verifiedPrices.hydrafacial,
-    href: '/treatments/hydrafacial',
+    href: '/treatments/hydrafacial/',
   },
   {
     name: 'Dermaplane Facial',
@@ -43,7 +43,7 @@ export const services: Service[] = [
     description:
       'Foundational enzyme therapy. Works with the skin’s own processes to clear what should not be there and rebuild the barrier.',
     price: verifiedPrices['dmk-enzyme-1'],
-    href: '/treatments/dmk-enzyme-therapy',
+    href: '/treatments/dmk-enzyme-therapy/',
   },
   {
     name: 'LIRA Gentle Renewal Peel',
@@ -51,7 +51,7 @@ export const services: Service[] = [
     description:
       'A light peel selected for your skin on the day — acne, congestion, uneven texture, dullness or a compromised barrier.',
     price: verifiedPrices['lira-light-peel'],
-    href: '/treatments/lira-peels',
+    href: '/treatments/lira-peels/',
   },
   {
     name: 'Keravive Scalp Treatment',
@@ -59,7 +59,7 @@ export const services: Service[] = [
     description:
       'Corrective scalp therapy. This isn’t a shampoo — it cleanses, exfoliates and hydrates the scalp itself.',
     price: verifiedPrices['keravive-scalp'],
-    href: '/treatments/keravive-scalp',
+    href: '/treatments/keravive-scalp/',
   },
   {
     name: 'Keravive Scalp — 3 Treatment Series',
@@ -67,7 +67,7 @@ export const services: Service[] = [
     description:
       'The same treatment across a series of three, priced as a package. Scalp work is cumulative rather than one-off.',
     price: verifiedPrices['keravive-scalp-series'],
-    href: '/treatments/keravive-scalp',
+    href: '/treatments/keravive-scalp/',
   },
   {
     name: 'Procell Microchanneling',
@@ -75,7 +75,7 @@ export const services: Service[] = [
     description:
       'Controlled micro-injury with growth factors, for acne scarring, texture and early laxity. Also treats the scalp.',
     price: verifiedPrices.procell,
-    href: '/treatments/procell-microchanneling',
+    href: '/treatments/procell-microchanneling/',
   },
   {
     name: 'Procell Microchanneling — 3 Treatment Series',
@@ -83,7 +83,7 @@ export const services: Service[] = [
     description:
       'Designed for clients committed to long-term correction. A series of three treatments supports progressive collagen remodeling and is recommended for concerns such as acne scars, uneven texture, fine lines, and overall skin rejuvenation. Treatments are typically scheduled 4–6 weeks apart.',
     price: verifiedPrices['procell-series'],
-    href: '/treatments/procell-microchanneling',
+    href: '/treatments/procell-microchanneling/',
   },
   {
     name: 'DMK Level 2 & 3 Enzyme Treatment',
@@ -91,7 +91,7 @@ export const services: Service[] = [
     description:
       'Layered Enzyme 1, 2 and 3 with corrective products. Prescribed only once Level 1 has prepared the skin.',
     price: PRICE_ON_CONSULTATION,
-    href: '/treatments/dmk-enzyme-therapy',
+    href: '/treatments/dmk-enzyme-therapy/',
   },
   {
     name: 'LIRA Advanced Peel',
@@ -99,6 +99,6 @@ export const services: Service[] = [
     description:
       'A deeper peel for pigmentation and scarring, with strength escalated across a series rather than in one visit.',
     price: verifiedPrices['lira-advanced-peel'],
-    href: '/treatments/lira-peels',
+    href: '/treatments/lira-peels/',
   },
 ];

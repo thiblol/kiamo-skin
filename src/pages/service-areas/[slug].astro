@@ -57,7 +57,7 @@ const imageAlt =
     <header class="bg-blush">
       <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
         <p class="t-eyebrow text-ink-soft">
-          <a href="/service-areas" class="hover:text-rose">Areas we serve</a> · {area.name}
+          <a href="/service-areas/" class="hover:text-rose">Areas we serve</a> · {area.name}
         </p>
         <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">{area.h1}</h1>
         <p class="t-body mt-7 max-w-[62ch]">{area.intro}</p>
@@ -80,7 +80,7 @@ const imageAlt =
               area.melaninNote && (
                 <p class="t-body mt-6">
                   {area.melaninNote}{' '}
-                  <a href="/melanin-rich-skin" class="border-b border-ink pb-0.5 hover:border-rose hover:text-rose">
+                  <a href="/melanin-rich-skin/" class="border-b border-ink pb-0.5 hover:border-rose hover:text-rose">
                     facials for melanin-rich skin in San Diego
                   </a>
                   .
@@ -103,7 +103,7 @@ const imageAlt =
               {
                 featured.map((treatment) => (
                   <li class="border-b border-line">
-                    <a href={`/treatments/${treatment.slug}`} class="group block py-7">
+                    <a href={`/treatments/${treatment.slug}/`} class="group block py-7">
                       <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
                         {treatment.name}
                       </h3>
@@ -114,7 +114,7 @@ const imageAlt =
               }
             </ul>
             <p class="t-body mt-9 text-[0.9375rem]">
-              <a href="/treatments" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+              <a href="/treatments/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
                 See the full treatment menu in San Diego
               </a>
             </p>
@@ -203,7 +203,7 @@ const imageAlt =
           {
             others.map((other) => (
               <li class="border-b border-line">
-                <a href={`/service-areas/${other.slug}`} class="group block py-7">
+                <a href={`/service-areas/${other.slug}/`} class="group block py-7">
                   <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
                     Facials in {other.name}
                   </h3>

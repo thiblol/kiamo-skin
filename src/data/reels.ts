@@ -38,7 +38,7 @@ export const reels: Reel[] = [
     alt: 'A gloved esthetician passing a Procell microchanneling handpiece across a client’s cheek',
     duration: 12.63,
     uploadDate: '2026-06-19',
-    href: '/treatments/procell-microchanneling',
+    href: '/treatments/procell-microchanneling/',
   },
   {
     slug: 'reel-keravive',
@@ -47,7 +47,7 @@ export const reels: Reel[] = [
     alt: 'A client reclined at the treatment bed while the scalp is worked through in sections',
     duration: 4.9,
     uploadDate: '2026-02-26',
-    href: '/treatments/keravive-scalp',
+    href: '/treatments/keravive-scalp/',
   },
   {
     // The handpiece is not identifiable from the footage, so the copy stays with

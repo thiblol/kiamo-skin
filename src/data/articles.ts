@@ -155,7 +155,7 @@ export const articles: Article[] = [
         p: 'That finding is worth sitting with, because it cuts against how pigmentation is usually sold. It does not mean peels have no place. It means the sequence matters: the review lists risk mitigation as "pre- or posttreatment regimens, starting with lower concentrations, and emphasizing sun protection" — which is a description of a prepared, escalating series rather than one strong session.',
       },
       {
-        p: 'It is also why <a href="/treatments/lira-peels">peels here are run as a series with home prep between visits</a>, why strength escalates across the series rather than within a single appointment, and why the first appointment is often spent on preparation rather than on acid.',
+        p: 'It is also why <a href="/treatments/lira-peels/">peels here are run as a series with home prep between visits</a>, why strength escalates across the series rather than within a single appointment, and why the first appointment is often spent on preparation rather than on acid.',
       },
 
       { h2: 'What does a facial for hyperpigmentation actually do?' },
@@ -171,10 +171,10 @@ export const articles: Article[] = [
       },
       {
         ul: [
-          '<a href="/treatments/dmk-enzyme-therapy">Enzyme therapy</a> works on barrier function and circulation. Most useful where inflammation and congestion are still generating new marks.',
-          '<a href="/treatments/hydrafacial">HydraFacial</a> cleanses, exfoliates and hydrates in one pass. Good maintenance and good preparation; not a corrective pigment treatment on its own.',
-          '<a href="/treatments/lira-peels">Lira peels</a> are the corrective option for pigmentation, run as a prepared series at escalating strength rather than as a single strong session.',
-          '<a href="/treatments/procell-microchanneling">Procell microchanneling</a> works without heat or light, which matters here because heat is itself a pigment trigger in melanin-rich skin. Better suited to texture and scarring than to melasma.',
+          '<a href="/treatments/dmk-enzyme-therapy/">Enzyme therapy</a> works on barrier function and circulation. Most useful where inflammation and congestion are still generating new marks.',
+          '<a href="/treatments/hydrafacial/">HydraFacial</a> cleanses, exfoliates and hydrates in one pass. Good maintenance and good preparation; not a corrective pigment treatment on its own.',
+          '<a href="/treatments/lira-peels/">Lira peels</a> are the corrective option for pigmentation, run as a prepared series at escalating strength rather than as a single strong session.',
+          '<a href="/treatments/procell-microchanneling/">Procell microchanneling</a> works without heat or light, which matters here because heat is itself a pigment trigger in melanin-rich skin. Better suited to texture and scarring than to melasma.',
         ],
       },
       {
@@ -196,7 +196,7 @@ export const articles: Article[] = [
         p: 'Car windows are the other local blind spot. Glass filters UVB well and UVA poorly, so a daily commute is meaningful exposure on the driving side of the face. If your pigmentation is noticeably worse on one side, that is usually the explanation.',
       },
       {
-        p: 'The <a href="/journal/june-gloom-is-not-sun-protection">longer piece on the marine layer</a> covers this in more detail.',
+        p: 'The <a href="/journal/june-gloom-is-not-sun-protection/">longer piece on the marine layer</a> covers this in more detail.',
       },
 
       { h2: 'What should you do first?' },
@@ -248,7 +248,7 @@ export const articles: Article[] = [
           'Consistent daily sun protection does more than any single treatment, because it stops new pigment forming while existing pigment fades. Professional treatment accelerates the fading of pigment that has already formed, so the fastest realistic route is a prepared series combined with daily broad-spectrum SPF, tinted with iron oxides if the pattern is melasma.',
       },
     ],
-    cta: { label: 'See peels for pigmentation', href: '/treatments/lira-peels' },
+    cta: { label: 'See peels for pigmentation', href: '/treatments/lira-peels/' },
   },
   {
     slug: 'june-gloom-is-not-sun-protection',
@@ -295,10 +295,10 @@ export const articles: Article[] = [
         p: 'None of this is exciting, and that is rather the point. The most effective step in a pigmentation plan is the one you repeat two hundred times a year without thinking about it.',
       },
       {
-        p: 'Which step matters most depends on what kind of pigmentation you are treating — <a href="/journal/three-kinds-of-dark-mark">post-inflammatory marks, melasma and sun damage</a> respond to quite different things.',
+        p: 'Which step matters most depends on what kind of pigmentation you are treating — <a href="/journal/three-kinds-of-dark-mark/">post-inflammatory marks, melasma and sun damage</a> respond to quite different things.',
       },
     ],
-    cta: { label: 'See peels for pigmentation', href: '/treatments/lira-peels' },
+    cta: { label: 'See peels for pigmentation', href: '/treatments/lira-peels/' },
   },
   {
     slug: 'san-diego-hard-water-and-your-scalp',
@@ -345,6 +345,6 @@ export const articles: Article[] = [
         p: 'That last point is what HydraFacial Keravive is for: it cleanses, exfoliates and hydrates the scalp itself, section by section, then sends you home with the spray that keeps the result. In a city with water this hard, scalp care is not a luxury add-on. It is maintenance.',
       },
     ],
-    cta: { label: 'See Keravive scalp therapy', href: '/treatments/keravive-scalp' },
+    cta: { label: 'See Keravive scalp therapy', href: '/treatments/keravive-scalp/' },
   },
 ];

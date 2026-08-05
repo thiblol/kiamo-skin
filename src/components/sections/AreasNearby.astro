@@ -40,7 +40,7 @@ const rest = areas.filter((a) => a.slug !== 'mission-hills');
 
     <ul class="mt-14 grid list-none gap-x-10 gap-y-0 p-0 md:grid-cols-2">
       <Reveal as="li" class="border-b border-line md:col-span-2">
-        <a href={`/service-areas/${home.slug}`} class="group block py-7">
+        <a href={`/service-areas/${home.slug}/`} class="group block py-7">
           <div class="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2">
             <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.3125rem]">
               Facials in {home.name}
@@ -53,7 +53,7 @@ const rest = areas.filter((a) => a.slug !== 'mission-hills');
       {
         rest.map((area) => (
           <Reveal as="li" class="border-b border-line">
-            <a href={`/service-areas/${area.slug}`} class="group block py-7">
+            <a href={`/service-areas/${area.slug}/`} class="group block py-7">
               <div class="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2">
                 <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
                   Facials in {area.name}
@@ -68,7 +68,7 @@ const rest = areas.filter((a) => a.slug !== 'mission-hills');
 
     <div class="mt-12">
       <a
-        href="/service-areas"
+        href="/service-areas/"
         class="t-button border-b border-ink pb-1 hover:border-rose hover:text-rose"
       >
         All areas across San Diego County

@@ -29,7 +29,7 @@ import { articles } from '../../data/articles';
         {
           articles.map((article, i) => (
             <Reveal as="li">
-              <a href={`/journal/${article.slug}`} class="group block">
+              <a href={`/journal/${article.slug}/`} class="group block">
                 <PanelWipe from={i % 2 === 0 ? 'left' : 'right'} class="aspect-4/3">
                   <Image
                     src={article.image}

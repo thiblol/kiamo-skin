@@ -313,7 +313,7 @@ export const treatments: Treatment[] = [
     guide: {
       lead: 'Not sure which kind of pigmentation you have?',
       label: 'How to tell post-inflammatory marks, melasma and sun damage apart',
-      href: '/journal/three-kinds-of-dark-mark',
+      href: '/journal/three-kinds-of-dark-mark/',
     },
   },
   {
