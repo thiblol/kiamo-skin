@@ -3,6 +3,7 @@ import type { Faq } from './faqs';
 import uv from '../assets/journal-uv.jpg';
 import water from '../assets/journal-water.jpg';
 import pigmentation from '../assets/journal-pigmentation.jpg';
+import microchanneling from '../assets/journal-microchanneling.jpg';
 
 export interface Article {
   slug: string;
@@ -39,6 +40,12 @@ export interface Article {
   )[];
   /** Questions come from live People Also Ask data, never invented. */
   faqs?: Faq[];
+  /**
+   * Heading above the FAQ block. Defaults to the pigmentation wording the first
+   * article shipped with, so an article on another subject does not render an
+   * H2 about hyperpigmentation over questions that are not about it.
+   */
+  faqHeading?: string;
   /** Internal link out at the end of the piece. */
   cta: { label: string; href: string };
 }
@@ -174,7 +181,7 @@ export const articles: Article[] = [
           '<a href="/treatments/dmk-enzyme-therapy/">Enzyme therapy</a> works on barrier function and circulation. Most useful where inflammation and congestion are still generating new marks.',
           '<a href="/treatments/hydrafacial/">HydraFacial</a> cleanses, exfoliates and hydrates in one pass. Good maintenance and good preparation; not a corrective pigment treatment on its own.',
           '<a href="/treatments/lira-peels/">Lira peels</a> are the corrective option for pigmentation, run as a prepared series at escalating strength rather than as a single strong session.',
-          '<a href="/treatments/procell-microchanneling/">Procell microchanneling</a> works without heat or light, which matters here because heat is itself a pigment trigger in melanin-rich skin. Better suited to texture and scarring than to melasma.',
+          '<a href="/treatments/procell-microchanneling/">Procell microchanneling</a> works without heat or light, which matters here because heat is itself a pigment trigger in melanin-rich skin. <a href="/journal/microneedling-on-dark-skin-san-diego/">Better suited to texture and scarring than to melasma</a>.',
         ],
       },
       {
@@ -346,5 +353,180 @@ export const articles: Article[] = [
       },
     ],
     cta: { label: 'See Keravive scalp therapy', href: '/treatments/keravive-scalp/' },
+  },
+  {
+    slug: 'microneedling-on-dark-skin-san-diego',
+    headline: 'Microneedling on dark skin, and why depth decides the outcome',
+    title: 'Microneedling on Dark Skin in San Diego: Is It Safe?',
+    description:
+      'What the evidence says about needling melanin-rich skin, why depth decides the outcome, and the microchanneling offered instead in Mission Hills.',
+    standfirst:
+      'The question is not really whether needling works on melanin-rich skin. It is whether the person holding the device has set the depth for the skin in front of them.',
+    readingTime: '9 min read',
+    datePublished: '2026-08-07',
+    dateModified: '2026-08-07',
+    image: microchanneling,
+    imageAlt:
+      'Seated portrait beside a window in warm daylight, bare skin showing its natural texture and tone',
+    body: [
+      {
+        p: 'Anyone researching microneedling on dark skin has usually been told two contradictory things: that it is the safest resurfacing option for melanin-rich skin, and that it will leave the marks darker than before. Both claims come from somewhere real. The published evidence does favour needling over heat-based resurfacing on deeper skin tones, and the darkening people describe afterwards is documented, common, and usually temporary. What separates those two outcomes is mostly depth, and who is deciding it.',
+      },
+      {
+        p: 'This is written for people considering corrective work in San Diego. It also states plainly, early, why the treatment offered at this studio in Mission Hills is not a needle pen.',
+      },
+
+      { h2: 'Is microneedling safe on dark skin?' },
+      {
+        answer:
+          'The published evidence is cautiously in favour. A review in the Journal of the American Academy of Dermatology concluded that microneedling may offer a more advantageous safety profile in Fitzpatrick skin types IV to VI than conventional resurfacing, largely because it does not rely on heat or acid to injure the skin.',
+      },
+      {
+        p: 'That 2016 <a href="https://pubmed.ncbi.nlm.nih.gov/26549251/" rel="noopener" target="_blank">review of microneedling in skin of color</a> is specific about what it compares against: dermabrasion, chemical peels and laser therapy. Those are described as effective but carrying prolonged recovery and "a higher risk of dyspigmentation and scarring, and unsatisfactory clinical outcomes". Measured against that, needling looked better. The authors listed scarring, melasma, melanosis, skin rejuvenation, acne vulgaris and primary hyperhidrosis as conditions where it showed benefit in this population.',
+      },
+      {
+        p: 'Read the hedge, though. The phrase is "may offer", not "offers", and the paper reviews existing literature rather than reporting a trial. That caution is warranted and it matters more than the headline does.',
+      },
+
+      { h2: 'Why does skin get darker after microneedling?' },
+      {
+        answer:
+          'Most of the time it is transient darkening while the skin heals rather than lasting post-inflammatory hyperpigmentation. In one melasma trial, 60% of participants reported temporary darkening that lasted a median of five and a half days. Lasting pigment change tends to follow treatment that went deeper than the skin required, because melanin-rich skin answers injury by producing more pigment.',
+      },
+      {
+        p: 'A 2025 <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12456936/" rel="noopener" target="_blank">systematic review of microneedling across fifteen randomised trials</a> describes a "low incidence of adverse effects such as post-inflammatory hyperpigmentation", and says this is what makes the technique "suitable for darker skin types". Its own tables are more interesting than that summary, because they show how far the number moves once the protocol changes.',
+      },
+      {
+        table: {
+          caption: 'Reported pigmentation rates move with the protocol, not with skin tone alone',
+          head: ['Setting', 'Reported rate', 'Also noted'],
+          rows: [
+            [
+              'Acne, radiofrequency needling against light therapy (types III–IV)',
+              '10% against 42%',
+              'All resolved within three to six months',
+            ],
+            [
+              'Melasma on the face (types II–V)',
+              '60% temporary darkening',
+              'Median of 5.5 days',
+            ],
+            [
+              'Vitiligo, needling with and without 5-fluorouracil',
+              '48% against 26%',
+              'Pain reported by roughly 80%',
+            ],
+            [
+              'Underarm sweating, needling in the axilla',
+              '44%',
+              'Redness in 68%',
+            ],
+          ],
+        },
+      },
+      {
+        p: 'The pattern is not that melanin-rich skin reacts badly to needling. It is that one device produces very different pigment outcomes depending on depth, energy, body site and whatever is applied alongside it. The same review is candid that its participants skewed to Fitzpatrick types III and IV, so evidence covering the deepest skin tones is still thin.',
+      },
+      {
+        p: '[YOUR EXPERIENCE HERE — the skill will not invent this]',
+      },
+
+      { h2: 'Who should avoid microneedling?' },
+      {
+        answer:
+          'Anyone with active acne, an inflamed or compromised barrier, an active skin infection, or a history of keloid scarring should have that addressed before needling is considered at all. On melanin-rich skin the more common question is not who, but when.',
+      },
+      {
+        p: 'Treating over inflammation is how marks get worse instead of better. If the barrier is reactive — stinging, flushing, tight after cleansing — that gets rebuilt first, which is what <a href="/treatments/dmk-enzyme-therapy/">enzyme therapy</a> is for. Corrective work on top of an unstable barrier is the most reliable way to produce the pigmentation it was meant to clear.',
+      },
+      {
+        p: 'Active acne is the other sequencing problem. Every new spot deposits a new mark, so clearing the acne comes before treating what it left behind.',
+      },
+
+      { h2: 'What is microchanneling, and how is it different from a needle pen?' },
+      {
+        answer:
+          'Microchanneling creates controlled microchannels and delivers a growth factor serum through them, without heat and without light. A needle pen relies on adjustable needle depth to create the injury, and that depth is the variable most associated with pigment change on deeper skin tones.',
+      },
+      {
+        p: 'KIAMO SKIN does not perform needle-pen microneedling. The treatment offered here is <a href="/treatments/procell-microchanneling/">Procell microchanneling</a>, and that distinction is worth stating rather than blurring, because people arrive asking for one and are offered the other. Anyone who wants a needle pen specifically is better served booking somewhere that performs one.',
+      },
+      {
+        p: 'Microchanneling works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger. Depth is still adjusted across the face — deeper where correction is needed, lighter where skin is naturally thinner — and a growth factor serum is applied throughout rather than afterwards.',
+      },
+      {
+        p: 'Expect redness similar to a mild sunburn for 24 to 48 hours, and possibly some dryness or flaking as the skin renews. Daily SPF afterwards is not optional on melanin-rich skin; it is the part that protects the result.',
+      },
+
+      { h2: 'Does microneedling help hyperpigmentation and melasma?' },
+      {
+        answer:
+          'It can, but it is not the first tool reached for on pigment at this studio. Needling suits texture and scarring, while melasma is a relapsing condition managed long-term rather than cured, and the evidence for needling it is genuinely mixed.',
+      },
+      {
+        p: 'A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11680975/" rel="noopener" target="_blank">review of microneedling applications in melasma</a> drawing on 64 clinical studies is positive overall, calling the technique "an essential advancement in melasma treatment" with "an excellent safety and tolerability profile". The same paper reports hyperpigmentation across its included studies at rates ranging from 5% to 40%, and notes the research is "hampered by small sample sizes". Both halves of that are true simultaneously, and only quoting the first half would be selling rather than informing.',
+      },
+      {
+        p: 'Which mark you have decides the tool. <a href="/journal/three-kinds-of-dark-mark/">Post-inflammatory marks, melasma and sun damage look alike and behave differently</a>, and for pigment specifically the corrective route here is <a href="/treatments/lira-peels/">a prepared series of peels</a> rather than needling.',
+      },
+
+      { h2: 'How much does microneedling cost in San Diego?' },
+      {
+        answer:
+          'Procell microchanneling at KIAMO SKIN is $475 for a single treatment, or $1,199 for a series of three. Most corrective plans use a series rather than one session, spaced four to six weeks apart.',
+      },
+      {
+        p: 'Published prices are unusual in this market. Most studios and med spas ask you to enquire, which makes comparing anything difficult and tends to work in the seller\'s favour. The series price exists because a single session rarely completes the work on scarring or texture, and quoting only the single-session figure would understate what correction actually costs.',
+      },
+      {
+        p: 'What suits your skin is decided at consultation rather than in advance, and appointments here are requested rather than booked instantly.',
+      },
+
+      { h2: 'How do you choose a provider for melanin-rich skin in San Diego?' },
+      {
+        answer:
+          'Ask two questions: how treatment depth is decided for your skin, and what happens if pigment darkens afterwards. Anyone who treats melanin-rich skin routinely will answer both without hesitating.',
+      },
+      {
+        p: 'Vague answers on either point are the signal worth acting on. Depth is the variable the literature keeps returning to, so a provider who has not thought about it for your skin specifically has not thought about your skin specifically.',
+      },
+      {
+        p: 'KIAMO SKIN is a private, single-practitioner studio in Mission Hills, San Diego, where <a href="/melanin-rich-skin/">melanin-rich skin is the whole practice rather than a service line</a>. Treatment is one-to-one with a licensed esthetician, in one room, with free parking on site. Clients travel in from across the county, including <a href="/service-areas/chula-vista/">Chula Vista</a>, for exactly this reason.',
+      },
+    ],
+    faqHeading: 'Microneedling questions',
+    faqs: [
+      {
+        question: 'Is microneedling good for African American skin?',
+        answer:
+          'The review evidence is cautiously positive: microneedling is generally considered to carry a lower risk of pigment change on Fitzpatrick types IV to VI than lasers, dermabrasion or chemical peels, because it does not use heat or acid. That advantage depends entirely on the depth and the protocol being matched to the skin, not on the device itself.',
+      },
+      {
+        question: 'Why did my skin get darker after microneedling?',
+        answer:
+          'Short-lived darkening while the skin heals is common and usually resolves within days — in one melasma trial 60% of participants reported it, lasting a median of five and a half days. Darkening that persists for weeks is more likely post-inflammatory hyperpigmentation from treatment that went deeper than the skin needed, and it should be reviewed by whoever performed it.',
+      },
+      {
+        question: 'Who cannot get microneedling done?',
+        answer:
+          'Active acne, an inflamed or compromised barrier, an active skin infection and a history of keloid scarring are all reasons to treat something else first. On melanin-rich skin the timing matters as much as the candidacy, because treating over inflammation is how marks get worse rather than better.',
+      },
+      {
+        question: 'Can Black people have RF microneedling?',
+        answer:
+          'Radiofrequency microneedling adds heat to the mechanical injury, and heat is itself a pigment trigger in melanin-rich skin, so it is a question worth putting directly to a provider who performs it. It is not offered at KIAMO SKIN. Procell microchanneling is used here instead, and it works without heat or light.',
+      },
+      {
+        question: 'How much do three sessions of microneedling cost?',
+        answer:
+          'At KIAMO SKIN, a series of three Procell microchanneling treatments is $1,199 and a single treatment is $475. A series spaced four to six weeks apart is the usual plan for scarring and texture, because one session rarely completes the work.',
+      },
+      {
+        question: 'What is the best facial treatment for Black skin?',
+        answer:
+          'There is no single answer, because it depends on what the skin is doing. Congestion and dullness are usually addressed with a HydraFacial, a reactive barrier with enzyme therapy, pigmentation with a prepared series of peels, and scarring or texture with microchanneling. The first appointment is an assessment rather than a fixed protocol.',
+      },
+    ],
+    cta: { label: 'See Procell microchanneling', href: '/treatments/procell-microchanneling/' },
   },
 ];

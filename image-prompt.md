@@ -72,9 +72,48 @@ Alternative — the consultation, no faces:
 > objects. Soft diffused daylight from the upper left, gentle shadows falling to
 > the lower right. No labels, no text on any object.
 
+### Journal — "Microneedling on dark skin" (article hero, 3:4 portrait, 1200 × 1600 → `src/assets/journal-microchanneling.jpg`)
+
+Primary — recommended:
+
+> A woman with deep brown skin in her late twenties, seated upright and turned
+> three-quarters toward a tall window at camera left, chin lifted slightly, eyes open
+> and looking off-frame past the light. Face bare and unmade-up, natural texture and a
+> soft sheen along the cheekbone and brow, fine vellus hair rimmed by the light at the
+> jaw, natural variation in tone across the cheek left exactly as it is. Hair in
+> defined natural coils drawn back from the face with a soft ivory cloth band, a few
+> coils loose at the temple. Her head sits about 35% in from the left edge and 35% down
+> from the top of a vertical frame — clearly readable, never near an edge. Below and to
+> the right, the out-of-focus ivory of a linen-draped treatment bed and one folded sage
+> towel recede into warm shadow, with a terracotta wall catching the light behind.
+> Late-afternoon light rakes gently from camera left so the surface of the skin is
+> legible without being examined. She has just sat up — settled, unhurried, mid-thought.
+
+Alternative — the serum pass, no face:
+
+> An esthetician's hands, ungloved, pressing a few drops of clear serum along a client's
+> cheekbone with flat fingertips, the client's face turned away and out of frame past
+> the shoulder. 85mm at f/4 — the point of contact crisp, everything else falling away.
+> Warm neutral treatment room, folded linen and a terracotta wall in soft focus behind.
+
+**The rule specific to this article: never depict a needle pen, dermaroller, cartridge
+tip, or any device touching skin.** KIAMO does not perform needle-pen microneedling, and
+the whole argument of the piece is that microchanneling is a different modality. A pen in
+the frame would contradict the copy sitting above it. As with the pigmentation article:
+no before/after framing, no dark patches presented as a condition, nothing in the
+register of clinical documentation.
+
+**Why 3:4 and why 35% / 35%.** The file is cropped twice. The article hero is
+`aspect-[0.85]` anchored at `object-[35%_35%]`, which keeps 88% of a 3:4 source's height
+and leaves the face sitting at 35%. The journal *index* card is `aspect-4/3` and crops
+from **centre**, keeping only the middle 56% of the height — a face at 35% down lands at
+roughly 23% down in the card, comfortably inside. Keep the face and both shoulders within
+that middle band and one file serves both. Check the index card before accepting a render;
+it is the crop that disagrees with the hero.
+
 ---
 
-## The one rule specific to this article
+## The one rule specific to "Three kinds of dark mark"
 
 The article is about telling three kinds of pigmentation apart. **Do not generate
 "before and after" imagery, visible dark patches presented as a condition to be
@@ -185,3 +224,16 @@ imageAlt: 'Portrait in soft daylight showing natural variation in skin tone acro
 
 The article currently reuses `concern-pigmentation.jpg`, which is an honest match but
 not a specific one — the same gap `CLIENT-INPUTS.md` records for the dermaplaning page.
+
+**Journal — microchanneling:** save as `src/assets/journal-microchanneling.jpg`, then:
+
+```ts
+// src/data/articles.ts
+import microchanneling from '../assets/journal-microchanneling.jpg';
+// …
+image: microchanneling,
+imageAlt: 'Seated portrait in late-afternoon window light, bare skin showing its natural texture and tone',
+```
+
+Check the crop at both aspect ratios — `aspect-[0.85]` on the article hero and `4:3` on
+the journal index card — before accepting the render.

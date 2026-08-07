@@ -46,7 +46,9 @@ const localAreas = treatment.areas
           <a href="/treatments/" class="hover:text-rose">Treatments</a> · {treatment.name}
         </p>
         <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.5rem] md:text-[4rem]">{treatment.headline}</h1>
-        <p class="t-body mt-7 max-w-[62ch] text-[1.125rem]">{treatment.opener}</p>
+        {/* set:html so an opener can carry an inline link on the claim it supports,
+            the same way `articles.ts` renders `p` and `ul`. Authored content only. */}
+        <p class="t-body mt-7 max-w-[62ch] text-[1.125rem]" set:html={treatment.opener} />
         <p class="t-body mt-5 max-w-[62ch]">{treatment.intro}</p>
         <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
           <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
