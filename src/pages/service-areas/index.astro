@@ -11,8 +11,8 @@ import { CTA_LABEL } from '../../config/nav';
 ---
 
 <BaseLayout
-  title="Areas We Serve Across San Diego County | KIAMO Skin"
-  description="KIAMO SKIN is one studio in Mission Hills, San Diego, serving clients from La Jolla, North Park, Pacific Beach, Chula Vista and across the county."
+  title="Corrective Facials Across San Diego | KIAMO Skin"
+  description="Corrective facials in Mission Hills, San Diego. Treatments from $199. Serving La Jolla, North Park, Pacific Beach, Chula Vista and across the county."
 >
   <CollectionSchema
     slot="head"
@@ -29,16 +29,19 @@ import { CTA_LABEL } from '../../config/nav';
     <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
       <p class="t-eyebrow text-ink-soft">Areas we serve</p>
       <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">
-        One studio, across the county.
+        Corrective facials across San Diego County.
       </h1>
       <p class="t-body mt-7 max-w-[62ch]">
-        KIAMO SKIN is a single treatment room in Mission Hills, San Diego. Clients travel in from
-        across San Diego County — some from ten minutes away in North Park, some from the north
-        coast. Every page below covers the route in, and the concerns that come up most from that
-        part of the county.
+        KIAMO SKIN is a single treatment room in Mission Hills, San Diego — corrective facials and
+        scalp therapy for melanin-rich skin, performed by a licensed esthetician. Treatments start
+        from $199. Clients travel in from across San Diego County; every page below covers the route
+        and the skin concerns most common from that area.
       </p>
-      <div class="mt-9">
+      <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
         <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+        <a href={business.phone.href} class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose">
+          {business.phone.display}
+        </a>
       </div>
     </div>
   </header>

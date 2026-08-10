@@ -68,7 +68,7 @@ export const treatments: Treatment[] = [
     name: 'HydraFacial',
     serviceType: 'HydraFacial',
     category: 'Facial treatment',
-    areas: ['la-jolla', 'pacific-beach', 'del-mar'],
+    areas: ['la-jolla', 'pacific-beach', 'del-mar', 'mission-hills', 'north-park', 'chula-vista'],
     title: 'HydraFacial in San Diego | KIAMO Skin',
     description:
       'HydraFacial in Mission Hills, San Diego. Cleanse, extract and hydrate, with the booster and LED therapy selected for your skin. From $249.',
@@ -167,7 +167,7 @@ export const treatments: Treatment[] = [
     name: 'DMK Enzyme Therapy',
     serviceType: 'Enzyme therapy',
     category: 'Corrective skin treatment',
-    areas: ['mission-hills', 'la-jolla', 'la-mesa'],
+    areas: ['mission-hills', 'la-jolla', 'la-mesa', 'chula-vista'],
     title: 'DMK Enzyme Therapy in San Diego | KIAMO Skin',
     description:
       'DMK enzyme therapy in Mission Hills, San Diego. Enzymatic resurfacing that rebuilds a damaged barrier. Level 1 is $279; Level 2 and 3 at consultation.',

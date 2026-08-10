@@ -54,6 +54,13 @@ export interface Area {
    * area page — this field restates, it never introduces a new claim.
    */
   proximity: string;
+  /**
+   * One sentence stating starting prices for the treatments most booked from this
+   * area. Answers the Money Page MUST "what will it cost" without committing to a
+   * full menu. Every price restates a value already in `verifiedPrices` — never
+   * introduces a new one. Rendered above the featured treatments list.
+   */
+  pricingNote: string;
   /** Exactly three treatment slugs, most relevant to this area's concern. */
   featured: string[];
 }
@@ -86,6 +93,8 @@ export const areas: Area[] = [
       ],
     },
     proximity: 'The studio itself — five minutes across the neighborhood',
+    pricingNote:
+      'Treatments start from $199 for a dermaplane facial and $259 for a HydraFacial. Full pricing is on each treatment page.',
     featured: ['hydrafacial', 'dmk-enzyme-therapy', 'dermaplaning'],
   },
   {
@@ -115,6 +124,8 @@ export const areas: Area[] = [
       ],
     },
     proximity: 'About twelve miles — roughly twenty minutes south on I-5',
+    pricingNote:
+      'Keravive scalp therapy starts at $599. A HydraFacial is $259. Full pricing is on each treatment page.',
     featured: ['keravive-scalp', 'hydrafacial', 'lira-peels'],
   },
   {
@@ -146,6 +157,8 @@ export const areas: Area[] = [
       ],
     },
     proximity: 'About thirteen miles — twenty to twenty-five minutes north off-peak',
+    pricingNote:
+      'Lira chemical peels start at $199 for the Gentle Renewal and $299 for the Advanced. Full pricing is on each treatment page.',
     featured: ['lira-peels', 'dmk-enzyme-therapy', 'hydrafacial'],
   },
   {
@@ -175,6 +188,8 @@ export const areas: Area[] = [
       ],
     },
     proximity: 'About twenty-five miles — near thirty minutes on a clear I-5',
+    pricingNote:
+      'DMK Enzyme Therapy Level 1 is $279. A HydraFacial is $259. Full pricing is on each treatment page.',
     featured: ['dmk-enzyme-therapy', 'keravive-scalp', 'hydrafacial'],
   },
   {
@@ -208,6 +223,8 @@ export const areas: Area[] = [
       ],
     },
     proximity: 'About twenty-two miles — twenty-five minutes south on I-5',
+    pricingNote:
+      'Procell Microchanneling is $475, or $1,199 for a series of three. A HydraFacial is $259. Full pricing is on each treatment page.',
     featured: ['hydrafacial', 'procell-microchanneling', 'keravive-scalp'],
   },
   {
@@ -237,6 +254,8 @@ export const areas: Area[] = [
       ],
     },
     proximity: 'About thirty-five miles — a genuine thirty-five to forty-five minutes',
+    pricingNote:
+      'Procell Microchanneling is $475, or $1,199 for a series of three. Keravive scalp therapy is $599, or $1,499 for a series. Full pricing is on each treatment page.',
     featured: ['procell-microchanneling', 'keravive-scalp', 'hydrafacial'],
   },
   {
@@ -266,6 +285,8 @@ export const areas: Area[] = [
       ],
     },
     proximity: 'Roughly seven miles — about fifteen minutes east',
+    pricingNote:
+      'Lira chemical peels start at $199. DMK Enzyme Therapy Level 1 is $279. Full pricing is on each treatment page.',
     featured: ['lira-peels', 'dmk-enzyme-therapy', 'keravive-scalp'],
   },
   {
@@ -295,6 +316,8 @@ export const areas: Area[] = [
       ],
     },
     proximity: 'Roughly eleven miles — fifteen to twenty minutes west on I-8',
+    pricingNote:
+      'Lira chemical peels start at $199. A HydraFacial is $259. Full pricing is on each treatment page.',
     featured: ['lira-peels', 'hydrafacial', 'dmk-enzyme-therapy'],
   },
   {
@@ -324,6 +347,8 @@ export const areas: Area[] = [
       ],
     },
     proximity: 'Three and a half miles — about ten minutes, no freeway needed',
+    pricingNote:
+      'Lira chemical peels start at $199. A dermaplane facial is $199. Full pricing is on each treatment page.',
     featured: ['lira-peels', 'dermaplaning', 'hydrafacial'],
   },
 ];
