@@ -1,0 +1,77 @@
+---
+/**
+ * Area-level social proof strip.
+ *
+ * Design principles:
+ * - Espresso background (dark band) creates a visual break between the FAQ
+ *   and the "Also serving" ivory section — same pattern the homepage uses
+ *   between light sections.
+ * - Quote in display face (Fraunces light italic) at a generous size makes
+ *   the testimonial feel editorial, not review-widget.
+ * - Attribution line: first name · area · platform — all the local signal
+ *   Google needs, none of the fabrication risk.
+ * - GBP deep-link at the end lets clients verify without us claiming a rating.
+ * - No stars, no aggregate, no rating count — guard-compliant.
+ */
+import Reveal from '../Reveal.astro';
+import { business } from '../../config/business';
+import { gbpReviewsUrl } from '../../config/urls';
+import type { Testimonial } from '../../data/testimonials';
+
+interface Props {
+  testimonial: Testimonial;
+  areaName: string;
+}
+
+const { testimonial, areaName } = Astro.props;
+const reviewsUrl = gbpReviewsUrl(business.gbpPlaceId);
+---
+
+<section class="bg-espresso text-porcelain">
+  <Reveal>
+    <div class="wrap section-y">
+
+      <!-- Eyebrow label -->
+      <p class="t-eyebrow text-porcelain/50">From the treatment room</p>
+
+      <!-- Quote — display face, italic, generous leading -->
+      <blockquote
+        class="mt-7 max-w-[44ch] font-display text-[clamp(1.5rem,3.5vw,2.25rem)] font-light italic leading-[1.25] tracking-[-0.01em] text-porcelain"
+      >
+        &ldquo;{testimonial.quote}&rdquo;
+      </blockquote>
+
+      <!-- Attribution row -->
+      <footer class="mt-8 flex flex-wrap items-center gap-x-5 gap-y-3">
+        <p class="t-meta text-porcelain/70">
+          — {testimonial.attribution}
+          {testimonial.area && (
+            <span class="text-porcelain/40"> · {areaName}</span>
+          )}
+          {testimonial.platform && (
+            <span class="text-porcelain/40"> · {testimonial.platform}</span>
+          )}
+        </p>
+
+        <!-- Soft separator -->
+        <span class="hidden h-px w-10 bg-porcelain/20 md:block" aria-hidden="true"></span>
+
+        <!-- GBP link — lets readers verify without showing an aggregate -->
+        <a
+          href={reviewsUrl}
+          target="_blank"
+          rel="noopener"
+          class="t-meta inline-flex items-center gap-2 text-porcelain/50 underline underline-offset-4 decoration-porcelain/25 hover:text-porcelain hover:decoration-porcelain/60 transition-colors duration-200"
+        >
+          Read reviews on Google
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+        </a>
+      </footer>
+
+    </div>
+  </Reveal>
+</section>

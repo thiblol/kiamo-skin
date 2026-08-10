@@ -8,9 +8,11 @@ import LocationMap from '../../components/LocationMap.astro';
 import AreaServiceSchema from '../../components/schema/AreaServiceSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
+import AreaReview from '../../components/sections/AreaReview.astro';
 import { areas } from '../../data/areas';
 import { areaFaqs } from '../../data/area-faqs';
 import { treatments } from '../../data/treatments';
+import { getAreaTestimonials } from '../../data/testimonials';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import studioInterior from '../../assets/studio-interior.jpg';
@@ -30,6 +32,7 @@ const featured = area.featured
 
 const others = areas.filter((a) => a.slug !== area.slug);
 const faqs = areaFaqs[area.slug] ?? [];
+const areaReviews = getAreaTestimonials(area.slug);
 
 /**
  * The one image on the page, so the alt text is the only place the studio and
@@ -67,6 +70,9 @@ const imageAlt =
             {business.phone.display}
           </a>
         </div>
+        <p class="t-body mt-6 text-[0.875rem] text-ink-soft">
+          Licensed Esthetician · {business.ownerCredential.split(',')[0]} · {business.experience} experience · One-to-one, private studio
+        </p>
       </div>
     </header>
 
@@ -196,6 +202,26 @@ const imageAlt =
         </section>
       )
     }
+
+    {areaReviews.length > 0 && (
+      <AreaReview testimonial={areaReviews[0]} areaName={area.name} />
+    )}
+
+    <section class="bg-blush">
+      <div class="wrap section-y text-center">
+        <h2 class="t-h3 max-w-[28ch] mx-auto">Ready to book a facial in {area.name}?</h2>
+        <p class="t-body mt-5 max-w-[52ch] mx-auto">
+          One treatment room. One practitioner. Request an appointment and Kiki will
+          confirm a time by the next business day.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a href={business.phone.href} class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose">
+            {business.phone.display}
+          </a>
+        </div>
+      </div>
+    </section>
 
     <section class="bg-ivory">
       <div class="wrap section-y">

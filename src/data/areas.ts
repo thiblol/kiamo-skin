@@ -302,7 +302,7 @@ export const areas: Area[] = [
       'I-8 west from La Mesa Boulevard or the SR-125 interchange runs roughly eleven miles through Mission Valley. Stay on I-8 past SR-163 and exit at Taylor Street or Hotel Circle, then climb into Mission Hills — fifteen to twenty minutes on a clear freeway, twenty-five to thirty-five on the westbound commute.',
     localConcern: {
       heading: 'Why is sun exposure worse inland?',
-      body: 'La Mesa sits about ten miles from the coast, which is far enough to miss the marine layer that keeps the beach gray through May and June. Summer afternoons run roughly eight to fifteen degrees warmer than La Jolla or Mission Beach, and La Mesa falls inside the valley heat advisories the coast never gets. More clear days means more UV, year after year, and cumulative UV is the most consistent driver of melasma and uneven tone. Lira chemical peels answer that, because strength escalates across a series rather than in one visit — and daily SPF is what holds the result.',
+      body: 'La Mesa sits about ten miles from the coast, which is far enough to miss the marine layer that keeps the beach gray through May and June. Summer afternoons run roughly eight to fifteen degrees warmer than La Jolla or Mission Beach, and La Mesa falls inside the valley heat advisories the coast never gets. More clear days, year after year, is what builds the cumulative UV load behind the melasma and uneven tone this area books for. Lira chemical peels answer that, because strength escalates across a series rather than in one visit — and daily SPF is what holds the result.',
     },
     schemaDescription:
       'Corrective facials for cumulative sun exposure and pigmentation, for La Mesa clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
@@ -316,6 +316,8 @@ export const areas: Area[] = [
       ],
     },
     proximity: 'Roughly eleven miles — fifteen to twenty minutes west on I-8',
+    melaninNote:
+      'Pigmentation in melanin-rich skin responds differently to UV and to treatment — the pacing matters most:',
     pricingNote:
       'Lira chemical peels start at $199. A HydraFacial is $259. Full pricing is on each treatment page.',
     featured: ['lira-peels', 'hydrafacial', 'dmk-enzyme-therapy'],

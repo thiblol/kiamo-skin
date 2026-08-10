@@ -197,10 +197,10 @@ export const articles: Article[] = [
         p: 'McGill University\'s Office for Science and Society notes that on an overcast day <a href="https://www.mcgill.ca/oss/article/medical-student-contributors/cloudy-chance-sunburn" rel="noopener" target="_blank">up to 80% of the sun\'s UV rays can still reach your skin</a>, and that people "mistakenly associate UV exposure with temperature and cloud cover" — which produces more sunburn on cool, grey days, not fewer. UVA in particular accounts for 90–99% of the UV reaching the ground and is the fraction least affected by cloud.',
       },
       {
-        p: 'May Gray and June Gloom therefore arrive as a pigmentation problem dressed as weather. The sky goes white, the sunscreen comes off the counter, and six weeks of careful correction quietly reverses. Add the visible-light component that drives melasma and a bright overcast morning supplies almost everything pigment cells respond to, while feeling like none of it.',
+        p: 'May Gray and June Gloom therefore arrive as a pigmentation problem dressed as weather. The sky goes white, the sunscreen comes off the counter, and six weeks of careful correction quietly reverses. Add the visible-light component that drives melasma and a bright overcast morning supplies almost everything pigment cells respond to, while feeling like none of it. The pattern is especially common along the boardwalk — <a href="/service-areas/pacific-beach/">facials for Pacific Beach clients</a> are built around exactly this mechanism.',
       },
       {
-        p: 'Car windows are the other local blind spot. Glass filters UVB well and UVA poorly, so a daily commute is meaningful exposure on the driving side of the face. If your pigmentation is noticeably worse on one side, that is usually the explanation.',
+        p: 'Car windows are the other local blind spot. Glass filters UVB well and UVA poorly, so a daily commute is meaningful exposure on the driving side of the face. If your pigmentation is noticeably worse on one side, that is usually the explanation. Inland commuters on the I-8 run often present with exactly this one-sided pattern — <a href="/service-areas/la-mesa/">corrective facials in La Mesa</a> are paced around cumulative UV, not single-incident sun damage.',
       },
       {
         p: 'The <a href="/journal/june-gloom-is-not-sun-protection/">longer piece on the marine layer</a> covers this in more detail.',
@@ -349,7 +349,7 @@ export const articles: Article[] = [
         ],
       },
       {
-        p: 'That last point is what HydraFacial Keravive is for: it cleanses, exfoliates and hydrates the scalp itself, section by section, then sends you home with the spray that keeps the result. In a city with water this hard, scalp care is not a luxury add-on. It is maintenance.',
+        p: 'That last point is what HydraFacial Keravive is for: it cleanses, exfoliates and hydrates the scalp itself, section by section, then sends you home with the spray that keeps the result. In a city with water this hard, scalp care is not a luxury add-on. It is maintenance. Surfers and coastal swimmers add salt residue on top of mineral buildup — it is the reason <a href="/service-areas/encinitas/">barrier repair facials in Encinitas</a> are the most common booking from that area.',
       },
     ],
     cta: { label: 'See Keravive scalp therapy', href: '/treatments/keravive-scalp/' },
@@ -491,7 +491,7 @@ export const articles: Article[] = [
         p: 'Vague answers on either point are the signal worth acting on. Depth is the variable the literature keeps returning to, so a provider who has not thought about it for your skin specifically has not thought about your skin specifically.',
       },
       {
-        p: 'KIAMO SKIN is a private, single-practitioner studio in Mission Hills, San Diego, where <a href="/melanin-rich-skin/">melanin-rich skin is the whole practice rather than a service line</a>. Treatment is one-to-one with a licensed esthetician, in one room, with free parking on site. Clients travel in from across the county, including <a href="/service-areas/chula-vista/">Chula Vista</a>, for exactly this reason.',
+        p: 'KIAMO SKIN is a private, single-practitioner studio in Mission Hills, San Diego, where <a href="/melanin-rich-skin/">melanin-rich skin is the whole practice rather than a service line</a>. Treatment is one-to-one with a licensed esthetician, in one room, with free parking on site. Clients travel in from across the county, including <a href="/service-areas/chula-vista/">Chula Vista</a> and <a href="/service-areas/la-mesa/">La Mesa</a> — inland areas where more clear days mean more cumulative UV year after year — for exactly this reason.',
       },
     ],
     faqHeading: 'Microneedling questions',

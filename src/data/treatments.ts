@@ -122,7 +122,7 @@ export const treatments: Treatment[] = [
     name: 'HydraFacial Keravive',
     serviceType: 'Scalp treatment',
     category: 'Scalp therapy',
-    areas: ['pacific-beach', 'la-jolla', 'encinitas'],
+    areas: ['pacific-beach', 'la-jolla', 'encinitas', 'del-mar', 'carlsbad'],
     title: 'Keravive Scalp Treatment in San Diego | KIAMO Skin',
     description:
       'Keravive scalp therapy in Mission Hills, San Diego. Corrective treatment for flaking, buildup and thinning of the scalp. $599, or $1,499 for three.',
@@ -167,7 +167,7 @@ export const treatments: Treatment[] = [
     name: 'DMK Enzyme Therapy',
     serviceType: 'Enzyme therapy',
     category: 'Corrective skin treatment',
-    areas: ['mission-hills', 'la-jolla', 'la-mesa', 'chula-vista'],
+    areas: ['mission-hills', 'la-jolla', 'la-mesa', 'chula-vista', 'encinitas', 'carlsbad'],
     title: 'DMK Enzyme Therapy in San Diego | KIAMO Skin',
     description:
       'DMK enzyme therapy in Mission Hills, San Diego. Enzymatic resurfacing that rebuilds a damaged barrier. Level 1 is $279; Level 2 and 3 at consultation.',
@@ -213,7 +213,7 @@ export const treatments: Treatment[] = [
     serviceType: 'Microchanneling',
     category: 'Corrective skin treatment',
     alternateName: 'Microneedling alternative',
-    areas: ['la-jolla', 'carlsbad', 'del-mar'],
+    areas: ['la-jolla', 'carlsbad', 'del-mar', 'encinitas'],
     title: 'Procell Microchanneling for Scarring | KIAMO Skin San Diego',
     description:
       'Procell microchanneling in Mission Hills, San Diego for acne scarring and texture in melanin-rich skin. $475, or $1,199 for a series of three.',
@@ -269,7 +269,7 @@ export const treatments: Treatment[] = [
     name: 'Lira Chemical Peels',
     serviceType: 'Chemical peel',
     category: 'Corrective skin treatment',
-    areas: ['chula-vista', 'la-jolla', 'north-park'],
+    areas: ['chula-vista', 'la-jolla', 'north-park', 'pacific-beach', 'la-mesa'],
     title: 'Chemical Peels for Melanin-Rich Skin | KIAMO Skin San Diego',
     description:
       'Lira chemical peels in Mission Hills, San Diego for pigmentation and melasma in melanin-rich skin. Gentle Renewal $199, Advanced Peel $299.',
