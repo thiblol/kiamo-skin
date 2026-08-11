@@ -72,7 +72,7 @@ export const treatments: Treatment[] = [
     title: 'HydraFacial in San Diego | KIAMO Skin',
     description:
       'HydraFacial in Mission Hills, San Diego. Cleanse, extract and hydrate, with the booster and LED therapy selected for your skin. From $249.',
-    headline: 'The foundation of healthy skin.',
+    headline: 'HydraFacial — the foundation of healthy skin.',
     opener:
       'Looking for a HydraFacial in San Diego? KIAMO SKIN is a licensed corrective skin studio in Mission Hills, five minutes from Hillcrest and Little Italy, and the HydraFacial here is $259.',
     intro:
@@ -171,7 +171,7 @@ export const treatments: Treatment[] = [
     title: 'DMK Enzyme Therapy in San Diego | KIAMO Skin',
     description:
       'DMK enzyme therapy in Mission Hills, San Diego. Enzymatic resurfacing that rebuilds a damaged barrier. Level 1 is $279; Level 2 and 3 at consultation.',
-    headline: 'Restore skin function from within.',
+    headline: 'DMK Enzyme Therapy — restore skin function from within.',
     opener:
       'Looking for DMK enzyme therapy in San Diego? Level 1 is $279 at the KIAMO SKIN studio in Mission Hills, and it is the treatment used when a barrier is too compromised to tolerate anything stronger.',
     intro:
@@ -217,7 +217,7 @@ export const treatments: Treatment[] = [
     title: 'Procell Microchanneling for Scarring | KIAMO Skin San Diego',
     description:
       'Procell microchanneling in Mission Hills, San Diego for acne scarring and texture in melanin-rich skin. $475, or $1,199 for a series of three.',
-    headline: 'Stimulate your skin’s natural repair process.',
+    headline: "Procell Microchanneling — stimulate your skin’s natural repair process.",
     opener:
       'Looking for microneedling in San Diego? Procell microchanneling is the alternative offered here — a different modality from a needle pen, performed by a licensed esthetician in Mission Hills, <a href="/journal/microneedling-on-dark-skin-san-diego/">with depth adjusted for melanin-rich skin</a>.',
     intro:
@@ -273,7 +273,7 @@ export const treatments: Treatment[] = [
     title: 'Chemical Peels for Melanin-Rich Skin | KIAMO Skin San Diego',
     description:
       'Lira chemical peels in Mission Hills, San Diego for pigmentation and melasma in melanin-rich skin. Gentle Renewal $199, Advanced Peel $299.',
-    headline: 'Designed to brighten without compromising skin health.',
+    headline: 'Lira Chemical Peels — designed to brighten without compromising skin health.',
     opener:
       'Looking for a chemical peel in San Diego that is safe on melanin-rich skin? That is the work this studio was built around.',
     intro:
@@ -325,7 +325,7 @@ export const treatments: Treatment[] = [
     title: 'Dermaplaning in San Diego | KIAMO Skin',
     description:
       'Dermaplaning in Mission Hills, San Diego. Smoother texture and better product absorption with no downtime, performed by a licensed esthetician. $199.',
-    headline: 'A clean surface changes what everything else can do.',
+    headline: 'Dermaplaning — a clean surface changes what everything else can do.',
     opener:
       'Looking for dermaplaning in San Diego? The dermaplane facial at KIAMO SKIN is performed by a licensed esthetician in Mission Hills, and it is $199.',
     intro:
