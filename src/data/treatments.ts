@@ -126,9 +126,9 @@ export const treatments: Treatment[] = [
     title: 'Keravive Scalp Treatment in San Diego | KIAMO Skin',
     description:
       'Keravive scalp therapy in Mission Hills, San Diego. Corrective treatment for flaking, buildup and thinning of the scalp. $599, or $1,499 for three.',
-    headline: 'Your scalp is skin. Treat it that way.',
+    headline: "HydraFacial Keravive — your scalp is skin. Treat it that way.",
     opener:
-      'Looking for scalp treatment in San Diego? Keravive is performed at a single studio in Mission Hills, and it is the treatment chosen for buildup, flaking and the mineral residue San Diego’s hard water leaves behind.',
+      "Looking for a head spa or scalp treatment in San Diego? Keravive is the clinical alternative — a corrective protocol for buildup, flaking and the hard water mineral residue that accumulates at the scalp, performed at a single studio in Mission Hills.",
     intro:
       'Keravive deeply cleanses, exfoliates, and hydrates the scalp while removing buildup that can contribute to dryness, flaking, and irritation. A healthier scalp creates a better environment for healthy hair growth. In San Diego, hard water can make scalp buildup especially common, making regular scalp care an important part of maintaining a healthy scalp. Every treatment includes a take home peptide spray to continue supporting scalp health between visits.',
     image: scalp,
@@ -161,6 +161,11 @@ export const treatments: Treatment[] = [
     membershipNote:
       'Scalp work is cumulative, which is the same reason the monthly plans exist — a membership treatment can be applied to scalp therapy by paying the difference.',
     membershipAnchor: 'How the monthly membership works',
+    guide: {
+      lead: 'Why does San Diego cause so much scalp buildup?',
+      label: 'San Diego hard water and your scalp',
+      href: '/journal/san-diego-hard-water-and-your-scalp/',
+    },
   },
   {
     slug: 'dmk-enzyme-therapy',

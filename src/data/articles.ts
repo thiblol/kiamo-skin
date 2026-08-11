@@ -305,6 +305,24 @@ export const articles: Article[] = [
         p: 'Which step matters most depends on what kind of pigmentation you are treating — <a href="/journal/three-kinds-of-dark-mark/">post-inflammatory marks, melasma and sun damage</a> respond to quite different things.',
       },
     ],
+    faqHeading: 'June Gloom and UV questions',
+    faqs: [
+      {
+        question: 'Does cloud cover block UV rays?',
+        answer:
+          'Cloud cover reduces visible light and warmth, but it does not stop ultraviolet radiation. According to <a href="https://www.mcgill.ca/oss/article/medical-student-contributors/cloudy-chance-sunburn" rel="noopener" target="_blank">McGill University\'s Office for Science and Society</a>, up to 80% of the sun\'s UV rays can pass through cloud on an overcast day, and people tend to stay outside longer without sunscreen because the cool, dim conditions feel safe. The light your eyes use to judge risk and the light your skin responds to are not the same thing.',
+      },
+      {
+        question: 'Should you wear sunscreen on a cloudy day in San Diego?',
+        answer:
+          'Yes, every day regardless of cloud cover — and San Diego\'s marine layer is one of the most reliable reasons people stop. The UV index across San Diego regularly sits at 8 to 10 through late spring and summer even on overcast mornings. Treating SPF as a weather decision is how a careful treatment plan quietly reverses over a few grey weeks.',
+      },
+      {
+        question: 'Why does June Gloom make pigmentation worse?',
+        answer:
+          'June Gloom creates the conditions for pigmentation damage while removing the sensory cues that normally signal UV risk. There is no warmth, no bright glare, and the sky looks pale — but UVA passes through thin marine layer with very little loss, and in melanin-rich skin that is enough to trigger new pigment production. Any corrective work done in the treatment room during that window is competing against unprotected daily exposure.',
+      },
+    ],
     cta: { label: 'See peels for pigmentation', href: '/treatments/lira-peels/' },
   },
   {
