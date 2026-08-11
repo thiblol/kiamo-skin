@@ -156,6 +156,11 @@ export const treatmentFaqs: Record<string, Faq[]> = {
 
   'dmk-enzyme-therapy': [
     {
+      question: 'What is DMK enzyme therapy?',
+      answer:
+        'DMK enzyme therapy is a corrective skin treatment that works with the skin\'s own biological processes — circulation, lymphatic activity and cellular function — rather than stripping the surface the way an acid peel does. Level 1 at KIAMO SKIN in Mission Hills, San Diego is $279 and is how every DMK plan starts, regardless of what the skin\'s longer-term goals are.',
+    },
+    {
       question: 'How much does DMK enzyme therapy cost in San Diego?',
       answer:
         'A DMK Level 1 enzyme treatment at KIAMO SKIN is $279. Level 2 and Level 3 treatments are prescribed and priced at consultation, because which one is appropriate depends on how your skin responds to Level 1.',
