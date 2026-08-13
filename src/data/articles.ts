@@ -4,6 +4,7 @@ import uv from '../assets/journal-uv.jpg';
 import water from '../assets/journal-water.jpg';
 import pigmentation from '../assets/journal-pigmentation.jpg';
 import microchanneling from '../assets/journal-microchanneling.jpg';
+import dermaplaning from '../assets/journal-dermaplaning.jpg';
 
 export interface Article {
   slug: string;
@@ -181,6 +182,7 @@ export const articles: Article[] = [
           '<a href="/treatments/dmk-enzyme-therapy/">Enzyme therapy</a> works on barrier function and circulation. Most useful where inflammation and congestion are still generating new marks.',
           '<a href="/treatments/hydrafacial/">HydraFacial</a> cleanses, exfoliates and hydrates in one pass. Good maintenance and good preparation; not a corrective pigment treatment on its own.',
           '<a href="/treatments/lira-peels/">Lira peels</a> are the corrective option for pigmentation, run as a prepared series at escalating strength rather than as a single strong session.',
+          '<a href="/treatments/dermaplaning/">Dermaplaning</a> clears the surface layer between peel appointments, improving serum absorption without chemical exposure — useful when the marks are fading and the skin needs maintenance.',
           '<a href="/treatments/procell-microchanneling/">Procell microchanneling</a> works without heat or light, which matters here because heat is itself a pigment trigger in melanin-rich skin. <a href="/journal/microneedling-on-dark-skin-san-diego/">Better suited to texture and scarring than to melasma</a>.',
         ],
       },
@@ -485,7 +487,7 @@ export const articles: Article[] = [
         p: 'A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11680975/" rel="noopener" target="_blank">review of microneedling applications in melasma</a> drawing on 64 clinical studies is positive overall, calling the technique "an essential advancement in melasma treatment" with "an excellent safety and tolerability profile". The same paper reports hyperpigmentation across its included studies at rates ranging from 5% to 40%, and notes the research is "hampered by small sample sizes". Both halves of that are true simultaneously, and only quoting the first half would be selling rather than informing.',
       },
       {
-        p: 'Which mark you have decides the tool. <a href="/journal/three-kinds-of-dark-mark/">Post-inflammatory marks, melasma and sun damage look alike and behave differently</a>, and for pigment specifically the corrective route here is <a href="/treatments/lira-peels/">a prepared series of peels</a> rather than needling.',
+        p: 'Which mark you have decides the tool. <a href="/journal/three-kinds-of-dark-mark/">Post-inflammatory marks, melasma and sun damage look alike and behave differently</a>, and for pigment specifically the corrective route here is <a href="/treatments/lira-peels/">a prepared series of peels</a> rather than needling. For surface texture and scarring, <a href="/journal/dermaplaning-safe-dark-skin-san-diego/">dermaplaning is the no-heat, no-chemical alternative</a> worth reading about if microchanneling is not the right fit.',
       },
 
       { h2: 'How much does microneedling cost in San Diego?' },
@@ -546,5 +548,168 @@ export const articles: Article[] = [
       },
     ],
     cta: { label: 'See Procell microchanneling', href: '/treatments/procell-microchanneling/' },
+  },
+  {
+    slug: 'dermaplaning-safe-dark-skin-san-diego',
+    headline: 'Is dermaplaning safe for dark skin? Here is what actually matters.',
+    title: 'Dermaplaning for Dark Skin in San Diego | KIAMO Skin',
+    description:
+      'Is dermaplaning safe on melanin-rich skin? A licensed San Diego esthetician explains what to look for, what to avoid, and why technique is everything.',
+    standfirst:
+      'The question is not really whether dermaplaning works on darker skin. It is whether the blade angle and pressure match the skin in front of it.',
+    readingTime: '7 min read',
+    datePublished: '2026-08-13',
+    dateModified: '2026-08-13',
+    image: dermaplaning,
+    imageAlt: 'Dermaplaning blade held at 45 degrees above deep brown skin, with angle annotation',
+    body: [
+      {
+        p: 'Most people searching for dermaplaning in San Diego have the same question underneath it: is this safe for my skin? The answer depends less on the treatment than on the provider. Dermaplaning removes dead surface cells and fine vellus hair using a sterile surgical blade. On melanin-rich skin, the version of that sentence that matters is this: the blade does not decide the outcome. The technique does.',
+      },
+      { h2: 'Is dermaplaning safe on melanin-rich skin?' },
+      {
+        answer:
+          'Dermaplaning is safe on melanin-rich skin when the blade angle and pressure are correct. It uses no heat and no acid — the two main triggers for post-inflammatory pigmentation.',
+      },
+      {
+        p: 'The safety distinction matters because melanin-rich skin responds to injury differently. When melanocytes are triggered by inflammation, they overproduce pigment — a well-documented mechanism covered in the <a href="https://jcadonline.com/postinflammatory-hyperpigmentation-a-review-of-the-epidemiology-clinical-features-and-treatment-options-in-skin-of-color/" rel="noopener" target="_blank">Journal of Clinical and Aesthetic Dermatology review of PIH in skin of color</a>. Dermaplaning carries no heat and no chemical load, which removes the two most common triggers for that response.',
+      },
+      {
+        p: 'The <a href="/treatments/dermaplaning/">dermaplane facial at KIAMO SKIN</a> is performed by a licensed esthetician on a dry surface, section by section, with active or inflamed areas worked around rather than over.',
+      },
+      { h2: 'What makes dermaplaning risky, and what removes that risk?' },
+      {
+        answer:
+          'Blade angle and pressure are the two variables. At 45 degrees with light, even strokes, the blade lifts dead cells cleanly. Lower angle or heavier pressure creates micro-injury — that injury triggers pigmentation.',
+      },
+      {
+        p: 'The stratum corneum — the outermost layer of dead cells — sits above the living tissue. The blade is designed to skim it. When the angle drops too low or pressure increases, the pass creates micro-injury at the dermal layer. That injury signals inflammation, and inflammation is what triggers pigment production in melanin-rich skin.',
+      },
+      {
+        p: 'Thickness varies across the face. Skin along the jawline and cheekbones is naturally thicker; skin at the upper lip and over bony prominences is thinner. An esthetician who works with <a href="/melanin-rich-skin/">melanin-rich skin as the whole practice</a> adjusts the approach by zone rather than treating the entire face identically.',
+      },
+      { h2: 'Are estheticians allowed to dermaplane in California?' },
+      {
+        answer:
+          'Yes. Since January 1, 2022, California law permits licensed estheticians to perform dermaplaning. A California Board of Barbering and Cosmetology licence is the correct credential.',
+      },
+      {
+        p: 'This matters practically, not just legally. A licence requires training on contraindications, blade handling, and skin response. At-home tools and unlicensed providers operate without that structure — the blade angle is uncontrolled, the skin is not assessed beforehand, and there is no professional judgment about whether the treatment is appropriate that day. The <a href="http://www.barbercosmo.ca.gov/forms_pubs/publications/dermaplaning.pdf" rel="noopener" target="_blank">California Board industry bulletin</a> is the authoritative source on this.',
+      },
+      {
+        p: '<a href="/about/">Kiki holds a California Board of Barbering and Cosmetology licence</a> with five years of practice in corrective skin work. Appointments are one-to-one, by request, in a single private studio in Mission Hills. The first visit includes a skin assessment before any treatment is applied.',
+      },
+      { h2: 'Can dermaplaning cause hyperpigmentation on dark skin?' },
+      {
+        answer:
+          'It can — but only when technique causes inflammation. The blade itself does not trigger pigment. Inflammation does, and melanin-rich skin responds to inflammation by producing more pigment.',
+      },
+      {
+        p: 'Temporary redness after dermaplaning is normal and resolves within a few hours — this is superficial vascular response, not melanocyte activity. Post-inflammatory hyperpigmentation is different: it develops over days and produces brown or grey discoloration where inflammation occurred. According to the <a href="https://www.aad.org/public/everyday-care/skin-care-secrets/routine/fade-dark-spots" rel="noopener" target="_blank">American Academy of Dermatology</a>, spots a few shades darker than surrounding skin typically take six to twelve months to fade without treatment, and deeper pigment can take longer.',
+      },
+      {
+        p: 'If you have active acne or inflamed breakouts, dermaplaning is worked around those areas or the appointment rescheduled. Passing a blade over an active pustule creates the inflammation that produces a mark. The treatment is not the problem — applying it over the wrong skin at the wrong time is.',
+      },
+      {
+        p: 'If you have existing post-inflammatory marks or melasma, dermaplaning does not address those directly. A prepared <a href="/treatments/lira-peels/">Lira peel series</a> works at the cellular level to clear pigmentation. Dermaplaning maintains the surface between peel appointments and improves serum absorption, but it does not clear existing marks on its own.',
+      },
+      { h2: 'Dermaplaning or a chemical peel — which one is right for dark skin?' },
+      {
+        answer:
+          'They do different things. Dermaplaning removes dead surface cells without chemicals. A peel works on pigmentation and marks at a cellular level. Most melanin-rich skin plans use both.',
+      },
+      {
+        table: {
+          caption: 'Dermaplaning vs a chemical peel on melanin-rich skin',
+          head: ['', 'Dermaplaning', 'Chemical peel'],
+          rows: [
+            ['What it treats', 'Surface texture, dullness, peach fuzz, product absorption', 'PIH, melasma, uneven tone, acne marks'],
+            ['How it works', 'Blade removes dead cells at the surface', 'Acid resurfaces below the surface'],
+            ['Heat or chemical exposure', 'None', 'Acid — strength matched to your skin on the day'],
+            ['PIH risk on dark skin', 'Low when technique is correct', 'Higher if unprepared or too strong'],
+            ['Best use', 'Maintenance, event prep, between peel appointments', 'Corrective series over multiple visits'],
+            ['At KIAMO SKIN', '$199', '$199 Gentle Renewal · $299 Advanced'],
+          ],
+        },
+      },
+      {
+        p: 'If your goal is smoother texture, better absorption, or skin that looks clearer before an event, dermaplaning is the right starting point. If your goal is clearing post-inflammatory marks or managing melasma, that is done with a <a href="/treatments/lira-peels/">prepared peel series</a> over multiple visits with home prep in between.',
+      },
+      {
+        p: '<a href="/journal/three-kinds-of-dark-mark/">Understanding which kind of pigmentation you have</a> is the step that decides which treatment comes first. A dermaplaning session is often used between peel appointments to maintain the cleared surface and improve topical absorption.',
+      },
+      { h2: 'Does peach fuzz grow back different after dermaplaning on dark skin?' },
+      {
+        answer:
+          'No. The blade removes hair at the skin surface, not at the follicle. Vellus hair grows back exactly as it was — same texture, same colour.',
+      },
+      {
+        p: 'The concern comes from confusing dermaplaning with shaving. Shaving cuts the hair shaft mid-length, leaving a blunt tip that feels coarser as it grows back. Dermaplaning removes the entire visible hair above the surface. The follicle — which determines all hair characteristics — is never touched. What happens above the skin cannot change what the follicle produces.',
+      },
+      {
+        p: 'This is a frequent question from Black and brown clients: will dermaplaning change the texture of my facial hair? The answer is no. Vellus hair on the face is fine by nature, regardless of the coarser or curlier terminal hair elsewhere. The follicles are structurally different and dermaplaning does not interact with either type at the root.',
+      },
+      { h2: 'Who should not get dermaplaning?' },
+      {
+        answer:
+          'Active acne, a broken barrier, active rosacea, open skin, and isotretinoin use are all contraindications. Those areas are skipped or the appointment rescheduled.',
+      },
+      {
+        p: 'On melanin-rich skin, timing matters as much as candidacy. A reactive barrier — stinging after cleansing, flushing easily, tight without moisturiser — is not ready for a surface treatment. That condition is rebuilt first. <a href="/treatments/dmk-enzyme-therapy/">DMK Enzyme Therapy</a> is the protocol for compromised barrier work at this studio. Dermaplaning follows once the skin is stable, not before.',
+      },
+      {
+        p: 'If you are in an active breakout phase, treating the acne comes first. Every active spot passed over with a blade is a potential PIH site.',
+      },
+      { h2: 'How much does dermaplaning cost in San Diego?' },
+      {
+        answer:
+          'The Dermaplane Facial at KIAMO SKIN is $199, performed by a licensed esthetician in Mission Hills, San Diego.',
+      },
+      {
+        p: 'Dermaplaning in San Diego ranges from roughly $80 to $200 depending on provider type and what is included. At KIAMO SKIN the $199 treatment is a full facial — cleanse, dermaplane, treatment serums while absorption is at its highest, and SPF to close. Published prices are unusual in this market. What is listed here is verified, not approximate.',
+      },
+      {
+        p: 'The studio is in Mission Hills, five minutes from Hillcrest, Bankers Hill and Little Italy, with free parking. Appointments are request-based. San Diego\'s UV index runs 8 to 10 from April through October — freshly dermaplaned skin has a temporarily reduced surface barrier, and applying SPF before you leave is part of the service. The <a href="/journal/june-gloom-is-not-sun-protection/">June Gloom piece</a> covers why that applies even on overcast San Diego mornings.',
+      },
+    ],
+    faqHeading: 'Dermaplaning questions',
+    faqs: [
+      {
+        question: 'Is dermaplaning safe for Black skin?',
+        answer:
+          'Yes, when performed at the correct blade angle and pressure by a licensed provider. Dermaplaning does not use heat or acid — the two inputs most associated with PIH in deeper skin tones. The risk is technique-dependent: the blade should sit at around 45 degrees with light, even pressure.',
+      },
+      {
+        question: 'Can dermaplaning cause PIH on darker skin tones?',
+        answer:
+          'It can, but only when the technique causes inflammation. The blade does not stimulate melanocytes. Inflammation does — through the same mechanism that produces PIH after any skin trauma. Correct technique at a shallow angle with light pressure removes dead cells without reaching the dermis.',
+      },
+      {
+        question: 'Does peach fuzz grow back thicker after dermaplaning on dark skin?',
+        answer:
+          'No. Dermaplaning removes vellus hair at the surface, not at the follicle. The follicle determines all hair characteristics and is never involved in dermaplaning. Hair grows back exactly as before.',
+      },
+      {
+        question: 'Are estheticians legally allowed to dermaplane in California?',
+        answer:
+          'Yes. Effective January 1, 2022, the California Board of Barbering and Cosmetology confirmed dermaplaning is within the scope of practice for licensed estheticians.',
+      },
+      {
+        question: 'How much does a dermaplaning facial cost in San Diego?',
+        answer:
+          'The Dermaplane Facial at KIAMO SKIN is $199. The treatment includes cleanse, dermaplaning, treatment serums and SPF. Most San Diego providers charge between $80 and $200.',
+      },
+      {
+        question: 'Who should avoid dermaplaning?',
+        answer:
+          'Active acne, an inflamed or broken skin barrier, active rosacea, open or healing skin, and current use of isotretinoin are all contraindications. On melanin-rich skin, a reactive barrier should be stabilised before any surface treatment.',
+      },
+      {
+        question: 'Do people regret dermaplaning, and what usually goes wrong?',
+        answer:
+          'The most common issue is PIH from technique error — too much pressure, incorrect blade angle, or treatment applied over active or inflamed skin. Temporary redness that resolves within hours is normal and distinct from PIH. Choosing a licensed provider with specific experience on melanin-rich skin removes most of the documented risk.',
+      },
+    ],
+    cta: { label: 'See the dermaplane facial', href: '/treatments/dermaplaning/' },
   },
 ];

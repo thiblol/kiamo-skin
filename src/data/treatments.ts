@@ -366,6 +366,11 @@ export const treatments: Treatment[] = [
       },
     ],
     note: 'Dermaplaning is not appropriate over active or inflamed acne, and it is skipped in those areas. Vellus hair grows back exactly as it was — same texture, same colour. It cannot grow back thicker, because the blade does not touch the follicle.',
+    guide: {
+      lead: 'Is dermaplaning safe on darker skin?',
+      label: 'Dermaplaning for dark skin in San Diego — what actually matters',
+      href: '/journal/dermaplaning-safe-dark-skin-san-diego/',
+    },
   },
 ];
 

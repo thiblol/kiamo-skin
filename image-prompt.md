@@ -1,239 +1,297 @@
-# Image prompt — KIAMO Skin
+# KIAMO Skin — Image Generation System
 
-Paste `{scene}` from the library below, then everything from `--- STYLE ---` down.
-The style block is fixed and should not be edited between generations: it is what
-keeps the whole image set looking like one studio rather than a stock library.
-
----
-
-## Scene library
-
-### Homepage hero — desktop (16:9, min 2400px → `src/assets/hero-desktop.jpg`)
-
-> A woman with warm tan skin in her early thirties lying back on a treatment bed,
-> head resting on soft ivory linen, eyes softly closed, face bare and unmade-up with
-> visible natural texture and a healthy sheen. Her hair is natural curls — defined,
-> voluminous, spilling loose across the linen around her head and shoulders, a few
-> curls catching the light at the edge. She occupies the right third of the frame,
-> head upright and clearly readable; the left two-thirds is soft, uncluttered ivory
-> wall and the blurred edge of a linen headrest, left empty for a headline. An
-> esthetician's hands, out of focus in the near foreground, rest lightly at the very
-> edge of frame. Shot slightly above eye level from beside the bed. Calm and
-> unhurried — she looks like she has been lying there a while.
-
-### Homepage hero — mobile (9:16, min 1400px → `src/assets/hero-mobile.jpg`)
-
-> Vertical portrait of a woman with warm tan skin in her early thirties lying back on
-> a treatment bed, photographed from her side at bed height — her head rests on soft
-> ivory linen in the lower third of the tall frame, face upright and clearly readable,
-> turned slightly toward the camera, eyes closed, expression calm. Natural curly hair
-> fanned out across the linen beneath and around her head. Bare skin, visible pores
-> and natural texture, no makeup. Above her the frame is filled with the soft
-> out-of-focus ivory of a linen-draped bed and a plain warm wall receding into gentle
-> shadow toward the top. Quiet, still, intimate — the emptiness above her carries the
-> composition.
-
-**Two rules for both hero frames.** State the head's position in the frame explicitly
-and never describe an overhead camera — "from directly above, looking down the length
-of the body" is what produced an upside-down face on the first mobile render. And keep
-the curls as curls: defined coils and natural volume with individual strands catching
-the edge light, never straightened, never a smooth uniform mass.
-
-### Journal — "Three kinds of dark mark" (article hero, 21:9 safe)
-
-Primary — recommended:
-
-> A woman with deep brown skin in her mid-thirties in three-quarter profile near a
-> large window, eyes closed, face bare and unmade-up, natural variation in tone
-> visible across the cheek and along the jaw. Soft daylight rakes across the cheek
-> from camera left so the surface of the skin is legible rather than flattened.
-> Plain warm-ivory wall well behind, thrown out of focus. Generous empty space to
-> the right of the head for a headline overlay.
-
-Alternative — the diagnostic angle, hands-and-mirror:
-
-> Close crop of a woman with medium-brown skin holding a small round hand mirror
-> just off-centre, examining her own cheekbone, fingertips resting lightly against
-> the jaw without pressing. Focus falls on the reflected cheek in the mirror glass.
-> Soft window light from camera left, warm ivory and terracotta surroundings.
-
-Alternative — the consultation, no faces:
-
-> An esthetician's hands, gloves off, holding a small handheld magnifying lamp over
-> a client's cheek during a skin consultation, client's face turned away from camera
-> and out of frame past the shoulder. Warm neutral treatment room, folded linen
-> towel in soft focus behind. Point of contact crisp; everything else falls away.
-
-### Social — square crop for the same article
-
-> Overhead flat lay on a warm ivory linen surface: an unbranded tube of tinted
-> mineral sunscreen with the cap off, a small amber glass dropper bottle, and a
-> single folded sage-green cotton towel, arranged with generous space between the
-> objects. Soft diffused daylight from the upper left, gentle shadows falling to
-> the lower right. No labels, no text on any object.
-
-### Journal — "Microneedling on dark skin" (article hero, 3:4 portrait, 1200 × 1600 → `src/assets/journal-microchanneling.jpg`)
-
-Primary — recommended:
-
-> A woman with deep brown skin in her late twenties, seated upright and turned
-> three-quarters toward a tall window at camera left, chin lifted slightly, eyes open
-> and looking off-frame past the light. Face bare and unmade-up, natural texture and a
-> soft sheen along the cheekbone and brow, fine vellus hair rimmed by the light at the
-> jaw, natural variation in tone across the cheek left exactly as it is. Hair in
-> defined natural coils drawn back from the face with a soft ivory cloth band, a few
-> coils loose at the temple. Her head sits about 35% in from the left edge and 35% down
-> from the top of a vertical frame — clearly readable, never near an edge. Below and to
-> the right, the out-of-focus ivory of a linen-draped treatment bed and one folded sage
-> towel recede into warm shadow, with a terracotta wall catching the light behind.
-> Late-afternoon light rakes gently from camera left so the surface of the skin is
-> legible without being examined. She has just sat up — settled, unhurried, mid-thought.
-
-Alternative — the serum pass, no face:
-
-> An esthetician's hands, ungloved, pressing a few drops of clear serum along a client's
-> cheekbone with flat fingertips, the client's face turned away and out of frame past
-> the shoulder. 85mm at f/4 — the point of contact crisp, everything else falling away.
-> Warm neutral treatment room, folded linen and a terracotta wall in soft focus behind.
-
-**The rule specific to this article: never depict a needle pen, dermaroller, cartridge
-tip, or any device touching skin.** KIAMO does not perform needle-pen microneedling, and
-the whole argument of the piece is that microchanneling is a different modality. A pen in
-the frame would contradict the copy sitting above it. As with the pigmentation article:
-no before/after framing, no dark patches presented as a condition, nothing in the
-register of clinical documentation.
-
-**Why 3:4 and why 35% / 35%.** The file is cropped twice. The article hero is
-`aspect-[0.85]` anchored at `object-[35%_35%]`, which keeps 88% of a 3:4 source's height
-and leaves the face sitting at 35%. The journal *index* card is `aspect-4/3` and crops
-from **centre**, keeping only the middle 56% of the height — a face at 35% down lands at
-roughly 23% down in the card, comfortably inside. Keep the face and both shoulders within
-that middle band and one file serves both. Check the index card before accepting a render;
-it is the crop that disagrees with the hero.
+One brand. One consistent grade. Every image in this repo was generated from this
+system. The Style Block is the spine — never edit it between scenes. The Scene Library
+gives you the subject. The Graphic Layer system gives you the design-in-image elements.
 
 ---
 
-## The one rule specific to "Three kinds of dark mark"
+## How to use
 
-The article is about telling three kinds of pigmentation apart. **Do not generate
-"before and after" imagery, visible dark patches presented as a condition to be
-corrected, or anything that reads as a dermatology case photo.** The site publishes
-no untrue results and the guard suite blocks outcome claims. The image should read
-as a person, calmly lit — not as a symptom.
-
-Real, natural variation in skin tone is welcome and should not be retouched out.
-That is the difference between an honest image and a whitewashed one.
+1. Copy the scene description you want.
+2. Paste `--- STYLE BLOCK (always append) ---` verbatim below it.
+3. If the scene needs a graphic element, append the relevant Graphic Layer spec.
+4. Add the aspect ratio parameter for your tool: `--ar 16:9` (Midjourney), `ratio: 16:9` (Flux/Imagen).
+5. For Midjourney: append `--style raw --v 7 --q 2`.
+6. For DALL-E 4 / GPT-Image: paste as a single block. Do not split.
 
 ---
 
---- STYLE (do not change) ---
+## The cardinal rules — never break these
 
-CAMERA: Shot on Sony A7IV, 50mm f/1.8 prime lens (85mm macro for close-up skin/treatment
-detail shots). Rendering reference: warm negative film — Kodak Portra 400. Rich and warm,
-never punchy or contrast-crushed.
+1. **Melanin-rich skin leads.** Every portrait features Black or brown skin. This is not
+   diversity casting — it is the business's stated specialism and every image must prove it.
+2. **No heat, no clinical documentation.** No harsh raking low-angle light. No before/after.
+   No conditions presented as flaws. Natural variation in skin tone is celebrated, not corrected.
+3. **No text in the image** — except when a Graphic Layer is explicitly requested (§ Graphic Layers).
+4. **No touching the follicle.** No visible needle pens, rollers, or any device penetrating skin.
+5. **The style block never changes.** Consistency across the whole set is more valuable than
+   any single perfect image.
 
-FOCAL LENGTH / APERTURE / DOF: 50mm at f/2.2 for environmental/portrait shots — subject
-sharp, background softly falling off, never fully blown out. 85mm at f/4 for close-up
-treatment/hands/skin detail shots — enough depth to keep the point of contact (fingertips,
-tool, skin) in crisp focus without flattening texture.
+---
 
-LIGHTING: One large soft source — a tall window, or a big diffused equivalent — placed
-around 60–75 degrees off the camera axis and slightly behind the subject's plane, so the
-light wraps around the form and leaves a bright edge along the cheekbone, jaw or shoulder.
-Late-afternoon light: warm, angled, with somewhere for the shadows to go. Contrast around
-3:1 — the shadow side stays readable but is genuinely darker, never filled flat. Fill comes
-from ambient bounce off the walls and linens only, never a second lamp.
+## Scene Library
 
-Soft speculars are wanted, not avoided: sheen along the cheekbone, the brow, the bridge of
-the nose, the lower lip. That surface sheen is what makes skin read as living rather than
-powdered, and it matters most on deep skin, where matte renders as ashy. Speculars stay soft
-and shaped by the large source — never blown to paper white, never a hard hotspot.
+### S1 · Homepage hero — desktop (16:9, min 2400px → `hero-desktop.jpg`)
 
-Light must also land on the background: a gradient across the wall, a falloff into shadow at
-the frame edge, occasionally the soft shadow of a window frame or a plant. Air in the room,
-faint atmosphere, never a flat painted backdrop.
+A woman with warm deep-brown skin in her early thirties lying back on a treatment bed,
+head resting on soft ivory linen, eyes softly closed, face bare and unmade-up with
+visible natural texture and a healthy surface sheen. Natural coils — defined volume,
+individual strands catching the edge light, a few loose across the linen. She occupies
+the right third of the frame, head upright and clearly readable; the left two-thirds is
+soft, uncluttered ivory wall, left empty for a headline. An esthetician's hands —
+ungloved — rest lightly just at the near foreground edge of frame, out of focus.
+Shot slightly above eye level from beside the bed. Calm, unhurried. She has been there
+a while.
 
-The light reveals; it does not examine. No hard low-angle raking across skin — that is
-dermatological documentation lighting, and it is the wrong register here. Still no ring-light
-catchlights, no on-camera flash, no clinical fluorescent overhead.
+**Must-states:** head position stated explicitly in the prompt. Camera never described
+as overhead or "looking down the length of the body" — that produces an inverted face.
+Keep curls as defined coils with individual strand detail, never a smooth uniform mass.
 
-COLOR GRADE / WHITE BALANCE: Warm key around 5600K against cooler ambient shadow — the lit
-side warm, the shadow side drifting slightly to skylight blue. That split is what gives the
-image depth; a single flat white balance across the frame is what kills it. No green or
-magenta cast.
+### S2 · Homepage hero — mobile (9:16, min 1400px → `hero-mobile.jpg`)
 
-Palette: ivory and terracotta (#F3EDE4, #C98B6E) live in the light, walls, linens and props —
-terracotta present as a real surface in frame, not only as a tint in the grade. Charcoal
-(#2B2B29) for deep shadow and wardrobe. Sage (#9CA98C) as a small accent only (a plant, a
-folded towel, a cap) — never dominant. Something in every frame reaches near-black, so the
-image has a floor and the highlights have somewhere to sing from.
+Vertical portrait of the same woman at bed height — head rests on ivory linen in the
+lower third of the tall frame, face turned slightly toward camera, eyes closed, expression
+calm. Natural coils fanned out. Bare skin, visible pores and natural texture. The upper
+two-thirds of the frame is soft out-of-focus ivory linen and a warm wall receding into
+shadow — empty space that carries the composition and holds a headline.
 
-Skin tones stay accurate and warm, never desaturated or blue-shifted — the ivory and
-terracotta cast lives in the surroundings, never pushed onto the skin itself. Deep and medium
-skin tones render with their true undertone, natural luminosity and sheen. Never ashy, never
-orange, never matte.
+### S3 · Journal · Three kinds of dark mark (3:4 → `journal-pigmentation.jpg`)
 
-COMPOSITION: Subject off-center per rule of thirds, headroom left for text overlay when
-needed. Horizontal orientation for hero/service shots, square-safe crop for social reuse.
-Open space is lit space — a gradient, a falloff, light on a wall. Air, never a dead flat
-area of empty colour.
+Primary: A woman with deep brown skin in her mid-thirties in three-quarter profile
+near a large window, eyes closed, face bare and unmade-up, natural variation in tone
+visible across the cheek and along the jaw. Soft daylight rakes across the cheek from
+camera left. Plain warm-ivory wall behind, thrown out of focus. Generous empty space
+to the right of the head for a headline overlay.
 
-PRESENCE: Every frame should read as one moment lifted out of a longer one, not a pose held
-for the camera. Something is underway — a half-turn, a hand mid-gesture, weight settling on
-one hip, fabric still falling, breath. Where a face is visible and the scene does not say
-otherwise: eyes open, gaze off-camera and occupied, the expression composed and warm rather
-than blank. A face at rest still has someone behind it.
+**Rule:** No before/after framing. No dark patches presented as a condition. Real natural
+variation in skin tone is present and beautiful — not documented.
 
-TEXTURE / FINISH: Clean editorial finish, not a clean digital one. Real skin texture is
-visible and celebrated — pores, fine vellus hair rimmed by the key light, flyaway hairs
-catching the edge light, the natural asymmetry of a real face. No skin-smoothing, no HDR
-halos, no oversharpening, no glossy "stock photo" plastic. Fine film grain rather than
-sterile digital cleanliness. Gentle optical character: slight corner falloff, a faint bloom
-where the light clips the frame edge. Fabrics, towels and surfaces show natural texture and
-slight imperfection.
+### S4 · Journal · June Gloom is not sun protection (16:9 → `journal-uv.jpg`)
 
-NEGATIVE (exclude always): no visible text, no logos, no watermarks, no distorted or extra
-fingers/hands, no uncanny-valley faces, no generic "stocky" spa cheesiness (no bamboo/zen
-gong cliches, no candles-and-rose-petals tropes), no harsh clinical white light, no
-oversaturated skin, no visible product branding unless explicitly requested. Also: no matte
-or powdery skin, no flat frontal fill light, no shadowless midday flatness, no dead
-featureless backdrop, no waxy CGI skin, no vacant or sedated expression, and nothing that
-reads as clinical documentation of a condition.
+Overcast San Diego coastline. Marine layer sky — white, diffuse, luminous. A wide shot
+showing the grey glare of a June morning in a coastal neighbourhood: rooftops or a long
+wide street running toward the ocean, the sky heavy with cloud but bright. No people in
+the primary frame — the point is the environmental light and the deceptive brightness of
+a sky that reads as safe. One or two small distant figures are acceptable. Warm foreground,
+cool mid-sky. The image asks a question: "you thought that was protection?"
 
---- END STYLE ---
+### S5 · Journal · San Diego hard water and your scalp (16:9 → `journal-water.jpg`)
+
+Close macro: water — still, not running — pooling in the palm or resting on the back
+of a hand with warm brown skin. Shot from above or a slight angle at 85mm macro.
+Late-afternoon warm light, one strong directional source catches the water's surface
+tension. The focus falls on where the water contacts the skin — that edge. Nothing else
+in the frame but skin, water, and the warm shadow behind. Quiet and mineral.
+
+### S6 · Journal · Microneedling on dark skin (3:4 portrait → `journal-microchanneling.jpg`)
+
+A woman with deep brown skin in her late twenties, seated upright and turned three-quarters
+toward a tall window at camera left, chin lifted slightly, eyes open and looking off-frame
+past the light. Face bare and unmade-up, natural texture and a soft sheen along the
+cheekbone and brow, fine vellus hair rimmed by the light at the jaw, natural variation
+in tone across the cheek left exactly as it is. Hair in defined natural coils drawn back
+from the face with a soft ivory cloth band. Her head sits 35% in from the left edge and
+35% down from the top of the vertical frame. Below and to the right: out-of-focus ivory
+linen treatment bed and one folded sage towel receding into warm shadow, terracotta wall
+behind. She has just sat up — settled, unhurried, mid-thought.
+
+**Must-not:** no needle pen, no dermaroller, no cartridge tip, no device touching skin.
+
+**Crop rule:** face and both shoulders must sit within the middle 56% of the height — the
+journal index card crops the 3:4 asset to 4:3 from centre and the face must survive that.
+
+### S7 · Journal · Dermaplaning for dark skin — GRAPHIC LAYER scene (3:4 → `journal-dermaplaning.jpg`)
+
+*(See Graphic Layer G1 for the composited element.)*
+
+Extreme close-up at 85mm f/4 — the left cheekbone and jawline of a woman with deep
+brown skin, Fitzpatrick V. The skin texture is fully visible: natural pores, fine vellus
+hair lit at the edge by a single tall window source at camera left. The cheekbone surface
+occupies the upper half of the frame, the jaw curving down and out of focus in the lower
+half. No face visible — this is pure skin, specific, tactile, and warm. A dermaplaning
+blade — held by an esthetician's thumb and forefinger — is positioned above the cheekbone,
+mid-air, not touching. The blade is sharp and clean. The esthetician's knuckles and wrist
+are visible but softly out of focus above the blade. Camera angle is level with the
+cheekbone surface. Late-afternoon key light from camera left catches the blade's edge as
+a thin highlight line. Ivory and warm terracotta in the background.
+
+The lower-left quadrant of the frame has intentional visual breathing room — open skin
+with no blade, softly lit — to receive the graphic overlay described in G1.
+
+---
+
+## Graphic Layers
+
+A Graphic Layer is a design element composited into or requested as part of the image
+generation prompt. These are what separate an editorial image from a stock photo.
+
+Each Graphic Layer spec below is appended to the scene description when requested.
+For AI generation: describe the graphic as part of the image prompt, not as post-production.
+For real post-production: generate the base scene clean, then composite the layer in Figma
+or Photoshop at the specified opacity and color.
+
+### G1 · The Angle Annotation (for dermaplaning article)
+
+Composited in the lower-left quadrant of the image — the breathing-room zone described
+in S7 — is a minimal technical annotation in the style of a precision diagram:
+
+Two clean lines drawn at different angles from a common origin point:
+- A long thin line at exactly 45° upward-right, labeled with the numeral `45°` in a
+  clean, lightweight sans-serif (Jost 300 equivalent), approximately 13px at final render
+  size. This line is ivory (`#FDFBF7`) at 90% opacity.
+- A shorter line at approximately 20° from horizontal — nearly flat — labeled with a
+  small × mark at its endpoint. Same color at 60% opacity, reading as secondary.
+
+A single thin horizontal baseline connects the two origin points. The whole diagram
+reads as a precision instrument annotation — not a slide, not a medical graphic — the
+kind of detail you would see in a high-end magazine spread about technique. It should
+feel designed, not added. The typography is minimal and confident.
+
+**Generation note:** Request the diagram as part of the scene — "a subtle geometric
+angle annotation composited in the lower left, two lines from a common origin, one
+at 45° labeled '45°', one near-flat labeled with a small x, in pale ivory, precision
+style." For best results in Midjourney use `--style raw` so it does not soften the graphic.
+
+### G2 · The Fitzpatrick Gradient (for melanin-specialism pages)
+
+A horizontal strip of six circular swatches, each approximately 24px diameter at
+final render size, sitting at the bottom of the image in a single row with equal spacing.
+The swatches range from Fitzpatrick I (light ivory-beige) to Fitzpatrick VI (very deep
+brown), using accurate skin tone values, not cartoon colors. A thin ivory hairline sits
+above the strip. No labels, no numbers — the range communicates without text.
+Color: the strip background matches the image's lightest area.
+
+### G3 · The Data Strip (for statistics/cost articles)
+
+A clean horizontal bar anchored to the bottom edge of the image, approximately 48px
+tall at final render size, in `rgba(43,43,41,0.75)` — near-black at 75% opacity.
+Inside: a single line of data in Jost 300, approximately 12px, in ivory. Example:
+`$199 · Mission Hills, San Diego · Licensed Esthetician, CA Board`.
+This is a caption bar, not a CTA. Use only when the article has a specific price or
+statistic worth surfacing in the image itself.
+
+### G4 · The Rule Line (minimal editorial, any article)
+
+A single thin horizontal ivory line at exactly one-third of the image height from the
+bottom, running the full width at 30% opacity. Acts as a compositional anchor and
+editorial signal. No text. Easiest to composite; use when the other layers feel too heavy.
+
+---
+
+## Portrait system — how to specify the subject
+
+Use these as slots. They are interchangeable across scenes:
+
+**P1 · Window portrait, face visible:**
+`A woman with [SKIN TONE] skin in her [AGE DECADE], in [POSITION], eyes [open/closed],
+face bare and unmade-up with natural texture, [HAIR DESCRIPTION]. [LIGHT DIRECTION]
+window light. Bare skin, visible pores and natural sheen. No makeup.`
+
+**P2 · No-face, hands and surface:**
+`An esthetician's hands — ungloved — [ACTION] over [BODY PART] with [SKIN TONE] skin.
+The client's face turned away and out of frame past the shoulder. 85mm at f/4.
+[LIGHT DIRECTION]. [SETTING].`
+
+**P3 · Close-up skin detail (no face, no hands):**
+`Extreme close-up of [BODY PART] with [SKIN TONE] skin. Natural texture visible: pores,
+fine vellus hair rimmed by edge light, [SPECIFIC SURFACE FEATURE]. [LIGHT DIRECTION]
+from camera left. No other elements. The image is entirely about this surface.`
+
+Skin tone vocabulary (use accurately):
+- warm ivory-beige (Fitzpatrick I–II)
+- warm tan (Fitzpatrick III)
+- medium brown (Fitzpatrick IV)
+- deep brown (Fitzpatrick V)
+- very deep brown (Fitzpatrick VI)
+
+KIAMO's primary subject range: Fitzpatrick IV–VI. This is the whole practice.
 
 ---
 
 ## After generating
 
-**Hero:** save the wide render as `src/assets/hero-desktop.jpg` and the tall one as
-`src/assets/hero-mobile.jpg`, overwriting what is there. `Hero.astro` imports both by
-name, so no code change is needed — but check the headline stays legible at 375px,
-640px and 1400px. Spec §4.1 forbids adding a scrim, so if the copy fights the image,
-regenerate with more empty wall rather than darkening the photograph.
+**Save naming convention:**
+- Hero desktop: `src/assets/hero-desktop.jpg`
+- Hero mobile: `src/assets/hero-mobile.jpg`
+- Journal articles: `src/assets/journal-[slug].jpg`
+- Treatment pages: `src/assets/treatment-[slug].jpg`
+- Concern tiles: `src/assets/concern-[name].jpg`
 
-**Journal:** save as `src/assets/journal-pigmentation.jpg`, then point the article at it:
+**Check at two crops before accepting:**
+- Article hero: `aspect-[0.85]` anchored at `object-[35%_35%]`
+- Journal index card: `aspect-4/3` cropped from centre
 
+If the face lands outside both crop windows, regenerate. Do not move the crop.
+
+**Then update `articles.ts`:**
 ```ts
-// src/data/articles.ts
-import pigmentationHero from '../assets/journal-pigmentation.jpg';
-// …
-image: pigmentationHero,
-imageAlt: 'Portrait in soft daylight showing natural variation in skin tone across the cheek',
+import dermaplaning from '../assets/journal-dermaplaning.jpg';
+// in the article object:
+image: dermaplaning,
+imageAlt: 'Close-up of a dermaplaning blade at 45 degrees above deep brown skin, with angle annotation',
 ```
 
-The article currently reuses `concern-pigmentation.jpg`, which is an honest match but
-not a specific one — the same gap `CLIENT-INPUTS.md` records for the dermaplaning page.
+---
 
-**Journal — microchanneling:** save as `src/assets/journal-microchanneling.jpg`, then:
+## Style Block — append to every prompt, never edit
 
-```ts
-// src/data/articles.ts
-import microchanneling from '../assets/journal-microchanneling.jpg';
-// …
-image: microchanneling,
-imageAlt: 'Seated portrait in late-afternoon window light, bare skin showing its natural texture and tone',
 ```
+CAMERA: Sony A7IV, 50mm f/1.8 prime for environmental/portrait. 85mm f/4 macro for
+close-up skin/treatment/hands detail. Never wide-angle distortion. Never fisheye.
 
-Check the crop at both aspect ratios — `aspect-[0.85]` on the article hero and `4:3` on
-the journal index card — before accepting the render.
+FILM EMULATION: Kodak Portra 400. Warm negative film character — slight grain, rich
+shadow detail, no crushed blacks, no blown highlights. Not desaturated. Not HDR.
+Not cinematic teal-orange. Warm and alive.
+
+APERTURE/DOF: f/2.2 for portraits — subject sharp, background softly falling off
+without blowing out. f/4 for skin detail — enough depth to keep the contact zone in
+crisp focus without flattening texture.
+
+LIGHT SOURCE: One large soft source — a tall window or large diffused equivalent —
+placed 60–75 degrees off the camera axis and slightly behind the subject's plane.
+Light wraps around the form and leaves a bright edge along the cheekbone, jaw or
+shoulder. Late-afternoon quality: warm, angled, with somewhere for the shadows to go.
+Contrast ratio approximately 3:1 — the shadow side stays readable, never filled flat.
+Fill from ambient bounce off ivory walls and linens only. Never a ring light. Never
+on-camera flash. Never clinical fluorescent overhead.
+
+SPECULARS: Soft speculars are wanted — sheen along the cheekbone, the brow, the bridge
+of the nose, the lower lip. On deep melanin-rich skin, matte renders as ashy — the
+sheen is non-negotiable. Speculars stay soft and shaped by the large source, never
+blown to paper white, never a hard hotspot.
+
+BACKGROUND: Light lands on the background — a gradient across the wall, falloff into
+shadow at the frame edge. Air in the room. Faint atmosphere. Never a flat painted backdrop.
+
+COLOR GRADE: Warm key around 5600K against cooler ambient shadow — lit side warm, shadow
+side drifting slightly to skylight blue. No green or magenta cast.
+
+PALETTE: Ivory #F3EDE4 and terracotta #C98B6E in walls, linens and props. Charcoal
+#2B2B29 for deep shadow and dark wardrobe. Sage #9CA98C as a small accent only — never
+dominant. Something in every frame reaches near-black so the highlights have somewhere
+to sing from.
+
+SKIN TONES: Accurate and warm. Never desaturated. Never blue-shifted. Deep and medium
+tones render with true undertone, natural luminosity and surface sheen. Never ashy.
+Never orange. Never matte. The palette lives in the surroundings, never pushed onto
+the skin itself.
+
+COMPOSITION: Subject off-center, rule of thirds. Headroom for text overlay when needed.
+Open space is lit space — a gradient, a falloff, light on a wall — never a dead flat area.
+
+PRESENCE: One moment lifted out of a longer one, not a pose. Something is underway.
+Where a face is visible: eyes open, gaze off-camera and occupied, expression composed
+and warm. A face at rest still has someone behind it.
+
+TEXTURE: Clean editorial finish, not clean digital. Real skin texture celebrated — pores,
+fine vellus hair rimmed by key light, flyaway hairs catching edge light. No skin-smoothing.
+No oversharpening. No glossy stock-photo plastic. Fine film grain. Slight corner falloff.
+
+EXCLUDE ALWAYS: no visible text or logos unless a Graphic Layer specifies it, no distorted
+or extra fingers, no uncanny-valley faces, no spa clichés (bamboo, candles, white robe),
+no harsh clinical white light, no oversaturated skin, no product branding, no matte or
+powdery skin, no flat frontal fill light, no featureless backdrop, no waxy CGI skin,
+no vacant expression, no clinical documentation of a skin condition, no ring-light
+catchlights, no needle pens or dermarollers touching skin.
+```
