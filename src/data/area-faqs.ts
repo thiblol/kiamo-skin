@@ -46,17 +46,27 @@ export const areaFaqs: Record<string, Faq[]> = {
     {
       question: 'How far is KIAMO SKIN from La Jolla?',
       answer:
-        'Around twelve miles, or roughly twenty minutes outside the commute. From the Village, drop down La Jolla Parkway to I-5 south, stay on it past Rose Canyon and Old Town, and exit at Washington Street.',
+        'About twelve miles, or roughly twenty minutes outside the commute. From the Village near Prospect Street, Torrey Pines Road south connects to I-5 past UCSD and Rose Canyon — stay on to Washington Street. From Bird Rock, La Jolla Boulevard north to La Jolla Parkway east reaches I-5 in about five minutes. From La Jolla Shores, Torrey Pines Road south picks up the same I-5 entrance near UCSD.',
     },
     {
-      question: 'When is the easiest time to drive down from La Jolla?',
+      question: 'What is the easiest time to drive down from La Jolla?',
       answer:
-        'Mid-morning and early afternoon. Southbound I-5 stacks up through UTC and Sorrento Valley on the morning run, so an appointment either side of that window is a materially shorter drive than the same trip at eight in the morning.',
+        'Mid-morning or early afternoon. Southbound I-5 stacks through UTC and Sorrento Valley during the morning commute — roughly seven to nine. After ten the traffic clears significantly, and early afternoon is consistently the fastest window. The same distance that takes twenty minutes at eleven takes thirty-five or forty at eight, particularly on weekdays.',
     },
     {
-      question: 'Does year-round ocean swimming affect the scalp?',
+      question: 'What does year-round ocean swimming do to the scalp?',
       answer:
-        'Repeated salt water and direct sun strip the barrier, and the scalp takes it hardest because the part line receives UV with nothing on it. Keravive scalp therapy clears the buildup and rehydrates that skin. It is non-abrasive, which matters when exposure has already sensitized the area.',
+        'Salt water dissolves the lipid barrier on both the scalp skin and the hair shaft. Repeated exposure — daily or near-daily, which is typical for La Jolla Cove swimmers, Windansea surfers and regular Shores swimmers — means the scalp never fully recovers between sessions. Daily rinsing removes the salt but also strips the oils that hold the barrier together. What accumulates is a cycle of dryness, microflaking and follicle buildup that ordinary shampoo addresses only superficially. Keravive scalp therapy clears the buildup at the follicle and delivers growth factors directly into the scalp skin — it is a corrective treatment for that specific state, not a deep conditioning session.',
+    },
+    {
+      question: 'Is Keravive scalp therapy the same as a head spa?',
+      answer:
+        'No. A head spa — the Japanese-origin scalp massage and steam treatment — addresses scalp tension, relaxation and light cleansing. Keravive is a clinical, three-step treatment developed by the makers of HydraFacial specifically for scalp health: it extracts buildup from the follicle, delivers a growth-factor serum into the scalp skin, and leaves behind a take-home solution for daily use between sessions. It is designed as a series of three treatments, and its results are structural rather than temporary. The mechanism and the outcome are different from a head spa.',
+    },
+    {
+      question: 'What does repeated salt water exposure do to the skin barrier on the face?',
+      answer:
+        'Salt breaks down the lipid layer that holds the outermost skin cells together. Each session strips some of that layer, and the freshwater rinse afterward removes what remains. Over time — particularly with daily or near-daily ocean exposure — the barrier becomes compromised: skin is tight after washing, reactive to products it previously tolerated, and more sensitive to UV because the barrier that ordinarily diffuses some of it is thinner. HydraFacial is the appropriate response because it works without abrasion — it cleanses, extracts and infuses hydration without adding further stress to a barrier already under load. DMK Enzyme Therapy addresses the same problem from a repair angle, working with the skin\'s own function rather than exfoliating a surface that is already raw.',
     },
   ],
 
@@ -64,17 +74,27 @@ export const areaFaqs: Record<string, Faq[]> = {
     {
       question: 'How long is the drive from Chula Vista to Mission Hills?',
       answer:
-        'Twenty to twenty-five minutes off-peak, and closer to forty once the South Bay starts moving north. From western Chula Vista it is about thirteen miles up I-5 through National City to the Washington Street exit.',
+        'Twenty to twenty-five minutes off-peak from most of western and central Chula Vista. From eastern neighbourhoods like Eastlake or Otay Ranch, SR-125 north to SR-54 west to I-805 north is usually the faster line than dropping to I-5 first. Once the South Bay starts moving north — generally from seven to nine in the morning — add fifteen to twenty minutes to any of those routes.',
     },
     {
-      question: 'What is the fastest route from Eastlake or Rancho del Rey?',
+      question: 'Which neighbourhoods in Chula Vista are closest to Mission Hills?',
       answer:
-        'SR-54 west to I-805 north is usually quicker than dropping down to I-5 first. Exit at Washington Street either way. The I-805 line avoids the National City stretch of I-5, which is where the northbound delay tends to build.',
+        'Western Chula Vista — the Third Avenue Village corridor, the bayfront near H Street and the marina district — is the closest, about thirteen miles up I-5. Eastlake and Rancho del Rey add two or three miles but run faster via SR-125 and I-805, avoiding the National City stretch of I-5. Otay Ranch, the furthest inland, is still inside thirty minutes off-peak on SR-125 north.',
     },
     {
-      question: 'Why is melasma so common in the South Bay?',
+      question: 'Why is melasma so much more common in the South Bay than in coastal San Diego?',
       answer:
-        'Melasma concentrates in Fitzpatrick types III to V, and chronic UV is its most consistent trigger. Chula Vista is the county’s second-largest city and roughly six in ten residents are Hispanic or Latino, so the largest melanin-rich population is also the strongest melasma catchment. Lira peels answer it because strength escalates across a series rather than in one visit.',
+        'Two factors work together. First, Chula Vista is the county\'s largest concentration of Hispanic and Latino residents, and melasma concentrates in Fitzpatrick skin types III to V. Second, the inland neighbourhoods — Eastlake, Rancho del Rey, Otay Ranch — sit past the marine layer that keeps the coast gray and UV-diffused through May and June. Inland summers run eight to fifteen degrees warmer, with more clear days and no cloud buffer between skin and the sun. Cumulative UV over years is the most consistent trigger for melasma, and that UV load is simply higher here than on the coast.',
+    },
+    {
+      question: 'Can a chemical peel make dark marks worse on darker skin?',
+      answer:
+        'Yes, if the acid is too aggressive or applied before the skin is ready. Melanin-rich skin responds to trauma — including a poorly chosen peel — by producing more pigment, a reaction called post-inflammatory hyperpigmentation. This is the same process that causes the dark mark after a pimple, just driven by the peel instead of the breakout. Lira peels are chosen and paced differently for Fitzpatrick types III to V: the strength is matched to the skin at consultation and escalated across a series rather than maximised on the first visit. The pacing is the treatment, not a cautious compromise.',
+    },
+    {
+      question: 'How many peel sessions does it take to see results on melasma?',
+      answer:
+        'Most clients notice visible change after two sessions, with the full result apparent across three to four. Melasma is a chronic condition driven by UV exposure, so the series addresses the pigment that has already formed while home care — specifically daily SPF — prevents new formation between visits. A plan without consistent SPF will not hold, because new UV exposure will continue triggering the same pathway the peels are working to clear.',
     },
   ],
 
@@ -92,7 +112,7 @@ export const areaFaqs: Record<string, Faq[]> = {
     {
       question: 'Can salt water and wind damage the skin barrier?',
       answer:
-        'Yes. Salt water, wind and the rinse afterwards take away more than they put back, and skin ends up tight, reactive and stinging under products it used to tolerate. DMK Enzyme Therapy is built for that state, working with the skin’s own function rather than exfoliating a surface that is already raw.',
+        "Yes. Salt water, wind and the rinse afterwards take away more than they put back, and skin ends up tight, reactive and stinging under products it used to tolerate. DMK Enzyme Therapy is built for that state, working with the skin's own function rather than exfoliating a surface that is already raw.",
     },
   ],
 
@@ -100,17 +120,27 @@ export const areaFaqs: Record<string, Faq[]> = {
     {
       question: 'How far is Mission Hills from Del Mar?',
       answer:
-        'About twenty-two miles south on I-5 from Del Mar Heights Road, exiting at Washington Street. Off-peak that is a twenty-five minute drive.',
+        'About twenty-two miles south on I-5 from Del Mar Heights Road, exiting at Washington Street. Off-peak that is a twenty-five minute drive. From Del Mar Village near 15th Street, Del Mar Heights Road east connects to I-5 in about three minutes. From the Fairgrounds on Jimmy Durante Boulevard, Via de la Valle west reaches I-5 directly.',
     },
     {
-      question: 'Does race season make the drive south longer?',
+      question: 'Does the race meet make the southbound drive longer?',
       answer:
-        'Yes. Through race season, and on the southbound merge past Sorrento Valley, add fifteen or twenty minutes to the usual run. I-805 south takes about the same time and is the inland alternative when I-5 is stacked.',
+        'Yes, noticeably. The thoroughbred meet runs mid-July through September, and Opening Day and major stakes races push midday and afternoon traffic onto I-5 from both directions. The southbound merge past Sorrento Valley — which already backs up on commute mornings — adds fifteen to twenty minutes on race days. I-805 south from Del Mar Heights Road runs a similar distance and avoids that pinch point when I-5 is stacked.',
     },
     {
-      question: 'Can sun exposure show up as texture rather than a burn?',
+      question: 'Can sun exposure from the Fairgrounds season show up as texture rather than a burn?',
       answer:
-        'Often, yes. Long afternoons in open sun read as uneven tone and rough texture rather than an obvious burn, and the scalp takes as much of it as the face. Procell Microchanneling rebuilds texture across a series, Keravive clears and rehydrates the scalp, and a HydraFacial holds the result between them.',
+        'Often, yes. The county fair and the race meet together account for nearly three months of long outdoor afternoons in direct sun — the Grandstand faces southwest, the infield is open, and afternoon UV on the coast is at its highest after the marine layer burns off. That kind of sustained, cumulative exposure does not produce a single visible burn; it produces uneven tone, rough texture and a scalp that is drier and more flaky than it was in spring. Procell Microchanneling addresses texture at the collagen level across a series of three. Keravive clears and rehydrates the scalp. A HydraFacial holds both results between treatment intervals.',
+    },
+    {
+      question: 'What treatments work best after weeks of outdoor event exposure?',
+      answer:
+        'The starting point is always a full skin assessment, because cumulative UV shows differently depending on skin type, barrier condition and how consistently SPF was used. For texture and tone, Procell Microchanneling or a Lira peel series addresses the result of that exposure at different depths. For scalp dryness and buildup, Keravive works through the follicle rather than on the surface. What can safely be combined in one visit depends on the skin\'s current state and is decided at consultation.',
+    },
+    {
+      question: 'How does scalp damage from sun exposure differ from facial damage?',
+      answer:
+        'The mechanism is the same — UV drives melanin production and collagen breakdown — but the scalp is harder to protect and rarely treated. Most people never apply SPF to their part line, and the part receives direct overhead UV on every clear afternoon. Salt, wind and daily rinsing also affect the scalp more than the face, because shampoo strips the lipid barrier repeatedly. The result is a scalp that is drier, more flaky and slower to recover than it should be. Keravive addresses that specifically: it clears follicle buildup, delivers growth factors at the follicle level, and rehydrates the scalp skin.',
     },
   ],
 
@@ -136,17 +166,27 @@ export const areaFaqs: Record<string, Faq[]> = {
     {
       question: 'How far is Pacific Beach from the studio?',
       answer:
-        'Roughly seven miles, or about fifteen minutes. Take Garnet or Grand Avenue east to I-5 south, then come off at Washington Street.',
+        'Roughly seven miles, or about fifteen minutes off-peak. From the main Garnet Avenue strip, head east to I-5 south and exit at Washington Street. From Crown Point or Sail Bay, Ingraham Street south to Grand Avenue east is the same distance. Summer weekend traffic on Garnet and Ingraham west of I-5 can add ten to fifteen minutes from mid-morning onward — an earlier appointment clears that.',
     },
     {
-      question: 'Does beach traffic affect the drive from Pacific Beach?',
+      question: 'Can you accumulate sun damage on a gray day in Pacific Beach?',
       answer:
-        'Summer afternoons and weekend beach traffic clog Garnet and the Ingraham Street approach in both directions. An earlier appointment is usually the shorter drive, even though the distance never changes.',
+        'Yes — and it is the more common way damage builds here. May Gray and June Gloom keep the coast overcast every morning, sometimes into early afternoon, without once lowering the UV index underneath. UVA penetrates cloud cover and fog; it is the wavelength responsible for pigmentation and collagen breakdown, and it keeps working whether or not the sky looks sunny. Pacific Beach lives outdoors year-round — the boardwalk, the surf breaks at Tourmaline, the bay launch at Crown Point — and gray mornings are precisely when SPF gets skipped.',
     },
     {
-      question: 'Can you accumulate sun damage on a gray day?',
+      question: 'What does salt water do to the skin barrier over time?',
       answer:
-        'Yes, and it is the more common way it happens here. May Gray and June Gloom sit over the coast all morning, burn off by early afternoon and never once lower the UV underneath. Gray sky is the usual reason SPF gets skipped, and it accumulates as uneven tone over a barrier already stripped by salt and wind.',
+        'Repeated salt water exposure strips the lipid barrier — the oils that hold the outermost skin layer together. Salt dissolves those lipids efficiently, and the freshwater rinse afterward removes whatever the ocean left behind but also washes away the barrier it was sitting on. Over time the skin becomes tight and reactive, stinging under products it once tolerated and sensitised to the sun it is also being exposed to. DMK Enzyme Therapy works with the skin\'s own repair function rather than exfoliating a surface that is already raw — it is the appropriate treatment for that state, not a stronger peel.',
+    },
+    {
+      question: 'What is the difference between a HydraFacial and a chemical peel for sun damage?',
+      answer:
+        'A HydraFacial cleanses, extracts and infuses hydration in one visit — it is restorative without removing skin, and it works on a sensitised, UV-damaged barrier without irritating it further. A Lira chemical peel works at a deeper level to address uneven pigmentation and texture over a series of visits. They serve different stages: a HydraFacial supports the barrier and delivers immediate results, while a peel series addresses the accumulated pigment that a HydraFacial alone will not shift. Many Pacific Beach clients do both, using the HydraFacial to maintain the barrier between peel intervals.',
+    },
+    {
+      question: 'Does the June Gloom affect the scalp as well as the face?',
+      answer:
+        'Directly. The part line receives UV from above with nothing covering it, and on overcast mornings when SPF is skipped, the scalp accumulates the same UV the face does. Salt water from ocean swimming or surfing compounds it: the part line and hairline take repeated direct sun while the scalp skin dries out under daily rinsing. Keravive scalp therapy addresses both — it clears the buildup at the follicle and rehydrates the scalp skin without any of the abrasion that sensitive skin cannot take.',
     },
   ],
 
@@ -172,17 +212,27 @@ export const areaFaqs: Record<string, Faq[]> = {
     {
       question: 'How far is North Park from Mission Hills?',
       answer:
-        'Three and a half miles, or about ten minutes — the shortest trip of any area served. Both are Uptown neighborhoods with Hillcrest between them, and parking is free on site.',
+        'Three and a half miles — about ten minutes via University Avenue west through Hillcrest to Washington Street, then Reynard Way. No freeway, no on-ramp, no merge. It is the shortest trip of any area served, and the only one where the whole route stays on surface streets. Parking is free on site.',
     },
     {
-      question: 'Can you get there from North Park without a freeway?',
+      question: 'Can you get from North Park to Mission Hills without a freeway?',
       answer:
-        'Yes, and it is the only area served that needs no freeway at all. University Avenue west through Hillcrest, then onto Washington Street, puts you on Reynard Way.',
+        'Yes — University Avenue west through Hillcrest to Washington Street is the whole route. No on-ramp, no merge, no freeway. From the 30th and University core, from South Park, from the Normal Street corridor or from the Park Boulevard residential blocks, the same surface-street route reaches Reynard Way in ten minutes. This is not true of any other area in the service area.',
     },
     {
-      question: 'Which treatment fits into a short appointment window?',
+      question: 'How does being close actually change the treatment plan?',
       answer:
-        'Dermaplaning is the treatment built for a short visit, and it pairs well with a peel because a cleared surface lets the acid work evenly. Pigmentation work still runs on intervals — Lira peels escalate in strength across a series with home care between visits, and there is no single-session version.',
+        'Corrective work runs on intervals — a Lira peel series typically calls for three to four sessions spaced four to six weeks apart, with specific home care between each. The interval is fixed by how the skin recovers, not by the drive. But whether someone finishes a course depends heavily on how much it costs them in time. From North Park, a visit is a ten-minute errand on a weekday afternoon. From Carlsbad, it is a logistics decision that involves an hour of driving. The same plan has a much higher completion rate for someone three miles away, and the completed plan is the one that produces results.',
+    },
+    {
+      question: 'Is dermaplaning safe on darker skin tones?',
+      answer:
+        'Yes. Dermaplaning uses a surgical-grade blade to physically remove dead skin and vellus hair from the surface — it does not use acids, heat or UV. There is no melanin response to physical exfoliation of the outer dead-cell layer, which means post-inflammatory hyperpigmentation is not a risk the way it is with some chemical exfoliants. It is particularly effective as a preparation step before a peel, because a cleared surface allows the acid to penetrate evenly rather than working around a layer of built-up dead cells.',
+    },
+    {
+      question: 'Which treatment is most popular from North Park?',
+      answer:
+        'Peel series paired with dermaplaning — and proximity is the reason. The peel series requires multiple visits, and a ten-minute trip from University Avenue is what makes it realistic rather than aspirational. Dermaplaning is used either as a preparation step before a peel or as a standalone maintenance treatment between peel intervals. The combination is more effective than either alone, and it is the plan most clients from this area stay consistent with.',
     },
   ],
 };
