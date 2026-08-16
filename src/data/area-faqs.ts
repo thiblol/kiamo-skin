@@ -40,6 +40,16 @@ export const areaFaqs: Record<string, Faq[]> = {
       answer:
         'Yes. KIAMO SKIN has one treatment room and no rotating roster, so the same licensed esthetician assesses your skin, performs the treatment and adjusts the plan next time. That continuity is the point of corrective work, because what to do next depends on how your skin responded last.',
     },
+    {
+      question: 'What skin concerns do Mission Hills clients most often book for?',
+      answer:
+        'The most common first appointments from Mission Hills are HydraFacials, typically with a full consultation and skin analysis built in. From there, many plans extend into DMK Enzyme Therapy for barrier repair or a Lira peel series for pigmentation and uneven tone — proximity makes a multi-visit corrective plan realistic in a way it is not from the outer suburbs. Some clients settle into a maintenance routine of HydraFacials spaced four to six weeks apart. What the plan looks like is always decided at the first visit.',
+    },
+    {
+      question: 'Is there parking at the studio on Reynard Way?',
+      answer:
+        'Yes — free parking on site at 3067 Reynard Way. Street parking on Reynard is also available in the immediate blocks. Most Mission Hills and Middletown clients can walk or drive a few minutes, and the Washington Street bus line stops nearby if you prefer not to drive.',
+    },
   ],
 
   'la-jolla': [
@@ -114,6 +124,16 @@ export const areaFaqs: Record<string, Faq[]> = {
       answer:
         "Yes. Salt water, wind and the rinse afterwards take away more than they put back, and skin ends up tight, reactive and stinging under products it used to tolerate. DMK Enzyme Therapy is built for that state, working with the skin's own function rather than exfoliating a surface that is already raw.",
     },
+    {
+      question: 'Which part of Encinitas is furthest from I-5?',
+      answer:
+        'Olivenhain, in the eastern part of the city, is the most inland — about five miles from the freeway on winding roads through horse properties and rural corridors. El Camino Real south to Leucadia Boulevard is the practical route, adding about ten to fifteen minutes compared to downtown Encinitas or Leucadia. Encinitas Ranch and the Quail Gardens area are more central and connect to I-5 via Leucadia Boulevard or Encinitas Boulevard in under ten minutes.',
+    },
+    {
+      question: 'Does DMK Enzyme Therapy work on skin that is already reactive from surfing?',
+      answer:
+        "That is exactly the state it is designed for. DMK Enzyme Therapy works by activating the skin's own repair function rather than removing surface layers — there is no abrasion, no acid and nothing that adds stress to a barrier that is already compromised. Reactive, sensitised skin responds to it precisely because it does not exfoliate; it supports. The treatment addresses the barrier from the inside out, which is the opposite of what a peel or scrub does and why it is the appropriate plan when the surface is already raw.",
+    },
   ],
 
   'del-mar': [
@@ -160,6 +180,16 @@ export const areaFaqs: Record<string, Faq[]> = {
       answer:
         'Set the series first and place the appointments around it, rather than booking whenever the skin flares. Procell Microchanneling is usually three sessions spaced four to six weeks apart, and Keravive scalp therapy is also designed as a series of three. Pairing two things into one visit is often the difference between finishing a course and abandoning it halfway, and what can safely be combined is decided at consultation.',
     },
+    {
+      question: 'Which part of Carlsbad is closest to Mission Hills?',
+      answer:
+        'La Costa and Aviara, in the southern part of the city near Palomar Airport Road, are the closest at about thirty miles down I-5. Carlsbad Village at the north end, near Carlsbad Village Drive and the COASTER station, is about thirty-five miles. Bressi Ranch and Calavera Hills, inland from El Camino Real, are similar in distance to La Costa. Any of these routes runs thirty to forty minutes on a clear freeway.',
+    },
+    {
+      question: 'Does Procell Microchanneling require much recovery time?',
+      answer:
+        'Minimal. The treated skin is pink for about twenty-four hours, and most clients schedule around that rather than needing a full recovery window. The larger logistics question from Carlsbad is the series itself — three sessions spaced four to six weeks apart — and that is what the first consultation addresses. Whether Procell can be paired with another treatment on the same visit depends on the skin condition and is decided then.',
+    },
   ],
 
   'pacific-beach': [
@@ -205,6 +235,16 @@ export const areaFaqs: Record<string, Faq[]> = {
       question: 'Is sun exposure worse inland than at the coast?',
       answer:
         'Yes. La Mesa sits about ten miles inland, far enough to miss the marine layer that keeps the beach gray through May and June, and summer afternoons run roughly eight to fifteen degrees warmer than La Jolla or Mission Beach. More clear days means more UV year after year, and cumulative UV is the most consistent driver of melasma and uneven tone.',
+    },
+    {
+      question: 'Does the La Mesa inland climate change how peel treatments are planned?',
+      answer:
+        'It does, specifically for post-peel skin care. The coast has built-in UV diffusion from the marine layer through May and June — La Mesa does not. A Lira peel sensitises the skin surface for two to four weeks after each session, and clear-sky afternoons in the inland valleys mean the UV load the treated skin faces is genuinely higher than at the beach. Daily SPF is not optional between treatments for anyone, but for La Mesa clients it is the variable that determines whether the series holds. The first session is always calibrated to the actual UV exposure the skin will encounter, not to a standard protocol.',
+    },
+    {
+      question: 'How does cumulative inland UV affect pigmentation over time?',
+      answer:
+        'It builds gradually and without obvious incident — there is no single afternoon that looks like the cause. The pattern is months and years of clear-sky afternoons with less SPF than the UV required, and the result is uneven tone or melasma that appears to have arrived all at once. Inland areas like La Mesa accumulate more UV annually than the coast because the marine layer is absent for most of the day. A Lira peel series addresses the pigment that has already formed, and daily SPF is the variable that determines whether the result holds. Without it, new UV exposure continues triggering the same pathway the peels are working to clear.',
     },
   ],
 
