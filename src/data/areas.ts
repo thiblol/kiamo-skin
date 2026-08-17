@@ -24,6 +24,18 @@ export interface Area {
   gettingHere: string;
   localConcern: { heading: string; body: string };
   /**
+   * Local transactional keywords to weave into H2s, service descriptions, and body copy.
+   * Based on DataForSEO research for each area.
+   */
+  keywordContext?: {
+    /** Primary transactional keyword for H2 treatment section (e.g., "HydraFacial in La Jolla") */
+    primaryKeyword: string;
+    /** Treatment+location phrases to weave into service descriptions and body */
+    treatmentPhrases: string[];
+    /** Neighborhood names to mention in allAbout and gettingHere sections */
+    neighborhoodMentions: string[];
+  };
+  /**
    * One sentence linking to /melanin-rich-skin, rendered under localConcern. Set
    * only where the area's own concern is genuinely a melanin-rich-skin one, so
    * the link stays editorial rather than becoming sitewide boilerplate.
@@ -81,6 +93,16 @@ export const areas: Area[] = [
       heading: 'What does corrective skin work actually require?',
       body: 'Most facial treatments are single-visit: one outcome, one session, done. Corrective work is different because the skin problem does not resolve in one appointment — it is managed across a series, and what the next visit looks like depends on how the skin responded to the last one. A peel series, a Procell microchanneling course, a Keravive scalp treatment — all are built on intervals with a plan that adjusts. That is why the studio has one treatment room and no rotating roster. The same licensed esthetician assesses the skin, performs the treatment and adjusts the plan next time. For Mission Hills clients, proximity makes that continuity practical: most of the neighborhood is inside a five-minute drive, and a ten-minute round trip is a different commitment than an afternoon in traffic.',
     },
+    keywordContext: {
+      primaryKeyword: 'corrective facials in San Diego',
+      treatmentPhrases: [
+        'HydraFacial in San Diego',
+        'DMK enzyme therapy San Diego',
+        'corrective skin treatments Mission Hills',
+        'facial studio San Diego'
+      ],
+      neighborhoodMentions: ['Hillcrest', 'Bankers Hill', 'Middletown', 'Old Town', 'Little Italy']
+    },
     schemaDescription:
       'HydraFacial, DMK enzyme therapy and corrective facials at the KIAMO SKIN studio on Reynard Way in Mission Hills, San Diego, with free parking on site.',
     allAbout: {
@@ -112,6 +134,17 @@ export const areas: Area[] = [
       heading: 'What does year-round ocean exposure actually do to skin and scalp?',
       body: 'La Jolla has a genuine, year-round ocean swimming culture — the La Jolla Cove Swim Club has operated since 1916, and a group swims there every morning regardless of season. Windansea has a year-round surf community, La Jolla Shores draws swimmers and divers, and the blufftop above the Cove gets direct afternoon sun with no tree cover. Salt water strips the skin barrier with every session — the rinse afterward removes the salt but also washes away the oils that hold the barrier together. Over weeks and months that leaves skin tight, reactive and prone to sensitivity under products it used to tolerate. The scalp takes it hardest: the part line receives UV directly, salt builds up under hair, and daily rinsing never fully clears it. Keravive scalp therapy was built for exactly that state — it clears the buildup, delivers growth factors into the follicle, and rehydrates the scalp skin. A HydraFacial does the same structural work on the face: cleanse, extract and infuse without the abrasion that sensitised skin cannot handle.',
     },
+    keywordContext: {
+      primaryKeyword: 'HydraFacial in La Jolla',
+      treatmentPhrases: [
+        'facial La Jolla',
+        'microneedling La Jolla',
+        'chemical peel La Jolla',
+        'Keravive scalp treatment La Jolla',
+        'best esthetician La Jolla'
+      ],
+      neighborhoodMentions: ['La Jolla Village', 'Bird Rock', 'La Jolla Shores', 'Windansea', 'the Cove', 'UCSD']
+    },
     schemaDescription:
       'Corrective facials and scalp therapy for La Jolla clients at the KIAMO SKIN studio in Mission Hills, San Diego.',
     allAbout: {
@@ -142,6 +175,17 @@ export const areas: Area[] = [
     localConcern: {
       heading: 'Why does the South Bay see more melasma than anywhere else in the county?',
       body: 'Chula Vista is San Diego County\'s second-largest city, and roughly six in ten residents identify as Hispanic or Latino. Melasma concentrates in Fitzpatrick skin types III to V, and chronic UV exposure is its most consistent trigger — which means the county\'s largest melanin-rich population is also its strongest melasma catchment. Eastlake and Rancho del Rey sit five to ten miles inland from the coast, past the marine layer that keeps the beach gray through May and June. Summers inland run eight to fifteen degrees warmer, and those neighbourhoods fall inside the valley heat advisories the coast never gets. More clear days, year after year, is the mechanism. Lira chemical peels answer it because the acid is matched to the skin at consultation and strength escalates across a series rather than in one visit. Aggressive resurfacing on melanin-rich skin triggers post-inflammatory hyperpigmentation — the exact problem you walked in with, only deeper. Pacing is the treatment.',
+    },
+    keywordContext: {
+      primaryKeyword: 'facial Chula Vista',
+      treatmentPhrases: [
+        'HydraFacial Chula Vista',
+        'chemical peel for melasma Chula Vista',
+        'microneedling Chula Vista',
+        'pigmentation treatment South Bay',
+        'best esthetician Chula Vista'
+      ],
+      neighborhoodMentions: ['Eastlake', 'Otay Ranch', 'Rancho del Rey', 'Bonita', 'Olympic Training Center']
     },
     melaninNote:
       'Pigmentation in melanin-rich skin is what this studio was built around:',
@@ -176,6 +220,23 @@ export const areas: Area[] = [
       heading: 'Why does surfing leave skin reactive?',
       body: "Encinitas surfs year-round — Swami's and Moonlight hold water in every season, and Surfer ranked the town third in the country. Salt water, wind off the bluffs and a rinse afterwards take away far more than they put back, and skin ends up tight, reactive and stinging under products it used to tolerate. DMK Enzyme Therapy is built for exactly that state, working with the skin's own function to rebuild the barrier instead of exfoliating a surface that is already raw. Keravive handles the same problem on the scalp, where salt dries and daily rinsing never quite clears the buildup.",
     },
+    keywordContext:     {
+          "primaryKeyword": "facial Encinitas",
+          "treatmentPhrases": [
+                "HydraFacial Encinitas",
+                "DMK enzyme therapy for surfers Encinitas",
+                "microneedling Encinitas",
+                "barrier repair facial Leucadia",
+                "best facial Encinitas"
+          ],
+          "neighborhoodMentions": [
+                "Leucadia",
+                "Cardiff-by-the-Sea",
+                "Moonlight Beach",
+                "Swamis",
+                "Olivenhain"
+          ]
+    },
     schemaDescription:
       'Barrier repair, scalp therapy and corrective facials for Encinitas clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
     allAbout: {
@@ -206,6 +267,22 @@ export const areas: Area[] = [
     localConcern: {
       heading: 'What does a full season at the Fairgrounds do to skin?',
       body: 'The Del Mar social calendar is built around two back-to-back outdoor events: the San Diego County Fair runs from June into early July, and the summer thoroughbred race meet runs from mid-July into September. Both draw long afternoons on the grounds — the Grandstand faces southwest, the infield track is exposed, and Opening Day and major stakes events fill weekdays as well as weekends. The coast here faces southwest and receives direct afternoon sun with no ridge line to soften it; the marine layer clears by early afternoon on most summer days, and the UV it was masking lands on unprotected skin for the rest of the day. That kind of cumulative, sustained exposure does not look like a sunburn. It shows up as uneven tone and rough texture across the face and on the scalp — the part line and the ears take as much sun as the cheeks over a full season. Procell Microchanneling rebuilds that texture across a series of three, Keravive clears and rehydrates the scalp, and a HydraFacial holds the result between them.',
+    },
+    keywordContext:     {
+          "primaryKeyword": "facial Del Mar",
+          "treatmentPhrases": [
+                "HydraFacial Del Mar",
+                "microneedling Del Mar",
+                "Procell microchanneling North County",
+                "Keravive scalp therapy Del Mar",
+                "best esthetician Del Mar"
+          ],
+          "neighborhoodMentions": [
+                "Del Mar Heights",
+                "Carmel Valley",
+                "Torrey Pines",
+                "Fairgrounds"
+          ]
     },
     // "Del Mar" is kept more than 40 characters from studio/location/located/visit us
     // in every field — the guard regex scans in both directions.
@@ -240,6 +317,23 @@ export const areas: Area[] = [
       heading: 'Why do Carlsbad clients choose series-based treatments?',
       body: 'The drive is the constraint that shapes a Carlsbad plan. Corrective work runs on intervals — Procell Microchanneling is usually three sessions spaced four to six weeks apart, and Keravive scalp therapy is also designed as a series of three. The honest approach is to set the series first and place the appointments around it, rather than booking whenever the skin flares. Pairing two things into one visit is often the difference between finishing a course and abandoning it halfway, and what can safely be combined is decided at consultation.',
     },
+    keywordContext: {
+          "primaryKeyword": "facial Carlsbad",
+          "treatmentPhrases": [
+                "HydraFacial Carlsbad",
+                "chemical peel Carlsbad",
+                "microneedling Carlsbad",
+                "Procell microchanneling Carlsbad",
+                "Keravive scalp therapy Carlsbad"
+          ],
+          "neighborhoodMentions": [
+                "Carlsbad Village",
+                "La Costa",
+                "Bressi Ranch",
+                "Aviara",
+                "Calavera Hills"
+          ]
+    },
     schemaDescription:
       'Procell Microchanneling, Keravive scalp therapy and corrective facials for Carlsbad clients at the KIAMO SKIN studio in Mission Hills, San Diego.',
     allAbout: {
@@ -271,6 +365,17 @@ export const areas: Area[] = [
       heading: 'Why does sun damage build here without a visible burn?',
       body: 'The Pacific Beach boardwalk runs more than three miles from Law Street down to Mission Bay, and this neighborhood lives outdoors year-round — Crystal Pier, Tourmaline Surf Park, the bay kayak launch at Crown Point and the Fanuel Park stretch of Sail Bay all see daily use regardless of season. The damage accumulates through May Gray and June Gloom, when the marine layer sits over the coast all morning and burns off by early afternoon without ever lowering the UV underneath it. UVA penetrates cloud cover and fog; it is the wavelength that drives pigmentation and collagen breakdown, and it is exactly what gets skipped when the sky looks gray and people leave SPF off. Salt water and wind compound that by stripping the skin barrier on the same mornings the UV is quietly accumulating. What shows up is uneven tone, texture and a scalp that is drier and flakier than it should be — not a burn, and not traceable to any single afternoon. A Lira peel addresses the pigmentation across a series, DMK Enzyme Therapy rebuilds the barrier beneath it, and Keravive scalp therapy does the same for the scalp, where the part line receives the same UVA with nothing protecting it.',
     },
+    keywordContext: {
+      primaryKeyword: 'HydraFacial Pacific Beach',
+      treatmentPhrases: [
+        'facial Pacific Beach',
+        'chemical peel for sun damage Pacific Beach',
+        'microneedling Pacific Beach',
+        'DMK enzyme therapy Pacific Beach',
+        'best facial Pacific Beach'
+      ],
+      neighborhoodMentions: ['Crystal Pier', 'Garnet Avenue', 'Mission Bay', 'Crown Point', 'Kate Sessions Park']
+    },
     schemaDescription:
       'Sun damage, barrier repair and scalp therapy for Pacific Beach clients at the KIAMO SKIN studio in Mission Hills, San Diego.',
     allAbout: {
@@ -301,6 +406,23 @@ export const areas: Area[] = [
     localConcern: {
       heading: 'Why is sun exposure worse inland?',
       body: 'La Mesa sits about ten miles from the coast, which is far enough to miss the marine layer that keeps the beach gray through May and June. Summer afternoons run roughly eight to fifteen degrees warmer than La Jolla or Mission Beach, and La Mesa falls inside the valley heat advisories the coast never gets. More clear days, year after year, is what builds the cumulative UV load behind the melasma and uneven tone this area books for. Lira chemical peels answer that, because strength escalates across a series rather than in one visit — and daily SPF is what holds the result.',
+    },
+    keywordContext:     {
+          "primaryKeyword": "facial La Mesa",
+          "treatmentPhrases": [
+                "HydraFacial La Mesa",
+                "chemical peel for pigmentation La Mesa",
+                "Lira peels La Mesa",
+                "microneedling La Mesa",
+                "best esthetician La Mesa"
+          ],
+          "neighborhoodMentions": [
+                "La Mesa Village",
+                "Mt. Helix",
+                "Grossmont",
+                "Spring Valley",
+                "Fletcher Hills"
+          ]
     },
     schemaDescription:
       'Corrective facials for sun damage and pigmentation, for La Mesa clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
@@ -334,6 +456,17 @@ export const areas: Area[] = [
     localConcern: {
       heading: 'How does living ten minutes away change what is realistic?',
       body: 'Corrective skin work runs on intervals — Lira peels escalate in strength across a series with specific home care between visits, and there is no single-session version of pigmentation or acne scarring treatment. The people who complete a course are almost always the ones for whom a visit costs ten minutes rather than an afternoon. North Park is three and a half miles from Mission Hills with no freeway between them, and that proximity changes the plan: a peel series that would be logistically difficult from Carlsbad or even Del Mar becomes a straightforward six-week cycle from University Avenue. Dermaplaning is the treatment built for a shorter visit — it clears dead skin and fine facial hair in one appointment, and it pairs with a peel because a cleared surface lets the acid penetrate evenly. North Park\'s demographics also matter: the neighbourhood is younger, denser and more diverse than most of the county, and melanin-rich skin is well-represented here — the same work that runs through all KIAMO treatment planning.',
+    },
+    keywordContext: {
+      primaryKeyword: 'corrective facial North Park',
+      treatmentPhrases: [
+        'facial North Park San Diego',
+        'chemical peel North Park',
+        'dermaplaning North Park',
+        'HydraFacial North Park',
+        'best esthetician North Park'
+      ],
+      neighborhoodMentions: ['30th Street', 'University Heights', 'Normal Heights', 'South Park', 'Observatory']
     },
     schemaDescription:
       'Corrective facials, peel series and scalp therapy for North Park clients, ten minutes away at the KIAMO SKIN studio in Mission Hills, San Diego.',

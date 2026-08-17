@@ -104,7 +104,7 @@ const imageAlt =
           </Reveal>
 
           <Reveal class="mt-16 block">
-            <h2 class="t-h3">Treatments {area.name} clients book most</h2>
+            <h2 class="t-h3">{area.keywordContext?.primaryKeyword ? `${area.keywordContext.primaryKeyword.charAt(0).toUpperCase() + area.keywordContext.primaryKeyword.slice(1)} — Treatments booked most` : `Treatments ${area.name} clients book most`}</h2>
             <p class="t-body mt-5 text-[0.9375rem] text-ink-soft">{area.pricingNote}</p>
             <ul class="mt-8 m-0 list-none p-0">
               {
@@ -112,7 +112,7 @@ const imageAlt =
                   <li class="border-b border-line">
                     <a href={`/treatments/${treatment.slug}/`} class="group block py-7">
                       <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
-                        {treatment.name}
+                        {treatment.name} in {area.name}
                       </h3>
                       <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{treatment.headline}</p>
                     </a>
