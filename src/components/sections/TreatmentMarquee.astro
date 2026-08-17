@@ -1,0 +1,45 @@
+---
+import { treatmentLinks } from '../../config/nav';
+---
+
+{/*
+  Scrolling marquee strip between Hero and Credentials.
+  Pure CSS infinite scroll — no JS, no layout shift, zero performance cost.
+  Plants every treatment keyword in visible HTML once more and gives visual
+  breathing room between the full-bleed hero and the trust stats below it.
+*/}
+<div class="overflow-hidden border-y border-line bg-porcelain py-4" aria-hidden="true">
+  <div class="marquee-track flex gap-12 whitespace-nowrap">
+    <ul class="marquee-list flex shrink-0 list-none gap-12 p-0">
+      {treatmentLinks.map((t) => (
+        <li class="t-eyebrow text-ink-soft">{t.label}</li>
+      ))}
+      <li class="t-eyebrow text-rose">·</li>
+      <li class="t-eyebrow text-ink-soft">Mission Hills</li>
+      <li class="t-eyebrow text-rose">·</li>
+      <li class="t-eyebrow text-ink-soft">San Diego</li>
+    </ul>
+    <ul class="marquee-list flex shrink-0 list-none gap-12 p-0" aria-hidden="true">
+      {treatmentLinks.map((t) => (
+        <li class="t-eyebrow text-ink-soft">{t.label}</li>
+      ))}
+      <li class="t-eyebrow text-rose">·</li>
+      <li class="t-eyebrow text-ink-soft">Mission Hills</li>
+      <li class="t-eyebrow text-rose">·</li>
+      <li class="t-eyebrow text-ink-soft">San Diego</li>
+    </ul>
+  </div>
+</div>
+
+<style>
+  @media (prefers-reduced-motion: no-preference) {
+    .marquee-track {
+      animation: marquee 28s linear infinite;
+    }
+  }
+
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+</style>

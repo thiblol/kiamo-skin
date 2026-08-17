@@ -43,7 +43,7 @@ const rest = areas.filter((a) => a.slug !== 'mission-hills');
         <a href={`/service-areas/${home.slug}/`} class="group block py-7">
           <div class="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2">
             <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.3125rem]">
-              Facials in {home.name}
+              {home.crossLinkLabel}
             </h3>
             <p class="t-body m-0 text-[0.9375rem] text-ink-soft">{home.proximity}</p>
           </div>
@@ -56,7 +56,7 @@ const rest = areas.filter((a) => a.slug !== 'mission-hills');
             <a href={`/service-areas/${area.slug}/`} class="group block py-7">
               <div class="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2">
                 <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
-                  Facials in {area.name}
+                  {area.crossLinkLabel}
                 </h3>
                 <p class="t-body m-0 text-[0.9375rem] text-ink-soft">{area.proximity}</p>
               </div>
