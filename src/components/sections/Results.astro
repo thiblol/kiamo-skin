@@ -8,12 +8,16 @@ import pigBefore from '../../assets/result-pigmentation-before.jpg';
 import pigAfter from '../../assets/result-pigmentation-after.jpg';
 import scalpBefore from '../../assets/result-scalp-before.jpg';
 import scalpAfter from '../../assets/result-scalp-after.jpg';
+
+const homepageReviews = testimonials.filter((t) => !t.area);
+const row1 = homepageReviews.slice(0, 6);
+const row2 = homepageReviews.slice(6);
 ---
 
 <section class="bg-porcelain">
   <div class="wrap section-y">
     <p class="t-eyebrow text-ink-soft">Progress, not promises</p>
-    <h2 class="t-h2 mt-5 max-w-[26ch]">Skin doesn’t change overnight. It changes with consistency.</h2>
+    <h2 class="t-h2 mt-5 max-w-[26ch]">Skin doesn't change overnight. It changes with consistency.</h2>
 
     <div class="mt-14 grid gap-12 md:grid-cols-2 md:gap-16">
       <Reveal>
@@ -45,104 +49,208 @@ import scalpAfter from '../../assets/result-scalp-after.jpg';
       </Reveal>
     </div>
 
-    {/* Required disclaimer — these frames are illustrative renders for the demo,
-        not photographs of clients. Spec §10. */}
     <p class="t-meta mt-8 max-w-[60ch] text-ink-soft">
       Results vary from person to person. Images are illustrative and do not depict a specific
       client outcome.
     </p>
+  </div>
+</section>
 
-    <div class=”mt-28 border-t border-line pt-20 text-center”>
-      <p class=”t-eyebrow text-ink-soft”>Client experiences</p>
-      <h2 class=”t-h2 mx-auto mt-5 max-w-[28ch]”>What clients say after corrective treatment in San Diego.</h2>
-    </div>
+<section class="reviews-section" aria-label="Client reviews">
+  <div class="wrap reviews-header">
+    <p class="t-eyebrow reviews-eyebrow">Client experiences</p>
+    <h2 class="t-h2 reviews-h2">What clients say after corrective treatment in San Diego.</h2>
+  </div>
 
-    <ul class=”mt-16 grid list-none gap-px p-0 border border-line md:grid-cols-3 reviews-grid”>
-      {testimonials.slice(0, 3).map((t) => {
-        const platform = t.platform ? `, ${t.platform}` : '';
-        return (
-          <li data-reveal class=”review-card”>
-            <p class=”quote-mark”>&ldquo;</p>
-            <blockquote class=”quote-text”>
-              {t.quote}
-            </blockquote>
-            <p class=”quote-attribution”>— {t.attribution}{platform}</p>
+  <div class="reviews-marquee-wrap" aria-hidden="true">
+    <!-- Row 1: scrolls left -->
+    <div class="reviews-track reviews-track--left">
+      <ul class="reviews-row">
+        {row1.map((t) => (
+          <li class="review-card">
+            <p class="review-quote">&ldquo;{t.quote}&rdquo;</p>
+            <p class="review-meta">— {t.attribution}{t.platform ? `, ${t.platform}` : ''}</p>
           </li>
-        );
-      })}
-    </ul>
-
-    <div class=”mt-10 text-center”>
-      <a
-        href={gbpReviewsUrl(business.gbpPlaceId)}
-        target=”_blank”
-        rel=”noopener”
-        class=”review-cta”
-      >
-        Read our Google reviews ↗
-      </a>
+        ))}
+      </ul>
+      <ul class="reviews-row" aria-hidden="true">
+        {row1.map((t) => (
+          <li class="review-card">
+            <p class="review-quote">&ldquo;{t.quote}&rdquo;</p>
+            <p class="review-meta">— {t.attribution}{t.platform ? `, ${t.platform}` : ''}</p>
+          </li>
+        ))}
+      </ul>
     </div>
+
+    <!-- Row 2: scrolls right -->
+    <div class="reviews-track reviews-track--right">
+      <ul class="reviews-row">
+        {row2.map((t) => (
+          <li class="review-card">
+            <p class="review-quote">&ldquo;{t.quote}&rdquo;</p>
+            <p class="review-meta">— {t.attribution}{t.platform ? `, ${t.platform}` : ''}</p>
+          </li>
+        ))}
+      </ul>
+      <ul class="reviews-row" aria-hidden="true">
+        {row2.map((t) => (
+          <li class="review-card">
+            <p class="review-quote">&ldquo;{t.quote}&rdquo;</p>
+            <p class="review-meta">— {t.attribution}{t.platform ? `, ${t.platform}` : ''}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap reviews-cta-wrap">
+    <a
+      href={gbpReviewsUrl(business.gbpPlaceId)}
+      target="_blank"
+      rel="noopener"
+      class="reviews-cta"
+    >
+      Read our Google reviews ↗
+    </a>
   </div>
 </section>
 
 <style>
-  .reviews-grid {
-    background-color: var(--color-line);
+  .reviews-section {
+    background-color: var(--color-ivory);
+    padding-block: 96px 80px;
+  }
+
+  @media (min-width: 52.5rem) {
+    .reviews-section {
+      padding-block: 128px 96px;
+    }
+  }
+
+  .reviews-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .reviews-eyebrow {
+    color: var(--color-rose);
+    margin-bottom: 1.25rem;
+  }
+
+  .reviews-h2 {
+    margin-inline: auto;
+    max-width: 28ch;
+  }
+
+  /* Marquee container — clips overflow */
+  .reviews-marquee-wrap {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  /* Each row: two identical lists side by side */
+  .reviews-track {
+    display: flex;
+    width: max-content;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .reviews-track--left {
+      animation: scroll-left 40s linear infinite;
+    }
+    .reviews-track--right {
+      animation: scroll-right 40s linear infinite;
+    }
+  }
+
+  .reviews-track:hover {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll-left {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  @keyframes scroll-right {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
+  }
+
+  .reviews-row {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.25rem;
+    flex-shrink: 0;
   }
 
   .review-card {
     background-color: var(--color-porcelain);
-    padding: 2.5rem 2rem;
+    border: 1px solid var(--color-line);
+    padding: 2rem 2.25rem;
+    width: 340px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
   }
 
   @media (min-width: 52.5rem) {
     .review-card {
-      padding: 3rem 2.5rem;
+      width: 400px;
+      padding: 2.5rem 2.75rem;
     }
   }
 
-  .quote-mark {
-    font-family: var(--font-display);
-    color: var(--color-rose);
-    font-size: 3rem;
-    line-height: 1;
-    font-weight: 300;
-  }
-
-  .quote-text {
-    margin-top: 0.75rem;
+  .review-quote {
     font-family: var(--font-display);
     font-weight: 300;
-    font-size: clamp(1.125rem, 1.8vw, 1.375rem);
-    line-height: 1.45;
+    font-size: 1.125rem;
+    line-height: 1.6;
     color: var(--color-ink);
   }
 
-  .quote-attribution {
-    margin-top: 2rem;
+  @media (min-width: 52.5rem) {
+    .review-quote {
+      font-size: 1.25rem;
+    }
+  }
+
+  .review-meta {
     font-family: var(--font-sans);
-    font-weight: 300;
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
+    font-weight: 400;
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--color-ink-soft);
   }
 
-  .review-cta {
+  .reviews-cta-wrap {
+    text-align: center;
+    margin-top: 3.5rem;
+  }
+
+  .reviews-cta {
     font-family: var(--font-sans);
     font-weight: 500;
     font-size: 0.75rem;
     letter-spacing: 0.16em;
     text-transform: uppercase;
-    line-height: 1;
+    color: var(--color-ink);
     text-decoration: underline;
-    text-underline-offset: 0.35em;
-    text-decoration-color: currentColor;
-    color: var(--color-ink-soft);
-    transition: color 200ms ease;
+    text-underline-offset: 0.4em;
+    text-decoration-color: var(--color-ink);
+    transition: color 200ms ease, text-decoration-color 200ms ease;
   }
 
-  .review-cta:hover {
+  .reviews-cta:hover {
     color: var(--color-rose);
+    text-decoration-color: var(--color-rose);
   }
 </style>

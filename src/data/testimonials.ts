@@ -40,6 +40,51 @@ export const testimonials: Testimonial[] = [
     attribution: 'Kelly W.',
     platform: 'Yelp',
   },
+  {
+    quote: 'I had such a great HydraFacial with Kiki! The space is so cute, welcoming, and thoughtfully curated.',
+    attribution: 'Katie M.',
+    platform: 'Google',
+  },
+  {
+    quote: 'I\'ve been going for 4–5 years now, and I honestly wouldn\'t trust anyone else with my skin.',
+    attribution: 'Arica L.',
+    platform: 'Google',
+  },
+  {
+    quote: 'Kiamo Skin got my skin looking amazing!! The monthly membership is absolutely worth it.',
+    attribution: 'Kayla T.',
+    platform: 'Google',
+  },
+  {
+    quote: 'The best facial in San Diego. Very attentive to what your skin needs and leaves you glowy.',
+    attribution: 'Leona',
+    platform: 'Google',
+  },
+  {
+    quote: 'I\'ve been going to Kiamo Skin for over a year and can\'t recommend it enough. Real, visible results.',
+    attribution: 'Brian A.',
+    platform: 'Google',
+  },
+  {
+    quote: 'I feel like I\'ve been aging backwards since going to Kiamo Skin. My skin is so glowy and smooth.',
+    attribution: 'Morg A.',
+    platform: 'Google',
+  },
+  {
+    quote: 'Genuinely one of the best facials I\'ve ever had. Kiki is super friendly and the results speak for themselves.',
+    attribution: 'Alyssa M.',
+    platform: 'Google',
+  },
+  {
+    quote: 'This is your sign to book at Kiamo Skin. Kiki is so knowledgeable and you can feel you\'re in good hands.',
+    attribution: 'Rheshanna C.',
+    platform: 'Google',
+  },
+  {
+    quote: 'My skin has never looked better after my first HydraFacial in San Diego. Highly recommend for real results.',
+    attribution: 'David B.',
+    platform: 'Google',
+  },
 
   // Area-attributed reviews — local proof for each service area page
   {
