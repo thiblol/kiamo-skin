@@ -52,31 +52,37 @@ import scalpAfter from '../../assets/result-scalp-after.jpg';
       client outcome.
     </p>
 
-    <div class=”mt-20 flex flex-wrap items-end justify-between gap-6”>
-      <div>
-        <p class=”t-eyebrow text-ink-soft”>Client experiences</p>
-        <h2 class=”t-h2 mt-4 max-w-[28ch]”>What clients say after corrective treatment in San Diego.</h2>
-      </div>
+    <div class=”mt-28 border-t border-line pt-20 text-center”>
+      <p class=”t-eyebrow text-ink-soft”>Client experiences</p>
+      <h2 class=”t-h2 mx-auto mt-5” style=”max-width: 28ch;”>What clients say after corrective treatment in San Diego.</h2>
     </div>
-    <ul class=”mt-10 grid list-none gap-10 p-0 md:grid-cols-3 md:gap-12”>
-      {testimonials.map((t) => {
+
+    <ul class=”mt-16 grid list-none gap-px p-0 border border-line md:grid-cols-3” style=”background-color: var(--color-line);”>
+      {testimonials.slice(0, 3).map((t) => {
         const platform = t.platform ? `, ${t.platform}` : '';
         return (
-          <li data-reveal>
-            <blockquote class={'t-h3'}>”{t.quote}”</blockquote>
-            <p class={'t-meta mt-5'}>— {t.attribution}{platform}</p>
+          <li data-reveal class={'bg-porcelain px-8 py-10 md:px-10 md:py-12'}>
+            <p class={'font-display text-rose'} style=”font-size: 3rem; line-height: 1; font-weight: 300;”>&ldquo;</p>
+            <blockquote class={'mt-3'} style=”font-family: var(--font-display); font-weight: 300; font-size: clamp(1.125rem, 1.8vw, 1.375rem); line-height: 1.45; color: var(--color-ink);”>
+              {t.quote}
+            </blockquote>
+            <p class={'t-meta mt-8'} style=”color: var(--color-ink-soft);”>— {t.attribution}{platform}</p>
           </li>
         );
       })}
     </ul>
-    <div class=”mt-12”>
+
+    <div class=”mt-10 text-center”>
       <a
         href={gbpReviewsUrl(business.gbpPlaceId)}
         target=”_blank”
         rel=”noopener”
-        class=”t-button border-b border-ink pb-1 hover:border-rose hover:text-rose”
+        class=”t-button”
+        style=”text-decoration: underline; text-underline-offset: 0.35em; text-decoration-color: currentColor; color: var(--color-ink-soft); transition: color 200ms ease;”
+        onmouseover=”this.style.color='var(--color-rose)'”
+        onmouseout=”this.style.color='var(--color-ink-soft)'”
       >
-        Read our Google reviews
+        Read our Google reviews ↗
       </a>
     </div>
   </div>
