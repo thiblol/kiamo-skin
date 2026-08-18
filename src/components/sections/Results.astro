@@ -59,15 +59,15 @@ import scalpAfter from '../../assets/result-scalp-after.jpg';
       </div>
     </div>
     <ul class=”mt-10 grid list-none gap-10 p-0 md:grid-cols-3 md:gap-12”>
-      {
-        testimonials.map((t) => (
-          <Reveal as=”li”>
-            <blockquote class=”t-h3 text-[1.375rem] md:text-[1.5rem]”>”{t.quote}”</blockquote>
-            {/* No stars, no averages — spec §2 forbids any rating display. */}
-            <p class=”t-meta mt-5”>— {t.attribution}{t.platform ? `, ${t.platform}` : ''}</p>
-          </Reveal>
-        ))
-      }
+      {testimonials.map((t) => {
+        const platform = t.platform ? `, ${t.platform}` : '';
+        return (
+          <li data-reveal>
+            <blockquote class={'t-h3'}>”{t.quote}”</blockquote>
+            <p class={'t-meta mt-5'}>— {t.attribution}{platform}</p>
+          </li>
+        );
+      })}
     </ul>
     <div class=”mt-12”>
       <a
