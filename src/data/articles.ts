@@ -715,12 +715,12 @@ export const articles: Article[] = [
   },
   {
     slug: 'dandruff-treatment-san-diego',
-    headline: 'Dandruff Treatment in San Diego: When Shampoo Isn't Enough',
-    title: 'Dandruff Treatment San Diego: When Shampoo Isn't Enough',
+    headline: 'Dandruff Treatment in San Diego: When Shampoo Isn\'t Enough',
+    title: 'Dandruff Treatment San Diego: When Shampoo Isn\'t Enough',
     description:
       'What causes dandruff, how to treat it at home, and when professional Keravive scalp therapy becomes the only solution. Served in Mission Hills, San Diego.',
     standfirst:
-      'If you've been rotating through medicated shampoos for months and still see flakes, the problem isn't the shampoo you chose. It's that shampoo can't reach what's actually causing the issue.',
+      'If you\'ve been rotating through medicated shampoos for months and still see flakes, the problem isn\'t the shampoo you chose. It\'s that shampoo can\'t reach what\'s actually causing the issue.',
     readingTime: '12 min read',
     datePublished: '2026-08-20',
     dateModified: '2026-08-20',
@@ -728,35 +728,31 @@ export const articles: Article[] = [
     imageAlt: 'HydraFacial Keravive scalp treatment device working through sectioned hair at the scalp',
     body: [
       {
-        p: 'Most people treat dandruff like a cosmetic problem—something a different shampoo will fix. But if you've been rotating through Head & Shoulders, Nizoral, and Selsun Blue for months and still see flakes on your collar, the problem isn't the shampoo you chose. It's that shampoo can't reach what's actually causing the issue: buildup, congestion, and inflammation below the surface of your scalp.',
+        p: 'Most people treat dandruff like a cosmetic problem--something a different shampoo will fix. But if you\'ve been rotating through Head & Shoulders, Nizoral, and Selsun Blue for months and still see flakes on your collar, the problem isn\'t the shampoo you chose. It\'s that shampoo can\'t reach what\'s actually causing the issue: buildup, congestion, and inflammation below the surface of your scalp.',
       },
       {
-        p: 'This guide explains what causes dandruff, how to treat it at home, and when professional scalp therapy becomes the only solution that works. If you live in San Diego, there's an additional factor making your dandruff worse—and most dermatologists never mention it.',
+        p: 'This guide explains what causes dandruff, how to treat it at home, and when professional scalp therapy becomes the only solution that works. If you live in San Diego, there\'s an additional factor making your dandruff worse--and most dermatologists never mention it.',
       },
-
       { h2: 'What causes dandruff?' },
       {
         answer:
-          'Dandruff is caused by a combination of oil production, a yeast called <em>Malassezia</em>, and how quickly your scalp sheds dead skin cells. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2887514/" rel="noopener" target="_blank"><em>Malassezia</em> lives on everyone's scalp, but some people's immune systems react to it, triggering inflammation and rapid cell turnover that shows up as visible flakes</a>. In San Diego, <a href="/journal/san-diego-hard-water-and-your-scalp/">hard water mineral buildup can make the problem worse</a> by creating additional scalp irritation that mimics or compounds dandruff symptoms.',
+          'Dandruff is caused by a combination of oil production, a yeast called <em>Malassezia</em>, and how quickly your scalp sheds dead skin cells. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2887514/" rel="noopener" target="_blank"><em>Malassezia</em> lives on everyone\'s scalp, but some people\'s immune systems react to it, triggering inflammation and rapid cell turnover that shows up as visible flakes</a>. In San Diego, <a href="/journal/san-diego-hard-water-and-your-scalp/">hard water mineral buildup can make the problem worse</a> by creating additional scalp irritation that mimics or compounds dandruff symptoms.',
       },
       {
-        p: 'The yeast feeds on sebum, which is why people with oilier scalps tend to have more severe dandruff. <a href="https://www.mayoclinic.org/diseases-conditions/dandruff/symptoms-causes/syc-20353850" rel="noopener" target="_blank">When <em>Malassezia</em> breaks down sebum, it produces oleic acid—a byproduct that irritates the scalp and accelerates the shedding process</a>. That's why dandruff isn't just about dryness. You can have an oily scalp and still see flakes.',
+        p: 'The yeast feeds on sebum, which is why people with oilier scalps tend to have more severe dandruff. <a href="https://www.mayoclinic.org/diseases-conditions/dandruff/symptoms-causes/syc-20353850" rel="noopener" target="_blank">When <em>Malassezia</em> breaks down sebum, it produces oleic acid--a byproduct that irritates the scalp and accelerates the shedding process</a>. That\'s why dandruff isn\'t just about dryness. You can have an oily scalp and still see flakes.',
       },
       {
-        p: 'Hormones, stress, cold weather, and immune system changes all influence how much your scalp reacts to <em>Malassezia</em>. That's why dandruff often gets worse in winter or during periods of high stress—your scalp's inflammatory response intensifies, and cell turnover speeds up even more.',
+        p: 'Hormones, stress, cold weather, and immune system changes all influence how much your scalp reacts to <em>Malassezia</em>. That\'s why dandruff often gets worse in winter or during periods of high stress--your scalp\'s inflammatory response intensifies, and cell turnover speeds up even more.',
       },
       {
-        p: 'San Diego's climate adds another layer. The city's hard water—among the hardest in California—leaves calcium and magnesium deposits on your scalp every time you wash your hair. Over time, that mineral buildup creates a layer of residue that traps oil, dead skin, and styling products, making it harder for medicated shampoos to work. At KIAMO Skin in Mission Hills, we see this constantly: clients come in after trying every shampoo at CVS, only to discover their scalp was covered in hard water buildup, not dandruff.',
+        p: 'San Diego\'s climate adds another layer. The city\'s hard water--among the hardest in California--leaves calcium and magnesium deposits on your scalp every time you wash your hair. Over time, that mineral buildup creates a layer of residue that traps oil, dead skin, and styling products, making it harder for medicated shampoos to work. At KIAMO Skin in Mission Hills, we see this constantly: clients come in after trying every shampoo at CVS, only to discover their scalp was covered in hard water buildup, not dandruff.',
       },
-
       { h2: 'How do I know if my dandruff is fungal or dry scalp?' },
       {
         answer:
-          'Fungal dandruff (seborrheic dermatitis) shows as greasy, yellowish flakes with redness and often intense itching, while dry scalp produces small, white flakes without much oil. If moisturizing makes it worse or <a href="https://www.aad.org/public/diseases/hair-and-scalp-problems/dandruff-how-to-treat" rel="noopener" target="_blank">anti-dandruff shampoo doesn't help after 2 weeks, you're likely dealing with seborrheic dermatitis</a> rather than simple dryness.',
+          'Fungal dandruff (seborrheic dermatitis) shows as greasy, yellowish flakes with redness and often intense itching, while dry scalp produces small, white flakes without much oil. If moisturizing makes it worse or <a href="https://www.aad.org/public/diseases/hair-and-scalp-problems/dandruff-how-to-treat" rel="noopener" target="_blank">anti-dandruff shampoo doesn\'t help after 2 weeks, you\'re likely dealing with seborrheic dermatitis</a> rather than simple dryness.',
       },
-      {
-        p: 'Here's how to tell them apart:',
-      },
+      { p: 'Here\'s how to tell them apart:' },
       {
         ul: [
           '<strong>Dry scalp:</strong> Small, white flakes that fall easily. Scalp feels tight or itchy, especially after washing. Moisturizing helps. Often worse in winter or low-humidity environments.',
@@ -764,23 +760,20 @@ export const articles: Article[] = [
         ],
       },
       {
-        p: '<a href="https://www.health.harvard.edu/diseases-and-conditions/dandruff-a-to-z" rel="noopener" target="_blank">Seborrheic dermatitis often appears in other areas beyond the scalp</a>—eyebrows, sides of the nose, behind the ears, or along the hairline. If you're seeing flaking in multiple zones, it's not dry scalp. It's an inflammatory condition that requires a different treatment approach.',
+        p: '<a href="https://www.health.harvard.edu/diseases-and-conditions/dandruff-a-to-z" rel="noopener" target="_blank">Seborrheic dermatitis often appears in other areas beyond the scalp</a>--eyebrows, sides of the nose, behind the ears, or along the hairline. If you\'re seeing flaking in multiple zones, it\'s not dry scalp. It\'s an inflammatory condition that requires a different treatment approach.',
       },
       {
-        p: 'One quick test: if your scalp feels better after using a zinc pyrithione or ketoconazole shampoo, you're dealing with fungal dandruff. If it only improves with hydration and gets worse with medicated shampoos, it's dryness.',
+        p: 'One quick test: if your scalp feels better after using a zinc pyrithione or ketoconazole shampoo, you\'re dealing with fungal dandruff. If it only improves with hydration and gets worse with medicated shampoos, it\'s dryness.',
       },
-
       { h2: 'What kills dandruff quickly?' },
       {
         answer:
-          'Over-the-counter shampoos with <a href="https://www.mayoclinic.org/diseases-conditions/dandruff/diagnosis-treatment/drc-20353854" rel="noopener" target="_blank">zinc pyrithione, ketoconazole, selenium sulfide, or salicylic acid</a> can reduce visible flakes within 1-2 weeks when used correctly. The key is <a href="https://www.aad.org/public/diseases/hair-and-scalp-problems/dandruff-how-to-treat" rel="noopener" target="_blank">leaving the lather on your scalp for 5 minutes before rinsing</a>, not just washing and rinsing immediately—most people skip this step and wonder why nothing works.',
+          'Over-the-counter shampoos with <a href="https://www.mayoclinic.org/diseases-conditions/dandruff/diagnosis-treatment/drc-20353854" rel="noopener" target="_blank">zinc pyrithione, ketoconazole, selenium sulfide, or salicylic acid</a> can reduce visible flakes within 1-2 weeks when used correctly. The key is <a href="https://www.aad.org/public/diseases/hair-and-scalp-problems/dandruff-how-to-treat" rel="noopener" target="_blank">leaving the lather on your scalp for 5 minutes before rinsing</a>, not just washing and rinsing immediately--most people skip this step and wonder why nothing works.',
       },
       {
         p: 'Medicated shampoos work by targeting different parts of the dandruff cycle. Some slow down <em>Malassezia</em> growth, others reduce inflammation, and some help lift away the buildup of dead cells that creates visible flakes. But they all require contact time. If you apply the shampoo, scrub, and rinse in under a minute, the active ingredients never penetrate the scalp.',
       },
-      {
-        p: 'Here's the process that actually works:',
-      },
+      { p: 'Here\'s the process that actually works:' },
       {
         ul: [
           '<strong>Wet your hair thoroughly.</strong> Hard water in San Diego means you need more time and heat to open the cuticle and let active ingredients in.',
@@ -791,87 +784,52 @@ export const articles: Article[] = [
         ],
       },
       {
-        p: '<a href="https://www.mayoclinic.org/diseases-conditions/dandruff/diagnosis-treatment/drc-20353854" rel="noopener" target="_blank">If one active ingredient stops working after a few months, switch to a shampoo with a different mechanism</a>—your scalp can adapt to a single treatment, but rotating between two types keeps it effective.',
+        p: '<a href="https://www.mayoclinic.org/diseases-conditions/dandruff/diagnosis-treatment/drc-20353854" rel="noopener" target="_blank">If one active ingredient stops working after a few months, switch to a shampoo with a different mechanism</a>--your scalp can adapt to a single treatment, but rotating between two types keeps it effective.',
       },
-
       { h2: 'What are the best at-home dandruff treatments?' },
       {
         table: {
           caption: 'Comparison of OTC dandruff shampoo active ingredients',
           head: ['Active Ingredient', 'What It Does', 'Best For', 'How to Use', 'Examples'],
           rows: [
-            [
-              'Zinc Pyrithione',
-              'Reduces yeast and bacteria on the scalp',
-              'Mild to moderate dandruff, all hair types',
-              '2-3x per week, leave on 3-5 minutes',
-              'Head & Shoulders, Dove DermaCare',
-            ],
-            [
-              'Ketoconazole 1-2%',
-              'Antifungal; targets <em>Malassezia</em> directly',
-              'Severe dandruff, seborrheic dermatitis',
-              '2x per week, leave on 5 minutes',
-              'Nizoral A-D',
-            ],
-            [
-              'Selenium Sulfide',
-              'Slows scalp cell turnover, fights yeast',
-              'Stubborn dandruff, oily scalp',
-              '2x per week, leave on 5 minutes, rinse thoroughly',
-              'Selsun Blue',
-            ],
-            [
-              'Salicylic Acid',
-              'Exfoliates and removes crusty scale buildup',
-              'Thick, crusty flakes; scalp psoriasis',
-              '2-3x per week, may cause dryness—follow with conditioner',
-              'Neutrogena T/Sal',
-            ],
-            [
-              'Coal Tar',
-              'Slows cell turnover, reduces inflammation',
-              'Scalp psoriasis, very thick dandruff',
-              '1-2x per week, strong smell, can darken light hair',
-              'Neutrogena T/Gel',
-            ],
+            ['Zinc Pyrithione', 'Reduces yeast and bacteria on the scalp', 'Mild to moderate dandruff, all hair types', '2-3x per week, leave on 3-5 minutes', 'Head & Shoulders, Dove DermaCare'],
+            ['Ketoconazole 1-2%', 'Antifungal; targets <em>Malassezia</em> directly', 'Severe dandruff, seborrheic dermatitis', '2x per week, leave on 5 minutes', 'Nizoral A-D'],
+            ['Selenium Sulfide', 'Slows scalp cell turnover, fights yeast', 'Stubborn dandruff, oily scalp', '2x per week, leave on 5 minutes, rinse thoroughly', 'Selsun Blue'],
+            ['Salicylic Acid', 'Exfoliates and removes crusty scale buildup', 'Thick, crusty flakes; scalp psoriasis', '2-3x per week, may cause dryness--follow with conditioner', 'Neutrogena T/Sal'],
+            ['Coal Tar', 'Slows cell turnover, reduces inflammation', 'Scalp psoriasis, very thick dandruff', '1-2x per week, strong smell, can darken light hair', 'Neutrogena T/Gel'],
           ],
         },
       },
       {
-        p: '<strong>Rotation strategy:</strong> <a href="https://www.health.harvard.edu/diseases-and-conditions/dandruff-a-to-z" rel="noopener" target="_blank">If your dandruff improves then comes back after a few months, alternate between two different active ingredients</a>—for example, zinc pyrithione on Monday and Thursday, ketoconazole on Sunday. This prevents your scalp from adapting to one treatment.',
+        p: '<strong>Rotation strategy:</strong> <a href="https://www.health.harvard.edu/diseases-and-conditions/dandruff-a-to-z" rel="noopener" target="_blank">If your dandruff improves then comes back after a few months, alternate between two different active ingredients</a>--for example, zinc pyrithione on Monday and Thursday, ketoconazole on Sunday. This prevents your scalp from adapting to one treatment.',
       },
       {
-        p: '<strong>For textured or dry hair:</strong> You don't need to shampoo your entire head 2-3 times per week. Apply the medicated treatment only to your scalp, let it sit, then rinse. Follow with a moisturizing conditioner on your hair strands, avoiding the scalp. This targets dandruff without stripping your hair.',
+        p: '<strong>For textured or dry hair:</strong> You don\'t need to shampoo your entire head 2-3 times per week. Apply the medicated treatment only to your scalp, let it sit, then rinse. Follow with a moisturizing conditioner on your hair strands, avoiding the scalp.',
       },
-
       { h2: 'Why do I still have dandruff even after washing my hair?' },
       {
         answer:
-          'If you're washing daily and still see flakes, you're either not using a medicated shampoo, not leaving it on long enough, or dealing with a condition that mimics dandruff like seborrheic dermatitis or psoriasis. <a href="/journal/san-diego-hard-water-and-your-scalp/">San Diego's hard water can also leave mineral deposits that look like flakes</a> even when dandruff is controlled.',
+          'If you\'re washing daily and still see flakes, you\'re either not using a medicated shampoo, not leaving it on long enough, or dealing with a condition that mimics dandruff like seborrheic dermatitis or psoriasis. <a href="/journal/san-diego-hard-water-and-your-scalp/">San Diego\'s hard water can also leave mineral deposits that look like flakes</a> even when dandruff is controlled.',
       },
       {
-        p: 'At KIAMO Skin in Mission Hills, we see this constantly—clients come in after trying every shampoo at CVS, only to discover their scalp was covered in hard water buildup, not dandruff. When we perform the <a href="/treatments/keravive-scalp/">Keravive scalp treatment</a>, the vacuum extraction pulls out white and yellow residue that's been sitting there for months. That buildup prevents medicated shampoo from reaching your actual scalp, which is why the flakes never fully go away.',
+        p: 'At KIAMO Skin in Mission Hills, we see this constantly--clients come in after trying every shampoo at CVS, only to discover their scalp was covered in hard water buildup, not dandruff. When we perform the <a href="/treatments/keravive-scalp/">Keravive scalp treatment</a>, the vacuum extraction pulls out white and yellow residue that\'s been sitting there for months. That buildup prevents medicated shampoo from reaching your actual scalp, which is why the flakes never fully go away.',
       },
-      {
-        p: 'Other reasons shampoo stops working:',
-      },
+      { p: 'Other reasons shampoo stops working:' },
       {
         ul: [
-          '<strong>You're not treating the cause.</strong> Regular shampoo removes surface flakes but doesn't address the yeast, oil, or inflammation causing them. You need a medicated formula with an active ingredient.',
-          '<strong>Product buildup is blocking treatment.</strong> Dry shampoo, styling gels, leave-in conditioners, and even silicone-heavy shampoos create a layer on your scalp that traps oil and dead skin. <a href="https://www.mayoclinic.org/diseases-conditions/dandruff/diagnosis-treatment/drc-20353854" rel="noopener" target="_blank">Medicated shampoo can't penetrate that barrier</a>.',
-          '<strong>You're actually dealing with seborrheic dermatitis or psoriasis.</strong> These are inflammatory scalp conditions that require prescription treatment or professional care. Over-the-counter shampoo helps, but it won't fully clear the problem.',
-          '<strong>Your scalp pH is off.</strong> Hard water raises scalp pH, which makes it easier for <em>Malassezia</em> to thrive. An apple cider vinegar rinse (1 part vinegar to 4 parts water, applied after shampooing) can help rebalance it—but it won't remove the mineral buildup already there.',
+          '<strong>You\'re not treating the cause.</strong> Regular shampoo removes surface flakes but doesn\'t address the yeast, oil, or inflammation causing them. You need a medicated formula with an active ingredient.',
+          '<strong>Product buildup is blocking treatment.</strong> Dry shampoo, styling gels, leave-in conditioners, and even silicone-heavy shampoos create a layer on your scalp that traps oil and dead skin. <a href="https://www.mayoclinic.org/diseases-conditions/dandruff/diagnosis-treatment/drc-20353854" rel="noopener" target="_blank">Medicated shampoo can\'t penetrate that barrier</a>.',
+          '<strong>You\'re actually dealing with seborrheic dermatitis or psoriasis.</strong> These are inflammatory scalp conditions that require prescription treatment or professional care. Over-the-counter shampoo helps, but it won\'t fully clear the problem.',
+          '<strong>Your scalp pH is off.</strong> Hard water raises scalp pH, which makes it easier for <em>Malassezia</em> to thrive. An apple cider vinegar rinse (1 part vinegar to 4 parts water) can help rebalance it--but won\'t remove mineral buildup already there.',
         ],
       },
       {
-        p: 'If you've been using medicated shampoo correctly for 4 weeks and still see flakes, it's time to escalate.',
+        p: 'If you\'ve been using medicated shampoo correctly for 4 weeks and still see flakes, it\'s time to escalate.',
       },
-
       { h2: 'What is commonly mistaken for dandruff?' },
       {
         answer:
-          'Seborrheic dermatitis, scalp psoriasis, eczema, and product buildup all produce flakes that look like dandruff but don't respond to typical dandruff shampoos. If you also have flaking eyebrows, behind your ears, or along your hairline, <a href="https://www.aad.org/public/diseases/hair-and-scalp-problems/dandruff-how-to-treat" rel="noopener" target="_blank">you're likely dealing with seborrheic dermatitis</a> rather than simple dandruff.',
+          'Seborrheic dermatitis, scalp psoriasis, eczema, and product buildup all produce flakes that look like dandruff but don\'t respond to typical dandruff shampoos. If you also have flaking eyebrows, behind your ears, or along your hairline, <a href="https://www.aad.org/public/diseases/hair-and-scalp-problems/dandruff-how-to-treat" rel="noopener" target="_blank">you\'re likely dealing with seborrheic dermatitis</a> rather than simple dandruff.',
       },
       {
         table: {
@@ -879,75 +837,48 @@ export const articles: Article[] = [
           head: ['Condition', 'What It Looks Like', 'Where It Shows Up', 'How It Feels'],
           rows: [
             ['Dandruff', 'White or light yellow flakes, loose and dry', 'Scalp only', 'Mild itching, worse when hair is oily'],
-            [
-              'Seborrheic Dermatitis',
-              'Greasy, yellowish flakes; red, inflamed skin',
-              'Scalp, eyebrows, sides of nose, behind ears, chest',
-              'Intense itching, burning, or stinging',
-            ],
-            [
-              'Scalp Psoriasis',
-              'Thick, silvery scales; well-defined red patches',
-              'Scalp (often at hairline), elbows, knees',
-              'Tight, sore, sometimes bleeding when scratched',
-            ],
-            [
-              'Scalp Eczema',
-              'Dry, cracked skin; flakes mixed with oozing or crusting',
-              'Scalp, neck, behind ears',
-              'Severe itching, worsens with scratching',
-            ],
-            [
-              'Product Buildup',
-              'White flakes that feel waxy or sticky',
-              'Scalp, especially near part lines',
-              'Scalp feels heavy or greasy even after washing',
-            ],
+            ['Seborrheic Dermatitis', 'Greasy, yellowish flakes; red, inflamed skin', 'Scalp, eyebrows, sides of nose, behind ears, chest', 'Intense itching, burning, or stinging'],
+            ['Scalp Psoriasis', 'Thick, silvery scales; well-defined red patches', 'Scalp (often at hairline), elbows, knees', 'Tight, sore, sometimes bleeding when scratched'],
+            ['Scalp Eczema', 'Dry, cracked skin; flakes mixed with oozing or crusting', 'Scalp, neck, behind ears', 'Severe itching, worsens with scratching'],
+            ['Product Buildup', 'White flakes that feel waxy or sticky', 'Scalp, especially near part lines', 'Scalp feels heavy or greasy even after washing'],
           ],
         },
       },
       {
-        p: '<a href="https://www.health.harvard.edu/diseases-and-conditions/dandruff-a-to-z" rel="noopener" target="_blank">Seborrheic dermatitis is the most common dandruff mimic</a>. It's essentially severe dandruff—same yeast, same inflammation, but the immune response is stronger. Over-the-counter ketoconazole shampoo often helps, but prescription treatments (topical steroids, stronger antifungals) may be needed.',
+        p: '<a href="https://www.health.harvard.edu/diseases-and-conditions/dandruff-a-to-z" rel="noopener" target="_blank">Seborrheic dermatitis is the most common dandruff mimic</a>. It\'s essentially severe dandruff--same yeast, same inflammation, but the immune response is stronger. Over-the-counter ketoconazole shampoo often helps, but prescription treatments may be needed.',
       },
       {
-        p: 'If you're seeing thick, adherent scales that don't budge with regular shampooing, or if your scalp is painful or bleeding, see a dermatologist. These are signs of psoriasis or eczema, not dandruff.',
+        p: 'If you\'re seeing thick, adherent scales that don\'t budge with regular shampooing, or if your scalp is painful or bleeding, see a dermatologist. These are signs of psoriasis or eczema, not dandruff.',
       },
-
       { h2: 'When should I see a professional for dandruff?' },
       {
         answer:
-          'See a dermatologist or licensed esthetician if over-the-counter treatments haven't worked after 4 weeks, if your scalp is severely inflamed or painful, or if you're losing hair along with the flaking. Professional scalp treatments can remove the buildup that shampoo can't reach.',
+          'See a dermatologist or licensed esthetician if over-the-counter treatments haven\'t worked after 4 weeks, if your scalp is severely inflamed or painful, or if you\'re losing hair along with the flaking. Professional scalp treatments can remove the buildup that shampoo can\'t reach.',
       },
-      {
-        p: 'Here's when to escalate:',
-      },
+      { p: 'Here\'s when to escalate:' },
       {
         ul: [
-          '<strong>Medicated shampoo didn't work after a month of correct use.</strong> If you've been leaving zinc pyrithione or ketoconazole on your scalp for 5 minutes, 2-3 times per week, for 4 weeks, and you still see flakes, the problem is deeper than what shampoo can fix.',
+          '<strong>Medicated shampoo didn\'t work after a month of correct use.</strong> If you\'ve been leaving zinc pyrithione or ketoconazole on your scalp for 5 minutes, 2-3 times per week, for 4 weeks, and you still see flakes, the problem is deeper than what shampoo can fix.',
           '<strong>Your scalp is red, swollen, or painful.</strong> This suggests seborrheic dermatitis, psoriasis, or a secondary infection. You need a professional diagnosis.',
-          '<strong>You're losing more hair than usual.</strong> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2887514/" rel="noopener" target="_blank">Chronic scalp inflammation can weaken hair follicles and increase shedding</a>. Treating the scalp condition can help slow hair loss.',
+          '<strong>You\'re losing more hair than usual.</strong> <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2887514/" rel="noopener" target="_blank">Chronic scalp inflammation can weaken hair follicles and increase shedding</a>. Treating the scalp condition can help slow hair loss.',
           '<strong>Flaking comes with intense itching that disrupts your sleep or daily life.</strong> This is a quality-of-life issue that deserves professional intervention.',
-          '<strong>You've tried multiple active ingredients and nothing holds.</strong> Your scalp may have become resistant to over-the-counter treatments, or you're dealing with a condition that requires prescription-strength care.',
+          '<strong>You\'ve tried multiple active ingredients and nothing holds.</strong> Your scalp may have become resistant to over-the-counter treatments.',
         ],
       },
       {
-        p: 'The <a href="/treatments/keravive-scalp/">Keravive scalp treatment</a> at KIAMO removes years of product, oil, and mineral buildup in a single 30-minute session—something no at-home shampoo can do. Clients from La Jolla to Carlsbad come in after their dermatologist prescribed medicated shampoo that didn't solve the underlying scalp congestion. Once the buildup is cleared, medicated shampoo actually works again—because it can finally reach the scalp.',
+        p: 'The <a href="/treatments/keravive-scalp/">Keravive scalp treatment</a> at KIAMO removes years of product, oil, and mineral buildup in a single session--something no at-home shampoo can do. Clients from La Jolla to Carlsbad come in after their dermatologist prescribed medicated shampoo that didn\'t solve the underlying scalp congestion. Once the buildup is cleared, medicated shampoo actually works again.',
       },
-
       { h2: 'What is professional scalp treatment for dandruff?' },
       {
         answer:
-          'Professional scalp therapy uses clinical-grade exfoliation and hydration to address the root cause—clogged follicles, oil imbalance, and chronic inflammation—rather than just treating surface flakes. <a href="/treatments/keravive-scalp/">HydraFacial Keravive</a> is a 3-step process that cleanses, exfoliates, and infuses peptides into the scalp, similar to how a HydraFacial works on facial skin.',
-      },
-      {
-        p: 'Here's how it works:',
+          'Professional scalp therapy uses clinical-grade exfoliation and hydration to address the root cause--clogged follicles, oil imbalance, and chronic inflammation--rather than just treating surface flakes. <a href="/treatments/keravive-scalp/">HydraFacial Keravive</a> is a 3-step process that cleanses, exfoliates, and infuses peptides into the scalp, similar to how a HydraFacial works on facial skin.',
       },
       { h3: 'Step 1: Cleanse' },
       {
-        p: 'A specialized vortex tip removes oil, dead skin, product buildup, and hard water mineral deposits from the scalp. This isn't a massage or a scrub—it's vacuum extraction. The device physically lifts out congestion that's been sitting there for months.',
+        p: 'A specialized vortex tip removes oil, dead skin, product buildup, and hard water mineral deposits from the scalp. This isn\'t a massage or a scrub--it\'s vacuum extraction. The device physically lifts out congestion that\'s been sitting there for months.',
       },
       {
-        p: 'In San Diego, we consistently see white and yellow buildup in the extraction canister, even from clients who wash their hair daily. That's calcium, magnesium, styling product, sebum, and dead skin—all layered together in a way that shampoo can't touch.',
+        p: 'In San Diego, we consistently see white and yellow buildup in the extraction canister, even from clients who wash their hair daily. That\'s calcium, magnesium, styling product, sebum, and dead skin--all layered together in a way that shampoo can\'t touch.',
       },
       { h3: 'Step 2: Nourish' },
       {
@@ -958,11 +889,9 @@ export const articles: Article[] = [
       },
       { h3: 'Step 3: Continue at home' },
       {
-        p: 'Every Keravive treatment includes a take-home peptide spray to nourish the scalp between visits. Consistency is what holds the result—one deep cleanse clears the congestion, but regular maintenance keeps it from coming back.',
+        p: 'Every Keravive treatment includes a take-home peptide spray to nourish the scalp between visits. Consistency is what holds the result--one deep cleanse clears the congestion, but regular maintenance keeps it from coming back.',
       },
-      {
-        p: '<strong>Pricing:</strong>',
-      },
+      { p: '<strong>Pricing at KIAMO Skin:</strong>' },
       {
         ul: [
           'Single Keravive Scalp Treatment: <strong>$599</strong>',
@@ -972,10 +901,10 @@ export const articles: Article[] = [
       { h3: 'Who benefits from Keravive?' },
       {
         ul: [
-          '<strong>Chronic dandruff that doesn't respond to medicated shampoo.</strong> If you've tried zinc pyrithione, ketoconazole, and selenium sulfide with no improvement, the issue isn't the active ingredient—it's that buildup is blocking it.',
+          '<strong>Chronic dandruff that doesn\'t respond to medicated shampoo.</strong> If you\'ve tried zinc pyrithione, ketoconazole, and selenium sulfide with no improvement, buildup is likely blocking the active ingredients from reaching your scalp.',
           '<strong>San Diego residents dealing with hard water damage.</strong> If your scalp feels tight, itchy, or flaky even after shampooing, mineral deposits are likely the problem.',
-          '<strong>Anyone who invests in skincare but has never treated their scalp.</strong> Your scalp is skin. If you're getting monthly facials but ignoring your scalp, you're missing a major source of congestion and inflammation.',
-          '<strong>People experiencing increased shedding with visible scalp buildup.</strong> A congested scalp creates a poor environment for healthy hair growth. Clearing the buildup often reduces shedding within a few weeks.',
+          '<strong>Anyone who invests in skincare but has never treated their scalp.</strong> Your scalp is skin. If you\'re getting monthly facials but ignoring your scalp, you\'re missing a major source of congestion and inflammation.',
+          '<strong>People experiencing increased shedding with visible scalp buildup.</strong> A congested scalp creates a poor environment for healthy hair growth.',
         ],
       },
       {
@@ -985,20 +914,14 @@ export const articles: Article[] = [
         p: 'Bree A., from Carlsbad, added: <em>"Coming from Carlsbad I blocked off the whole morning. We did Procell and Keravive back-to-back and it made every long drive worthwhile."</em>',
       },
       {
-        p: 'Keravive isn't a luxury scalp spa treatment—it's corrective therapy for a scalp that standard products can't fix. If you've been dealing with flaking, itching, or buildup for months and nothing has worked, this is the next step.',
+        p: 'Keravive isn\'t a luxury scalp spa treatment--it\'s corrective therapy for a scalp that standard products can\'t fix. <a href="/treatments/keravive-scalp/">Book a Keravive consultation at KIAMO Skin in Mission Hills.</a>',
       },
-      {
-        p: '<a href="/treatments/keravive-scalp/">Book a Keravive consultation at KIAMO Skin in Mission Hills.</a>',
-      },
-
       { h2: 'What happens if dandruff is left untreated?' },
       {
         answer:
-          'Chronic dandruff can lead to persistent scalp inflammation, increased hair shedding, and secondary infections from constant scratching. While <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2887514/" rel="noopener" target="_blank">dandruff itself doesn't cause permanent hair loss, the inflammation and scratching it triggers can weaken hair follicles over time</a>.',
+          'Chronic dandruff can lead to persistent scalp inflammation, increased hair shedding, and secondary infections from constant scratching. While <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2887514/" rel="noopener" target="_blank">dandruff itself doesn\'t cause permanent hair loss, the inflammation and scratching it triggers can weaken hair follicles over time</a>.',
       },
-      {
-        p: 'Here's what happens when dandruff goes unaddressed:',
-      },
+      { p: 'Here\'s what happens when dandruff goes unaddressed:' },
       {
         ul: [
           '<strong>Inflammation becomes chronic.</strong> The longer <em>Malassezia</em> colonizes your scalp, the more your immune system reacts. Chronic inflammation disrupts the hair growth cycle, pushing more follicles into the shedding phase prematurely.',
@@ -1008,7 +931,7 @@ export const articles: Article[] = [
         ],
       },
       {
-        p: 'Dandruff won't make you bald, but it creates an environment where hair struggles. Treating it early—whether with medicated shampoo or professional scalp therapy—prevents the problem from escalating into something harder to reverse.',
+        p: 'Dandruff won\'t make you bald, but it creates an environment where hair struggles. Treating it early--whether with medicated shampoo or professional scalp therapy--prevents the problem from escalating into something harder to reverse.',
       },
     ],
     faqHeading: 'Dandruff Treatment Questions',
@@ -1016,22 +939,22 @@ export const articles: Article[] = [
       {
         question: 'Is it better to wash hair daily if I have dandruff?',
         answer:
-          'It depends on your scalp type. Oily scalps benefit from daily medicated shampooing, while dry or textured hair may worsen with over-washing. If your scalp produces a lot of oil, daily washing with a gentle medicated shampoo can help control <em>Malassezia</em> and reduce flakes. If your hair is dry, curly, or coily, wash your scalp 2-3 times per week with a targeted treatment and focus conditioner on your hair strands, not your scalp.',
+          'It depends on your scalp type. Oily scalps benefit from daily medicated shampooing, while dry or textured hair may worsen with over-washing. If your hair is dry, curly, or coily, wash your scalp 2-3 times per week with a targeted treatment and focus conditioner on your hair strands, not your scalp.',
       },
       {
         question: 'Should you brush dandruff off?',
         answer:
-          'Gentle brushing before shampooing can help loosen flakes, but aggressive scratching or scraping can damage your scalp and worsen inflammation. Focus on treating the cause, not just removing visible flakes. A soft-bristle brush used lightly can help lift surface flakes before washing, but if you're scratching hard enough to leave red marks or cause pain, you're doing more harm than good.',
+          'Gentle brushing before shampooing can help loosen flakes, but aggressive scratching or scraping can damage your scalp and worsen inflammation. A soft-bristle brush used lightly can help lift surface flakes before washing, but focus on treating the cause--not just removing visible flakes.',
       },
       {
         question: 'Can dandruff be cured permanently?',
         answer:
-          'Dandruff can be controlled but not permanently cured—it's a chronic condition that requires ongoing management. Most people need consistent use of medicated shampoo or periodic professional scalp treatments to keep it under control. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2887514/" rel="noopener" target="_blank">The yeast that causes dandruff lives on everyone's scalp</a>, so the goal isn't to eliminate it entirely—it's to keep your immune system's reaction in check.',
+          'Dandruff can be controlled but not permanently cured--it\'s a chronic condition that requires ongoing management. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC2887514/" rel="noopener" target="_blank">The yeast that causes dandruff lives on everyone\'s scalp</a>, so the goal isn\'t to eliminate it entirely--it\'s to keep your immune system\'s reaction in check through consistent treatment.',
       },
       {
         question: 'Does San Diego water make dandruff worse?',
         answer:
-          'Yes. San Diego has some of the hardest water in California, and <a href="/journal/san-diego-hard-water-and-your-scalp/">mineral deposits (calcium, magnesium) can build up on the scalp</a>, causing irritation and flaking that mimics or worsens dandruff. Hard water also raises scalp pH, creating a more favorable environment for <em>Malassezia</em> to thrive. If you've noticed your dandruff got worse after moving to San Diego, or if your scalp feels tight and itchy even with medicated shampoo, hard water is likely part of the problem.',
+          'Yes. San Diego has some of the hardest water in California, and <a href="/journal/san-diego-hard-water-and-your-scalp/">mineral deposits (calcium, magnesium) can build up on the scalp</a>, causing irritation and flaking that mimics or worsens dandruff. Hard water also raises scalp pH, creating a more favorable environment for <em>Malassezia</em> to thrive.',
       },
     ],
     cta: { label: 'See Keravive scalp treatment', href: '/treatments/keravive-scalp/' },
