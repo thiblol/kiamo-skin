@@ -26,10 +26,22 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
   <p class={`t-meta mt-3 ${muted}`}>{business.visit.orientation}</p>
 
   <p class="t-body mt-5">
-    <a href={business.phone.href} class={link}>{business.phone.display}</a>
+    <a
+      href={business.phone.href}
+      class={link}
+      onclick="if(typeof gtag !== 'undefined') gtag('event', 'phone_click', {event_category: 'engagement', event_label: 'nap_block', transport_type: 'beacon'});"
+    >
+      {business.phone.display}
+    </a>
   </p>
   <p class="t-body">
-    <a href={`mailto:${business.email}`} class={link}>{business.email}</a>
+    <a
+      href={`mailto:${business.email}`}
+      class={link}
+      onclick="if(typeof gtag !== 'undefined') gtag('event', 'email_click', {event_category: 'engagement', event_label: 'nap_block', transport_type: 'beacon'});"
+    >
+      {business.email}
+    </a>
   </p>
 
   {/* No opening hours: none were ever verified. This is the honest substitute. */}

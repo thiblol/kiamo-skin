@@ -715,12 +715,12 @@ export const articles: Article[] = [
   },
   {
     slug: 'dandruff-treatment-san-diego',
-    headline: 'Dandruff Treatment in San Diego: When Shampoo Isn\'t Enough',
-    title: 'Dandruff Treatment San Diego: When Shampoo Isn\'t Enough',
+    headline: 'Professional Scalp Treatment San Diego: Keravive for Dandruff, Flaking & Hair Health',
+    title: 'Professional Scalp Treatment San Diego | Keravive Therapy for Dandruff & Hair Loss',
     description:
-      'What causes dandruff, how to treat it at home, and when professional Keravive scalp therapy becomes the only solution. Served in Mission Hills, San Diego.',
+      'Expert scalp treatment in Mission Hills, San Diego. Keravive therapy addresses dandruff, flaking, seborrheic dermatitis, dry scalp & hair thinning at the source. Book your consultation.',
     standfirst:
-      'If you\'ve been rotating through medicated shampoos for months and still see flakes, the problem isn\'t the shampoo you chose. It\'s that shampoo can\'t reach what\'s actually causing the issue.',
+      'Looking for professional scalp treatment in San Diego? KIAMO SKIN offers Keravive therapy for dandruff, seborrheic dermatitis, dry scalp, and hair thinning. While over-the-counter shampoos treat surface symptoms, Keravive addresses the root cause.',
     readingTime: '12 min read',
     datePublished: '2026-08-20',
     dateModified: '2026-08-20',
@@ -728,7 +728,26 @@ export const articles: Article[] = [
     imageAlt: 'HydraFacial Keravive scalp treatment device working through sectioned hair at the scalp',
     body: [
       {
-        p: 'Most people treat dandruff like a cosmetic problem--something a different shampoo will fix. But if you\'ve been rotating through Head & Shoulders, Nizoral, and Selsun Blue for months and still see flakes on your collar, the problem isn\'t the shampoo you chose. It\'s that shampoo can\'t reach what\'s actually causing the issue: buildup, congestion, and inflammation below the surface of your scalp.',
+        p: 'Looking for professional scalp treatment in San Diego? If you\'ve been rotating through Head & Shoulders, Nizoral, and Selsun Blue for months and still see flakes, the problem isn\'t the shampoo you chose. Over-the-counter shampoos treat surface symptoms. Professional Keravive scalp therapy at KIAMO SKIN addresses the root cause: buildup, congestion, and inflammation below the surface that at-home products simply can\'t reach.',
+      },
+      { h2: 'Why San Diego residents need professional scalp treatment' },
+      {
+        answer:
+          'San Diego\'s environment creates unique scalp challenges that over-the-counter products can\'t fully address. Hard water, year-round sun exposure, ocean salt, and dry inland climate all contribute to scalp issues that require professional intervention.',
+      },
+      {
+        p: 'Living in San Diego means your scalp deals with conditions that accelerate buildup and inflammation:',
+      },
+      {
+        ul: [
+          '<strong>Some of California\'s hardest water.</strong> <a href="/journal/san-diego-hard-water-and-your-scalp/">San Diego\'s tap water contains high levels of calcium and magnesium</a> that deposit on your scalp with every shower, creating a layer of mineral buildup that traps oils, clogs follicles, and mimics dandruff. Medicated shampoos can\'t dissolve these deposits.',
+          '<strong>Year-round UV exposure.</strong> San Diego averages 266 sunny days per year. Chronic sun exposure on your scalp triggers inflammation and accelerates cell turnover, leading to increased flaking and sensitivity.',
+          '<strong>Ocean and beach lifestyle.</strong> Salt spray from the coast (even inland areas like Mission Hills), chlorine from pools, and sand particles all contribute to scalp congestion. For residents in Pacific Beach, La Jolla, and Del Mar, this is a daily reality.',
+          '<strong>Dry inland climate.</strong> Areas like Mission Valley, North Park, and Carlsbad experience low humidity, which causes scalp dryness that\'s often mistaken for dandruff. Moisturizing shampoos provide temporary relief but don\'t restore the scalp barrier.',
+        ],
+      },
+      {
+        p: 'These environmental factors combine to create scalp issues that standard products can\'t fix. Professional scalp treatment removes years of accumulated buildup in a single session--something no at-home routine can achieve.',
       },
       {
         p: 'This guide explains what causes dandruff, how to treat it at home, and when professional scalp therapy becomes the only solution that works. If you live in San Diego, there\'s an additional factor making your dandruff worse--and most dermatologists never mention it.',
@@ -955,6 +974,171 @@ export const articles: Article[] = [
         question: 'Does San Diego water make dandruff worse?',
         answer:
           'Yes. San Diego has some of the hardest water in California, and <a href="/journal/san-diego-hard-water-and-your-scalp/">mineral deposits (calcium, magnesium) can build up on the scalp</a>, causing irritation and flaking that mimics or worsens dandruff. Hard water also raises scalp pH, creating a more favorable environment for <em>Malassezia</em> to thrive.',
+      },
+    ],
+    cta: { label: 'See Keravive scalp treatment', href: '/treatments/keravive-scalp/' },
+  },
+  {
+    slug: 'san-diego-scalp-treatments-how-keravive-works',
+    headline: 'San Diego Scalp Treatments: How Does Keravive Work?',
+    title: 'San Diego Scalp Treatments: How Does Keravive Work? | KIAMO SKIN',
+    description:
+      'How Keravive scalp treatment works for San Diego residents dealing with hard water buildup, ocean salt, and sun damage. The 3-step process explained by a licensed esthetician.',
+    standfirst:
+      'Keravive is a clinical scalp treatment designed to remove years of product buildup, hard water minerals, and oil congestion that shampoo can\'t reach. For San Diego residents dealing with ocean humidity, hard water, and year-round sun exposure, it addresses the root causes of flaking, tightness, and hair thinning.',
+    readingTime: '8 min read',
+    datePublished: '2026-08-25',
+    dateModified: '2026-08-25',
+    image: keravive,
+    imageAlt: 'HydraFacial Keravive device treating scalp with vortex technology',
+    body: [
+      {
+        p: 'Looking for professional scalp treatment in San Diego? Keravive is a clinical protocol for scalp buildup, flaking, and the conditions that contribute to hair thinning. Unlike a relaxing head spa or scalp massage, Keravive is corrective therapy—it removes years of accumulated product, oil, and mineral deposits in a single forty-five-minute session, then feeds the scalp with a concentrated peptide complex to support long-term scalp health.',
+      },
+      {
+        p: 'This guide explains how Keravive works, what makes it different from at-home treatments, and why San Diego\'s specific environmental conditions (hard water, ocean exposure, dry climate) make professional scalp therapy especially effective here.',
+      },
+      { h2: 'What is Keravive scalp treatment?' },
+      {
+        answer:
+          'Keravive is a three-step clinical scalp treatment that cleanses, exfoliates, and hydrates the scalp using HydraFacial\'s patented vortex technology. It removes buildup from the follicle level, improves scalp circulation, and delivers a concentrated peptide serum to support healthy hair growth.',
+      },
+      {
+        p: 'The treatment addresses what at-home products can\'t: deep-seated congestion below the scalp surface. While medicated shampoos treat symptoms on the surface, Keravive targets the root cause—follicle congestion, mineral deposits, and inflammation that prevent your scalp from functioning properly.',
+      },
+      {
+        p: 'Keravive is performed at KIAMO SKIN in Mission Hills, serving clients from Pacific Beach, La Jolla, Del Mar, Encinitas, and Carlsbad. Every treatment is one-to-one with Kiki, a licensed esthetician.',
+      },
+      { h2: 'How does Keravive work?' },
+      {
+        answer:
+          'Keravive works through three sequential steps: cleanse and exfoliate to remove buildup, extract congestion from follicles using vortex suction, and infuse a peptide growth factor serum directly into the scalp. Each step addresses a different layer of scalp dysfunction.',
+      },
+      { h3: 'Step 1: Deep cleanse and exfoliation' },
+      {
+        p: 'The first step uses HydraFacial\'s vortex cleansing technology combined with a gentle exfoliating serum to break down oil, dead skin cells, product residue, and mineral deposits. The vortex motion loosens buildup at the follicle level—something manual scrubbing or clarifying shampoo can\'t achieve.',
+      },
+      {
+        p: 'For San Diego residents, this step is especially important. <a href="/journal/san-diego-hard-water-and-your-scalp/">San Diego\'s tap water contains 12-17 grains per gallon of calcium and magnesium</a>—some of California\'s hardest water. These minerals deposit on your scalp with every shower, creating a layer that traps oils and clogs follicles. Standard shampoo can\'t dissolve mineral buildup; Keravive\'s clinical-grade exfoliation can.',
+      },
+      { h3: 'Step 2: Follicle extraction' },
+      {
+        p: 'Step two uses gentle suction to extract the loosened debris from follicles. This isn\'t extraction in the facial sense—it\'s a controlled vacuum that pulls buildup out of the scalp without irritation or damage.',
+      },
+      {
+        p: 'What comes out during this step: sebum plugs, product residue from dry shampoo and styling products, hard water minerals, dead skin cells, and environmental particles (for coastal residents, this includes salt and sand).',
+      },
+      {
+        p: 'Clients from Pacific Beach, Mission Beach, and La Jolla often see visible salt deposits during this step—a result of ocean spray and swimming. For inland residents in Mission Valley or North Park, the extraction reveals hard water mineral buildup mixed with product congestion.',
+      },
+      { h3: 'Step 3: Peptide infusion' },
+      {
+        p: 'The final step infuses a proprietary growth factor serum directly into the freshly cleansed scalp. The serum contains biomimetic peptides designed to support scalp circulation, reduce inflammation, and create a healthier environment for hair follicles.',
+      },
+      {
+        p: 'With buildup removed, the peptides can actually penetrate. Before Keravive, that same serum applied over congested follicles would sit on the surface and rinse away. After extraction, the scalp can absorb what it needs.',
+      },
+      {
+        p: 'Every treatment includes a thirty-day supply of take-home peptide spray to continue supporting scalp health between sessions.',
+      },
+      { h2: 'Why does San Diego need professional scalp treatment?' },
+      {
+        answer:
+          'San Diego\'s environment creates scalp conditions that at-home products can\'t fully address: hard water deposits, ocean salt exposure, year-round UV damage, and low coastal humidity. These factors combine to create chronic scalp buildup and inflammation.',
+      },
+      {
+        p: 'Environmental challenges specific to San Diego scalps:',
+      },
+      {
+        ul: [
+          '<strong>Hard water buildup.</strong> San Diego water contains 12-17 grains per gallon of hardness—among California\'s highest. Calcium and magnesium deposit on your scalp, clogging follicles and creating a barrier that prevents moisture absorption.',
+          '<strong>Ocean and coastal exposure.</strong> For Pacific Beach, La Jolla, and Del Mar residents, salt spray reaches inland blocks even when you\'re not swimming. Salt accelerates dehydration and follicle congestion.',
+          '<strong>Year-round sun exposure.</strong> San Diego averages 266 sunny days per year. The part line and hairline receive direct UV without protection, triggering scalp inflammation and accelerating cell turnover.',
+          '<strong>Dry inland climate.</strong> Areas like Mission Valley, North Park, and Carlsbad experience low humidity, leading to chronic scalp dryness that\'s often mistaken for dandruff.',
+        ],
+      },
+      {
+        p: 'These aren\'t problems a better shampoo can fix. They require professional intervention to remove accumulated deposits and reset the scalp environment.',
+      },
+      { h2: 'How is Keravive different from a head spa?' },
+      {
+        answer:
+          'Keravive is corrective clinical therapy, while head spas are relaxation experiences. Head spas focus on massage, water cleansing, and aromatherapy. Keravive focuses on follicle-level extraction, exfoliation, and peptide infusion to address medical-grade scalp dysfunction.',
+      },
+      {
+        p: 'The distinction matters when choosing treatment. If your scalp is congested, flaking, or contributing to hair thinning, a head spa will feel good but won\'t remove the underlying buildup. Keravive is designed for correction, not relaxation.',
+      },
+      {
+        p: 'That said, Keravive isn\'t uncomfortable. The vortex suction feels like gentle massage, and most clients find the experience calming. But the intent is medical, not spa.',
+      },
+      { h2: 'Who should get Keravive scalp treatment?' },
+      {
+        answer:
+          'Keravive is appropriate for anyone with visible scalp buildup, persistent flaking, tightness, or hair shedding accompanied by scalp congestion. It\'s especially effective for San Diego residents whose scalps are affected by hard water, ocean exposure, or chronic dryness.',
+      },
+      {
+        p: 'Ideal candidates include:',
+      },
+      {
+        ul: [
+          '<strong>Anyone with visible scalp buildup or flaking.</strong> If your scalp feels tight, itchy, or produces flakes even after shampooing, buildup is likely the cause.',
+          '<strong>Coastal residents dealing with ocean salt exposure.</strong> Pacific Beach, Mission Beach, La Jolla, and Del Mar residents whose scalps are exposed to salt spray daily.',
+          '<strong>People who\'ve tried multiple anti-dandruff shampoos with no improvement.</strong> If zinc pyrithione, ketoconazole, and selenium sulfide haven\'t worked, the problem is likely buildup blocking the active ingredients.',
+          '<strong>Anyone experiencing increased hair shedding with scalp congestion.</strong> A congested scalp creates a poor environment for hair growth. Clearing the follicles won\'t regrow hair that\'s stopped for genetic reasons, but it removes a mechanical obstruction.',
+          '<strong>San Diego residents dealing with hard water damage.</strong> If your scalp feels dry and tight even after conditioning, mineral deposits are likely the cause.',
+        ],
+      },
+      {
+        p: 'Keravive does not treat hair loss caused by genetics, hormones, or medical conditions. It treats scalp dysfunction that can contribute to shedding or prevent existing hair from growing optimally.',
+      },
+      { h2: 'How long do Keravive results last?' },
+      {
+        answer:
+          'Keravive results typically last four to six weeks before buildup begins to return. Most clients maintain results with treatments every four to six weeks, using the take-home peptide spray daily between sessions to prolong effects.',
+      },
+      {
+        p: 'The timeline depends on environmental exposure and at-home care. Coastal residents (Pacific Beach, La Jolla) who swim frequently may need treatments every four weeks. Inland residents with less salt exposure but high hard water exposure may stretch to six weeks.',
+      },
+      {
+        p: 'The take-home peptide spray is critical for maintenance. Daily application keeps the scalp environment healthy and slows the return of buildup. Without it, results fade faster.',
+      },
+      { h2: 'How much does Keravive cost in San Diego?' },
+      {
+        answer:
+          'A single Keravive treatment at KIAMO SKIN is $599. The three-treatment series is $1,499, which is how most scalp concerns are addressed. Each treatment includes a thirty-day supply of take-home peptide spray.',
+      },
+      {
+        p: 'The series format exists because scalp dysfunction rarely resolves in one session. The first treatment clears accumulated buildup; the second and third treatments address new buildup while continuing to support scalp health. By the third session, the scalp is clear and the maintenance interval is established.',
+      },
+      {
+        p: '<a href="/treatments/keravive-scalp/">Book a Keravive consultation at KIAMO SKIN in Mission Hills.</a> The studio serves Pacific Beach, La Jolla, Del Mar, Encinitas, Carlsbad, Mission Valley, and North Park.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How long does a Keravive treatment take?',
+        answer:
+          'A Keravive treatment takes forty-five minutes from start to finish. If driving from Pacific Beach, plan for ninety minutes total including travel time. Clients from La Jolla, Del Mar, and Encinitas should block off two hours.',
+      },
+      {
+        question: 'Does Keravive hurt?',
+        answer:
+          'No. Keravive uses gentle vortex suction that feels like light massage. Most clients find the experience relaxing. There is no downtime, and the scalp may feel tingly or slightly sensitive immediately after, but discomfort is rare.',
+      },
+      {
+        question: 'Can I wash my hair after Keravive?',
+        answer:
+          'Wait at least eight hours before washing your hair to allow the peptide serum to fully absorb. After that, resume your normal hair care routine. Use the take-home peptide spray daily for best results.',
+      },
+      {
+        question: 'Will Keravive regrow hair?',
+        answer:
+          'Keravive does not regrow hair that has stopped growing due to genetics, hormones, or medical conditions like androgenetic alopecia. It treats scalp dysfunction—buildup, congestion, inflammation—that can contribute to shedding or prevent existing hair from growing optimally. A healthier scalp creates a better environment for hair, but it does not reverse permanent hair loss.',
+      },
+      {
+        question: 'Can I go to the beach after Keravive?',
+        answer:
+          'Wait at least twenty-four hours before swimming in the ocean or pool. Salt water and chlorine can irritate the freshly treated scalp and interfere with peptide absorption. After twenty-four hours, normal beach and pool activities are fine.',
       },
     ],
     cta: { label: 'See Keravive scalp treatment', href: '/treatments/keravive-scalp/' },

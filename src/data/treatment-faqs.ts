@@ -78,9 +78,24 @@ export const treatmentFaqs: Record<string, Faq[]> = {
         'A single Keravive scalp treatment at KIAMO SKIN is $599. The series of three is $1,499 in total, which is the format most scalp concerns are treated in.',
     },
     {
+      question: 'Where can I get Keravive scalp treatment in San Diego?',
+      answer:
+        'KIAMO SKIN offers Keravive scalp treatment at the Mission Hills studio, centrally located and easy to reach from Pacific Beach, La Jolla, Del Mar, Encinitas, Carlsbad, North Park, Hillcrest, and Mission Valley. The studio is fifteen minutes from Pacific Beach, twenty minutes from La Jolla, and thirty minutes from Encinitas. Parking is available near the studio.',
+    },
+    {
+      question: 'How long does Keravive take if coming from Pacific Beach?',
+      answer:
+        'Keravive takes forty-five minutes for the treatment itself. If driving from Pacific Beach, the studio in Mission Hills is fifteen minutes away, so plan for ninety minutes total including travel. Clients from La Jolla, Del Mar, and Encinitas typically block off two hours to account for the drive and treatment time.',
+    },
+    {
       question: 'What is the best treatment for a flaking, itchy scalp?',
       answer:
         'The right treatment for a flaking, itchy scalp depends on whether the cause is buildup or a medical condition. Keravive treats buildup — oil, dead skin, product residue and hard water minerals — by cleansing, exfoliating and hydrating the scalp, then feeding it a concentrated peptide complex. San Diego water runs around sixteen grains per gallon, hard enough that mineral residue on the scalp is a routine finding here. If the flaking is scaly, patchy or painful rather than dry, that belongs with a dermatologist first.',
+    },
+    {
+      question: 'Does ocean water affect Keravive results?',
+      answer:
+        'Ocean water does not reduce Keravive effectiveness, but salt spray and chlorine from pools can accelerate buildup between treatments. For Pacific Beach, La Jolla, and Del Mar residents who swim or surf regularly, the take-home peptide spray is especially important for maintaining results. The treatment itself removes ocean salt deposits along with hard water minerals and product buildup.',
     },
     {
       question: 'Is a scalp treatment worth it?',

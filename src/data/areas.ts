@@ -384,7 +384,10 @@ export const areas: Area[] = [
         'chemical peel for sun damage Pacific Beach',
         'microneedling Pacific Beach',
         'DMK enzyme therapy Pacific Beach',
-        'best facial Pacific Beach'
+        'best facial Pacific Beach',
+        'Keravive scalp treatment Pacific Beach',
+        'scalp treatment Pacific Beach',
+        'dandruff treatment Pacific Beach'
       ],
       neighborhoodMentions: ['Crystal Pier', 'Garnet Avenue', 'Mission Bay', 'Crown Point', 'Kate Sessions Park']
     },

@@ -5,9 +5,11 @@ interface Props {
   /** Set for the Vagaro link — external, request-based booking. */
   external?: boolean;
   class?: string;
+  /** GA4 event name to track (e.g., 'booking_click', 'phone_click') */
+  trackEvent?: string;
 }
 
-const { variant = 'primary', href, external = false, class: className = '' } = Astro.props;
+const { variant = 'primary', href, external = false, class: className = '', trackEvent } = Astro.props;
 
 /**
  * Three deliberate departures from a plain centred pill:
@@ -34,15 +36,20 @@ const variants = {
 const cls = `${base} ${variants[variant]} ${className}`;
 const rel = external ? 'noopener' : undefined;
 const target = external ? '_blank' : undefined;
+
+// GA4 event tracking function
+const trackingAttr = trackEvent
+  ? `onclick="if(typeof gtag !== 'undefined') gtag('event', '${trackEvent}', {event_category: 'engagement', event_label: '${href || 'button'}', transport_type: 'beacon'});"`
+  : '';
 ---
 
 {
   href ? (
-    <a href={href} class={cls} {target} {rel}>
+    <a href={href} class={cls} {target} {rel} {...(trackEvent && { 'data-event': trackEvent })} onclick={trackEvent ? `if(typeof gtag !== 'undefined') gtag('event', '${trackEvent}', {event_category: 'engagement', event_label: '${href}', transport_type: 'beacon'});` : undefined}>
       <slot />
     </a>
   ) : (
-    <button type="button" class={cls}>
+    <button type="button" class={cls} {...(trackEvent && { 'data-event': trackEvent })} onclick={trackEvent ? `if(typeof gtag !== 'undefined') gtag('event', '${trackEvent}', {event_category: 'engagement', transport_type: 'beacon'});` : undefined}>
       <slot />
     </button>
   )

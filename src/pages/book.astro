@@ -45,8 +45,8 @@ const firstVisit = services.find((s) => s.name === 'First-Time Client Treatment'
         automatically.
       </p>
       <div class="mt-9 flex flex-wrap gap-3">
-        <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
-        <Button variant="ghost" href={business.phone.href}>Call {business.phone.display}</Button>
+        <Button href={business.bookingUrl} external trackEvent="booking_click">{CTA_LABEL}</Button>
+        <Button variant="ghost" href={business.phone.href} trackEvent="phone_click">Call {business.phone.display}</Button>
       </div>
     </div>
   </header>

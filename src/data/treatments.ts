@@ -123,14 +123,14 @@ export const treatments: Treatment[] = [
     serviceType: 'Scalp treatment',
     category: 'Scalp therapy',
     areas: ['pacific-beach', 'la-jolla', 'encinitas', 'del-mar', 'carlsbad'],
-    title: 'Keravive Scalp Treatment in San Diego | KIAMO Skin',
+    title: 'Keravive Scalp Treatment San Diego | Mission Hills Studio',
     description:
-      'Keravive scalp therapy in Mission Hills, San Diego. Corrective treatment for flaking, buildup and thinning of the scalp. $599, or $1,499 for three.',
+      'Keravive scalp therapy serving Pacific Beach, La Jolla, Del Mar, Encinitas & Carlsbad. Professional treatment for dandruff, flaking, buildup & hair thinning. $599 in Mission Hills.',
     headline: "HydraFacial Keravive — your scalp is skin. Treat it that way.",
     opener:
-      "Looking for a head spa or scalp treatment in San Diego? Keravive is the clinical alternative — a corrective protocol for buildup, flaking and the hard water mineral residue that accumulates at the scalp, performed at a single studio in Mission Hills.",
+      "Looking for professional scalp treatment in San Diego? Keravive is clinical scalp therapy for buildup, flaking, dandruff, and the hard water mineral residue that accumulates on San Diego scalps. Performed at KIAMO SKIN in Mission Hills, serving clients from Pacific Beach to Carlsbad.",
     intro:
-      'Keravive deeply cleanses, exfoliates, and hydrates the scalp while removing buildup that can contribute to dryness, flaking, and irritation. A healthier scalp creates a better environment for healthy hair growth. In San Diego, hard water can make scalp buildup especially common, making regular scalp care an important part of maintaining a healthy scalp. Every treatment includes a take home peptide spray to continue supporting scalp health between visits.',
+      'Keravive deeply cleanses, exfoliates, and hydrates the scalp while removing buildup that contributes to dryness, flaking, and irritation. A healthier scalp creates a better environment for healthy hair growth. In San Diego, hard water makes scalp buildup especially common—residents from Pacific Beach dealing with ocean humidity to Encinitas facing dry inland climate all benefit from regular scalp care. Every treatment includes a take-home peptide spray to continue supporting scalp health between visits.',
     image: scalp,
     imageAlt: 'Scalp therapy being performed at the part line',
     goodFor: [
