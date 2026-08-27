@@ -1,6 +1,6 @@
 # Site Brief — KIAMO SKIN
 **Authoritative working document for all content, SEO and blog work. Read before writing or optimising any page.**
-Updated: 2026-08-13 · Source: `local_seo_info/` · `docs/research/business-research.md`
+Updated: 2026-08-27 · Source: `local_seo_info/` · `docs/research/business-research.md`
 
 ---
 
@@ -19,10 +19,10 @@ Updated: 2026-08-13 · Source: `local_seo_info/` · `docs/research/business-rese
 | Identity | Black-owned (self-declared) |
 | Parking | Free |
 | Cancel policy | 48hr notice; <24hr = 50% charge; no-show = 100% |
-| Current rankings | **Zero organic** — standing start as of 2026-08-02 |
+| Current rankings | Live site, actively ranking for local terms as of 2026-08-27 |
 | GBP | Live — Place ID `7222921189292804872`. Check GBP for current review count and star rating before publishing any rating data. |
 
-**One sentence:** Private, single-practitioner corrective skin and scalp studio in Mission Hills, San Diego, specialising in melanin-rich skin, acne, scarring, pigmentation and barrier repair.
+**One sentence:** Private, single-practitioner corrective skin and scalp studio in Mission Hills, San Diego, specializing in pigmentation treatment, acne scarring, and barrier repair for all skin tones—with advanced expertise in melanin-rich skin.
 
 **NAP orientation line** (use in NapBlock, footers, area page copy):
 > *Mission Hills, off India Street — five minutes from Hillcrest, Bankers Hill and Little Italy. Free parking.*
@@ -54,14 +54,19 @@ Never implied: lasers · IPL · injectables · prescriptions · hydroquinone · 
 
 ## 3. Target Reader
 
-Someone with dark marks, melasma, post-acne scarring or barrier damage who has already tried something that didn't work — usually a drugstore product or a peel elsewhere that made things worse.
+Someone with pigmentation concerns—melasma, post-inflammatory hyperpigmentation, dark spots, or uneven skin tone—who wants safe, effective treatment regardless of their skin tone. They may have already tried something that didn't work, or worse, made things worse.
 
 **Three fears to address directly in any content:**
-1. Treatment will darken the pigmentation, not lighten it — this fear is well-founded, meet it head-on
+1. Treatment will darken the pigmentation, not lighten it — this fear is well-founded for deeper skin tones, meet it head-on
 2. The practitioner has not treated skin like theirs before
 3. Spending hundreds of dollars and seeing nothing
 
-Melanin-rich skin is KIAMO's verified, uncopyable differentiator. Address it in the first 100 words of every page.
+**Primary positioning:** KIAMO specializes in pigmentation treatment for all skin tones, with advanced expertise in melanin-rich skin. This expertise makes the studio the safest choice for anyone with pigmentation concerns, not just Black and brown clients.
+
+**Secondary audiences:**
+- Scalp concerns: dryness, flaking, dandruff, thinning
+- Acne scarring and texture issues
+- Barrier damage and sensitivity
 
 ---
 
@@ -107,30 +112,40 @@ Short declaratives. Second person. Concrete nouns. No adjective inflation. No hy
 
 ---
 
-## 6. Keyword Intelligence (San Diego metro, DataForSEO 2026-08-02)
+## 6. Keyword Intelligence (San Diego metro, DataForSEO 2026-08-27)
 
-All terms unranked as of 2026-08-02. Local pack renders above organic on all 8 money SERPs — pack entry gated on Google reviews. Check the live GBP for current review count before making pack-entry forecasts. Content-only wins are Phase 1.
+Site now has live content and is actively ranking. Local pack renders above organic on money SERPs — pack entry gated on Google reviews.
 
-### Phase 1 — Publishable now (KD 0–3, no review gate)
+### High-Priority Targets (Phase 1)
 
-| Keyword | Volume | KD | Target page |
-|---|---|---|---|
-| microneedling san diego | 590 | 0 | `/treatments/procell-microchanneling` |
-| hydrafacial san diego | 480 | 0 | `/treatments/hydrafacial` |
-| chemical peel san diego | 210 | 0 | `/treatments/lira-peels` |
-| dermaplaning san diego | 110 | 0 | `/treatments/dermaplaning` |
-| scalp treatment san diego | 110 | 3 | `/treatments/keravive-scalp` |
-| melasma treatment san diego | 20 | 0 | `/treatments/lira-peels` |
-| hyperpigmentation treatment san diego | 10 | 0 | `/treatments/lira-peels` |
-| back facial san diego | 30 | 0 | `/treatments/lira-peels` |
-| black esthetician san diego | 10 | 2 | `/melanin-rich-skin` |
-| dmk enzyme therapy | 20 | 0 | `/treatments/dmk-enzyme-therapy` |
-| microneedling cost san diego | 20 | 0 | `/treatments/procell-microchanneling` |
-| hydrafacial san diego cost | 10 | 0 | `/treatments/hydrafacial` |
-| facial chula vista | 50 | 0 | `/service-areas/chula-vista` |
-| facial del mar | 40 | 0 | `/service-areas/del-mar` |
-| facial north park | 40 | 3 | `/service-areas/north-park` |
-| facial pacific beach | 30 | 0 | `/service-areas/pacific-beach` |
+| Keyword | Volume | KD | Target page | Status |
+|---|---|---|---|---|
+| hyperpigmentation treatment san diego | 165,000 | 0 | `/treatments/melasma` | Live |
+| melasma treatment san diego | 60,000 | 0 | `/treatments/melasma` | Live |
+| microneedling san diego | 590 | 0 | `/treatments/procell-microchanneling` | Live |
+| hydrafacial san diego | 480 | 0 | `/treatments/hydrafacial` | Live |
+| chemical peel san diego | 210 | 0 | `/treatments/lira-peels` | Live |
+| scalp treatment san diego | 110 | 3 | `/treatments/keravive-scalp` | Live |
+| dermaplaning san diego | 110 | 0 | `/treatments/dermaplaning` | Live |
+| black esthetician san diego | 10 | 2 | `/melanin-rich-skin` | Live |
+
+### Cost-Intent Keywords (High Conversion)
+
+| Keyword | Volume | Target page |
+|---|---|---|
+| microneedling cost san diego | 20 | `/treatments/procell-microchanneling` |
+| hydrafacial san diego cost | 10 | `/treatments/hydrafacial` |
+| chemical peel cost san diego | 10 | `/treatments/lira-peels` |
+
+### Service Area Keywords
+
+| Keyword | Volume | Target page | Status |
+|---|---|---|
+| facial chula vista | 50 | `/service-areas/chula-vista` | Live |
+| facial del mar | 40 | `/service-areas/del-mar` | Live |
+| facial north park | 40 | `/service-areas/north-park` | Live |
+| facial pacific beach | 30 | `/service-areas/pacific-beach` | Live |
+| facial la jolla | 140 | `/service-areas/la-jolla` | Live |
 
 ### Phase 2 — Needs ~70 Google reviews first (map-pack gated)
 
@@ -141,21 +156,14 @@ All terms unranked as of 2026-08-02. Local pack renders above organic on all 8 m
 | hydrafacial near me | 320 | Pack |
 | microneedling near me | 320 | Pack |
 | esthetician near me | 170 | Pack |
-| facial la jolla | 140 | KD 6, pack at 66–206 reviews |
 
-### Phase 3 — Contested or deferred
+### Never Target
 
-- `head spa san diego` 1,300/mo — pursue **only** with copy that draws the distinction: *"This isn't a shampoo. It's corrective scalp therapy."* Wrong framing attracts the wrong client and produces bad reviews.
-- `best facial san diego` 210/mo, KD 27 — resolved by Yelp/Reddit listicles, not studio pages.
+`keravive san diego` (0 searches) · `head spa san diego` (wrong service, attracts relaxation seekers not corrective clients) · `hair loss treatment san diego` ($57.76 CPC = medical intent) · `skin clinic san diego` ($44.23 CPC = implies medical status not held) · `cheap facial san diego` (wrong client)
 
-### Never target
-
-`keravive san diego` (0 searches) · `korean/japanese scalp san diego` (wrong service) · `hair loss treatment san diego` ($57.76 CPC = medical intent) · `skin clinic san diego` ($44.23 CPC = implies medical status not held) · `cheap facial san diego` (wrong client) · `microneedling san diego reddit` (searcher wants Reddit)
-
-### Cost questions — the single highest-leverage content move
+### Cost Questions — Highest-Leverage Content Move
 
 Cost is the #1 PAA question on every cluster. Almost no competitor publishes prices. KIAMO holds 9 verified prices. Publishing them and answering cost questions in FAQs is the easiest AI-Overview and PAA capture available.
-
 
 ---
 
@@ -206,33 +214,40 @@ Hub pages use geo-modified link labels. Footers and sibling blocks do not.
 
 ### All pages, targets, phases
 
-| Slug | Target keyword | Volume | Phase |
-|---|---|---|---|
-| `/` | facials san diego | 1,300 | 2 |
-| `/treatments` | skin care san diego | 210 | 2 |
-| `/treatments/hydrafacial` | hydrafacial san diego | 480 | **1** |
-| `/treatments/keravive-scalp` | scalp treatment san diego | 110 | **1** |
-| `/treatments/dmk-enzyme-therapy` | dmk enzyme therapy | 20 | 2 |
-| `/treatments/procell-microchanneling` | microneedling san diego | 590 | **1** |
-| `/treatments/lira-peels` | chemical peel san diego | 210 | **1** |
-| `/treatments/dermaplaning` | dermaplaning san diego | 110 | **1** |
-| `/about` | esthetician san diego | 110 | 2 |
-| `/melanin-rich-skin` | black esthetician san diego | 10 | **1** |
-| `/service-areas` | esthetician near me | 170 | 2 |
-| `/service-areas/mission-hills` | (NAP anchor, 0 vol) | 0 | 2 |
-| `/service-areas/la-jolla` | facial la jolla | 140 | 2 |
-| `/service-areas/chula-vista` | facial chula vista | 50 | **1** |
-| `/service-areas/north-park` | facial north park | 40 | **1** |
-| `/service-areas/del-mar` | facial del mar | 40 | **1** |
-| `/service-areas/pacific-beach` | facial pacific beach | 30 | **1** |
-| `/service-areas/encinitas` | facial encinitas | 30 | 2 |
-| `/service-areas/la-mesa` | facial la mesa | 30 | 2 |
-| `/service-areas/carlsbad` | facial carlsbad | 20 | 3 |
-| `/journal/[slug]` | per-article informational | — | ongoing |
-| `/skin-care-clinic` | skin care clinic mission hills | — | GBP mirror |
-| `/facial-spa` | facial spa mission hills | — | GBP mirror |
-| `/esthetician` | licensed esthetician san diego | — | GBP mirror |
+| Slug | Target keyword | Volume | Phase | Status |
+|---|---|---|---|---|
+| `/` | facials san diego | 1,300 | 2 | Live |
+| `/treatments` | skin care san diego | 210 | 2 | Live |
+| `/treatments/hydrafacial` | hydrafacial san diego | 480 | **1** | Live |
+| `/treatments/keravive-scalp` | scalp treatment san diego | 110 | **1** | Live |
+| `/treatments/dmk-enzyme-therapy` | dmk enzyme therapy | 20 | 2 | Live |
+| `/treatments/procell-microchanneling` | microneedling san diego | 590 | **1** | Live |
+| `/treatments/lira-peels` | chemical peel san diego | 210 | **1** | Live |
+| `/treatments/dermaplaning` | dermaplaning san diego | 110 | **1** | Live |
+| `/treatments/melasma` | melasma treatment san diego | 60,000 | **1** | Live |
+| `/about` | esthetician san diego | 110 | 2 | Live |
+| `/melanin-rich-skin` | black esthetician san diego | 10 | **1** | Live |
+| `/membership` | facial membership san diego | — | 2 | Live |
+| `/service-areas` | esthetician near me | 170 | 2 | Live |
+| `/service-areas/mission-hills` | (NAP anchor, 0 vol) | 0 | 2 | Live |
+| `/service-areas/la-jolla` | facial la jolla | 140 | 2 | Live |
+| `/service-areas/chula-vista` | facial chula vista | 50 | **1** | Live |
+| `/service-areas/north-park` | facial north park | 40 | **1** | Live |
+| `/service-areas/del-mar` | facial del mar | 40 | **1** | Live |
+| `/service-areas/pacific-beach` | facial pacific beach | 30 | **1** | Live |
+| `/service-areas/encinitas` | facial encinitas | 30 | 2 | Live |
+| `/service-areas/la-mesa` | facial la mesa | 30 | 2 | Live |
+| `/service-areas/carlsbad` | facial carlsbad | 20 | 3 | Live |
+| `/journal/[slug]` | per-article informational | — | ongoing | Live |
 
+### Money Pages (prioritize internal links to these)
+
+1. `/treatments/melasma` — highest volume target (60k/mo)
+2. `/treatments/procell-microchanneling` — high volume + high ticket ($475)
+3. `/treatments/hydrafacial` — high volume + entry point ($259)
+4. `/membership` — recurring revenue anchor ($199–$299/mo)
+5. `/treatments/lira-peels` — pigmentation specialist page
+6. `/treatments/keravive-scalp` — high ticket scalp ($599)
 
 ### Internal link graph (from `site-architecture.csv`)
 
@@ -246,10 +261,11 @@ Each treatment page links to the treatments hub + 2–3 relevant area pages:
 | `/treatments/procell-microchanneling` | la-jolla · carlsbad · del-mar |
 | `/treatments/lira-peels` | chula-vista · la-jolla · north-park |
 | `/treatments/dermaplaning` | mission-hills · la-jolla · north-park |
+| `/treatments/melasma` | *Needs internal links* |
 
-`/melanin-rich-skin` links to: all 6 treatment pages + `/about` + chula-vista + north-park + la-mesa + mission-hills
+`/melanin-rich-skin` links to: all treatment pages + `/about` + chula-vista + north-park + la-mesa + mission-hills
 
-Each `/service-areas/[area]` links to: `/service-areas` hub + all 6 treatment pages
+Each `/service-areas/[area]` links to: `/service-areas` hub + all treatment pages
 
 ---
 
