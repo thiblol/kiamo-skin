@@ -1,0 +1,518 @@
+{
+  "property": "sc-domain:kiamoskin.com",
+  "top_pages": [
+    {
+      "page": "https://kiamoskin.com/",
+      "clicks": 14,
+      "impressions": 429,
+      "position": 10.6
+    },
+    {
+      "page": "https://kiamoskin.com/melanin-rich-skin/",
+      "clicks": 2,
+      "impressions": 106,
+      "position": 6.2
+    },
+    {
+      "page": "https://kiamoskin.com/journal/three-kinds-of-dark-mark/",
+      "clicks": 1,
+      "impressions": 81,
+      "position": 7.3
+    },
+    {
+      "page": "https://kiamoskin.com/treatments/",
+      "clicks": 1,
+      "impressions": 128,
+      "position": 8.0
+    },
+    {
+      "page": "https://kiamoskin.com/book/",
+      "clicks": 0,
+      "impressions": 80,
+      "position": 4.6
+    },
+    {
+      "page": "https://kiamoskin.com/contact/",
+      "clicks": 0,
+      "impressions": 98,
+      "position": 8.9
+    },
+    {
+      "page": "https://kiamoskin.com/journal/",
+      "clicks": 0,
+      "impressions": 87,
+      "position": 4.1
+    },
+    {
+      "page": "https://kiamoskin.com/journal/microneedling-on-dark-skin-san-diego/",
+      "clicks": 0,
+      "impressions": 7,
+      "position": 15.9
+    },
+    {
+      "page": "https://kiamoskin.com/journal/san-diego-hard-water-and-your-scalp/",
+      "clicks": 0,
+      "impressions": 125,
+      "position": 14.9
+    },
+    {
+      "page": "https://kiamoskin.com/membership/",
+      "clicks": 0,
+      "impressions": 7,
+      "position": 3.3
+    }
+  ],
+  "top_queries": [
+    {
+      "query": "japanese scalp treatment san diego",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 1
+    },
+    {
+      "query": "kiamo",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 5
+    },
+    {
+      "query": "scalp spa san diego",
+      "clicks": 1,
+      "impressions": 1,
+      "position": 13
+    },
+    {
+      "query": "\"melasma\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 9
+    },
+    {
+      "query": "beauty treatment",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 6
+    },
+    {
+      "query": "beauty treatment services",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 9
+    },
+    {
+      "query": "best facials in san diego",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 41
+    },
+    {
+      "query": "best hydrafacial san diego",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1
+    },
+    {
+      "query": "best place to get a massage near me",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 17
+    },
+    {
+      "query": "black esthetician near me",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 15
+    },
+    {
+      "query": "calcium buildup on scalp",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 43
+    },
+    {
+      "query": "can hard water cause dandruff",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 41
+    },
+    {
+      "query": "can hard water cause dry scalp",
+      "clicks": 0,
+      "impressions": 6,
+      "position": 41.2
+    },
+    {
+      "query": "checmical peels san diego",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 1
+    },
+    {
+      "query": "chemical peels san diego",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 1
+    },
+    {
+      "query": "collagen induction therapy",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 10
+    },
+    {
+      "query": "collagen induction therapy san diego",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 1
+    },
+    {
+      "query": "dandruff treatment",
+      "clicks": 0,
+      "impressions": 16,
+      "position": 4.7
+    },
+    {
+      "query": "deramaplaning san diego",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 1
+    },
+    {
+      "query": "diamond glow facial san diego",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 1
+    },
+    {
+      "query": "dmk facial near me",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2
+    },
+    {
+      "query": "does hard water cause dandruff",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 38
+    },
+    {
+      "query": "does hard water cause dry scalp",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 40.3
+    },
+    {
+      "query": "dry scalp from hard water",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 34
+    },
+    {
+      "query": "esthetician for acne near me",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1
+    },
+    {
+      "query": "esthetician san diego",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 98
+    },
+    {
+      "query": "facial treatments san diego",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 21
+    },
+    {
+      "query": "facials in san diego",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 81
+    },
+    {
+      "query": "forma skin tightening near me",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1
+    },
+    {
+      "query": "hair and scalp spa san diego",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 28
+    },
+    {
+      "query": "hair scalp spa san diego",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 22
+    },
+    {
+      "query": "hard water buildup on scalp",
+      "clicks": 0,
+      "impressions": 7,
+      "position": 42.9
+    },
+    {
+      "query": "how to address hard aater san dieog for scalp and hair",
+      "clicks": 0,
+      "impressions": 16,
+      "position": 7.8
+    },
+    {
+      "query": "hydradermabrasion san diego",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 1
+    },
+    {
+      "query": "hydrafacial near me",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 23
+    },
+    {
+      "query": "hydrafacial san diego",
+      "clicks": 0,
+      "impressions": 5,
+      "position": 2.6
+    },
+    {
+      "query": "hyperpigmentation treatment san diego",
+      "clicks": 0,
+      "impressions": 3,
+      "position": 1
+    },
+    {
+      "query": "inmode forma san diego",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 11
+    },
+    {
+      "query": "japanese scalp treatment near me",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 90
+    },
+    {
+      "query": "keravive",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 7.5
+    },
+    {
+      "query": "keravive mission bay, ca",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 3.2
+    },
+    {
+      "query": "keravive muirlands, ca",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 2
+    },
+    {
+      "query": "keravive pacific beach, ca",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 6.5
+    },
+    {
+      "query": "keravive sorrento valley, ca",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 24
+    },
+    {
+      "query": "keravive torrey pines, ca",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 13
+    },
+    {
+      "query": "keravive university city, ca",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 12
+    },
+    {
+      "query": "keravive, san diego, ca",
+      "clicks": 0,
+      "impressions": 14,
+      "position": 12.1
+    },
+    {
+      "query": "korean clinic near me",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 9
+    },
+    {
+      "query": "korean facial san diego",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4
+    },
+    {
+      "query": "korean facials",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 14
+    },
+    {
+      "query": "korean head spa san diego",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 7
+    },
+    {
+      "query": "korean rf microneedling",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 5
+    },
+    {
+      "query": "korean scalp treatment san diego",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1
+    },
+    {
+      "query": "local spa treatments",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 41
+    },
+    {
+      "query": "medical skin care",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 9
+    },
+    {
+      "query": "medical spa in in san diego 92101",
+      "clicks": 0,
+      "impressions": 13,
+      "position": 81
+    },
+    {
+      "query": "medical spa in in san diego 92103",
+      "clicks": 0,
+      "impressions": 23,
+      "position": 55.3
+    },
+    {
+      "query": "microneedling for dark skin tones homewood",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 27
+    },
+    {
+      "query": "microneedling near me",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 21
+    },
+    {
+      "query": "microneedling san diego",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 1
+    },
+    {
+      "query": "non surgical ed treatment",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 21
+    },
+    {
+      "query": "rejuvenating facial",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 1
+    },
+    {
+      "query": "rosacea san diego",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 41
+    },
+    {
+      "query": "san diego hard water hair",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 13
+    },
+    {
+      "query": "scalp detox treatment near me",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 9
+    },
+    {
+      "query": "scalp hair treatment near me",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4
+    },
+    {
+      "query": "scalp spa near me",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 8
+    },
+    {
+      "query": "scalp treatment",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1
+    },
+    {
+      "query": "scalp treatment for dandruff near me",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 22.5
+    },
+    {
+      "query": "scalp treatment near me",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4
+    },
+    {
+      "query": "scalp treatment san diego",
+      "clicks": 0,
+      "impressions": 4,
+      "position": 8.5
+    },
+    {
+      "query": "skincare treatments near me",
+      "clicks": 0,
+      "impressions": 9,
+      "position": 3.2
+    },
+    {
+      "query": "skins near me",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 1
+    },
+    {
+      "query": "vi peel san diego",
+      "clicks": 0,
+      "impressions": 2,
+      "position": 1
+    },
+    {
+      "query": "what about san diego",
+      "clicks": 0,
+      "impressions": 1,
+      "position": 4
+    }
+  ],
+  "page_count": 10
+}

@@ -1,0 +1,42 @@
+{
+  "counts": {
+    "home": 1,
+    "other": 27
+  },
+  "location_dupe_pairs": [],
+  "service_dupe_pairs": [],
+  "thin_pages": [],
+  "wordcount_by_type": {},
+  "location_targeting": [],
+  "phone_numbers_used": {
+    "+13105950872": 112
+  },
+  "schema_by_type": {
+    "home": [
+      "DaySpa",
+      "FAQPage",
+      "HealthAndBeautyBusiness",
+      "ItemList",
+      "LocalBusiness",
+      "WebSite"
+    ],
+    "other": [
+      "AboutPage",
+      "BlogPosting",
+      "BreadcrumbList",
+      "CollectionPage",
+      "ContactPage",
+      "DaySpa",
+      "FAQPage",
+      "HealthAndBeautyBusiness",
+      "LocalBusiness",
+      "Person",
+      "Service",
+      "WebPage",
+      "WebSite"
+    ]
+  },
+  "has_localbusiness_schema": true,
+  "anomalies": [],
+  "title_meta_issues": []
+}

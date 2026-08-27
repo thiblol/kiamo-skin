@@ -1,0 +1,63 @@
+{
+  "weekEnding": "2026-08-22",
+  "gsc": {
+    "clicks": 5,
+    "impressions": 820,
+    "avgPosition": 29.8,
+    "ctr": 0.6,
+    "topGainers": [],
+    "topDecliners": [],
+    "strikingDistance": [
+      {"q": "how to address hard aater san dieog for scalp and hair", "pos": 9.2, "impr": 16, "clicks": 0, "ctr": 0},
+      {"q": "keravive, san diego, ca", "pos": 9.6, "impr": 14, "clicks": 0, "ctr": 0},
+      {"q": "keravive mission bay, ca", "pos": 14.9, "impr": 15, "clicks": 0, "ctr": 0},
+      {"q": "keravive pacific beach, ca", "pos": 7.5, "impr": 14, "clicks": 0, "ctr": 0},
+      {"q": "keravive torrey pines, ca", "pos": 8.8, "impr": 13, "clicks": 0, "ctr": 0}
+    ],
+    "notIndexedShouldBe": [],
+    "highImpressionLowCtr": [
+      {"q": "dandruff treatment", "pos": 4.8, "impr": 186, "clicks": 0, "ctr": 0}
+    ]
+  },
+  "ga4": {
+    "sessions": 53,
+    "conversions": 0,
+    "conversionTracking": false,
+    "channels": {
+      "Organic Search": 22,
+      "Direct": 18,
+      "Organic Social": 12,
+      "Unassigned": 1
+    },
+    "aiReferrals": 0
+  },
+  "gbp": {
+    "callClicks": null,
+    "websiteClicks": null,
+    "directionRequests": null,
+    "impressions": null,
+    "searchKeywords": [],
+    "newReviews": 0,
+    "avgRating": null,
+    "unansweredReviews": 0,
+    "postsPublished": 0,
+    "note": "GBP data unavailable - Zernio MCP access needs configuration"
+  },
+  "comparison": {
+    "gsc": {
+      "clicks_change": -4,
+      "clicks_change_pct": -44.4,
+      "impressions_change": 267,
+      "impressions_change_pct": 48.3,
+      "avgPosition_change": 19.4,
+      "ctr_change": -1.0
+    },
+    "ga4": {
+      "sessions_change": 53,
+      "sessions_change_pct": null,
+      "conversions_change": 0,
+      "note": "First week with valid GA4 data - no comparison available"
+    }
+  },
+  "source_lag_note": "GSC ~2-3d lag, GA4 ~1d lag. GBP unavailable."
+}

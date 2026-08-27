@@ -1,0 +1,93 @@
+{
+  "home": {
+    "LocalBusiness": {
+      "type_used": [
+        "LocalBusiness",
+        "HealthAndBeautyBusiness",
+        "DaySpa"
+      ],
+      "present": [
+        "name",
+        "address",
+        "telephone",
+        "url",
+        "image",
+        "geo",
+        "priceRange",
+        "sameAs",
+        "areaServed"
+      ],
+      "missing": [
+        "openingHoursSpecification",
+        "aggregateRating",
+        "review"
+      ]
+    }
+  },
+  "service": {
+    "LocalBusiness": {
+      "type_used": [
+        "LocalBusiness",
+        "HealthAndBeautyBusiness",
+        "DaySpa"
+      ],
+      "present": [
+        "name",
+        "address",
+        "telephone",
+        "url",
+        "image",
+        "geo",
+        "priceRange",
+        "sameAs",
+        "areaServed"
+      ],
+      "missing": [
+        "openingHoursSpecification",
+        "aggregateRating",
+        "review"
+      ]
+    },
+    "Service": {
+      "type_used": [
+        "Service"
+      ],
+      "present": [
+        "name",
+        "serviceType",
+        "provider",
+        "areaServed",
+        "description",
+        "offers"
+      ],
+      "missing": [
+        "aggregateRating"
+      ]
+    }
+  },
+  "location": {
+    "LocalBusiness": {
+      "type_used": [
+        "LocalBusiness",
+        "HealthAndBeautyBusiness",
+        "DaySpa"
+      ],
+      "present": [
+        "name",
+        "address",
+        "telephone",
+        "url",
+        "image",
+        "geo",
+        "priceRange",
+        "sameAs",
+        "areaServed"
+      ],
+      "missing": [
+        "openingHoursSpecification",
+        "aggregateRating",
+        "review"
+      ]
+    }
+  }
+}

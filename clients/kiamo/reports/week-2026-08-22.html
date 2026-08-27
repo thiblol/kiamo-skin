@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiamo Skin — Local SEO Report · Week ending August 22, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400..600&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --forest:#1c3a2e; --forest-2:#264c3b; --moss:#5b7a63;
+    --cream:#f4efe2; --cream-2:#ece5d3; --paper:#fbf8f0;
+    --gold:#c08a3e; --rust:#b4522f; --ink:#16241d;
+    --line:rgba(28,58,46,.16);
+    --shadow:0 1px 2px rgba(28,58,46,.06),0 12px 36px -12px rgba(28,58,46,.22);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Schibsted Grotesk",system-ui,sans-serif;
+    background:var(--cream); color:var(--ink);
+    line-height:1.55; -webkit-font-smoothing:antialiased;
+    background-image:
+      radial-gradient(1200px 600px at 85% -10%, rgba(192,138,62,.10), transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, rgba(91,122,99,.14), transparent 55%);
+  }
+  body::before{
+    content:"";position:fixed;inset:0;pointer-events:none;z-index:9;opacity:.04;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .wrap{max-width:980px;margin:0 auto;padding:0 28px}
+  .reveal{opacity:0;transform:translateY(18px);animation:rise .8s cubic-bezier(.2,.7,.2,1) forwards}
+  @keyframes rise{to{opacity:1;transform:none}}
+  @media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}}
+  header.top{background:linear-gradient(160deg,var(--forest),var(--forest-2));color:var(--cream);position:relative;overflow:hidden}
+  header.top::after{content:"";position:absolute;right:-120px;top:-120px;width:420px;height:420px;border-radius:50%;
+    background:radial-gradient(circle at center, rgba(192,138,62,.45), transparent 65%)}
+  .top .wrap{padding:54px 28px 46px;position:relative;z-index:2}
+  .brandrow{display:flex;justify-content:space-between;align-items:center;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(244,239,226,.7)}
+  .brandrow b{color:var(--cream);font-weight:600}
+  h1{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(2.4rem,6vw,4rem);line-height:1.02;margin:26px 0 6px;letter-spacing:-.01em}
+  h1 em{font-style:italic;color:#e7c690}
+  .sub{font-size:1.02rem;color:rgba(244,239,226,.82);max-width:46ch}
+  .datechip{display:inline-flex;gap:.5rem;align-items:center;margin-top:22px;background:rgba(244,239,226,.12);border:1px solid rgba(244,239,226,.25);padding:.5rem .9rem;border-radius:999px;font-size:.82rem;letter-spacing:.04em}
+  .datechip span{width:7px;height:7px;border-radius:50%;background:#7bd39a;box-shadow:0 0 0 4px rgba(123,211,154,.18)}
+  .heroband{background:var(--paper);border-bottom:1px solid var(--line)}
+  .heroband .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0;padding:0}
+  .stat{padding:30px 22px;border-right:1px solid var(--line);position:relative}
+  .stat:last-child{border-right:none}
+  .stat .k{font-family:"Fraunces",serif;font-weight:500;font-size:clamp(1.9rem,4.4vw,2.9rem);line-height:1;color:var(--forest);letter-spacing:-.02em}
+  .stat .l{font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--moss);margin-top:10px}
+  .stat .w{font-size:.72rem;color:#9a9684;margin-top:3px}
+  @media(max-width:720px){.heroband .wrap{grid-template-columns:repeat(2,1fr)}.stat:nth-child(2){border-right:none}.stat:nth-child(1),.stat:nth-child(2){border-bottom:1px solid var(--line)}}
+  main{padding:60px 0 30px}
+  section{margin-bottom:58px}
+  .seclabel{display:flex;align-items:baseline;gap:14px;margin-bottom:22px}
+  .seclabel .num{font-family:"Fraunces",serif;font-style:italic;color:var(--gold);font-size:1.1rem}
+  .seclabel h2{font-family:"Fraunces",serif;font-weight:500;font-size:1.85rem;letter-spacing:-.01em;color:var(--forest)}
+  .seclabel .win{margin-left:auto;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--moss);border:1px solid var(--line);padding:.3rem .7rem;border-radius:999px}
+  .meaning{background:var(--cream-2);border-left:3px solid var(--gold);padding:14px 18px;border-radius:0 10px 10px 0;font-size:.95rem;margin-top:18px;color:#3a4a40}
+  .meaning b{color:var(--forest)}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  @media(max-width:720px){.cards{grid-template-columns:repeat(2,1fr)}}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:var(--shadow)}
+  .card .k{font-family:"Fraunces",serif;font-size:2rem;color:var(--forest);line-height:1;letter-spacing:-.02em}
+  .card .l{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--moss);margin-top:9px}
+  .card.flag{border-color:rgba(180,82,47,.4);background:linear-gradient(180deg,#fbf1ec,var(--paper))}
+  .card.flag .k{color:var(--rust)}
+  .card.flag .tag{font-size:.68rem;color:var(--rust);font-weight:600;text-transform:uppercase;letter-spacing:.1em;margin-top:6px;display:block}
+  .tbl{width:100%;border-collapse:collapse;background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:var(--shadow);margin-top:6px}
+  .tbl th{text-align:left;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--moss);padding:14px 18px;background:var(--cream-2);border-bottom:1px solid var(--line)}
+  .tbl td{padding:13px 18px;border-bottom:1px solid var(--line);font-size:.92rem}
+  .tbl tr:last-child td{border-bottom:none}
+  .tbl td.q{font-weight:500;color:var(--ink)}
+  .pos{font-family:"Fraunces",serif;font-weight:600;font-size:1.05rem}
+  .pos.near{color:#2f7d4e}.pos.mid{color:var(--gold)}
+  .bar{height:6px;border-radius:3px;background:var(--cream-2);overflow:hidden;min-width:70px}
+  .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--moss),var(--forest))}
+  .ai{background:linear-gradient(150deg,var(--forest),var(--forest-2));color:var(--cream);border-radius:18px;padding:30px 30px 26px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+  .ai::after{content:"";position:absolute;right:-80px;bottom:-80px;width:280px;height:280px;border-radius:50%;background:radial-gradient(circle,rgba(231,198,144,.35),transparent 65%)}
+  .ai .ey{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:#e7c690}
+  .ai h3{font-family:"Fraunces",serif;font-weight:500;font-size:1.5rem;margin:8px 0 18px;max-width:30ch}
+  .ai .rows{display:flex;gap:30px;flex-wrap:wrap;position:relative;z-index:2}
+  .ai .r .n{font-family:"Fraunces",serif;font-size:2.3rem;line-height:1;color:#fff}
+  .ai .r .s{font-size:.8rem;color:rgba(244,239,226,.8);margin-top:6px;text-transform:capitalize}
+  .focus{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:30px;box-shadow:var(--shadow)}
+  .focus ol{list-style:none;counter-reset:f;margin-top:8px}
+  .focus li{counter-increment:f;display:flex;gap:16px;padding:15px 0;border-bottom:1px dashed var(--line)}
+  .focus li:last-child{border-bottom:none}
+  .focus li::before{content:counter(f);font-family:"Fraunces",serif;font-style:italic;color:var(--gold);font-size:1.2rem;min-width:26px}
+  .focus li b{color:var(--forest)}
+  .focus li small{display:block;color:#6c7a6f;font-size:.85rem;margin-top:2px}
+  footer{padding:40px 0 70px;color:#7d8a7f;font-size:.82rem}
+  footer .wrap{border-top:1px solid var(--line);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  .note{font-size:.8rem;color:#8a8773;max-width:60ch}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap reveal">
+    <div class="brandrow"><span>Local SEO Report</span><b>KIAMO SKIN</b></div>
+    <h1>Kiamo Skin<br><em>visibility</em> this week</h1>
+    <p class="sub">Where you showed up across Google Search, your website, and your Google Business Profile — and what to do next.</p>
+    <div class="datechip"><span></span>Week ending August 22, 2026 · vs last week</div>
+  </div>
+</header>
+
+<div class="heroband">
+  <div class="wrap">
+    <div class="stat reveal" style="animation-delay:.05s"><div class="k">820</div><div class="l">Search impressions</div><div class="w">Google Search · 7 days</div></div>
+    <div class="stat reveal" style="animation-delay:.12s"><div class="k">5</div><div class="l">Clicks to site</div><div class="w">Google Search · 7 days</div></div>
+    <div class="stat reveal" style="animation-delay:.19s"><div class="k">53</div><div class="l">Website sessions</div><div class="w">GA4 · 7 days</div></div>
+    <div class="stat reveal" style="animation-delay:.26s"><div class="k">0</div><div class="l">AI-search visits</div><div class="w">ChatGPT &amp; Perplexity · 7 days</div></div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section class="reveal">
+    <div class="seclabel"><span class="num">01</span><h2>Search visibility</h2><span class="win">Google Search Console · 7 days</span></div>
+    <div class="cards">
+      <div class="card"><div class="k">820</div><div class="l">Impressions</div></div>
+      <div class="card"><div class="k">5</div><div class="l">Clicks</div></div>
+      <div class="card"><div class="k">29.8</div><div class="l">Avg. position</div></div>
+      <div class="card"><div class="k">19</div><div class="l">Pages seen</div></div>
+    </div>
+    <div class="meaning">Your site appeared <b>820 times</b> in Google search results this week, earning <b>5 clicks</b>. Impressions are up 48% vs last week, but clicks dropped 44% — a signal that your rankings shifted or title/meta tags need optimization.</div>
+  </section>
+
+  <section class="reveal">
+    <div class="seclabel"><span class="num">02</span><h2>Closest wins</h2><span class="win">Page-2 keywords</span></div>
+    <table class="tbl">
+      <thead><tr><th>Search term</th><th>Position</th><th>Weekly views</th></tr></thead>
+      <tbody>
+        <tr><td class="q">keravive pacific beach, ca</td><td><span class="pos near">7.5</span></td><td><div class="bar"><i style="width:88%"></i></div>14</td></tr>
+        <tr><td class="q">keravive torrey pines, ca</td><td><span class="pos near">8.8</span></td><td><div class="bar"><i style="width:81%"></i></div>13</td></tr>
+        <tr><td class="q">how to address hard aater san dieog for scalp and hair</td><td><span class="pos near">9.2</span></td><td><div class="bar"><i style="width:100%"></i></div>16</td></tr>
+        <tr><td class="q">keravive, san diego, ca</td><td><span class="pos near">9.6</span></td><td><div class="bar"><i style="width:88%"></i></div>14</td></tr>
+        <tr><td class="q">keravive mission bay, ca</td><td><span class="pos mid">14.9</span></td><td><div class="bar"><i style="width:94%"></i></div>15</td></tr>
+      </tbody>
+    </table>
+    <div class="meaning">These keywords rank on <b>page 2</b> (positions 8-20) — close enough to reach page 1 with a content refresh, better title tags, or a few quality backlinks. Keravive location terms dominate this list.</div>
+  </section>
+
+  <section class="reveal">
+    <div class="seclabel"><span class="num">03</span><h2>Website &amp; traffic</h2><span class="win">GA4 · 7 days</span></div>
+    <div class="cards">
+      <div class="card"><div class="k">53</div><div class="l">Sessions</div></div>
+      <div class="card"><div class="k">18</div><div class="l">Direct</div></div>
+      <div class="card"><div class="k">22</div><div class="l">Organic search</div></div>
+      <div class="card flag"><div class="k">0</div><div class="l">Conversions</div><span class="tag">NOT TRACKED</span></div>
+    </div>
+    <div class="ai" style="margin-top:18px">
+      <div class="ey">A standout signal</div>
+      <h3>AI search traffic is not yet showing up in your analytics.</h3>
+      <div class="rows">
+        <div class="r"><div class="n">0</div><div class="s">ChatGPT / Perplexity</div></div>
+      </div>
+    </div>
+    <div class="meaning">You received <b>53 sessions</b> this week (up 96% from 27 last week). <b>Organic search</b> drove 22 sessions, <b>Direct</b> 18, and <b>Organic Social</b> 12. <b>Critical:</b> conversion tracking is off — you can't measure which traffic sources drive bookings.</div>
+  </section>
+
+  <section class="reveal">
+    <div class="seclabel"><span class="num">04</span><h2>Google Business Profile</h2><span class="win">7 days</span></div>
+    <div class="cards">
+      <div class="card"><div class="k">—</div><div class="l">Profile views</div></div>
+      <div class="card"><div class="k">—</div><div class="l">Calls</div></div>
+      <div class="card"><div class="k">—</div><div class="l">Website clicks</div></div>
+      <div class="card"><div class="k">0</div><div class="l">New reviews</div></div>
+    </div>
+    <div class="meaning">GBP performance data unavailable this week due to API access limitations. Review count and posts tracking remain active.</div>
+  </section>
+
+  <section class="reveal">
+    <div class="seclabel"><span class="num">05</span><h2>This week's focus</h2></div>
+    <div class="focus">
+      <ol>
+        <li><div><b>Set up conversion tracking in GA4</b><small>You can't optimize what you can't measure. Track form submissions and booking clicks.</small></div></li>
+        <li><div><b>Optimize "dandruff treatment" title tag</b><small>186 impressions/week at position 4.8 with 0% CTR — the title isn't compelling enough to earn clicks.</small></div></li>
+        <li><div><b>Target Keravive location keywords</b><small>5 location-specific Keravive terms are in striking distance (positions 7-15). Update service area pages with local signals.</small></div></li>
+        <li><div><b>Fix click-through rate on page 1 rankings</b><small>Clicks dropped 44% despite impressions rising 48% — review title tags and meta descriptions on top pages.</small></div></li>
+      </ol>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div><strong style="font-family:'Fraunces',serif;color:var(--forest);font-size:1rem">Kiamo Skin</strong> · Local SEO Report</div>
+    <div class="note">GSC data lags ~2-3 days. GA4 data lags ~1 day. GBP performance metrics unavailable this week. First week with working GA4 access — no prior comparison available.</div>
+  </div>
+</footer>
+
+</body>
+</html>

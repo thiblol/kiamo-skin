@@ -1,0 +1,52 @@
+{
+  "weekEnding": "2026-08-15",
+  "gsc": {
+    "clicks": 9,
+    "impressions": 553,
+    "avgPosition": 10.4,
+    "ctr": 1.6,
+    "topGainers": [],
+    "topDecliners": [],
+    "strikingDistance": [
+      {"q": "how to address hard water san diego for scalp and hair", "pos": 8.3, "impr": 29, "clicks": 0, "ctr": 0},
+      {"q": "keravive, san diego, ca", "pos": 12.6, "impr": 20, "clicks": 0, "ctr": 0},
+      {"q": "african american esthetician near me", "pos": 8.5, "impr": 2, "clicks": 0, "ctr": 0},
+      {"q": "scalp spa san diego", "pos": 13.0, "impr": 1, "clicks": 1, "ctr": 100}
+    ],
+    "notIndexedShouldBe": [
+      "https://kiamoskin.com/treatments/dermaplaning/",
+      "https://kiamoskin.com/treatments/dmk-enzyme-therapy/",
+      "https://kiamoskin.com/treatments/keravive-scalp/",
+      "https://kiamoskin.com/treatments/lira-peels/",
+      "https://kiamoskin.com/treatments/procell-microchanneling/",
+      "https://kiamoskin.com/service-areas/la-jolla/",
+      "https://kiamoskin.com/service-areas/pacific-beach/",
+      "https://kiamoskin.com/service-areas/north-park/",
+      "https://kiamoskin.com/service-areas/mission-hills/",
+      "https://kiamoskin.com/service-areas/del-mar/",
+      "https://kiamoskin.com/service-areas/encinitas/",
+      "https://kiamoskin.com/service-areas/carlsbad/"
+    ]
+  },
+  "ga4": {
+    "sessions": null,
+    "conversions": null,
+    "conversionTracking": null,
+    "channels": {},
+    "aiReferrals": null,
+    "note": "GA4 property 461768696 returned 403 — service account needs Read & Analyze permission granted in GA4"
+  },
+  "gbp": {
+    "callClicks": null,
+    "websiteClicks": null,
+    "directionRequests": null,
+    "impressions": null,
+    "searchKeywords": [],
+    "newReviews": 0,
+    "avgRating": null,
+    "unansweredReviews": 0,
+    "postsPublished": 2,
+    "note": "GBP performance metrics (views/calls/clicks) unavailable — @zernio/node SDK not installed. Run: npm install -g @zernio/node"
+  },
+  "source_lag_note": "GSC lags ~2-3 days. GA4 inaccessible (403 permission error — add service account to GA4 property). GBP impressions/calls unavailable (@zernio/node package missing)."
+}

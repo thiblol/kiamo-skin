@@ -1,0 +1,128 @@
+{
+  "striking_distance": [],
+  "low_ctr_high_impr": [],
+  "top_nonbranded": [
+    {
+      "q": "japanese scalp treatment san diego",
+      "clicks": 1,
+      "impr": 1,
+      "ctr": 100,
+      "pos": 1
+    },
+    {
+      "q": "scalp spa san diego",
+      "clicks": 1,
+      "impr": 1,
+      "ctr": 100,
+      "pos": 13
+    },
+    {
+      "q": "\"melasma\" -site:reddit.com -site:twitter.com -site:x.com -site:wykop.pl -site:tripadvisor.com -site:youtube.com -site:yelp.com -site:booking.com -site:facebook.com -site:instagram.com -site:tiktok.com",
+      "clicks": 0,
+      "impr": 1,
+      "ctr": 0,
+      "pos": 9
+    },
+    {
+      "q": "beauty treatment",
+      "clicks": 0,
+      "impr": 4,
+      "ctr": 0,
+      "pos": 6
+    },
+    {
+      "q": "beauty treatment services",
+      "clicks": 0,
+      "impr": 5,
+      "ctr": 0,
+      "pos": 9
+    },
+    {
+      "q": "best facials in san diego",
+      "clicks": 0,
+      "impr": 1,
+      "ctr": 0,
+      "pos": 41
+    },
+    {
+      "q": "best hydrafacial san diego",
+      "clicks": 0,
+      "impr": 1,
+      "ctr": 0,
+      "pos": 1
+    },
+    {
+      "q": "best place to get a massage near me",
+      "clicks": 0,
+      "impr": 1,
+      "ctr": 0,
+      "pos": 17
+    },
+    {
+      "q": "black esthetician near me",
+      "clicks": 0,
+      "impr": 1,
+      "ctr": 0,
+      "pos": 15
+    },
+    {
+      "q": "calcium buildup on scalp",
+      "clicks": 0,
+      "impr": 1,
+      "ctr": 0,
+      "pos": 43
+    },
+    {
+      "q": "can hard water cause dandruff",
+      "clicks": 0,
+      "impr": 3,
+      "ctr": 0,
+      "pos": 41
+    },
+    {
+      "q": "can hard water cause dry scalp",
+      "clicks": 0,
+      "impr": 6,
+      "ctr": 0,
+      "pos": 41.2
+    },
+    {
+      "q": "checmical peels san diego",
+      "clicks": 0,
+      "impr": 2,
+      "ctr": 0,
+      "pos": 1
+    },
+    {
+      "q": "chemical peels san diego",
+      "clicks": 0,
+      "impr": 2,
+      "ctr": 0,
+      "pos": 1
+    },
+    {
+      "q": "collagen induction therapy",
+      "clicks": 0,
+      "impr": 1,
+      "ctr": 0,
+      "pos": 10
+    }
+  ],
+  "branded_split": {
+    "branded_clicks": 1,
+    "total_clicks": 3,
+    "branded_pct": 33
+  },
+  "trend": {
+    "current_90d": {
+      "clicks": 18,
+      "impr": 531
+    },
+    "previous_90d": {
+      "clicks": 0,
+      "impr": 0
+    },
+    "clicks_change_pct": 1800,
+    "impr_change_pct": 53100
+  }
+}

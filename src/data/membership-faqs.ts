@@ -57,4 +57,16 @@ export const membershipFaqs: Faq[] = [
     answer:
       'The studio is at 3067 Reynard Way in Mission Hills, San Diego — minutes from Hillcrest, Bankers Hill and Little Italy, with free parking on site. There is one location and no mobile service. Clients travel in monthly from North Park, Chula Vista, La Jolla, Pacific Beach and further up the coast, and the honest test is whether the drive is one you will still make in month five. If it is not, a treatment series booked at longer intervals is the better purchase, and that is a reasonable thing to say at the consultation.',
   },
+  {
+    question: 'What is a skincare membership?',
+    answer: `A skincare membership is a monthly plan that includes regular corrective facials and ongoing access to professional guidance, priority booking, and retail discounts. At KIAMO SKIN, skincare memberships range from ${verifiedPrices['membership-glow']} to ${verifiedPrices['membership-opulence']} per month and include personalized treatments, product recommendations, and progress assessments—everything needed to maintain corrected skin rather than chasing results one visit at a time.`,
+  },
+  {
+    question: 'Do you offer a facial subscription service?',
+    answer: `Yes. A facial subscription is another term for our monthly membership plans. Each plan includes one personalized treatment per month at the Mission Hills studio, with the flexibility to upgrade to advanced services by paying the difference. Facial subscriptions start at ${verifiedPrices['membership-glow']}/month with a six-month commitment, then continue month to month with 30 days notice to cancel.`,
+  },
+  {
+    question: 'What's included in a HydraFacial membership?',
+    answer: `Our GLOW membership (${verifiedPrices['membership-glow']}/month) includes a customized HydraFacial treatment each month, plus a personalized Hydrojelly mask, 15% off all retail skincare, priority booking, and the ability to upgrade to advanced treatments by paying the difference. A monthly HydraFacial membership is designed for skin that's already stable and needs consistent maintenance rather than active correction.`,
+  },
 ];

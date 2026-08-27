@@ -33,8 +33,8 @@ import treatmentPhoto from '../assets/membership-treatment.jpg';
 import studioPhoto from '../assets/membership-studio.jpg';
 import resultPhoto from '../assets/membership-result-back.png';
 
-const title = 'Facial Membership in San Diego | KIAMO Skin';
-const description = `Monthly facial membership in Mission Hills, San Diego. One corrective treatment a month from ${verifiedPrices['membership-glow']}, 15% off retail and priority booking.`;
+const title = 'Monthly Facial Membership San Diego | Skincare Subscription from $199 | KIAMO Skin';
+const description = `Monthly facial membership in San Diego from ${verifiedPrices['membership-glow']}/month. HydraFacial subscription with priority booking, 15% off skincare, and corrective treatments at our Mission Hills studio. Cancel anytime after 6 months.`;
 ---
 
 <BaseLayout {title} {description}>
@@ -83,7 +83,7 @@ const description = `Monthly facial membership in Mission Hills, San Diego. One 
 
         <Image
           src={treatmentPhoto}
-          alt="A HydraFacial being performed at the KIAMO Skin studio in Mission Hills, San Diego"
+          alt="Monthly HydraFacial membership treatment at KIAMO Skin studio in Mission Hills, San Diego"
           widths={[500, 800, 1200]}
           sizes="(min-width: 52.5rem) 45vw, 100vw"
           loading="eager"
@@ -99,6 +99,29 @@ const description = `Monthly facial membership in Mission Hills, San Diego. One 
         visually: congestion and pigmentation clearing over a course of
         treatment, not in one visit. It carries the same "Results vary"
         disclaimer as every other result image on the site. */}
+
+    {/* NEW SECTION — What is a facial membership? Keyword capture for
+        "skincare membership", "facial subscription", "monthly facial membership" */}
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">What it is</p>
+          <h2 class="t-h2 mt-5 max-w-[28ch]">What is a facial membership?</h2>
+        </Reveal>
+
+        <div class="mt-12 max-w-[68ch]">
+          <Reveal>
+            <p class="t-body text-[1.125rem]">
+              A facial membership—sometimes called a skincare membership or facial subscription—is a monthly plan that provides regular corrective treatments at a fixed rate. Unlike buying facials one at a time, a monthly facial membership ensures consistency, which is how skin correction actually works.
+            </p>
+            <p class="t-body mt-6">
+              At KIAMO SKIN, facial memberships start at {verifiedPrices['membership-glow']} per month for a monthly HydraFacial in Mission Hills, San Diego—against {verifiedPrices.hydrafacial} for the same treatment booked individually. The value is in the rhythm, not just the discount.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
     <section class="bg-porcelain">
       <div class="wrap section-y">
         <Reveal>
