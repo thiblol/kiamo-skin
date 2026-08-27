@@ -41,7 +41,7 @@ export const services: Service[] = [
     name: 'DMK Level 1 Enzyme Treatment',
     category: 'Facials',
     description:
-      'Foundational enzyme therapy. Works with the skin’s own processes to clear what should not be there and rebuild the barrier.',
+      'Foundational enzyme therapy. Works with the skin\'s own processes to clear what should not be there and rebuild the barrier.',
     price: verifiedPrices['dmk-enzyme-1'],
     href: '/treatments/dmk-enzyme-therapy/',
   },
@@ -57,7 +57,7 @@ export const services: Service[] = [
     name: 'Keravive Scalp Treatment',
     category: 'Scalp',
     description:
-      'Corrective scalp therapy. This isn’t a shampoo — it cleanses, exfoliates and hydrates the scalp itself.',
+      'Medical-grade scalp treatment for dryness, flaking, and scalp health. Unlike relaxation head spas, Keravive uses clinical-grade exfoliation and hydration to address scalp concerns at the source.',
     price: verifiedPrices['keravive-scalp'],
     href: '/treatments/keravive-scalp/',
   },
@@ -73,7 +73,7 @@ export const services: Service[] = [
     name: 'Procell Microchanneling',
     category: 'Advanced',
     description:
-      'Controlled micro-injury with growth factors, for acne scarring, texture and early laxity. Also treats the scalp.',
+      'Microchanneling treatment for acne scars, hyperpigmentation, and texture—safe for all skin tones. Uses controlled micro-injury and growth factors to resurface skin and correct post-inflammatory pigmentation.',
     price: verifiedPrices.procell,
     href: '/treatments/procell-microchanneling/',
   },
@@ -97,7 +97,7 @@ export const services: Service[] = [
     name: 'LIRA Advanced Peel',
     category: 'Advanced',
     description:
-      'A deeper peel for pigmentation and scarring, with strength escalated across a series rather than in one visit.',
+      'A deeper chemical peel for pigmentation and acne scarring, with strength escalated across a series rather than in one visit. Safe for melanin-rich skin.',
     price: verifiedPrices['lira-advanced-peel'],
     href: '/treatments/lira-peels/',
   },

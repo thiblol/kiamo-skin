@@ -41,4 +41,24 @@ export const melaninFaqs: Faq[] = [
     answer:
       'Sunscreen is the treatment, not an afterthought — without it, pigment returns faster than any treatment can clear it. For deeper skin tones the specific advice is a tinted sunscreen containing iron oxide at SPF 30 or higher, because visible light worsens melasma and dark spots and a standard UVA/UVB sunscreen does not block it. San Diego makes this harder than it sounds: the overcast mornings are the usual reason people stop applying it, and the UV is still there behind the marine layer.',
   },
+  {
+    question: 'How far do clients travel for melanin-rich skin treatment in San Diego?',
+    answer:
+      'Clients regularly travel from Chula Vista, La Jolla, North Park, La Mesa, Oceanside, and throughout San Diego County to KIAMO in Mission Hills. The studio is centrally located minutes from Hillcrest, Bankers Hill, and Little Italy with free on-site parking. Many clients choose to make the drive because finding a practitioner with advanced training in treating pigmentation on Black and brown skin safely is rare, and the risk of worsening hyperpigmentation with the wrong treatment is too high to leave to chance.',
+  },
+  {
+    question: 'Is there a Black-owned skincare studio in Mission Hills?',
+    answer:
+      'Yes — KIAMO SKIN is a Black-owned corrective skin studio at 3067 Reynard Way in Mission Hills, San Diego. The studio specializes in pigmentation treatment, acne scarring, and barrier repair for melanin-rich skin. Every appointment is one-to-one with Kiki, a licensed esthetician whose expertise was built treating the most complex pigmentation cases in Black and brown skin. The studio serves Mission Hills, Hillcrest, Bankers Hill, Little Italy, and clients throughout San Diego County.',
+  },
+  {
+    question: 'Why is San Diego sun exposure especially risky for melasma and dark spots?',
+    answer:
+      'San Diego has year-round sun exposure with an average of 266 sunny days per year, and UV levels remain high even on overcast mornings when the marine layer is present. This makes daily SPF essential for anyone treating melasma or post-inflammatory hyperpigmentation—skipping it even one day can reverse weeks of treatment progress. The coastal climate also means people underestimate sun exposure during morning walks, outdoor dining, and beach visits, all of which trigger pigment production in melanin-rich skin. For anyone treating pigmentation in San Diego, sunscreen is not optional.',
+  },
+  {
+    question: 'Can you treat acne scars on Black skin in San Diego?',
+    answer:
+      'Yes — acne scarring on Black skin can be treated safely with microchanneling, a technique that stimulates collagen production without the heat or light that can trigger additional pigmentation in darker skin tones. At KIAMO in Mission Hills, Procell microchanneling is used because it works mechanically rather than with heat, making it safe for melanin-rich skin where heat-based treatments (like certain lasers) can worsen hyperpigmentation. Treatment is always paced across a series rather than performed aggressively in one session, and every pass is customized for skin tone and scar depth.',
+  },
 ];

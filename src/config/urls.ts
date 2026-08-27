@@ -32,7 +32,7 @@ const MAPS = 'https://www.google.com/maps';
 export const gbpListingUrl = (placeId: string) => `${MAPS}/place/?q=place_id:${placeId}`;
 
 export const gbpReviewsUrl = (placeId: string) =>
-  `${MAPS}/place/?q=place_id:${placeId}&hl=en#lrd=${placeId},1`;
+  'https://maps.app.goo.gl/hi8rJcWbu53JcN3s7';
 
 export const gbpDirectionsUrl = (placeId: string, address: string) =>
   `${MAPS}/dir/?api=1&destination=${encodeURIComponent(address)}&destination_place_id=${placeId}`;

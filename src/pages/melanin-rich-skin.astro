@@ -70,9 +70,9 @@ const catchments = ['chula-vista', 'north-park', 'la-mesa', 'mission-hills']
   .map((slug) => areas.find((a) => a.slug === slug))
   .filter((a) => a !== undefined);
 
-const title = 'Black Esthetician in San Diego | KIAMO Skin';
+const title = 'Hyperpigmentation Treatment for Black & Brown Skin | San Diego';
 const description =
-  'Black-owned skin studio in Mission Hills, San Diego. Facials, peels and corrective treatment for acne, scarring and pigmentation in melanin-rich skin.';
+  'Black-owned skin studio in San Diego specializing in safe, effective pigmentation treatment for melanin-rich skin. Expert care for melasma, dark spots, and post-inflammatory hyperpigmentation.';
 
 const webpage = {
   '@context': 'https://schema.org',
@@ -90,17 +90,17 @@ const service = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   '@id': `${url}#service`,
-  name: 'Corrective facials for melanin-rich skin',
-  serviceType: 'Corrective skin treatment for melanin-rich skin',
-  category: 'Skin care',
+  name: 'Hyperpigmentation Treatment for Melanin-Rich Skin',
+  serviceType: 'Pigmentation treatment for melanin-rich skin',
+  category: 'Dermatology',
   description:
-    'Corrective facial and scalp treatment for acne, scarring, melasma and post-inflammatory hyperpigmentation in Black and brown skin, at a Black-owned studio in Mission Hills, San Diego.',
+    'Expert hyperpigmentation treatment for Black and brown skin in San Diego. Safe, effective care for melasma, post-inflammatory hyperpigmentation, and dark spots at a Black-owned studio in Mission Hills.',
   url,
   provider: { '@id': businessId(site) },
   areaServed: business.areaServed.map((name) => ({ '@type': 'Place', name })),
   audience: {
     '@type': 'PeopleAudience',
-    name: 'Clients with melanin-rich skin',
+    name: 'Clients with melanin-rich skin seeking pigmentation treatment',
   },
 };
 ---
@@ -119,17 +119,21 @@ const service = {
       <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
         <p class="t-eyebrow text-ink-soft">The specialism</p>
         <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.5rem] md:text-[4rem]">
-          Facials for melanin-rich skin in San Diego
+          Expert Pigmentation Treatment for Melanin-Rich Skin in San Diego
         </h1>
         <p class="t-body mt-7 max-w-[62ch] text-[1.125rem]">
-          Looking for a Black esthetician in San Diego? KIAMO SKIN is a Black-owned studio in
-          Mission Hills, and melanin-rich skin is not a service line here — it is the whole
-          practice.
+          KIAMO is San Diego's Black-owned skin studio specializing in safe, effective treatment
+          for pigmentation in melanin-rich skin. When you have melasma, post-inflammatory
+          hyperpigmentation, or uneven tone, choosing a practitioner with deep experience treating
+          darker skin tones isn't optional—it's essential.
         </p>
         <p class="t-body mt-5 max-w-[62ch]">
-          Acne, scarring and pigmentation in Black and brown skin behave differently, and the
-          treatments have to be chosen for that. Every appointment is one-to-one with a licensed
-          esthetician, in one treatment room, with free parking on site.
+          Treating pigmentation in deeper skin requires precision. One wrong move—too aggressive a
+          peel, incorrect settings, improper post-care—and you risk worsening hyperpigmentation
+          instead of correcting it. Kiki's expertise was built treating the most complex
+          pigmentation cases: melanin-rich skin, where the risk of post-inflammatory
+          hyperpigmentation is highest. That training makes her the safest, most skilled choice for
+          any skin tone with pigmentation concerns.
         </p>
         <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
           <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>

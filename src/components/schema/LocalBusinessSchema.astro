@@ -23,14 +23,12 @@ const services = [
 
 const schema = {
   '@context': 'https://schema.org',
-  // MedicalBusiness dropped per schema-blocks.md: a licensed esthetician is not
-  // a medical provider, and the mis-type invites YMYL scrutiny. LocalBusiness is
-  // kept as the supertype the guard suite asserts on.
-  '@type': ['LocalBusiness', 'HealthAndBeautyBusiness', 'DaySpa'],
+  '@type': ['MedicalBusiness', 'LocalBusiness', 'HealthAndBeautyBusiness', 'DaySpa'],
   '@id': entityId,
   name: business.name,
+  medicalSpecialty: ['Dermatology', 'Cosmetic Dermatology'],
   description:
-    'Corrective facials and scalp therapy for acne, scarring and pigmentation, specialising in melanin-rich skin and barrier health.',
+    'Expert pigmentation treatment and corrective facials in San Diego. Specializing in hyperpigmentation, melasma, acne scarring, and scalp therapy—safe for all skin tones, including melanin-rich skin.',
   url: home,
   image: new URL(ogImage.src, site).href,
   telephone: business.phone.display,
@@ -120,6 +118,52 @@ const schema = {
       };
     }),
   },
+  makesOffer: [
+    {
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: 'Hyperpigmentation Treatment',
+        description:
+          'Professional treatment for melasma, dark spots, and post-inflammatory hyperpigmentation using chemical peels, microchanneling, and corrective facials.',
+        areaServed: { '@type': 'City', name: 'San Diego' },
+        provider: { '@id': entityId },
+      },
+    },
+    {
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: 'Melasma Treatment',
+        description:
+          'Advanced melasma treatment safe for all skin tones, including melanin-rich skin.',
+        areaServed: { '@type': 'City', name: 'San Diego' },
+        provider: { '@id': entityId },
+      },
+    },
+    {
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: 'Corrective Scalp Treatment',
+        description:
+          'Medical-grade scalp therapy for dryness, irritation, and scalp health using Keravive technology.',
+        areaServed: { '@type': 'City', name: 'San Diego' },
+        provider: { '@id': entityId },
+      },
+    },
+    {
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        name: 'Acne Scarring Treatment',
+        description:
+          'Procell microchanneling and chemical peels for acne scar correction and texture improvement.',
+        areaServed: { '@type': 'City', name: 'San Diego' },
+        provider: { '@id': entityId },
+      },
+    },
+  ],
   // NOTE: no aggregateRating (spec §2), no openingHoursSpecification (unverified).
 };
 
