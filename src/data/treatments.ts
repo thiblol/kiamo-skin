@@ -96,7 +96,7 @@ export const treatments: Treatment[] = [
       },
       {
         title: 'Boost',
-        body: 'A customized booster is selected based on your skin’s unique needs—from brightening to barrier support.',
+        body: 'A customized booster is selected based on your skin\'s unique needs—from brightening to barrier support.',
       },
     ],
     pricing: [
@@ -180,7 +180,7 @@ export const treatments: Treatment[] = [
     opener:
       'Looking for DMK enzyme therapy in San Diego? Level 1 is $279 at the KIAMO SKIN studio in Mission Hills, and it is the treatment used when a barrier is too compromised to tolerate anything stronger.',
     intro:
-      'DMK Enzyme Therapy is designed to restore healthy skin function rather than simply exfoliating the surface. By supporting the skin’s natural processes, it helps strengthen the skin barrier while encouraging healthy circulation and lymphatic activity. It’s especially beneficial for skin that feels over-exfoliated, sensitized, inflamed, or slow to heal.',
+      'DMK Enzyme Therapy is designed to restore healthy skin function rather than simply exfoliating the surface. By supporting the skin\'s natural processes, it helps strengthen the skin barrier while encouraging healthy circulation and lymphatic activity. It\'s especially beneficial for skin that feels over-exfoliated, sensitized, inflamed, or slow to heal.',
     image: enzyme,
     imageAlt: 'An enzyme masque setting during a treatment',
     goodFor: [
@@ -196,7 +196,7 @@ export const treatments: Treatment[] = [
       },
       {
         title: 'The masque',
-        body: 'As the enzyme masque sets, you’ll feel a tightening and rhythmic pulsing sensation. This is an expected part of the treatment and varies from person to person.',
+        body: 'As the enzyme masque sets, you will feel a tightening and rhythmic pulsing sensation. This is an expected part of the treatment and varies from person to person.',
       },
       {
         title: 'Home care',
@@ -222,11 +222,11 @@ export const treatments: Treatment[] = [
     title: 'Procell Microchanneling for Scarring | KIAMO Skin San Diego',
     description:
       'Procell microchanneling in Mission Hills, San Diego for acne scarring and texture in melanin-rich skin. $475, or $1,199 for a series of three.',
-    headline: "Procell Microchanneling — stimulate your skin’s natural repair process.",
+    headline: "Procell Microchanneling — stimulate your skin's natural repair process.",
     opener:
       'Looking for microneedling in San Diego? Procell microchanneling is the alternative offered here — a different modality from a needle pen, performed by a licensed esthetician in Mission Hills, <a href="/journal/microneedling-on-dark-skin-san-diego/">with depth adjusted for melanin-rich skin</a>.',
     intro:
-      'Procell Microchanneling creates controlled microchannels that activate your skin’s natural repair response while delivering a specialized growth factor serum. Over time, new collagen helps improve acne scars, fine lines, wrinkles, and uneven skin texture for smoother, healthier-looking skin. Every treatment is customized for your skin goals and skin tone.',
+      'Procell Microchanneling creates controlled microchannels that activate your skin\'s natural repair response while delivering a specialized growth factor serum. Over time, new collagen helps improve acne scars, fine lines, wrinkles, and uneven skin texture for smoother, healthier-looking skin. Every treatment is customized for your skin goals and skin tone.',
     image: acne,
     imageAlt: 'Portrait of smooth, healthy skin along the cheek and jaw',
     goodFor: [
@@ -242,11 +242,11 @@ export const treatments: Treatment[] = [
       },
       {
         title: 'The pass',
-        body: 'Treatment depth is adjusted for each area of your skin — deeper where correction is needed and lighter where skin is naturally thinner. A specialized growth factor serum is applied throughout the treatment to support your skin’s natural repair process.',
+        body: 'Treatment depth is adjusted for each area of your skin — deeper where correction is needed and lighter where skin is naturally thinner. A specialized growth factor serum is applied throughout the treatment to support your skin\'s natural repair process.',
       },
       {
         title: 'Recover',
-        body: 'Expect redness similar to a mild sunburn for 24–48 hours. Mild dryness or flaking may occur as your skin renews itself. Following your post-care instructions including daily SPF is essential to support healing and help minimize the risk of unwanted pigmentation, especially in melanin rich skin.',
+        body: 'Expect redness similar to a mild sunburn for 24-48 hours. Mild dryness or flaking may occur as your skin renews itself. Following your post-care instructions including daily SPF is essential to support healing and help minimize the risk of unwanted pigmentation, especially in melanin rich skin.',
       },
     ],
     pricing: [
@@ -254,13 +254,13 @@ export const treatments: Treatment[] = [
         label: 'Procell Microchanneling',
         price: verifiedPrices.procell,
         description:
-          'The best results are typically achieved with a series rather than a single treatment. Most clients begin with three sessions spaced 4–6 weeks apart, though your treatment plan is customized during your consultation based on your skin goals, concerns, and how your skin responds.',
+          'The best results are typically achieved with a series rather than a single treatment. Most clients begin with three sessions spaced 4-6 weeks apart, though your treatment plan is customized during your consultation based on your skin goals, concerns, and how your skin responds.',
       },
       {
         label: 'Procell Microchanneling 3-Treatment Series',
         price: verifiedPrices['procell-series'],
         description:
-          'Designed for clients committed to long-term correction. A series of three treatments supports progressive collagen remodeling and is recommended for concerns such as acne scars, uneven texture, fine lines, and overall skin rejuvenation. Treatments are typically scheduled 4–6 weeks apart.',
+          'Designed for clients committed to long-term correction. A series of three treatments supports progressive collagen remodeling and is recommended for concerns such as acne scars, uneven texture, fine lines, and overall skin rejuvenation. Treatments are typically scheduled 4-6 weeks apart.',
       },
     ],
     melaninNote:
@@ -282,7 +282,7 @@ export const treatments: Treatment[] = [
     opener:
       'Looking for a chemical peel in San Diego that is safe on melanin-rich skin? That is the work this studio was built around.',
     intro:
-      ‘Pigmentation is the reason most people book, and it is also where the wrong treatment does lasting damage. Melanin-rich skin responds to trauma by producing more pigment, so the strength, the acid and the pacing all have to be selected deliberately. Lira’s professional range is built for that kind of control. Read more about <a href="/treatments/melasma/" class="border-b border-ink/40 hover:border-rose hover:text-rose">correcting melasma and post-inflammatory hyperpigmentation</a>.’,
+      'Pigmentation is the reason most people book, and it is also where the wrong treatment does lasting damage. Melanin-rich skin responds to trauma by producing more pigment, so the strength, the acid and the pacing all have to be selected deliberately. Lira\'s professional range is built for that kind of control. Read more about <a href="/treatments/melasma/" class="border-b border-ink/40 hover:border-rose hover:text-rose">correcting melasma and post-inflammatory hyperpigmentation</a>.',
     image: pigmentation,
     imageAlt: 'Close portrait of even, clear skin in warm natural light',
     goodFor: [
@@ -298,11 +298,11 @@ export const treatments: Treatment[] = [
       },
       {
         title: 'Apply',
-        body: 'The peel is layered and timed to your skin’s response on the day. Strength escalates across a series rather than in one visit.',
+        body: 'The peel is layered and timed to your skins response on the day. Strength escalates across a series rather than in one visit.',
       },
       {
         title: 'Protect',
-        body: 'Daily SPF is what holds the result. Without it, pigmentation returns — and San Diego’s overcast mornings are the usual reason people stop applying it.',
+        body: 'Daily SPF is what holds the result. Without it, pigmentation returns — and San Diegos overcast mornings are the usual reason people stop applying it.',
       },
     ],
     pricing: [

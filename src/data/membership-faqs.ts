@@ -66,7 +66,7 @@ export const membershipFaqs: Faq[] = [
     answer: `Yes. A facial subscription is another term for our monthly membership plans. Each plan includes one personalized treatment per month at the Mission Hills studio, with the flexibility to upgrade to advanced services by paying the difference. Facial subscriptions start at ${verifiedPrices['membership-glow']}/month with a six-month commitment, then continue month to month with 30 days notice to cancel.`,
   },
   {
-    question: 'What's included in a HydraFacial membership?',
+    question: 'What\'s included in a HydraFacial membership?',
     answer: `Our GLOW membership (${verifiedPrices['membership-glow']}/month) includes a customized HydraFacial treatment each month, plus a personalized Hydrojelly mask, 15% off all retail skincare, priority booking, and the ability to upgrade to advanced treatments by paying the difference. A monthly HydraFacial membership is designed for skin that's already stable and needs consistent maintenance rather than active correction.`,
   },
 ];
