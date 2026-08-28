@@ -115,19 +115,9 @@ export const areaFaqs: Record<string, Faq[]> = {
         'About twenty-five miles down I-5, exiting at Washington Street. Clear roads make that near thirty minutes, while the southbound commute through Sorrento Valley pushes it to forty-five or more.',
     },
     {
-      question: 'Is Coast Highway 101 a good route to Mission Hills?',
-      answer:
-        'No — 101 is the slower line and is not worth it for an appointment. I-5 south from Encinitas Boulevard or Leucadia Boulevard is the route to take, even when the freeway is busy.',
-    },
-    {
       question: 'Can salt water and wind damage the skin barrier?',
       answer:
         "Yes. Salt water, wind and the rinse afterwards take away more than they put back, and skin ends up tight, reactive and stinging under products it used to tolerate. DMK Enzyme Therapy is built for that state, working with the skin's own function rather than exfoliating a surface that is already raw.",
-    },
-    {
-      question: 'Which part of Encinitas is furthest from I-5?',
-      answer:
-        'Olivenhain, in the eastern part of the city, is the most inland — about five miles from the freeway on winding roads through horse properties and rural corridors. El Camino Real south to Leucadia Boulevard is the practical route, adding about ten to fifteen minutes compared to downtown Encinitas or Leucadia. Encinitas Ranch and the Quail Gardens area are more central and connect to I-5 via Leucadia Boulevard or Encinitas Boulevard in under ten minutes.',
     },
     {
       question: 'Does DMK Enzyme Therapy work on skin that is already reactive from surfing?',
@@ -171,19 +161,9 @@ export const areaFaqs: Record<string, Faq[]> = {
         'Thirty-five to forty minutes on clear roads, and past an hour on the southbound morning commute. It is about thirty-five miles down I-5 from Carlsbad Village or Palomar Airport Road, exiting at Washington Street.',
     },
     {
-      question: 'Is there a train from Carlsbad instead of driving?',
-      answer:
-        'Yes. The COASTER runs from Carlsbad Village to Santa Fe Depot in under an hour, which is a reasonable alternative to sitting in the I-5 commute.',
-    },
-    {
       question: 'How do you plan a treatment series around a long drive?',
       answer:
         'Set the series first and place the appointments around it, rather than booking whenever the skin flares. Procell Microchanneling is usually three sessions spaced four to six weeks apart, and Keravive scalp therapy is also designed as a series of three. Pairing two things into one visit is often the difference between finishing a course and abandoning it halfway, and what can safely be combined is decided at consultation.',
-    },
-    {
-      question: 'Which part of Carlsbad is closest to Mission Hills?',
-      answer:
-        'La Costa and Aviara, in the southern part of the city near Palomar Airport Road, are the closest at about thirty miles down I-5. Carlsbad Village at the north end, near Carlsbad Village Drive and the COASTER station, is about thirty-five miles. Bressi Ranch and Calavera Hills, inland from El Camino Real, are similar in distance to La Costa. Any of these routes runs thirty to forty minutes on a clear freeway.',
     },
     {
       question: 'Does Procell Microchanneling require much recovery time?',
@@ -227,19 +207,9 @@ export const areaFaqs: Record<string, Faq[]> = {
         'Roughly eleven miles west on I-8 through Mission Valley. Fifteen to twenty minutes on a clear freeway, and twenty-five to thirty-five on the westbound commute.',
     },
     {
-      question: 'Which exit do you take heading west on I-8?',
-      answer:
-        'Stay on I-8 past SR-163 and exit at Taylor Street or Hotel Circle, then climb into Mission Hills. Coming from La Mesa Boulevard or the SR-125 interchange, that is the whole route.',
-    },
-    {
       question: 'Is sun exposure worse inland than at the coast?',
       answer:
         'Yes. La Mesa sits about ten miles inland, far enough to miss the marine layer that keeps the beach gray through May and June, and summer afternoons run roughly eight to fifteen degrees warmer than La Jolla or Mission Beach. More clear days means more UV year after year, and cumulative UV is the most consistent driver of melasma and uneven tone.',
-    },
-    {
-      question: 'Does the La Mesa inland climate change how peel treatments are planned?',
-      answer:
-        'It does, specifically for post-peel skin care. The coast has built-in UV diffusion from the marine layer through May and June — La Mesa does not. A Lira peel sensitises the skin surface for two to four weeks after each session, and clear-sky afternoons in the inland valleys mean the UV load the treated skin faces is genuinely higher than at the beach. Daily SPF is not optional between treatments for anyone, but for La Mesa clients it is the variable that determines whether the series holds. The first session is always calibrated to the actual UV exposure the skin will encounter, not to a standard protocol.',
     },
     {
       question: 'How does cumulative inland UV affect pigmentation over time?',
@@ -255,19 +225,9 @@ export const areaFaqs: Record<string, Faq[]> = {
         'Three and a half miles — about ten minutes via University Avenue west through Hillcrest to Washington Street, then Reynard Way. No freeway, no on-ramp, no merge. It is the shortest trip of any area served, and the only one where the whole route stays on surface streets. Parking is free on site.',
     },
     {
-      question: 'Can you get from North Park to Mission Hills without a freeway?',
-      answer:
-        'Yes — University Avenue west through Hillcrest to Washington Street is the whole route. No on-ramp, no merge, no freeway. From the 30th and University core, from South Park, from the Normal Street corridor or from the Park Boulevard residential blocks, the same surface-street route reaches Reynard Way in ten minutes. This is not true of any other area in the service area.',
-    },
-    {
       question: 'How does being close actually change the treatment plan?',
       answer:
         'Corrective work runs on intervals — a Lira peel series typically calls for three to four sessions spaced four to six weeks apart, with specific home care between each. The interval is fixed by how the skin recovers, not by the drive. But whether someone finishes a course depends heavily on how much it costs them in time. From North Park, a visit is a ten-minute errand on a weekday afternoon. From Carlsbad, it is a logistics decision that involves an hour of driving. The same plan has a much higher completion rate for someone three miles away, and the completed plan is the one that produces results.',
-    },
-    {
-      question: 'Is dermaplaning safe on darker skin tones?',
-      answer:
-        'Yes. Dermaplaning uses a surgical-grade blade to physically remove dead skin and vellus hair from the surface — it does not use acids, heat or UV. There is no melanin response to physical exfoliation of the outer dead-cell layer, which means post-inflammatory hyperpigmentation is not a risk the way it is with some chemical exfoliants. It is particularly effective as a preparation step before a peel, because a cleared surface allows the acid to penetrate evenly rather than working around a layer of built-up dead cells.',
     },
     {
       question: 'Which treatment is most popular from North Park?',

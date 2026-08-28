@@ -1174,7 +1174,7 @@ export const articles: Article[] = [
         p: 'The process begins when triggers activate tyrosinase, the enzyme responsible for melanin synthesis. In melanin-rich skin (Fitzpatrick types IV-VI), melanocytes are inherently more reactive—a protective adaptation against UV damage that unfortunately makes these skin tones more susceptible to hyperpigmentation following inflammation or injury.',
       },
       {
-        p: 'Understanding your specific trigger determines the most effective treatment approach. UV exposure from San Diego\'s intense sunlight (averaging 266 sunny days per year) can trigger melanin production even during brief outdoor exposure, making photoprotection essential year-round.',
+        p: 'Understanding your specific trigger determines the most effective treatment approach. UV exposure from San Diego\'s intense sunlight (averaging 266 sunny days per year) can trigger melanin production even during brief outdoor exposure, making photoprotection essential year-round. This is especially true in <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">inland areas like Chula Vista</a> where the marine layer doesn\'t provide the same UV diffusion as coastal neighborhoods, and where melanin-rich skin demographics make melasma one of the most common reasons clients seek treatment.',
       },
 
       { h2: 'Melasma, PIH, and sun spots: What is the difference?' },

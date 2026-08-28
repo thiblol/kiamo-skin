@@ -1,0 +1,185 @@
+
+> kiamo-skin@0.0.1 build
+> astro build
+
+[2m21:23:34[22m [34m[types][39m Generated [2m21ms[22m
+[2m21:23:34[22m [34m[build][39m output: [34m"static"[39m
+[2m21:23:34[22m [34m[build][39m mode: [34m"static"[39m
+[2m21:23:34[22m [34m[build][39m directory: [34mC:\Users\haath\Desktop\kiamo\dist\[39m
+[2m21:23:34[22m [34m[build][39m Collecting build info...
+[2m21:23:34[22m [34m[build][39m [32m✓ Completed in 44ms.[39m
+[2m21:23:34[22m [34m[build][39m Building static entrypoints...
+[2m21:23:35[22m [34m[assets][39m Copying fonts (5 files)...
+[2m21:23:35[22m [34m[vite][39m [32m✓ built in 342ms[39m
+[2m21:23:35[22m [34m[vite][39m [32m✓ built in 69ms[39m
+[2m21:23:35[22m [34m[build][39m Rearranging server assets...
+
+[42m[30m generating static routes [39m[49m
+[2m21:23:35[22m   [34m├─[39m [2m/404.html[22m [2m(+8ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/about/index.html[22m [2m(+7ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/book/index.html[22m [2m(+3ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/contact/index.html[22m [2m(+3ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/journal/three-kinds-of-dark-mark/index.html[22m [2m(+3ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/journal/june-gloom-is-not-sun-protection/index.html[22m [2m(+2ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/journal/san-diego-hard-water-and-your-scalp/index.html[22m [2m(+2ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/journal/microneedling-on-dark-skin-san-diego/index.html[22m [2m(+2ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/journal/dermaplaning-safe-dark-skin-san-diego/index.html[22m [2m(+2ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/journal/dandruff-treatment-san-diego/index.html[22m [2m(+2ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/journal/san-diego-scalp-treatments-how-keravive-works/index.html[22m [2m(+1ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/journal/hyperpigmentation-treatment-guide/index.html[22m [2m(+2ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/journal/index.html[22m [2m(+8ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/melanin-rich-skin/index.html[22m [2m(+4ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/membership/index.html[22m [2m(+5ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/robots.txt[22m [2m(+1ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/service-areas/mission-hills/index.html[22m [2m(+3ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/service-areas/la-jolla/index.html[22m [2m(+3ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/service-areas/chula-vista/index.html[22m [2m(+2ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/service-areas/encinitas/index.html[22m [2m(+2ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/service-areas/del-mar/index.html[22m [2m(+2ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/service-areas/carlsbad/index.html[22m [2m(+2ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/service-areas/pacific-beach/index.html[22m [2m(+2ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/service-areas/la-mesa/index.html[22m [2m(+2ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/service-areas/north-park/index.html[22m [2m(+2ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/service-areas/index.html[22m [2m(+3ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/treatments/melasma/index.html[22m [2m(+4ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/treatments/hydrafacial/index.html[22m [2m(+2ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/treatments/keravive-scalp/index.html[22m [2m(+1ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/treatments/dmk-enzyme-therapy/index.html[22m [2m(+2ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/treatments/procell-microchanneling/index.html[22m [2m(+1ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/treatments/lira-peels/index.html[22m [2m(+1ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/treatments/dermaplaning/index.html[22m [2m(+2ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/treatments/index.html[22m [2m(+5ms)[22m 
+[2m21:23:35[22m   [34m├─[39m [2m/index.html[22m [2m(+6ms)[22m 
+[2m21:23:35[22m [32m✓ Completed in 122ms.
+[39m
+[42m[30m generating optimized images [39m[49m
+[2m21:23:35[22m   [32m▶[39m /_astro/kiki-portrait.CvaBT8Li_12zl4Q.webp [2m(reused cache entry)[22m [2m(+2ms)[22m [2m(1/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-pigmentation.HNLCwZVj_1qjHWX.webp [2m(reused cache entry)[22m [2m(+2ms)[22m [2m(2/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-uv.DjjgDdDR_4uOb0.webp [2m(reused cache entry)[22m [2m(+2ms)[22m [2m(3/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/studio-interior.Cz4U0w86_Z1NG0UH.webp [2m(reused cache entry)[22m [2m(+2ms)[22m [2m(4/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-water.DkNtInqP_Z6CQkd.webp [2m(reused cache entry)[22m [2m(+2ms)[22m [2m(5/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-microchanneling.BpXwPoBK_1AV5RM.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(6/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-dermaplaning.BNG5Ni4__Z1E7Sac.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(7/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/keravive-scalp-treatment.BHAczh_B_fmPq1.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(8/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-pigmentation.BbuYLJfj_215YJt.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(9/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/membership-treatment.BBaWHndn_eztKc.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(10/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/hyperpigmentation-hero.CCV6qQ-N_o0FW0.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(11/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/membership-studio.BReoVDjg_Z1bIkqV.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(12/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/membership-result-back.BBNDvn6w_ZyiYIU.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(13/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-hydrafacial.DaU4W6SY_1TpDkf.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(14/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-scalp.DIaBdVZz_ZkO8RS.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(15/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-enzyme.D5J_bEiA_Z1FFkw6.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(16/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-acne.BIHzhCU3_Z1UXfMb.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(17/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-barrier.C72fVCzR_7qrBs.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(18/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/hero-mobile.OgHwTbGS_ZUytDo.avif [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(19/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-scalp.Bj2J00Zj_1Ypok0.webp [2m(reused cache entry)[22m [2m(+6ms)[22m [2m(20/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/kiki-portrait.CvaBT8Li_Z1IH5xg.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(21/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-pigmentation.HNLCwZVj_EqpVs.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(22/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-uv.DjjgDdDR_1bVsgg.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(23/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/studio-interior.Cz4U0w86_Z1xMW83.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(24/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-water.DkNtInqP_1rl9ts.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(25/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-microchanneling.BpXwPoBK_9Cx7G.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(26/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/keravive-scalp-treatment.BHAczh_B_Zbbl5U.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(27/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-dermaplaning.BNG5Ni4__ZR2IB3.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(28/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/membership-treatment.BBaWHndn_3Vj9y.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(29/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-pigmentation.BbuYLJfj_1b7fPO.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(30/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/hyperpigmentation-hero.CCV6qQ-N_Tx2hN.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(31/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/membership-studio.BReoVDjg_Z2cmeu4.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(32/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/membership-result-back.BBNDvn6w_Z1HwSq2.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(33/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-hydrafacial.DaU4W6SY_nqVx4.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(34/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-scalp.DIaBdVZz_Z2nLahi.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(35/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-enzyme.D5J_bEiA_1vKFOQ.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(36/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-acne.BIHzhCU3_Z1kwerW.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(37/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-barrier.C72fVCzR_Z7zbsY.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(38/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/hero-mobile.OgHwTbGS_Z28WEA2.avif [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(39/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-scalp.Bj2J00Zj_ZLR2i7.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(40/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-pigmentation.HNLCwZVj_ZC4HWe.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(41/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/kiki-portrait.CvaBT8Li_1oCoCx.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(42/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-uv.DjjgDdDR_b2Fnd.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(43/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/studio-interior.Cz4U0w86_ZdOBDo.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(44/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-water.DkNtInqP_W3kRW.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(45/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/keravive-scalp-treatment.BHAczh_B_x0jBL.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(46/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-microchanneling.BpXwPoBK_ZJ5fzn.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(47/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-dermaplaning.BNG5Ni4__3K9Yt.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(48/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/membership-treatment.BBaWHndn_Z1U8pz1.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(49/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/hyperpigmentation-hero.CCV6qQ-N_2cp3dJ.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(50/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-pigmentation.BbuYLJfj_Z2qJYtJ.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(51/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/membership-studio.BReoVDjg_Z2sjJXk.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(52/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/membership-result-back.BBNDvn6w_Z2a0uQo.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(53/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-hydrafacial.DaU4W6SY_64583.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(54/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-scalp.DIaBdVZz_Z1uLHYp.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(55/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-enzyme.D5J_bEiA_Z2wVbff.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(56/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-acne.BIHzhCU3_Z1fyqo3.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(57/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/hero-mobile.OgHwTbGS_1RS4WQ.avif [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(58/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-scalp.Bj2J00Zj_Zww7Dx.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(59/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-barrier.C72fVCzR_Z25AGST.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(60/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-pigmentation.HNLCwZVj_ZcBAwr.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(61/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/kiki-portrait.CvaBT8Li_Z2uN8l2.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(62/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-uv.DjjgDdDR_2j4I9R.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(63/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-water.DkNtInqP_Z10pPF5.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(64/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/studio-interior.Cz4U0w86_26HrmP.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(65/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/keravive-scalp-treatment.BHAczh_B_Z1ptQFY.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(66/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-microchanneling.BpXwPoBK_1bKtTX.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(67/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-dermaplaning.BNG5Ni4__1bnz7q.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(68/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/membership-treatment.BBaWHndn_Z2jCNp5.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(69/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/hyperpigmentation-hero.CCV6qQ-N_1MC65w.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(70/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-pigmentation.BbuYLJfj_Z1j7zlM.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(71/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-hydrafacial.DaU4W6SY_1dqkQB.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(72/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-scalp.DIaBdVZz_ZKaDl7.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(73/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/meet-kiki.D6vnpVYg_Z2s9ck9.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(74/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/result-pigmentation-after.BtYxF6RH_ZAAgpj.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(75/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-acne.BIHzhCU3_1AWdUi.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(76/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-enzyme.D5J_bEiA_1q3hK0.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(77/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-barrier.C72fVCzR_Z5JlMw.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(78/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-scalp.Bj2J00Zj_1s8MfR.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(79/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-pigmentation.HNLCwZVj_Z5BvhW.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(80/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-uv.DjjgDdDR_Z1dOmSv.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(81/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/studio-interior.Cz4U0w86_1UUiwj.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(82/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-water.DkNtInqP_ZvfOi3.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(83/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-microchanneling.BpXwPoBK_Z4o9Up.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(84/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/result-pigmentation-before.Cux34iD4_rLAMq.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(85/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/journal-dermaplaning.BNG5Ni4__Z23YHo.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(86/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/result-scalp-after.CuoQLsyz_1l2OcP.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(87/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/result-scalp-before.PvI0Saed_9lNe3.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(88/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-pigmentation.BbuYLJfj_Z1A55TU.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(89/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/hyperpigmentation-hero.CCV6qQ-N_1lRlgW.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(90/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/hero-desktop.BcVPWLEp_1rd6YT.avif [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(91/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-hydrafacial.DaU4W6SY_VpYBl.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(92/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/meet-kiki.D6vnpVYg_Z1P3ypX.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(93/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-scalp.DIaBdVZz_Z1LxFzf.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(94/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/result-pigmentation-after.BtYxF6RH_29nzyR.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(95/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-acne.BIHzhCU3_aoNlH.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(96/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-enzyme.D5J_bEiA_uWc0C.webp [2m(reused cache entry)[22m [2m(+5ms)[22m [2m(97/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-barrier.C72fVCzR_d2RIM.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(98/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/studio-interior.Cz4U0w86_QlzRA.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(99/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/result-pigmentation-before.Cux34iD4_oTWQP.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(100/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/result-scalp-after.CuoQLsyz_wNzAh.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(101/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/result-scalp-before.PvI0Saed_1AduD9.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(102/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-pigmentation.BbuYLJfj_Z2o2LJ.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(103/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/hero-desktop.BcVPWLEp_Zc1tlC.avif [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(104/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-hydrafacial.DaU4W6SY_2h1syl.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(105/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/meet-kiki.D6vnpVYg_PAKpf.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(106/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-scalp.DIaBdVZz_1Hlf6R.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(107/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/result-pigmentation-after.BtYxF6RH_xxSWO.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(108/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-acne.BIHzhCU3_btDKs.webp [2m(reused cache entry)[22m [2m(+2ms)[22m [2m(109/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/concern-barrier.C72fVCzR_Z2reEf0.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(110/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-enzyme.D5J_bEiA_Z28oLbF.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(111/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/result-pigmentation-before.Cux34iD4_Z28YnTm.webp [2m(reused cache entry)[22m [2m(+4ms)[22m [2m(112/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/result-scalp-after.CuoQLsyz_Z1IaO95.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(113/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/result-scalp-before.PvI0Saed_1CKot2.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(114/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/hero-desktop.BcVPWLEp_PTxkw.avif [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(115/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/meet-kiki.D6vnpVYg_ZtWpTw.webp [2m(reused cache entry)[22m [2m(+2ms)[22m [2m(116/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-hydrafacial.DaU4W6SY_bXNDE.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(117/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-scalp.DIaBdVZz_ZDR4p9.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(118/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/result-pigmentation-after.BtYxF6RH_1e4RIW.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(119/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/treatment-enzyme.D5J_bEiA_2rCaCP.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(120/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/result-pigmentation-before.Cux34iD4_vhTrM.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(121/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/result-scalp-before.PvI0Saed_Z8QaU4.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(122/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/result-scalp-after.CuoQLsyz_VGbzQ.webp [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(123/124)[22m
+[2m21:23:35[22m   [32m▶[39m /_astro/hero-desktop.BcVPWLEp_18Qd8n.jpeg [2m(reused cache entry)[22m [2m(+3ms)[22m [2m(124/124)[22m
+[2m21:23:35[22m [32m✓ Completed in 32ms.
+[39m
+[2m21:23:35[22m [34m[build][39m [32m✓ Completed in 793ms.[39m
+[2m21:23:35[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `dist`
+[2m21:23:35[22m [34m[build][39m 34 page(s) built in [1m870ms[22m
+[2m21:23:35[22m [34m[build][39m [1mComplete![22m

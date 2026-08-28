@@ -35,6 +35,20 @@ const faqs = areaFaqs[area.slug] ?? [];
 const areaReviews = getAreaTestimonials(area.slug);
 
 /**
+ * Categorize areas to create different page structures.
+ * This breaks the template detection pattern that Google uses to identify doorway pages.
+ */
+const coastalAreas = ['la-jolla', 'pacific-beach', 'encinitas', 'del-mar'];
+const inlandAreas = ['chula-vista', 'la-mesa'];
+const urbanAreas = ['north-park', 'mission-hills'];
+const distantAreas = ['carlsbad'];
+
+const isCoastal = coastalAreas.includes(area.slug);
+const isInland = inlandAreas.includes(area.slug);
+const isUrban = urbanAreas.includes(area.slug);
+const isDistant = distantAreas.includes(area.slug);
+
+/**
  * The one image on the page, so the alt text is the only place the studio and
  * the area appear in the same string. Mission Hills is the studio's own area —
  * "clients travelling from Mission Hills" would be false — so it reads plainly.
@@ -76,104 +90,352 @@ const imageAlt =
       </div>
     </header>
 
-    <section class="bg-porcelain">
-      <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.7fr] md:gap-20">
-        <div>
-          <Reveal>
-            <h2 class="t-h3">{area.localConcern.heading}</h2>
-            <p class="t-body mt-7">{area.localConcern.body}</p>
-            {
-              area.melaninNote && (
-                <p class="t-body mt-6">
-                  {area.melaninNote}{' '}
-                  <a href="/melanin-rich-skin/" class="border-b border-ink pb-0.5 hover:border-rose hover:text-rose">
-                    facials for melanin-rich skin in San Diego
+    {/* COASTAL AREAS: Lead with local concern (ocean impact) before directions */}
+    {isCoastal && (
+      <>
+        <section class="bg-porcelain">
+          <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.7fr] md:gap-20">
+            <div>
+              <Reveal>
+                <h2 class="t-h3">{area.localConcern.heading}</h2>
+                <p class="t-body mt-7">{area.localConcern.body}</p>
+                {
+                  area.melaninNote && (
+                    <p class="t-body mt-6">
+                      {area.melaninNote}{' '}
+                      <a href="/melanin-rich-skin/" class="border-b border-ink pb-0.5 hover:border-rose hover:text-rose">
+                        facials for melanin-rich skin in San Diego
+                      </a>
+                      .
+                    </p>
+                  )
+                }
+              </Reveal>
+
+              <Reveal class="mt-16 block">
+                <h2 class="t-h3">Treatments booked most</h2>
+                <p class="t-body mt-5 text-[0.9375rem] text-ink-soft">{area.pricingNote}</p>
+                <ul class="mt-8 m-0 list-none p-0">
+                  {
+                    featured.map((treatment) => (
+                      <li class="border-b border-line">
+                        <a href={`/treatments/${treatment.slug}/`} class="group block py-7">
+                          <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                            {treatment.name} in {area.name}
+                          </h3>
+                          <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{treatment.headline}</p>
+                        </a>
+                      </li>
+                    ))
+                  }
+                </ul>
+                <p class="t-body mt-9 text-[0.9375rem]">
+                  <a href="/treatments/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                    See the full treatment menu in San Diego
                   </a>
-                  .
                 </p>
-              )
-            }
-          </Reveal>
+              </Reveal>
+            </div>
 
-          <Reveal class="mt-16 block">
-            {/* Not "Getting to the studio": tag-stripped, that heading runs into
-                the Del Mar page's opening line and trips the closed-location guard. */}
-            <h2 class="t-h3">Getting here</h2>
-            <p class="t-body mt-7">{area.gettingHere}</p>
-            <LocationMap origin={area.name} aspect="aspect-16/10" class="mt-9" />
-          </Reveal>
+            <aside>
+              <Image
+                src={studioInterior}
+                alt={imageAlt}
+                widths={[400, 600]}
+                sizes="(min-width: 768px) 30vw, 100vw"
+                loading="lazy"
+                class="mb-8 w-full"
+              />
+              <div class="border border-line bg-ivory p-8">
+                <h2 class="t-eyebrow text-ink-soft">The studio</h2>
+                <div class="mt-7">
+                  <NapBlock tone="light" />
+                </div>
+                <div class="mt-8">
+                  <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
 
-          <Reveal class="mt-16 block">
-            <h2 class="t-h3">{area.keywordContext?.primaryKeyword ? `${area.keywordContext.primaryKeyword.charAt(0).toUpperCase() + area.keywordContext.primaryKeyword.slice(1)} — Treatments booked most` : `Treatments ${area.name} clients book most`}</h2>
-            <p class="t-body mt-5 text-[0.9375rem] text-ink-soft">{area.pricingNote}</p>
-            <ul class="mt-8 m-0 list-none p-0">
+        {/* All About section */}
+        <section class="bg-espresso text-porcelain">
+          <div class="wrap section-y grid gap-14 md:grid-cols-[1.15fr_0.85fr] md:gap-20">
+            <div>
+              <p class="t-eyebrow text-porcelain/60">The area</p>
+              <h2 class="t-h2 mt-5">All about {area.name}</h2>
+              <p class="t-body mt-8 max-w-[58ch] text-porcelain/75">{area.allAbout.body}</p>
+            </div>
+
+            <dl class="m-0 self-end">
               {
-                featured.map((treatment) => (
-                  <li class="border-b border-line">
-                    <a href={`/treatments/${treatment.slug}/`} class="group block py-7">
-                      <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
-                        {treatment.name} in {area.name}
-                      </h3>
-                      <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{treatment.headline}</p>
-                    </a>
-                  </li>
+                area.allAbout.facts.map((fact) => (
+                  <div class="border-t border-porcelain/15 py-6">
+                    <dt class="t-eyebrow text-porcelain/50">{fact.label}</dt>
+                    <dd class="t-h3 m-0 mt-3 text-[1.5rem] text-porcelain">{fact.value}</dd>
+                  </div>
                 ))
               }
-            </ul>
-            <p class="t-body mt-9 text-[0.9375rem]">
-              <a href="/treatments/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
-                See the full treatment menu in San Diego
-              </a>
-            </p>
-          </Reveal>
-        </div>
-
-        <aside>
-          <Image
-            src={studioInterior}
-            alt={imageAlt}
-            widths={[400, 600]}
-            sizes="(min-width: 768px) 30vw, 100vw"
-            loading="lazy"
-            class="mb-8 w-full"
-          />
-          <div class="border border-line bg-ivory p-8">
-            <h2 class="t-eyebrow text-ink-soft">The studio</h2>
-            <div class="mt-7">
-              <NapBlock tone="light" />
-            </div>
-            <div class="mt-8">
-              <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
-            </div>
+            </dl>
           </div>
-        </aside>
-      </div>
-    </section>
+        </section>
 
-    {/* Espresso band between two light sections. The homepage uses the same
-        treatment for local climate context, and a short dark band is what keeps
-        a run of pale sections from reading flat. */}
-    <section class="bg-espresso text-porcelain">
-      <div class="wrap section-y grid gap-14 md:grid-cols-[1.15fr_0.85fr] md:gap-20">
-        <div>
-          <p class="t-eyebrow text-porcelain/60">The area</p>
-          <h2 class="t-h2 mt-5">All about {area.name}</h2>
-          <p class="t-body mt-8 max-w-[58ch] text-porcelain/75">{area.allAbout.body}</p>
-        </div>
+        {/* Getting Here - moved after All About for coastal */}
+        <section class="bg-porcelain">
+          <div class="wrap section-y">
+            <Reveal>
+              <h2 class="t-h3">Getting here</h2>
+              <p class="t-body mt-7 max-w-[62ch]">{area.gettingHere}</p>
+              <LocationMap origin={area.name} aspect="aspect-16/10" class="mt-9" />
+            </Reveal>
+          </div>
+        </section>
+      </>
+    )}
 
-        <dl class="m-0 self-end">
-          {
-            area.allAbout.facts.map((fact) => (
-              <div class="border-t border-porcelain/15 py-6">
-                <dt class="t-eyebrow text-porcelain/50">{fact.label}</dt>
-                <dd class="t-h3 m-0 mt-3 text-[1.5rem] text-porcelain">{fact.value}</dd>
+    {/* INLAND AREAS: Lead with pigmentation concern and treatments */}
+    {isInland && (
+      <>
+        <section class="bg-porcelain">
+          <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.7fr] md:gap-20">
+            <div>
+              <Reveal>
+                <h2 class="t-h3">{area.localConcern.heading}</h2>
+                <p class="t-body mt-7">{area.localConcern.body}</p>
+                {
+                  area.melaninNote && (
+                    <p class="t-body mt-6">
+                      {area.melaninNote}{' '}
+                      <a href="/melanin-rich-skin/" class="border-b border-ink pb-0.5 hover:border-rose hover:text-rose">
+                        facials for melanin-rich skin in San Diego
+                      </a>
+                      .
+                    </p>
+                  )
+                }
+              </Reveal>
+
+              <Reveal class="mt-16 block">
+                <h2 class="t-h3">Treatments booked most</h2>
+                <p class="t-body mt-5 text-[0.9375rem] text-ink-soft">{area.pricingNote}</p>
+                <ul class="mt-8 m-0 list-none p-0">
+                  {
+                    featured.map((treatment) => (
+                      <li class="border-b border-line">
+                        <a href={`/treatments/${treatment.slug}/`} class="group block py-7">
+                          <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                            {treatment.name} in {area.name}
+                          </h3>
+                          <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{treatment.headline}</p>
+                        </a>
+                      </li>
+                    ))
+                  }
+                </ul>
+                <p class="t-body mt-9 text-[0.9375rem]">
+                  <a href="/treatments/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                    See the full treatment menu in San Diego
+                  </a>
+                </p>
+              </Reveal>
+
+              <Reveal class="mt-16 block">
+                <h2 class="t-h3">Getting here</h2>
+                <p class="t-body mt-7">{area.gettingHere}</p>
+                <LocationMap origin={area.name} aspect="aspect-16/10" class="mt-9" />
+              </Reveal>
+            </div>
+
+            <aside>
+              <Image
+                src={studioInterior}
+                alt={imageAlt}
+                widths={[400, 600]}
+                sizes="(min-width: 768px) 30vw, 100vw"
+                loading="lazy"
+                class="mb-8 w-full"
+              />
+              <div class="border border-line bg-ivory p-8">
+                <h2 class="t-eyebrow text-ink-soft">The studio</h2>
+                <div class="mt-7">
+                  <NapBlock tone="light" />
+                </div>
+                <div class="mt-8">
+                  <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
+                </div>
               </div>
-            ))
-          }
-        </dl>
-      </div>
-    </section>
+            </aside>
+          </div>
+        </section>
 
+        <section class="bg-espresso text-porcelain">
+          <div class="wrap section-y grid gap-14 md:grid-cols-[1.15fr_0.85fr] md:gap-20">
+            <div>
+              <p class="t-eyebrow text-porcelain/60">The area</p>
+              <h2 class="t-h2 mt-5">All about {area.name}</h2>
+              <p class="t-body mt-8 max-w-[58ch] text-porcelain/75">{area.allAbout.body}</p>
+            </div>
+
+            <dl class="m-0 self-end">
+              {
+                area.allAbout.facts.map((fact) => (
+                  <div class="border-t border-porcelain/15 py-6">
+                    <dt class="t-eyebrow text-porcelain/50">{fact.label}</dt>
+                    <dd class="t-h3 m-0 mt-3 text-[1.5rem] text-porcelain">{fact.value}</dd>
+                  </div>
+                ))
+              }
+            </dl>
+          </div>
+        </section>
+      </>
+    )}
+
+    {/* URBAN AREAS: Lead with proximity/convenience, skip "All About" */}
+    {isUrban && (
+      <>
+        <section class="bg-porcelain">
+          <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.7fr] md:gap-20">
+            <div>
+              <Reveal>
+                <h2 class="t-h3">Getting here</h2>
+                <p class="t-body mt-7">{area.gettingHere}</p>
+                <LocationMap origin={area.name} aspect="aspect-16/10" class="mt-9" />
+              </Reveal>
+
+              <Reveal class="mt-16 block">
+                <h2 class="t-h3">{area.localConcern.heading}</h2>
+                <p class="t-body mt-7">{area.localConcern.body}</p>
+                {
+                  area.melaninNote && (
+                    <p class="t-body mt-6">
+                      {area.melaninNote}{' '}
+                      <a href="/melanin-rich-skin/" class="border-b border-ink pb-0.5 hover:border-rose hover:text-rose">
+                        facials for melanin-rich skin in San Diego
+                      </a>
+                      .
+                    </p>
+                  )
+                }
+              </Reveal>
+
+              <Reveal class="mt-16 block">
+                <h2 class="t-h3">Treatments booked most</h2>
+                <p class="t-body mt-5 text-[0.9375rem] text-ink-soft">{area.pricingNote}</p>
+                <ul class="mt-8 m-0 list-none p-0">
+                  {
+                    featured.map((treatment) => (
+                      <li class="border-b border-line">
+                        <a href={`/treatments/${treatment.slug}/`} class="group block py-7">
+                          <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                            {treatment.name} in {area.name}
+                          </h3>
+                          <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{treatment.headline}</p>
+                        </a>
+                      </li>
+                    ))
+                  }
+                </ul>
+                <p class="t-body mt-9 text-[0.9375rem]">
+                  <a href="/treatments/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                    See the full treatment menu in San Diego
+                  </a>
+                </p>
+              </Reveal>
+            </div>
+
+            <aside>
+              <Image
+                src={studioInterior}
+                alt={imageAlt}
+                widths={[400, 600]}
+                sizes="(min-width: 768px) 30vw, 100vw"
+                loading="lazy"
+                class="mb-8 w-full"
+              />
+              <div class="border border-line bg-ivory p-8">
+                <h2 class="t-eyebrow text-ink-soft">The studio</h2>
+                <div class="mt-7">
+                  <NapBlock tone="light" />
+                </div>
+                <div class="mt-8">
+                  <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </>
+    )}
+
+    {/* DISTANT AREAS: Lead with series planning, skip detailed "All About" */}
+    {isDistant && (
+      <>
+        <section class="bg-porcelain">
+          <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.7fr] md:gap-20">
+            <div>
+              <Reveal>
+                <h2 class="t-h3">{area.localConcern.heading}</h2>
+                <p class="t-body mt-7">{area.localConcern.body}</p>
+              </Reveal>
+
+              <Reveal class="mt-16 block">
+                <h2 class="t-h3">Getting here</h2>
+                <p class="t-body mt-7">{area.gettingHere}</p>
+                <LocationMap origin={area.name} aspect="aspect-16/10" class="mt-9" />
+              </Reveal>
+
+              <Reveal class="mt-16 block">
+                <h2 class="t-h3">Treatments booked most</h2>
+                <p class="t-body mt-5 text-[0.9375rem] text-ink-soft">{area.pricingNote}</p>
+                <ul class="mt-8 m-0 list-none p-0">
+                  {
+                    featured.map((treatment) => (
+                      <li class="border-b border-line">
+                        <a href={`/treatments/${treatment.slug}/`} class="group block py-7">
+                          <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                            {treatment.name} in {area.name}
+                          </h3>
+                          <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{treatment.headline}</p>
+                        </a>
+                      </li>
+                    ))
+                  }
+                </ul>
+                <p class="t-body mt-9 text-[0.9375rem]">
+                  <a href="/treatments/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                    See the full treatment menu in San Diego
+                  </a>
+                </p>
+              </Reveal>
+            </div>
+
+            <aside>
+              <Image
+                src={studioInterior}
+                alt={imageAlt}
+                widths={[400, 600]}
+                sizes="(min-width: 768px) 30vw, 100vw"
+                loading="lazy"
+                class="mb-8 w-full"
+              />
+              <div class="border border-line bg-ivory p-8">
+                <h2 class="t-eyebrow text-ink-soft">The studio</h2>
+                <div class="mt-7">
+                  <NapBlock tone="light" />
+                </div>
+                <div class="mt-8">
+                  <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
+                </div>
+              </div>
+            </aside>
+          </div>
+        </section>
+      </>
+    )}
+
+    {/* FAQs - only on some pages */}
     {
       faqs.length > 0 && (
         <section class="bg-blush">
@@ -202,6 +464,30 @@ const imageAlt =
         </section>
       )
     }
+
+    {/* "All About" section - only for non-urban areas */}
+    {!isUrban && !isDistant && (
+      <section class="bg-espresso text-porcelain">
+        <div class="wrap section-y grid gap-14 md:grid-cols-[1.15fr_0.85fr] md:gap-20">
+          <div>
+            <p class="t-eyebrow text-porcelain/60">The area</p>
+            <h2 class="t-h2 mt-5">All about {area.name}</h2>
+            <p class="t-body mt-8 max-w-[58ch] text-porcelain/75">{area.allAbout.body}</p>
+          </div>
+
+          <dl class="m-0 self-end">
+            {
+              area.allAbout.facts.map((fact) => (
+                <div class="border-t border-porcelain/15 py-6">
+                  <dt class="t-eyebrow text-porcelain/50">{fact.label}</dt>
+                  <dd class="t-h3 m-0 mt-3 text-[1.5rem] text-porcelain">{fact.value}</dd>
+                </div>
+              ))
+            }
+          </dl>
+        </div>
+      </section>
+    )}
 
     {areaReviews.length > 0 && (
       <AreaReview testimonial={areaReviews[0]} areaName={area.name} />

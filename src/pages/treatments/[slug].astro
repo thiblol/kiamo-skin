@@ -211,30 +211,27 @@ const localAreas = treatment.areas
       localAreas.length > 0 && (
         <div class="bg-porcelain">
           <div class="wrap section-y">
-            <h2 class="t-h3">Travelling in for {treatment.name}</h2>
+            <h2 class="t-h3">Clients from across San Diego</h2>
             <p class="t-body mt-7 max-w-[62ch]">
-              The studio is in Mission Hills, and clients come in from across San Diego County.
+              {treatment.name} is performed at the Mission Hills studio. Clients travel from these areas across San Diego County:
             </p>
-            <ul class="mt-10 m-0 flex list-none flex-wrap gap-x-3 gap-y-3 p-0">
+            <ul class="mt-10 m-0 grid list-none gap-x-10 gap-y-0 p-0 md:grid-cols-2">
               {localAreas.map((area) => (
-                <li>
-                  <a
-                    href={`/service-areas/${area.slug}/`}
-                    class="t-button inline-block rounded-full border border-line px-5 pt-[13px] pb-[10px] transition-colors duration-300 hover:border-rose hover:text-rose"
-                  >
-                    {area.name}
+                <li class="border-b border-line">
+                  <a href={`/service-areas/${area.slug}/`} class="group block py-7">
+                    <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                      {treatment.name} in {area.name}
+                    </h3>
+                    <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{area.proximity}</p>
                   </a>
                 </li>
               ))}
-              <li>
-                <a
-                  href="/service-areas/"
-                  class="t-button inline-block rounded-full border border-line px-5 pt-[13px] pb-[10px] transition-colors duration-300 hover:border-rose hover:text-rose"
-                >
-                  All areas
-                </a>
-              </li>
             </ul>
+            <p class="t-body mt-9 text-[0.9375rem]">
+              <a href="/service-areas/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                See all areas served across San Diego County
+              </a>
+            </p>
           </div>
         </div>
       )

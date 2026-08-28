@@ -124,7 +124,7 @@ export const areas: Area[] = [
     pricingNote:
       'HydraFacial is $259. DMK Enzyme Therapy Level 1 is $279. Dermaplaning starts at $199. Full pricing is on each treatment page.',
     featured: ['hydrafacial', 'dmk-enzyme-therapy', 'dermaplaning'],
-    crossLinkLabel: 'Corrective facials & enzyme therapy — Mission Hills studio',
+    crossLinkLabel: 'Mission Hills — The studio itself',
   },
   {
     slug: 'la-jolla',
@@ -167,7 +167,7 @@ export const areas: Area[] = [
     pricingNote:
       'Keravive scalp therapy is $599, or $1,499 for a series of three. HydraFacial is $259. Full pricing is on each treatment page.',
     featured: ['keravive-scalp', 'hydrafacial', 'lira-peels'],
-    crossLinkLabel: 'Scalp therapy & barrier repair for ocean swimmers — La Jolla',
+    crossLinkLabel: 'La Jolla — 20 minutes south',
   },
   {
     slug: 'chula-vista',
@@ -212,7 +212,7 @@ export const areas: Area[] = [
     pricingNote:
       'Lira chemical peels start at $199 for the Gentle Renewal and $299 for the Advanced. A first-time consultation and treatment is $249. Full pricing is on each treatment page.',
     featured: ['lira-peels', 'dmk-enzyme-therapy', 'hydrafacial'],
-    crossLinkLabel: 'Melasma & pigmentation peels for melanin-rich skin — Chula Vista',
+    crossLinkLabel: 'Chula Vista — 25 minutes north',
   },
   {
     slug: 'encinitas',
@@ -261,7 +261,7 @@ export const areas: Area[] = [
     pricingNote:
       'DMK Enzyme Therapy Level 1 is $279. A HydraFacial is $259. Full pricing is on each treatment page.',
     featured: ['dmk-enzyme-therapy', 'keravive-scalp', 'hydrafacial'],
-    crossLinkLabel: 'Barrier repair facials for year-round surfers — Encinitas',
+    crossLinkLabel: 'Encinitas — 30 minutes south',
   },
   {
     slug: 'del-mar',
@@ -311,7 +311,7 @@ export const areas: Area[] = [
     pricingNote:
       'Procell Microchanneling is $475 per session, or $1,199 for a series of three. Keravive scalp therapy is $599. HydraFacial is $259. Full pricing is on each treatment page.',
     featured: ['procell-microchanneling', 'keravive-scalp', 'hydrafacial'],
-    crossLinkLabel: 'Procell & Keravive for Fairgrounds-season sun damage — Del Mar',
+    crossLinkLabel: 'Del Mar — 25 minutes south',
   },
   {
     slug: 'carlsbad',
@@ -360,7 +360,7 @@ export const areas: Area[] = [
     pricingNote:
       'Procell Microchanneling is $475, or $1,199 for a series of three. Keravive scalp therapy is $599, or $1,499 for a series. Full pricing is on each treatment page.',
     featured: ['procell-microchanneling', 'keravive-scalp', 'hydrafacial'],
-    crossLinkLabel: 'Procell & Keravive series planned around the drive — Carlsbad',
+    crossLinkLabel: 'Carlsbad — 35-40 minutes south',
   },
   {
     slug: 'pacific-beach',
@@ -406,7 +406,7 @@ export const areas: Area[] = [
     pricingNote:
       'Lira chemical peels start at $199. DMK Enzyme Therapy Level 1 is $279. HydraFacial is $259. Full pricing is on each treatment page.',
     featured: ['lira-peels', 'dmk-enzyme-therapy', 'keravive-scalp'],
-    crossLinkLabel: 'Sun damage & barrier repair for boardwalk skin — Pacific Beach',
+    crossLinkLabel: 'Pacific Beach — 15 minutes east',
   },
   {
     slug: 'la-mesa',
@@ -457,7 +457,7 @@ export const areas: Area[] = [
     pricingNote:
       'Lira chemical peels start at $199. A HydraFacial is $259. Full pricing is on each treatment page.',
     featured: ['lira-peels', 'hydrafacial', 'dmk-enzyme-therapy'],
-    crossLinkLabel: 'Inland UV & pigmentation treatment — La Mesa',
+    crossLinkLabel: 'La Mesa — 20 minutes west',
   },
   {
     slug: 'north-park',
@@ -500,7 +500,7 @@ export const areas: Area[] = [
     pricingNote:
       'Lira chemical peels start at $199. A dermaplane facial is $199. A first-time treatment starts at $249. Full pricing is on each treatment page.',
     featured: ['lira-peels', 'dermaplaning', 'hydrafacial'],
-    crossLinkLabel: 'Peel series & dermaplaning, ten minutes away — North Park',
+    crossLinkLabel: 'North Park — 10 minutes west',
   },
 ];
 
