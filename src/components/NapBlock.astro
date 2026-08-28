@@ -12,13 +12,10 @@ const { tone = 'light', showCancellation = false } = Astro.props;
 const muted = tone === 'dark' ? 'text-porcelain/70' : 'text-ink-soft';
 const link = tone === 'dark' ? 'hover:text-blush' : 'hover:text-rose';
 
-const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-  `${business.name}, ${business.address.full}`,
-)}`;
 ---
 
 <address class="not-italic">
-  <a href={mapsUrl} target="_blank" rel="noopener" class={`t-body ${link}`}>
+  <a href="#location-map" class={`t-body ${link}`}>
     {business.address.street}<br />
     {business.address.city}, {business.address.region} {business.address.postalCode}
   </a>

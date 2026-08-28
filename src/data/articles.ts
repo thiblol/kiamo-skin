@@ -201,10 +201,10 @@ export const articles: Article[] = [
         p: 'McGill University\'s Office for Science and Society notes that on an overcast day <a href="https://www.mcgill.ca/oss/article/medical-student-contributors/cloudy-chance-sunburn" rel="noopener" target="_blank">up to 80% of the sun\'s UV rays can still reach your skin</a>, and that people "mistakenly associate UV exposure with temperature and cloud cover" — which produces more sunburn on cool, grey days, not fewer. UVA in particular accounts for 90–99% of the UV reaching the ground and is the fraction least affected by cloud.',
       },
       {
-        p: 'May Gray and June Gloom therefore arrive as a pigmentation problem dressed as weather. The sky goes white, the sunscreen comes off the counter, and six weeks of careful correction quietly reverses. Add the visible-light component that drives melasma and a bright overcast morning supplies almost everything pigment cells respond to, while feeling like none of it. The pattern is especially common along the boardwalk — <a href="/service-areas/pacific-beach/">facials for Pacific Beach clients</a> are built around exactly this mechanism.',
+        p: 'May Gray and June Gloom therefore arrive as a pigmentation problem dressed as weather. The sky goes white, the sunscreen comes off the counter, and six weeks of careful correction quietly reverses. Add the visible-light component that drives melasma and a bright overcast morning supplies almost everything pigment cells respond to, while feeling like none of it. The pattern is especially common along the boardwalk — <a href="/service-areas/pacific-beach/" class="border-b border-ink/40 hover:border-rose hover:text-rose">facials for Pacific Beach clients</a> are built around exactly this mechanism.',
       },
       {
-        p: 'Car windows are the other local blind spot. Glass filters UVB well and UVA poorly, so a daily commute is meaningful exposure on the driving side of the face. If your pigmentation is noticeably worse on one side, that is usually the explanation. Inland commuters on the I-8 run often present with exactly this one-sided pattern — <a href="/service-areas/la-mesa/">corrective facials in La Mesa</a> are paced around cumulative UV, not single-incident sun damage.',
+        p: 'Car windows are the other local blind spot. Glass filters UVB well and UVA poorly, so a daily commute is meaningful exposure on the driving side of the face. If your pigmentation is noticeably worse on one side, that is usually the explanation. Inland commuters face higher cumulative UV year-round—<a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista</a> and <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a> sit past the marine layer that keeps coastal areas gray through May and June, which is why melasma is the most common concern from those inland areas.',
       },
       {
         p: 'The <a href="/journal/june-gloom-is-not-sun-protection/">longer piece on the marine layer</a> covers this in more detail.',
@@ -276,7 +276,7 @@ export const articles: Article[] = [
     imageAlt: 'Overcast San Diego coastline under a bright marine layer',
     body: [
       {
-        p: 'Every May and June, the same conversation happens in the treatment room. Someone has been diligent all winter, their pigmentation has visibly lifted, and then it comes back over a few grey weeks. The assumption is that something in the routine stopped working. Almost always, what actually happened is that the sunscreen came off the counter because the sky went white.',
+        p: 'Every May and June, the same conversation happens in the treatment room. Someone has been diligent all winter, their pigmentation has visibly lifted, and then it comes back over a few grey weeks. The assumption is that something in the routine stopped working. Almost always, what actually happened is that the sunscreen came off the counter because the sky went white. This pattern is especially common in <a href="/service-areas/pacific-beach/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Pacific Beach</a> and other coastal neighborhoods where the marine layer sits heaviest.',
       },
       { h2: 'What the marine layer actually does' },
       {
@@ -671,7 +671,7 @@ export const articles: Article[] = [
         p: 'Dermaplaning in San Diego ranges from roughly $80 to $200 depending on provider type and what is included. At KIAMO SKIN the $199 treatment is a full facial — cleanse, dermaplane, treatment serums while absorption is at its highest, and SPF to close. Published prices are unusual in this market. What is listed here is verified, not approximate.',
       },
       {
-        p: 'The studio is in Mission Hills, five minutes from Hillcrest, Bankers Hill and Little Italy, with free parking. Appointments are request-based. San Diego\'s UV index runs 8 to 10 from April through October — freshly dermaplaned skin has a temporarily reduced surface barrier, and applying SPF before you leave is part of the service. The <a href="/journal/june-gloom-is-not-sun-protection/">June Gloom piece</a> covers why that applies even on overcast San Diego mornings.',
+        p: 'The studio is in Mission Hills, five minutes from Hillcrest, Bankers Hill and Little Italy, with free parking. <a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park clients</a> are ten minutes away with no freeway—proximity that makes regular dermaplaning between peel appointments realistic rather than aspirational. Appointments are request-based. San Diego\'s UV index runs 8 to 10 from April through October — freshly dermaplaned skin has a temporarily reduced surface barrier, and applying SPF before you leave is part of the service. The <a href="/journal/june-gloom-is-not-sun-protection/">June Gloom piece</a> covers why that applies even on overcast San Diego mornings.',
       },
     ],
     faqHeading: 'Dermaplaning questions',
@@ -1053,9 +1053,9 @@ export const articles: Article[] = [
       {
         ul: [
           '<strong>Hard water buildup.</strong> San Diego water contains 12-17 grains per gallon of hardness—among California\'s highest. Calcium and magnesium deposit on your scalp, clogging follicles and creating a barrier that prevents moisture absorption.',
-          '<strong>Ocean and coastal exposure.</strong> For Pacific Beach, La Jolla, and Del Mar residents, salt spray reaches inland blocks even when you\'re not swimming. Salt accelerates dehydration and follicle congestion.',
+          '<strong>Ocean and coastal exposure.</strong> For Pacific Beach, La Jolla, and <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a> residents, salt spray reaches inland blocks even when you\'re not swimming. Salt accelerates dehydration and follicle congestion.',
           '<strong>Year-round sun exposure.</strong> San Diego averages 266 sunny days per year. The part line and hairline receive direct UV without protection, triggering scalp inflammation and accelerating cell turnover.',
-          '<strong>Dry inland climate.</strong> Areas like Mission Valley, North Park, and Carlsbad experience low humidity, leading to chronic scalp dryness that\'s often mistaken for dandruff.',
+          '<strong>Dry inland climate.</strong> Areas like Mission Valley, North Park, and <a href="/service-areas/carlsbad/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Carlsbad</a> experience low humidity, leading to chronic scalp dryness that\'s often mistaken for dandruff.',
         ],
       },
       {
