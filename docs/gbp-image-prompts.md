@@ -30,29 +30,35 @@ Google rewards consistent upload velocity — never bulk-drop 20 at once.
 ```
 KIAMO Skin — visual identity lock. Apply to every image generated this session.
 
-AESTHETIC: Warm clinical. A boutique results-driven skin studio in Mission Hills, San Diego.
-Not luxury spa, not sterile hospital — intentional, calm, professionally warm. Every image
-should feel like a page from a premium wellness brand's editorial press kit.
+AESTHETIC: Serene spa tranquility. A boutique skin wellness sanctuary in Mission Hills, San Diego.
+Peaceful, meditative, softly elegant. Not clinical, not sterile — deeply calming and restorative.
+Every image should feel like a still frame from a luxury spa brand's retreat film, shot on film
+with muted tones and ethereal softness.
 
 SKIN: Client subjects represent a range of skin tones — vary across prompts to reflect KIAMO's
 inclusive practice. Rotate through: warm deep-brown (Fitzpatrick V), warm caramel-brown
 (Fitzpatrick III-IV), medium olive (Fitzpatrick III), and fair-light (Fitzpatrick I-II).
 All subjects should show visible natural skin texture — pores, subtle asymmetry, natural surface
-variation. No silicone finish, no plastic skin. Visible subsurface scattering in lit areas.
+variation. No silicone finish, no plastic skin. Soft, natural, real human skin with gentle glow.
 Note: Kiki (the esthetician) always has warm deep-caramel brown skin — only the client skin tone varies.
 
-LIGHTING: Warm softbox key light from the left at 45 degrees. Warm 3200K color temperature
-throughout. Soft fill light from the right. No harsh shadows. No cold blue tones.
-No fluorescent or clinical overhead light.
+LIGHTING: Soft diffused natural window light only. Gentle side-lighting creating barely-there
+shadows. Overcast daylight or filtered through sheer curtains. Luminous but never harsh. 
+No artificial softbox, no studio lights, no clinical overhead. Natural ambient room light only.
+Aim for 5000-5500K natural daylight filtered through translucent material — soft, neutral, peaceful.
 
-CAMERA: 85mm f/1.4 portrait lens. Shallow depth of field — sharp subject, softly blurred
-background. Shot on Kodak Portra 400. No exaggerated grain, no HDR.
+CAMERA: 85mm f/1.4 portrait lens shot wide open. Ultra-shallow depth of field with subject sharp
+and background dissolving into creamy bokeh. Shot on film — Fuji 400H or Kodak Portra 160 aesthetic.
+Muted saturation, soft contrast, dreamy quality. No digital sharpness, no HDR, no vibrant colors.
 
-PALETTE: Warm cream and blush-white walls, warm cream linens, warm taupe and caramel tones,
-near-black contrast floor, amber and honey accents. No cold grays, no sterile whites, no blues.
+PALETTE: Highly desaturated and muted. Soft cream, pale beige, barely-there blush tones, muted
+taupe, whisper-soft whites. Everything feels like it's been gently bleached by sunlight. The floor
+can be light wood or soft gray — no stark near-black contrast. Pale neutrals throughout with minimal
+color variation. Think: spa serenity, not studio contrast.
 
-STYLE: Editorial beauty photography. Candid over staged. Real treatment moments, not posed
-stock photos. Low saturation, warm, intimate.
+STYLE: Fine art spa photography. Dreamy, soft-focus aesthetic. Film grain texture. Ethereal and
+peaceful, never clinical or sharp-edged. Muted color palette like faded film photographs. Subjects
+at complete rest, meditative stillness. Ultra-calm, whisper-quiet visual mood.
 ```
 
 ---
@@ -63,14 +69,15 @@ stock photos. Low saturation, warm, intimate.
 *Generate this FIRST. Upload to every prompt that features Kiki.*
 
 Create a professional character reference sheet for a licensed esthetician. Six views on a plain
-warm cream background: front-facing, left three-quarter, right three-quarter, left profile,
+pale cream background: front-facing, left three-quarter, right three-quarter, left profile,
 close-up of face, and hands holding treatment tools. The subject is a woman with warm deep-caramel
 brown skin (Fitzpatrick III-IV, RGB approximately 190,132,103), dark natural coily hair pulled back
 cleanly away from the face, warm golden undertones in the skin, natural bone structure, clean
 professional appearance with minimal or no makeup. She wears a fitted black professional
-esthetician uniform, sleeves to the forearm, clean appearance throughout. Consistent warm 3200K
-studio lighting across all six views. Label each view. This is a technical character reference
-sheet for consistency, not a fashion photo.
+esthetician uniform, sleeves to the forearm, clean appearance throughout. Soft diffused natural
+daylight from above, 5000-5500K neutral temperature across all six views. Muted desaturated tones,
+film aesthetic with soft grain. Label each view. This is a technical character reference sheet for 
+consistency, not a fashion photo.
 
 ---
 
@@ -81,12 +88,13 @@ sheet for consistency, not a fashion photo.
 
 Create a studio environment reference sheet showing the KIAMO Skin treatment room from three
 angles: wide shot from the doorway, shot from behind the treatment table looking toward the wall,
-and close-up of the treatment surface. The room has warm cream and blush-white walls (RGB
-approximately 199,159,143), warm ambient lighting from a softbox at 3200K, a professional
-treatment table with clean warm cream linens, near-black dark flooring, and minimal clean
-surfaces. A small rolling cart with professional skincare tools is visible to the side. No clutter.
-No harsh shadows. The palette is warm neutrals — cream, caramel, taupe — with strong dark contrast
-on the floor. Low saturation, calm, intimate. Label each angle.
+and close-up of the treatment surface. The room has pale cream and soft white walls with muted
+beige undertones, soft diffused natural window light filtering through sheer curtains, a professional
+treatment table with clean pale cream linens, light blonde wood or soft gray flooring, and minimal
+clean surfaces. A small rolling cart with professional skincare tools is visible to the side. No clutter.
+Ultra-soft shadows. The palette is desaturated spa neutrals — pale cream, soft beige, whisper whites,
+muted taupe — with gentle, barely-there contrast throughout. Film aesthetic with muted tones and
+soft focus. Serene, peaceful, spa-like tranquility. Label each angle.
 
 ---
 
@@ -143,16 +151,18 @@ moment.
 *12 images. Highest conversion category — clients decide to book based on the room.*
 
 **I-1.** Full-room wide shot from the doorway of the KIAMO treatment room. Treatment table centered
-with cream linens, warm overhead softbox light, small rolling tool cart to the right, minimal
-product shelf on the wall. Warm cream and blush walls, near-black contrast floor. 35mm, everything
-in focus, calm pre-appointment stillness.
+with pale cream linens, soft diffused natural window light filtering through sheer curtains, small 
+rolling tool cart to the right, minimal product shelf on the wall. Pale cream and soft white walls, 
+light blonde wood or soft gray flooring. 35mm, everything in gentle focus, muted desaturated spa 
+palette, film aesthetic, calm pre-appointment stillness. Peaceful, serene, dreamy spa mood.
 *Variation: same shot, treatment table freshly prepped with tools laid out for the next appointment.*
 
 **I-2.** Three-quarter angle of the treatment table from the foot end looking toward the headrest.
-Cream linens freshly laid, small bolster pillow in place. Warm light from the left casting a soft
-shadow across the pillow texture. 85mm, shallow depth of field, focus on the pillow and linen
-surface.
-*Variation: overhead shot directly above the table — symmetrical, perfectly prepped, pure geometry.*
+Pale cream linens freshly laid, small bolster pillow in place. Soft diffused natural window light 
+from the left casting barely-there gentle shadows across the pillow texture. 85mm f/1.4 wide open, 
+ultra-shallow depth of field, focus on the pillow and linen surface. Muted desaturated spa tones, 
+film aesthetic with soft grain, serene peaceful mood.
+*Variation: overhead shot directly above the table — symmetrical, perfectly prepped, pure geometry, same soft film aesthetic.*
 
 **I-3.** The rolling treatment cart from the side — organized professional tools, gauze, serums, and
 applicators arranged methodically. Clean, clinical, warm. 85mm, eye level, warm 3200K light from
@@ -210,9 +220,10 @@ looking toward the mirror, artistic warm perspective.
 *12 images. Signals professional-grade tools and builds treatment confidence.*
 
 **Q-1.** Close-up of a professional HydraFacial handpiece resting on a clean white treatment cloth —
-the spiral-tip wand visible, warm light catching the medical-grade surface. 85mm macro, shallow
-depth of field, warm amber light from the left.
-*Variation: handpiece held in a warm caramel-brown esthetician's hand, tip pointed toward camera.*
+the spiral-tip wand visible, soft diffused natural window light catching the medical-grade surface. 
+85mm f/1.4 macro wide open, ultra-shallow depth of field, soft natural ambient light from the left. 
+Muted desaturated spa palette, film grain aesthetic, peaceful serene mood.
+*Variation: handpiece held in a warm caramel-brown esthetician's hand, tip pointed toward camera, same soft film aesthetic.*
 
 **Q-2.** The HydraFacial machine unit from the side — professional medical device, serum vials
 attached, cartridge tip clean and ready. Warm cream walls behind. 35mm, everything in focus,
@@ -268,32 +279,42 @@ the warm-lit room, clinical device, peaceful. 85mm, shallow depth of field on th
 
 **T-1.** A licensed esthetician with warm deep-caramel brown skin and dark natural hair pulled back,
 wearing a black professional uniform, leaning in from the right to apply a serum to a client's
-face. The client has fair light skin (Fitzpatrick II), eyes closed, peacefully relaxed on cream linens. Shot from
-the foot of the table looking up, 85mm, warm 3200K softbox from the left, shallow depth of field
-with the esthetician's focused expression sharp and background soft.
-*Variation: same scene from the side at eye level, both faces in profile.*
+face. The client has fair light skin (Fitzpatrick II), eyes closed, peacefully relaxed on pale cream linens. Shot from
+the foot of the table looking up, 85mm f/1.4 wide open, soft diffused natural window light from the
+left creating barely-there shadows, ultra-shallow depth of field with the esthetician's focused
+expression sharp and background dissolving into creamy bokeh. Muted desaturated tones, film aesthetic,
+dreamy and serene spa mood.
+*Variation: same scene from the side at eye level, both faces in profile, even softer focus.*
 
 **T-2.** Close-up of a professional esthetician's warm brown-skinned hands performing manual
 extractions on a client's nose bridge. Precise, confident hand position, clean technique. The
-client's skin shows warm caramel tones with natural texture. 85mm macro from directly above, warm
-side light, focused on the hands and skin surface.
+client's skin shows warm caramel tones with natural texture. 85mm f/1.4 macro from directly above, 
+soft diffused natural window light from the side, ultra-shallow depth of field focused on the hands 
+and skin surface. Muted desaturated color palette, film grain texture, peaceful spa aesthetic. 
+Background dissolves into soft creamy bokeh.
 *Variation: hands applying gentle lymphatic drainage strokes along the jawline, client turned slightly.*
 
 **T-3.** HydraFacial treatment in progress — the spiral-tip handpiece guided across a client's
 cheek by a steady professional hand. The client has medium-fair skin (Fitzpatrick II-III), eyes closed. Close-up
-from above showing the handpiece tip meeting the skin surface. 85mm macro, warm clinical light.
+from above showing the handpiece tip meeting the skin surface. 85mm f/1.4 macro wide open, soft 
+natural diffused window light, ultra-shallow depth of field. Muted desaturated spa tones, film 
+aesthetic with soft grain, dreamy peaceful mood. Background melts into soft bokeh.
 *Variation: wide shot from the side showing the full HydraFacial machine, esthetician at work,
-and client on the table in the same frame.*
+and client on the table in the same frame, same soft film aesthetic.*
 
-**T-4.** LED light therapy in session — a client with medium-fair skin (Fitzpatrick II-III) lying on a cream treatment
-table, a red LED panel above their face casting a warm amber-red glow. Serene expression, complete
-relaxation. Shot from the side at mid-level, 85mm, LED glow as the hero light source.
-*Variation: overhead from above the client, LED panel out of frame, face bathed in warm red LED light.*
+**T-4.** LED light therapy in session — a client with medium-fair skin (Fitzpatrick II-III) lying on a pale cream treatment
+table, a red LED panel above their face casting a soft amber-red glow. Serene expression, complete
+relaxation. Shot from the side at mid-level, 85mm f/1.4 wide open, LED glow as the hero light source,
+ultra-shallow depth of field. Muted desaturated background with soft bokeh, film aesthetic, dreamy 
+spa tranquility.
+*Variation: overhead from above the client, LED panel out of frame, face bathed in warm red LED light, same soft film mood.*
 
 **T-5.** Esthetician applying a professional enzyme mask to a client's face with a flat brush.
 Thick creamy white mask material applied in upward strokes. Client has light olive skin (Fitzpatrick III) on
-cream linens. 85mm from the side, warm light, focused on the brush and mask application stroke.
-*Variation: completed mask fully applied — white enzyme mask on the client's face, eyes closed, at rest.*
+pale cream linens. 85mm f/1.4 from the side, soft diffused natural window light, ultra-shallow depth 
+of field focused on the brush and mask application stroke. Muted desaturated tones, film aesthetic 
+with soft grain, peaceful spa mood.
+*Variation: completed mask fully applied — white enzyme mask on the client's face, eyes closed, at rest, same dreamy film aesthetic.*
 
 **T-6.** Keravive scalp treatment in progress — an esthetician with warm brown-gloved hands using
 the Keravive handpiece on a client's scalp. The client's dark natural hair is parted, scalp visible,
@@ -301,10 +322,12 @@ treatment in session. 85mm from behind and slightly above, warm clinical light.
 *Variation: close-up of the handpiece tip at the scalp parting, clinical precision detail.*
 
 **T-7.** Dermaplaning in session — esthetician holding a blade at a precise 45-degree angle against
-a client's cheek in a careful upward stroke. The client has fair freckled skin (Fitzpatrick I-II), the esthetician warm caramel-brown. 85mm from
-the side, warm soft light, sharp focus on the blade-to-skin interaction.
+a client's cheek in a careful upward stroke. The client has fair freckled skin (Fitzpatrick I-II), the esthetician warm caramel-brown. 85mm f/1.4 
+from the side, soft diffused natural window light, ultra-shallow depth of field sharp focus on the 
+blade-to-skin interaction. Muted desaturated spa palette, film grain texture, peaceful dreamy mood, 
+background melts into soft bokeh.
 *Variation: immediately post-dermaplaning — close-up of the client's glowing cheek, esthetician's
-gloved hand resting gently on the cheek.*
+gloved hand resting gently on the cheek, same soft film aesthetic.*
 
 **T-8.** Procell microchanneling in progress — the pen guided across a client's forehead by a
 steady gloved hand. Deep warm-brown skin on the client, expression calm. 85mm macro, sharp focus
@@ -349,8 +372,10 @@ complete. 85mm, warm ambient light, cool tool in warm context creates contrast.
 
 **T-16.** Post-treatment glow close-up — a client's face immediately after a HydraFacial, skin
 visibly dewy and luminous. Deep warm-brown skin, natural pore texture, healthy radiant glow.
-85mm macro, warm soft light from the left, minimal depth of field, no retouch.
-*Variation: same post-treatment glow on the décolleté and neck, serum still visible on skin.*
+85mm f/1.4 macro wide open, soft diffused natural window light from the left, ultra-shallow depth of 
+field, no retouch. Muted desaturated spa tones, film grain aesthetic, dreamy peaceful mood. 
+Background dissolves into creamy soft bokeh.
+*Variation: same post-treatment glow on the décolleté and neck, serum still visible on skin, same soft film aesthetic.*
 
 **T-17.** Treatment setup moment — gloved hands laying out tools on the rolling cart before a
 client: extractor, applicator brush, cotton pads, ampoule. Preparation as care. 85mm overhead,
@@ -377,55 +402,88 @@ applied to the shoulder and neck area, warm brown skin, professional hands. 85mm
 ## CATEGORY 5 — SKIN RESULTS / BEFORE-AFTER
 *12 images. Highest emotional impact — shows real transformation.*
 
-**R-1.** Clinical before-and-after split panel of melanin-rich dark brown skin — left side showing active acne
-and hyperpigmentation on deep warm-brown skin — for a result on melanin-rich skin specifically — right side showing the same area after a corrective
-treatment series, calm and even-toned with natural glow. Strong even overhead clinical light, 85mm
-macro, no beauty retouching on the before side.
-*Variation: same format for PIH (post-inflammatory hyperpigmentation) on the cheeks.*
+## CATEGORY 5 — SKIN RESULTS / BEFORE-AFTER
+*12 images. Highest emotional impact — shows real transformation.*
 
-**R-2.** Progress close-up of a woman's cheek with fair light skin (Fitzpatrick II) — before state showing
-papules and uneven texture, after state showing smooth refined skin. Flat clinical light, both
-panels identical framing, authentic results.
-*Variation: forehead zone before/after, targeting texture and congestion.*
+**R-1.** Clinical before-and-after split-screen comparison of melanin-rich skin. Left panel: active acne
+and hyperpigmentation on deep warm-brown skin (Fitzpatrick V), untreated state with visible texture issues.
+Right panel: the same skin area after treatment series, calm and even-toned with natural healthy glow.
+Both panels shot identically: 85mm f/2.8 macro for consistent sharpness across the split, soft diffused 
+natural window light from directly above for even clinical documentation, muted desaturated spa tones, 
+film aesthetic. No beauty retouching on either side. Clean vertical split down the center. Authentic 
+results documentation with peaceful spa aesthetic.
+*Variation: same format for PIH (post-inflammatory hyperpigmentation) on the cheeks, identical lighting and framing.*
 
-**R-3.** Melasma treatment before-and-after — dark hyperpigmentation patches on warm brown cheeks
-(before) alongside significantly faded, even-toned skin (after). True skin photography, no makeup,
-no retouching. Authentic corrective result.
-*Variation: jawline hormonal pigmentation — before/after pair.*
+**R-2.** Before-and-after split-screen comparison of a cheek area with fair light skin (Fitzpatrick II). 
+Left panel: active papules, congestion, and uneven texture visible. Right panel: smooth refined skin 
+after treatment series. Both panels identically framed and lit: 85mm f/2.8 macro for sharp clinical 
+detail, soft diffused natural window light from directly above, muted desaturated spa palette, film 
+aesthetic with soft grain. Clean vertical split down the center. No makeup, no retouching on either 
+side. Authentic results with peaceful spa mood.
+*Variation: forehead zone before/after split-screen, targeting texture and congestion, same clinical framing and soft aesthetic.*
 
-**R-4.** Back facial results — close-up of upper back skin with visible congestion and body acne
-(before) alongside clear treated skin (after). Warm clinical overhead light, 85mm macro.
-*Variation: shoulder zone before/after showing bacne clearing.*
+**R-3.** Melasma treatment before-and-after split-screen comparison. Left panel: dark hyperpigmentation 
+patches on warm brown cheeks (Fitzpatrick III-IV), untreated melasma clearly visible. Right panel: 
+significantly faded, even-toned skin after treatment series. Both panels identically framed: 85mm 
+f/2.8 macro, soft diffused natural window light from directly above for consistent clinical 
+documentation, muted desaturated spa tones, film aesthetic. Clean vertical split down the center. 
+No makeup, no retouching. True skin photography showing authentic corrective results.
+*Variation: jawline hormonal pigmentation — before/after split-screen, same clinical documentation style.*
 
-**R-5.** Skin texture comparison — a pore-zone close-up on warm caramel skin before treatment
-(enlarged pores, dull surface) and after two months of corrective care (refined pores, smooth
-glow). 85mm macro, even clinical light.
-*Variation: barrier recovery comparison — dehydrated dull skin before, plump hydrated glow after.*
+**R-4.** Back facial results — before-and-after split-screen comparison of upper back skin. Left panel: 
+visible congestion, body acne, and texture issues. Right panel: clear treated skin after back facial 
+series. Both panels identically framed: 85mm f/2.8 macro, soft diffused natural window light from 
+above for even clinical documentation, muted desaturated spa palette, film aesthetic. Clean vertical 
+split down the center. Authentic results documentation.
+*Variation: shoulder zone before/after split-screen showing bacne clearing, same clinical framing and soft aesthetic.*
 
-**R-6.** Four-panel progress grid of the same cheek zone on fair-light skin (Fitzpatrick II) at Week 1, Week 4,
-Week 8, Week 12. Clear visible progression from active breakout to clear healthy skin. Clinical
-photography format, consistent framing across all four panels.
-*Variation: three-panel scalp health recovery progress timeline.*
+**R-5.** Skin texture comparison — before-and-after split-screen of pore zone on warm caramel skin 
+(Fitzpatrick III-IV). Left panel: enlarged pores, dull surface, visible texture issues before treatment. 
+Right panel: refined pores, smooth healthy glow after two months of corrective care. Both panels 
+identically framed: 85mm f/2.8 macro for sharp pore-level detail, soft diffused natural window light 
+from directly above, muted desaturated spa tones, film aesthetic. Clean vertical split down the center.
+*Variation: barrier recovery split-screen comparison — dehydrated dull skin before, plump hydrated glow after, same clinical documentation style.*
 
-**R-7.** Scalp before-and-after — close-up of a scalp parting before Keravive treatment series
-(flaking, redness, congested follicles) alongside the same parting after treatment (calm, hydrated,
-follicles clear). Clinical scalp photography, strong overhead light.
-*Variation: hairline density comparison showing healthier growth after treatment.*
+**R-6.** Four-panel progress grid showing treatment progression on the same cheek zone with fair-light 
+skin (Fitzpatrick II). Panel layout: 2×2 grid labeled "Week 1," "Week 4," "Week 8," "Week 12." Clear 
+visible progression from active breakout (Week 1) to clear healthy skin (Week 12). All four panels 
+identically framed and lit: 85mm f/2.8 macro, soft diffused natural window light from directly above 
+for consistent clinical documentation across all timepoints, muted desaturated spa palette, film 
+aesthetic with soft grain. Minimal white borders between panels. Clinical progress photography format 
+with peaceful spa aesthetic.
+*Variation: three-panel horizontal timeline of scalp health recovery progress at Month 0, Month 2, Month 4, same clinical framing style.*
 
-**R-8.** Dermaplaning results — skin surface comparison before (vellus hair and dull texture) and
-immediately after (smooth, bright, serum-ready skin). 85mm macro, flat clinical light.
-*Variation: HydraFacial before-and-after — before showing congestion, after showing immediate
-post-treatment dewy glow.*
+**R-7.** Scalp before-and-after split-screen comparison of a clean scalp parting. Left panel: dry, 
+flaking, reddened scalp with congested follicles before Keravive treatment series. Right panel: the 
+same parting after treatment showing calm, hydrated, clear scalp with healthy follicles. Both panels 
+identically framed: 85mm f/2.8 macro from directly above for sharp scalp detail, soft diffused natural 
+window light from above, muted desaturated spa tones, film aesthetic. Clean vertical split down the 
+center. Clinical scalp photography with peaceful spa mood.
+*Variation: hairline density comparison split-screen showing healthier growth after treatment, same clinical framing and soft aesthetic.*
 
-**R-9.** Client candid result photo — a woman with light freckled skin (Fitzpatrick I-II), natural expression, holding
-up her phone in a mirror at home showing off her post-treatment glowing skin. Candid, real, not
-clinical. Warm bathroom light, natural moment.
-*Variation: same client pointing to her clear chin with a happy natural expression.*
+**R-8.** Dermaplaning results — before-and-after split-screen comparison of skin surface texture. Left 
+panel: skin with vellus hair visible and dull surface texture before treatment. Right panel: immediately 
+after dermaplaning showing smooth, bright, serum-ready glowing skin. Both panels identically framed: 
+85mm f/2.8 macro for sharp surface detail, soft diffused natural window light from above for consistent 
+clinical documentation, muted desaturated spa palette, film aesthetic with soft grain. Clean vertical 
+split down the center.
+*Variation: HydraFacial before-and-after split-screen — before showing congestion, after showing immediate
+post-treatment dewy glow, same clinical framing and peaceful spa aesthetic.*
+
+**R-9.** Client candid result photo — a woman with light freckled skin (Fitzpatrick I-II), natural expression, 
+holding up her phone in a bathroom mirror at home showing off her post-treatment glowing skin. The 
+phone screen displays a before-and-after split-screen comparison of her own skin results. Candid, 
+real moment, not clinical. Soft natural bathroom window light, 50mm, muted desaturated spa tones, 
+film aesthetic with soft grain. Authentic client self-documentation with peaceful mood.
+*Variation: same client pointing to her clear chin with a happy natural expression, same soft natural light and film aesthetic.*
 
 **R-10.** Over-the-shoulder view of an esthetician reviewing a progress photo on a tablet — the
-screen showing a clear before/after result. The esthetician is pointing at an area of improvement.
-Clinical context, warm treatment room light.
-*Variation: the esthetician showing the client their own result photo on the tablet together.*
+screen clearly showing a before/after split-screen comparison with visible improvement. The esthetician 
+is pointing at an area of improvement on the after side. Shot from behind the esthetician's shoulder, 
+85mm f/2.8, soft diffused natural window light in the treatment room, muted desaturated spa tones, 
+film aesthetic. Clinical consultation context with peaceful spa mood. The tablet screen shows the same 
+split-screen format as other before/after images.
+*Variation: the esthetician showing the client their own result photo on the tablet together, both looking at the screen, same soft aesthetic.*
 
 **R-11.** Glowing décolleté and neck post-treatment — smooth, hydrated warm medium-brown skin (Fitzpatrick III)
 catching warm side light. Serum slightly visible on the skin surface. 85mm from the side, editorial
@@ -442,10 +500,12 @@ warm treatment room light.
 ## CATEGORY 6 — CLIENT EXPERIENCE / LIFESTYLE
 *12 images. Lets prospective clients visualize their own visit.*
 
-**X-1.** A client with fair skin (Fitzpatrick I-II) lying on a cream treatment table, eyes closed,
-completely relaxed, wearing a clean white headband. Warm 3200K overhead light. Shot from the side
-at mid-level, 85mm, shallow depth of field, cream linen in the foreground softly blurred.
-*Variation: same client from directly above — overhead full-table view, at complete rest.*
+**X-1.** A client with fair skin (Fitzpatrick I-II) lying on a pale cream treatment table, eyes closed,
+completely relaxed, wearing a clean white headband. Soft diffused natural window light filtering 
+gently across the scene. Shot from the side at mid-level, 85mm f/1.4 wide open, ultra-shallow depth 
+of field with pale cream linen in the foreground dissolving into soft creamy bokeh. Muted desaturated 
+spa palette, film grain aesthetic, dreamy peaceful serenity.
+*Variation: same client from directly above — overhead full-table view, at complete rest, same soft film mood.*
 
 **X-2.** A client arriving at the studio — a woman with warm caramel skin stepping through the
 front door, warm welcoming interior visible beyond. Dressed casually, small bag in hand. Candid
@@ -579,9 +639,14 @@ light catching the hair sheen.
 applying the serum along a parting with a dropper, precise and methodical. 85mm close-up.
 *Variation: the serum dropper bottle above the scalp, a drop of product forming at the tip.*
 
-**SC-6.** Before-and-after scalp health split — left showing a dry, flaky, reddened scalp parting,
-right showing a calm, hydrated, clear scalp after Keravive treatment series. Clinical flat light.
-*Variation: before-and-after showing hair density improvement at the hairline.*
+**SC-6.** Before-and-after scalp health split-screen comparison. Left panel: a dry, flaky, reddened 
+scalp parting before Keravive treatment series, with congested follicles and visible irritation. 
+Right panel: the same scalp parting after treatment showing calm, hydrated, clear scalp with healthy 
+follicles. Both panels identically framed: 85mm f/2.8 macro from directly above for sharp follicle-level 
+detail, soft diffused natural window light from above for consistent clinical documentation, muted 
+desaturated spa palette, film aesthetic with soft grain. Clean vertical split down the center. Clinical 
+scalp photography with peaceful spa mood.
+*Variation: before-and-after split-screen showing hair density improvement at the hairline, same clinical framing and soft aesthetic.*
 
 **SC-7.** The Keravive take-home serum bottle in a woman's warm brown hand, held against her
 hair — lifestyle moment showing the at-home continuation of treatment. Warm natural light.
@@ -605,10 +670,11 @@ both focused. The scalp parting visible under the bright circular light. Clinica
 ## CATEGORY 9 — STUDIO AMBIANCE / DETAILS
 *10 images. Builds atmosphere and emotional warmth — makes the space feel real.*
 
-**A-1.** A single lit candle on the treatment room's side table — warm flame, soft amber glow
-casting onto the cream wall behind. 85mm macro, f/1.4, ultra-shallow depth of field on the flame.
-Deep background blur. Warm, intimate.
-*Variation: two candles on the shelf, one slightly in front of the other, layered bokeh.*
+**A-1.** A single lit candle on the treatment room's side table — soft warm flame, gentle amber glow
+casting onto the pale cream wall behind. 85mm f/1.4 macro wide open, ultra-shallow depth of field on 
+the flame. Deep creamy bokeh background dissolving completely. Muted desaturated spa palette, film 
+grain aesthetic, peaceful intimate spa mood.
+*Variation: two candles on the shelf, one slightly in front of the other, layered soft bokeh, same dreamy aesthetic.*
 
 **A-2.** A small healthy succulent or plant on the studio windowsill — warm San Diego light
 filtering through a sheer curtain behind it. 85mm, warm side light, shallow depth of field with
@@ -657,9 +723,10 @@ clean, candle extinguished with a small curl of smoke. 50mm, warm low-key, intim
 
 **P-1.** Professional headshot of the esthetician — a woman with warm deep-caramel brown skin and
 dark natural hair, wearing a fitted black professional uniform, looking directly at the camera with
-a warm, confident, approachable expression. Warm cream background. 85mm f/1.4, softbox from the
-left at 45 degrees, warm 3200K, shallow depth of field.
-*Variation: same shot with a slight three-quarter turn, looking off-camera with quiet confidence.*
+a warm, confident, approachable expression. Pale cream background. 85mm f/1.4 wide open, soft 
+diffused natural window light from the left at 45 degrees, ultra-shallow depth of field. Muted 
+desaturated spa tones, film aesthetic with soft grain, peaceful and serene.
+*Variation: same shot with a slight three-quarter turn, looking off-camera with quiet confidence, same soft film mood.*
 
 **P-2.** The esthetician in the treatment room doorway — leaning on the door frame, warm interior
 light behind her, relaxed professional posture. One hand resting on the frame. 85mm from outside

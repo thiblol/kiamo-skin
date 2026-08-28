@@ -21,8 +21,8 @@ import pigmentation from '../../assets/concern-pigmentation.jpg';
 const site = Astro.site;
 const url = absolute('/treatments/melasma', site);
 
-const title = 'Melasma Treatment in San Diego | KIAMO Skin';
-const description = 'Expert melasma treatment in Mission Hills, San Diego. Safe, effective care for hormonal pigmentation using chemical peels, microchanneling, and corrective facials—proven safe for melanin-rich skin.';
+const title = 'Melasma Treatment San Diego | Corrective Facials for Hyperpigmentation | KIAMO Skin';
+const description = 'Expert melasma treatment in San Diego at KIAMO SKIN Mission Hills studio. Licensed esthetician specializing in corrective peels and hyperpigmentation protocols for melanin-rich skin. Series-based approach with Lira Clinical treatments.';
 
 const melasmaTreatments = [
   {
@@ -189,18 +189,19 @@ const service = {
       </div>
     </header>
 
-    <section class="bg-porcelain">
-      <div class="wrap section-y grid items-center gap-12 md:grid-cols-[1fr_0.85fr] md:gap-20">
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap grid items-center gap-12 md:grid-cols-[1fr_0.85fr] md:gap-20">
         <div>
           <Reveal>
-            <h2 class="t-h3">What is melasma?</h2>
-            <p class="t-body mt-5">
+            <p class="t-eyebrow text-ink-soft">Understanding melasma</p>
+            <h2 class="t-h2 mt-4">What is melasma?</h2>
+            <p class="t-body mt-6 leading-relaxed">
               Melasma is a type of hyperpigmentation that appears as brown or gray-brown patches on
               the face—most commonly on the cheeks, forehead, bridge of the nose, and upper lip.
               Unlike acne marks or age spots, melasma is triggered by hormonal changes, sun exposure,
               and heat.
             </p>
-            <p class="t-body mt-5">
+            <p class="t-body mt-5 leading-relaxed">
               It's most common in women with darker skin tones, and it's often called the "pregnancy
               mask" because pregnancy hormones are a frequent trigger. Birth control, menopause, and
               certain medications can also cause it. What makes melasma so frustrating is that it
@@ -216,17 +217,18 @@ const service = {
             widths={[400, 800, 1200]}
             sizes="(min-width: 840px) 40vw, 90vw"
             loading="eager"
-            class="rounded-2xl"
+            class="aspect-[0.92] w-full rounded-lg object-cover"
           />
         </Reveal>
       </div>
     </section>
 
-    <section class="bg-ivory">
-      <div class="wrap section-y">
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
         <Reveal>
-          <h2 class="t-h3">How we treat melasma</h2>
-          <p class="t-body mt-5 max-w-[62ch]">
+          <p class="t-eyebrow text-ink-soft">Treatment approach</p>
+          <h2 class="t-h2 mt-4">How we treat melasma in San Diego</h2>
+          <p class="t-body mt-6 max-w-[62ch] leading-relaxed">
             Melasma treatment at KIAMO is never one-size-fits-all. We use a combination of
             professional treatments selected for your skin tone, pigmentation depth, and how your
             skin responds. Every plan is paced across a series—strength escalates gradually rather
@@ -234,18 +236,18 @@ const service = {
           </p>
         </Reveal>
 
-        <ul class="m-0 mt-12 grid list-none gap-8 p-0 md:grid-cols-3">
+        <ul class="m-0 mt-14 grid list-none gap-7 p-0 md:grid-cols-3 md:gap-6 lg:gap-8">
           {melasmaTreatments.map((treatment) => (
             <Reveal as="li">
-              <div class="rounded-2xl bg-porcelain p-8">
+              <div class="flex h-full flex-col rounded-lg bg-porcelain p-8 lg:p-9">
                 <h3 class="t-service text-[1.125rem]">{treatment.name}</h3>
-                <p class="t-body mt-3 text-[0.9375rem] text-ink-soft">
+                <p class="t-body mt-4 leading-relaxed text-[0.9375rem] text-ink-soft">
                   {treatment.description}
                 </p>
-                <p class="t-price mt-5 text-rose">{treatment.price}</p>
+                <p class="t-price mt-6 text-rose">{treatment.price}</p>
                 <a
                   href={treatment.href}
-                  class="t-button mt-4 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose"
+                  class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose"
                 >
                   Learn more
                 </a>
@@ -256,23 +258,24 @@ const service = {
       </div>
     </section>
 
-    <section class="bg-porcelain">
-      <div class="wrap section-y">
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap">
         <div class="mx-auto max-w-[68ch]">
           <Reveal>
-            <h2 class="t-h3">Why melasma is harder to treat than other pigmentation</h2>
-            <p class="t-body mt-5">
+            <p class="t-eyebrow text-ink-soft">The challenge</p>
+            <h2 class="t-h2 mt-4">Why melasma is harder to treat than other pigmentation</h2>
+            <p class="t-body mt-6 leading-relaxed">
               Melasma isn't just a surface issue—it's driven by hormones, which means it's
               constantly being triggered from within. Sun exposure, heat, and even stress can make
               it worse. That's why aggressive treatments that work for acne marks or sun spots often
               backfire on melasma—they can actually trigger more pigment instead of fading it.
             </p>
-            <p class="t-body mt-5">
+            <p class="t-body mt-5 leading-relaxed">
               This is especially true for melanin-rich skin, where the risk of post-inflammatory
               hyperpigmentation (PIH) is higher. One wrong move—too strong a peel, incorrect
               settings, heat-based treatments—and you end up with more pigmentation, not less.
             </p>
-            <p class="t-body mt-5">
+            <p class="t-body mt-5 leading-relaxed">
               That's why melasma treatment at KIAMO is always escalated gradually. We start with
               prep, then build strength across a series as your skin tolerates it. Every treatment
               is customized for your skin tone, and we never use heat-based modalities on deeper
@@ -283,24 +286,25 @@ const service = {
       </div>
     </section>
 
-    <section class="bg-ivory">
-      <div class="wrap section-y">
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
         <div class="mx-auto max-w-[68ch]">
           <Reveal>
-            <h2 class="t-h3">Common melasma triggers to avoid</h2>
-            <p class="t-body mt-5">
+            <p class="t-eyebrow text-ink-soft">Prevention</p>
+            <h2 class="t-h2 mt-4">Common melasma triggers to avoid in San Diego</h2>
+            <p class="t-body mt-6 leading-relaxed">
               Even with professional treatment, melasma will return if the triggers aren't managed.
               Here's what to watch for:
             </p>
-            <ul class="t-body mt-5 space-y-2">
+            <ul class="t-body mt-6 space-y-2.5">
               {melasmaTriggers.map((trigger) => (
-                <li class="flex gap-3">
-                  <span class="text-rose">•</span>
+                <li class="flex gap-3 leading-relaxed">
+                  <span class="mt-1 text-rose">•</span>
                   <span>{trigger}</span>
                 </li>
               ))}
             </ul>
-            <p class="t-body mt-5">
+            <p class="t-body mt-6 leading-relaxed">
               Daily broad-spectrum SPF 30 or higher is non-negotiable. In San Diego, where sun
               exposure is year-round—even on overcast days—skipping SPF means your melasma will
               darken and any treatment progress will reverse. We recommend mineral sunscreens with
@@ -311,22 +315,23 @@ const service = {
       </div>
     </section>
 
-    <section class="bg-porcelain">
-      <div class="wrap section-y">
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap">
         <div class="mx-auto max-w-[68ch]">
           <Reveal>
-            <h2 class="t-h3">Why melanin-rich skin expertise matters for melasma</h2>
-            <p class="t-body mt-5">
+            <p class="t-eyebrow text-ink-soft">Expertise</p>
+            <h2 class="t-h2 mt-4">Why melanin-rich skin expertise matters for melasma</h2>
+            <p class="t-body mt-6 leading-relaxed">
               Melasma is most common in deeper skin tones, and treating it safely requires advanced
               training. Here's why:
             </p>
-            <p class="t-body mt-5">
+            <p class="t-body mt-5 leading-relaxed">
               Melanin-rich skin produces pigment more readily in response to trauma, heat, and
               inflammation. That means treatments that are "safe" for lighter skin can cause
               post-inflammatory hyperpigmentation (PIH) in darker skin—leaving you with <em>more</em>
               dark marks instead of fewer.
             </p>
-            <p class="t-body mt-5">
+            <p class="t-body mt-5 leading-relaxed">
               Kiki's expertise was built treating the most complex pigmentation cases: melanin-rich
               skin, where the margin for error is smallest. That training means she knows how to
               pace treatments, which acids are safe, which boosters to avoid, and when to escalate
@@ -347,15 +352,15 @@ const service = {
       </div>
     </section>
 
-    <section class="bg-ivory">
-      <div class="wrap section-y">
+    <section class="bg-ivory py-16 md:py-24">
+      <div class="wrap">
         <div class="mx-auto max-w-[68ch]">
           <Reveal>
             <h2 class="t-h3">What to expect: timeline and cost</h2>
             <p class="t-body mt-5">
               Melasma treatment is a commitment, not a quick fix. Here's what a typical plan looks like:
             </p>
-            <ul class="t-body mt-5 list-disc space-y-3 pl-6">
+            <ul class="t-body mt-6 list-disc space-y-3 pl-6">
               <li>
                 <strong>Home prep (2–4 weeks):</strong> Most clients begin with a home care routine
                 to prepare the skin before professional treatments start. This primes the skin to
@@ -372,7 +377,7 @@ const service = {
                 care are essential to hold results.
               </li>
             </ul>
-            <p class="t-body mt-5">
+            <p class="t-body mt-6">
               <strong>Cost:</strong> Because melasma requires a series, many clients use a
               <a
                 href="/membership/"
@@ -388,35 +393,46 @@ const service = {
       </div>
     </section>
 
-    <section class="bg-porcelain">
-      <div class="wrap section-y">
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap">
         <div class="mx-auto max-w-[68ch]">
           <Reveal>
-            <h2 class="t-h3">Frequently asked questions about melasma treatment</h2>
+            <p class="t-eyebrow text-ink-soft">Common questions</p>
+            <h2 class="t-h2 mt-4">Frequently asked questions about melasma treatment</h2>
           </Reveal>
-          <dl class="mt-10 space-y-8">
+          <div class="mt-12 space-y-0">
             {melasmaFaqs.map((faq) => (
-              <Reveal as="div">
-                <dt class="t-service text-[1.0625rem]">{faq.question}</dt>
-                <dd class="t-body mt-3 text-ink-soft" set:html={faq.answer} />
-              </Reveal>
+              <div class="border-b border-line">
+                <details class="group">
+                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] transition-colors hover:text-rose md:text-[1.125rem]">
+                    <span>{faq.question}</span>
+                    <span
+                      aria-hidden="true"
+                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <div class="t-body pb-6 text-[0.9375rem] leading-relaxed" set:html={faq.answer} />
+                </details>
+              </div>
             ))}
-          </dl>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="bg-ivory">
-      <div class="wrap section-y">
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
         <div class="mx-auto max-w-[68ch] text-center">
           <Reveal>
-            <h2 class="t-h3">Ready to start treating your melasma?</h2>
-            <p class="t-body mt-5">
+            <h2 class="t-h2">Ready to start treating your melasma?</h2>
+            <p class="t-body mx-auto mt-6 max-w-[58ch]">
               Every melasma treatment plan starts with a consultation to assess your skin,
               pigmentation depth, and treatment history. From there, we'll build a customized
               plan paced for your skin tone and goals.
             </p>
-            <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+            <div class="mt-9 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
               <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
               <a
                 href={business.phone.href}
@@ -432,10 +448,17 @@ const service = {
 
     <ServiceMenu />
 
-    <section class="bg-porcelain">
-      <div class="wrap section-y">
+    <section class="bg-porcelain py-16 md:py-20">
+      <div class="wrap">
         <NapBlock />
       </div>
     </section>
   </article>
 </BaseLayout>
+
+<style>
+  /* Safari still needs this to drop the disclosure triangle. */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
