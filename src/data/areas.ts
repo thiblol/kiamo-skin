@@ -81,6 +81,17 @@ export interface Area {
    * specific reason clients travel from that area (the actual differentiator).
    */
   crossLinkLabel: string;
+  /**
+   * Services offered to clients from this area. Each service gets a name,
+   * brief description (1-2 sentences) tailored to this area's specific concerns,
+   * and a link to the treatment page. Not templated — each description connects
+   * the service to why this specific area books it.
+   */
+  services?: {
+    name: string;
+    slug: string;
+    description: string;
+  }[];
 }
 
 export const areas: Area[] = [
@@ -125,6 +136,38 @@ export const areas: Area[] = [
       'HydraFacial is $259. DMK Enzyme Therapy Level 1 is $279. Dermaplaning starts at $199. Full pricing is on each treatment page.',
     featured: ['hydrafacial', 'dmk-enzyme-therapy', 'dermaplaning'],
     crossLinkLabel: 'Mission Hills — The studio itself',
+    services: [
+      {
+        name: 'HydraFacial',
+        slug: 'hydrafacial',
+        description: 'The foundation treatment for any corrective plan. Cleanses, extracts and hydrates without downtime. Regular maintenance is practical when the studio is five minutes away.',
+      },
+      {
+        name: 'DMK Enzyme Therapy',
+        slug: 'dmk-enzyme-therapy',
+        description: 'Rebuilds compromised barriers and restores skin function. Designed as a series with adjustments between visits—proximity to the studio makes that continuity realistic.',
+      },
+      {
+        name: 'Dermaplaning',
+        slug: 'dermaplaning',
+        description: 'Removes dead cells and vellus hair for immediate smoothness and better product absorption. No downtime, performed by a licensed esthetician.',
+      },
+      {
+        name: 'Chemical Peels for Hyperpigmentation',
+        slug: 'lira-peels',
+        description: 'Corrects melasma, post-inflammatory marks and sun damage in melanin-rich skin. Strength escalates across a series, not in one visit.',
+      },
+      {
+        name: 'Procell Microchanneling',
+        slug: 'procell-microchanneling',
+        description: 'Stimulates collagen for acne scars and texture. Works without heat or light, safe for melanin-rich skin. Results build across a three-treatment series.',
+      },
+      {
+        name: 'Keravive Scalp Treatment',
+        slug: 'keravive-scalp',
+        description: 'Clinical scalp therapy for buildup, flaking and thinning. One treatment cleanses deeply; a series supports long-term scalp health.',
+      },
+    ],
   },
   {
     slug: 'la-jolla',
@@ -168,6 +211,38 @@ export const areas: Area[] = [
       'Keravive scalp therapy is $599, or $1,499 for a series of three. HydraFacial is $259. Full pricing is on each treatment page.',
     featured: ['keravive-scalp', 'hydrafacial', 'lira-peels'],
     crossLinkLabel: 'La Jolla — 20 minutes south',
+    services: [
+      {
+        name: 'HydraFacial',
+        slug: 'hydrafacial',
+        description: 'Deeply cleanses, extracts and hydrates skin stripped by daily ocean exposure. Rebuilds the barrier without the abrasion that sensitized skin from salt water cannot handle.',
+      },
+      {
+        name: 'Keravive Scalp Treatment',
+        slug: 'keravive-scalp',
+        description: 'Clears salt buildup, mineral deposits and UV damage from the scalp. Designed for La Jolla swimmers and surfers dealing with year-round ocean exposure and hard water.',
+      },
+      {
+        name: 'DMK Enzyme Therapy',
+        slug: 'dmk-enzyme-therapy',
+        description: 'Restores compromised barriers from wind, salt and over-exfoliation. Strengthens skin that has become reactive or sensitized from repeated ocean exposure.',
+      },
+      {
+        name: 'Chemical Peels for Hyperpigmentation',
+        slug: 'lira-peels',
+        description: 'Corrects sun damage and melasma that builds from year-round UV exposure on the Cove bluffs and coastal paths. Gentle enough for melanin-rich skin.',
+      },
+      {
+        name: 'Procell Microchanneling',
+        slug: 'procell-microchanneling',
+        description: 'Stimulates collagen for acne scars and texture without heat or light. Safe for melanin-rich skin with results that build across a series of treatments.',
+      },
+      {
+        name: 'Dermaplaning',
+        slug: 'dermaplaning',
+        description: 'Removes dead surface cells and vellus hair for smoother texture and better product absorption. No downtime, immediate glow.',
+      },
+    ],
   },
   {
     slug: 'chula-vista',
@@ -213,6 +288,38 @@ export const areas: Area[] = [
       'Lira chemical peels start at $199 for the Gentle Renewal and $299 for the Advanced. A first-time consultation and treatment is $249. Full pricing is on each treatment page.',
     featured: ['lira-peels', 'dmk-enzyme-therapy', 'hydrafacial'],
     crossLinkLabel: 'Chula Vista — 25 minutes north',
+    services: [
+      {
+        name: 'Chemical Peels for Hyperpigmentation',
+        slug: 'lira-peels',
+        description: 'Lira peels matched to melanin-rich skin for melasma and post-inflammatory marks. Strength escalates across a series—aggressive resurfacing triggers the exact problem you came in with.',
+      },
+      {
+        name: 'DMK Enzyme Therapy',
+        slug: 'dmk-enzyme-therapy',
+        description: 'Restores barrier function in over-exfoliated or sensitized skin. Rebuilds rather than strips, designed for skin that cannot tolerate further aggression.',
+      },
+      {
+        name: 'HydraFacial',
+        slug: 'hydrafacial',
+        description: 'Cleanses, extracts and hydrates without harsh exfoliation. The most forgiving corrective treatment, often where pigmentation plans start.',
+      },
+      {
+        name: 'Procell Microchanneling',
+        slug: 'procell-microchanneling',
+        description: 'Stimulates collagen for acne scars and texture without heat. Heat triggers pigment in melanin-rich skin—microchanneling avoids that risk entirely.',
+      },
+      {
+        name: 'Dermaplaning',
+        slug: 'dermaplaning',
+        description: 'Removes dead cells and vellus hair for smoother skin and better product absorption. Safe for darker skin when performed correctly.',
+      },
+      {
+        name: 'Keravive Scalp Treatment',
+        slug: 'keravive-scalp',
+        description: 'Clears buildup, flaking and hard water deposits from the scalp. Nourishes follicles for a healthier environment.',
+      },
+    ],
   },
   {
     slug: 'encinitas',
@@ -262,6 +369,38 @@ export const areas: Area[] = [
       'DMK Enzyme Therapy Level 1 is $279. A HydraFacial is $259. Full pricing is on each treatment page.',
     featured: ['dmk-enzyme-therapy', 'keravive-scalp', 'hydrafacial'],
     crossLinkLabel: 'Encinitas — 30 minutes south',
+    services: [
+      {
+        name: 'DMK Enzyme Therapy',
+        slug: 'dmk-enzyme-therapy',
+        description: 'Rebuilds barriers stripped by salt water, wind and repeated rinsing. Works with skin function instead of exfoliating a surface that is already raw.',
+      },
+      {
+        name: 'Keravive Scalp Treatment',
+        slug: 'keravive-scalp',
+        description: 'Clears salt buildup and mineral deposits from the scalp. Designed for surfers dealing with daily ocean exposure and hard water damage.',
+      },
+      {
+        name: 'HydraFacial',
+        slug: 'hydrafacial',
+        description: 'Hydrates and extracts without abrasion. The gentlest corrective option for sensitized skin that cannot handle aggressive treatments.',
+      },
+      {
+        name: 'Chemical Peels for Hyperpigmentation',
+        slug: 'lira-peels',
+        description: 'Corrects sun damage and melasma from year-round UV exposure. Paced to avoid triggering more pigmentation in reactive skin.',
+      },
+      {
+        name: 'Procell Microchanneling',
+        slug: 'procell-microchanneling',
+        description: 'Stimulates collagen for acne scars and texture without heat. Safe for melanin-rich skin with results across a series.',
+      },
+      {
+        name: 'Dermaplaning',
+        slug: 'dermaplaning',
+        description: 'Removes dead cells and vellus hair for immediate smoothness. No downtime, immediate results.',
+      },
+    ],
   },
   {
     slug: 'del-mar',
@@ -312,6 +451,38 @@ export const areas: Area[] = [
       'Procell Microchanneling is $475 per session, or $1,199 for a series of three. Keravive scalp therapy is $599. HydraFacial is $259. Full pricing is on each treatment page.',
     featured: ['procell-microchanneling', 'keravive-scalp', 'hydrafacial'],
     crossLinkLabel: 'Del Mar — 25 minutes south',
+    services: [
+      {
+        name: 'Procell Microchanneling',
+        slug: 'procell-microchanneling',
+        description: 'Rebuilds texture damaged by cumulative UV exposure at the Fairgrounds and race meet. Results build across a three-treatment series.',
+      },
+      {
+        name: 'Keravive Scalp Treatment',
+        slug: 'keravive-scalp',
+        description: 'Clears UV damage and buildup from the scalp after a full season of outdoor events. Nourishes the part line and follicles.',
+      },
+      {
+        name: 'HydraFacial',
+        slug: 'hydrafacial',
+        description: 'Cleanses and hydrates between corrective treatments. Holds results without adding downtime.',
+      },
+      {
+        name: 'Chemical Peels for Hyperpigmentation',
+        slug: 'lira-peels',
+        description: 'Corrects uneven tone from sustained sun exposure. Gentle enough for melanin-rich skin, paced across a series.',
+      },
+      {
+        name: 'DMK Enzyme Therapy',
+        slug: 'dmk-enzyme-therapy',
+        description: 'Restores barrier function in sun-damaged or dehydrated skin. Rebuilds rather than strips.',
+      },
+      {
+        name: 'Dermaplaning',
+        slug: 'dermaplaning',
+        description: 'Removes rough texture and vellus hair for smoother skin. No downtime, immediate glow.',
+      },
+    ],
   },
   {
     slug: 'carlsbad',
@@ -361,6 +532,38 @@ export const areas: Area[] = [
       'Procell Microchanneling is $475, or $1,199 for a series of three. Keravive scalp therapy is $599, or $1,499 for a series. Full pricing is on each treatment page.',
     featured: ['procell-microchanneling', 'keravive-scalp', 'hydrafacial'],
     crossLinkLabel: 'Carlsbad — 35-40 minutes south',
+    services: [
+      {
+        name: 'Procell Microchanneling',
+        slug: 'procell-microchanneling',
+        description: 'Stimulates collagen for acne scars and texture. Series of three scheduled at consultation—the distance makes planning ahead essential.',
+      },
+      {
+        name: 'Keravive Scalp Treatment',
+        slug: 'keravive-scalp',
+        description: 'Clinical scalp therapy for buildup and thinning. Series work accounts for the drive—all three treatments scheduled upfront.',
+      },
+      {
+        name: 'HydraFacial',
+        slug: 'hydrafacial',
+        description: 'Cleanses, extracts and hydrates. The most forgiving corrective treatment, worth the drive for consistent results.',
+      },
+      {
+        name: 'Chemical Peels for Hyperpigmentation',
+        slug: 'lira-peels',
+        description: 'Corrects melasma and sun damage across a series. Paced to avoid triggering more pigmentation.',
+      },
+      {
+        name: 'DMK Enzyme Therapy',
+        slug: 'dmk-enzyme-therapy',
+        description: 'Rebuilds compromised barriers. Designed as a series with home care between visits.',
+      },
+      {
+        name: 'Dermaplaning',
+        slug: 'dermaplaning',
+        description: 'Removes dead cells and vellus hair for immediate smoothness. No downtime.',
+      },
+    ],
   },
   {
     slug: 'pacific-beach',
@@ -407,6 +610,38 @@ export const areas: Area[] = [
       'Lira chemical peels start at $199. DMK Enzyme Therapy Level 1 is $279. HydraFacial is $259. Full pricing is on each treatment page.',
     featured: ['lira-peels', 'dmk-enzyme-therapy', 'keravive-scalp'],
     crossLinkLabel: 'Pacific Beach — 15 minutes east',
+    services: [
+      {
+        name: 'Chemical Peels for Hyperpigmentation',
+        slug: 'lira-peels',
+        description: 'Corrects uneven tone from UVA exposure through May Gray and June Gloom. Paced across a series to avoid triggering more pigmentation.',
+      },
+      {
+        name: 'DMK Enzyme Therapy',
+        slug: 'dmk-enzyme-therapy',
+        description: 'Rebuilds barriers stripped by salt water and wind. Strengthens skin that has become reactive from repeated ocean exposure.',
+      },
+      {
+        name: 'Keravive Scalp Treatment',
+        slug: 'keravive-scalp',
+        description: 'Clears salt buildup and UV damage from the scalp. Designed for year-round ocean lifestyles where the part line gets daily sun.',
+      },
+      {
+        name: 'HydraFacial',
+        slug: 'hydrafacial',
+        description: 'Hydrates and extracts without abrasion. The gentlest corrective option for sun-damaged, dehydrated skin.',
+      },
+      {
+        name: 'Procell Microchanneling',
+        slug: 'procell-microchanneling',
+        description: 'Stimulates collagen for texture and fine lines from cumulative sun damage. Works without heat or light.',
+      },
+      {
+        name: 'Dermaplaning',
+        slug: 'dermaplaning',
+        description: 'Removes rough texture and vellus hair. No downtime, immediate glow.',
+      },
+    ],
   },
   {
     slug: 'la-mesa',
@@ -458,6 +693,38 @@ export const areas: Area[] = [
       'Lira chemical peels start at $199. A HydraFacial is $259. Full pricing is on each treatment page.',
     featured: ['lira-peels', 'hydrafacial', 'dmk-enzyme-therapy'],
     crossLinkLabel: 'La Mesa — 20 minutes west',
+    services: [
+      {
+        name: 'Chemical Peels for Hyperpigmentation',
+        slug: 'lira-peels',
+        description: 'Corrects melasma and sun damage from inland heat and clear days. Paced across a series for melanin-rich skin—aggressive resurfacing triggers more pigmentation.',
+      },
+      {
+        name: 'HydraFacial',
+        slug: 'hydrafacial',
+        description: 'Cleanses, extracts and hydrates sun-damaged skin. The most forgiving corrective treatment, often where pigmentation plans start.',
+      },
+      {
+        name: 'DMK Enzyme Therapy',
+        slug: 'dmk-enzyme-therapy',
+        description: 'Rebuilds barriers in dehydrated or over-exfoliated skin. Strengthens rather than strips.',
+      },
+      {
+        name: 'Procell Microchanneling',
+        slug: 'procell-microchanneling',
+        description: 'Stimulates collagen for acne scars and texture. Works without heat—safe for melanin-rich skin.',
+      },
+      {
+        name: 'Keravive Scalp Treatment',
+        slug: 'keravive-scalp',
+        description: 'Clears UV damage and hard water buildup from the scalp. Nourishes follicles for healthier growth.',
+      },
+      {
+        name: 'Dermaplaning',
+        slug: 'dermaplaning',
+        description: 'Removes dead cells and vellus hair. Safe for darker skin when performed correctly.',
+      },
+    ],
   },
   {
     slug: 'north-park',
@@ -501,6 +768,38 @@ export const areas: Area[] = [
       'Lira chemical peels start at $199. A dermaplane facial is $199. A first-time treatment starts at $249. Full pricing is on each treatment page.',
     featured: ['lira-peels', 'dermaplaning', 'hydrafacial'],
     crossLinkLabel: 'North Park — 10 minutes west',
+    services: [
+      {
+        name: 'Chemical Peels for Hyperpigmentation',
+        slug: 'lira-peels',
+        description: 'Corrects pigmentation and acne scarring in melanin-rich skin. Proximity makes completing a full series realistic—ten-minute visits are the ones people actually keep.',
+      },
+      {
+        name: 'Dermaplaning',
+        slug: 'dermaplaning',
+        description: 'Clears dead skin and facial hair in one visit. Pairs with peels because a cleared surface lets acid penetrate evenly.',
+      },
+      {
+        name: 'HydraFacial',
+        slug: 'hydrafacial',
+        description: 'Cleanses, extracts and hydrates. The foundation treatment for any corrective plan, easy to maintain when the studio is ten minutes away.',
+      },
+      {
+        name: 'DMK Enzyme Therapy',
+        slug: 'dmk-enzyme-therapy',
+        description: 'Rebuilds compromised barriers. Designed as a series—proximity makes that continuity practical.',
+      },
+      {
+        name: 'Procell Microchanneling',
+        slug: 'procell-microchanneling',
+        description: 'Stimulates collagen for acne scars and texture. Three-treatment series, safe for melanin-rich skin.',
+      },
+      {
+        name: 'Keravive Scalp Treatment',
+        slug: 'keravive-scalp',
+        description: 'Clinical scalp therapy for buildup and thinning. Series work is easier to complete when the drive is short.',
+      },
+    ],
   },
 ];
 

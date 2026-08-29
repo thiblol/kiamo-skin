@@ -112,28 +112,30 @@ const imageAlt =
                 }
               </Reveal>
 
-              <Reveal class="mt-16 block">
-                <h2 class="t-h3">Treatments booked most</h2>
-                <p class="t-body mt-5 text-[0.9375rem] text-ink-soft">{area.pricingNote}</p>
-                <ul class="mt-8 m-0 list-none p-0">
-                  {
-                    featured.map((treatment) => (
-                      <li class="border-b border-line">
-                        <a href={`/treatments/${treatment.slug}/`} class="group block py-7">
-                          <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
-                            {treatment.name} in {area.name}
+              {area.services && area.services.length > 0 && (
+                <Reveal class="mt-16 block">
+                  <h2 class="t-h3">Services for {area.name} clients</h2>
+                  <ul class="mt-8 m-0 list-none p-0">
+                    {
+                      area.services.map((service) => (
+                        <li class="border-b border-line py-7">
+                          <h3 class="t-service text-[1.0625rem] md:text-[1.1875rem]">
+                            <a href={`/treatments/${service.slug}/`} class="hover:text-rose">
+                              {service.name}
+                            </a>
                           </h3>
-                          <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{treatment.headline}</p>
-                        </a>
-                      </li>
-                    ))
-                  }
-                </ul>
-                <p class="t-body mt-9 text-[0.9375rem]">
-                  <a href="/treatments/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
-                    See the full treatment menu in San Diego
-                  </a>
-                </p>
+                          <p class="t-body mt-3 text-[0.9375rem] text-ink-soft">{service.description}</p>
+                        </li>
+                      ))
+                    }
+                  </ul>
+                </Reveal>
+              )}
+
+              <Reveal class="mt-16 block">
+                <h2 class="t-h3">Getting here</h2>
+                <p class="t-body mt-7">{area.gettingHere}</p>
+                <LocationMap origin={area.name} aspect="aspect-16/10" class="mt-9" />
               </Reveal>
             </div>
 
@@ -159,38 +161,7 @@ const imageAlt =
           </div>
         </section>
 
-        {/* All About section */}
-        <section class="bg-espresso text-porcelain">
-          <div class="wrap section-y grid gap-14 md:grid-cols-[1.15fr_0.85fr] md:gap-20">
-            <div>
-              <p class="t-eyebrow text-porcelain/60">The area</p>
-              <h2 class="t-h2 mt-5">All about {area.name}</h2>
-              <p class="t-body mt-8 max-w-[58ch] text-porcelain/75">{area.allAbout.body}</p>
-            </div>
-
-            <dl class="m-0 self-end">
-              {
-                area.allAbout.facts.map((fact) => (
-                  <div class="border-t border-porcelain/15 py-6">
-                    <dt class="t-eyebrow text-porcelain/50">{fact.label}</dt>
-                    <dd class="t-h3 m-0 mt-3 text-[1.5rem] text-porcelain">{fact.value}</dd>
-                  </div>
-                ))
-              }
-            </dl>
-          </div>
-        </section>
-
-        {/* Getting Here - moved after All About for coastal */}
-        <section class="bg-porcelain">
-          <div class="wrap section-y">
-            <Reveal>
-              <h2 class="t-h3">Getting here</h2>
-              <p class="t-body mt-7 max-w-[62ch]">{area.gettingHere}</p>
-              <LocationMap origin={area.name} aspect="aspect-16/10" class="mt-9" />
-            </Reveal>
-          </div>
-        </section>
+        {/* Getting Here was moved inline above for coastal */}
       </>
     )}
 
@@ -216,29 +187,25 @@ const imageAlt =
                 }
               </Reveal>
 
-              <Reveal class="mt-16 block">
-                <h2 class="t-h3">Treatments booked most</h2>
-                <p class="t-body mt-5 text-[0.9375rem] text-ink-soft">{area.pricingNote}</p>
-                <ul class="mt-8 m-0 list-none p-0">
-                  {
-                    featured.map((treatment) => (
-                      <li class="border-b border-line">
-                        <a href={`/treatments/${treatment.slug}/`} class="group block py-7">
-                          <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
-                            {treatment.name} in {area.name}
+              {area.services && area.services.length > 0 && (
+                <Reveal class="mt-16 block">
+                  <h2 class="t-h3">Services for {area.name} clients</h2>
+                  <ul class="mt-8 m-0 list-none p-0">
+                    {
+                      area.services.map((service) => (
+                        <li class="border-b border-line py-7">
+                          <h3 class="t-service text-[1.0625rem] md:text-[1.1875rem]">
+                            <a href={`/treatments/${service.slug}/`} class="hover:text-rose">
+                              {service.name}
+                            </a>
                           </h3>
-                          <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{treatment.headline}</p>
-                        </a>
-                      </li>
-                    ))
-                  }
-                </ul>
-                <p class="t-body mt-9 text-[0.9375rem]">
-                  <a href="/treatments/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
-                    See the full treatment menu in San Diego
-                  </a>
-                </p>
-              </Reveal>
+                          <p class="t-body mt-3 text-[0.9375rem] text-ink-soft">{service.description}</p>
+                        </li>
+                      ))
+                    }
+                  </ul>
+                </Reveal>
+              )}
 
               <Reveal class="mt-16 block">
                 <h2 class="t-h3">Getting here</h2>
@@ -320,29 +287,25 @@ const imageAlt =
                 }
               </Reveal>
 
-              <Reveal class="mt-16 block">
-                <h2 class="t-h3">Treatments booked most</h2>
-                <p class="t-body mt-5 text-[0.9375rem] text-ink-soft">{area.pricingNote}</p>
-                <ul class="mt-8 m-0 list-none p-0">
-                  {
-                    featured.map((treatment) => (
-                      <li class="border-b border-line">
-                        <a href={`/treatments/${treatment.slug}/`} class="group block py-7">
-                          <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
-                            {treatment.name} in {area.name}
+              {area.services && area.services.length > 0 && (
+                <Reveal class="mt-16 block">
+                  <h2 class="t-h3">Services for {area.name} clients</h2>
+                  <ul class="mt-8 m-0 list-none p-0">
+                    {
+                      area.services.map((service) => (
+                        <li class="border-b border-line py-7">
+                          <h3 class="t-service text-[1.0625rem] md:text-[1.1875rem]">
+                            <a href={`/treatments/${service.slug}/`} class="hover:text-rose">
+                              {service.name}
+                            </a>
                           </h3>
-                          <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{treatment.headline}</p>
-                        </a>
-                      </li>
-                    ))
-                  }
-                </ul>
-                <p class="t-body mt-9 text-[0.9375rem]">
-                  <a href="/treatments/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
-                    See the full treatment menu in San Diego
-                  </a>
-                </p>
-              </Reveal>
+                          <p class="t-body mt-3 text-[0.9375rem] text-ink-soft">{service.description}</p>
+                        </li>
+                      ))
+                    }
+                  </ul>
+                </Reveal>
+              )}
             </div>
 
             <aside>
@@ -386,29 +349,25 @@ const imageAlt =
                 <LocationMap origin={area.name} aspect="aspect-16/10" class="mt-9" />
               </Reveal>
 
-              <Reveal class="mt-16 block">
-                <h2 class="t-h3">Treatments booked most</h2>
-                <p class="t-body mt-5 text-[0.9375rem] text-ink-soft">{area.pricingNote}</p>
-                <ul class="mt-8 m-0 list-none p-0">
-                  {
-                    featured.map((treatment) => (
-                      <li class="border-b border-line">
-                        <a href={`/treatments/${treatment.slug}/`} class="group block py-7">
-                          <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
-                            {treatment.name} in {area.name}
+              {area.services && area.services.length > 0 && (
+                <Reveal class="mt-16 block">
+                  <h2 class="t-h3">Services for {area.name} clients</h2>
+                  <ul class="mt-8 m-0 list-none p-0">
+                    {
+                      area.services.map((service) => (
+                        <li class="border-b border-line py-7">
+                          <h3 class="t-service text-[1.0625rem] md:text-[1.1875rem]">
+                            <a href={`/treatments/${service.slug}/`} class="hover:text-rose">
+                              {service.name}
+                            </a>
                           </h3>
-                          <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{treatment.headline}</p>
-                        </a>
-                      </li>
-                    ))
-                  }
-                </ul>
-                <p class="t-body mt-9 text-[0.9375rem]">
-                  <a href="/treatments/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
-                    See the full treatment menu in San Diego
-                  </a>
-                </p>
-              </Reveal>
+                          <p class="t-body mt-3 text-[0.9375rem] text-ink-soft">{service.description}</p>
+                        </li>
+                      ))
+                    }
+                  </ul>
+                </Reveal>
+              )}
             </div>
 
             <aside>
