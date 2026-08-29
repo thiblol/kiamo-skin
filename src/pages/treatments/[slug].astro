@@ -71,6 +71,16 @@ const localAreas = treatment.areas
       class="aspect-4/3 w-full object-cover md:aspect-[21/9]"
     />
 
+    {localAreas.length > 0 && (
+      <div class="bg-ivory">
+        <div class="wrap py-8">
+          <p class="t-body max-w-[68ch] text-[0.9375rem] text-ink-soft">
+            {treatment.name} is performed at the Mission Hills studio. Clients travel from <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">across San Diego County</a> — from nearby neighborhoods like North Park and Hillcrest to coastal areas including La Jolla, Pacific Beach and Encinitas, and inland communities like Chula Vista and La Mesa.
+          </p>
+        </div>
+      </div>
+    )}
+
     <div class="bg-porcelain">
       <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.7fr] md:gap-20">
         <div>
