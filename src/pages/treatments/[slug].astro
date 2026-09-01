@@ -42,34 +42,43 @@ const localAreas = treatment.areas
   <article>
     <header class="bg-blush">
       <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-        <p class="t-eyebrow text-ink-soft">
-          <a href="/treatments/" class="hover:text-rose">Treatments</a> · {treatment.name}
-        </p>
-        <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.5rem] md:text-[4rem]">{treatment.headline}</h1>
-        {/* set:html so an opener can carry an inline link on the claim it supports,
-            the same way `articles.ts` renders `p` and `ul`. Authored content only. */}
-        <p class="t-body mt-7 max-w-[62ch] text-[1.125rem]" set:html={treatment.opener} />
-        <p class="t-body mt-5 max-w-[62ch]">{treatment.intro}</p>
-        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
-          <a href={business.phone.href} class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose">
-            {business.phone.display}
-          </a>
+        <div class="grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-20">
+          <div>
+            <p class="t-eyebrow text-ink-soft">
+              <a href="/treatments/" class="hover:text-rose">Treatments</a> · {treatment.name}
+            </p>
+            <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.5rem] md:text-[4rem]">{treatment.headline}</h1>
+            {/* set:html so an opener can carry an inline link on the claim it supports,
+                the same way `articles.ts` renders `p` and `ul`. Authored content only. */}
+            <p class="t-body mt-7 max-w-[62ch] text-[1.125rem]" set:html={treatment.opener} />
+            <p class="t-body mt-5 max-w-[62ch]" set:html={treatment.intro} />
+            <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+              <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+              <a href={business.phone.href} class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                {business.phone.display}
+              </a>
+            </div>
+            <p class="t-body mt-6 text-[0.875rem] text-ink-soft">
+              Licensed Esthetician · {business.ownerCredential.split(',')[0]} · {business.experience} experience · One-to-one, private studio
+            </p>
+          </div>
+
+          <div class="flex flex-col gap-6">
+            <Image
+              src={treatment.image}
+              alt={treatment.imageAlt}
+              widths={[640, 1280]}
+              sizes="(min-width: 768px) 50vw, 100vw"
+              loading="eager"
+              class="aspect-4/3 w-full rounded-lg object-cover"
+            />
+            <div class="flex justify-center md:justify-start">
+              <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+            </div>
+          </div>
         </div>
-        <p class="t-body mt-6 text-[0.875rem] text-ink-soft">
-          Licensed Esthetician · {business.ownerCredential.split(',')[0]} · {business.experience} experience · One-to-one, private studio
-        </p>
       </div>
     </header>
-
-    <Image
-      src={treatment.image}
-      alt={treatment.imageAlt}
-      widths={[640, 1280, 1920]}
-      sizes="100vw"
-      loading="lazy"
-      class="aspect-4/3 w-full object-cover md:aspect-[21/9]"
-    />
 
     {localAreas.length > 0 && (
       <div class="bg-ivory">

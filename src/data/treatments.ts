@@ -71,12 +71,12 @@ export const treatments: Treatment[] = [
     areas: ['la-jolla', 'pacific-beach', 'del-mar', 'mission-hills', 'north-park', 'chula-vista'],
     title: 'HydraFacial in San Diego | KIAMO Skin',
     description:
-      'HydraFacial in Mission Hills, San Diego. Cleanse, extract and hydrate, with the booster and LED therapy selected for your skin. From $249.',
+      'HydraFacial San Diego - Mission Hills studio. Deep extraction + customized booster + LED therapy for your skin concerns. Licensed esthetician. First visit $249.',
     headline: 'HydraFacial — the foundation of healthy skin.',
     opener:
       'Looking for a HydraFacial in San Diego? KIAMO SKIN is a licensed corrective skin studio in Mission Hills, five minutes from Hillcrest and Little Italy, and the HydraFacial here is $259.',
     intro:
-      'HydraFacial does three things at once: lifts away dead surface cells, vacuums out congestion, and floods the skin with serum while it is still open enough to take it. It is the most forgiving corrective treatment on the menu, which is why it is usually where a new plan starts. <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills clients</a> are steps from the studio, while those from North Park, Hillcrest, and Bankers Hill are minutes away—proximity that makes regular maintenance realistic.',
+      'HydraFacial does three things at once: lifts away dead surface cells, vacuums out congestion, and floods the skin with serum while it is still open enough to take it. It is the most forgiving corrective treatment on the menu, which is why it is usually where a new plan starts. <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills clients</a> are steps from the studio, while those from <a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park</a>, Hillcrest, and Bankers Hill are minutes away. Coastal clients from <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla</a> and <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a> book HydraFacial for congestion and dehydration from sun and salt exposure—proximity that makes regular maintenance realistic.',
     image: hydrafacial,
     imageAlt: 'A HydraFacial treatment in progress in the KIAMO Skin studio',
     goodFor: [
@@ -125,12 +125,12 @@ export const treatments: Treatment[] = [
     areas: ['pacific-beach', 'la-jolla', 'encinitas', 'del-mar', 'carlsbad'],
     title: 'Keravive Scalp Treatment San Diego | Mission Hills Studio',
     description:
-      'Keravive scalp therapy serving Pacific Beach, La Jolla, Del Mar, Encinitas & Carlsbad. Professional treatment for dandruff, flaking, buildup & hair thinning. $599 in Mission Hills.',
+      'Keravive scalp treatment San Diego - clinical therapy for dandruff, flaking, hair thinning & hard water buildup. Mission Hills studio. Ocean swimmers welcome. $599.',
     headline: "HydraFacial Keravive — your scalp is skin. Treat it that way.",
     opener:
       "Looking for professional scalp treatment in San Diego? Keravive is clinical scalp therapy for buildup, flaking, dandruff, and the hard water mineral residue that accumulates on San Diego scalps. Performed at KIAMO SKIN in Mission Hills, serving clients from Pacific Beach to Carlsbad.",
     intro:
-      'Keravive deeply cleanses, exfoliates, and hydrates the scalp while removing buildup that contributes to dryness, flaking, and irritation. A healthier scalp creates a better environment for healthy hair growth. In San Diego, hard water makes scalp buildup especially common—from <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla ocean swimmers</a> dealing with daily salt water exposure to Encinitas surfers facing wind and UV damage, scalp conditions here are shaped by year-round outdoor living. Every treatment includes a take-home peptide spray to continue supporting scalp health between visits.',
+      'Keravive deeply cleanses, exfoliates, and hydrates the scalp while removing buildup that contributes to dryness, flaking, and irritation. A healthier scalp creates a better environment for healthy hair growth. In San Diego, hard water makes scalp buildup especially common—from <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla ocean swimmers</a> dealing with daily salt water exposure to <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas surfers</a> facing wind and UV damage, scalp conditions here are shaped by year-round outdoor living. Inland clients from <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista</a> and <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a> book Keravive for hard water mineral deposits that shampoo cannot clear. Every treatment includes a take-home peptide spray to continue supporting scalp health between visits.',
     image: scalp,
     imageAlt: 'Scalp therapy being performed at the part line',
     goodFor: [
@@ -180,7 +180,7 @@ export const treatments: Treatment[] = [
     opener:
       'Looking for DMK enzyme therapy in San Diego? Level 1 is $279 at the KIAMO SKIN studio in Mission Hills, and it is the treatment used when a barrier is too compromised to tolerate anything stronger.',
     intro:
-      'DMK Enzyme Therapy is designed to restore healthy skin function rather than simply exfoliating the surface. By supporting the skin\'s natural processes, it helps strengthen the skin barrier while encouraging healthy circulation and lymphatic activity. It\'s especially beneficial for skin that feels over-exfoliated, sensitized, inflamed, or slow to heal—common states for <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas surfers</a> and anyone whose barrier has been stripped by salt water, wind, or aggressive product use.',
+      'DMK Enzyme Therapy is designed to restore healthy skin function rather than simply exfoliating the surface. By supporting the skin\'s natural processes, it helps strengthen the skin barrier while encouraging healthy circulation and lymphatic activity. It\'s especially beneficial for skin that feels over-exfoliated, sensitized, inflamed, or slow to heal—common states for <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas surfers</a>, <a href="/service-areas/pacific-beach/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Pacific Beach residents</a>, and anyone whose barrier has been stripped by salt water, wind, or aggressive product use.',
     image: enzyme,
     imageAlt: 'An enzyme masque setting during a treatment',
     goodFor: [
@@ -226,7 +226,7 @@ export const treatments: Treatment[] = [
     opener:
       'Looking for microneedling in San Diego? Procell microchanneling is the alternative offered here — a different modality from a needle pen, performed by a licensed esthetician in Mission Hills, <a href="/journal/microneedling-on-dark-skin-san-diego/">with depth adjusted for melanin-rich skin</a>.',
     intro:
-      'Procell Microchanneling creates controlled microchannels that activate your skin\'s natural repair response while delivering a specialized growth factor serum. Over time, new collagen helps improve acne scars, fine lines, wrinkles, and uneven skin texture for smoother, healthier-looking skin. Every treatment is customized for your skin goals and skin tone. For clients traveling from <a href="/service-areas/carlsbad/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Carlsbad</a> or <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a>, the series is planned as a block at consultation—scheduling all three sessions at once accounts for the drive and makes completion realistic.',
+      'Procell Microchanneling creates controlled microchannels that activate your skin\'s natural repair response while delivering a specialized growth factor serum. Over time, new collagen helps improve acne scars, fine lines, wrinkles, and uneven skin texture for smoother, healthier-looking skin. Every treatment is customized for your skin goals and skin tone. For clients traveling from <a href="/service-areas/carlsbad/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Carlsbad</a>, <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a>, or <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas</a>, the series is planned as a block at consultation—scheduling all three sessions at once accounts for the drive and makes completion realistic.',
     image: acne,
     imageAlt: 'Portrait of smooth, healthy skin along the cheek and jaw',
     goodFor: [
@@ -282,7 +282,7 @@ export const treatments: Treatment[] = [
     opener:
       'Looking for a chemical peel in San Diego that is safe on melanin-rich skin? That is the work this studio was built around.',
     intro:
-      'Pigmentation is the reason most people book, and it is also where the wrong treatment does lasting damage. Melanin-rich skin responds to trauma by producing more pigment, so the strength, the acid and the pacing all have to be selected deliberately. Lira\'s professional range is built for that kind of control. <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista clients</a> book this treatment most often, where inland UV and melanin-rich skin demographics make melasma the county\'s most common pigmentation concern. Read more about <a href="/treatments/melasma/" class="border-b border-ink/40 hover:border-rose hover:text-rose">correcting melasma and post-inflammatory hyperpigmentation</a>.',
+      'Pigmentation is the reason most people book, and it is also where the wrong treatment does lasting damage. Melanin-rich skin responds to trauma by producing more pigment, so the strength, the acid and the pacing all have to be selected deliberately. Lira\'s professional range is built for that kind of control. <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista clients</a> and those from <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a> book this treatment most often, where inland UV and melanin-rich skin demographics make melasma the county\'s most common pigmentation concern. Read more about <a href="/treatments/melasma/" class="border-b border-ink/40 hover:border-rose hover:text-rose">correcting melasma and post-inflammatory hyperpigmentation</a>.',
     image: pigmentation,
     imageAlt: 'Close portrait of even, clear skin in warm natural light',
     goodFor: [
@@ -329,12 +329,12 @@ export const treatments: Treatment[] = [
     areas: ['mission-hills', 'la-jolla', 'north-park'],
     title: 'Dermaplaning in San Diego | KIAMO Skin',
     description:
-      'Dermaplaning in Mission Hills, San Diego. Smoother texture and better product absorption with no downtime, performed by a licensed esthetician. $199.',
+      'Dermaplaning San Diego - removes dead skin & vellus hair for instant glow. Zero downtime. Licensed esthetician in Mission Hills. $199.',
     headline: 'Dermaplaning — a clean surface changes what everything else can do.',
     opener:
       'Looking for dermaplaning in San Diego? The dermaplane facial at KIAMO SKIN is performed by a licensed esthetician in Mission Hills, and it is $199.',
     intro:
-      'Dermaplaning uses a sterile surgical blade to remove dead surface cells and the fine vellus hair that sits on top of them. Nothing is pulled from the follicle and nothing penetrates the skin. What changes is the surface: product reaches live tissue instead of sitting on debris, and makeup stops catching on texture.',
+      'Dermaplaning uses a sterile surgical blade to remove dead surface cells and the fine vellus hair that sits on top of them. Nothing is pulled from the follicle and nothing penetrates the skin. What changes is the surface: product reaches live tissue instead of sitting on debris, and makeup stops catching on texture. Clients from <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills</a>, <a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park</a>, and <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla</a> book dermaplaning for events and before important occasions because there is zero downtime and the glow is immediate.',
     image: dermaplane,
     imageAlt: 'A close portrait of smooth, even skin across the cheekbone',
     goodFor: [
@@ -371,6 +371,76 @@ export const treatments: Treatment[] = [
       label: 'Dermaplaning for dark skin in San Diego — what actually matters',
       href: '/journal/dermaplaning-safe-dark-skin-san-diego/',
     },
+  },
+  {
+    slug: 'acne',
+    name: 'Acne Treatment',
+    serviceType: 'Acne facial treatment',
+    category: 'Facial treatment',
+    areas: ['mission-hills', 'north-park', 'la-jolla', 'pacific-beach', 'chula-vista'],
+    title: 'Acne Treatment San Diego | Acne Facials Mission Hills | KIAMO Skin',
+    description:
+      'Acne treatment San Diego - HydraFacial for breakouts, chemical peels for dark marks, microchanneling for scars. Corrective approach for all skin types. Mission Hills studio.',
+    headline: 'Acne Treatment in San Diego — clear breakouts, fade marks, smooth scars.',
+    opener:
+      'Looking for acne treatment in San Diego? KIAMO SKIN offers corrective acne facials in Mission Hills — HydraFacial for active breakouts, DMK Enzyme Therapy for congestion, chemical peels for post-inflammatory hyperpigmentation, and Procell Microchanneling for acne scarring. Every treatment is customized for your skin type and concern.',
+    intro:
+      'Acne treatment at KIAMO SKIN addresses three phases: active breakouts, congestion (blackheads and whiteheads), and post-acne concerns like hyperpigmentation and scarring. The treatment plan depends on what stage your skin is in. HydraFacial extracts congestion without manual pressure, DMK Enzyme Therapy rebuilds a compromised barrier that is keeping breakouts active, and chemical peels or microchanneling work through the marks and texture left behind. Every protocol is designed to clear acne without triggering post-inflammatory hyperpigmentation — the dark marks that last longer than the breakout itself.',
+    image: acne,
+    imageAlt: 'Clear, healthy skin along the cheek showing improved texture after acne treatment',
+    goodFor: [
+      'Active hormonal acne and inflammatory breakouts',
+      'Cystic acne and nodular acne lesions',
+      'Blackheads, whiteheads, and congested pores',
+      'Post-inflammatory hyperpigmentation (dark marks after acne)',
+      'Acne scarring and uneven texture',
+      'Oily, acne-prone skin prone to recurrent breakouts',
+    ],
+    steps: [
+      {
+        title: 'Assess & identify',
+        body: 'Every acne treatment starts with identifying what phase the skin is in — active breakouts, congestion, or post-acne marks — and which treatment modality matches that phase.',
+      },
+      {
+        title: 'Treat the root cause',
+        body: 'HydraFacial clears congestion and hydrates without aggravating active breakouts. DMK Enzyme Therapy strengthens a compromised barrier that is allowing bacteria to thrive. Chemical peels fade post-inflammatory hyperpigmentation.',
+      },
+      {
+        title: 'Address scarring (if present)',
+        body: 'Procell Microchanneling stimulates collagen production to improve atrophic acne scars (indented scars) and texture irregularities left by past breakouts.',
+      },
+      {
+        title: 'Maintain & prevent',
+        body: 'Acne is managed over time, not cured in one visit. A consistent treatment schedule prevents new breakouts while working through existing congestion and marks.',
+      },
+    ],
+    pricing: [
+      {
+        label: 'HydraFacial (active breakouts/congestion)',
+        price: verifiedPrices.hydrafacial,
+        description:
+          'Deep pore cleansing and extraction for blackheads, whiteheads, and active breakouts. Reduces congestion without manual pressure that can worsen inflammation.',
+      },
+      {
+        label: 'DMK Enzyme Therapy Level 1 (barrier repair)',
+        price: verifiedPrices['dmk-enzyme-1'],
+        description:
+          'Enzymatic treatment that rebuilds a compromised skin barrier contributing to recurrent breakouts. Addresses inflammation and supports long-term skin health.',
+      },
+      {
+        label: 'LIRA Chemical Peel (hyperpigmentation)',
+        price: verifiedPrices['lira-light-peel'],
+        description:
+          'Professional-grade peel formulated to fade post-inflammatory hyperpigmentation (dark marks) left after acne clears. Applied correctly to minimize risk of worsening pigmentation.',
+      },
+      {
+        label: 'Procell Microchanneling (acne scarring)',
+        price: verifiedPrices.procell,
+        description:
+          'Collagen-stimulating treatment for atrophic acne scars (indented scars). A series of three treatments ($1,199) is typically needed to see measurable improvement in scar depth and texture.',
+      },
+    ],
+    note: 'Acne treatment is not one-size-fits-all. Active cystic acne requires a different approach than blackhead congestion, and both differ from treating post-acne hyperpigmentation. The first consultation identifies which phase the skin is in and which treatment matches that phase. For severe or persistent acne, working with a dermatologist alongside corrective facials produces the best results — estheticians and dermatologists treat acne differently, and both roles matter.',
   },
 ];
 

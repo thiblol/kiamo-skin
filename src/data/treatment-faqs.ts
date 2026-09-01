@@ -201,4 +201,37 @@ export const treatmentFaqs: Record<string, Faq[]> = {
         'Level 1 always comes first, and it is priced at $279. It prepares the skin and shows how the skin actually responds before anything deeper is considered. Levels 2 and 3 layer the enzymes for deeper correction and are prescribed only once Level 1 has done that groundwork, which is why the protocol and the price are set at consultation rather than published. Skipping to a deeper level on unprepared skin is how enzyme therapy goes wrong.',
     },
   ],
+
+  acne: [
+    {
+      question: 'Does HydraFacial help with acne?',
+      answer:
+        'HydraFacial helps with acne by extracting blackheads, whiteheads, and surface congestion without manual pressure that can worsen inflammation. It is most effective for comedonal acne (clogged pores) and mild inflammatory breakouts. For cystic acne or severe hormonal acne, HydraFacial is paired with DMK Enzyme Therapy or prescribed treatments from a dermatologist, because extraction alone does not address the deeper causes of those breakout patterns.',
+    },
+    {
+      question: 'What is the best facial for acne in San Diego?',
+      answer:
+        'The best facial for acne depends on what phase the skin is in. HydraFacial clears congestion and blackheads, DMK Enzyme Therapy rebuilds a compromised barrier that is allowing bacteria to thrive, and chemical peels fade post-inflammatory hyperpigmentation left after breakouts clear. There is no single "best" facial for acne because active breakouts, congestion, and post-acne marks each require different treatments. The right treatment is decided at the consultation after assessing the skin.',
+    },
+    {
+      question: 'How much does acne treatment cost in San Diego?',
+      answer:
+        'Acne treatment at KIAMO SKIN ranges from $199 to $475 per session depending on the treatment. HydraFacial for congestion and active breakouts is $259. LIRA Chemical Peels for post-acne hyperpigmentation start at $199. DMK Enzyme Therapy for barrier repair is $279. Procell Microchanneling for acne scarring is $475, with a three-treatment series at $1,199. The cost depends on which phase of acne is being treated — active breakouts, hyperpigmentation, or scarring.',
+    },
+    {
+      question: 'How long does it take for acne treatment to work?',
+      answer:
+        'Acne treatment works over weeks to months, not days. Congestion and blackheads improve after one HydraFacial session, but hormonal breakouts take 6 to 8 weeks to respond to consistent treatment because the skin cell turnover cycle is 28 days. Post-inflammatory hyperpigmentation fades over 8 to 12 weeks with a series of chemical peels. Acne scarring requires three to six Procell Microchanneling sessions spaced weeks apart. Acne is managed over time — one facial does not clear a chronic breakout pattern.',
+    },
+    {
+      question: 'Should I see an esthetician or dermatologist for acne?',
+      answer:
+        'See both if acne is persistent or cystic. Dermatologists prescribe medication (retinoids, antibiotics, hormonal treatments) that address acne from the inside, while licensed estheticians provide corrective facials that extract congestion, fade hyperpigmentation, and support barrier health from the outside. Estheticians cannot prescribe medication, and dermatologists rarely perform the extraction and corrective work an esthetician does. For severe acne, dermatologist care plus consistent facials produces better results than either alone.',
+    },
+    {
+      question: 'Will chemical peels make my hyperpigmentation worse?',
+      answer:
+        'Chemical peels can make hyperpigmentation worse if applied incorrectly or at too high a strength without proper preparation. Post-inflammatory hyperpigmentation worsens when inflammation triggers additional melanin production, which is why peels for acne marks start at lower strengths and escalate gradually across a series rather than in one aggressive session. LIRA Chemical Peels at KIAMO SKIN are formulated specifically to fade pigmentation without the rebound darkening that can happen with peels applied too aggressively. The strength and frequency are decided based on how the skin responds, not a fixed protocol.',
+    },
+  ],
 };
