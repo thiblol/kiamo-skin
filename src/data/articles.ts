@@ -7,6 +7,7 @@ import microchanneling from '../assets/journal-microchanneling.jpg';
 import dermaplaning from '../assets/journal-dermaplaning.jpg';
 import keravive from '../assets/keravive-scalp-treatment.jpg';
 import hyperpigmentationHero from '../assets/hyperpigmentation-hero.jpg';
+import liraPeel from '../assets/journal-lira-peel.jpg';
 
 export interface Article {
   slug: string;
@@ -1442,5 +1443,128 @@ export const articles: Article[] = [
       },
     ],
     cta: { label: 'Request pigmentation consultation', href: 'https://www.vagaro.com/kiamoskin' },
+  },
+  {
+    slug: 'chemical-peel-cost-san-diego',
+    headline: 'How much does a chemical peel cost in San Diego?',
+    title: 'Chemical Peel Cost in San Diego | KIAMO Skin',
+    description: 'Chemical peels in San Diego cost $150–$350 at an esthetician studio. KIAMO SKIN charges $199 for the Lira Gentle Renewal Peel and $299 for the Advanced Peel. What drives the price, and which peel is safe on melanin-rich skin.',
+    standfirst: 'The price of a chemical peel in San Diego varies by depth, formulation, and whether it is part of a treatment series — but the more important question is which one your skin actually needs.',
+    readingTime: '8 min read',
+    datePublished: '2026-09-02',
+    dateModified: '2026-09-02',
+    image: liraPeel,
+    imageAlt: 'Licensed esthetician applying Lira chemical peel to a client\'s cheek using a fan brush in a softly lit treatment room',
+    faqHeading: 'Chemical peel cost questions',
+    body: [
+      {
+        p: 'You\'ve been Googling it for a week. Every result gives a range so wide it\'s useless—$75 to $3,000 is a real number you\'ll find online—and none of them answer what you\'re actually asking: is it safe on your skin, and will it do anything? If you\'re in San Diego and considering a <a href="/treatments/lira-peels/">chemical peel in San Diego</a>, this article gives you the real local numbers, not national averages, and addresses the safety question most articles skip entirely.',
+      },
+      { h2: 'How much does a chemical peel cost in San Diego?' },
+      {
+        answer:
+          'A chemical peel in San Diego costs between $150 and $350 at an esthetician studio, $300 to $800 at a medspa or dermatology clinic, and $1,000 to $3,000 for deep phenol peels performed by a plastic surgeon. The range exists because light, medium, and deep peels are completely different procedures with different risk profiles and results.',
+      },
+      {
+        table: {
+          caption: 'Chemical peel pricing in San Diego by provider type',
+          head: ['Provider Type', 'Peel Depth', 'Price Range', 'Example'],
+          rows: [
+            ['Esthetician studio', 'Light (superficial)', '$150–$350', 'KIAMO SKIN: $199 (Gentle Renewal), $299 (Advanced)'],
+            ['Medspa / Dermatology', 'Medium (TCA 10-25%)', '$300–$800', 'Typical San Diego medspa pricing'],
+            ['Plastic surgeon', 'Deep (phenol)', '$1,000–$3,000', 'Hospital or surgical center setting'],
+          ],
+        },
+      },
+      {
+        p: 'At KIAMO SKIN, the <strong>Lira Gentle Renewal Peel is $199</strong> and the <strong>Advanced Peel is $299</strong>. Both are formulated for melanin-rich skin and designed to be done in a series rather than as one aggressive session. <a href="https://rewindmd.com/chemical-peel-cost-dermatologist/" rel="noopener" target="_blank">Chemical peels are normally listed at $300 in San Diego</a> according to RewindMD, with light peels ranging from $150 to $400. <a href="https://www.belladerma.com/facials-chemical-peels-san-diego-ca/" rel="noopener" target="_blank">Belladerma lists their average starting cost at $150</a> for basic facials with light exfoliation.',
+      },
+      {
+        p: 'The national average for a chemical peel procedure is $519 according to the American Society of Plastic Surgeons, but that figure includes deep peels performed by surgeons, which are a completely different category of service. For the light to medium peels most people get at an esthetician or medspa, San Diego pricing sits in the middle of the national range.',
+      },
+      { h2: 'What makes one peel cost more than another?' },
+      {
+        p: 'The price difference comes down to three factors: the acid type and concentration, the depth of penetration, and the practitioner\'s training in peel selection. A $150 Groupon peel and a $299 professional peel are not the same product, even if both use glycolic acid.',
+      },
+      {
+        p: 'Higher concentrations require more skill to apply safely, especially on melanin-rich skin where the risk of post-inflammatory hyperpigmentation increases with aggressive treatments. You\'re not paying for the liquid itself—you\'re paying for training in peel selection, assessment of your skin\'s readiness, and the ability to catch a reaction before it becomes a problem.',
+      },
+      {
+        p: 'Light peels use alpha hydroxy acids (glycolic, lactic, mandelic) or beta hydroxy acids (salicylic) at lower concentrations. They exfoliate the outermost layer of skin with minimal downtime. Medium peels, typically using trichloroacetic acid (TCA), penetrate deeper and require more recovery time. Deep peels using phenol are a surgical procedure with anesthesia and significant downtime, reserved for severe sun damage or deep wrinkles.',
+      },
+      { h2: 'Are chemical peels safe on melanin-rich skin?' },
+      {
+        p: 'Yes, with the right selection and pacing. The core risk is post-inflammatory hyperpigmentation—darkening that occurs when a peel is too aggressive for your skin\'s melanin density. The correct protocol is lower strength, shorter contact time, and a series of sessions rather than one deep treatment.',
+      },
+      {
+        p: '<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3560164/" rel="noopener" target="_blank">Deep chemical peels cannot be used in dark-skinned patients</a> owing to the risk of prolonged hyperpigmentation, according to a 2012 NIH study on melasma treatment in melanin-rich skin. <a href="https://www.essence.com/beauty/black-women-chemical-peels-skincare-treatment/" rel="noopener" target="_blank">Essence confirms that deep chemical peels are generally not suitable</a> for darker skin tones in their April 2024 guide for Black women. <a href="https://www.eternaldermatology.com/chemical-peels-for-dark-skin-which-is-best/" rel="noopener" target="_blank">Eternal Dermatology notes that TCA peels at 25% and above</a> cause the most damage to dark skin.',
+      },
+      {
+        p: 'The Lira Clinical peels used at KIAMO are formulated specifically for controlled-depth resurfacing without the inflammation spike that triggers hyperpigmentation. The Gentle Renewal Peel uses lactic acid, mandelic acid, and kojic acid—ingredients that brighten without penetrating so deeply they cause a wound response. The Advanced Peel adds salicylic acid and a higher concentration of actives, but still stays within the light-to-medium depth range.',
+      },
+      {
+        p: '<a href="https://www.worldsfamousdermatologist.com/safe-chemical-peels-for-dark-skin/" rel="noopener" target="_blank">Chemical peels are absolutely safe for dark skin</a> when properly selected and applied by a professional trained in treating skin of color, according to World\'s Famous Dermatologist. <a href="https://www.derrowdermatology.com/are-chemical-peels-safe-for-darker-skin-tones/" rel="noopener" target="_blank">Safe chemical peel practices begin with professional evaluation</a> and proper peel selection tailored to melanin-rich skin, Derrow Dermatology confirms.',
+      },
+      {
+        p: 'At KIAMO, every client with Fitzpatrick IV-VI skin gets a patch test before the first peel. The studio specializes in melanin-rich skin and understands that the "peel until it hurts" approach used on lighter skin tones does not translate. Clients typically do a series of 4-6 peels spaced 3-4 weeks apart, with each session building on the previous one without triggering inflammation.',
+      },
+      { h2: 'Which peel is right for your skin concern?' },
+      {
+        p: 'For <strong>pigmentation and melasma</strong>, the Lira Advanced Peel is the better choice. It contains kojic acid and mandelic acid, both tyrosinase inhibitors that slow melanin production while exfoliating existing pigment. You\'ll need a series of 4-6 treatments to see significant fading. The <a href="/treatments/melasma/">hyperpigmentation treatment</a> protocol at KIAMO pairs the peel with home care that includes vitamin C, niacinamide, and strict sunscreen use.',
+      },
+      {
+        p: 'For <strong>post-acne marks and texture</strong>, the Gentle Renewal Peel is a good starting point. It\'s gentle enough to use during active breakouts and helps fade dark spots left behind by inflammation. If you have deeper textural scarring, you\'ll likely graduate to the Advanced Peel after 2-3 sessions.',
+      },
+      {
+        p: 'For <strong>dullness and maintenance</strong>, the Gentle Renewal Peel every 4-6 weeks keeps skin looking fresh without downtime. It\'s the peel you do before an event or when your skin just looks tired.',
+      },
+      { h2: 'How many sessions do you actually need?' },
+      {
+        p: 'One peel refreshes. A series corrects. If you\'re dealing with pigmentation, texture, or melasma, plan for 4-6 sessions spaced 3-4 weeks apart. Single-session pigmentation promises are a red flag—melanin-rich skin does not respond well to aggressive one-and-done treatments.',
+      },
+      {
+        p: 'A series is more cost-effective with a membership. KIAMO\'s <a href="/membership/">monthly facial membership</a> is $199 per month and includes one Lira peel or corrective facial per month. If you\'re doing a 6-session series, membership pricing saves you $600 compared to paying $299 per session.',
+      },
+      { h2: 'What should you ask before booking a chemical peel?' },
+      {
+        p: 'Ask three things: does the provider have documented experience with your skin tone, do they patch-test before the first peel, and do they start gently and escalate across a series? If the answer to any of those is no, walk out.',
+      },
+      {
+        p: 'Red flags: providers who show you before/after photos of only light skin, providers who say "all peels are safe for all skin," and providers who promise dramatic results in one session. Chemical peels work through controlled inflammation. On melanin-rich skin, inflammation can trigger hyperpigmentation. The safe approach is to test your skin\'s response with a conservative first peel, then adjust strength based on how you heal.',
+      },
+      {
+        p: 'At KIAMO, the intake process includes a skin history review, a magnified skin analysis to assess pigmentation depth, and a discussion of what you\'ve tried before and why it didn\'t work. The First-Time Client Treatment ($249) functions as both a diagnostic session and a corrective facial—you leave with a phased treatment plan and realistic timelines, not a sales pitch.',
+      },
+      {
+        p: 'The studio is located in Mission Hills at 3067 Reynard Way, five minutes from Hillcrest, Bankers Hill, and Little Italy, with free parking. <a href="https://www.vagaro.com/kiamoskin" rel="noopener" target="_blank">Request appointments through Vagaro</a> or call <a href="tel:+13105950872">(310) 595-0872</a>.',
+      },
+      { h2: 'Final takeaway' },
+      {
+        p: 'Chemical peels in San Diego cost $150 to $350 at an esthetician studio, with the real price driver being the practitioner\'s training and the peel\'s formulation for your skin tone. On melanin-rich skin, the provider matters more than the acid. If you\'re dealing with pigmentation and want to understand which peel makes sense for your concern, <a href="https://www.vagaro.com/kiamoskin" rel="noopener" target="_blank">request a consultation</a> at KIAMO SKIN.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How much does a chemical peel cost in San Diego?',
+        answer: 'A chemical peel in San Diego costs between $150 and $350 at an esthetician studio. At KIAMO SKIN, the Lira Gentle Renewal Peel is $199 and the Advanced Peel is $299. Medspa and dermatology clinics charge $300 to $800 for medium-depth peels.',
+      },
+      {
+        question: 'Are chemical peels safe for Black and brown skin?',
+        answer: 'Yes, when properly selected and applied by a provider trained in treating melanin-rich skin. Deep peels are not safe for darker skin tones due to the risk of prolonged hyperpigmentation. Light to medium peels using lactic acid, mandelic acid, and kojic acid are safe when done in a series rather than one aggressive session.',
+      },
+      {
+        question: 'How many sessions do you need for hyperpigmentation?',
+        answer: 'Plan for 4-6 chemical peel sessions spaced 3-4 weeks apart to see significant fading of hyperpigmentation. One peel refreshes, but a series corrects. Single-session promises are a red flag on melanin-rich skin.',
+      },
+      {
+        question: 'What is the difference between the Lira Gentle Renewal Peel and the Advanced Peel?',
+        answer: 'The Gentle Renewal Peel ($199) uses lactic acid, mandelic acid, and kojic acid for light exfoliation with no downtime. The Advanced Peel ($299) adds salicylic acid and higher active concentrations for deeper resurfacing, targeting pigmentation and texture. Both are formulated for melanin-rich skin.',
+      },
+      {
+        question: 'Is a chemical peel or a HydraFacial better for pigmentation?',
+        answer: 'A chemical peel penetrates deeper and is more effective for stubborn pigmentation, melasma, and post-acne marks. A HydraFacial is better for hydration, dullness, and maintenance. For active pigmentation concerns, start with a chemical peel series, then maintain with HydraFacials.',
+      },
+    ],
+    cta: { label: 'Request chemical peel consultation', href: 'https://www.vagaro.com/kiamoskin' },
   },
 ];
