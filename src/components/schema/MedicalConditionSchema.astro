@@ -1,0 +1,49 @@
+---
+/**
+ * MedicalCondition schema for pages that address specific skin conditions.
+ *
+ * Maps skin conditions to their treatments, establishing the condition → treatment
+ * relationship that Google's medical knowledge graph recognizes.
+ */
+import { absolute, businessId } from '../../config/urls';
+
+interface Props {
+  condition: {
+    name: string;
+    alternateName?: string[];
+    description: string;
+    associatedAnatomy: string;
+    possibleTreatment: Array<{
+      name: string;
+      url: string;
+    }>;
+    riskFactor?: string[];
+    epidemiology?: string;
+  };
+}
+
+const { condition } = Astro.props;
+const site = Astro.site;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalCondition',
+  name: condition.name,
+  ...(condition.alternateName && { alternateName: condition.alternateName }),
+  description: condition.description,
+  associatedAnatomy: {
+    '@type': 'AnatomicalStructure',
+    name: condition.associatedAnatomy,
+  },
+  possibleTreatment: condition.possibleTreatment.map((t) => ({
+    '@type': 'MedicalTherapy',
+    name: t.name,
+    url: absolute(t.url, site),
+    provider: { '@id': businessId(site) },
+  })),
+  ...(condition.riskFactor && { riskFactor: condition.riskFactor }),
+  ...(condition.epidemiology && { epidemiology: condition.epidemiology }),
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

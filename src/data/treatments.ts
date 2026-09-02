@@ -76,7 +76,7 @@ export const treatments: Treatment[] = [
     opener:
       'Looking for a HydraFacial in San Diego? KIAMO SKIN is a licensed corrective skin studio in Mission Hills, five minutes from Hillcrest and Little Italy, and the HydraFacial here is $259.',
     intro:
-      'HydraFacial does three things at once: lifts away dead surface cells, vacuums out congestion, and floods the skin with serum while it is still open enough to take it. It is the most forgiving corrective treatment on the menu, which is why it is usually where a new plan starts. <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills clients</a> are steps from the studio, while those from <a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park</a>, Hillcrest, and Bankers Hill are minutes away. Coastal clients from <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla</a> and <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a> book HydraFacial for congestion and dehydration from sun and salt exposure—proximity that makes regular maintenance realistic.',
+      'The HydraFacial Syndeo platform does three things at once: lifts away dead surface cells, vacuums out congestion, and floods the skin with serum while it is still open enough to take it. It is the most forgiving corrective treatment on the menu, which is why it is usually where a new plan starts. <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills clients</a> are steps from the studio, while those from <a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park</a>, Hillcrest, and Bankers Hill are minutes away. Coastal clients from <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla</a> and <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a> book HydraFacial for congestion and dehydration from sun and salt exposure—proximity that makes regular maintenance realistic.',
     image: hydrafacial,
     imageAlt: 'A HydraFacial treatment in progress in the KIAMO Skin studio',
     goodFor: [
@@ -84,6 +84,7 @@ export const treatments: Treatment[] = [
       'Dull, dehydrated skin',
       'Uneven skin texture',
       'The foundation of a corrective treatment plan',
+      'Melanin-rich skin — no heat, no laser, safe for Fitzpatrick Types IV–VI',
     ],
     steps: [
       {
@@ -130,7 +131,7 @@ export const treatments: Treatment[] = [
     opener:
       "Looking for professional scalp treatment in San Diego? Keravive is clinical scalp therapy for buildup, flaking, dandruff, and the hard water mineral residue that accumulates on San Diego scalps. Performed at KIAMO SKIN in Mission Hills, serving clients from Pacific Beach to Carlsbad.",
     intro:
-      'Keravive deeply cleanses, exfoliates, and hydrates the scalp while removing buildup that contributes to dryness, flaking, and irritation. A healthier scalp creates a better environment for healthy hair growth. In San Diego, hard water makes scalp buildup especially common—from <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla ocean swimmers</a> dealing with daily salt water exposure to <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas surfers</a> facing wind and UV damage, scalp conditions here are shaped by year-round outdoor living. Inland clients from <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista</a> and <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a> book Keravive for hard water mineral deposits that shampoo cannot clear. Every treatment includes a take-home peptide spray to continue supporting scalp health between visits.',
+      'HydraFacial Keravive deeply cleanses, exfoliates, and hydrates the scalp while removing buildup that contributes to dryness, flaking, and irritation. The Keravive Peptide Complex nourishes sebaceous glands and supports a healthier environment for hair growth. In San Diego, hard water — averaging 16 grains per gallon — makes scalp buildup especially common. From <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla ocean swimmers</a> dealing with daily salt water exposure to <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas surfers</a> facing wind and UV damage, scalp conditions here are shaped by year-round outdoor living. Inland clients from <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista</a> and <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a> book Keravive for hard water mineral deposits that shampoo cannot clear. Every treatment includes a take-home peptide spray to continue supporting scalp health between visits.',
     image: scalp,
     imageAlt: 'Scalp therapy being performed at the part line',
     goodFor: [
@@ -217,16 +218,16 @@ export const treatments: Treatment[] = [
     name: 'Procell Microchanneling',
     serviceType: 'Microchanneling',
     category: 'Corrective skin treatment',
-    alternateName: 'Microneedling alternative',
+    alternateName: 'Microneedling San Diego',
     areas: ['la-jolla', 'carlsbad', 'del-mar', 'encinitas'],
-    title: 'Procell Microchanneling for Scarring | KIAMO Skin San Diego',
+    title: 'Microneedling in San Diego — Procell Microchanneling | KIAMO Skin',
     description:
-      'Procell microchanneling in Mission Hills, San Diego for acne scarring and texture in melanin-rich skin. $475, or $1,199 for a series of three.',
+      'Procell microchanneling in Mission Hills, San Diego. Safe for melanin-rich and dark skin — no RF heat, no PIH risk. Acne scars, hyperpigmentation, texture. $475 single / $1,199 series.',
     headline: "Procell Microchanneling — stimulate your skin's natural repair process.",
     opener:
-      'Looking for microneedling in San Diego? Procell microchanneling is the alternative offered here — a different modality from a needle pen, performed by a licensed esthetician in Mission Hills, <a href="/journal/microneedling-on-dark-skin-san-diego/">with depth adjusted for melanin-rich skin</a>.',
+      'Looking for microneedling in San Diego? Procell microchanneling is the alternative offered here — a different modality from a needle pen, performed by a licensed esthetician in Mission Hills, <a href="/journal/microneedling-on-dark-skin-san-diego/">safe for melanin-rich skin and all Fitzpatrick skin types</a>.',
     intro:
-      'Procell Microchanneling creates controlled microchannels that activate your skin\'s natural repair response while delivering a specialized growth factor serum. Over time, new collagen helps improve acne scars, fine lines, wrinkles, and uneven skin texture for smoother, healthier-looking skin. Every treatment is customized for your skin goals and skin tone. For clients traveling from <a href="/service-areas/carlsbad/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Carlsbad</a>, <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a>, or <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas</a>, the series is planned as a block at consultation—scheduling all three sessions at once accounts for the drive and makes completion realistic.',
+      'Procell Therapies microchanneling creates controlled microchannels that activate your skin\'s natural repair response while delivering specialized stem cytokine growth factor serums. Over time, new collagen helps improve acne scars, fine lines, wrinkles, and uneven skin texture for smoother, healthier-looking skin. Every treatment is customized for your skin goals and skin tone, with depth adjusted to minimize the risk of post-inflammatory hyperpigmentation (PIH) in melanin-rich skin. For clients traveling from <a href="/service-areas/carlsbad/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Carlsbad</a>, <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a>, or <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas</a>, the series is planned as a block at consultation—scheduling all three sessions at once accounts for the drive and makes completion realistic.',
     image: acne,
     imageAlt: 'Portrait of smooth, healthy skin along the cheek and jaw',
     goodFor: [
@@ -268,6 +269,11 @@ export const treatments: Treatment[] = [
     membershipNote:
       'A series of three is the usual plan, and membership treatments can be applied to it by paying the difference.',
     membershipAnchor: 'Membership pricing and what each plan includes',
+    guide: {
+      lead: 'Is microchanneling safe on dark skin?',
+      label: 'Microneedling on dark skin in San Diego — what matters',
+      href: '/journal/microneedling-on-dark-skin-san-diego/',
+    },
   },
   {
     slug: 'lira-peels',
@@ -327,9 +333,9 @@ export const treatments: Treatment[] = [
     serviceType: 'Dermaplaning',
     category: 'Facial treatment',
     areas: ['mission-hills', 'la-jolla', 'north-park'],
-    title: 'Dermaplaning in San Diego | KIAMO Skin',
+    title: 'Dermaplaning in San Diego — Safe for Dark Skin | KIAMO Skin',
     description:
-      'Dermaplaning San Diego - removes dead skin & vellus hair for instant glow. Zero downtime. Licensed esthetician in Mission Hills. $199.',
+      'Dermaplaning in San Diego at KIAMO Skin, Mission Hills. Expert technique on melanin-rich and dark skin. $199 per session. By appointment.',
     headline: 'Dermaplaning — a clean surface changes what everything else can do.',
     opener:
       'Looking for dermaplaning in San Diego? The dermaplane facial at KIAMO SKIN is performed by a licensed esthetician in Mission Hills, and it is $199.',
@@ -342,6 +348,7 @@ export const treatments: Treatment[] = [
       'Makeup that clings to fine facial hair',
       'Skincare that seems to sit on the surface instead of absorbing',
       'Anyone wanting a corrective treatment with no recovery time',
+      'Melanin-rich skin requiring a low-inflammation exfoliation option',
     ],
     steps: [
       {
@@ -365,7 +372,7 @@ export const treatments: Treatment[] = [
           'A full facial with dermaplaning included — cleanse, dermaplane, treat and protect. Often paired with a peel, because a cleared surface lets the acid work evenly.',
       },
     ],
-    note: 'Dermaplaning is not appropriate over active or inflamed acne, and it is skipped in those areas. Vellus hair grows back exactly as it was — same texture, same colour. It cannot grow back thicker, because the blade does not touch the follicle.',
+    note: 'Dermaplaning is not appropriate over active or inflamed acne, and it is skipped in those areas. Vellus hair grows back exactly as it was — same texture, same colour. It cannot grow back thicker, because the blade does not touch the follicle. Dermaplaning on melanin-rich skin requires correct blade angle and pressure to prevent post-inflammatory hyperpigmentation (PIH) — the studio has treated Fitzpatrick Type IV–VI skin for 7+ years.',
     guide: {
       lead: 'Is dermaplaning safe on darker skin?',
       label: 'Dermaplaning for dark skin in San Diego — what actually matters',

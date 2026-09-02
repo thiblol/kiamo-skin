@@ -12,6 +12,7 @@ import { CTA_LABEL } from '../../config/nav';
 import ServiceSchema from '../../components/schema/ServiceSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
+import TreatmentAreaSchema from '../../components/schema/TreatmentAreaSchema.astro';
 
 export function getStaticPaths() {
   return treatments.map((treatment) => ({
@@ -38,6 +39,7 @@ const localAreas = treatment.areas
     ]}
   />
   {faqs.length > 0 && <FaqSchema slot="head" faqs={faqs} />}
+  <TreatmentAreaSchema slot="head" treatment={treatment} />
 
   <article>
     <header class="bg-blush">

@@ -54,16 +54,25 @@ const offers =
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': 'Service',
+  '@type': 'MedicalProcedure',
   '@id': `${url}#service`,
   name: treatment.name,
-  serviceType: treatment.serviceType,
-  category: treatment.category,
+  procedureType: 'https://schema.org/NoninvasiveProcedure',
+  medicineSystem: 'https://schema.org/WesternConventional',
   ...(treatment.alternateName && { alternateName: treatment.alternateName }),
   description: treatment.description,
   url,
+  howPerformed: 'Performed in a private treatment room by a licensed esthetician',
+  preparation: 'Consultation and skin analysis performed before first treatment',
+  followup: treatment.membershipNote || treatment.note || 'Treatment plan customized at consultation',
+  bodyLocation: treatment.slug === 'keravive-scalp' ? 'Scalp' : 'Face',
   provider: { '@id': businessId(site) },
-  areaServed: business.areaServed.map((name) => ({ '@type': 'Place', name })),
+  availableService: {
+    '@type': 'MedicalTherapy',
+    name: treatment.name,
+    relevantSpecialty: 'Dermatology',
+  },
+  areaServed: business.schemaAreaServed.map((name) => ({ '@type': 'City', name })),
   ...(offers && { offers }),
 };
 ---

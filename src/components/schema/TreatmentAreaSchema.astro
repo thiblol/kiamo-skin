@@ -1,0 +1,55 @@
+---
+/**
+ * Location-specific service markup for treatment pages.
+ *
+ * Injects Service nodes for each area the treatment serves, creating explicit
+ * treatment × location associations that strengthen local search relevance.
+ *
+ * Based on local-entity-injection-pro skill pattern: each service explicitly
+ * states "Treatment X in Location Y" with area-specific context.
+ */
+import { absolute, businessId } from '../../config/urls';
+import { areas } from '../../data/areas';
+import type { Treatment } from '../../data/treatments';
+
+interface Props {
+  treatment: Treatment;
+}
+
+const { treatment } = Astro.props;
+const site = Astro.site;
+
+const localAreas = treatment.areas
+  .map((slug) => areas.find((a) => a.slug === slug))
+  .filter((a) => a !== undefined);
+
+// Only generate if the treatment explicitly lists served areas
+if (localAreas.length === 0) {
+  return null;
+}
+
+const services = localAreas.map((area) => ({
+  '@type': 'Service',
+  '@id': `${absolute(`treatments/${treatment.slug}`, site)}#service-${area.slug}`,
+  name: `${treatment.name} in ${area.name}`,
+  serviceType: treatment.serviceType,
+  description: `${treatment.name} performed at the Mission Hills studio. ${area.proximity}.`,
+  url: absolute(`service-areas/${area.slug}`, site),
+  provider: { '@id': businessId(site) },
+  areaServed: {
+    '@type': 'City',
+    name: area.name,
+    containedInPlace: {
+      '@type': 'City',
+      name: 'San Diego',
+    },
+  },
+}));
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@graph': services,
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />
