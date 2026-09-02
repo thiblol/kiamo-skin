@@ -41,6 +41,16 @@ export const treatmentFaqs: Record<string, Faq[]> = {
       answer:
         'There is no best age for a HydraFacial — it suits congested, dull or dehydrated skin at almost any age. Teenagers with active breakouts and clients decades older book it for entirely different reasons, and both are appropriate. What changes with age is the booster selected and what the treatment is paired with, not whether the treatment is right for you. That is decided at the consultation.',
     },
+    {
+      question: 'Is a HydraFacial worth it for hyperpigmentation?',
+      answer:
+        'A HydraFacial improves the appearance of hyperpigmentation by removing a layer of dead, pigmented surface cells and delivering brightening serums — but it is a maintenance treatment, not a corrective one. For melasma, deep post-inflammatory pigmentation, or marks that have not responded to at-home care, a HydraFacial with a brightening booster accelerates results between deeper corrective treatments like chemical peels and microchanneling. Used on its own, it is not the right treatment for stubborn pigmentation — but paired with a corrective plan, it keeps the skin receptive and compounds progress between sessions.',
+    },
+    {
+      question: 'How often do you really need a facial?',
+      answer:
+        'Once a month is the baseline for most people, which roughly aligns with the skin\'s cell turnover cycle. That frequency suits active congestion, pigmentation maintenance, and most corrective plans. Drier or more resilient skin may do well every six to eight weeks; oily, congested, or actively breaking-out skin sometimes benefits from more frequent treatment in an early corrective phase. The honest answer is that consistency matters more than frequency — sporadic facials produce less than regular ones at any interval, and the home routine between visits carries as much weight as the in-office treatment.',
+    },
   ],
 
   'procell-microchanneling': [
@@ -68,6 +78,16 @@ export const treatmentFaqs: Record<string, Faq[]> = {
       question: 'Why does skin look worse right after microchanneling?',
       answer:
         'Skin often looks worse before it looks better after microchanneling, and that is the healing response rather than damage. Expect redness similar to a mild sunburn for 24 to 48 hours, then mild dryness or flaking as the surface renews. Dehydrated, flaking skin shows texture and fine lines more clearly, which is why some people read that stage as looking older. Daily SPF through that window is not optional, particularly in melanin-rich skin, where sun on healing skin is what turns a good result into pigmentation.',
+    },
+    {
+      question: 'Is microneedling safe for dark skin?',
+      answer:
+        'Procell microchanneling is safe for dark skin when the depth is adjusted region by region and the protocol is specific to melanin-rich skin. Darker skin tones produce melanin more readily in response to inflammation, which means overly aggressive treatment can trigger post-inflammatory hyperpigmentation — more dark marks rather than fewer. At KIAMO SKIN, treatment depth on melanin-rich skin is not set uniformly across the face; it varies by region depending on skin thickness, tone, and the concern being treated. The growth factor serum delivered in the same pass supports healing and shortens the inflammatory window during which pigment can form.',
+    },
+    {
+      question: 'Is microneedling worth it for acne scars?',
+      answer:
+        'Procell microchanneling is worth it for acne scars when the acne itself is under control and the scarring is textural — rolling scars, depressions, or uneven surface texture. The treatment stimulates collagen remodeling over a series of sessions, which progressively fills and smooths the tissue below the scar. Active or inflamed acne is addressed before microchanneling begins because channeling into inflamed skin risks spreading bacteria and triggering additional damage. For flat post-inflammatory hyperpigmentation — the dark marks left after breakouts clear — a chemical peel series is typically the more efficient choice: microchanneling addresses structure, peels address pigment.',
     },
   ],
 
@@ -140,6 +160,16 @@ export const treatmentFaqs: Record<string, Faq[]> = {
       answer:
         'One peel refreshes the skin; a series is what corrects pigmentation. There is no single-session version of pigmentation treatment, and anywhere promising one is overselling it. The Gentle Renewal Peel at $199 refreshes and maintains, while the Advanced Peel at $299 goes deeper for pigmentation and scarring, with strength escalating across the series as the skin tolerates it. The home care between visits is doing as much work as the peel itself.',
     },
+    {
+      question: 'Who should not get a chemical peel?',
+      answer:
+        'Chemical peels are not appropriate for active or inflamed acne, broken skin, or anyone who has recently used isotretinoin (Accutane). Peels are also contraindicated during pregnancy, on skin that has recently had laser or ablative treatments, and on skin that is currently sensitised or barrier-compromised. On melanin-rich skin, certain peel ingredients — phenol in particular — are not used because of the heightened risk of post-inflammatory hyperpigmentation. Contraindications are reviewed at every consultation, not assumed to be unchanged from the first visit.',
+    },
+    {
+      question: 'How long does hyperpigmentation last after a chemical peel?',
+      answer:
+        'Redness and surface flaking after a chemical peel typically peak within 48 to 72 hours and settle within one to two weeks as the skin renews. Hyperpigmentation that persists beyond that window — new dark marks that were not present before — indicates a post-inflammatory response, where the peel triggered additional melanin production rather than clearing it. That outcome is significantly less common when peels are started at lower strengths and escalated gradually across a series, which is the protocol at KIAMO SKIN on all skin tones. Strict daily SPF through the healing period is not optional: sun exposure on recently peeled skin is the most direct route to PIH after a peel.',
+    },
   ],
 
   dermaplaning: [
@@ -166,6 +196,11 @@ export const treatmentFaqs: Record<string, Faq[]> = {
       question: 'Is it a problem to remove peach fuzz from the face?',
       answer:
         'Everyone has vellus hair on the face, and removing it is a cosmetic choice with no effect on how it grows back. There is no health reason to remove peach fuzz and no health reason to keep it. Most clients choose dermaplaning because makeup stops catching on the surface and skincare absorbs into skin instead of sitting on debris. If the hair itself is not the issue, the exfoliation is still reason enough.',
+    },
+    {
+      question: 'Is dermaplaning safe for melanin-rich skin?',
+      answer:
+        'Dermaplaning is safe for melanin-rich skin when the blade technique is correct and the skin is not actively inflamed or broken out. The risk in darker skin tones is not the blade itself but what happens after — sun exposure on freshly exfoliated skin can trigger post-inflammatory hyperpigmentation (PIH), which is more common in melanin-rich skin. Daily mineral SPF with at least SPF 30 is required after dermaplaning on any skin tone, but on deeper skin tones it is the difference between a smooth surface and additional dark marks. Dermaplaning at KIAMO SKIN is performed by a licensed esthetician trained on Black and brown skin, where the risk of PIH is highest.',
     },
   ],
 
@@ -199,6 +234,21 @@ export const treatmentFaqs: Record<string, Faq[]> = {
       question: 'What is the difference between DMK Level 1, Level 2 and Level 3?',
       answer:
         'Level 1 always comes first, and it is priced at $279. It prepares the skin and shows how the skin actually responds before anything deeper is considered. Levels 2 and 3 layer the enzymes for deeper correction and are prescribed only once Level 1 has done that groundwork, which is why the protocol and the price are set at consultation rather than published. Skipping to a deeper level on unprepared skin is how enzyme therapy goes wrong.',
+    },
+    {
+      question: 'Is DMK enzyme therapy worth it?',
+      answer:
+        'DMK enzyme therapy is worth it for skin that cannot currently tolerate corrective peels or microchanneling — a compromised barrier, chronic sensitivity, or inflammation from over-exfoliation. It is also a strong standalone treatment for skin that flares in response to active ingredients, because the enzyme masque works with the skin\'s own biological function rather than introducing a new active that could further destabilise it. For skin that is already tolerating peels and progressing well, DMK is most useful as a supporting treatment. Whether it is the right treatment for a specific skin depends on what is limiting that skin at the moment, which is determined at consultation.',
+    },
+    {
+      question: 'How often should you have DMK enzyme therapy?',
+      answer:
+        'DMK enzyme therapy is typically scheduled once a month as a standalone treatment, or every four to six weeks as part of a longer corrective plan. Frequency depends on what the treatment is addressing: a compromised barrier in an active phase may benefit from more consistent early attention, while maintenance of results can stretch to every four to six weeks. At KIAMO SKIN, frequency is set at consultation and adjusted based on how the skin responds rather than applied as a fixed interval. Skipping the home routine between visits limits what the in-office treatment can sustain.',
+    },
+    {
+      question: 'My skin looks worse after a facial — is that normal?',
+      answer:
+        'Skin that looks temporarily worse after a facial is usually one of two things: a normal extraction purge, or a reaction to a product or treatment that was not matched to the skin\'s current state. A purge — small breakouts surfacing after extraction — typically peaks within 48 to 72 hours and then clears. A reaction — persistent new redness, unexpected breakouts that do not follow the normal purge pattern, or increased sensitivity that does not settle — is a different signal. If skin is consistently worse or more reactive after professional treatments, the treatments are not calibrated to that skin, and the plan should be reassessed before continuing.',
     },
   ],
 
