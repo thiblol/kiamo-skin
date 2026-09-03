@@ -1,0 +1,279 @@
+- generic [active] [ref=f14e1]:
+  - link "Skip to content" [ref=f14e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f14e3]:
+    - generic [ref=f14e4]:
+      - link "Kiamo — KIAMO SKIN, home" [ref=f14e5] [cursor=pointer]:
+        - /url: /
+        - text: Kiamo
+        - generic [ref=f14e6]: — KIAMO SKIN, home
+      - generic [ref=f14e7]:
+        - link "Request Appointment" [ref=f14e8] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+        - button "Open menu" [ref=f14e9]
+  - main [ref=f14e13]:
+    - article [ref=f14e14]:
+      - generic [ref=f14e16]:
+        - paragraph [ref=f14e17]: The specialism
+        - heading "Expert Pigmentation Treatment for Melanin-Rich Skin in San Diego" [level=1] [ref=f14e18]
+        - paragraph [ref=f14e19]:
+          - text: KIAMO is San Diego's Black-owned skin studio specializing in safe, effective treatment for pigmentation in melanin-rich skin. When you have
+          - link "melasma, post-inflammatory hyperpigmentation, or uneven tone" [ref=f14e20] [cursor=pointer]:
+            - /url: /treatments/melasma/
+          - text: ", choosing a practitioner with deep experience treating darker skin tones isn't optional—it's essential."
+        - paragraph [ref=f14e21]: "Treating pigmentation in deeper skin requires precision. One wrong move—too aggressive a peel, incorrect settings, improper post-care—and you risk worsening hyperpigmentation instead of correcting it. Kiki's expertise was built treating the most complex pigmentation cases: melanin-rich skin, where the risk of post-inflammatory hyperpigmentation is highest. That training makes her the safest, most skilled choice for any skin tone with pigmentation concerns."
+        - generic [ref=f14e22]:
+          - link "Request Appointment" [ref=f14e23] [cursor=pointer]:
+            - /url: https://www.vagaro.com/kiamoskin
+          - link "(310) 595-0872" [ref=f14e24] [cursor=pointer]:
+            - /url: tel:+13105950872
+      - generic [ref=f14e26]:
+        - generic [ref=f14e28]:
+          - heading "Why dark marks behave differently" [level=2] [ref=f14e29]
+          - paragraph [ref=f14e30]:
+            - text: Melanin-rich skin answers inflammation by producing more pigment. Post-inflammatory hyperpigmentation is most common and most severe in
+            - link "Fitzpatrick skin types IV to VI" [ref=f14e31] [cursor=pointer]:
+              - /url: https://www.ncbi.nlm.nih.gov/books/NBK559150/
+            - text: ", because those melanocytes are more reactive — and in people with darker skin who have acne, the incidence runs as high as 65 percent."
+          - paragraph [ref=f14e32]:
+            - text: Depth decides the timeline. Pigment sitting in the surface layers usually clears over six to twelve months; pigment that has dropped deeper can take years and resists treatment far more stubbornly. That is the honest reason corrective work here is planned as a series and paced deliberately, and why the cause gets controlled before anyone starts fading the mark. It is also why pigmentation is usually run on a
+            - link "monthly treatment plan" [ref=f14e33] [cursor=pointer]:
+              - /url: /membership/
+            - text: rather than booked visit by visit.
+          - paragraph [ref=f14e34]:
+            - text: Not every dark mark is the same condition, and the difference decides the treatment. This guide to
+            - link "telling post-inflammatory marks, melasma and sun damage apart" [ref=f14e35] [cursor=pointer]:
+              - /url: /journal/three-kinds-of-dark-mark/
+            - text: covers how each one behaves and what a facial can honestly do about it.
+          - paragraph [ref=f14e36]:
+            - text: It is also why an aggressive treatment is the wrong answer. Over-treating this skin produces the exact pigmentation it was meant to clear, which is the single most common way melanin-rich skin gets damaged in a treatment room. Needling is where that shows up most often, and
+            - link "why depth decides the outcome on melanin-rich skin" [ref=f14e37] [cursor=pointer]:
+              - /url: /journal/microneedling-on-dark-skin-san-diego/
+            - text: is worth reading before booking it anywhere.
+        - img "Close portrait of even, clear skin in warm natural light" [ref=f14e39]
+      - generic [ref=f14e41]:
+        - paragraph [ref=f14e42]: How we work
+        - heading "An inclusive space where everyone feels seen." [level=2] [ref=f14e43]
+        - paragraph [ref=f14e44]: KIAMO SKIN is proud to be a Black-owned business committed to creating an inclusive space where everyone feels seen, valued, and cared for. That is the reason clients travel in from across San Diego County — being assessed by someone who has treated skin like yours before is not a small thing.
+        - link "Meet your esthetician" [ref=f14e46] [cursor=pointer]:
+          - /url: /about/
+      - generic [ref=f14e48]:
+        - generic [ref=f14e49]:
+          - generic [ref=f14e50]:
+            - heading "Treatments chosen for melanin-rich skin" [level=2] [ref=f14e51]
+            - paragraph [ref=f14e52]: The first visit is an assessment, not a fixed protocol. What gets used depends on what the skin is doing on the day.
+            - list [ref=f14e53]:
+              - listitem [ref=f14e54]:
+                - link [ref=f14e55] [cursor=pointer]:
+                  - /url: /treatments/procell-microchanneling/
+                  - heading "Acne scarring and uneven texture" [level=3] [ref=f14e56]
+                  - paragraph [ref=f14e57]: Procell microchanneling stimulates repair without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger. Every pass is customised for skin tone.
+                  - paragraph [ref=f14e58]: Procell Microchanneling
+              - listitem [ref=f14e59]:
+                - link [ref=f14e60] [cursor=pointer]:
+                  - /url: /treatments/dmk-enzyme-therapy/
+                  - heading "Skin that stings, flushes or reacts to everything" [level=3] [ref=f14e61]
+                  - paragraph [ref=f14e62]: A damaged barrier has to be rebuilt before any corrective work begins. Treating pigmentation on reactive skin is how the marks get worse instead of better.
+                  - paragraph [ref=f14e63]: DMK Enzyme Therapy
+              - listitem [ref=f14e64]:
+                - link [ref=f14e65] [cursor=pointer]:
+                  - /url: /treatments/hydrafacial/
+                  - heading "Congestion, blackheads and dullness" [level=3] [ref=f14e66]
+                  - paragraph [ref=f14e67]: Vortex extraction lifts congestion without the manual pressure that leaves marks behind on deeper skin tones. It is where most first visits start.
+                  - paragraph [ref=f14e68]: HydraFacial
+            - paragraph [ref=f14e69]:
+              - link "See the full treatment menu in San Diego" [ref=f14e70] [cursor=pointer]:
+                - /url: /treatments/
+          - generic [ref=f14e71]:
+            - heading "Protecting the result in San Diego" [level=2] [ref=f14e72]
+            - paragraph [ref=f14e73]:
+              - text: Sunscreen is the treatment, not the afterthought. For deeper skin tones the American Academy of Dermatology recommends a
+              - link "tinted sunscreen containing iron oxide" [ref=f14e74] [cursor=pointer]:
+                - /url: https://www.aad.org/public/everyday-care/skin-care-secrets/routine/fade-dark-spots
+              - text: at SPF 30 or higher, because iron oxide blocks visible light — and visible light worsens melasma and dark spots in a way that a standard UVA/UVB sunscreen does not address.
+            - paragraph [ref=f14e75]:
+              - text: "San Diego makes that harder than it sounds. The overcast mornings are the usual reason people stop applying it, and the UV is still there behind the marine layer. The same guidance is blunt about irritation:"
+              - link "stop any product that burns or stings" [ref=f14e76] [cursor=pointer]:
+                - /url: https://www.aad.org/public/diseases/a-z/melasma-self-care
+              - text: ", because irritating the skin may darken the spots you are trying to clear."
+        - complementary [ref=f14e77]:
+          - generic [ref=f14e78]:
+            - heading "The studio" [level=2] [ref=f14e79]
+            - generic [ref=f14e81]:
+              - link "3067 Reynard Way San Diego, CA 92103" [ref=f14e82] [cursor=pointer]:
+                - /url: "#location-map"
+                - text: 3067 Reynard WaySan Diego, CA 92103
+              - paragraph [ref=f14e83]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+              - paragraph [ref=f14e84]:
+                - link "(310) 595-0872" [ref=f14e85] [cursor=pointer]:
+                  - /url: tel:+13105950872
+              - paragraph [ref=f14e86]:
+                - link "kiamoskin@gmail.com" [ref=f14e87] [cursor=pointer]:
+                  - /url: mailto:kiamoskin@gmail.com
+              - paragraph [ref=f14e88]: By appointment only · Free parking
+            - link "Request Appointment" [ref=f14e90] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin
+      - generic [ref=f14e92]:
+        - paragraph [ref=f14e93]: Before you book
+        - heading "Questions" [level=2] [ref=f14e94]
+        - generic [ref=f14e95]:
+          - group [ref=f14e97]:
+            - generic "Where can you find a Black esthetician in San Diego?" [ref=f14e98] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f14e100]: +
+          - group [ref=f14e102]:
+            - generic "Can a Black person get a chemical peel?" [ref=f14e103] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f14e105]: +
+          - group [ref=f14e107]:
+            - generic "What kind of facial is best for Black skin?" [ref=f14e108] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f14e110]: +
+          - group [ref=f14e112]:
+            - generic "What should you not use on melanin-rich skin?" [ref=f14e113] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f14e115]: +
+          - group [ref=f14e117]:
+            - generic "Why do dark marks last longer on Black and brown skin?" [ref=f14e118] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f14e120]: +
+          - group [ref=f14e122]:
+            - generic "Does sunscreen actually help with dark spots on deeper skin tones?" [ref=f14e123] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f14e125]: +
+          - group [ref=f14e127]:
+            - generic "How far do clients travel for melanin-rich skin treatment in San Diego?" [ref=f14e128] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f14e130]: +
+          - group [ref=f14e132]:
+            - generic "Is there a Black-owned skincare studio in Mission Hills?" [ref=f14e133] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f14e135]: +
+          - group [ref=f14e137]:
+            - generic "Why is San Diego sun exposure especially risky for melasma and dark spots?" [ref=f14e138] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f14e140]: +
+          - group [ref=f14e142]:
+            - generic "Can you treat acne scars on Black skin in San Diego?" [ref=f14e143] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f14e145]: +
+      - generic [ref=f14e147]:
+        - heading "Travelling in across San Diego County" [level=2] [ref=f14e148]
+        - paragraph [ref=f14e149]: The studio is in Mission Hills, and clients come in from across the county for this work.
+        - list [ref=f14e150]:
+          - listitem [ref=f14e151]:
+            - link [ref=f14e152] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+              - heading "Facials in Chula Vista" [level=3] [ref=f14e153]
+          - listitem [ref=f14e154]:
+            - link [ref=f14e155] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+              - heading "Facials in North Park" [level=3] [ref=f14e156]
+          - listitem [ref=f14e157]:
+            - link [ref=f14e158] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+              - heading "Facials in La Mesa" [level=3] [ref=f14e159]
+          - listitem [ref=f14e160]:
+            - link [ref=f14e161] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+              - heading "Facials in Mission Hills" [level=3] [ref=f14e162]
+        - paragraph [ref=f14e163]:
+          - link "See all areas served across San Diego County" [ref=f14e164] [cursor=pointer]:
+            - /url: /service-areas/
+        - generic [ref=f14e165]:
+          - link "Request Appointment" [ref=f14e166] [cursor=pointer]:
+            - /url: https://www.vagaro.com/kiamoskin
+          - link "(310) 595-0872" [ref=f14e167] [cursor=pointer]:
+            - /url: tel:+13105950872
+  - contentinfo [ref=f14e168]:
+    - generic [ref=f14e169]:
+      - generic [ref=f14e170]:
+        - paragraph [ref=f14e171]: KIAMO Skin
+        - link "Request Appointment" [ref=f14e172] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+      - generic [ref=f14e173]:
+        - paragraph [ref=f14e174]: Visit
+        - generic [ref=f14e176]:
+          - link "3067 Reynard Way San Diego, CA 92103" [ref=f14e177] [cursor=pointer]:
+            - /url: "#location-map"
+            - text: 3067 Reynard WaySan Diego, CA 92103
+          - paragraph [ref=f14e178]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+          - paragraph [ref=f14e179]:
+            - link "(310) 595-0872" [ref=f14e180] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f14e181]:
+            - link "kiamoskin@gmail.com" [ref=f14e182] [cursor=pointer]:
+              - /url: mailto:kiamoskin@gmail.com
+          - paragraph [ref=f14e183]: By appointment only · Free parking
+          - paragraph [ref=f14e184]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=f14e185]:
+        - paragraph [ref=f14e186]: Treatments
+        - list [ref=f14e187]:
+          - listitem [ref=f14e188]:
+            - link "HydraFacial" [ref=f14e189] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+          - listitem [ref=f14e190]:
+            - link "Keravive Scalp Therapy" [ref=f14e191] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+          - listitem [ref=f14e192]:
+            - link "DMK Enzyme Therapy" [ref=f14e193] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+          - listitem [ref=f14e194]:
+            - link "Procell Microchanneling" [ref=f14e195] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+          - listitem [ref=f14e196]:
+            - link "Lira Chemical Peels" [ref=f14e197] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+          - listitem [ref=f14e198]:
+            - link "Dermaplaning" [ref=f14e199] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+        - paragraph [ref=f14e200]: More
+        - list [ref=f14e201]:
+          - listitem [ref=f14e202]:
+            - link "Treatments" [ref=f14e203] [cursor=pointer]:
+              - /url: /treatments/
+          - listitem [ref=f14e204]:
+            - link "Membership" [ref=f14e205] [cursor=pointer]:
+              - /url: /membership/
+          - listitem [ref=f14e206]:
+            - link "Melanin-Rich Skin" [ref=f14e207] [cursor=pointer]:
+              - /url: /melanin-rich-skin/
+          - listitem [ref=f14e208]:
+            - link "About" [ref=f14e209] [cursor=pointer]:
+              - /url: /about/
+          - listitem [ref=f14e210]:
+            - link "Journal" [ref=f14e211] [cursor=pointer]:
+              - /url: /journal/
+          - listitem [ref=f14e212]:
+            - link "Contact" [ref=f14e213] [cursor=pointer]:
+              - /url: /contact/
+          - listitem [ref=f14e214]:
+            - link "Book" [ref=f14e215] [cursor=pointer]:
+              - /url: /book/
+          - listitem [ref=f14e216]:
+            - link "Instagram @kiamoskin" [ref=f14e217] [cursor=pointer]:
+              - /url: https://www.instagram.com/kiamoskin/
+      - generic [ref=f14e218]:
+        - paragraph [ref=f14e219]: Areas we serve
+        - list [ref=f14e220]:
+          - listitem [ref=f14e221]:
+            - link "All areas in San Diego County" [ref=f14e222] [cursor=pointer]:
+              - /url: /service-areas/
+          - listitem [ref=f14e223]:
+            - link "Mission Hills" [ref=f14e224] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+          - listitem [ref=f14e225]:
+            - link "La Jolla" [ref=f14e226] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+          - listitem [ref=f14e227]:
+            - link "North Park" [ref=f14e228] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+          - listitem [ref=f14e229]:
+            - link "Pacific Beach" [ref=f14e230] [cursor=pointer]:
+              - /url: /service-areas/pacific-beach/
+          - listitem [ref=f14e231]:
+            - link "Chula Vista" [ref=f14e232] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+          - listitem [ref=f14e233]:
+            - link "La Mesa" [ref=f14e234] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+          - listitem [ref=f14e235]:
+            - link "Del Mar" [ref=f14e236] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+          - listitem [ref=f14e237]:
+            - link "Encinitas" [ref=f14e238] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+          - listitem [ref=f14e239]:
+            - link "Carlsbad" [ref=f14e240] [cursor=pointer]:
+              - /url: /service-areas/carlsbad/
+    - paragraph [ref=f14e242]: © 2026 KIAMO SKIN · Black-owned, Mission Hills, San Diego

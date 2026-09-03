@@ -1,0 +1,312 @@
+- generic [active] [ref=f18e1]:
+  - link "Skip to content" [ref=f18e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f18e3]:
+    - generic [ref=f18e4]:
+      - link "Kiamo — KIAMO SKIN, home" [ref=f18e5] [cursor=pointer]:
+        - /url: /
+        - text: Kiamo
+        - generic [ref=f18e6]: — KIAMO SKIN, home
+      - generic [ref=f18e7]:
+        - link "Request Appointment" [ref=f18e8] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+        - button "Open menu" [ref=f18e9]
+  - main [ref=f18e13]:
+    - article [ref=f18e14]:
+      - generic [ref=f18e17]:
+        - generic [ref=f18e18]:
+          - paragraph [ref=f18e19]:
+            - link "Treatments" [ref=f18e20] [cursor=pointer]:
+              - /url: /treatments/
+            - text: · DMK Enzyme Therapy
+          - heading "DMK Enzyme Therapy — restore skin function from within." [level=1] [ref=f18e21]
+          - paragraph [ref=f18e22]: Looking for DMK enzyme therapy in San Diego? Level 1 is $279 at the KIAMO SKIN studio in Mission Hills, and it is the treatment used when a barrier is too compromised to tolerate anything stronger.
+          - paragraph [ref=f18e23]:
+            - text: DMK Enzyme Therapy is designed to restore healthy skin function rather than simply exfoliating the surface. By supporting the skin's natural processes, it helps strengthen the skin barrier while encouraging healthy circulation and lymphatic activity. It's especially beneficial for skin that feels over-exfoliated, sensitized, inflamed, or slow to heal—common states for
+            - link "Encinitas surfers" [ref=f18e24] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+            - text: ","
+            - link "Pacific Beach residents" [ref=f18e25] [cursor=pointer]:
+              - /url: /service-areas/pacific-beach/
+            - text: ", and anyone whose barrier has been stripped by salt water, wind, or aggressive product use."
+          - generic [ref=f18e26]:
+            - link "Request Appointment" [ref=f18e27] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin
+            - link "(310) 595-0872" [ref=f18e28] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f18e29]: Licensed Esthetician · Licensed Esthetician · 7+ years experience · One-to-one, private studio
+        - generic [ref=f18e30]:
+          - img "An enzyme masque setting during a treatment" [ref=f18e31]
+          - link "Request Appointment" [ref=f18e33] [cursor=pointer]:
+            - /url: https://www.vagaro.com/kiamoskin
+      - paragraph [ref=f18e36]:
+        - text: DMK Enzyme Therapy is performed at the Mission Hills studio. Clients travel from
+        - link "across San Diego County" [ref=f18e37] [cursor=pointer]:
+          - /url: /service-areas/
+        - text: — from nearby neighborhoods like North Park and Hillcrest to coastal areas including La Jolla, Pacific Beach and Encinitas, and inland communities like Chula Vista and La Mesa.
+      - generic [ref=f18e39]:
+        - generic [ref=f18e40]:
+          - generic [ref=f18e41]:
+            - heading "What happens in the room" [level=2] [ref=f18e42]
+            - list [ref=f18e43]:
+              - listitem [ref=f18e44]:
+                - paragraph [ref=f18e45]: "01"
+                - heading "Assess" [level=3] [ref=f18e46]
+                - paragraph [ref=f18e47]: Every DMK treatment is customized to what your skin needs that day — not a fixed protocol.
+              - listitem [ref=f18e48]:
+                - paragraph [ref=f18e49]: "02"
+                - heading "The masque" [level=3] [ref=f18e50]
+                - paragraph [ref=f18e51]: As the enzyme masque sets, you will feel a tightening and rhythmic pulsing sensation. This is an expected part of the treatment and varies from person to person.
+              - listitem [ref=f18e52]:
+                - paragraph [ref=f18e53]: "03"
+                - heading "Home care" [level=3] [ref=f18e54]
+                - paragraph [ref=f18e55]: DMK is designed as a complete system. Your personalized home routine supports the work done in the treatment room, helping you achieve the best possible results between visits.
+          - generic [ref=f18e56]:
+            - heading "Ideal for" [level=2] [ref=f18e57]
+            - list [ref=f18e58]:
+              - listitem [ref=f18e59]:
+                - generic [aria-hidden] [ref=f18e60]: —
+                - generic [ref=f18e61]: A compromised skin barrier — stinging, redness, or tightness after products
+              - listitem [ref=f18e62]:
+                - generic [aria-hidden] [ref=f18e63]: —
+                - generic [ref=f18e64]: Skin recovering from over-exfoliation or aggressive at-home products
+              - listitem [ref=f18e65]:
+                - generic [aria-hidden] [ref=f18e66]: —
+                - generic [ref=f18e67]: Skin that stays dehydrated despite moisturizer
+              - listitem [ref=f18e68]:
+                - generic [aria-hidden] [ref=f18e69]: —
+                - generic [ref=f18e70]: Congested, sensitive skin that needs a gentler corrective approach
+        - complementary [ref=f18e71]:
+          - generic [ref=f18e72]:
+            - heading "Pricing in San Diego" [level=2] [ref=f18e73]
+            - generic [ref=f18e74]:
+              - generic [ref=f18e75]:
+                - term [ref=f18e76]: DMK Level 1 Enzyme Treatment
+                - definition [ref=f18e77]: $279
+              - generic [ref=f18e78]:
+                - term [ref=f18e79]: DMK Level 2 & 3 Enzyme Treatment
+                - definition [ref=f18e80]: Pricing at consultation.
+            - paragraph [ref=f18e81]: Level 1 comes first. Levels 2 and 3 layer the enzymes for deeper correction and are prescribed only once Level 1 has prepared the skin — so the protocol and the price are set at consultation.
+            - paragraph [ref=f18e82]:
+              - text: A barrier rebuilds over months rather than visits, so this is treatment that suits a standing monthly slot.
+              - link "See the monthly membership plans" [ref=f18e83] [cursor=pointer]:
+                - /url: /membership/
+              - text: .
+            - link "Request Appointment" [ref=f18e85] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin
+          - generic [ref=f18e87]:
+            - link "3067 Reynard Way San Diego, CA 92103" [ref=f18e88] [cursor=pointer]:
+              - /url: "#location-map"
+              - text: 3067 Reynard WaySan Diego, CA 92103
+            - paragraph [ref=f18e89]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+            - paragraph [ref=f18e90]:
+              - link "(310) 595-0872" [ref=f18e91] [cursor=pointer]:
+                - /url: tel:+13105950872
+            - paragraph [ref=f18e92]:
+              - link "kiamoskin@gmail.com" [ref=f18e93] [cursor=pointer]:
+                - /url: mailto:kiamoskin@gmail.com
+            - paragraph [ref=f18e94]: By appointment only · Free parking
+            - paragraph [ref=f18e95]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=f18e97]:
+        - paragraph [ref=f18e98]: Before you book
+        - heading "DMK Enzyme Therapy questions" [level=2] [ref=f18e99]
+        - generic [ref=f18e100]:
+          - group [ref=f18e102]:
+            - generic "What is DMK enzyme therapy?" [ref=f18e103] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f18e105]: +
+          - group [ref=f18e107]:
+            - generic "How much does DMK enzyme therapy cost in San Diego?" [ref=f18e108] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f18e110]: +
+          - group [ref=f18e112]:
+            - generic "What does DMK enzyme therapy do for the skin barrier?" [ref=f18e113] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f18e115]: +
+          - group [ref=f18e117]:
+            - generic "How do you know if your skin barrier is damaged?" [ref=f18e118] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f18e120]: +
+          - group [ref=f18e122]:
+            - generic "How long does it take to repair a damaged skin barrier?" [ref=f18e123] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f18e125]: +
+          - group [ref=f18e127]:
+            - generic "What is the difference between DMK Level 1, Level 2 and Level 3?" [ref=f18e128] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f18e130]: +
+          - group [ref=f18e132]:
+            - generic "Is DMK enzyme therapy worth it?" [ref=f18e133] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f18e135]: +
+          - group [ref=f18e137]:
+            - generic "How often should you have DMK enzyme therapy?" [ref=f18e138] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f18e140]: +
+          - group [ref=f18e142]:
+            - generic "My skin looks worse after a facial — is that normal?" [ref=f18e143] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f18e145]: +
+      - generic [ref=f18e147]:
+        - heading "Clients from across San Diego" [level=2] [ref=f18e148]
+        - paragraph [ref=f18e149]: "DMK Enzyme Therapy is performed at the Mission Hills studio. Clients travel from these areas across San Diego County:"
+        - list [ref=f18e150]:
+          - listitem [ref=f18e151]:
+            - link [ref=f18e152] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+              - heading "DMK Enzyme Therapy in Mission Hills" [level=3] [ref=f18e153]
+              - paragraph [ref=f18e154]: The studio itself — five minutes across the neighborhood
+          - listitem [ref=f18e155]:
+            - link [ref=f18e156] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+              - heading "DMK Enzyme Therapy in La Jolla" [level=3] [ref=f18e157]
+              - paragraph [ref=f18e158]: About twelve miles — roughly twenty minutes south on I-5
+          - listitem [ref=f18e159]:
+            - link [ref=f18e160] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+              - heading "DMK Enzyme Therapy in La Mesa" [level=3] [ref=f18e161]
+              - paragraph [ref=f18e162]: Roughly eleven miles — fifteen to twenty minutes west on I-8
+          - listitem [ref=f18e163]:
+            - link [ref=f18e164] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+              - heading "DMK Enzyme Therapy in Chula Vista" [level=3] [ref=f18e165]
+              - paragraph [ref=f18e166]: About thirteen miles — twenty to twenty-five minutes north off-peak
+          - listitem [ref=f18e167]:
+            - link [ref=f18e168] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+              - heading "DMK Enzyme Therapy in Encinitas" [level=3] [ref=f18e169]
+              - paragraph [ref=f18e170]: About twenty-five miles — near thirty minutes on a clear I-5
+          - listitem [ref=f18e171]:
+            - link [ref=f18e172] [cursor=pointer]:
+              - /url: /service-areas/carlsbad/
+              - heading "DMK Enzyme Therapy in Carlsbad" [level=3] [ref=f18e173]
+              - paragraph [ref=f18e174]: About thirty-five miles — a genuine thirty-five to forty-five minutes
+        - paragraph [ref=f18e175]:
+          - link "See all areas served across San Diego County" [ref=f18e176] [cursor=pointer]:
+            - /url: /service-areas/
+      - generic [ref=f18e178]:
+        - heading "Other treatments" [level=2] [ref=f18e179]
+        - list [ref=f18e180]:
+          - listitem [ref=f18e181]:
+            - link [ref=f18e182] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+              - heading "HydraFacial" [level=3] [ref=f18e183]
+              - paragraph [ref=f18e184]: HydraFacial — the foundation of healthy skin.
+          - listitem [ref=f18e185]:
+            - link [ref=f18e186] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+              - heading "HydraFacial Keravive" [level=3] [ref=f18e187]
+              - paragraph [ref=f18e188]: HydraFacial Keravive — your scalp is skin. Treat it that way.
+          - listitem [ref=f18e189]:
+            - link [ref=f18e190] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+              - heading "Procell Microchanneling" [level=3] [ref=f18e191]
+              - paragraph [ref=f18e192]: Procell Microchanneling — stimulate your skin's natural repair process.
+          - listitem [ref=f18e193]:
+            - link [ref=f18e194] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+              - heading "Lira Chemical Peels" [level=3] [ref=f18e195]
+              - paragraph [ref=f18e196]: Lira Chemical Peels — designed to brighten without compromising skin health.
+          - listitem [ref=f18e197]:
+            - link [ref=f18e198] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+              - heading "Dermaplane Facial" [level=3] [ref=f18e199]
+              - paragraph [ref=f18e200]: Dermaplaning — a clean surface changes what everything else can do.
+          - listitem [ref=f18e201]:
+            - link [ref=f18e202] [cursor=pointer]:
+              - /url: /treatments/acne/
+              - heading "Acne Treatment" [level=3] [ref=f18e203]
+              - paragraph [ref=f18e204]: Acne Treatment in San Diego — clear breakouts, fade marks, smooth scars.
+  - contentinfo [ref=f18e205]:
+    - generic [ref=f18e206]:
+      - generic [ref=f18e207]:
+        - paragraph [ref=f18e208]: KIAMO Skin
+        - link "Request Appointment" [ref=f18e209] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+      - generic [ref=f18e210]:
+        - paragraph [ref=f18e211]: Visit
+        - generic [ref=f18e213]:
+          - link "3067 Reynard Way San Diego, CA 92103" [ref=f18e214] [cursor=pointer]:
+            - /url: "#location-map"
+            - text: 3067 Reynard WaySan Diego, CA 92103
+          - paragraph [ref=f18e215]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+          - paragraph [ref=f18e216]:
+            - link "(310) 595-0872" [ref=f18e217] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f18e218]:
+            - link "kiamoskin@gmail.com" [ref=f18e219] [cursor=pointer]:
+              - /url: mailto:kiamoskin@gmail.com
+          - paragraph [ref=f18e220]: By appointment only · Free parking
+          - paragraph [ref=f18e221]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=f18e222]:
+        - paragraph [ref=f18e223]: Treatments
+        - list [ref=f18e224]:
+          - listitem [ref=f18e225]:
+            - link "HydraFacial" [ref=f18e226] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+          - listitem [ref=f18e227]:
+            - link "Keravive Scalp Therapy" [ref=f18e228] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+          - listitem [ref=f18e229]:
+            - link "DMK Enzyme Therapy" [ref=f18e230] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+          - listitem [ref=f18e231]:
+            - link "Procell Microchanneling" [ref=f18e232] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+          - listitem [ref=f18e233]:
+            - link "Lira Chemical Peels" [ref=f18e234] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+          - listitem [ref=f18e235]:
+            - link "Dermaplaning" [ref=f18e236] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+        - paragraph [ref=f18e237]: More
+        - list [ref=f18e238]:
+          - listitem [ref=f18e239]:
+            - link "Treatments" [ref=f18e240] [cursor=pointer]:
+              - /url: /treatments/
+          - listitem [ref=f18e241]:
+            - link "Membership" [ref=f18e242] [cursor=pointer]:
+              - /url: /membership/
+          - listitem [ref=f18e243]:
+            - link "Melanin-Rich Skin" [ref=f18e244] [cursor=pointer]:
+              - /url: /melanin-rich-skin/
+          - listitem [ref=f18e245]:
+            - link "About" [ref=f18e246] [cursor=pointer]:
+              - /url: /about/
+          - listitem [ref=f18e247]:
+            - link "Journal" [ref=f18e248] [cursor=pointer]:
+              - /url: /journal/
+          - listitem [ref=f18e249]:
+            - link "Contact" [ref=f18e250] [cursor=pointer]:
+              - /url: /contact/
+          - listitem [ref=f18e251]:
+            - link "Book" [ref=f18e252] [cursor=pointer]:
+              - /url: /book/
+          - listitem [ref=f18e253]:
+            - link "Instagram @kiamoskin" [ref=f18e254] [cursor=pointer]:
+              - /url: https://www.instagram.com/kiamoskin/
+      - generic [ref=f18e255]:
+        - paragraph [ref=f18e256]: Areas we serve
+        - list [ref=f18e257]:
+          - listitem [ref=f18e258]:
+            - link "All areas in San Diego County" [ref=f18e259] [cursor=pointer]:
+              - /url: /service-areas/
+          - listitem [ref=f18e260]:
+            - link "Mission Hills" [ref=f18e261] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+          - listitem [ref=f18e262]:
+            - link "La Jolla" [ref=f18e263] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+          - listitem [ref=f18e264]:
+            - link "North Park" [ref=f18e265] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+          - listitem [ref=f18e266]:
+            - link "Pacific Beach" [ref=f18e267] [cursor=pointer]:
+              - /url: /service-areas/pacific-beach/
+          - listitem [ref=f18e268]:
+            - link "Chula Vista" [ref=f18e269] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+          - listitem [ref=f18e270]:
+            - link "La Mesa" [ref=f18e271] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+          - listitem [ref=f18e272]:
+            - link "Del Mar" [ref=f18e273] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+          - listitem [ref=f18e274]:
+            - link "Encinitas" [ref=f18e275] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+          - listitem [ref=f18e276]:
+            - link "Carlsbad" [ref=f18e277] [cursor=pointer]:
+              - /url: /service-areas/carlsbad/
+    - paragraph [ref=f18e279]: © 2026 KIAMO SKIN · Black-owned, Mission Hills, San Diego

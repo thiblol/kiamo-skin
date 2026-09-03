@@ -1,0 +1,288 @@
+- generic [active] [ref=f9e1]:
+  - link "Skip to content" [ref=f9e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f9e3]:
+    - generic [ref=f9e4]:
+      - link "Kiamo — KIAMO SKIN, home" [ref=f9e5] [cursor=pointer]:
+        - /url: /
+        - text: Kiamo
+        - generic [ref=f9e6]: — KIAMO SKIN, home
+      - generic [ref=f9e7]:
+        - link "Request Appointment" [ref=f9e8] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+        - button "Open menu" [ref=f9e9]
+  - main [ref=f9e13]:
+    - article [ref=f9e14]:
+      - generic [ref=f9e17]:
+        - generic [ref=f9e18]:
+          - paragraph [ref=f9e19]:
+            - link "Treatments" [ref=f9e20] [cursor=pointer]:
+              - /url: /treatments/
+            - text: · Dermaplane Facial
+          - heading "Dermaplaning — a clean surface changes what everything else can do." [level=1] [ref=f9e21]
+          - paragraph [ref=f9e22]: Looking for dermaplaning in San Diego? The dermaplane facial at KIAMO SKIN is performed by a licensed esthetician in Mission Hills, and it is $199.
+          - paragraph [ref=f9e23]:
+            - text: "Dermaplaning uses a sterile surgical blade to remove dead surface cells and the fine vellus hair that sits on top of them. Nothing is pulled from the follicle and nothing penetrates the skin. What changes is the surface: product reaches live tissue instead of sitting on debris, and makeup stops catching on texture. Clients from"
+            - link "Mission Hills" [ref=f9e24] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+            - text: ","
+            - link "North Park" [ref=f9e25] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+            - text: ", and"
+            - link "La Jolla" [ref=f9e26] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+            - text: book dermaplaning for events and before important occasions because there is zero downtime and the glow is immediate.
+          - generic [ref=f9e27]:
+            - link "Request Appointment" [ref=f9e28] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin
+            - link "(310) 595-0872" [ref=f9e29] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f9e30]: Licensed Esthetician · Licensed Esthetician · 7+ years experience · One-to-one, private studio
+        - generic [ref=f9e31]:
+          - img "A close portrait of smooth, even skin across the cheekbone" [ref=f9e32]
+          - link "Request Appointment" [ref=f9e34] [cursor=pointer]:
+            - /url: https://www.vagaro.com/kiamoskin
+      - paragraph [ref=f9e37]:
+        - text: Dermaplane Facial is performed at the Mission Hills studio. Clients travel from
+        - link "across San Diego County" [ref=f9e38] [cursor=pointer]:
+          - /url: /service-areas/
+        - text: — from nearby neighborhoods like North Park and Hillcrest to coastal areas including La Jolla, Pacific Beach and Encinitas, and inland communities like Chula Vista and La Mesa.
+      - generic [ref=f9e40]:
+        - generic [ref=f9e41]:
+          - generic [ref=f9e42]:
+            - heading "What happens in the room" [level=2] [ref=f9e43]
+            - list [ref=f9e44]:
+              - listitem [ref=f9e45]:
+                - paragraph [ref=f9e46]: "01"
+                - heading "Cleanse and dry" [level=3] [ref=f9e47]
+                - paragraph [ref=f9e48]: The skin is cleansed and taken completely dry. Dermaplaning is performed on a dry surface — any residual moisture changes how the blade sits.
+              - listitem [ref=f9e49]:
+                - paragraph [ref=f9e50]: "02"
+                - heading "The pass" [level=3] [ref=f9e51]
+                - paragraph [ref=f9e52]: The blade is held at a fixed angle and drawn across the skin in short, controlled strokes, section by section. Active or pustular acne is worked around rather than over.
+              - listitem [ref=f9e53]:
+                - paragraph [ref=f9e54]: "03"
+                - heading "Treat and protect" [level=3] [ref=f9e55]
+                - paragraph [ref=f9e56]: With the surface barrier of dead cells removed, serums are applied while absorption is at its highest, and the treatment closes with SPF.
+          - generic [ref=f9e57]:
+            - heading "Ideal for" [level=2] [ref=f9e58]
+            - list [ref=f9e59]:
+              - listitem [ref=f9e60]:
+                - generic [aria-hidden] [ref=f9e61]: —
+                - generic [ref=f9e62]: Rough or uneven surface texture
+              - listitem [ref=f9e63]:
+                - generic [aria-hidden] [ref=f9e64]: —
+                - generic [ref=f9e65]: Makeup that clings to fine facial hair
+              - listitem [ref=f9e66]:
+                - generic [aria-hidden] [ref=f9e67]: —
+                - generic [ref=f9e68]: Skincare that seems to sit on the surface instead of absorbing
+              - listitem [ref=f9e69]:
+                - generic [aria-hidden] [ref=f9e70]: —
+                - generic [ref=f9e71]: Anyone wanting a corrective treatment with no recovery time
+        - complementary [ref=f9e72]:
+          - generic [ref=f9e73]:
+            - heading "Pricing in San Diego" [level=2] [ref=f9e74]
+            - generic [ref=f9e76]:
+              - term [ref=f9e77]: Dermaplane Facial
+              - definition [ref=f9e78]: $199
+              - definition [ref=f9e79]: A full facial with dermaplaning included — cleanse, dermaplane, treat and protect. Often paired with a peel, because a cleared surface lets the acid work evenly.
+            - paragraph [ref=f9e80]: Dermaplaning is not appropriate over active or inflamed acne, and it is skipped in those areas. Vellus hair grows back exactly as it was — same texture, same colour. It cannot grow back thicker, because the blade does not touch the follicle.
+            - paragraph [ref=f9e81]:
+              - text: Is dermaplaning safe on darker skin?
+              - link "Dermaplaning for dark skin in San Diego — what actually matters" [ref=f9e82] [cursor=pointer]:
+                - /url: /journal/dermaplaning-safe-dark-skin-san-diego/
+              - text: .
+            - link "Request Appointment" [ref=f9e84] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin
+          - generic [ref=f9e86]:
+            - link "3067 Reynard Way San Diego, CA 92103" [ref=f9e87] [cursor=pointer]:
+              - /url: "#location-map"
+              - text: 3067 Reynard WaySan Diego, CA 92103
+            - paragraph [ref=f9e88]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+            - paragraph [ref=f9e89]:
+              - link "(310) 595-0872" [ref=f9e90] [cursor=pointer]:
+                - /url: tel:+13105950872
+            - paragraph [ref=f9e91]:
+              - link "kiamoskin@gmail.com" [ref=f9e92] [cursor=pointer]:
+                - /url: mailto:kiamoskin@gmail.com
+            - paragraph [ref=f9e93]: By appointment only · Free parking
+            - paragraph [ref=f9e94]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=f9e96]:
+        - paragraph [ref=f9e97]: Before you book
+        - heading "Dermaplane Facial questions" [level=2] [ref=f9e98]
+        - generic [ref=f9e99]:
+          - group [ref=f9e101]:
+            - generic "How much does dermaplaning cost in San Diego?" [ref=f9e102] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f9e104]: +
+          - group [ref=f9e106]:
+            - generic "Is dermaplaning legal in California?" [ref=f9e107] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f9e109]: +
+          - group [ref=f9e111]:
+            - generic "What is the downside of dermaplaning?" [ref=f9e112] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f9e114]: +
+          - group [ref=f9e116]:
+            - generic "Does dermaplaning make hair grow back stubbly?" [ref=f9e117] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f9e119]: +
+          - group [ref=f9e121]:
+            - generic "Is it a problem to remove peach fuzz from the face?" [ref=f9e122] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f9e124]: +
+          - group [ref=f9e126]:
+            - generic "Is dermaplaning safe for melanin-rich skin?" [ref=f9e127] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f9e129]: +
+      - generic [ref=f9e131]:
+        - heading "Clients from across San Diego" [level=2] [ref=f9e132]
+        - paragraph [ref=f9e133]: "Dermaplane Facial is performed at the Mission Hills studio. Clients travel from these areas across San Diego County:"
+        - list [ref=f9e134]:
+          - listitem [ref=f9e135]:
+            - link [ref=f9e136] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+              - heading "Dermaplane Facial in Mission Hills" [level=3] [ref=f9e137]
+              - paragraph [ref=f9e138]: The studio itself — five minutes across the neighborhood
+          - listitem [ref=f9e139]:
+            - link [ref=f9e140] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+              - heading "Dermaplane Facial in La Jolla" [level=3] [ref=f9e141]
+              - paragraph [ref=f9e142]: About twelve miles — roughly twenty minutes south on I-5
+          - listitem [ref=f9e143]:
+            - link [ref=f9e144] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+              - heading "Dermaplane Facial in North Park" [level=3] [ref=f9e145]
+              - paragraph [ref=f9e146]: Three and a half miles — about ten minutes, no freeway needed
+        - paragraph [ref=f9e147]:
+          - link "See all areas served across San Diego County" [ref=f9e148] [cursor=pointer]:
+            - /url: /service-areas/
+      - generic [ref=f9e150]:
+        - heading "Other treatments" [level=2] [ref=f9e151]
+        - list [ref=f9e152]:
+          - listitem [ref=f9e153]:
+            - link [ref=f9e154] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+              - heading "HydraFacial" [level=3] [ref=f9e155]
+              - paragraph [ref=f9e156]: HydraFacial — the foundation of healthy skin.
+          - listitem [ref=f9e157]:
+            - link [ref=f9e158] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+              - heading "HydraFacial Keravive" [level=3] [ref=f9e159]
+              - paragraph [ref=f9e160]: HydraFacial Keravive — your scalp is skin. Treat it that way.
+          - listitem [ref=f9e161]:
+            - link [ref=f9e162] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+              - heading "DMK Enzyme Therapy" [level=3] [ref=f9e163]
+              - paragraph [ref=f9e164]: DMK Enzyme Therapy — restore skin function from within.
+          - listitem [ref=f9e165]:
+            - link [ref=f9e166] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+              - heading "Procell Microchanneling" [level=3] [ref=f9e167]
+              - paragraph [ref=f9e168]: Procell Microchanneling — stimulate your skin's natural repair process.
+          - listitem [ref=f9e169]:
+            - link [ref=f9e170] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+              - heading "Lira Chemical Peels" [level=3] [ref=f9e171]
+              - paragraph [ref=f9e172]: Lira Chemical Peels — designed to brighten without compromising skin health.
+          - listitem [ref=f9e173]:
+            - link [ref=f9e174] [cursor=pointer]:
+              - /url: /treatments/acne/
+              - heading "Acne Treatment" [level=3] [ref=f9e175]
+              - paragraph [ref=f9e176]: Acne Treatment in San Diego — clear breakouts, fade marks, smooth scars.
+  - contentinfo [ref=f9e177]:
+    - generic [ref=f9e178]:
+      - generic [ref=f9e179]:
+        - paragraph [ref=f9e180]: KIAMO Skin
+        - link "Request Appointment" [ref=f9e181] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+      - generic [ref=f9e182]:
+        - paragraph [ref=f9e183]: Visit
+        - generic [ref=f9e185]:
+          - link "3067 Reynard Way San Diego, CA 92103" [ref=f9e186] [cursor=pointer]:
+            - /url: "#location-map"
+            - text: 3067 Reynard WaySan Diego, CA 92103
+          - paragraph [ref=f9e187]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+          - paragraph [ref=f9e188]:
+            - link "(310) 595-0872" [ref=f9e189] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f9e190]:
+            - link "kiamoskin@gmail.com" [ref=f9e191] [cursor=pointer]:
+              - /url: mailto:kiamoskin@gmail.com
+          - paragraph [ref=f9e192]: By appointment only · Free parking
+          - paragraph [ref=f9e193]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=f9e194]:
+        - paragraph [ref=f9e195]: Treatments
+        - list [ref=f9e196]:
+          - listitem [ref=f9e197]:
+            - link "HydraFacial" [ref=f9e198] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+          - listitem [ref=f9e199]:
+            - link "Keravive Scalp Therapy" [ref=f9e200] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+          - listitem [ref=f9e201]:
+            - link "DMK Enzyme Therapy" [ref=f9e202] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+          - listitem [ref=f9e203]:
+            - link "Procell Microchanneling" [ref=f9e204] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+          - listitem [ref=f9e205]:
+            - link "Lira Chemical Peels" [ref=f9e206] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+          - listitem [ref=f9e207]:
+            - link "Dermaplaning" [ref=f9e208] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+        - paragraph [ref=f9e209]: More
+        - list [ref=f9e210]:
+          - listitem [ref=f9e211]:
+            - link "Treatments" [ref=f9e212] [cursor=pointer]:
+              - /url: /treatments/
+          - listitem [ref=f9e213]:
+            - link "Membership" [ref=f9e214] [cursor=pointer]:
+              - /url: /membership/
+          - listitem [ref=f9e215]:
+            - link "Melanin-Rich Skin" [ref=f9e216] [cursor=pointer]:
+              - /url: /melanin-rich-skin/
+          - listitem [ref=f9e217]:
+            - link "About" [ref=f9e218] [cursor=pointer]:
+              - /url: /about/
+          - listitem [ref=f9e219]:
+            - link "Journal" [ref=f9e220] [cursor=pointer]:
+              - /url: /journal/
+          - listitem [ref=f9e221]:
+            - link "Contact" [ref=f9e222] [cursor=pointer]:
+              - /url: /contact/
+          - listitem [ref=f9e223]:
+            - link "Book" [ref=f9e224] [cursor=pointer]:
+              - /url: /book/
+          - listitem [ref=f9e225]:
+            - link "Instagram @kiamoskin" [ref=f9e226] [cursor=pointer]:
+              - /url: https://www.instagram.com/kiamoskin/
+      - generic [ref=f9e227]:
+        - paragraph [ref=f9e228]: Areas we serve
+        - list [ref=f9e229]:
+          - listitem [ref=f9e230]:
+            - link "All areas in San Diego County" [ref=f9e231] [cursor=pointer]:
+              - /url: /service-areas/
+          - listitem [ref=f9e232]:
+            - link "Mission Hills" [ref=f9e233] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+          - listitem [ref=f9e234]:
+            - link "La Jolla" [ref=f9e235] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+          - listitem [ref=f9e236]:
+            - link "North Park" [ref=f9e237] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+          - listitem [ref=f9e238]:
+            - link "Pacific Beach" [ref=f9e239] [cursor=pointer]:
+              - /url: /service-areas/pacific-beach/
+          - listitem [ref=f9e240]:
+            - link "Chula Vista" [ref=f9e241] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+          - listitem [ref=f9e242]:
+            - link "La Mesa" [ref=f9e243] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+          - listitem [ref=f9e244]:
+            - link "Del Mar" [ref=f9e245] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+          - listitem [ref=f9e246]:
+            - link "Encinitas" [ref=f9e247] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+          - listitem [ref=f9e248]:
+            - link "Carlsbad" [ref=f9e249] [cursor=pointer]:
+              - /url: /service-areas/carlsbad/
+    - paragraph [ref=f9e251]: © 2026 KIAMO SKIN · Black-owned, Mission Hills, San Diego

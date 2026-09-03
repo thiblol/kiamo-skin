@@ -1,0 +1,184 @@
+- generic [active] [ref=f15e1]:
+  - link "Skip to content" [ref=f15e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f15e3]:
+    - generic [ref=f15e4]:
+      - link "Kiamo — KIAMO SKIN, home" [ref=f15e5] [cursor=pointer]:
+        - /url: /
+        - text: Kiamo
+        - generic [ref=f15e6]: — KIAMO SKIN, home
+      - generic [ref=f15e7]:
+        - link "Request Appointment" [ref=f15e8] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+        - button "Open menu" [ref=f15e9]
+  - main [ref=f15e13]:
+    - generic [ref=f15e15]:
+      - paragraph [ref=f15e16]: Journal
+      - heading "Notes from the treatment room." [level=1] [ref=f15e17]
+      - paragraph [ref=f15e18]: Written for people being treated in San Diego, where the climate is a bigger factor in how skin behaves than most routines account for.
+    - list [ref=f15e21]:
+      - listitem [ref=f15e22]:
+        - link [ref=f15e23] [cursor=pointer]:
+          - /url: /journal/three-kinds-of-dark-mark/
+          - img "Portrait in soft window light showing natural variation in tone across the cheek" [ref=f15e25]
+          - paragraph [ref=f15e26]: 9 min read
+          - heading "Three kinds of dark mark, and why one facial cannot fix all three" [level=2] [ref=f15e27]
+          - paragraph [ref=f15e28]: Choosing a facial for hyperpigmentation before you know which kind you have is the most common reason treatment fails — and occasionally the reason it backfires.
+      - listitem [ref=f15e29]:
+        - link [ref=f15e30] [cursor=pointer]:
+          - /url: /journal/june-gloom-is-not-sun-protection/
+          - img "Overcast San Diego coastline under a bright marine layer" [ref=f15e32]
+          - paragraph [ref=f15e33]: 4 min read
+          - heading "June gloom is not sun protection" [level=2] [ref=f15e34]
+          - paragraph [ref=f15e35]: The marine layer is the single most expensive misunderstanding in San Diego skincare. It looks like cover. It is not cover.
+      - listitem [ref=f15e36]:
+        - link [ref=f15e37] [cursor=pointer]:
+          - /url: /journal/san-diego-hard-water-and-your-scalp/
+          - img "Water falling over a hand, lit from the side" [ref=f15e39]
+          - paragraph [ref=f15e40]: 4 min read
+          - heading "San Diego hard water and your scalp" [level=2] [ref=f15e41]
+          - paragraph [ref=f15e42]: If your scalp flakes, itches, or feels coated no matter what shampoo you buy, the shampoo may not be the variable worth changing.
+      - listitem [ref=f15e43]:
+        - link [ref=f15e44] [cursor=pointer]:
+          - /url: /journal/microneedling-on-dark-skin-san-diego/
+          - img "Seated portrait beside a window in warm daylight, bare skin showing its natural texture and tone" [ref=f15e46]
+          - paragraph [ref=f15e47]: 9 min read
+          - heading "Microneedling on dark skin, and why depth decides the outcome" [level=2] [ref=f15e48]
+          - paragraph [ref=f15e49]: The question is not really whether needling works on melanin-rich skin. It is whether the person holding the device has set the depth for the skin in front of them.
+      - listitem [ref=f15e50]:
+        - link [ref=f15e51] [cursor=pointer]:
+          - /url: /journal/dermaplaning-safe-dark-skin-san-diego/
+          - img "Dermaplaning blade held at 45 degrees above deep brown skin, with angle annotation" [ref=f15e53]
+          - paragraph [ref=f15e54]: 7 min read
+          - heading "Is dermaplaning safe for dark skin? Here is what actually matters." [level=2] [ref=f15e55]
+          - paragraph [ref=f15e56]: The question is not really whether dermaplaning works on darker skin. It is whether the blade angle and pressure match the skin in front of it.
+      - listitem [ref=f15e57]:
+        - link [ref=f15e58] [cursor=pointer]:
+          - /url: /journal/dandruff-treatment-san-diego/
+          - img "HydraFacial Keravive scalp treatment device working through sectioned hair at the scalp" [ref=f15e60]
+          - paragraph [ref=f15e61]: 12 min read
+          - 'heading "Professional Scalp Treatment San Diego: Keravive for Dandruff, Flaking & Hair Health" [level=2] [ref=f15e62]'
+          - paragraph [ref=f15e63]: Looking for professional scalp treatment in San Diego? KIAMO SKIN offers Keravive therapy for dandruff, seborrheic dermatitis, dry scalp, and hair thinning. While over-the-counter shampoos treat surface symptoms, Keravive addresses the root cause.
+      - listitem [ref=f15e64]:
+        - link [ref=f15e65] [cursor=pointer]:
+          - /url: /journal/san-diego-scalp-treatments-how-keravive-works/
+          - img "HydraFacial Keravive device treating scalp with vortex technology" [ref=f15e67]
+          - paragraph [ref=f15e68]: 8 min read
+          - 'heading "San Diego Scalp Treatments: How Does Keravive Work?" [level=2] [ref=f15e69]'
+          - paragraph [ref=f15e70]: Keravive is a clinical scalp treatment designed to remove years of product buildup, hard water minerals, and oil congestion that shampoo can't reach. For San Diego residents dealing with ocean humidity, hard water, and year-round sun exposure, it addresses the root causes of flaking, tightness, and hair thinning.
+      - listitem [ref=f15e71]:
+        - link [ref=f15e72] [cursor=pointer]:
+          - /url: /journal/hyperpigmentation-treatment-guide/
+          - img "Before and after comparison showing hyperpigmentation treatment results on melanin-rich skin" [ref=f15e74]
+          - paragraph [ref=f15e75]: 18 min read
+          - 'heading "Hyperpigmentation Treatment Guide: What Actually Works for Dark Spots, Melasma & PIH" [level=2] [ref=f15e76]'
+          - paragraph [ref=f15e77]: If you have struggled with stubborn dark spots, melasma, or uneven skin tone in San Diego, the right combination of professional treatments and medical-grade home care can produce dramatic improvement—but only if the approach is calibrated for your skin tone and pigmentation type.
+      - listitem [ref=f15e78]:
+        - link [ref=f15e79] [cursor=pointer]:
+          - /url: /journal/chemical-peel-cost-san-diego/
+          - img "Licensed esthetician applying Lira chemical peel to a client's cheek using a fan brush in a softly lit treatment room" [ref=f15e81]
+          - paragraph [ref=f15e82]: 8 min read
+          - heading "How much does a chemical peel cost in San Diego?" [level=2] [ref=f15e83]
+          - paragraph [ref=f15e84]: The price of a chemical peel in San Diego varies by depth, formulation, and whether it is part of a treatment series — but the more important question is which one your skin actually needs.
+  - contentinfo [ref=f15e85]:
+    - generic [ref=f15e86]:
+      - generic [ref=f15e87]:
+        - paragraph [ref=f15e88]: KIAMO Skin
+        - link "Request Appointment" [ref=f15e89] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+      - generic [ref=f15e90]:
+        - paragraph [ref=f15e91]: Visit
+        - generic [ref=f15e93]:
+          - link "3067 Reynard Way San Diego, CA 92103" [ref=f15e94] [cursor=pointer]:
+            - /url: "#location-map"
+            - text: 3067 Reynard WaySan Diego, CA 92103
+          - paragraph [ref=f15e95]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+          - paragraph [ref=f15e96]:
+            - link "(310) 595-0872" [ref=f15e97] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f15e98]:
+            - link "kiamoskin@gmail.com" [ref=f15e99] [cursor=pointer]:
+              - /url: mailto:kiamoskin@gmail.com
+          - paragraph [ref=f15e100]: By appointment only · Free parking
+          - paragraph [ref=f15e101]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=f15e102]:
+        - paragraph [ref=f15e103]: Treatments
+        - list [ref=f15e104]:
+          - listitem [ref=f15e105]:
+            - link "HydraFacial" [ref=f15e106] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+          - listitem [ref=f15e107]:
+            - link "Keravive Scalp Therapy" [ref=f15e108] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+          - listitem [ref=f15e109]:
+            - link "DMK Enzyme Therapy" [ref=f15e110] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+          - listitem [ref=f15e111]:
+            - link "Procell Microchanneling" [ref=f15e112] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+          - listitem [ref=f15e113]:
+            - link "Lira Chemical Peels" [ref=f15e114] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+          - listitem [ref=f15e115]:
+            - link "Dermaplaning" [ref=f15e116] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+        - paragraph [ref=f15e117]: More
+        - list [ref=f15e118]:
+          - listitem [ref=f15e119]:
+            - link "Treatments" [ref=f15e120] [cursor=pointer]:
+              - /url: /treatments/
+          - listitem [ref=f15e121]:
+            - link "Membership" [ref=f15e122] [cursor=pointer]:
+              - /url: /membership/
+          - listitem [ref=f15e123]:
+            - link "Melanin-Rich Skin" [ref=f15e124] [cursor=pointer]:
+              - /url: /melanin-rich-skin/
+          - listitem [ref=f15e125]:
+            - link "About" [ref=f15e126] [cursor=pointer]:
+              - /url: /about/
+          - listitem [ref=f15e127]:
+            - link "Journal" [ref=f15e128] [cursor=pointer]:
+              - /url: /journal/
+          - listitem [ref=f15e129]:
+            - link "Contact" [ref=f15e130] [cursor=pointer]:
+              - /url: /contact/
+          - listitem [ref=f15e131]:
+            - link "Book" [ref=f15e132] [cursor=pointer]:
+              - /url: /book/
+          - listitem [ref=f15e133]:
+            - link "Instagram @kiamoskin" [ref=f15e134] [cursor=pointer]:
+              - /url: https://www.instagram.com/kiamoskin/
+      - generic [ref=f15e135]:
+        - paragraph [ref=f15e136]: Areas we serve
+        - list [ref=f15e137]:
+          - listitem [ref=f15e138]:
+            - link "All areas in San Diego County" [ref=f15e139] [cursor=pointer]:
+              - /url: /service-areas/
+          - listitem [ref=f15e140]:
+            - link "Mission Hills" [ref=f15e141] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+          - listitem [ref=f15e142]:
+            - link "La Jolla" [ref=f15e143] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+          - listitem [ref=f15e144]:
+            - link "North Park" [ref=f15e145] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+          - listitem [ref=f15e146]:
+            - link "Pacific Beach" [ref=f15e147] [cursor=pointer]:
+              - /url: /service-areas/pacific-beach/
+          - listitem [ref=f15e148]:
+            - link "Chula Vista" [ref=f15e149] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+          - listitem [ref=f15e150]:
+            - link "La Mesa" [ref=f15e151] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+          - listitem [ref=f15e152]:
+            - link "Del Mar" [ref=f15e153] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+          - listitem [ref=f15e154]:
+            - link "Encinitas" [ref=f15e155] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+          - listitem [ref=f15e156]:
+            - link "Carlsbad" [ref=f15e157] [cursor=pointer]:
+              - /url: /service-areas/carlsbad/
+    - paragraph [ref=f15e159]: © 2026 KIAMO SKIN · Black-owned, Mission Hills, San Diego

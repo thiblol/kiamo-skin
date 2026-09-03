@@ -1,0 +1,468 @@
+- generic [active] [ref=f12e1]:
+  - link "Skip to content" [ref=f12e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f12e3]:
+    - generic [ref=f12e4]:
+      - link "Kiamo — KIAMO SKIN, home" [ref=f12e5] [cursor=pointer]:
+        - /url: /
+        - text: Kiamo
+        - generic [ref=f12e6]: — KIAMO SKIN, home
+      - generic [ref=f12e7]:
+        - link "Request Appointment" [ref=f12e8] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+        - button "Open menu" [ref=f12e9]
+  - main [ref=f12e13]:
+    - article [ref=f12e14]:
+      - generic [ref=f12e16]:
+        - generic [ref=f12e17]:
+          - paragraph [ref=f12e18]: Membership
+          - heading "Skin doesn’t keep results. It rebuilds them." [level=1] [ref=f12e19]
+          - paragraph [ref=f12e20]: Looking for a monthly facial membership in San Diego? KIAMO SKIN memberships start at $199 a month at the studio in Mission Hills — against $259 for the same HydraFacial booked one visit at a time.
+          - paragraph [ref=f12e21]: Every treatment on this menu is chosen to change something. What none of them can do is hold that change alone, because the skin you are treating today will have replaced itself before the next appointment. A membership is how the work compounds instead of resetting.
+          - generic [ref=f12e22]:
+            - link "See the plans" [ref=f12e23] [cursor=pointer]:
+              - /url: "#plans"
+            - link "(310) 595-0872" [ref=f12e24] [cursor=pointer]:
+              - /url: tel:+13105950872
+        - img "Monthly HydraFacial membership treatment at KIAMO Skin studio in Mission Hills, San Diego" [ref=f12e25]
+      - generic [ref=f12e27]:
+        - generic [ref=f12e28]:
+          - paragraph [ref=f12e29]: What it is
+          - heading "What is a facial membership?" [level=2] [ref=f12e30]
+        - generic [ref=f12e32]:
+          - paragraph [ref=f12e33]: A facial membership—sometimes called a skincare membership or facial subscription—is a monthly plan that provides regular corrective treatments at a fixed rate. Unlike buying facials one at a time, a monthly facial membership ensures consistency, which is how skin correction actually works.
+          - paragraph [ref=f12e34]: At KIAMO SKIN, facial memberships start at $199 per month for a monthly HydraFacial in Mission Hills, San Diego—against $259 for the same treatment booked individually. The value is in the rhythm, not just the discount.
+      - generic [ref=f12e36]:
+        - generic [ref=f12e37]:
+          - paragraph [ref=f12e38]: Why monthly
+          - heading "Your skin is slower than San Diego spas say it is" [level=2] [ref=f12e39]
+        - generic [ref=f12e40]:
+          - generic [ref=f12e41]:
+            - paragraph [ref=f12e42]:
+              - text: Almost every spa in San Diego will tell you skin renews on a 28-day cycle. The primary research does not say that. Reviewing the human data,
+              - link "epidermal turnover is estimated at 40 to 56 days" [ref=f12e43] [cursor=pointer]:
+                - /url: https://pmc.ncbi.nlm.nih.gov/articles/PMC2861991/
+              - text: ", and a compartment-by-compartment recalculation of the same measurements"
+              - link "puts it at 47 to 48 days" [ref=f12e44] [cursor=pointer]:
+                - /url: https://pubmed.ncbi.nlm.nih.gov/7865480/
+              - text: . It slows further with age.
+            - paragraph [ref=f12e45]: That single correction changes the entire arithmetic of booking facials. A treatment every three or four months does not land in the next cycle — it lands two cycles later, on skin that has completely replaced the skin that was treated. Nothing accumulates. You are paying full price to start again, and then judging the treatment for not working.
+            - paragraph [ref=f12e46]:
+              - text: A monthly rhythm sits inside the cycle rather than outside it. Each visit works on skin the last visit already changed, which is the only condition under which correction is cumulative. It is also why the
+              - link "peel pages here say there is no single-session version of pigmentation work" [ref=f12e47] [cursor=pointer]:
+                - /url: /treatments/lira-peels/
+              - text: ", and why scalp therapy is priced as a series. The membership is not a new idea. It is the delivery mechanism for what this studio has been saying since the day it opened."
+          - figure "Back congestion and pigmentation, across a course of treatment. Results vary." [ref=f12e49]:
+            - img "Back congestion and pigmentation before and after a course of treatment at KIAMO Skin" [ref=f12e50]
+      - generic [ref=f12e53]:
+        - paragraph [ref=f12e54]: The memberships
+        - heading "Three plans, one studio in Mission Hills" [level=2] [ref=f12e55]
+        - paragraph [ref=f12e56]: Every plan includes one personalized treatment each month at the studio on Reynard Way in Mission Hills — off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy. Plans differ by how much is done in that visit, and which one is right depends on whether your skin is being maintained or actively corrected.
+        - list [ref=f12e57]:
+          - listitem [ref=f12e58]:
+            - paragraph [ref=f12e59]: I
+            - heading "GLOW" [level=3] [ref=f12e60]
+            - paragraph [ref=f12e61]: Foundation
+            - paragraph [ref=f12e62]: $199/ month
+            - paragraph [ref=f12e63]: For skin that is already stable and needs to stay that way. A monthly HydraFacial holds a corrected result rather than chasing a new one.
+            - list [ref=f12e64]:
+              - listitem [ref=f12e65]:
+                - generic [aria-hidden] [ref=f12e66]: —
+                - generic [ref=f12e67]: A customized HydraFacial each month
+              - listitem [ref=f12e68]:
+                - generic [aria-hidden] [ref=f12e69]: —
+                - generic [ref=f12e70]: A personalized Hydrojelly mask
+            - generic [ref=f12e71]:
+              - paragraph [ref=f12e72]: Booked individually
+              - generic [ref=f12e74]:
+                - term [ref=f12e75]:
+                  - link "HydraFacial Treatment" [ref=f12e76] [cursor=pointer]:
+                    - /url: /treatments/hydrafacial/
+                - definition [ref=f12e77]: $259
+            - generic [ref=f12e78]:
+              - link "Get GLOW" [ref=f12e79] [cursor=pointer]:
+                - /url: https://www.vagaro.com/kiamoskin/memberships
+              - paragraph [ref=f12e80]: Six months, then 30 days notice
+          - listitem [ref=f12e81]:
+            - paragraph [ref=f12e82]: Most chosen
+            - paragraph [ref=f12e83]: II
+            - heading "LUX" [level=3] [ref=f12e84]
+            - paragraph [ref=f12e85]: Refine
+            - paragraph [ref=f12e86]: $299/ month
+            - paragraph [ref=f12e87]: For skin being actively worked on rather than maintained. Two treatments in one visit, with the booster chosen for what the skin is doing that month.
+            - list [ref=f12e88]:
+              - listitem [ref=f12e89]:
+                - generic [aria-hidden] [ref=f12e90]: —
+                - generic [ref=f12e91]: A customized HydraFacial each month
+              - listitem [ref=f12e92]:
+                - generic [aria-hidden] [ref=f12e93]: —
+                - generic [ref=f12e94]: Dermaplaning or microcurrent, your choice
+              - listitem [ref=f12e95]:
+                - generic [aria-hidden] [ref=f12e96]: —
+                - generic [ref=f12e97]: A corrective booster selected for your concern
+              - listitem [ref=f12e98]:
+                - generic [aria-hidden] [ref=f12e99]: —
+                - generic [ref=f12e100]: LED light therapy
+              - listitem [ref=f12e101]:
+                - generic [aria-hidden] [ref=f12e102]: —
+                - generic [ref=f12e103]: A personalized Hydrojelly mask
+            - generic [ref=f12e104]:
+              - paragraph [ref=f12e105]: Booked individually
+              - generic [ref=f12e106]:
+                - generic [ref=f12e107]:
+                  - term [ref=f12e108]:
+                    - link "HydraFacial Treatment" [ref=f12e109] [cursor=pointer]:
+                      - /url: /treatments/hydrafacial/
+                  - definition [ref=f12e110]: $259
+                - generic [ref=f12e111]:
+                  - term [ref=f12e112]:
+                    - link "Dermaplane Facial" [ref=f12e113] [cursor=pointer]:
+                      - /url: /treatments/dermaplaning/
+                  - definition [ref=f12e114]: $199
+            - generic [ref=f12e115]:
+              - link "Get LUX" [ref=f12e116] [cursor=pointer]:
+                - /url: https://www.vagaro.com/kiamoskin/memberships
+              - paragraph [ref=f12e117]: Six months, then 30 days notice
+          - listitem [ref=f12e118]:
+            - paragraph [ref=f12e119]: III
+            - heading "OPULENCE" [level=3] [ref=f12e120]
+            - paragraph [ref=f12e121]: Transform
+            - paragraph [ref=f12e122]: $399/ month
+            - paragraph [ref=f12e123]: For long-term correction across the whole treated area. The face is where most studios stop; the neck and décolleté age faster and are usually the giveaway.
+            - list [ref=f12e124]:
+              - listitem [ref=f12e125]:
+                - generic [aria-hidden] [ref=f12e126]: —
+                - generic [ref=f12e127]: A customized HydraFacial each month
+              - listitem [ref=f12e128]:
+                - generic [aria-hidden] [ref=f12e129]: —
+                - generic [ref=f12e130]: Neck and décolleté included, not extra
+              - listitem [ref=f12e131]:
+                - generic [aria-hidden] [ref=f12e132]: —
+                - generic [ref=f12e133]: Facial lymphatic drainage
+              - listitem [ref=f12e134]:
+                - generic [aria-hidden] [ref=f12e135]: —
+                - generic [ref=f12e136]: Dermaplaning or microcurrent, your choice
+              - listitem [ref=f12e137]:
+                - generic [aria-hidden] [ref=f12e138]: —
+                - generic [ref=f12e139]: An advanced corrective booster
+              - listitem [ref=f12e140]:
+                - generic [aria-hidden] [ref=f12e141]: —
+                - generic [ref=f12e142]: LED light therapy
+              - listitem [ref=f12e143]:
+                - generic [aria-hidden] [ref=f12e144]: —
+                - generic [ref=f12e145]: A personalized Hydrojelly mask
+            - generic [ref=f12e146]:
+              - link "Get OPULENCE" [ref=f12e147] [cursor=pointer]:
+                - /url: https://www.vagaro.com/kiamoskin/memberships
+              - paragraph [ref=f12e148]: Six months, then 30 days notice
+        - paragraph [ref=f12e149]:
+          - text: Not sure which plan fits? The
+          - link "first-time consultation in Mission Hills" [ref=f12e150] [cursor=pointer]:
+            - /url: /book/
+          - text: assesses your skin first and the plan follows from it.
+      - generic [ref=f12e152]:
+        - generic [ref=f12e153]:
+          - paragraph [ref=f12e154]: Every plan includes
+          - heading "What being a member actually changes" [level=2] [ref=f12e155]
+        - list [ref=f12e156]:
+          - listitem [ref=f12e157]:
+            - heading "One personalized treatment every month" [level=3] [ref=f12e158]
+            - paragraph [ref=f12e159]: Selected for what your skin is doing that month, not booked as the same protocol on repeat.
+          - listitem [ref=f12e160]:
+            - heading "15% off retail" [level=3] [ref=f12e161]
+            - paragraph [ref=f12e162]: Home care is most of the result. The routine between visits is what the treatments are protecting.
+          - listitem [ref=f12e163]:
+            - heading "Priority booking" [level=3] [ref=f12e164]
+            - paragraph [ref=f12e165]: One licensed esthetician, appointment-only. Members are offered times first.
+          - listitem [ref=f12e166]:
+            - heading "Upgrade by paying the difference" [level=3] [ref=f12e167]
+            - paragraph [ref=f12e168]: Apply the value of your monthly treatment to any eligible advanced service and pay only the gap.
+          - listitem [ref=f12e169]:
+            - heading "Progress assessments at no charge" [level=3] [ref=f12e170]
+            - paragraph [ref=f12e171]: Skin is photographed and reviewed against where it started, so the plan is adjusted on evidence.
+          - listitem [ref=f12e172]:
+            - heading "Member pricing on select treatments" [level=3] [ref=f12e173]
+            - paragraph [ref=f12e174]: On enhancements and add-ons beyond what the monthly treatment already covers.
+          - listitem [ref=f12e175]:
+            - heading "Early access and member events" [level=3] [ref=f12e176]
+            - paragraph [ref=f12e177]: New treatments, new products and member-only evenings, before they are announced publicly.
+          - listitem [ref=f12e178]:
+            - heading "Gift a month to one guest" [level=3] [ref=f12e179]
+            - paragraph [ref=f12e180]: An unused monthly treatment can go to one guest. They book through Vagaro under their own account.
+      - generic [ref=f12e183]:
+        - paragraph [ref=f12e184]: The arithmetic
+        - heading "The same two treatments, in the same room" [level=2] [ref=f12e185]
+        - paragraph [ref=f12e186]: A HydraFacial and a dermaplane facial are the two most-booked treatments here. This is what they cost separately, and what they cost together on the LUX membership.
+        - generic [ref=f12e187]:
+          - generic [ref=f12e188]:
+            - paragraph [ref=f12e189]: Booked one at a time
+            - generic [ref=f12e190]:
+              - generic [ref=f12e191]:
+                - term [ref=f12e192]: HydraFacial Treatment
+                - definition [ref=f12e193]: $259
+              - generic [ref=f12e194]:
+                - term [ref=f12e195]: Dermaplane Facial
+                - definition [ref=f12e196]: $199
+            - paragraph [ref=f12e197]: Two separate visits, two separate bookings, at whatever times are left.
+          - generic [ref=f12e198]:
+            - paragraph [ref=f12e199]: On the LUX membership
+            - generic [ref=f12e201]:
+              - term [ref=f12e202]: LUX membership, both treatments in one visit
+              - definition [ref=f12e203]: $299
+            - paragraph [ref=f12e204]: One visit each month, booked before non-member times are released, with 15% off the home care that holds the result.
+      - generic [ref=f12e206]:
+        - generic [ref=f12e207]:
+          - paragraph [ref=f12e208]: Flexibility
+          - heading "When life gets in the way" [level=2] [ref=f12e209]
+          - paragraph [ref=f12e210]: A membership you cannot use is not a saving. These are the four things that actually go wrong, and what happens in each case.
+        - list [ref=f12e211]:
+          - listitem [ref=f12e212]:
+            - paragraph [ref=f12e213]: "01"
+            - heading "What if I miss a month?" [level=3] [ref=f12e214]
+            - paragraph [ref=f12e215]: The treatment rolls over and your membership stays active. Up to three can be banked at once — past that the point of a monthly rhythm is gone, and a plan you are three months behind on is a plan that is not working.
+          - listitem [ref=f12e216]:
+            - paragraph [ref=f12e217]: "02"
+            - heading "What if I want something more advanced?" [level=3] [ref=f12e218]
+            - paragraph [ref=f12e219]: Apply the value of your monthly treatment to any eligible advanced service and pay only the difference. A Procell series or an advanced peel can be run on a membership rather than instead of one.
+          - listitem [ref=f12e220]:
+            - paragraph [ref=f12e221]: "03"
+            - heading "What if I cannot use it this month?" [level=3] [ref=f12e222]
+            - paragraph [ref=f12e223]: Gift it 1x to one guest. They create a Vagaro account and book their own appointment. It is one guest per treatment, so it stays a gift rather than becoming a second membership.
+          - listitem [ref=f12e224]:
+            - paragraph [ref=f12e225]: "04"
+            - heading "What if life gets in the way entirely?" [level=3] [ref=f12e226]
+            - paragraph [ref=f12e227]: Memberships cannot be paused but may be canceled after the 6 month and restarted later, subject to current availability and pricing.
+      - generic [ref=f12e231]:
+        - paragraph [ref=f12e232]: The commitment
+        - heading "Six months is four renewal cycles" [level=2] [ref=f12e233]
+        - paragraph [ref=f12e234]: Membership begins with a six-month commitment, and that is the part worth explaining rather than hiding.
+        - paragraph [ref=f12e235]: At 40 to 56 days a cycle, six months is roughly four complete turnovers of the skin being treated. Three months is two — enough to change surface texture, rarely enough to move pigmentation or scarring, which are the two things most people arrive here for. A commitment shorter than the biology would be easier to sell and would set you up to conclude the treatment failed.
+        - paragraph [ref=f12e236]: After six months the membership continues month to month and you may cancel your membership. I just need a 30 day notice before the next month to month cycle. Text or email.
+      - generic [ref=f12e238]:
+        - generic [ref=f12e239]:
+          - paragraph [ref=f12e240]: What you are buying
+          - heading "Your first three months" [level=2] [ref=f12e241]
+        - list [ref=f12e242]:
+          - listitem [ref=f12e243]:
+            - paragraph [ref=f12e244]: Month one
+            - heading "Baseline and barrier" [level=3] [ref=f12e245]
+            - paragraph [ref=f12e246]: Nothing corrective happens until the barrier can take it. The first month establishes what the skin is actually doing, photographs it, and starts the home routine that everything after depends on.
+          - listitem [ref=f12e247]:
+            - paragraph [ref=f12e248]: Month two
+            - heading "Correction begins" [level=3] [ref=f12e249]
+            - paragraph [ref=f12e250]: With the barrier holding, the work starts — congestion, pigmentation, texture or scarring, whichever the assessment identified. Strength escalates across visits rather than inside one.
+          - listitem [ref=f12e251]:
+            - paragraph [ref=f12e252]: Month three
+            - heading "Assessment against month one" [level=3] [ref=f12e253]
+            - paragraph [ref=f12e254]: Your skin is reviewed against its own starting photographs, not against anybody else. What is working continues, what is not gets changed. This is the point a plan either earns the next three months or is rewritten.
+        - generic [ref=f12e255]:
+          - img "Kiki, licensed esthetician, at the front desk of the KIAMO Skin studio in Mission Hills" [ref=f12e257]
+          - generic [ref=f12e258]:
+            - paragraph [ref=f12e259]: Treatment is one-to-one with Kiki, a licensed esthetician registered with the California Board of Barbering and Cosmetology. One client at a time, which is the reason priority booking is worth something here rather than being a perk on a list — member times are offered before the rest of the month is released.
+            - paragraph [ref=f12e260]:
+              - text: Melanin-rich skin is the specialism rather than a service line — see
+              - link "facials for melanin-rich skin in San Diego" [ref=f12e261] [cursor=pointer]:
+                - /url: /melanin-rich-skin/
+              - text: ", or the full"
+              - link "corrective treatment menu in San Diego" [ref=f12e262] [cursor=pointer]:
+                - /url: /treatments/
+              - text: .
+            - paragraph [ref=f12e263]:
+              - text: Members travel in from across the county — see the
+              - link "areas served across San Diego County" [ref=f12e264] [cursor=pointer]:
+                - /url: /service-areas/
+              - text: ", or read about"
+              - link "facials in Mission Hills" [ref=f12e265] [cursor=pointer]:
+                - /url: /service-areas/mission-hills/
+              - text: if you are local to the studio.
+            - link "Become a member" [ref=f12e267] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin/memberships
+      - generic [ref=f12e269]:
+        - paragraph [ref=f12e270]: Before you join
+        - heading "Membership questions" [level=2] [ref=f12e271]
+        - generic [ref=f12e272]:
+          - group [ref=f12e274]:
+            - generic "Is one facial a month enough?" [ref=f12e275] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f12e277]: +
+          - group [ref=f12e279]:
+            - generic "Is a monthly HydraFacial worth it?" [ref=f12e280] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f12e282]: +
+          - group [ref=f12e284]:
+            - generic "What is the difference between a facial membership and a package?" [ref=f12e285] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f12e287]: +
+          - group [ref=f12e289]:
+            - generic "Can I use my membership treatment on a different service?" [ref=f12e290] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f12e292]: +
+          - group [ref=f12e294]:
+            - generic "Why is there a six-month commitment?" [ref=f12e295] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f12e297]: +
+          - group [ref=f12e299]:
+            - generic "What happens to my membership if I stop coming?" [ref=f12e300] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f12e302]: +
+          - group [ref=f12e304]:
+            - generic "How do I cancel a facial membership?" [ref=f12e305] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f12e307]: +
+          - group [ref=f12e309]:
+            - generic "Where is the studio, and is a monthly membership realistic if I do not live nearby?" [ref=f12e310] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f12e312]: +
+          - group [ref=f12e314]:
+            - generic "What is a skincare membership?" [ref=f12e315] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f12e317]: +
+          - group [ref=f12e319]:
+            - generic "Do you offer a facial subscription service?" [ref=f12e320] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f12e322]: +
+          - group [ref=f12e324]:
+            - generic "What's included in a HydraFacial membership?" [ref=f12e325] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f12e327]: +
+      - generic [ref=f12e329]:
+        - generic [ref=f12e330]:
+          - paragraph [ref=f12e331]: Billing and cancellation
+          - heading "Membership terms in San Diego" [level=2] [ref=f12e332]
+          - list [ref=f12e333]:
+            - listitem [ref=f12e334]:
+              - generic [aria-hidden] [ref=f12e335]: —
+              - generic [ref=f12e336]: Memberships are billed automatically within the first week of each month.
+            - listitem [ref=f12e337]:
+              - generic [aria-hidden] [ref=f12e338]: —
+              - generic [ref=f12e339]: Membership begins with a six-month commitment, then continues month to month.
+            - listitem [ref=f12e340]:
+              - generic [aria-hidden] [ref=f12e341]: —
+              - generic [ref=f12e342]: After the first six months you may cancel your membership with 30 days notice before the next month to month cycle. Text or email.
+            - listitem [ref=f12e343]:
+              - generic [aria-hidden] [ref=f12e344]: —
+              - generic [ref=f12e345]: Unused monthly treatments roll over while your membership is active, up to three at a time.
+            - listitem [ref=f12e346]:
+              - generic [aria-hidden] [ref=f12e347]: —
+              - generic [ref=f12e348]: Memberships cannot be paused. After the first six months a membership can be cancelled and restarted later, subject to current availability and pricing.
+            - listitem [ref=f12e349]:
+              - generic [aria-hidden] [ref=f12e350]: —
+              - generic [ref=f12e351]: Membership treatments are for one person. A single unused treatment may be gifted to one guest.
+            - listitem [ref=f12e352]:
+              - generic [aria-hidden] [ref=f12e353]: —
+              - generic [ref=f12e354]: Member pricing cannot be combined with other promotions.
+          - paragraph [ref=f12e355]: "Memberships are set up and managed through Vagaro, where the recurring charge is confirmed before anything is billed. Appointments are requested rather than instantly confirmed — by appointment only, and the schedule is Kiki's alone. That is also why priority booking is worth something here: member times are offered before the remainder is released."
+          - generic [ref=f12e356]:
+            - link "Become a member" [ref=f12e357] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin/memberships
+            - link "Request Appointment" [ref=f12e358] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin
+            - link "(310) 595-0872" [ref=f12e359] [cursor=pointer]:
+              - /url: tel:+13105950872
+        - complementary [ref=f12e360]:
+          - generic [ref=f12e361]:
+            - heading "Visit" [level=2] [ref=f12e362]
+            - generic [ref=f12e364]:
+              - link "3067 Reynard Way San Diego, CA 92103" [ref=f12e365] [cursor=pointer]:
+                - /url: "#location-map"
+                - text: 3067 Reynard WaySan Diego, CA 92103
+              - paragraph [ref=f12e366]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+              - paragraph [ref=f12e367]:
+                - link "(310) 595-0872" [ref=f12e368] [cursor=pointer]:
+                  - /url: tel:+13105950872
+              - paragraph [ref=f12e369]:
+                - link "kiamoskin@gmail.com" [ref=f12e370] [cursor=pointer]:
+                  - /url: mailto:kiamoskin@gmail.com
+              - paragraph [ref=f12e371]: By appointment only · Free parking
+              - paragraph [ref=f12e372]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+  - contentinfo [ref=f12e373]:
+    - generic [ref=f12e374]:
+      - generic [ref=f12e375]:
+        - paragraph [ref=f12e376]: KIAMO Skin
+        - link "Request Appointment" [ref=f12e377] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+      - generic [ref=f12e378]:
+        - paragraph [ref=f12e379]: Visit
+        - generic [ref=f12e381]:
+          - link "3067 Reynard Way San Diego, CA 92103" [ref=f12e382] [cursor=pointer]:
+            - /url: "#location-map"
+            - text: 3067 Reynard WaySan Diego, CA 92103
+          - paragraph [ref=f12e383]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+          - paragraph [ref=f12e384]:
+            - link "(310) 595-0872" [ref=f12e385] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f12e386]:
+            - link "kiamoskin@gmail.com" [ref=f12e387] [cursor=pointer]:
+              - /url: mailto:kiamoskin@gmail.com
+          - paragraph [ref=f12e388]: By appointment only · Free parking
+          - paragraph [ref=f12e389]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=f12e390]:
+        - paragraph [ref=f12e391]: Treatments
+        - list [ref=f12e392]:
+          - listitem [ref=f12e393]:
+            - link "HydraFacial" [ref=f12e394] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+          - listitem [ref=f12e395]:
+            - link "Keravive Scalp Therapy" [ref=f12e396] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+          - listitem [ref=f12e397]:
+            - link "DMK Enzyme Therapy" [ref=f12e398] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+          - listitem [ref=f12e399]:
+            - link "Procell Microchanneling" [ref=f12e400] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+          - listitem [ref=f12e401]:
+            - link "Lira Chemical Peels" [ref=f12e402] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+          - listitem [ref=f12e403]:
+            - link "Dermaplaning" [ref=f12e404] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+        - paragraph [ref=f12e405]: More
+        - list [ref=f12e406]:
+          - listitem [ref=f12e407]:
+            - link "Treatments" [ref=f12e408] [cursor=pointer]:
+              - /url: /treatments/
+          - listitem [ref=f12e409]:
+            - link "Membership" [ref=f12e410] [cursor=pointer]:
+              - /url: /membership/
+          - listitem [ref=f12e411]:
+            - link "Melanin-Rich Skin" [ref=f12e412] [cursor=pointer]:
+              - /url: /melanin-rich-skin/
+          - listitem [ref=f12e413]:
+            - link "About" [ref=f12e414] [cursor=pointer]:
+              - /url: /about/
+          - listitem [ref=f12e415]:
+            - link "Journal" [ref=f12e416] [cursor=pointer]:
+              - /url: /journal/
+          - listitem [ref=f12e417]:
+            - link "Contact" [ref=f12e418] [cursor=pointer]:
+              - /url: /contact/
+          - listitem [ref=f12e419]:
+            - link "Book" [ref=f12e420] [cursor=pointer]:
+              - /url: /book/
+          - listitem [ref=f12e421]:
+            - link "Instagram @kiamoskin" [ref=f12e422] [cursor=pointer]:
+              - /url: https://www.instagram.com/kiamoskin/
+      - generic [ref=f12e423]:
+        - paragraph [ref=f12e424]: Areas we serve
+        - list [ref=f12e425]:
+          - listitem [ref=f12e426]:
+            - link "All areas in San Diego County" [ref=f12e427] [cursor=pointer]:
+              - /url: /service-areas/
+          - listitem [ref=f12e428]:
+            - link "Mission Hills" [ref=f12e429] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+          - listitem [ref=f12e430]:
+            - link "La Jolla" [ref=f12e431] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+          - listitem [ref=f12e432]:
+            - link "North Park" [ref=f12e433] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+          - listitem [ref=f12e434]:
+            - link "Pacific Beach" [ref=f12e435] [cursor=pointer]:
+              - /url: /service-areas/pacific-beach/
+          - listitem [ref=f12e436]:
+            - link "Chula Vista" [ref=f12e437] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+          - listitem [ref=f12e438]:
+            - link "La Mesa" [ref=f12e439] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+          - listitem [ref=f12e440]:
+            - link "Del Mar" [ref=f12e441] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+          - listitem [ref=f12e442]:
+            - link "Encinitas" [ref=f12e443] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+          - listitem [ref=f12e444]:
+            - link "Carlsbad" [ref=f12e445] [cursor=pointer]:
+              - /url: /service-areas/carlsbad/
+    - paragraph [ref=f12e447]: © 2026 KIAMO SKIN · Black-owned, Mission Hills, San Diego

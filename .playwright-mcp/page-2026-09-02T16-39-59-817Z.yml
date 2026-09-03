@@ -1,0 +1,209 @@
+- generic [active] [ref=f11e1]:
+  - link "Skip to content" [ref=f11e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f11e3]:
+    - generic [ref=f11e4]:
+      - link "Kiamo — KIAMO SKIN, home" [ref=f11e5] [cursor=pointer]:
+        - /url: /
+        - text: Kiamo
+        - generic [ref=f11e6]: — KIAMO SKIN, home
+      - generic [ref=f11e7]:
+        - link "Request Appointment" [ref=f11e8] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+        - button "Open menu" [ref=f11e9]
+  - main [ref=f11e13]:
+    - generic [ref=f11e15]:
+      - paragraph [ref=f11e16]: About
+      - heading "A studio built around correction." [level=1] [ref=f11e17]
+      - paragraph [ref=f11e18]: At KIAMO Skin, we believe correction begins by understanding what’s causing the concern not simply covering it up. Every treatment is designed to strengthen the skin and scalp from the inside out through advanced technology, evidence based care, and personalized treatment plans that evolve with you.
+    - generic [ref=f11e20]:
+      - img "Kiki, licensed esthetician and owner of KIAMO Skin" [ref=f11e22]
+      - generic [ref=f11e23]:
+        - paragraph [ref=f11e24]: Kiki
+        - heading "Licensed Esthetician, California Board of Barbering & Cosmetology" [level=2] [ref=f11e25]
+        - paragraph [ref=f11e26]: Practicing corrective skincare since 2019, I combine advanced clinical treatments with individualized treatment planning. Every recommendation is intentional, based on your skin’s current condition, long-term goals, and what will deliver the healthiest results not simply the most aggressive treatment.
+        - blockquote [ref=f11e27]: This isn’t just a spa facial. This is strategy, correction, intention.
+        - link "See the treatments" [ref=f11e29] [cursor=pointer]:
+          - /url: /treatments/
+    - generic [ref=f11e31]:
+      - paragraph [ref=f11e32]: How we work
+      - heading "An inclusive space where everyone feels seen." [level=2] [ref=f11e33]
+      - paragraph [ref=f11e34]: At KIAMO Skin, we are proud to be a Black-owned business committed to creating an inclusive space where everyone feels seen, valued, and cared for.
+      - paragraph [ref=f11e35]:
+        - link "Facials for melanin-rich skin in San Diego" [ref=f11e36] [cursor=pointer]:
+          - /url: /melanin-rich-skin/
+        - text: are the specialism the studio was built around.
+      - list [ref=f11e37]:
+        - listitem [ref=f11e38]:
+          - paragraph [ref=f11e39]: "01"
+          - heading "Education first" [level=3] [ref=f11e40]
+          - paragraph [ref=f11e41]: You should leave knowing what was done and why, and what to do at home. A treatment you do not understand is a treatment you will not repeat correctly.
+        - listitem [ref=f11e42]:
+          - paragraph [ref=f11e43]: "02"
+          - heading "Melanin-rich expertise" [level=3] [ref=f11e44]
+          - paragraph [ref=f11e45]: Every treatment protocol is thoughtfully selected to support all skin tones, with specialized expertise in the unique needs of melanin-rich skin.
+        - listitem [ref=f11e46]:
+          - paragraph [ref=f11e47]: "03"
+          - heading "Consistency over intensity" [level=3] [ref=f11e48]
+          - paragraph [ref=f11e49]: Skin does not change overnight. A sensible plan followed for months beats an aggressive treatment followed by nothing.
+      - paragraph [ref=f11e50]:
+        - text: A plan followed for months is what the
+        - link "monthly skin membership" [ref=f11e51] [cursor=pointer]:
+          - /url: /membership/
+        - text: is built to make possible.
+      - paragraph [ref=f11e52]:
+        - text: The approach to pigmentation starts with
+        - link "knowing which kind of dark mark you have" [ref=f11e53] [cursor=pointer]:
+          - /url: /journal/three-kinds-of-dark-mark/
+        - text: .
+    - generic [ref=f11e55]:
+      - img "Inside the KIAMO Skin treatment room in Mission Hills, San Diego" [ref=f11e57]
+      - generic [ref=f11e58]:
+        - paragraph [ref=f11e59]: The studio
+        - heading "Visiting" [level=2] [ref=f11e60]
+        - generic [ref=f11e62]:
+          - link "3067 Reynard Way San Diego, CA 92103" [ref=f11e63] [cursor=pointer]:
+            - /url: "#location-map"
+            - text: 3067 Reynard WaySan Diego, CA 92103
+          - paragraph [ref=f11e64]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+          - paragraph [ref=f11e65]:
+            - link "(310) 595-0872" [ref=f11e66] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f11e67]:
+            - link "kiamoskin@gmail.com" [ref=f11e68] [cursor=pointer]:
+              - /url: mailto:kiamoskin@gmail.com
+          - paragraph [ref=f11e69]: By appointment only · Free parking
+          - paragraph [ref=f11e70]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+        - paragraph [ref=f11e71]:
+          - text: Clients travel from across San Diego County — from
+          - link "North Park" [ref=f11e72] [cursor=pointer]:
+            - /url: /service-areas/north-park/
+          - text: (10 minutes) and
+          - link "La Jolla" [ref=f11e73] [cursor=pointer]:
+            - /url: /service-areas/la-jolla/
+          - text: (20 minutes) to
+          - link "Chula Vista" [ref=f11e74] [cursor=pointer]:
+            - /url: /service-areas/chula-vista/
+          - text: (25 minutes) and
+          - link "Carlsbad" [ref=f11e75] [cursor=pointer]:
+            - /url: /service-areas/carlsbad/
+          - text: (35 minutes). Coastal communities like
+          - link "Pacific Beach" [ref=f11e76] [cursor=pointer]:
+            - /url: /service-areas/pacific-beach/
+          - text: ","
+          - link "Encinitas" [ref=f11e77] [cursor=pointer]:
+            - /url: /service-areas/encinitas/
+          - text: and
+          - link "Del Mar" [ref=f11e78] [cursor=pointer]:
+            - /url: /service-areas/del-mar/
+          - text: bring concerns shaped by ocean exposure, while inland areas like
+          - link "La Mesa" [ref=f11e79] [cursor=pointer]:
+            - /url: /service-areas/la-mesa/
+          - text: see more UV-driven pigmentation.
+          - link "See drive times and directions for all areas" [ref=f11e80] [cursor=pointer]:
+            - /url: /service-areas/
+          - text: .
+        - link "Request Appointment" [ref=f11e82] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+  - contentinfo [ref=f11e83]:
+    - generic [ref=f11e84]:
+      - generic [ref=f11e85]:
+        - paragraph [ref=f11e86]: KIAMO Skin
+        - link "Request Appointment" [ref=f11e87] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+      - generic [ref=f11e88]:
+        - paragraph [ref=f11e89]: Visit
+        - generic [ref=f11e91]:
+          - link "3067 Reynard Way San Diego, CA 92103" [ref=f11e92] [cursor=pointer]:
+            - /url: "#location-map"
+            - text: 3067 Reynard WaySan Diego, CA 92103
+          - paragraph [ref=f11e93]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+          - paragraph [ref=f11e94]:
+            - link "(310) 595-0872" [ref=f11e95] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f11e96]:
+            - link "kiamoskin@gmail.com" [ref=f11e97] [cursor=pointer]:
+              - /url: mailto:kiamoskin@gmail.com
+          - paragraph [ref=f11e98]: By appointment only · Free parking
+          - paragraph [ref=f11e99]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=f11e100]:
+        - paragraph [ref=f11e101]: Treatments
+        - list [ref=f11e102]:
+          - listitem [ref=f11e103]:
+            - link "HydraFacial" [ref=f11e104] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+          - listitem [ref=f11e105]:
+            - link "Keravive Scalp Therapy" [ref=f11e106] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+          - listitem [ref=f11e107]:
+            - link "DMK Enzyme Therapy" [ref=f11e108] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+          - listitem [ref=f11e109]:
+            - link "Procell Microchanneling" [ref=f11e110] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+          - listitem [ref=f11e111]:
+            - link "Lira Chemical Peels" [ref=f11e112] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+          - listitem [ref=f11e113]:
+            - link "Dermaplaning" [ref=f11e114] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+        - paragraph [ref=f11e115]: More
+        - list [ref=f11e116]:
+          - listitem [ref=f11e117]:
+            - link "Treatments" [ref=f11e118] [cursor=pointer]:
+              - /url: /treatments/
+          - listitem [ref=f11e119]:
+            - link "Membership" [ref=f11e120] [cursor=pointer]:
+              - /url: /membership/
+          - listitem [ref=f11e121]:
+            - link "Melanin-Rich Skin" [ref=f11e122] [cursor=pointer]:
+              - /url: /melanin-rich-skin/
+          - listitem [ref=f11e123]:
+            - link "About" [ref=f11e124] [cursor=pointer]:
+              - /url: /about/
+          - listitem [ref=f11e125]:
+            - link "Journal" [ref=f11e126] [cursor=pointer]:
+              - /url: /journal/
+          - listitem [ref=f11e127]:
+            - link "Contact" [ref=f11e128] [cursor=pointer]:
+              - /url: /contact/
+          - listitem [ref=f11e129]:
+            - link "Book" [ref=f11e130] [cursor=pointer]:
+              - /url: /book/
+          - listitem [ref=f11e131]:
+            - link "Instagram @kiamoskin" [ref=f11e132] [cursor=pointer]:
+              - /url: https://www.instagram.com/kiamoskin/
+      - generic [ref=f11e133]:
+        - paragraph [ref=f11e134]: Areas we serve
+        - list [ref=f11e135]:
+          - listitem [ref=f11e136]:
+            - link "All areas in San Diego County" [ref=f11e137] [cursor=pointer]:
+              - /url: /service-areas/
+          - listitem [ref=f11e138]:
+            - link "Mission Hills" [ref=f11e139] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+          - listitem [ref=f11e140]:
+            - link "La Jolla" [ref=f11e141] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+          - listitem [ref=f11e142]:
+            - link "North Park" [ref=f11e143] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+          - listitem [ref=f11e144]:
+            - link "Pacific Beach" [ref=f11e145] [cursor=pointer]:
+              - /url: /service-areas/pacific-beach/
+          - listitem [ref=f11e146]:
+            - link "Chula Vista" [ref=f11e147] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+          - listitem [ref=f11e148]:
+            - link "La Mesa" [ref=f11e149] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+          - listitem [ref=f11e150]:
+            - link "Del Mar" [ref=f11e151] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+          - listitem [ref=f11e152]:
+            - link "Encinitas" [ref=f11e153] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+          - listitem [ref=f11e154]:
+            - link "Carlsbad" [ref=f11e155] [cursor=pointer]:
+              - /url: /service-areas/carlsbad/
+    - paragraph [ref=f11e157]: © 2026 KIAMO SKIN · Black-owned, Mission Hills, San Diego

@@ -1,0 +1,314 @@
+- generic [active] [ref=f8e1]:
+  - link "Skip to content" [ref=f8e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f8e3]:
+    - generic [ref=f8e4]:
+      - link "Kiamo — KIAMO SKIN, home" [ref=f8e5] [cursor=pointer]:
+        - /url: /
+        - text: Kiamo
+        - generic [ref=f8e6]: — KIAMO SKIN, home
+      - generic [ref=f8e7]:
+        - link "Request Appointment" [ref=f8e8] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+        - button "Open menu" [ref=f8e9]
+  - main [ref=f8e13]:
+    - article [ref=f8e14]:
+      - generic [ref=f8e17]:
+        - generic [ref=f8e18]:
+          - paragraph [ref=f8e19]:
+            - link "Treatments" [ref=f8e20] [cursor=pointer]:
+              - /url: /treatments/
+            - text: · Lira Chemical Peels
+          - heading "Lira Chemical Peels — designed to brighten without compromising skin health." [level=1] [ref=f8e21]
+          - paragraph [ref=f8e22]: Looking for a chemical peel in San Diego that is safe on melanin-rich skin? That is the work this studio was built around.
+          - paragraph [ref=f8e23]:
+            - text: Pigmentation is the reason most people book, and it is also where the wrong treatment does lasting damage. Melanin-rich skin responds to trauma by producing more pigment, so the strength, the acid and the pacing all have to be selected deliberately. Lira's professional range is built for that kind of control.
+            - link "Chula Vista clients" [ref=f8e24] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+            - text: and those from
+            - link "La Mesa" [ref=f8e25] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+            - text: book this treatment most often, where inland UV and melanin-rich skin demographics make melasma the county's most common pigmentation concern. Read more about
+            - link "correcting melasma and post-inflammatory hyperpigmentation" [ref=f8e26] [cursor=pointer]:
+              - /url: /treatments/melasma/
+            - text: .
+          - generic [ref=f8e27]:
+            - link "Request Appointment" [ref=f8e28] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin
+            - link "(310) 595-0872" [ref=f8e29] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f8e30]: Licensed Esthetician · Licensed Esthetician · 7+ years experience · One-to-one, private studio
+        - generic [ref=f8e31]:
+          - img "Close portrait of even, clear skin in warm natural light" [ref=f8e32]
+          - link "Request Appointment" [ref=f8e34] [cursor=pointer]:
+            - /url: https://www.vagaro.com/kiamoskin
+      - paragraph [ref=f8e37]:
+        - text: Lira Chemical Peels is performed at the Mission Hills studio. Clients travel from
+        - link "across San Diego County" [ref=f8e38] [cursor=pointer]:
+          - /url: /service-areas/
+        - text: — from nearby neighborhoods like North Park and Hillcrest to coastal areas including La Jolla, Pacific Beach and Encinitas, and inland communities like Chula Vista and La Mesa.
+      - generic [ref=f8e40]:
+        - generic [ref=f8e41]:
+          - generic [ref=f8e42]:
+            - heading "What happens in the room" [level=2] [ref=f8e43]
+            - list [ref=f8e44]:
+              - listitem [ref=f8e45]:
+                - paragraph [ref=f8e46]: "01"
+                - heading "Patch and prep" [level=3] [ref=f8e47]
+                - paragraph [ref=f8e48]: Most pigmentation plans begin with a period of home prep so the skin is ready before any acid is applied.
+              - listitem [ref=f8e49]:
+                - paragraph [ref=f8e50]: "02"
+                - heading "Apply" [level=3] [ref=f8e51]
+                - paragraph [ref=f8e52]: The peel is layered and timed to your skins response on the day. Strength escalates across a series rather than in one visit.
+              - listitem [ref=f8e53]:
+                - paragraph [ref=f8e54]: "03"
+                - heading "Protect" [level=3] [ref=f8e55]
+                - paragraph [ref=f8e56]: Daily SPF is what holds the result. Without it, pigmentation returns — and San Diegos overcast mornings are the usual reason people stop applying it.
+          - generic [ref=f8e57]:
+            - heading "Ideal for" [level=2] [ref=f8e58]
+            - list [ref=f8e59]:
+              - listitem [ref=f8e60]:
+                - generic [aria-hidden] [ref=f8e61]: —
+                - generic [ref=f8e62]: Melasma and hormonal pigmentation
+              - listitem [ref=f8e63]:
+                - generic [aria-hidden] [ref=f8e64]: —
+                - generic [ref=f8e65]: Post-inflammatory marks left behind by acne
+              - listitem [ref=f8e66]:
+                - generic [aria-hidden] [ref=f8e67]: —
+                - generic [ref=f8e68]: Uneven tone and sun damage
+              - listitem [ref=f8e69]:
+                - generic [aria-hidden] [ref=f8e70]: —
+                - generic [ref=f8e71]: Dullness and rough surface texture
+        - complementary [ref=f8e72]:
+          - generic [ref=f8e73]:
+            - heading "Pricing in San Diego" [level=2] [ref=f8e74]
+            - generic [ref=f8e75]:
+              - generic [ref=f8e76]:
+                - term [ref=f8e77]: LIRA Gentle Renewal Peel
+                - definition [ref=f8e78]: $199
+              - generic [ref=f8e79]:
+                - term [ref=f8e80]: LIRA Advanced Peel
+                - definition [ref=f8e81]: $299
+            - paragraph [ref=f8e82]: Peel strength is matched to your skin at consultation. The Gentle Renewal Peel refreshes and maintains; the Advanced Peel goes deeper for pigmentation and scarring. Pigmentation is treated as a series with home care between visits — there is no single-session version of this.
+            - paragraph [ref=f8e83]:
+              - text: Peels on Black and brown skin are chosen differently — the pacing is the whole point.
+              - link "Facials for melanin-rich skin in San Diego" [ref=f8e84] [cursor=pointer]:
+                - /url: /melanin-rich-skin/
+              - text: .
+            - paragraph [ref=f8e85]:
+              - text: Not sure which kind of pigmentation you have?
+              - link "How to tell post-inflammatory marks, melasma and sun damage apart" [ref=f8e86] [cursor=pointer]:
+                - /url: /journal/three-kinds-of-dark-mark/
+              - text: .
+            - paragraph [ref=f8e87]:
+              - text: Because pigmentation is only ever treated as a series, a monthly membership is usually the cheaper way to run one.
+              - link "Monthly facial memberships in San Diego" [ref=f8e88] [cursor=pointer]:
+                - /url: /membership/
+              - text: .
+            - link "Request Appointment" [ref=f8e90] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin
+          - generic [ref=f8e92]:
+            - link "3067 Reynard Way San Diego, CA 92103" [ref=f8e93] [cursor=pointer]:
+              - /url: "#location-map"
+              - text: 3067 Reynard WaySan Diego, CA 92103
+            - paragraph [ref=f8e94]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+            - paragraph [ref=f8e95]:
+              - link "(310) 595-0872" [ref=f8e96] [cursor=pointer]:
+                - /url: tel:+13105950872
+            - paragraph [ref=f8e97]:
+              - link "kiamoskin@gmail.com" [ref=f8e98] [cursor=pointer]:
+                - /url: mailto:kiamoskin@gmail.com
+            - paragraph [ref=f8e99]: By appointment only · Free parking
+            - paragraph [ref=f8e100]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=f8e102]:
+        - paragraph [ref=f8e103]: Before you book
+        - heading "Lira Chemical Peels questions" [level=2] [ref=f8e104]
+        - generic [ref=f8e105]:
+          - group [ref=f8e107]:
+            - generic "How much does a chemical peel cost in San Diego?" [ref=f8e108] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f8e110]: +
+          - group [ref=f8e112]:
+            - generic "Are chemical peels safe for melanin-rich skin?" [ref=f8e113] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f8e115]: +
+          - group [ref=f8e117]:
+            - generic "What is the best treatment for melasma?" [ref=f8e118] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f8e120]: +
+          - group [ref=f8e122]:
+            - generic "Can a chemical peel remove hyperpigmentation?" [ref=f8e123] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f8e125]: +
+          - group [ref=f8e127]:
+            - generic "Is one peel enough, or do you need a series?" [ref=f8e128] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f8e130]: +
+          - group [ref=f8e132]:
+            - generic "Who should not get a chemical peel?" [ref=f8e133] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f8e135]: +
+          - group [ref=f8e137]:
+            - generic "How long does hyperpigmentation last after a chemical peel?" [ref=f8e138] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f8e140]: +
+      - generic [ref=f8e142]:
+        - heading "Clients from across San Diego" [level=2] [ref=f8e143]
+        - paragraph [ref=f8e144]: "Lira Chemical Peels is performed at the Mission Hills studio. Clients travel from these areas across San Diego County:"
+        - list [ref=f8e145]:
+          - listitem [ref=f8e146]:
+            - link [ref=f8e147] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+              - heading "Lira Chemical Peels in Chula Vista" [level=3] [ref=f8e148]
+              - paragraph [ref=f8e149]: About thirteen miles — twenty to twenty-five minutes north off-peak
+          - listitem [ref=f8e150]:
+            - link [ref=f8e151] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+              - heading "Lira Chemical Peels in La Jolla" [level=3] [ref=f8e152]
+              - paragraph [ref=f8e153]: About twelve miles — roughly twenty minutes south on I-5
+          - listitem [ref=f8e154]:
+            - link [ref=f8e155] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+              - heading "Lira Chemical Peels in North Park" [level=3] [ref=f8e156]
+              - paragraph [ref=f8e157]: Three and a half miles — about ten minutes, no freeway needed
+          - listitem [ref=f8e158]:
+            - link [ref=f8e159] [cursor=pointer]:
+              - /url: /service-areas/pacific-beach/
+              - heading "Lira Chemical Peels in Pacific Beach" [level=3] [ref=f8e160]
+              - paragraph [ref=f8e161]: Roughly seven miles — about fifteen minutes east
+          - listitem [ref=f8e162]:
+            - link [ref=f8e163] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+              - heading "Lira Chemical Peels in La Mesa" [level=3] [ref=f8e164]
+              - paragraph [ref=f8e165]: Roughly eleven miles — fifteen to twenty minutes west on I-8
+        - paragraph [ref=f8e166]:
+          - link "See all areas served across San Diego County" [ref=f8e167] [cursor=pointer]:
+            - /url: /service-areas/
+      - generic [ref=f8e169]:
+        - heading "Other treatments" [level=2] [ref=f8e170]
+        - list [ref=f8e171]:
+          - listitem [ref=f8e172]:
+            - link [ref=f8e173] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+              - heading "HydraFacial" [level=3] [ref=f8e174]
+              - paragraph [ref=f8e175]: HydraFacial — the foundation of healthy skin.
+          - listitem [ref=f8e176]:
+            - link [ref=f8e177] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+              - heading "HydraFacial Keravive" [level=3] [ref=f8e178]
+              - paragraph [ref=f8e179]: HydraFacial Keravive — your scalp is skin. Treat it that way.
+          - listitem [ref=f8e180]:
+            - link [ref=f8e181] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+              - heading "DMK Enzyme Therapy" [level=3] [ref=f8e182]
+              - paragraph [ref=f8e183]: DMK Enzyme Therapy — restore skin function from within.
+          - listitem [ref=f8e184]:
+            - link [ref=f8e185] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+              - heading "Procell Microchanneling" [level=3] [ref=f8e186]
+              - paragraph [ref=f8e187]: Procell Microchanneling — stimulate your skin's natural repair process.
+          - listitem [ref=f8e188]:
+            - link [ref=f8e189] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+              - heading "Dermaplane Facial" [level=3] [ref=f8e190]
+              - paragraph [ref=f8e191]: Dermaplaning — a clean surface changes what everything else can do.
+          - listitem [ref=f8e192]:
+            - link [ref=f8e193] [cursor=pointer]:
+              - /url: /treatments/acne/
+              - heading "Acne Treatment" [level=3] [ref=f8e194]
+              - paragraph [ref=f8e195]: Acne Treatment in San Diego — clear breakouts, fade marks, smooth scars.
+  - contentinfo [ref=f8e196]:
+    - generic [ref=f8e197]:
+      - generic [ref=f8e198]:
+        - paragraph [ref=f8e199]: KIAMO Skin
+        - link "Request Appointment" [ref=f8e200] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+      - generic [ref=f8e201]:
+        - paragraph [ref=f8e202]: Visit
+        - generic [ref=f8e204]:
+          - link "3067 Reynard Way San Diego, CA 92103" [ref=f8e205] [cursor=pointer]:
+            - /url: "#location-map"
+            - text: 3067 Reynard WaySan Diego, CA 92103
+          - paragraph [ref=f8e206]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+          - paragraph [ref=f8e207]:
+            - link "(310) 595-0872" [ref=f8e208] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f8e209]:
+            - link "kiamoskin@gmail.com" [ref=f8e210] [cursor=pointer]:
+              - /url: mailto:kiamoskin@gmail.com
+          - paragraph [ref=f8e211]: By appointment only · Free parking
+          - paragraph [ref=f8e212]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=f8e213]:
+        - paragraph [ref=f8e214]: Treatments
+        - list [ref=f8e215]:
+          - listitem [ref=f8e216]:
+            - link "HydraFacial" [ref=f8e217] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+          - listitem [ref=f8e218]:
+            - link "Keravive Scalp Therapy" [ref=f8e219] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+          - listitem [ref=f8e220]:
+            - link "DMK Enzyme Therapy" [ref=f8e221] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+          - listitem [ref=f8e222]:
+            - link "Procell Microchanneling" [ref=f8e223] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+          - listitem [ref=f8e224]:
+            - link "Lira Chemical Peels" [ref=f8e225] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+          - listitem [ref=f8e226]:
+            - link "Dermaplaning" [ref=f8e227] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+        - paragraph [ref=f8e228]: More
+        - list [ref=f8e229]:
+          - listitem [ref=f8e230]:
+            - link "Treatments" [ref=f8e231] [cursor=pointer]:
+              - /url: /treatments/
+          - listitem [ref=f8e232]:
+            - link "Membership" [ref=f8e233] [cursor=pointer]:
+              - /url: /membership/
+          - listitem [ref=f8e234]:
+            - link "Melanin-Rich Skin" [ref=f8e235] [cursor=pointer]:
+              - /url: /melanin-rich-skin/
+          - listitem [ref=f8e236]:
+            - link "About" [ref=f8e237] [cursor=pointer]:
+              - /url: /about/
+          - listitem [ref=f8e238]:
+            - link "Journal" [ref=f8e239] [cursor=pointer]:
+              - /url: /journal/
+          - listitem [ref=f8e240]:
+            - link "Contact" [ref=f8e241] [cursor=pointer]:
+              - /url: /contact/
+          - listitem [ref=f8e242]:
+            - link "Book" [ref=f8e243] [cursor=pointer]:
+              - /url: /book/
+          - listitem [ref=f8e244]:
+            - link "Instagram @kiamoskin" [ref=f8e245] [cursor=pointer]:
+              - /url: https://www.instagram.com/kiamoskin/
+      - generic [ref=f8e246]:
+        - paragraph [ref=f8e247]: Areas we serve
+        - list [ref=f8e248]:
+          - listitem [ref=f8e249]:
+            - link "All areas in San Diego County" [ref=f8e250] [cursor=pointer]:
+              - /url: /service-areas/
+          - listitem [ref=f8e251]:
+            - link "Mission Hills" [ref=f8e252] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+          - listitem [ref=f8e253]:
+            - link "La Jolla" [ref=f8e254] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+          - listitem [ref=f8e255]:
+            - link "North Park" [ref=f8e256] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+          - listitem [ref=f8e257]:
+            - link "Pacific Beach" [ref=f8e258] [cursor=pointer]:
+              - /url: /service-areas/pacific-beach/
+          - listitem [ref=f8e259]:
+            - link "Chula Vista" [ref=f8e260] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+          - listitem [ref=f8e261]:
+            - link "La Mesa" [ref=f8e262] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+          - listitem [ref=f8e263]:
+            - link "Del Mar" [ref=f8e264] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+          - listitem [ref=f8e265]:
+            - link "Encinitas" [ref=f8e266] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+          - listitem [ref=f8e267]:
+            - link "Carlsbad" [ref=f8e268] [cursor=pointer]:
+              - /url: /service-areas/carlsbad/
+    - paragraph [ref=f8e270]: © 2026 KIAMO SKIN · Black-owned, Mission Hills, San Diego

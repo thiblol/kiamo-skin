@@ -1,0 +1,651 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Kiamo — KIAMO SKIN, home" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - text: Kiamo
+        - generic [ref=e6]: — KIAMO SKIN, home
+      - generic [ref=e7]:
+        - link "Request Appointment" [ref=e8] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+        - button "Open menu" [ref=e9]
+  - main [ref=e13]:
+    - generic [ref=e16]:
+      - paragraph [ref=e17]: Corrective skin studio · Mission Hills, San Diego
+      - heading "Corrective skin & scalp treatments in San Diego—for pigmentation, acne, and scalp health." [level=1] [ref=e18]
+      - paragraph [ref=e19]: KIAMO SKIN is a licensed corrective skin and scalp studio in Mission Hills, minutes from Hillcrest and Little Italy. We specialize in pigmentation treatment, acne scarring, scalp therapy, and barrier repair—with advanced expertise in treating melanin-rich skin safely and effectively.
+      - generic [ref=e20]:
+        - link "Request Appointment" [ref=e21] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+        - link "View treatments" [ref=e22] [cursor=pointer]:
+          - /url: /treatments/
+    - generic [ref=e24]:
+      - list [ref=e25]:
+        - listitem [ref=e26]: HydraFacial
+        - listitem [ref=e27]: Keravive Scalp Therapy
+        - listitem [ref=e28]: DMK Enzyme Therapy
+        - listitem [ref=e29]: Procell Microchanneling
+        - listitem [ref=e30]: Lira Chemical Peels
+        - listitem [ref=e31]: Dermaplaning
+        - listitem [ref=e32]: ·
+        - listitem [ref=e33]: Mission Hills
+        - listitem [ref=e34]: ·
+        - listitem [ref=e35]: San Diego
+      - list [aria-hidden] [ref=e36]:
+        - listitem [ref=e37]: HydraFacial
+        - listitem [ref=e38]: Keravive Scalp Therapy
+        - listitem [ref=e39]: DMK Enzyme Therapy
+        - listitem [ref=e40]: Procell Microchanneling
+        - listitem [ref=e41]: Lira Chemical Peels
+        - listitem [ref=e42]: Dermaplaning
+        - listitem [ref=e43]: ·
+        - listitem [ref=e44]: Mission Hills
+        - listitem [ref=e45]: ·
+        - listitem [ref=e46]: San Diego
+    - generic [ref=e48]:
+      - paragraph [ref=e49]: Why KIAMO
+      - heading "Esthetician specialising in melanin-rich skin, Mission Hills" [level=2] [ref=e50]
+      - list [ref=e51]:
+        - listitem [ref=e52]:
+          - paragraph [ref=e53]: Licensed esthetician
+          - paragraph [ref=e54]: California Board of Barbering & Cosmetology
+        - listitem [ref=e55]:
+          - paragraph [ref=e56]: 7+ years in practice
+          - paragraph [ref=e57]: Acne, pigmentation and barrier repair
+        - listitem [ref=e58]:
+          - paragraph [ref=e59]: Melanin-rich skin
+          - paragraph [ref=e60]: Protocols chosen for how Black and brown skin behaves
+        - listitem [ref=e61]:
+          - paragraph [ref=e62]: Black-owned studio
+          - paragraph [ref=e63]: Free parking · By appointment only
+    - generic [ref=e66]:
+      - paragraph [ref=e67]: The approach
+      - heading "Not a spa facial. Corrective skin work in San Diego." [level=2] [ref=e68]
+      - blockquote [ref=e69]: This isn’t just a spa facial. This is strategy, correction, intention. Every step has a purpose. Every product has a reason. Relaxing always — but results come first.
+    - generic [ref=e71]:
+      - paragraph [ref=e72]: Where to start
+      - heading "Corrective skin treatments in San Diego — where to start." [level=2] [ref=e73]
+      - list [ref=e74]:
+        - listitem [ref=e75]:
+          - link [ref=e76] [cursor=pointer]:
+            - /url: /treatments/melasma/
+            - img "Close portrait of even, clear skin in warm natural light" [ref=e78]
+            - paragraph [ref=e79]: Pigmentation & Melasma
+        - listitem [ref=e80]:
+          - link [ref=e81] [cursor=pointer]:
+            - /url: /treatments/procell-microchanneling/
+            - img "Profile portrait of smooth, healthy cheek and jawline" [ref=e83]
+            - paragraph [ref=e84]: Acne & Scarring
+        - listitem [ref=e85]:
+          - link [ref=e86] [cursor=pointer]:
+            - /url: /treatments/dmk-enzyme-therapy/
+            - img "Side-lit portrait of calm, well-hydrated skin with visible natural texture" [ref=e88]
+            - paragraph [ref=e89]: Barrier & Dehydration
+        - listitem [ref=e90]:
+          - link [ref=e91] [cursor=pointer]:
+            - /url: /treatments/keravive-scalp/
+            - img "Detail of a healthy scalp and hairline at the part" [ref=e93]
+            - paragraph [ref=e94]: Scalp Health
+    - generic [ref=e96]:
+      - paragraph [ref=e97]: The menu
+      - heading "Corrective treatments in Mission Hills, San Diego" [level=2] [ref=e98]
+      - tablist "Filter treatments by category" [ref=e99]:
+        - tab "All" [selected] [ref=e100]
+        - tab "Facials" [ref=e101]
+        - tab "Scalp" [ref=e102]
+        - tab "Advanced" [ref=e103]
+      - list [ref=e104]:
+        - listitem [ref=e105]:
+          - generic [ref=e106]:
+            - generic [ref=e107]:
+              - heading [level=3] [ref=e108]:
+                - link "First-Time Client Treatment" [ref=e109] [cursor=pointer]:
+                  - /url: /treatments/hydrafacial/
+              - paragraph [ref=e110]: The best place to begin. Includes a comprehensive consultation, skin analysis, customized HydraFacial, personalized booster, microcurrent, LED Light Therapy, Hydrojelly Mask, and a long term treatment plan.
+            - generic [ref=e111]:
+              - paragraph [ref=e112]: $249
+              - link "Book First-Time Client Treatment" [ref=e113] [cursor=pointer]:
+                - /url: https://www.vagaro.com/kiamoskin
+                - text: Book
+                - generic [ref=e114]: First-Time Client Treatment
+        - listitem [ref=e115]:
+          - generic [ref=e116]:
+            - generic [ref=e117]:
+              - heading [level=3] [ref=e118]:
+                - link "HydraFacial Treatment" [ref=e119] [cursor=pointer]:
+                  - /url: /treatments/hydrafacial/
+              - paragraph [ref=e120]: A customized HydraFacial that deeply cleanses, exfoliates, extracts, and hydrates to support healthy skin and maintain your treatment results.
+            - generic [ref=e121]:
+              - paragraph [ref=e122]: $259
+              - link "Book HydraFacial Treatment" [ref=e123] [cursor=pointer]:
+                - /url: https://www.vagaro.com/kiamoskin
+                - text: Book
+                - generic [ref=e124]: HydraFacial Treatment
+        - listitem [ref=e125]:
+          - generic [ref=e126]:
+            - generic [ref=e127]:
+              - heading "Dermaplane Facial" [level=3] [ref=e128]
+              - paragraph [ref=e129]: A surgical blade lifts away dead surface cells and fine facial hair, with extractions as needed. Minimal downtime.
+            - generic [ref=e130]:
+              - paragraph [ref=e131]: $199
+              - link "Book Dermaplane Facial" [ref=e132] [cursor=pointer]:
+                - /url: https://www.vagaro.com/kiamoskin
+                - text: Book
+                - generic [ref=e133]: Dermaplane Facial
+        - listitem [ref=e134]:
+          - generic [ref=e135]:
+            - generic [ref=e136]:
+              - heading [level=3] [ref=e137]:
+                - link "DMK Level 1 Enzyme Treatment" [ref=e138] [cursor=pointer]:
+                  - /url: /treatments/dmk-enzyme-therapy/
+              - paragraph [ref=e139]: Foundational enzyme therapy. Works with the skin's own processes to clear what should not be there and rebuild the barrier.
+            - generic [ref=e140]:
+              - paragraph [ref=e141]: $279
+              - link "Book DMK Level 1 Enzyme Treatment" [ref=e142] [cursor=pointer]:
+                - /url: https://www.vagaro.com/kiamoskin
+                - text: Book
+                - generic [ref=e143]: DMK Level 1 Enzyme Treatment
+        - listitem [ref=e144]:
+          - generic [ref=e145]:
+            - generic [ref=e146]:
+              - heading [level=3] [ref=e147]:
+                - link "LIRA Gentle Renewal Peel" [ref=e148] [cursor=pointer]:
+                  - /url: /treatments/lira-peels/
+              - paragraph [ref=e149]: A light peel selected for your skin on the day — acne, congestion, uneven texture, dullness or a compromised barrier.
+            - generic [ref=e150]:
+              - paragraph [ref=e151]: $199
+              - link "Book LIRA Gentle Renewal Peel" [ref=e152] [cursor=pointer]:
+                - /url: https://www.vagaro.com/kiamoskin
+                - text: Book
+                - generic [ref=e153]: LIRA Gentle Renewal Peel
+        - listitem [ref=e154]:
+          - generic [ref=e155]:
+            - generic [ref=e156]:
+              - heading [level=3] [ref=e157]:
+                - link "Keravive Scalp Treatment" [ref=e158] [cursor=pointer]:
+                  - /url: /treatments/keravive-scalp/
+              - paragraph [ref=e159]: Medical-grade scalp treatment for dryness, flaking, and scalp health. Unlike relaxation head spas, Keravive uses clinical-grade exfoliation and hydration to address scalp concerns at the source.
+            - generic [ref=e160]:
+              - paragraph [ref=e161]: $599
+              - link "Book Keravive Scalp Treatment" [ref=e162] [cursor=pointer]:
+                - /url: https://www.vagaro.com/kiamoskin
+                - text: Book
+                - generic [ref=e163]: Keravive Scalp Treatment
+        - listitem [ref=e164]:
+          - generic [ref=e165]:
+            - generic [ref=e166]:
+              - heading [level=3] [ref=e167]:
+                - link "Keravive Scalp — 3 Treatment Series" [ref=e168] [cursor=pointer]:
+                  - /url: /treatments/keravive-scalp/
+              - paragraph [ref=e169]: The same treatment across a series of three, priced as a package. Scalp work is cumulative rather than one-off.
+            - generic [ref=e170]:
+              - paragraph [ref=e171]: $1,499
+              - link "Book Keravive Scalp — 3 Treatment Series" [ref=e172] [cursor=pointer]:
+                - /url: https://www.vagaro.com/kiamoskin
+                - text: Book
+                - generic [ref=e173]: Keravive Scalp — 3 Treatment Series
+        - listitem [ref=e174]:
+          - generic [ref=e175]:
+            - generic [ref=e176]:
+              - heading [level=3] [ref=e177]:
+                - link "Procell Microchanneling" [ref=e178] [cursor=pointer]:
+                  - /url: /treatments/procell-microchanneling/
+              - paragraph [ref=e179]: Microchanneling treatment for acne scars, hyperpigmentation, and texture—safe for all skin tones. Uses controlled micro-injury and growth factors to resurface skin and correct post-inflammatory pigmentation.
+            - generic [ref=e180]:
+              - paragraph [ref=e181]: $475
+              - link "Book Procell Microchanneling" [ref=e182] [cursor=pointer]:
+                - /url: https://www.vagaro.com/kiamoskin
+                - text: Book
+                - generic [ref=e183]: Procell Microchanneling
+        - listitem [ref=e184]:
+          - generic [ref=e185]:
+            - generic [ref=e186]:
+              - heading [level=3] [ref=e187]:
+                - link "Procell Microchanneling — 3 Treatment Series" [ref=e188] [cursor=pointer]:
+                  - /url: /treatments/procell-microchanneling/
+              - paragraph [ref=e189]: Designed for clients committed to long-term correction. A series of three treatments supports progressive collagen remodeling and is recommended for concerns such as acne scars, uneven texture, fine lines, and overall skin rejuvenation. Treatments are typically scheduled 4–6 weeks apart.
+            - generic [ref=e190]:
+              - paragraph [ref=e191]: $1,199
+              - link "Book Procell Microchanneling — 3 Treatment Series" [ref=e192] [cursor=pointer]:
+                - /url: https://www.vagaro.com/kiamoskin
+                - text: Book
+                - generic [ref=e193]: Procell Microchanneling — 3 Treatment Series
+        - listitem [ref=e194]:
+          - generic [ref=e195]:
+            - generic [ref=e196]:
+              - heading [level=3] [ref=e197]:
+                - link "DMK Level 2 & 3 Enzyme Treatment" [ref=e198] [cursor=pointer]:
+                  - /url: /treatments/dmk-enzyme-therapy/
+              - paragraph [ref=e199]: Layered Enzyme 1, 2 and 3 with corrective products. Prescribed only once Level 1 has prepared the skin.
+            - generic [ref=e200]:
+              - paragraph [ref=e201]: Pricing at consultation.
+              - link "Book DMK Level 2 & 3 Enzyme Treatment" [ref=e202] [cursor=pointer]:
+                - /url: https://www.vagaro.com/kiamoskin
+                - text: Book
+                - generic [ref=e203]: DMK Level 2 & 3 Enzyme Treatment
+        - listitem [ref=e204]:
+          - generic [ref=e205]:
+            - generic [ref=e206]:
+              - heading [level=3] [ref=e207]:
+                - link "LIRA Advanced Peel" [ref=e208] [cursor=pointer]:
+                  - /url: /treatments/lira-peels/
+              - paragraph [ref=e209]: A deeper chemical peel for pigmentation and acne scarring, with strength escalated across a series rather than in one visit. Safe for melanin-rich skin.
+            - generic [ref=e210]:
+              - paragraph [ref=e211]: $299
+              - link "Book LIRA Advanced Peel" [ref=e212] [cursor=pointer]:
+                - /url: https://www.vagaro.com/kiamoskin
+                - text: Book
+                - generic [ref=e213]: LIRA Advanced Peel
+    - generic [ref=e215]:
+      - img "Kiki, licensed esthetician and owner of KIAMO Skin, beside the HydraFacial device in the treatment room" [ref=e217]
+      - generic [ref=e218]:
+        - paragraph [ref=e219]: Meet Kiki
+        - heading "Licensed esthetician in Mission Hills, San Diego — specialising in corrective skin care." [level=2] [ref=e220]
+        - paragraph [ref=e221]: "\"Trust the process. Your skin can heal.\""
+        - paragraph [ref=e222]: Kiki is a California licensed esthetician with 7+ years of experience specializing in acne, acne scars, hyperpigmentation, melasma, skin barrier repair, age management, HydraFacial, Procell Microchanneling, and scalp health. Every treatment plan is customized using evidence-based techniques and professional-grade technology to support healthy, long-term results — not quick fixes.
+        - paragraph [ref=e223]: At KIAMO Skin, we believe healthy skin starts with education, consistency, and personalized care. We proudly welcome all skin tones, with extensive experience treating melanin-rich skin, post-inflammatory hyperpigmentation, and skin concerns that require specialized care. Every client receives a customized treatment plan designed around their unique skin goals, lifestyle, and long-term skin health.
+        - link "More about the studio" [ref=e225] [cursor=pointer]:
+          - /url: /about/
+    - generic [ref=e227]:
+      - paragraph [ref=e228]: Progress, not promises
+      - heading "Skin results in San Diego — not overnight, but with consistency." [level=2] [ref=e229]
+      - generic [ref=e230]:
+        - generic [ref=e231]:
+          - generic [ref=e232]:
+            - generic [ref=e233]:
+              - img "The same cheek with noticeably more even tone after a course of treatment" [ref=e234]
+              - img "Cheek with uneven tone and dark patches before a course of treatment" [ref=e236]
+              - paragraph [ref=e238]: Before
+              - paragraph [ref=e239]: After
+            - generic [ref=e240]:
+              - text: Drag to compare
+              - slider "Reveal the before and after image" [ref=e241]: "55"
+          - paragraph [ref=e242]: Pigmentation & tone
+          - paragraph [ref=e243]: A course of Lira peels paired with home care.
+        - generic [ref=e244]:
+          - generic [ref=e245]:
+            - generic [ref=e246]:
+              - img "The same scalp looking clear and calm after treatment" [ref=e247]
+              - img "Dry, flaking scalp at the part before treatment" [ref=e249]
+              - paragraph [ref=e251]: Before
+              - paragraph [ref=e252]: After
+            - generic [ref=e253]:
+              - text: Drag to compare
+              - slider "Reveal the before and after image" [ref=e254]: "55"
+          - paragraph [ref=e255]: Scalp & density
+          - paragraph [ref=e256]: HydraFacial Keravive across a multi-session plan.
+      - paragraph [ref=e257]: Results vary from person to person. Images are illustrative and do not depict a specific client outcome.
+    - region "Client reviews" [ref=e258]:
+      - generic [ref=e259]:
+        - paragraph [ref=e260]: Client experiences
+        - heading "What clients say after corrective treatment in San Diego." [level=2] [ref=e261]
+      - generic [aria-hidden] [ref=e262]:
+        - generic [ref=e263]:
+          - list [ref=e264]:
+            - listitem [ref=e265]:
+              - paragraph [ref=e266]: “Worth every penny. My skin has never looked better.”
+              - paragraph [ref=e267]: — Jessica L., Yelp
+            - listitem [ref=e268]:
+              - paragraph [ref=e269]: “My skin was glowing when I left!”
+              - paragraph [ref=e270]: — Leigh B., Yelp
+            - listitem [ref=e271]:
+              - paragraph [ref=e272]: “Facial muscles activated like a workout for the face.”
+              - paragraph [ref=e273]: — Kelly W., Yelp
+            - listitem [ref=e274]:
+              - paragraph [ref=e275]: “I had such a great HydraFacial with Kiki! The space is so cute, welcoming, and thoughtfully curated.”
+              - paragraph [ref=e276]: — Katie M., Google
+            - listitem [ref=e277]:
+              - paragraph [ref=e278]: “I've been going for 4–5 years now, and I honestly wouldn't trust anyone else with my skin.”
+              - paragraph [ref=e279]: — Arica L., Google
+            - listitem [ref=e280]:
+              - paragraph [ref=e281]: “Kiamo Skin got my skin looking amazing!! The monthly membership is absolutely worth it.”
+              - paragraph [ref=e282]: — Kayla T., Google
+          - list [aria-hidden] [ref=e283]:
+            - listitem [ref=e284]:
+              - paragraph [ref=e285]: “Worth every penny. My skin has never looked better.”
+              - paragraph [ref=e286]: — Jessica L., Yelp
+            - listitem [ref=e287]:
+              - paragraph [ref=e288]: “My skin was glowing when I left!”
+              - paragraph [ref=e289]: — Leigh B., Yelp
+            - listitem [ref=e290]:
+              - paragraph [ref=e291]: “Facial muscles activated like a workout for the face.”
+              - paragraph [ref=e292]: — Kelly W., Yelp
+            - listitem [ref=e293]:
+              - paragraph [ref=e294]: “I had such a great HydraFacial with Kiki! The space is so cute, welcoming, and thoughtfully curated.”
+              - paragraph [ref=e295]: — Katie M., Google
+            - listitem [ref=e296]:
+              - paragraph [ref=e297]: “I've been going for 4–5 years now, and I honestly wouldn't trust anyone else with my skin.”
+              - paragraph [ref=e298]: — Arica L., Google
+            - listitem [ref=e299]:
+              - paragraph [ref=e300]: “Kiamo Skin got my skin looking amazing!! The monthly membership is absolutely worth it.”
+              - paragraph [ref=e301]: — Kayla T., Google
+        - generic [ref=e302]:
+          - list [ref=e303]:
+            - listitem [ref=e304]:
+              - paragraph [ref=e305]: “The best facial in San Diego. Very attentive to what your skin needs and leaves you glowy.”
+              - paragraph [ref=e306]: — Leona, Google
+            - listitem [ref=e307]:
+              - paragraph [ref=e308]: “I've been going to Kiamo Skin for over a year and can't recommend it enough. Real, visible results.”
+              - paragraph [ref=e309]: — Brian A., Google
+            - listitem [ref=e310]:
+              - paragraph [ref=e311]: “I feel like I've been aging backwards since going to Kiamo Skin. My skin is so glowy and smooth.”
+              - paragraph [ref=e312]: — Morg A., Google
+            - listitem [ref=e313]:
+              - paragraph [ref=e314]: “Genuinely one of the best facials I've ever had. Kiki is super friendly and the results speak for themselves.”
+              - paragraph [ref=e315]: — Alyssa M., Google
+            - listitem [ref=e316]:
+              - paragraph [ref=e317]: “This is your sign to book at Kiamo Skin. Kiki is so knowledgeable and you can feel you're in good hands.”
+              - paragraph [ref=e318]: — Rheshanna C., Google
+            - listitem [ref=e319]:
+              - paragraph [ref=e320]: “My skin has never looked better after my first HydraFacial in San Diego. Highly recommend for real results.”
+              - paragraph [ref=e321]: — David B., Google
+          - list [aria-hidden] [ref=e322]:
+            - listitem [ref=e323]:
+              - paragraph [ref=e324]: “The best facial in San Diego. Very attentive to what your skin needs and leaves you glowy.”
+              - paragraph [ref=e325]: — Leona, Google
+            - listitem [ref=e326]:
+              - paragraph [ref=e327]: “I've been going to Kiamo Skin for over a year and can't recommend it enough. Real, visible results.”
+              - paragraph [ref=e328]: — Brian A., Google
+            - listitem [ref=e329]:
+              - paragraph [ref=e330]: “I feel like I've been aging backwards since going to Kiamo Skin. My skin is so glowy and smooth.”
+              - paragraph [ref=e331]: — Morg A., Google
+            - listitem [ref=e332]:
+              - paragraph [ref=e333]: “Genuinely one of the best facials I've ever had. Kiki is super friendly and the results speak for themselves.”
+              - paragraph [ref=e334]: — Alyssa M., Google
+            - listitem [ref=e335]:
+              - paragraph [ref=e336]: “This is your sign to book at Kiamo Skin. Kiki is so knowledgeable and you can feel you're in good hands.”
+              - paragraph [ref=e337]: — Rheshanna C., Google
+            - listitem [ref=e338]:
+              - paragraph [ref=e339]: “My skin has never looked better after my first HydraFacial in San Diego. Highly recommend for real results.”
+              - paragraph [ref=e340]: — David B., Google
+      - link "Read our Google reviews ↗" [ref=e342] [cursor=pointer]:
+        - /url: https://maps.app.goo.gl/hi8rJcWbu53JcN3s7
+    - generic [ref=e344]:
+      - generic [ref=e345]:
+        - generic [ref=e346]:
+          - paragraph [ref=e347]: From the treatment room
+          - heading "What corrective facial work in San Diego actually looks like." [level=2] [ref=e348]
+        - generic [ref=e349]:
+          - button "Previous clip" [disabled] [ref=e350]
+          - button "Next clip" [disabled] [ref=e353]
+      - list [ref=e357]:
+        - listitem [ref=e358]:
+          - figure [ref=e359]:
+            - img "A gloved esthetician passing a Procell microchanneling handpiece across a client’s cheek" [ref=e361]
+            - link [ref=e364] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+              - paragraph [ref=e365]: Procell microchanneling
+              - paragraph [ref=e366]: Controlled micro-channels through active breakout and scarring, on melanin-rich skin.
+        - listitem [ref=e367]:
+          - figure [ref=e368]:
+            - img "A client reclined at the treatment bed while the scalp is worked through in sections" [ref=e370]
+            - link [ref=e373] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+              - paragraph [ref=e374]: Keravive scalp therapy
+              - paragraph [ref=e375]: HydraFacial Keravive at the scalp, worked through the part in sections.
+        - listitem [ref=e376]:
+          - figure [ref=e377]:
+            - img "A facial in progress in the KIAMO Skin treatment room, client reclined under an eye mask" [ref=e379]
+            - generic [ref=e381]:
+              - paragraph [ref=e382]: Inside the Mission Hills studio
+              - paragraph [ref=e383]: A corrective facial in progress, in the treatment room off Washington Street.
+      - paragraph [ref=e384]:
+        - text: More on
+        - link "Instagram @kiamoskin" [ref=e385] [cursor=pointer]:
+          - /url: https://www.instagram.com/kiamoskin/
+        - text: .
+    - generic [ref=e387]:
+      - paragraph [ref=e388]: Treating skin in San Diego
+      - heading "Your San Diego climate is part of your protocol." [level=2] [ref=e389]
+      - list [ref=e390]:
+        - listitem [ref=e391]:
+          - img "Overcast San Diego coastline under a bright marine layer" [ref=e392]
+          - heading "June gloom is not sun protection" [level=3] [ref=e393]
+          - paragraph [ref=e394]: The marine layer scatters light, it does not stop it. UV still reaches 8–10 on the index through overcast mornings, which is exactly how pigmentation quietly deepens in a city that feels mild.
+          - link "Read the article" [ref=e395] [cursor=pointer]:
+            - /url: /journal/june-gloom-is-not-sun-protection/
+        - listitem [ref=e396]:
+          - img "Water falling over a hand, lit from the side" [ref=e397]
+          - heading "Hard water, dry scalp" [level=3] [ref=e398]
+          - paragraph [ref=e399]: San Diego water runs around 16 grains per gallon — hard by any measure. Mineral residue builds on the scalp and hair, which shows up as flaking, itch and product that stops working.
+          - link "Read the article" [ref=e400] [cursor=pointer]:
+            - /url: /journal/san-diego-hard-water-and-your-scalp/
+        - listitem [ref=e401]:
+          - img "Portrait in dry, warm light with visible natural skin texture" [ref=e402]
+          - heading "Santa Ana winds and your barrier" [level=3] [ref=e403]
+          - paragraph [ref=e404]: Humidity can drop into single digits within hours. A compromised barrier loses water faster than it can hold it, and skin that was calm all summer starts stinging in October.
+          - link "See barrier repair" [ref=e405] [cursor=pointer]:
+            - /url: /treatments/dmk-enzyme-therapy/
+    - generic [ref=e407]:
+      - paragraph [ref=e408]: Getting here
+      - heading "Corrective facials near you — across San Diego County" [level=2] [ref=e409]
+      - paragraph [ref=e410]: There is one studio, and it is off Washington Street, minutes from Hillcrest, Bankers Hill and Little Italy. Clients drive in from across San Diego County, so here is the honest distance from each.
+      - list [ref=e411]:
+        - listitem [ref=e412]:
+          - link [ref=e413] [cursor=pointer]:
+            - /url: /service-areas/mission-hills/
+            - generic [ref=e414]:
+              - heading "Mission Hills — The studio itself" [level=3] [ref=e415]
+              - paragraph [ref=e416]: The studio itself — five minutes across the neighborhood
+        - listitem [ref=e417]:
+          - link [ref=e418] [cursor=pointer]:
+            - /url: /service-areas/la-jolla/
+            - generic [ref=e419]:
+              - heading "La Jolla — 20 minutes south" [level=3] [ref=e420]
+              - paragraph [ref=e421]: About twelve miles — roughly twenty minutes south on I-5
+        - listitem [ref=e422]:
+          - link [ref=e423] [cursor=pointer]:
+            - /url: /service-areas/chula-vista/
+            - generic [ref=e424]:
+              - heading "Chula Vista — 25 minutes north" [level=3] [ref=e425]
+              - paragraph [ref=e426]: About thirteen miles — twenty to twenty-five minutes north off-peak
+        - listitem [ref=e427]:
+          - link [ref=e428] [cursor=pointer]:
+            - /url: /service-areas/encinitas/
+            - generic [ref=e429]:
+              - heading "Encinitas — 30 minutes south" [level=3] [ref=e430]
+              - paragraph [ref=e431]: About twenty-five miles — near thirty minutes on a clear I-5
+        - listitem [ref=e432]:
+          - link [ref=e433] [cursor=pointer]:
+            - /url: /service-areas/del-mar/
+            - generic [ref=e434]:
+              - heading "Del Mar — 25 minutes south" [level=3] [ref=e435]
+              - paragraph [ref=e436]: About twenty-two miles — twenty-five minutes south on I-5
+        - listitem [ref=e437]:
+          - link [ref=e438] [cursor=pointer]:
+            - /url: /service-areas/carlsbad/
+            - generic [ref=e439]:
+              - heading "Carlsbad — 35-40 minutes south" [level=3] [ref=e440]
+              - paragraph [ref=e441]: About thirty-five miles — a genuine thirty-five to forty-five minutes
+        - listitem [ref=e442]:
+          - link [ref=e443] [cursor=pointer]:
+            - /url: /service-areas/pacific-beach/
+            - generic [ref=e444]:
+              - heading "Pacific Beach — 15 minutes east" [level=3] [ref=e445]
+              - paragraph [ref=e446]: Roughly seven miles — about fifteen minutes east
+        - listitem [ref=e447]:
+          - link [ref=e448] [cursor=pointer]:
+            - /url: /service-areas/la-mesa/
+            - generic [ref=e449]:
+              - heading "La Mesa — 20 minutes west" [level=3] [ref=e450]
+              - paragraph [ref=e451]: Roughly eleven miles — fifteen to twenty minutes west on I-8
+        - listitem [ref=e452]:
+          - link [ref=e453] [cursor=pointer]:
+            - /url: /service-areas/north-park/
+            - generic [ref=e454]:
+              - heading "North Park — 10 minutes west" [level=3] [ref=e455]
+              - paragraph [ref=e456]: Three and a half miles — about ten minutes, no freeway needed
+      - link "All areas across San Diego County" [ref=e458] [cursor=pointer]:
+        - /url: /service-areas/
+    - generic [ref=e460]:
+      - generic [ref=e461]:
+        - paragraph [ref=e462]: Before you book
+        - heading "Facial questions answered — Mission Hills, San Diego" [level=2] [ref=e463]
+        - generic [ref=e464]:
+          - group [ref=e466]:
+            - generic "How much does a facial cost in San Diego?" [ref=e467] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e469]: +
+          - group [ref=e471]:
+            - generic "Do I need an appointment?" [ref=e472] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e474]: +
+          - group [ref=e476]:
+            - generic "What happens at a first visit?" [ref=e477] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e479]: +
+          - group [ref=e481]:
+            - generic "What kind of facial is most effective?" [ref=e482] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e484]: +
+          - group [ref=e486]:
+            - generic "What should you avoid before a facial?" [ref=e487] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e489]: +
+          - group [ref=e491]:
+            - generic "Do you work with melanin-rich skin?" [ref=e492] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e494]: +
+          - group [ref=e496]:
+            - generic "How often should you get a facial?" [ref=e497] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e499]: +
+          - group [ref=e501]:
+            - generic "How many treatments will I need?" [ref=e502] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e504]: +
+          - group [ref=e506]:
+            - generic "Do you tip for a facial?" [ref=e507] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e509]: +
+          - group [ref=e511]:
+            - generic "Is KIAMO SKIN a facial spa or a skin care clinic?" [ref=e512] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e514]: +
+          - group [ref=e516]:
+            - generic "Is there parking?" [ref=e517] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e519]: +
+          - group [ref=e521]:
+            - generic "What is the cancellation policy?" [ref=e522] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e524]: +
+      - generic [ref=e525]:
+        - paragraph [ref=e526]: The studio
+        - heading "Visit us in Mission Hills" [level=2] [ref=e527]
+        - iframe [ref=e529]
+        - generic [ref=e531]:
+          - link "3067 Reynard Way San Diego, CA 92103" [ref=e532] [cursor=pointer]:
+            - /url: "#location-map"
+            - text: 3067 Reynard WaySan Diego, CA 92103
+          - paragraph [ref=e533]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+          - paragraph [ref=e534]:
+            - link "(310) 595-0872" [ref=e535] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=e536]:
+            - link "kiamoskin@gmail.com" [ref=e537] [cursor=pointer]:
+              - /url: mailto:kiamoskin@gmail.com
+          - paragraph [ref=e538]: By appointment only · Free parking
+          - paragraph [ref=e539]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+        - generic [ref=e540]:
+          - link "Request Appointment" [ref=e541] [cursor=pointer]:
+            - /url: https://www.vagaro.com/kiamoskin
+          - link "Call (310) 595-0872" [ref=e542] [cursor=pointer]:
+            - /url: tel:+13105950872
+        - generic [ref=e543]:
+          - link "Get directions" [ref=e544] [cursor=pointer]:
+            - /url: https://www.google.com/maps/dir/?api=1&destination=3067%20Reynard%20Way%2C%20San%20Diego%2C%20CA%2092103&destination_place_id=ChIJo2cuA-IJ3IARCItwkI34PGQ
+          - link "Read our Google reviews" [ref=e545] [cursor=pointer]:
+            - /url: https://maps.app.goo.gl/hi8rJcWbu53JcN3s7
+  - contentinfo [ref=e546]:
+    - generic [ref=e547]:
+      - generic [ref=e548]:
+        - paragraph [ref=e549]: KIAMO Skin
+        - link "Request Appointment" [ref=e550] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+      - generic [ref=e551]:
+        - paragraph [ref=e552]: Visit
+        - generic [ref=e554]:
+          - link "3067 Reynard Way San Diego, CA 92103" [ref=e555] [cursor=pointer]:
+            - /url: "#location-map"
+            - text: 3067 Reynard WaySan Diego, CA 92103
+          - paragraph [ref=e556]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+          - paragraph [ref=e557]:
+            - link "(310) 595-0872" [ref=e558] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=e559]:
+            - link "kiamoskin@gmail.com" [ref=e560] [cursor=pointer]:
+              - /url: mailto:kiamoskin@gmail.com
+          - paragraph [ref=e561]: By appointment only · Free parking
+          - paragraph [ref=e562]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=e563]:
+        - paragraph [ref=e564]: Treatments
+        - list [ref=e565]:
+          - listitem [ref=e566]:
+            - link "HydraFacial" [ref=e567] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+          - listitem [ref=e568]:
+            - link "Keravive Scalp Therapy" [ref=e569] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+          - listitem [ref=e570]:
+            - link "DMK Enzyme Therapy" [ref=e571] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+          - listitem [ref=e572]:
+            - link "Procell Microchanneling" [ref=e573] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+          - listitem [ref=e574]:
+            - link "Lira Chemical Peels" [ref=e575] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+          - listitem [ref=e576]:
+            - link "Dermaplaning" [ref=e577] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+        - paragraph [ref=e578]: More
+        - list [ref=e579]:
+          - listitem [ref=e580]:
+            - link "Treatments" [ref=e581] [cursor=pointer]:
+              - /url: /treatments/
+          - listitem [ref=e582]:
+            - link "Membership" [ref=e583] [cursor=pointer]:
+              - /url: /membership/
+          - listitem [ref=e584]:
+            - link "Melanin-Rich Skin" [ref=e585] [cursor=pointer]:
+              - /url: /melanin-rich-skin/
+          - listitem [ref=e586]:
+            - link "About" [ref=e587] [cursor=pointer]:
+              - /url: /about/
+          - listitem [ref=e588]:
+            - link "Journal" [ref=e589] [cursor=pointer]:
+              - /url: /journal/
+          - listitem [ref=e590]:
+            - link "Contact" [ref=e591] [cursor=pointer]:
+              - /url: /contact/
+          - listitem [ref=e592]:
+            - link "Book" [ref=e593] [cursor=pointer]:
+              - /url: /book/
+          - listitem [ref=e594]:
+            - link "Instagram @kiamoskin" [ref=e595] [cursor=pointer]:
+              - /url: https://www.instagram.com/kiamoskin/
+      - generic [ref=e596]:
+        - paragraph [ref=e597]: Areas we serve
+        - list [ref=e598]:
+          - listitem [ref=e599]:
+            - link "All areas in San Diego County" [ref=e600] [cursor=pointer]:
+              - /url: /service-areas/
+          - listitem [ref=e601]:
+            - link "Mission Hills" [ref=e602] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+          - listitem [ref=e603]:
+            - link "La Jolla" [ref=e604] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+          - listitem [ref=e605]:
+            - link "North Park" [ref=e606] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+          - listitem [ref=e607]:
+            - link "Pacific Beach" [ref=e608] [cursor=pointer]:
+              - /url: /service-areas/pacific-beach/
+          - listitem [ref=e609]:
+            - link "Chula Vista" [ref=e610] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+          - listitem [ref=e611]:
+            - link "La Mesa" [ref=e612] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+          - listitem [ref=e613]:
+            - link "Del Mar" [ref=e614] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+          - listitem [ref=e615]:
+            - link "Encinitas" [ref=e616] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+          - listitem [ref=e617]:
+            - link "Carlsbad" [ref=e618] [cursor=pointer]:
+              - /url: /service-areas/carlsbad/
+    - paragraph [ref=e620]: © 2026 KIAMO SKIN · Black-owned, Mission Hills, San Diego

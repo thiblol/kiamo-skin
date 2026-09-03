@@ -1,0 +1,309 @@
+- generic [active] [ref=f7e1]:
+  - link "Skip to content" [ref=f7e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f7e3]:
+    - generic [ref=f7e4]:
+      - link "Kiamo — KIAMO SKIN, home" [ref=f7e5] [cursor=pointer]:
+        - /url: /
+        - text: Kiamo
+        - generic [ref=f7e6]: — KIAMO SKIN, home
+      - generic [ref=f7e7]:
+        - link "Request Appointment" [ref=f7e8] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+        - button "Open menu" [ref=f7e9]
+  - main [ref=f7e13]:
+    - article [ref=f7e14]:
+      - generic [ref=f7e17]:
+        - generic [ref=f7e18]:
+          - paragraph [ref=f7e19]:
+            - link "Treatments" [ref=f7e20] [cursor=pointer]:
+              - /url: /treatments/
+            - text: · Procell Microchanneling
+          - heading "Procell Microchanneling — stimulate your skin's natural repair process." [level=1] [ref=f7e21]
+          - paragraph [ref=f7e22]:
+            - text: Looking for microneedling in San Diego? Procell microchanneling is the alternative offered here — a different modality from a needle pen, performed by a licensed esthetician in Mission Hills,
+            - link "with depth adjusted for melanin-rich skin" [ref=f7e23] [cursor=pointer]:
+              - /url: /journal/microneedling-on-dark-skin-san-diego/
+            - text: .
+          - paragraph [ref=f7e24]:
+            - text: Procell Microchanneling creates controlled microchannels that activate your skin's natural repair response while delivering a specialized growth factor serum. Over time, new collagen helps improve acne scars, fine lines, wrinkles, and uneven skin texture for smoother, healthier-looking skin. Every treatment is customized for your skin goals and skin tone. For clients traveling from
+            - link "Carlsbad" [ref=f7e25] [cursor=pointer]:
+              - /url: /service-areas/carlsbad/
+            - text: ","
+            - link "Del Mar" [ref=f7e26] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+            - text: ", or"
+            - link "Encinitas" [ref=f7e27] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+            - text: ", the series is planned as a block at consultation—scheduling all three sessions at once accounts for the drive and makes completion realistic."
+          - generic [ref=f7e28]:
+            - link "Request Appointment" [ref=f7e29] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin
+            - link "(310) 595-0872" [ref=f7e30] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f7e31]: Licensed Esthetician · Licensed Esthetician · 7+ years experience · One-to-one, private studio
+        - generic [ref=f7e32]:
+          - img "Portrait of smooth, healthy skin along the cheek and jaw" [ref=f7e33]
+          - link "Request Appointment" [ref=f7e35] [cursor=pointer]:
+            - /url: https://www.vagaro.com/kiamoskin
+      - paragraph [ref=f7e38]:
+        - text: Procell Microchanneling is performed at the Mission Hills studio. Clients travel from
+        - link "across San Diego County" [ref=f7e39] [cursor=pointer]:
+          - /url: /service-areas/
+        - text: — from nearby neighborhoods like North Park and Hillcrest to coastal areas including La Jolla, Pacific Beach and Encinitas, and inland communities like Chula Vista and La Mesa.
+      - generic [ref=f7e41]:
+        - generic [ref=f7e42]:
+          - generic [ref=f7e43]:
+            - heading "What happens in the room" [level=2] [ref=f7e44]
+            - list [ref=f7e45]:
+              - listitem [ref=f7e46]:
+                - paragraph [ref=f7e47]: "01"
+                - heading "Prepare" [level=3] [ref=f7e48]
+                - paragraph [ref=f7e49]: Your skin is thoroughly cleansed and prepared before treatment. Every Procell session is customized to your skin goals and concerns.
+              - listitem [ref=f7e50]:
+                - paragraph [ref=f7e51]: "02"
+                - heading "The pass" [level=3] [ref=f7e52]
+                - paragraph [ref=f7e53]: Treatment depth is adjusted for each area of your skin — deeper where correction is needed and lighter where skin is naturally thinner. A specialized growth factor serum is applied throughout the treatment to support your skin's natural repair process.
+              - listitem [ref=f7e54]:
+                - paragraph [ref=f7e55]: "03"
+                - heading "Recover" [level=3] [ref=f7e56]
+                - paragraph [ref=f7e57]: Expect redness similar to a mild sunburn for 24-48 hours. Mild dryness or flaking may occur as your skin renews itself. Following your post-care instructions including daily SPF is essential to support healing and help minimize the risk of unwanted pigmentation, especially in melanin rich skin.
+          - generic [ref=f7e58]:
+            - heading "Ideal for" [level=2] [ref=f7e59]
+            - list [ref=f7e60]:
+              - listitem [ref=f7e61]:
+                - generic [aria-hidden] [ref=f7e62]: —
+                - generic [ref=f7e63]: Acne scars and uneven skin texture
+              - listitem [ref=f7e64]:
+                - generic [aria-hidden] [ref=f7e65]: —
+                - generic [ref=f7e66]: Enlarged pores and rough skin texture
+              - listitem [ref=f7e67]:
+                - generic [aria-hidden] [ref=f7e68]: —
+                - generic [ref=f7e69]: Fine lines and early loss of firmness
+              - listitem [ref=f7e70]:
+                - generic [aria-hidden] [ref=f7e71]: —
+                - generic [ref=f7e72]: Skin that benefits from collagen stimulation without heat or light
+        - complementary [ref=f7e73]:
+          - generic [ref=f7e74]:
+            - heading "Pricing in San Diego" [level=2] [ref=f7e75]
+            - generic [ref=f7e76]:
+              - generic [ref=f7e77]:
+                - term [ref=f7e78]: Procell Microchanneling
+                - definition [ref=f7e79]: $475
+                - definition [ref=f7e80]: The best results are typically achieved with a series rather than a single treatment. Most clients begin with three sessions spaced 4-6 weeks apart, though your treatment plan is customized during your consultation based on your skin goals, concerns, and how your skin responds.
+              - generic [ref=f7e81]:
+                - term [ref=f7e82]: Procell Microchanneling 3-Treatment Series
+                - definition [ref=f7e83]: $1,199
+                - definition [ref=f7e84]: Designed for clients committed to long-term correction. A series of three treatments supports progressive collagen remodeling and is recommended for concerns such as acne scars, uneven texture, fine lines, and overall skin rejuvenation. Treatments are typically scheduled 4-6 weeks apart.
+            - paragraph [ref=f7e85]:
+              - text: Microchanneling works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger.
+              - link "Facials for melanin-rich skin in San Diego" [ref=f7e86] [cursor=pointer]:
+                - /url: /melanin-rich-skin/
+              - text: .
+            - paragraph [ref=f7e87]:
+              - text: A series of three is the usual plan, and membership treatments can be applied to it by paying the difference.
+              - link "Membership pricing and what each plan includes" [ref=f7e88] [cursor=pointer]:
+                - /url: /membership/
+              - text: .
+            - link "Request Appointment" [ref=f7e90] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin
+          - generic [ref=f7e92]:
+            - link "3067 Reynard Way San Diego, CA 92103" [ref=f7e93] [cursor=pointer]:
+              - /url: "#location-map"
+              - text: 3067 Reynard WaySan Diego, CA 92103
+            - paragraph [ref=f7e94]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+            - paragraph [ref=f7e95]:
+              - link "(310) 595-0872" [ref=f7e96] [cursor=pointer]:
+                - /url: tel:+13105950872
+            - paragraph [ref=f7e97]:
+              - link "kiamoskin@gmail.com" [ref=f7e98] [cursor=pointer]:
+                - /url: mailto:kiamoskin@gmail.com
+            - paragraph [ref=f7e99]: By appointment only · Free parking
+            - paragraph [ref=f7e100]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=f7e102]:
+        - paragraph [ref=f7e103]: Before you book
+        - heading "Procell Microchanneling questions" [level=2] [ref=f7e104]
+        - generic [ref=f7e105]:
+          - group [ref=f7e107]:
+            - generic "How much does microchanneling cost in San Diego?" [ref=f7e108] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f7e110]: +
+          - group [ref=f7e112]:
+            - generic "How is Procell microchanneling different from microneedling?" [ref=f7e113] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f7e115]: +
+          - group [ref=f7e117]:
+            - generic "Is microneedling worth the money?" [ref=f7e118] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f7e120]: +
+          - group [ref=f7e122]:
+            - generic "Is 40 too old for microchanneling?" [ref=f7e123] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f7e125]: +
+          - group [ref=f7e127]:
+            - generic "Why does skin look worse right after microchanneling?" [ref=f7e128] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f7e130]: +
+          - group [ref=f7e132]:
+            - generic "Is microneedling safe for dark skin?" [ref=f7e133] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f7e135]: +
+          - group [ref=f7e137]:
+            - generic "Is microneedling worth it for acne scars?" [ref=f7e138] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f7e140]: +
+      - generic [ref=f7e142]:
+        - heading "Clients from across San Diego" [level=2] [ref=f7e143]
+        - paragraph [ref=f7e144]: "Procell Microchanneling is performed at the Mission Hills studio. Clients travel from these areas across San Diego County:"
+        - list [ref=f7e145]:
+          - listitem [ref=f7e146]:
+            - link [ref=f7e147] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+              - heading "Procell Microchanneling in La Jolla" [level=3] [ref=f7e148]
+              - paragraph [ref=f7e149]: About twelve miles — roughly twenty minutes south on I-5
+          - listitem [ref=f7e150]:
+            - link [ref=f7e151] [cursor=pointer]:
+              - /url: /service-areas/carlsbad/
+              - heading "Procell Microchanneling in Carlsbad" [level=3] [ref=f7e152]
+              - paragraph [ref=f7e153]: About thirty-five miles — a genuine thirty-five to forty-five minutes
+          - listitem [ref=f7e154]:
+            - link [ref=f7e155] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+              - heading "Procell Microchanneling in Del Mar" [level=3] [ref=f7e156]
+              - paragraph [ref=f7e157]: About twenty-two miles — twenty-five minutes south on I-5
+          - listitem [ref=f7e158]:
+            - link [ref=f7e159] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+              - heading "Procell Microchanneling in Encinitas" [level=3] [ref=f7e160]
+              - paragraph [ref=f7e161]: About twenty-five miles — near thirty minutes on a clear I-5
+        - paragraph [ref=f7e162]:
+          - link "See all areas served across San Diego County" [ref=f7e163] [cursor=pointer]:
+            - /url: /service-areas/
+      - generic [ref=f7e165]:
+        - heading "Other treatments" [level=2] [ref=f7e166]
+        - list [ref=f7e167]:
+          - listitem [ref=f7e168]:
+            - link [ref=f7e169] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+              - heading "HydraFacial" [level=3] [ref=f7e170]
+              - paragraph [ref=f7e171]: HydraFacial — the foundation of healthy skin.
+          - listitem [ref=f7e172]:
+            - link [ref=f7e173] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+              - heading "HydraFacial Keravive" [level=3] [ref=f7e174]
+              - paragraph [ref=f7e175]: HydraFacial Keravive — your scalp is skin. Treat it that way.
+          - listitem [ref=f7e176]:
+            - link [ref=f7e177] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+              - heading "DMK Enzyme Therapy" [level=3] [ref=f7e178]
+              - paragraph [ref=f7e179]: DMK Enzyme Therapy — restore skin function from within.
+          - listitem [ref=f7e180]:
+            - link [ref=f7e181] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+              - heading "Lira Chemical Peels" [level=3] [ref=f7e182]
+              - paragraph [ref=f7e183]: Lira Chemical Peels — designed to brighten without compromising skin health.
+          - listitem [ref=f7e184]:
+            - link [ref=f7e185] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+              - heading "Dermaplane Facial" [level=3] [ref=f7e186]
+              - paragraph [ref=f7e187]: Dermaplaning — a clean surface changes what everything else can do.
+          - listitem [ref=f7e188]:
+            - link [ref=f7e189] [cursor=pointer]:
+              - /url: /treatments/acne/
+              - heading "Acne Treatment" [level=3] [ref=f7e190]
+              - paragraph [ref=f7e191]: Acne Treatment in San Diego — clear breakouts, fade marks, smooth scars.
+  - contentinfo [ref=f7e192]:
+    - generic [ref=f7e193]:
+      - generic [ref=f7e194]:
+        - paragraph [ref=f7e195]: KIAMO Skin
+        - link "Request Appointment" [ref=f7e196] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+      - generic [ref=f7e197]:
+        - paragraph [ref=f7e198]: Visit
+        - generic [ref=f7e200]:
+          - link "3067 Reynard Way San Diego, CA 92103" [ref=f7e201] [cursor=pointer]:
+            - /url: "#location-map"
+            - text: 3067 Reynard WaySan Diego, CA 92103
+          - paragraph [ref=f7e202]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+          - paragraph [ref=f7e203]:
+            - link "(310) 595-0872" [ref=f7e204] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f7e205]:
+            - link "kiamoskin@gmail.com" [ref=f7e206] [cursor=pointer]:
+              - /url: mailto:kiamoskin@gmail.com
+          - paragraph [ref=f7e207]: By appointment only · Free parking
+          - paragraph [ref=f7e208]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=f7e209]:
+        - paragraph [ref=f7e210]: Treatments
+        - list [ref=f7e211]:
+          - listitem [ref=f7e212]:
+            - link "HydraFacial" [ref=f7e213] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+          - listitem [ref=f7e214]:
+            - link "Keravive Scalp Therapy" [ref=f7e215] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+          - listitem [ref=f7e216]:
+            - link "DMK Enzyme Therapy" [ref=f7e217] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+          - listitem [ref=f7e218]:
+            - link "Procell Microchanneling" [ref=f7e219] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+          - listitem [ref=f7e220]:
+            - link "Lira Chemical Peels" [ref=f7e221] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+          - listitem [ref=f7e222]:
+            - link "Dermaplaning" [ref=f7e223] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+        - paragraph [ref=f7e224]: More
+        - list [ref=f7e225]:
+          - listitem [ref=f7e226]:
+            - link "Treatments" [ref=f7e227] [cursor=pointer]:
+              - /url: /treatments/
+          - listitem [ref=f7e228]:
+            - link "Membership" [ref=f7e229] [cursor=pointer]:
+              - /url: /membership/
+          - listitem [ref=f7e230]:
+            - link "Melanin-Rich Skin" [ref=f7e231] [cursor=pointer]:
+              - /url: /melanin-rich-skin/
+          - listitem [ref=f7e232]:
+            - link "About" [ref=f7e233] [cursor=pointer]:
+              - /url: /about/
+          - listitem [ref=f7e234]:
+            - link "Journal" [ref=f7e235] [cursor=pointer]:
+              - /url: /journal/
+          - listitem [ref=f7e236]:
+            - link "Contact" [ref=f7e237] [cursor=pointer]:
+              - /url: /contact/
+          - listitem [ref=f7e238]:
+            - link "Book" [ref=f7e239] [cursor=pointer]:
+              - /url: /book/
+          - listitem [ref=f7e240]:
+            - link "Instagram @kiamoskin" [ref=f7e241] [cursor=pointer]:
+              - /url: https://www.instagram.com/kiamoskin/
+      - generic [ref=f7e242]:
+        - paragraph [ref=f7e243]: Areas we serve
+        - list [ref=f7e244]:
+          - listitem [ref=f7e245]:
+            - link "All areas in San Diego County" [ref=f7e246] [cursor=pointer]:
+              - /url: /service-areas/
+          - listitem [ref=f7e247]:
+            - link "Mission Hills" [ref=f7e248] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+          - listitem [ref=f7e249]:
+            - link "La Jolla" [ref=f7e250] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+          - listitem [ref=f7e251]:
+            - link "North Park" [ref=f7e252] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+          - listitem [ref=f7e253]:
+            - link "Pacific Beach" [ref=f7e254] [cursor=pointer]:
+              - /url: /service-areas/pacific-beach/
+          - listitem [ref=f7e255]:
+            - link "Chula Vista" [ref=f7e256] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+          - listitem [ref=f7e257]:
+            - link "La Mesa" [ref=f7e258] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+          - listitem [ref=f7e259]:
+            - link "Del Mar" [ref=f7e260] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+          - listitem [ref=f7e261]:
+            - link "Encinitas" [ref=f7e262] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+          - listitem [ref=f7e263]:
+            - link "Carlsbad" [ref=f7e264] [cursor=pointer]:
+              - /url: /service-areas/carlsbad/
+    - paragraph [ref=f7e266]: © 2026 KIAMO SKIN · Black-owned, Mission Hills, San Diego

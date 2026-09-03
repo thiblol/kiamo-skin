@@ -1,0 +1,315 @@
+- generic [active] [ref=f5e1]:
+  - link "Skip to content" [ref=f5e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f5e3]:
+    - generic [ref=f5e4]:
+      - link "Kiamo — KIAMO SKIN, home" [ref=f5e5] [cursor=pointer]:
+        - /url: /
+        - text: Kiamo
+        - generic [ref=f5e6]: — KIAMO SKIN, home
+      - generic [ref=f5e7]:
+        - link "Request Appointment" [ref=f5e8] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+        - button "Open menu" [ref=f5e9]
+  - main [ref=f5e13]:
+    - article [ref=f5e14]:
+      - generic [ref=f5e17]:
+        - generic [ref=f5e18]:
+          - paragraph [ref=f5e19]:
+            - link "Treatments" [ref=f5e20] [cursor=pointer]:
+              - /url: /treatments/
+            - text: · HydraFacial Keravive
+          - heading "HydraFacial Keravive — your scalp is skin. Treat it that way." [level=1] [ref=f5e21]
+          - paragraph [ref=f5e22]: Looking for professional scalp treatment in San Diego? Keravive is clinical scalp therapy for buildup, flaking, dandruff, and the hard water mineral residue that accumulates on San Diego scalps. Performed at KIAMO SKIN in Mission Hills, serving clients from Pacific Beach to Carlsbad.
+          - paragraph [ref=f5e23]:
+            - text: Keravive deeply cleanses, exfoliates, and hydrates the scalp while removing buildup that contributes to dryness, flaking, and irritation. A healthier scalp creates a better environment for healthy hair growth. In San Diego, hard water makes scalp buildup especially common—from
+            - link "La Jolla ocean swimmers" [ref=f5e24] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+            - text: dealing with daily salt water exposure to
+            - link "Encinitas surfers" [ref=f5e25] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+            - text: facing wind and UV damage, scalp conditions here are shaped by year-round outdoor living. Inland clients from
+            - link "Chula Vista" [ref=f5e26] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+            - text: and
+            - link "La Mesa" [ref=f5e27] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+            - text: book Keravive for hard water mineral deposits that shampoo cannot clear. Every treatment includes a take-home peptide spray to continue supporting scalp health between visits.
+          - generic [ref=f5e28]:
+            - link "Request Appointment" [ref=f5e29] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin
+            - link "(310) 595-0872" [ref=f5e30] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f5e31]: Licensed Esthetician · Licensed Esthetician · 7+ years experience · One-to-one, private studio
+        - generic [ref=f5e32]:
+          - img "Scalp therapy being performed at the part line" [ref=f5e33]
+          - link "Request Appointment" [ref=f5e35] [cursor=pointer]:
+            - /url: https://www.vagaro.com/kiamoskin
+      - paragraph [ref=f5e38]:
+        - text: HydraFacial Keravive is performed at the Mission Hills studio. Clients travel from
+        - link "across San Diego County" [ref=f5e39] [cursor=pointer]:
+          - /url: /service-areas/
+        - text: — from nearby neighborhoods like North Park and Hillcrest to coastal areas including La Jolla, Pacific Beach and Encinitas, and inland communities like Chula Vista and La Mesa.
+      - generic [ref=f5e41]:
+        - generic [ref=f5e42]:
+          - generic [ref=f5e43]:
+            - heading "What happens in the room" [level=2] [ref=f5e44]
+            - list [ref=f5e45]:
+              - listitem [ref=f5e46]:
+                - paragraph [ref=f5e47]: "01"
+                - heading "Cleanse" [level=3] [ref=f5e48]
+                - paragraph [ref=f5e49]: Gently removes oil, dead skin, product buildup, and mineral buildup from the scalp.
+              - listitem [ref=f5e50]:
+                - paragraph [ref=f5e51]: "02"
+                - heading "Nourish" [level=3] [ref=f5e52]
+                - paragraph [ref=f5e53]: A concentrated peptide complex nourishes the scalp to support a healthier environment for healthy hair growth.
+              - listitem [ref=f5e54]:
+                - paragraph [ref=f5e55]: "03"
+                - heading "Continue at home" [level=3] [ref=f5e56]
+                - paragraph [ref=f5e57]: Your take-home peptide spray helps nourish the scalp between treatments to extend and support your results.
+          - generic [ref=f5e58]:
+            - heading "Ideal for" [level=2] [ref=f5e59]
+            - list [ref=f5e60]:
+              - listitem [ref=f5e61]:
+                - generic [aria-hidden] [ref=f5e62]: —
+                - generic [ref=f5e63]: Flaking, itching, or scalp tightness
+              - listitem [ref=f5e64]:
+                - generic [aria-hidden] [ref=f5e65]: —
+                - generic [ref=f5e66]: Product buildup and hard water mineral deposits
+              - listitem [ref=f5e67]:
+                - generic [aria-hidden] [ref=f5e68]: —
+                - generic [ref=f5e69]: Shedding accompanied by visible scalp buildup or irritation
+              - listitem [ref=f5e70]:
+                - generic [aria-hidden] [ref=f5e71]: —
+                - generic [ref=f5e72]: Anyone who invests in their skincare but has never treated their scalp
+        - complementary [ref=f5e73]:
+          - generic [ref=f5e74]:
+            - heading "Pricing in San Diego" [level=2] [ref=f5e75]
+            - generic [ref=f5e76]:
+              - generic [ref=f5e77]:
+                - term [ref=f5e78]: Keravive Scalp Treatment
+                - definition [ref=f5e79]: $599
+              - generic [ref=f5e80]:
+                - term [ref=f5e81]: 3 Treatment Series — total
+                - definition [ref=f5e82]: $1,499
+            - paragraph [ref=f5e83]: Healthy scalp takes consistency. While one treatment deeply cleanses and hydrates the scalp, a series provides the best opportunity to support long term scalp health.
+            - paragraph [ref=f5e84]:
+              - text: Why does San Diego cause so much scalp buildup?
+              - link "San Diego hard water and your scalp" [ref=f5e85] [cursor=pointer]:
+                - /url: /journal/san-diego-hard-water-and-your-scalp/
+              - text: .
+            - paragraph [ref=f5e86]:
+              - text: Scalp work is cumulative, which is the same reason the monthly plans exist — a membership treatment can be applied to scalp therapy by paying the difference.
+              - link "How the monthly membership works" [ref=f5e87] [cursor=pointer]:
+                - /url: /membership/
+              - text: .
+            - link "Request Appointment" [ref=f5e89] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin
+          - generic [ref=f5e91]:
+            - link "3067 Reynard Way San Diego, CA 92103" [ref=f5e92] [cursor=pointer]:
+              - /url: "#location-map"
+              - text: 3067 Reynard WaySan Diego, CA 92103
+            - paragraph [ref=f5e93]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+            - paragraph [ref=f5e94]:
+              - link "(310) 595-0872" [ref=f5e95] [cursor=pointer]:
+                - /url: tel:+13105950872
+            - paragraph [ref=f5e96]:
+              - link "kiamoskin@gmail.com" [ref=f5e97] [cursor=pointer]:
+                - /url: mailto:kiamoskin@gmail.com
+            - paragraph [ref=f5e98]: By appointment only · Free parking
+            - paragraph [ref=f5e99]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=f5e101]:
+        - paragraph [ref=f5e102]: Before you book
+        - heading "HydraFacial Keravive questions" [level=2] [ref=f5e103]
+        - generic [ref=f5e104]:
+          - group [ref=f5e106]:
+            - generic "How much does a Keravive scalp treatment cost in San Diego?" [ref=f5e107] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f5e109]: +
+          - group [ref=f5e111]:
+            - generic "Where can I get Keravive scalp treatment in San Diego?" [ref=f5e112] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f5e114]: +
+          - group [ref=f5e116]:
+            - generic "How long does Keravive take if coming from Pacific Beach?" [ref=f5e117] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f5e119]: +
+          - group [ref=f5e121]:
+            - generic "What is the best treatment for a flaking, itchy scalp?" [ref=f5e122] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f5e124]: +
+          - group [ref=f5e126]:
+            - generic "Does ocean water affect Keravive results?" [ref=f5e127] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f5e129]: +
+          - group [ref=f5e131]:
+            - generic "Is a scalp treatment worth it?" [ref=f5e132] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f5e134]: +
+          - group [ref=f5e136]:
+            - generic "What does a Japanese scalp treatment do?" [ref=f5e137] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f5e139]: +
+          - group [ref=f5e141]:
+            - generic "What do dermatologists recommend for scalp problems?" [ref=f5e142] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f5e144]: +
+      - generic [ref=f5e146]:
+        - heading "Clients from across San Diego" [level=2] [ref=f5e147]
+        - paragraph [ref=f5e148]: "HydraFacial Keravive is performed at the Mission Hills studio. Clients travel from these areas across San Diego County:"
+        - list [ref=f5e149]:
+          - listitem [ref=f5e150]:
+            - link [ref=f5e151] [cursor=pointer]:
+              - /url: /service-areas/pacific-beach/
+              - heading "HydraFacial Keravive in Pacific Beach" [level=3] [ref=f5e152]
+              - paragraph [ref=f5e153]: Roughly seven miles — about fifteen minutes east
+          - listitem [ref=f5e154]:
+            - link [ref=f5e155] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+              - heading "HydraFacial Keravive in La Jolla" [level=3] [ref=f5e156]
+              - paragraph [ref=f5e157]: About twelve miles — roughly twenty minutes south on I-5
+          - listitem [ref=f5e158]:
+            - link [ref=f5e159] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+              - heading "HydraFacial Keravive in Encinitas" [level=3] [ref=f5e160]
+              - paragraph [ref=f5e161]: About twenty-five miles — near thirty minutes on a clear I-5
+          - listitem [ref=f5e162]:
+            - link [ref=f5e163] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+              - heading "HydraFacial Keravive in Del Mar" [level=3] [ref=f5e164]
+              - paragraph [ref=f5e165]: About twenty-two miles — twenty-five minutes south on I-5
+          - listitem [ref=f5e166]:
+            - link [ref=f5e167] [cursor=pointer]:
+              - /url: /service-areas/carlsbad/
+              - heading "HydraFacial Keravive in Carlsbad" [level=3] [ref=f5e168]
+              - paragraph [ref=f5e169]: About thirty-five miles — a genuine thirty-five to forty-five minutes
+        - paragraph [ref=f5e170]:
+          - link "See all areas served across San Diego County" [ref=f5e171] [cursor=pointer]:
+            - /url: /service-areas/
+      - generic [ref=f5e173]:
+        - heading "Other treatments" [level=2] [ref=f5e174]
+        - list [ref=f5e175]:
+          - listitem [ref=f5e176]:
+            - link [ref=f5e177] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+              - heading "HydraFacial" [level=3] [ref=f5e178]
+              - paragraph [ref=f5e179]: HydraFacial — the foundation of healthy skin.
+          - listitem [ref=f5e180]:
+            - link [ref=f5e181] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+              - heading "DMK Enzyme Therapy" [level=3] [ref=f5e182]
+              - paragraph [ref=f5e183]: DMK Enzyme Therapy — restore skin function from within.
+          - listitem [ref=f5e184]:
+            - link [ref=f5e185] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+              - heading "Procell Microchanneling" [level=3] [ref=f5e186]
+              - paragraph [ref=f5e187]: Procell Microchanneling — stimulate your skin's natural repair process.
+          - listitem [ref=f5e188]:
+            - link [ref=f5e189] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+              - heading "Lira Chemical Peels" [level=3] [ref=f5e190]
+              - paragraph [ref=f5e191]: Lira Chemical Peels — designed to brighten without compromising skin health.
+          - listitem [ref=f5e192]:
+            - link [ref=f5e193] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+              - heading "Dermaplane Facial" [level=3] [ref=f5e194]
+              - paragraph [ref=f5e195]: Dermaplaning — a clean surface changes what everything else can do.
+          - listitem [ref=f5e196]:
+            - link [ref=f5e197] [cursor=pointer]:
+              - /url: /treatments/acne/
+              - heading "Acne Treatment" [level=3] [ref=f5e198]
+              - paragraph [ref=f5e199]: Acne Treatment in San Diego — clear breakouts, fade marks, smooth scars.
+  - contentinfo [ref=f5e200]:
+    - generic [ref=f5e201]:
+      - generic [ref=f5e202]:
+        - paragraph [ref=f5e203]: KIAMO Skin
+        - link "Request Appointment" [ref=f5e204] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+      - generic [ref=f5e205]:
+        - paragraph [ref=f5e206]: Visit
+        - generic [ref=f5e208]:
+          - link "3067 Reynard Way San Diego, CA 92103" [ref=f5e209] [cursor=pointer]:
+            - /url: "#location-map"
+            - text: 3067 Reynard WaySan Diego, CA 92103
+          - paragraph [ref=f5e210]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+          - paragraph [ref=f5e211]:
+            - link "(310) 595-0872" [ref=f5e212] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f5e213]:
+            - link "kiamoskin@gmail.com" [ref=f5e214] [cursor=pointer]:
+              - /url: mailto:kiamoskin@gmail.com
+          - paragraph [ref=f5e215]: By appointment only · Free parking
+          - paragraph [ref=f5e216]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=f5e217]:
+        - paragraph [ref=f5e218]: Treatments
+        - list [ref=f5e219]:
+          - listitem [ref=f5e220]:
+            - link "HydraFacial" [ref=f5e221] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+          - listitem [ref=f5e222]:
+            - link "Keravive Scalp Therapy" [ref=f5e223] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+          - listitem [ref=f5e224]:
+            - link "DMK Enzyme Therapy" [ref=f5e225] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+          - listitem [ref=f5e226]:
+            - link "Procell Microchanneling" [ref=f5e227] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+          - listitem [ref=f5e228]:
+            - link "Lira Chemical Peels" [ref=f5e229] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+          - listitem [ref=f5e230]:
+            - link "Dermaplaning" [ref=f5e231] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+        - paragraph [ref=f5e232]: More
+        - list [ref=f5e233]:
+          - listitem [ref=f5e234]:
+            - link "Treatments" [ref=f5e235] [cursor=pointer]:
+              - /url: /treatments/
+          - listitem [ref=f5e236]:
+            - link "Membership" [ref=f5e237] [cursor=pointer]:
+              - /url: /membership/
+          - listitem [ref=f5e238]:
+            - link "Melanin-Rich Skin" [ref=f5e239] [cursor=pointer]:
+              - /url: /melanin-rich-skin/
+          - listitem [ref=f5e240]:
+            - link "About" [ref=f5e241] [cursor=pointer]:
+              - /url: /about/
+          - listitem [ref=f5e242]:
+            - link "Journal" [ref=f5e243] [cursor=pointer]:
+              - /url: /journal/
+          - listitem [ref=f5e244]:
+            - link "Contact" [ref=f5e245] [cursor=pointer]:
+              - /url: /contact/
+          - listitem [ref=f5e246]:
+            - link "Book" [ref=f5e247] [cursor=pointer]:
+              - /url: /book/
+          - listitem [ref=f5e248]:
+            - link "Instagram @kiamoskin" [ref=f5e249] [cursor=pointer]:
+              - /url: https://www.instagram.com/kiamoskin/
+      - generic [ref=f5e250]:
+        - paragraph [ref=f5e251]: Areas we serve
+        - list [ref=f5e252]:
+          - listitem [ref=f5e253]:
+            - link "All areas in San Diego County" [ref=f5e254] [cursor=pointer]:
+              - /url: /service-areas/
+          - listitem [ref=f5e255]:
+            - link "Mission Hills" [ref=f5e256] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+          - listitem [ref=f5e257]:
+            - link "La Jolla" [ref=f5e258] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+          - listitem [ref=f5e259]:
+            - link "North Park" [ref=f5e260] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+          - listitem [ref=f5e261]:
+            - link "Pacific Beach" [ref=f5e262] [cursor=pointer]:
+              - /url: /service-areas/pacific-beach/
+          - listitem [ref=f5e263]:
+            - link "Chula Vista" [ref=f5e264] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+          - listitem [ref=f5e265]:
+            - link "La Mesa" [ref=f5e266] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+          - listitem [ref=f5e267]:
+            - link "Del Mar" [ref=f5e268] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+          - listitem [ref=f5e269]:
+            - link "Encinitas" [ref=f5e270] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+          - listitem [ref=f5e271]:
+            - link "Carlsbad" [ref=f5e272] [cursor=pointer]:
+              - /url: /service-areas/carlsbad/
+    - paragraph [ref=f5e274]: © 2026 KIAMO SKIN · Black-owned, Mission Hills, San Diego

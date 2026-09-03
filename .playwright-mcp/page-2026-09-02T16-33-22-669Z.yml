@@ -1,0 +1,313 @@
+- generic [active] [ref=f4e1]:
+  - link "Skip to content" [ref=f4e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=f4e3]:
+    - generic [ref=f4e4]:
+      - link "Kiamo — KIAMO SKIN, home" [ref=f4e5] [cursor=pointer]:
+        - /url: /
+        - text: Kiamo
+        - generic [ref=f4e6]: — KIAMO SKIN, home
+      - generic [ref=f4e7]:
+        - link "Request Appointment" [ref=f4e8] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+        - button "Open menu" [ref=f4e9]
+  - main [ref=f4e13]:
+    - article [ref=f4e14]:
+      - generic [ref=f4e17]:
+        - generic [ref=f4e18]:
+          - paragraph [ref=f4e19]:
+            - link "Treatments" [ref=f4e20] [cursor=pointer]:
+              - /url: /treatments/
+            - text: · HydraFacial
+          - heading "HydraFacial — the foundation of healthy skin." [level=1] [ref=f4e21]
+          - paragraph [ref=f4e22]: Looking for a HydraFacial in San Diego? KIAMO SKIN is a licensed corrective skin studio in Mission Hills, five minutes from Hillcrest and Little Italy, and the HydraFacial here is $259.
+          - paragraph [ref=f4e23]:
+            - text: "HydraFacial does three things at once: lifts away dead surface cells, vacuums out congestion, and floods the skin with serum while it is still open enough to take it. It is the most forgiving corrective treatment on the menu, which is why it is usually where a new plan starts."
+            - link "Mission Hills clients" [ref=f4e24] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+            - text: are steps from the studio, while those from
+            - link "North Park" [ref=f4e25] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+            - text: ", Hillcrest, and Bankers Hill are minutes away. Coastal clients from"
+            - link "La Jolla" [ref=f4e26] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+            - text: and
+            - link "Del Mar" [ref=f4e27] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+            - text: book HydraFacial for congestion and dehydration from sun and salt exposure—proximity that makes regular maintenance realistic.
+          - generic [ref=f4e28]:
+            - link "Request Appointment" [ref=f4e29] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin
+            - link "(310) 595-0872" [ref=f4e30] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f4e31]: Licensed Esthetician · Licensed Esthetician · 7+ years experience · One-to-one, private studio
+        - generic [ref=f4e32]:
+          - img "A HydraFacial treatment in progress in the KIAMO Skin studio" [ref=f4e33]
+          - link "Request Appointment" [ref=f4e35] [cursor=pointer]:
+            - /url: https://www.vagaro.com/kiamoskin
+      - paragraph [ref=f4e38]:
+        - text: HydraFacial is performed at the Mission Hills studio. Clients travel from
+        - link "across San Diego County" [ref=f4e39] [cursor=pointer]:
+          - /url: /service-areas/
+        - text: — from nearby neighborhoods like North Park and Hillcrest to coastal areas including La Jolla, Pacific Beach and Encinitas, and inland communities like Chula Vista and La Mesa.
+      - generic [ref=f4e41]:
+        - generic [ref=f4e42]:
+          - generic [ref=f4e43]:
+            - heading "What happens in the room" [level=2] [ref=f4e44]
+            - list [ref=f4e45]:
+              - listitem [ref=f4e46]:
+                - paragraph [ref=f4e47]: "01"
+                - heading "Cleanse & resurface" [level=3] [ref=f4e48]
+                - paragraph [ref=f4e49]: A blend of gentle exfoliating acids lifts away dead skin cells—no scrubs, no harsh abrasion.
+              - listitem [ref=f4e50]:
+                - paragraph [ref=f4e51]: "02"
+                - heading "Extract & hydrate" [level=3] [ref=f4e52]
+                - paragraph [ref=f4e53]: Gentle vortex extraction removes oil and debris before hydrating ingredients and antioxidants are infused into the skin.
+              - listitem [ref=f4e54]:
+                - paragraph [ref=f4e55]: "03"
+                - heading "Boost" [level=3] [ref=f4e56]
+                - paragraph [ref=f4e57]: A customized booster is selected based on your skin's unique needs—from brightening to barrier support.
+          - generic [ref=f4e58]:
+            - heading "Ideal for" [level=2] [ref=f4e59]
+            - list [ref=f4e60]:
+              - listitem [ref=f4e61]:
+                - generic [aria-hidden] [ref=f4e62]: —
+                - generic [ref=f4e63]: Congested pores and blackheads
+              - listitem [ref=f4e64]:
+                - generic [aria-hidden] [ref=f4e65]: —
+                - generic [ref=f4e66]: Dull, dehydrated skin
+              - listitem [ref=f4e67]:
+                - generic [aria-hidden] [ref=f4e68]: —
+                - generic [ref=f4e69]: Uneven skin texture
+              - listitem [ref=f4e70]:
+                - generic [aria-hidden] [ref=f4e71]: —
+                - generic [ref=f4e72]: The foundation of a corrective treatment plan
+        - complementary [ref=f4e73]:
+          - generic [ref=f4e74]:
+            - heading "Pricing in San Diego" [level=2] [ref=f4e75]
+            - generic [ref=f4e76]:
+              - generic [ref=f4e77]:
+                - term [ref=f4e78]: First-Time Client Treatment
+                - definition [ref=f4e79]: $249
+                - definition [ref=f4e80]: The best place to begin. Includes a comprehensive consultation, skin analysis, customized HydraFacial, personalized booster, microcurrent, LED Light Therapy, Hydrojelly Mask, and a long term treatment plan.
+              - generic [ref=f4e81]:
+                - term [ref=f4e82]: HydraFacial Treatment
+                - definition [ref=f4e83]: $259
+                - definition [ref=f4e84]: A customized HydraFacial that deeply cleanses, exfoliates, extracts, and hydrates to support healthy skin and maintain your treatment results.
+            - paragraph [ref=f4e85]:
+              - text: The HydraFacial is the treatment included in every membership tier, from $199 a month against $259 booked one visit at a time.
+              - link "Compare the three membership tiers" [ref=f4e86] [cursor=pointer]:
+                - /url: /membership/
+              - text: .
+            - link "Request Appointment" [ref=f4e88] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin
+          - generic [ref=f4e90]:
+            - link "3067 Reynard Way San Diego, CA 92103" [ref=f4e91] [cursor=pointer]:
+              - /url: "#location-map"
+              - text: 3067 Reynard WaySan Diego, CA 92103
+            - paragraph [ref=f4e92]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+            - paragraph [ref=f4e93]:
+              - link "(310) 595-0872" [ref=f4e94] [cursor=pointer]:
+                - /url: tel:+13105950872
+            - paragraph [ref=f4e95]:
+              - link "kiamoskin@gmail.com" [ref=f4e96] [cursor=pointer]:
+                - /url: mailto:kiamoskin@gmail.com
+            - paragraph [ref=f4e97]: By appointment only · Free parking
+            - paragraph [ref=f4e98]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=f4e100]:
+        - paragraph [ref=f4e101]: Before you book
+        - heading "HydraFacial questions" [level=2] [ref=f4e102]
+        - generic [ref=f4e103]:
+          - group [ref=f4e105]:
+            - generic "How much does a HydraFacial cost in San Diego?" [ref=f4e106] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f4e108]: +
+          - group [ref=f4e110]:
+            - generic "Will a HydraFacial remove blackheads?" [ref=f4e111] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f4e113]: +
+          - group [ref=f4e115]:
+            - generic "What are the negatives of a HydraFacial?" [ref=f4e116] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f4e118]: +
+          - group [ref=f4e120]:
+            - generic "What should you avoid after a HydraFacial?" [ref=f4e121] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f4e123]: +
+          - group [ref=f4e125]:
+            - generic "What is the best age to start HydraFacial treatments?" [ref=f4e126] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f4e128]: +
+          - group [ref=f4e130]:
+            - generic "Is a HydraFacial worth it for hyperpigmentation?" [ref=f4e131] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f4e133]: +
+          - group [ref=f4e135]:
+            - generic "How often do you really need a facial?" [ref=f4e136] [cursor=pointer]:
+              - generic [aria-hidden] [ref=f4e138]: +
+      - generic [ref=f4e140]:
+        - heading "Clients from across San Diego" [level=2] [ref=f4e141]
+        - paragraph [ref=f4e142]: "HydraFacial is performed at the Mission Hills studio. Clients travel from these areas across San Diego County:"
+        - list [ref=f4e143]:
+          - listitem [ref=f4e144]:
+            - link [ref=f4e145] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+              - heading "HydraFacial in La Jolla" [level=3] [ref=f4e146]
+              - paragraph [ref=f4e147]: About twelve miles — roughly twenty minutes south on I-5
+          - listitem [ref=f4e148]:
+            - link [ref=f4e149] [cursor=pointer]:
+              - /url: /service-areas/pacific-beach/
+              - heading "HydraFacial in Pacific Beach" [level=3] [ref=f4e150]
+              - paragraph [ref=f4e151]: Roughly seven miles — about fifteen minutes east
+          - listitem [ref=f4e152]:
+            - link [ref=f4e153] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+              - heading "HydraFacial in Del Mar" [level=3] [ref=f4e154]
+              - paragraph [ref=f4e155]: About twenty-two miles — twenty-five minutes south on I-5
+          - listitem [ref=f4e156]:
+            - link [ref=f4e157] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+              - heading "HydraFacial in Mission Hills" [level=3] [ref=f4e158]
+              - paragraph [ref=f4e159]: The studio itself — five minutes across the neighborhood
+          - listitem [ref=f4e160]:
+            - link [ref=f4e161] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+              - heading "HydraFacial in North Park" [level=3] [ref=f4e162]
+              - paragraph [ref=f4e163]: Three and a half miles — about ten minutes, no freeway needed
+          - listitem [ref=f4e164]:
+            - link [ref=f4e165] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+              - heading "HydraFacial in Chula Vista" [level=3] [ref=f4e166]
+              - paragraph [ref=f4e167]: About thirteen miles — twenty to twenty-five minutes north off-peak
+        - paragraph [ref=f4e168]:
+          - link "See all areas served across San Diego County" [ref=f4e169] [cursor=pointer]:
+            - /url: /service-areas/
+      - generic [ref=f4e171]:
+        - heading "Other treatments" [level=2] [ref=f4e172]
+        - list [ref=f4e173]:
+          - listitem [ref=f4e174]:
+            - link [ref=f4e175] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+              - heading "HydraFacial Keravive" [level=3] [ref=f4e176]
+              - paragraph [ref=f4e177]: HydraFacial Keravive — your scalp is skin. Treat it that way.
+          - listitem [ref=f4e178]:
+            - link [ref=f4e179] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+              - heading "DMK Enzyme Therapy" [level=3] [ref=f4e180]
+              - paragraph [ref=f4e181]: DMK Enzyme Therapy — restore skin function from within.
+          - listitem [ref=f4e182]:
+            - link [ref=f4e183] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+              - heading "Procell Microchanneling" [level=3] [ref=f4e184]
+              - paragraph [ref=f4e185]: Procell Microchanneling — stimulate your skin's natural repair process.
+          - listitem [ref=f4e186]:
+            - link [ref=f4e187] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+              - heading "Lira Chemical Peels" [level=3] [ref=f4e188]
+              - paragraph [ref=f4e189]: Lira Chemical Peels — designed to brighten without compromising skin health.
+          - listitem [ref=f4e190]:
+            - link [ref=f4e191] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+              - heading "Dermaplane Facial" [level=3] [ref=f4e192]
+              - paragraph [ref=f4e193]: Dermaplaning — a clean surface changes what everything else can do.
+          - listitem [ref=f4e194]:
+            - link [ref=f4e195] [cursor=pointer]:
+              - /url: /treatments/acne/
+              - heading "Acne Treatment" [level=3] [ref=f4e196]
+              - paragraph [ref=f4e197]: Acne Treatment in San Diego — clear breakouts, fade marks, smooth scars.
+  - contentinfo [ref=f4e198]:
+    - generic [ref=f4e199]:
+      - generic [ref=f4e200]:
+        - paragraph [ref=f4e201]: KIAMO Skin
+        - link "Request Appointment" [ref=f4e202] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+      - generic [ref=f4e203]:
+        - paragraph [ref=f4e204]: Visit
+        - generic [ref=f4e206]:
+          - link "3067 Reynard Way San Diego, CA 92103" [ref=f4e207] [cursor=pointer]:
+            - /url: "#location-map"
+            - text: 3067 Reynard WaySan Diego, CA 92103
+          - paragraph [ref=f4e208]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+          - paragraph [ref=f4e209]:
+            - link "(310) 595-0872" [ref=f4e210] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=f4e211]:
+            - link "kiamoskin@gmail.com" [ref=f4e212] [cursor=pointer]:
+              - /url: mailto:kiamoskin@gmail.com
+          - paragraph [ref=f4e213]: By appointment only · Free parking
+          - paragraph [ref=f4e214]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=f4e215]:
+        - paragraph [ref=f4e216]: Treatments
+        - list [ref=f4e217]:
+          - listitem [ref=f4e218]:
+            - link "HydraFacial" [ref=f4e219] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+          - listitem [ref=f4e220]:
+            - link "Keravive Scalp Therapy" [ref=f4e221] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+          - listitem [ref=f4e222]:
+            - link "DMK Enzyme Therapy" [ref=f4e223] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+          - listitem [ref=f4e224]:
+            - link "Procell Microchanneling" [ref=f4e225] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+          - listitem [ref=f4e226]:
+            - link "Lira Chemical Peels" [ref=f4e227] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+          - listitem [ref=f4e228]:
+            - link "Dermaplaning" [ref=f4e229] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+        - paragraph [ref=f4e230]: More
+        - list [ref=f4e231]:
+          - listitem [ref=f4e232]:
+            - link "Treatments" [ref=f4e233] [cursor=pointer]:
+              - /url: /treatments/
+          - listitem [ref=f4e234]:
+            - link "Membership" [ref=f4e235] [cursor=pointer]:
+              - /url: /membership/
+          - listitem [ref=f4e236]:
+            - link "Melanin-Rich Skin" [ref=f4e237] [cursor=pointer]:
+              - /url: /melanin-rich-skin/
+          - listitem [ref=f4e238]:
+            - link "About" [ref=f4e239] [cursor=pointer]:
+              - /url: /about/
+          - listitem [ref=f4e240]:
+            - link "Journal" [ref=f4e241] [cursor=pointer]:
+              - /url: /journal/
+          - listitem [ref=f4e242]:
+            - link "Contact" [ref=f4e243] [cursor=pointer]:
+              - /url: /contact/
+          - listitem [ref=f4e244]:
+            - link "Book" [ref=f4e245] [cursor=pointer]:
+              - /url: /book/
+          - listitem [ref=f4e246]:
+            - link "Instagram @kiamoskin" [ref=f4e247] [cursor=pointer]:
+              - /url: https://www.instagram.com/kiamoskin/
+      - generic [ref=f4e248]:
+        - paragraph [ref=f4e249]: Areas we serve
+        - list [ref=f4e250]:
+          - listitem [ref=f4e251]:
+            - link "All areas in San Diego County" [ref=f4e252] [cursor=pointer]:
+              - /url: /service-areas/
+          - listitem [ref=f4e253]:
+            - link "Mission Hills" [ref=f4e254] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+          - listitem [ref=f4e255]:
+            - link "La Jolla" [ref=f4e256] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+          - listitem [ref=f4e257]:
+            - link "North Park" [ref=f4e258] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+          - listitem [ref=f4e259]:
+            - link "Pacific Beach" [ref=f4e260] [cursor=pointer]:
+              - /url: /service-areas/pacific-beach/
+          - listitem [ref=f4e261]:
+            - link "Chula Vista" [ref=f4e262] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+          - listitem [ref=f4e263]:
+            - link "La Mesa" [ref=f4e264] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+          - listitem [ref=f4e265]:
+            - link "Del Mar" [ref=f4e266] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+          - listitem [ref=f4e267]:
+            - link "Encinitas" [ref=f4e268] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+          - listitem [ref=f4e269]:
+            - link "Carlsbad" [ref=f4e270] [cursor=pointer]:
+              - /url: /service-areas/carlsbad/
+    - paragraph [ref=f4e272]: © 2026 KIAMO SKIN · Black-owned, Mission Hills, San Diego

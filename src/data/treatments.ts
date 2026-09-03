@@ -114,9 +114,12 @@ export const treatments: Treatment[] = [
           'A customized HydraFacial that deeply cleanses, exfoliates, extracts, and hydrates to support healthy skin and maintain your treatment results.',
       },
     ],
+    note: 'San Diego\'s municipal water supply contains 280-320 parts per million (ppm) of dissolved minerals—primarily calcium and magnesium—making it among the hardest in California. These minerals bond with sebum (skin oil) and skincare products, forming calcium carbonate deposits that clog pores and create a residue standard cleansing cannot remove. For Mission Hills residents two miles from the Pacific Ocean, this means dual exposure: hard water minerals indoors and salt spray plus coastal humidity outdoors. The HydraFacial Syndeo\'s patented Vortex-Fusion Technology extracts these mineral deposits directly from follicles using controlled spiral suction at 30-70 mmHg pressure—addressing what at-home cleansing misses. This is follicle-level extraction calibrated to San Diego\'s specific water and climate conditions.',
     membershipNote:
-      'The HydraFacial is the treatment included in every membership tier, from $199 a month against $259 booked one visit at a time.',
+      'The HydraFacial is the treatment included in every membership tier, from $199 a month against $259 booked one visit at a time. Glow tier includes one HydraFacial monthly plus 10% off all products. Lux tier includes one HydraFacial monthly, one additional treatment annually, and 15% off products. Opulence tier includes one HydraFacial monthly, two additional treatments annually, and 20% off products. Membership clients book first and are never waitlisted.',
     membershipAnchor: 'Compare the three membership tiers',
+    melaninNote:
+      'HydraFacial is safe for all Fitzpatrick skin types (I-VI) because it uses no heat, no lasers, and no aggressive peeling agents. The exfoliating acids are at concentrations proven safe for melanin-rich skin, and the vortex extraction method does not cause the trauma that can trigger post-inflammatory hyperpigmentation (PIH). Booster selection matters: Britenol is the brightening booster used for dark marks, melasma, and PIH on Fitzpatrick IV-VI skin, containing alpha-arbutin and bearberry extract rather than hydroquinone, which can cause rebound pigmentation in darker skin tones.',
   },
   {
     slug: 'keravive-scalp',

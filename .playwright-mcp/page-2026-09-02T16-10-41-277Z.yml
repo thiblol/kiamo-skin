@@ -1,0 +1,311 @@
+- generic [active] [ref=e1]:
+  - link "Skip to content" [ref=e2] [cursor=pointer]:
+    - /url: "#main"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Kiamo — KIAMO SKIN, home" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - text: Kiamo
+        - generic [ref=e6]: — KIAMO SKIN, home
+      - generic [ref=e7]:
+        - link "Request Appointment" [ref=e8] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+        - button "Open menu" [ref=e9]
+  - main [ref=e13]:
+    - article [ref=e14]:
+      - generic [ref=e16]:
+        - generic [ref=e17]:
+          - paragraph [ref=e18]:
+            - link "Journal" [ref=e19] [cursor=pointer]:
+              - /url: /journal/
+            - text: · 8 min read
+          - heading "How much does a chemical peel cost in San Diego?" [level=1] [ref=e20]
+          - paragraph [ref=e21]: The price of a chemical peel in San Diego varies by depth, formulation, and whether it is part of a treatment series — but the more important question is which one your skin actually needs.
+        - img "Licensed esthetician applying Lira chemical peel to a client's cheek using a fan brush in a softly lit treatment room" [ref=e22]
+      - generic [ref=e25]:
+        - paragraph [ref=e26]:
+          - text: "You've been Googling it for a week. Every result gives a range so wide it's useless—$75 to $3,000 is a real number you'll find online—and none of them answer what you're actually asking: is it safe on your skin, and will it do anything? If you're in San Diego and considering a"
+          - link "chemical peel in San Diego" [ref=e27] [cursor=pointer]:
+            - /url: /treatments/lira-peels/
+          - text: ", this article gives you the real local numbers, not national averages, and addresses the safety question most articles skip entirely."
+        - heading "How much does a chemical peel cost in San Diego?" [level=2] [ref=e28]
+        - paragraph [ref=e29]: A chemical peel in San Diego costs between $150 and $350 at an esthetician studio, $300 to $800 at a medspa or dermatology clinic, and $1,000 to $3,000 for deep phenol peels performed by a plastic surgeon. The range exists because light, medium, and deep peels are completely different procedures with different risk profiles and results.
+        - table [ref=e31]:
+          - caption [ref=e32]: Chemical peel pricing in San Diego by provider type
+          - rowgroup [ref=e33]:
+            - row [ref=e34]:
+              - columnheader "Provider Type" [ref=e35]
+              - columnheader "Peel Depth" [ref=e36]
+              - columnheader "Price Range" [ref=e37]
+              - columnheader "Example" [ref=e38]
+          - rowgroup [ref=e39]:
+            - row [ref=e40]:
+              - rowheader "Esthetician studio" [ref=e41]
+              - cell "Light (superficial)" [ref=e42]
+              - cell "$150–$350" [ref=e43]
+              - 'cell "KIAMO SKIN: $199 (Gentle Renewal), $299 (Advanced)" [ref=e44]'
+            - row [ref=e45]:
+              - rowheader "Medspa / Dermatology" [ref=e46]
+              - cell "Medium (TCA 10-25%)" [ref=e47]
+              - cell "$300–$800" [ref=e48]
+              - cell "Typical San Diego medspa pricing" [ref=e49]
+            - row [ref=e50]:
+              - rowheader "Plastic surgeon" [ref=e51]
+              - cell "Deep (phenol)" [ref=e52]
+              - cell "$1,000–$3,000" [ref=e53]
+              - cell "Hospital or surgical center setting" [ref=e54]
+        - paragraph [ref=e55]:
+          - text: At KIAMO SKIN, the
+          - strong [ref=e56]: Lira Gentle Renewal Peel is $199
+          - text: and the
+          - strong [ref=e57]: Advanced Peel is $299
+          - text: . Both are formulated for melanin-rich skin and designed to be done in a series rather than as one aggressive session.
+          - link "Chemical peels are normally listed at $300 in San Diego ↗" [ref=e58] [cursor=pointer]:
+            - /url: https://rewindmd.com/chemical-peel-cost-dermatologist/
+          - text: according to RewindMD, with light peels ranging from $150 to $400.
+          - link "Belladerma lists their average starting cost at $150 ↗" [ref=e59] [cursor=pointer]:
+            - /url: https://www.belladerma.com/facials-chemical-peels-san-diego-ca/
+          - text: for basic facials with light exfoliation.
+        - paragraph [ref=e60]: The national average for a chemical peel procedure is $519 according to the American Society of Plastic Surgeons, but that figure includes deep peels performed by surgeons, which are a completely different category of service. For the light to medium peels most people get at an esthetician or medspa, San Diego pricing sits in the middle of the national range.
+        - heading "What makes one peel cost more than another?" [level=2] [ref=e61]
+        - paragraph [ref=e62]: "The price difference comes down to three factors: the acid type and concentration, the depth of penetration, and the practitioner's training in peel selection. A $150 Groupon peel and a $299 professional peel are not the same product, even if both use glycolic acid."
+        - paragraph [ref=e63]: Higher concentrations require more skill to apply safely, especially on melanin-rich skin where the risk of post-inflammatory hyperpigmentation increases with aggressive treatments. You're not paying for the liquid itself—you're paying for training in peel selection, assessment of your skin's readiness, and the ability to catch a reaction before it becomes a problem.
+        - paragraph [ref=e64]: Light peels use alpha hydroxy acids (glycolic, lactic, mandelic) or beta hydroxy acids (salicylic) at lower concentrations. They exfoliate the outermost layer of skin with minimal downtime. Medium peels, typically using trichloroacetic acid (TCA), penetrate deeper and require more recovery time. Deep peels using phenol are a surgical procedure with anesthesia and significant downtime, reserved for severe sun damage or deep wrinkles.
+        - heading "Are chemical peels safe on melanin-rich skin?" [level=2] [ref=e65]
+        - paragraph [ref=e66]: Yes, with the right selection and pacing. The core risk is post-inflammatory hyperpigmentation—darkening that occurs when a peel is too aggressive for your skin's melanin density. The correct protocol is lower strength, shorter contact time, and a series of sessions rather than one deep treatment.
+        - paragraph [ref=e67]:
+          - link "Deep chemical peels cannot be used in dark-skinned patients ↗" [ref=e68] [cursor=pointer]:
+            - /url: https://pmc.ncbi.nlm.nih.gov/articles/PMC3560164/
+          - text: owing to the risk of prolonged hyperpigmentation, according to a 2012 NIH study on melasma treatment in melanin-rich skin.
+          - link "Essence confirms that deep chemical peels are generally not suitable ↗" [ref=e69] [cursor=pointer]:
+            - /url: https://www.essence.com/beauty/black-women-chemical-peels-skincare-treatment/
+          - text: for darker skin tones in their April 2024 guide for Black women.
+          - link "Eternal Dermatology notes that TCA peels at 25% and above ↗" [ref=e70] [cursor=pointer]:
+            - /url: https://www.eternaldermatology.com/chemical-peels-for-dark-skin-which-is-best/
+          - text: cause the most damage to dark skin.
+        - paragraph [ref=e71]: The Lira Clinical peels used at KIAMO are formulated specifically for controlled-depth resurfacing without the inflammation spike that triggers hyperpigmentation. The Gentle Renewal Peel uses lactic acid, mandelic acid, and kojic acid—ingredients that brighten without penetrating so deeply they cause a wound response. The Advanced Peel adds salicylic acid and a higher concentration of actives, but still stays within the light-to-medium depth range.
+        - paragraph [ref=e72]:
+          - link "Chemical peels are absolutely safe for dark skin ↗" [ref=e73] [cursor=pointer]:
+            - /url: https://www.worldsfamousdermatologist.com/safe-chemical-peels-for-dark-skin/
+          - text: when properly selected and applied by a professional trained in treating skin of color, according to World's Famous Dermatologist.
+          - link "Safe chemical peel practices begin with professional evaluation ↗" [ref=e74] [cursor=pointer]:
+            - /url: https://www.derrowdermatology.com/are-chemical-peels-safe-for-darker-skin-tones/
+          - text: and proper peel selection tailored to melanin-rich skin, Derrow Dermatology confirms.
+        - paragraph [ref=e75]: At KIAMO, every client with Fitzpatrick IV-VI skin gets a patch test before the first peel. The studio specializes in melanin-rich skin and understands that the "peel until it hurts" approach used on lighter skin tones does not translate. Clients typically do a series of 4-6 peels spaced 3-4 weeks apart, with each session building on the previous one without triggering inflammation.
+        - heading "Which peel is right for your skin concern?" [level=2] [ref=e76]
+        - paragraph [ref=e77]:
+          - text: For
+          - strong [ref=e78]: pigmentation and melasma
+          - text: ", the Lira Advanced Peel is the better choice. It contains kojic acid and mandelic acid, both tyrosinase inhibitors that slow melanin production while exfoliating existing pigment. You'll need a series of 4-6 treatments to see significant fading. The"
+          - link "hyperpigmentation treatment" [ref=e79] [cursor=pointer]:
+            - /url: /treatments/melasma/
+          - text: protocol at KIAMO pairs the peel with home care that includes vitamin C, niacinamide, and strict sunscreen use.
+        - paragraph [ref=e80]:
+          - text: For
+          - strong [ref=e81]: post-acne marks and texture
+          - text: ", the Gentle Renewal Peel is a good starting point. It's gentle enough to use during active breakouts and helps fade dark spots left behind by inflammation. If you have deeper textural scarring, you'll likely graduate to the Advanced Peel after 2-3 sessions."
+        - paragraph [ref=e82]:
+          - text: For
+          - strong [ref=e83]: dullness and maintenance
+          - text: ", the Gentle Renewal Peel every 4-6 weeks keeps skin looking fresh without downtime. It's the peel you do before an event or when your skin just looks tired."
+        - heading "How many sessions do you actually need?" [level=2] [ref=e84]
+        - paragraph [ref=e85]: One peel refreshes. A series corrects. If you're dealing with pigmentation, texture, or melasma, plan for 4-6 sessions spaced 3-4 weeks apart. Single-session pigmentation promises are a red flag—melanin-rich skin does not respond well to aggressive one-and-done treatments.
+        - paragraph [ref=e86]:
+          - text: A series is more cost-effective with a membership. KIAMO's
+          - link "monthly facial membership" [ref=e87] [cursor=pointer]:
+            - /url: /membership/
+          - text: is $199 per month and includes one Lira peel or corrective facial per month. If you're doing a 6-session series, membership pricing saves you $600 compared to paying $299 per session.
+        - heading "What should you ask before booking a chemical peel?" [level=2] [ref=e88]
+        - paragraph [ref=e89]: "Ask three things: does the provider have documented experience with your skin tone, do they patch-test before the first peel, and do they start gently and escalate across a series? If the answer to any of those is no, walk out."
+        - paragraph [ref=e90]: "Red flags: providers who show you before/after photos of only light skin, providers who say \"all peels are safe for all skin,\" and providers who promise dramatic results in one session. Chemical peels work through controlled inflammation. On melanin-rich skin, inflammation can trigger hyperpigmentation. The safe approach is to test your skin's response with a conservative first peel, then adjust strength based on how you heal."
+        - paragraph [ref=e91]: At KIAMO, the intake process includes a skin history review, a magnified skin analysis to assess pigmentation depth, and a discussion of what you've tried before and why it didn't work. The First-Time Client Treatment ($249) functions as both a diagnostic session and a corrective facial—you leave with a phased treatment plan and realistic timelines, not a sales pitch.
+        - paragraph [ref=e92]:
+          - text: The studio is located in Mission Hills at 3067 Reynard Way, five minutes from Hillcrest, Bankers Hill, and Little Italy, with free parking.
+          - link "Request appointments through Vagaro ↗" [ref=e93] [cursor=pointer]:
+            - /url: https://www.vagaro.com/kiamoskin
+          - text: or call
+          - link "(310) 595-0872" [ref=e94] [cursor=pointer]:
+            - /url: tel:+13105950872
+          - text: .
+        - heading "Final takeaway" [level=2] [ref=e95]
+        - paragraph [ref=e96]:
+          - text: Chemical peels in San Diego cost $150 to $350 at an esthetician studio, with the real price driver being the practitioner's training and the peel's formulation for your skin tone. On melanin-rich skin, the provider matters more than the acid. If you're dealing with pigmentation and want to understand which peel makes sense for your concern,
+          - link "request a consultation ↗" [ref=e97] [cursor=pointer]:
+            - /url: https://www.vagaro.com/kiamoskin
+          - text: at KIAMO SKIN.
+        - generic [ref=e98]:
+          - paragraph [ref=e99]: About the author
+          - paragraph [ref=e100]:
+            - text: Written by
+            - link "Kiki" [ref=e101] [cursor=pointer]:
+              - /url: /about/
+            - text: ", Licensed Esthetician, California Board of Barbering & Cosmetology, with 7+ years treating melanin-rich skin at KIAMO Skin in Mission Hills, San Diego."
+          - generic [ref=e102]:
+            - link "Request chemical peel consultation" [ref=e103] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin
+            - link "Request Appointment ↗" [ref=e104] [cursor=pointer]:
+              - /url: https://www.vagaro.com/kiamoskin
+      - generic [ref=e106]:
+        - paragraph [ref=e107]: Common questions
+        - heading "Chemical peel cost questions" [level=2] [ref=e108]
+        - generic [ref=e109]:
+          - group [ref=e111]:
+            - generic "How much does a chemical peel cost in San Diego?" [ref=e112] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e114]: +
+          - group [ref=e116]:
+            - generic "Are chemical peels safe for Black and brown skin?" [ref=e117] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e119]: +
+          - group [ref=e121]:
+            - generic "How many sessions do you need for hyperpigmentation?" [ref=e122] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e124]: +
+          - group [ref=e126]:
+            - generic "What is the difference between the Lira Gentle Renewal Peel and the Advanced Peel?" [ref=e127] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e129]: +
+          - group [ref=e131]:
+            - generic "Is a chemical peel or a HydraFacial better for pigmentation?" [ref=e132] [cursor=pointer]:
+              - generic [aria-hidden] [ref=e134]: +
+      - generic [ref=e136]:
+        - heading "Also in the journal" [level=2] [ref=e137]
+        - list [ref=e138]:
+          - listitem [ref=e139]:
+            - link [ref=e140] [cursor=pointer]:
+              - /url: /journal/three-kinds-of-dark-mark/
+              - heading "Three kinds of dark mark, and why one facial cannot fix all three" [level=3] [ref=e141]
+              - paragraph [ref=e142]: Choosing a facial for hyperpigmentation before you know which kind you have is the most common reason treatment fails — and occasionally the reason it backfires.
+          - listitem [ref=e143]:
+            - link [ref=e144] [cursor=pointer]:
+              - /url: /journal/june-gloom-is-not-sun-protection/
+              - heading "June gloom is not sun protection" [level=3] [ref=e145]
+              - paragraph [ref=e146]: The marine layer is the single most expensive misunderstanding in San Diego skincare. It looks like cover. It is not cover.
+          - listitem [ref=e147]:
+            - link [ref=e148] [cursor=pointer]:
+              - /url: /journal/san-diego-hard-water-and-your-scalp/
+              - heading "San Diego hard water and your scalp" [level=3] [ref=e149]
+              - paragraph [ref=e150]: If your scalp flakes, itches, or feels coated no matter what shampoo you buy, the shampoo may not be the variable worth changing.
+          - listitem [ref=e151]:
+            - link [ref=e152] [cursor=pointer]:
+              - /url: /journal/microneedling-on-dark-skin-san-diego/
+              - heading "Microneedling on dark skin, and why depth decides the outcome" [level=3] [ref=e153]
+              - paragraph [ref=e154]: The question is not really whether needling works on melanin-rich skin. It is whether the person holding the device has set the depth for the skin in front of them.
+          - listitem [ref=e155]:
+            - link [ref=e156] [cursor=pointer]:
+              - /url: /journal/dermaplaning-safe-dark-skin-san-diego/
+              - heading "Is dermaplaning safe for dark skin? Here is what actually matters." [level=3] [ref=e157]
+              - paragraph [ref=e158]: The question is not really whether dermaplaning works on darker skin. It is whether the blade angle and pressure match the skin in front of it.
+          - listitem [ref=e159]:
+            - link [ref=e160] [cursor=pointer]:
+              - /url: /journal/dandruff-treatment-san-diego/
+              - 'heading "Professional Scalp Treatment San Diego: Keravive for Dandruff, Flaking & Hair Health" [level=3] [ref=e161]'
+              - paragraph [ref=e162]: Looking for professional scalp treatment in San Diego? KIAMO SKIN offers Keravive therapy for dandruff, seborrheic dermatitis, dry scalp, and hair thinning. While over-the-counter shampoos treat surface symptoms, Keravive addresses the root cause.
+          - listitem [ref=e163]:
+            - link [ref=e164] [cursor=pointer]:
+              - /url: /journal/san-diego-scalp-treatments-how-keravive-works/
+              - 'heading "San Diego Scalp Treatments: How Does Keravive Work?" [level=3] [ref=e165]'
+              - paragraph [ref=e166]: Keravive is a clinical scalp treatment designed to remove years of product buildup, hard water minerals, and oil congestion that shampoo can't reach. For San Diego residents dealing with ocean humidity, hard water, and year-round sun exposure, it addresses the root causes of flaking, tightness, and hair thinning.
+          - listitem [ref=e167]:
+            - link [ref=e168] [cursor=pointer]:
+              - /url: /journal/hyperpigmentation-treatment-guide/
+              - 'heading "Hyperpigmentation Treatment Guide: What Actually Works for Dark Spots, Melasma & PIH" [level=3] [ref=e169]'
+              - paragraph [ref=e170]: If you have struggled with stubborn dark spots, melasma, or uneven skin tone in San Diego, the right combination of professional treatments and medical-grade home care can produce dramatic improvement—but only if the approach is calibrated for your skin tone and pigmentation type.
+  - contentinfo [ref=e171]:
+    - generic [ref=e172]:
+      - generic [ref=e173]:
+        - paragraph [ref=e174]: KIAMO Skin
+        - link "Request Appointment" [ref=e175] [cursor=pointer]:
+          - /url: https://www.vagaro.com/kiamoskin
+      - generic [ref=e176]:
+        - paragraph [ref=e177]: Visit
+        - generic [ref=e179]:
+          - link "3067 Reynard Way San Diego, CA 92103" [ref=e180] [cursor=pointer]:
+            - /url: "#location-map"
+            - text: 3067 Reynard WaySan Diego, CA 92103
+          - paragraph [ref=e181]: Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.
+          - paragraph [ref=e182]:
+            - link "(310) 595-0872" [ref=e183] [cursor=pointer]:
+              - /url: tel:+13105950872
+          - paragraph [ref=e184]:
+            - link "kiamoskin@gmail.com" [ref=e185] [cursor=pointer]:
+              - /url: mailto:kiamoskin@gmail.com
+          - paragraph [ref=e186]: By appointment only · Free parking
+          - paragraph [ref=e187]: Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service; no-shows are charged in full.
+      - generic [ref=e188]:
+        - paragraph [ref=e189]: Treatments
+        - list [ref=e190]:
+          - listitem [ref=e191]:
+            - link "HydraFacial" [ref=e192] [cursor=pointer]:
+              - /url: /treatments/hydrafacial/
+          - listitem [ref=e193]:
+            - link "Keravive Scalp Therapy" [ref=e194] [cursor=pointer]:
+              - /url: /treatments/keravive-scalp/
+          - listitem [ref=e195]:
+            - link "DMK Enzyme Therapy" [ref=e196] [cursor=pointer]:
+              - /url: /treatments/dmk-enzyme-therapy/
+          - listitem [ref=e197]:
+            - link "Procell Microchanneling" [ref=e198] [cursor=pointer]:
+              - /url: /treatments/procell-microchanneling/
+          - listitem [ref=e199]:
+            - link "Lira Chemical Peels" [ref=e200] [cursor=pointer]:
+              - /url: /treatments/lira-peels/
+          - listitem [ref=e201]:
+            - link "Dermaplaning" [ref=e202] [cursor=pointer]:
+              - /url: /treatments/dermaplaning/
+        - paragraph [ref=e203]: More
+        - list [ref=e204]:
+          - listitem [ref=e205]:
+            - link "Treatments" [ref=e206] [cursor=pointer]:
+              - /url: /treatments/
+          - listitem [ref=e207]:
+            - link "Membership" [ref=e208] [cursor=pointer]:
+              - /url: /membership/
+          - listitem [ref=e209]:
+            - link "Melanin-Rich Skin" [ref=e210] [cursor=pointer]:
+              - /url: /melanin-rich-skin/
+          - listitem [ref=e211]:
+            - link "About" [ref=e212] [cursor=pointer]:
+              - /url: /about/
+          - listitem [ref=e213]:
+            - link "Journal" [ref=e214] [cursor=pointer]:
+              - /url: /journal/
+          - listitem [ref=e215]:
+            - link "Contact" [ref=e216] [cursor=pointer]:
+              - /url: /contact/
+          - listitem [ref=e217]:
+            - link "Book" [ref=e218] [cursor=pointer]:
+              - /url: /book/
+          - listitem [ref=e219]:
+            - link "Instagram @kiamoskin" [ref=e220] [cursor=pointer]:
+              - /url: https://www.instagram.com/kiamoskin/
+      - generic [ref=e221]:
+        - paragraph [ref=e222]: Areas we serve
+        - list [ref=e223]:
+          - listitem [ref=e224]:
+            - link "All areas in San Diego County" [ref=e225] [cursor=pointer]:
+              - /url: /service-areas/
+          - listitem [ref=e226]:
+            - link "Mission Hills" [ref=e227] [cursor=pointer]:
+              - /url: /service-areas/mission-hills/
+          - listitem [ref=e228]:
+            - link "La Jolla" [ref=e229] [cursor=pointer]:
+              - /url: /service-areas/la-jolla/
+          - listitem [ref=e230]:
+            - link "North Park" [ref=e231] [cursor=pointer]:
+              - /url: /service-areas/north-park/
+          - listitem [ref=e232]:
+            - link "Pacific Beach" [ref=e233] [cursor=pointer]:
+              - /url: /service-areas/pacific-beach/
+          - listitem [ref=e234]:
+            - link "Chula Vista" [ref=e235] [cursor=pointer]:
+              - /url: /service-areas/chula-vista/
+          - listitem [ref=e236]:
+            - link "La Mesa" [ref=e237] [cursor=pointer]:
+              - /url: /service-areas/la-mesa/
+          - listitem [ref=e238]:
+            - link "Del Mar" [ref=e239] [cursor=pointer]:
+              - /url: /service-areas/del-mar/
+          - listitem [ref=e240]:
+            - link "Encinitas" [ref=e241] [cursor=pointer]:
+              - /url: /service-areas/encinitas/
+          - listitem [ref=e242]:
+            - link "Carlsbad" [ref=e243] [cursor=pointer]:
+              - /url: /service-areas/carlsbad/
+    - paragraph [ref=e245]: © 2026 KIAMO SKIN · Black-owned, Mission Hills, San Diego
