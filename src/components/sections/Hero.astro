@@ -71,6 +71,14 @@ const fallback = await getImage({ src: heroWide, format: 'jpeg', width: 1920, qu
       <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
       <Button variant="ghost" href="/treatments/">View treatments</Button>
     </div>
+    <p class="t-body mt-5 text-[0.875rem] text-ink-soft">
+      Trusted by clients across San Diego County · <a
+        href={`https://www.google.com/maps/place/?q=place_id:${business.gbpPlaceId}`}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="border-b border-ink/40 hover:border-rose hover:text-rose"
+      >Read reviews on Google</a>
+    </p>
   </div>
 </section>
 

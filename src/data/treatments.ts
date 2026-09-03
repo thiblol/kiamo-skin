@@ -220,52 +220,63 @@ export const treatments: Treatment[] = [
     category: 'Corrective skin treatment',
     alternateName: 'Microneedling San Diego',
     areas: ['la-jolla', 'carlsbad', 'del-mar', 'encinitas'],
-    title: 'Microneedling in San Diego — Procell Microchanneling | KIAMO Skin',
+    title: 'Microneedling San Diego — Procell Microchanneling | KIAMO',
     description:
-      'Procell microchanneling in Mission Hills, San Diego. Safe for melanin-rich and dark skin — no RF heat, no PIH risk. Acne scars, hyperpigmentation, texture. $475 single / $1,199 series.',
-    headline: "Procell Microchanneling — stimulate your skin's natural repair process.",
+      'Procell microchanneling in San Diego — safe for melanin-rich and dark skin. No RF heat, no PIH risk. KIAMO Skin, Mission Hills. Acne scars, hyperpigmentation, texture. Book online or call (310) 595-0872.',
+    headline: "Microneedling in San Diego — Acne Scars, Hyperpigmentation & Texture",
     opener:
-      'Looking for microneedling in San Diego? Procell microchanneling is the alternative offered here — a different modality from a needle pen, performed by a licensed esthetician in Mission Hills, <a href="/journal/microneedling-on-dark-skin-san-diego/">safe for melanin-rich skin and all Fitzpatrick skin types</a>.',
+      'Most microneedling providers in San Diego use devices that work well on lighter skin tones but carry real risk for Black and brown skin. The radiofrequency heat in RF microneedling systems — Morpheus8, Vivace, Potenza — stimulates melanocytes in darker Fitzpatrick skin types and can produce post-inflammatory hyperpigmentation: new dark marks caused by the very treatment meant to clear them. At KIAMO Skin, we use Procell microchanneling. No RF heat. Mechanical channels only. Growth factor serums delivered directly into the treatment zones. The mechanism matches what melanin-rich skin actually needs.',
     intro:
-      'Procell Therapies microchanneling creates controlled microchannels that activate your skin\'s natural repair response while delivering specialized stem cytokine growth factor serums. Over time, new collagen helps improve acne scars, fine lines, wrinkles, and uneven skin texture for smoother, healthier-looking skin. Every treatment is customized for your skin goals and skin tone, with depth adjusted to minimize the risk of post-inflammatory hyperpigmentation (PIH) in melanin-rich skin. For clients traveling from <a href="/service-areas/carlsbad/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Carlsbad</a>, <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a>, or <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas</a>, the series is planned as a block at consultation—scheduling all three sessions at once accounts for the drive and makes completion realistic.',
+      'Procell Therapies microchanneling is a skin resurfacing treatment that creates thousands of microscopic channels in the skin surface using a precision-engineered handpiece. Those channels trigger the skin\'s natural wound-healing response — collagen production, elastin remodeling, and controlled surface cell renewal. What separates Procell from conventional microneedling is what happens immediately after the channels are created. Procell\'s proprietary stem cytokine growth factor serums are applied directly into the open channels, communicating with skin cells to direct the repair process toward specific outcomes: collagen synthesis, pigment correction, and texture resurfacing. The result is faster recovery and more targeted correction than standard microneedling alone. Ideal candidates include those with acne scarring (ice pick, boxcar, and rolling scar types), post-inflammatory hyperpigmentation (PIH) — dark marks left after acne, injury, or trauma, uneven skin tone and diffuse sun damage, skin texture irregularities and enlarged pores, fine lines and mild skin laxity, and Fitzpatrick Type IV, V, and VI skin tones. For clients traveling from <a href="/service-areas/carlsbad/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Carlsbad</a>, <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a>, or <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas</a>, the series is planned as a block at consultation — scheduling all three sessions at once accounts for the drive and makes completion realistic.',
     image: acne,
     imageAlt: 'Portrait of smooth, healthy skin along the cheek and jaw',
     goodFor: [
-      'Acne scars and uneven skin texture',
-      'Enlarged pores and rough skin texture',
-      'Fine lines and early loss of firmness',
-      'Skin that benefits from collagen stimulation without heat or light',
+      'Acne scarring — ice pick, boxcar, and rolling scar types',
+      'Post-inflammatory hyperpigmentation (PIH) — dark marks left after acne, injury, or trauma',
+      'Uneven skin tone and diffuse sun damage',
+      'Skin texture irregularities and enlarged pores',
+      'Fine lines and mild skin laxity',
+      'Fitzpatrick Type IV, V, and VI skin tones',
     ],
     steps: [
       {
-        title: 'Prepare',
-        body: 'Your skin is thoroughly cleansed and prepared before treatment. Every Procell session is customized to your skin goals and concerns.',
+        title: 'Skin assessment and prep',
+        body: 'Every session begins with a skin review. Active inflammatory acne, compromised barrier, or recent use of prescription retinoids may require protocol adjustment. Numbing cream is applied to the treatment area and left for 20–30 minutes.',
       },
       {
-        title: 'The pass',
-        body: 'Treatment depth is adjusted for each area of your skin — deeper where correction is needed and lighter where skin is naturally thinner. A specialized growth factor serum is applied throughout the treatment to support your skin\'s natural repair process.',
+        title: 'Microchanneling pass',
+        body: 'The Procell handpiece passes across the face in a systematic grid pattern — forehead, cheeks, chin, perioral area. Most clients describe mild pressure with minimal sensation during numbing. Treatment time: approximately 20–30 minutes.',
       },
       {
-        title: 'Recover',
-        body: 'Expect redness similar to a mild sunburn for 24-48 hours. Mild dryness or flaking may occur as your skin renews itself. Following your post-care instructions including daily SPF is essential to support healing and help minimize the risk of unwanted pigmentation, especially in melanin rich skin.',
+        title: 'Growth factor serum application',
+        body: 'Immediately after channeling, Procell\'s stem cytokine serums are applied directly into the open channels. This is the step that differentiates Procell outcomes — the growth factors direct cellular repair toward collagen synthesis and pigment correction rather than leaving healing to chance.',
+      },
+      {
+        title: 'LED light therapy',
+        body: 'Red and near-infrared LED light therapy follows every session at KIAMO Skin to reduce post-treatment inflammation and support the healing response. This is included in every appointment, not an add-on.',
+      },
+      {
+        title: 'Barrier protection and post-care',
+        body: 'A calming, occlusive barrier product is applied. You leave with clean, protected skin — no foundation, no active products on day of treatment. Expect redness similar to a mild sunburn for 24-48 hours. Mild dryness or flaking may occur as your skin renews itself. SPF is non-negotiable post-treatment. The channels close within hours, but skin UV-sensitivity is elevated for 7–10 days after microchanneling.',
       },
     ],
     pricing: [
       {
-        label: 'Procell Microchanneling',
+        label: 'Procell Microchanneling — Single Session',
         price: verifiedPrices.procell,
         description:
-          'The best results are typically achieved with a series rather than a single treatment. Most clients begin with three sessions spaced 4-6 weeks apart, though your treatment plan is customized during your consultation based on your skin goals, concerns, and how your skin responds.',
+          'Visible improvement for mild texture and tone irregularity. Topical numbing cream, Procell microchanneling treatment with proprietary stem cytokine growth factor serums, LED light therapy, and barrier protection included.',
       },
       {
-        label: 'Procell Microchanneling 3-Treatment Series',
+        label: 'Procell Microchanneling — 3 Treatment Series',
         price: verifiedPrices['procell-series'],
         description:
-          'Designed for clients committed to long-term correction. A series of three treatments supports progressive collagen remodeling and is recommended for concerns such as acne scars, uneven texture, fine lines, and overall skin rejuvenation. Treatments are typically scheduled 4-6 weeks apart.',
+          'Recommended for acne scarring, moderate to significant PIH, and textural concerns. Sessions spaced 4–6 weeks apart. Save $226 compared to three single sessions. Growth factor serums and LED therapy included at each session.',
       },
     ],
+    note: 'RF microneedling devices combine needle penetration with radiofrequency heat energy delivered through the tip. In lighter skin tones, the thermal effect stimulates collagen remodeling without significant risk. In melanin-rich skin — Fitzpatrick Type IV (olive to light brown), Type V (brown), and Type VI (deep brown to dark brown) — that heat activates melanocytes near the treatment zone, which can trigger post-inflammatory hyperpigmentation as a response to thermal trauma. Procell microchanneling creates mechanical channels without any thermal component. The inflammatory trigger is controlled and predictable. Combined with protocols designed for melanin-rich skin and growth factor serums that direct repair, the treatment corrects existing pigmentation without creating new dark marks. This is not a compromised version of microneedling. It is the correct selection for the patient population KIAMO serves.',
     melaninNote:
-      'Microchanneling works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger.',
+      'Microchanneling works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger. Procell uses mechanical channels only with no thermal component, making it significantly lower-risk for Fitzpatrick Types IV, V, and VI.',
     membershipNote:
       'A series of three is the usual plan, and membership treatments can be applied to it by paying the difference.',
     membershipAnchor: 'Membership pricing and what each plan includes',
