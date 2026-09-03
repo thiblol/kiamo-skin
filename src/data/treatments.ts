@@ -72,9 +72,9 @@ export const treatments: Treatment[] = [
     title: 'HydraFacial in San Diego | KIAMO Skin',
     description:
       'HydraFacial San Diego - Mission Hills studio. Deep extraction + customized booster + LED therapy for your skin concerns. Licensed esthetician. First visit $249.',
-    headline: 'HydraFacial — the foundation of healthy skin.',
+    headline: 'HydraFacial in San Diego — Deep Cleansing, Extraction & Hydration',
     opener:
-      'Looking for a HydraFacial in San Diego? KIAMO SKIN is a licensed corrective skin studio in Mission Hills, five minutes from Hillcrest and Little Italy, and the HydraFacial here is $259.',
+      'Looking for a HydraFacial in San Diego? KIAMO SKIN is a licensed corrective skin studio in Mission Hills, five minutes from Hillcrest and Little Italy. The HydraFacial here is performed on the HydraFacial Syndeo platform—the latest generation device with enhanced suction, real-time skin impedance analysis, and precision serum delivery. First-time clients pay $249 for a comprehensive consultation, skin analysis, customized HydraFacial with booster, microcurrent, LED light therapy, and Hydrojelly mask. Return visits are $259.',
     intro:
       'The HydraFacial Syndeo platform does three things at once: lifts away dead surface cells, vacuums out congestion, and floods the skin with serum while it is still open enough to take it. It is the most forgiving corrective treatment on the menu, which is why it is usually where a new plan starts. <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills clients</a> are steps from the studio, while those from <a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park</a>, Hillcrest, and Bankers Hill are minutes away. Coastal clients from <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla</a> and <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a> book HydraFacial for congestion and dehydration from sun and salt exposure—proximity that makes regular maintenance realistic.',
     image: hydrafacial,
