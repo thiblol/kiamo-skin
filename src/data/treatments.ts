@@ -1,13 +1,13 @@
 import type { ImageMetadata } from 'astro';
 import { verifiedPrices, PRICE_ON_CONSULTATION } from '../config/business';
-import hydrafacial from '../assets/treatment-hydrafacial.jpg';
-import scalp from '../assets/treatment-scalp.jpg';
-import enzyme from '../assets/treatment-enzyme.jpg';
-import acne from '../assets/concern-acne.jpg';
-import pigmentation from '../assets/concern-pigmentation.jpg';
+import hydrafacial from '../assets/hydrafacial-syndeo-treatment-mission-hills-san-diego.jpg';
+import scalp from '../assets/keravive-scalp-treatment-hair-growth-san-diego.jpg';
+import enzyme from '../assets/dmk-enzyme-therapy-melanin-rich-skin-san-diego.jpg';
+import acne from '../assets/acne-treatment-melanin-rich-skin-san-diego.jpg';
+import pigmentation from '../assets/hyperpigmentation-treatment-melanin-rich-skin-san-diego.jpg';
 // No dedicated dermaplaning photograph exists yet. The barrier image is the
 // closest honest match — a clear, even skin surface. Swap when one is shot.
-import dermaplane from '../assets/concern-barrier.jpg';
+import dermaplane from '../assets/skin-barrier-repair-treatment-san-diego.jpg';
 
 export interface Treatment {
   slug: string;
@@ -68,15 +68,15 @@ export const treatments: Treatment[] = [
     name: 'HydraFacial',
     serviceType: 'HydraFacial',
     category: 'Facial treatment',
-    areas: ['la-jolla', 'pacific-beach', 'del-mar', 'mission-hills', 'north-park', 'chula-vista'],
+    areas: ['downtown-san-diego', 'bankers-hill', 'little-italy', 'harbor-island', 'point-loma', 'midway-district', 'hillcrest', 'gaslamp-quarter'],
     title: 'HydraFacial in San Diego | KIAMO Skin',
     description:
       'HydraFacial San Diego - Mission Hills studio. Deep extraction + customized booster + LED therapy for your skin concerns. Licensed esthetician. First visit $249.',
-    headline: 'HydraFacial in San Diego — Deep Cleansing, Extraction & Hydration',
+    headline: 'HydraFacial San Diego — Medical-Grade Facial Treatment',
     opener:
-      'Looking for a HydraFacial in San Diego? KIAMO SKIN is a licensed corrective skin studio in Mission Hills, five minutes from Hillcrest and Little Italy. The HydraFacial here is performed on the HydraFacial Syndeo platform—the latest generation device with enhanced suction, real-time skin impedance analysis, and precision serum delivery. First-time clients pay $249 for a comprehensive consultation, skin analysis, customized HydraFacial with booster, microcurrent, LED light therapy, and Hydrojelly mask. Return visits are $259.',
+      'Looking for HydraFacial in San Diego? KIAMO SKIN is a licensed corrective skin studio in Mission Hills performing HydraFacial on the Syndeo platform—the latest generation device with AI-powered skin impedance analysis, enhanced vortex extraction at 30-70 mmHg controlled suction, and precision booster delivery targeting your specific skin concerns. Every HydraFacial is performed by Kiki, a California licensed esthetician with 7+ years specializing in melanin-rich skin. First-time clients pay $249 for comprehensive consultation, full skin analysis, customized HydraFacial with personalized booster, microcurrent, LED light therapy, and Hydrojelly mask. Return visits are $259.',
     intro:
-      'The HydraFacial Syndeo platform does three things at once: lifts away dead surface cells, vacuums out congestion, and floods the skin with serum while it is still open enough to take it. It is the most forgiving corrective treatment on the menu, which is why it is usually where a new plan starts. <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills clients</a> are steps from the studio, while those from <a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park</a>, Hillcrest, and Bankers Hill are minutes away. Coastal clients from <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla</a> and <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a> book HydraFacial for congestion and dehydration from sun and salt exposure—proximity that makes regular maintenance realistic. Learn more about <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatments</a> and how to select the right approach for your skin.',
+      'HydraFacial Syndeo performs three clinical actions simultaneously: enzymatic resurfacing lifts dead surface cells without abrasive scrubbing, patented vortex extraction vacuums mineral deposits and sebum from follicles at controlled pressure, and precision infusion floods skin with hydration and antioxidants while pores remain receptive. This is medical-grade extraction technology, not a spa facial with suction. <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills clients</a> walk to the studio. Urban professionals from <a href="/hydrafacial/downtown-san-diego/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Downtown San Diego</a>, <a href="/hydrafacial/gaslamp-quarter/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Gaslamp Quarter</a>, and <a href="/hydrafacial/little-italy/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Little Italy</a> book same-day lunchtime appointments. Residential clients from <a href="/hydrafacial/bankers-hill/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Banker\'s Hill</a> and <a href="/hydrafacial/hillcrest/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Hillcrest</a> are 5 minutes away for monthly maintenance. Coastal clients from <a href="/hydrafacial/point-loma/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Point Loma</a>, <a href="/hydrafacial/harbor-island/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Harbor Island</a>, and <a href="/hydrafacial/midway-district/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Midway District</a> address salt air dehydration and barrier damage from waterfront exposure. HydraFacial is the most forgiving corrective treatment—safe for all Fitzpatrick skin types including melanin-rich skin with zero risk of post-inflammatory hyperpigmentation.',
     image: hydrafacial,
     imageAlt: 'A HydraFacial treatment in progress in the KIAMO Skin studio',
     goodFor: [

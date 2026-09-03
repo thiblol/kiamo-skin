@@ -1,0 +1,321 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Reveal from '../../components/Reveal.astro';
+import Button from '../../components/Button.astro';
+import NapBlock from '../../components/NapBlock.astro';
+import LocationMap from '../../components/LocationMap.astro';
+import { hydrafacialAreas } from '../../data/hydrafacial-areas';
+import { business } from '../../config/business';
+import { CTA_LABEL } from '../../config/nav';
+import HydrafacialAreaSchema from '../../components/schema/HydrafacialAreaSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import studioInterior from '../../assets/kiamo-skin-studio-mission-hills-san-diego.jpg';
+import hydrafacialDowntown from '../../assets/hydrafacial-downtown-san-diego-mission-hills.jpg';
+import hydrafacialBankersHill from '../../assets/hydrafacial-bankers-hill-san-diego.jpg';
+import hydrafacialLittleItaly from '../../assets/hydrafacial-little-italy-san-diego.jpg';
+import hydrafacialHarborIsland from '../../assets/hydrafacial-harbor-island-san-diego.jpg';
+import hydrafacialPointLoma from '../../assets/hydrafacial-point-loma-san-diego.jpg';
+import hydrafacialMidway from '../../assets/hydrafacial-midway-district-san-diego.jpg';
+import hydrafacialHillcrest from '../../assets/hydrafacial-hillcrest-san-diego.jpg';
+import hydrafacialGaslamp from '../../assets/hydrafacial-gaslamp-quarter-san-diego.jpg';
+
+export function getStaticPaths() {
+  return hydrafacialAreas.map((area) => ({
+    params: { slug: area.slug },
+    props: { area },
+  }));
+}
+
+const { area } = Astro.props;
+
+// Get adjacent areas for lateral linking
+const adjacentAreaLinks = area.adjacentAreas
+  .map((slug) => hydrafacialAreas.find((a) => a.slug === slug))
+  .filter((a) => a !== undefined);
+
+// Map location-specific images following Image Filename SEO Audit PRO guidelines
+const locationImages: Record<string, any> = {
+  'downtown-san-diego': hydrafacialDowntown,
+  'bankers-hill': hydrafacialBankersHill,
+  'little-italy': hydrafacialLittleItaly,
+  'harbor-island': hydrafacialHarborIsland,
+  'point-loma': hydrafacialPointLoma,
+  'midway-district': hydrafacialMidway,
+  'hillcrest': hydrafacialHillcrest,
+  'gaslamp-quarter': hydrafacialGaslamp,
+};
+
+const heroImage = locationImages[area.slug] || studioInterior;
+
+// SEO-optimized alt text: treatment + location + context + entities
+const imageAlt = `HydraFacial treatment in progress at KIAMO Skin Mission Hills serving ${area.name} San Diego clients - licensed esthetician performing medical-grade facial`;
+---
+
+<BaseLayout title={area.title} description={area.description}>
+  <HydrafacialAreaSchema slot="head" area={area} />
+  <BreadcrumbSchema
+    slot="head"
+    trail={[
+      { name: 'HydraFacial', path: '/treatments/hydrafacial' },
+      { name: area.name, path: `/hydrafacial/${area.slug}` },
+    ]}
+  />
+  {area.faqs.length > 0 && (
+    <script
+      slot="head"
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: area.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      })}
+    />
+  )}
+
+  <article>
+    <header class="bg-blush">
+      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+        <p class="t-eyebrow text-ink-soft">
+          <a href="/treatments/hydrafacial/" class="hover:text-rose">HydraFacial</a> · {area.name}
+        </p>
+        <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">{area.h1}</h1>
+        <p class="t-body mt-7 max-w-[62ch]">{area.intro}</p>
+        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a href={business.phone.href} class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose">
+            {business.phone.display}
+          </a>
+        </div>
+        <p class="t-body mt-6 text-[0.875rem] text-ink-soft">
+          {business.experience} treating melanin-rich skin · HydraFacial Syndeo · Licensed Esthetician · Mission Hills, San Diego
+        </p>
+      </div>
+    </header>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.7fr] md:gap-20">
+        <div>
+          {/* Authority Section */}
+          <Reveal>
+            <h2 class="t-h3">{area.authority.heading}</h2>
+            <p class="t-body mt-7">{area.authority.body}</p>
+          </Reveal>
+
+          {/* Uniqueness Section */}
+          <Reveal class="mt-16 block">
+            <h2 class="t-h3">{area.uniqueness.heading}</h2>
+            <p class="t-body mt-7">{area.uniqueness.body}</p>
+            {area.uniqueness.bullets && (
+              <ul class="mt-6 m-0 list-none space-y-3 p-0">
+                {area.uniqueness.bullets.map((bullet) => (
+                  <li class="t-body flex gap-4 text-[0.9375rem]">
+                    <span aria-hidden="true" class="text-rose">—</span>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </Reveal>
+
+          {/* Getting Here */}
+          <Reveal class="mt-16 block">
+            <h2 class="t-h3">Getting here from {area.name}</h2>
+            <p class="t-body mt-7">{area.gettingHere}</p>
+            <LocationMap origin={area.name} aspect="aspect-16/10" class="mt-9" />
+          </Reveal>
+        </div>
+
+        <aside>
+          <Image
+            src={heroImage}
+            alt={imageAlt}
+            widths={[400, 600]}
+            sizes="(min-width: 768px) 30vw, 100vw"
+            loading="lazy"
+            class="mb-8 w-full"
+          />
+          <div class="border border-line bg-ivory p-8">
+            <h2 class="t-eyebrow text-ink-soft">The studio</h2>
+            <div class="mt-7">
+              <NapBlock tone="light" />
+            </div>
+            <div class="mt-8">
+              <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    {/* Depth Section - Process */}
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <Reveal>
+          <h2 class="t-h3">{area.depth.heading}</h2>
+          <p class="t-body mt-7 max-w-[62ch]">{area.depth.body}</p>
+          {area.depth.process && (
+            <ol class="mt-12 m-0 list-none space-y-9 p-0 max-w-[68ch]">
+              {area.depth.process.map((step, i) => (
+                <li class="border-t border-line pt-7">
+                  <p class="t-meta text-rose">{String(i + 1).padStart(2, '0')}</p>
+                  <h3 class="t-service mt-3 text-[1.125rem] md:text-[1.3125rem]">{step.step}</h3>
+                  <p class="t-body mt-3 text-[0.9375rem]">{step.description}</p>
+                </li>
+              ))}
+            </ol>
+          )}
+        </Reveal>
+      </div>
+    </section>
+
+    {/* Intent Section */}
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <h2 class="t-h3">{area.intent.heading}</h2>
+            <p class="t-body mt-7">{area.intent.body}</p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    {/* Pricing */}
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:gap-16">
+          <div>
+            <h2 class="t-h3">HydraFacial pricing in {area.name}</h2>
+            <p class="t-body mt-7 max-w-[58ch]">
+              HydraFacial is $259 at KIAMO Skin. The treatment takes 45 minutes with no downtime. Same-day and next-day appointments are often available.
+            </p>
+            <p class="t-body mt-5 max-w-[58ch]">
+              First-time clients start at $249 for consultation and treatment. The session includes AI-powered skin analysis (HydraFacial Syndeo), customized serum selection, and a treatment plan recommendation if corrective work beyond maintenance is needed.
+            </p>
+            <p class="t-body mt-5 text-[0.875rem] text-ink-soft">
+              Monthly memberships available — $199/month includes one HydraFacial plus discounts on additional treatments.{' '}
+              <a href="/membership/" class="border-b border-ink/40 hover:border-rose hover:text-rose">
+                See membership details
+              </a>.
+            </p>
+          </div>
+          <div class="border border-line bg-porcelain p-8">
+            <h3 class="t-eyebrow text-ink-soft">Quick facts</h3>
+            <dl class="mt-7 m-0 space-y-6">
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">HydraFacial</dt>
+                <dd class="t-price m-0 mt-2">$259</dd>
+              </div>
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">First-time treatment</dt>
+                <dd class="t-price m-0 mt-2">$249</dd>
+              </div>
+              <div class="pb-0">
+                <dt class="t-service text-[1rem]">Duration</dt>
+                <dd class="t-body m-0 mt-2 text-[0.9375rem]">45 minutes</dd>
+              </div>
+            </dl>
+            <div class="mt-8">
+              <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* FAQs */}
+    {area.faqs.length > 0 && (
+      <section class="bg-blush">
+        <div class="wrap section-y">
+          <p class="t-eyebrow text-ink-soft">Before you book</p>
+          <h2 class="t-h2 mt-5">HydraFacial questions from {area.name}</h2>
+          <div class="mt-12 max-w-[68ch]">
+            {area.faqs.map((faq) => (
+              <div class="border-b border-line">
+                <details class="group">
+                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
+                    <span>{faq.question}</span>
+                    <span
+                      aria-hidden="true"
+                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <div class="t-body pb-6 text-[0.9375rem]">{faq.answer}</div>
+                </details>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {/* CTA Section */}
+    <section class="bg-ivory">
+      <div class="wrap section-y text-center">
+        <h2 class="t-h3 max-w-[28ch] mx-auto">Ready to book your HydraFacial in {area.name}?</h2>
+        <p class="t-body mt-5 max-w-[52ch] mx-auto">
+          One treatment room. One practitioner. Request an appointment and Kiki will confirm a time by the next business day.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a href={business.phone.href} class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose">
+            {business.phone.display}
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* Adjacent Areas - Lateral Linking */}
+    {adjacentAreaLinks.length > 0 && (
+      <section class="bg-porcelain">
+        <div class="wrap section-y">
+          <h2 class="t-h3">HydraFacial in nearby neighborhoods</h2>
+          <ul class="mt-10 m-0 grid list-none gap-x-10 gap-y-0 p-0 md:grid-cols-2">
+            {adjacentAreaLinks.map((adjArea) => (
+              <li class="border-b border-line">
+                <a href={`/hydrafacial/${adjArea.slug}/`} class="group block py-7">
+                  <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                    HydraFacial in {adjArea.name}
+                  </h3>
+                  <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">
+                    {adjArea.name === 'Little Italy' ? '3 minutes away' :
+                     adjArea.name === 'Banker\'s Hill' ? '5 minutes away' :
+                     adjArea.name === 'Hillcrest' ? '5 minutes away' :
+                     adjArea.name === 'Downtown San Diego' ? '8 minutes away' :
+                     adjArea.name === 'Harbor Island' ? '10 minutes away' :
+                     adjArea.name === 'Point Loma' ? '10 minutes away' :
+                     adjArea.name === 'Midway District' ? '8 minutes away' :
+                     adjArea.name === 'Gaslamp Quarter' ? '8 minutes away' :
+                     'Nearby'}
+                  </p>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p class="t-body mt-9 text-[0.9375rem]">
+            <a href="/treatments/hydrafacial/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+              Learn more about HydraFacial treatments at KIAMO Skin
+            </a>
+          </p>
+        </div>
+      </section>
+    )}
+  </article>
+</BaseLayout>
+
+<style>
+  /* Safari still needs this to drop the disclosure triangle. */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

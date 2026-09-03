@@ -1,13 +1,13 @@
 import type { ImageMetadata } from 'astro';
 import type { Faq } from './faqs';
-import uv from '../assets/journal-uv.jpg';
-import water from '../assets/journal-water.jpg';
-import pigmentation from '../assets/journal-pigmentation.jpg';
-import microchanneling from '../assets/journal-microchanneling.jpg';
-import dermaplaning from '../assets/journal-dermaplaning.jpg';
-import keravive from '../assets/keravive-scalp-treatment.jpg';
-import hyperpigmentationHero from '../assets/hyperpigmentation-hero.jpg';
-import liraPeel from '../assets/journal-lira-peel.jpg';
+import uv from '../assets/san-diego-uv-exposure-skin-damage-protection.jpg';
+import water from '../assets/san-diego-hard-water-skin-barrier-damage.jpg';
+import pigmentation from '../assets/post-inflammatory-hyperpigmentation-melanin-rich-skin.jpg';
+import microchanneling from '../assets/procell-microchanneling-acne-scars-san-diego.jpg';
+import dermaplaning from '../assets/dermaplaning-facial-treatment-san-diego.jpg';
+import keravive from '../assets/keravive-scalp-hydrafacial-treatment-san-diego.jpg';
+import hyperpigmentationHero from '../assets/hyperpigmentation-melasma-treatment-san-diego.jpg';
+import liraPeel from '../assets/lira-peel-chemical-peel-hyperpigmentation-san-diego.jpg';
 
 export interface Article {
   slug: string;

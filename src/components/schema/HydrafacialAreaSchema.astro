@@ -1,0 +1,143 @@
+---
+import type { HydrafacialArea } from '../../data/hydrafacial-areas';
+import { business } from '../../config/business';
+
+interface Props {
+  area: HydrafacialArea;
+}
+
+const { area } = Astro.props;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${Astro.site}hydrafacial/${area.slug}/#local-business`,
+  name: business.name,
+  url: `${Astro.site}hydrafacial/${area.slug}/`,
+  logo: `${Astro.site}logo.png`,
+  image: [
+    `${Astro.site}studio-interior-1x1.jpg`,
+    `${Astro.site}studio-interior-4x3.jpg`,
+    `${Astro.site}studio-interior-16x9.jpg`,
+  ],
+  description: area.schemaDescription,
+  telephone: business.phone.href.replace('tel:', ''),
+  email: business.email,
+  priceRange: business.priceRange,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: business.address.street,
+    addressLocality: business.address.city,
+    addressRegion: business.address.region,
+    postalCode: business.address.postalCode,
+    addressCountry: business.address.country,
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: business.geo.latitude,
+    longitude: business.geo.longitude,
+  },
+  areaServed: {
+    '@type': 'GeoCircle',
+    geoMidpoint: {
+      '@type': 'GeoCoordinates',
+      latitude: area.geo.latitude,
+      longitude: area.geo.longitude,
+    },
+    geoRadius: area.geoRadius,
+    name: `${area.name}, San Diego, CA`,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'San Diego',
+      addressRegion: 'CA',
+      postalCode: area.postalCodes.join(', '),
+      addressCountry: 'US',
+    },
+  },
+  hasMap: `https://maps.google.com/?cid=${business.gbpPlaceId}`,
+  sameAs: [
+    business.instagram.url,
+    business.yelpUrl,
+    business.bookingUrl,
+  ],
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    opens: '09:00',
+    closes: '18:00',
+  },
+  currenciesAccepted: 'USD',
+  paymentAccepted: 'Cash, Credit Card, Debit Card',
+  founder: {
+    '@type': 'Person',
+    '@id': `${Astro.site}#founder`,
+    name: business.ownerName,
+    jobTitle: 'Licensed Esthetician',
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'license',
+      name: 'California Licensed Esthetician',
+      recognizedBy: {
+        '@type': 'Organization',
+        name: 'California Board of Barbering & Cosmetology',
+      },
+    },
+    knowsAbout: [
+      'HydraFacial treatments',
+      'Melanin-rich skin care',
+      'Corrective skin treatments',
+      'Chemical peels',
+      'Microchanneling',
+    ],
+  },
+  knowsAbout: [
+    'HydraFacial',
+    'Melanin-rich skin treatments',
+    'Hyperpigmentation correction',
+    'Barrier repair',
+    'Coastal skin care',
+  ],
+  makesOffer: {
+    '@type': 'Offer',
+    itemOffered: {
+      '@type': 'Service',
+      name: `HydraFacial in ${area.name}`,
+      description: area.schemaDescription,
+      provider: {
+        '@id': `${Astro.site}hydrafacial/${area.slug}/#local-business`,
+      },
+      areaServed: {
+        '@type': 'City',
+        name: area.name,
+        containedIn: {
+          '@type': 'City',
+          name: 'San Diego',
+          containedIn: 'California',
+        },
+      },
+      serviceType: 'HydraFacial Treatment',
+    },
+    price: '259',
+    priceCurrency: 'USD',
+  },
+  potentialAction: {
+    '@type': 'ReserveAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: business.bookingUrl,
+      inLanguage: 'en-US',
+      actionPlatform: [
+        'http://schema.org/DesktopWebPlatform',
+        'http://schema.org/IOSPlatform',
+        'http://schema.org/AndroidPlatform',
+      ],
+    },
+    result: {
+      '@type': 'Reservation',
+      name: `HydraFacial Appointment in ${area.name}`,
+    },
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
