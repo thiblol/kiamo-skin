@@ -76,7 +76,7 @@ export const treatments: Treatment[] = [
     opener:
       'Looking for a HydraFacial in San Diego? KIAMO SKIN is a licensed corrective skin studio in Mission Hills, five minutes from Hillcrest and Little Italy. The HydraFacial here is performed on the HydraFacial Syndeo platform—the latest generation device with enhanced suction, real-time skin impedance analysis, and precision serum delivery. First-time clients pay $249 for a comprehensive consultation, skin analysis, customized HydraFacial with booster, microcurrent, LED light therapy, and Hydrojelly mask. Return visits are $259.',
     intro:
-      'The HydraFacial Syndeo platform does three things at once: lifts away dead surface cells, vacuums out congestion, and floods the skin with serum while it is still open enough to take it. It is the most forgiving corrective treatment on the menu, which is why it is usually where a new plan starts. <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills clients</a> are steps from the studio, while those from <a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park</a>, Hillcrest, and Bankers Hill are minutes away. Coastal clients from <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla</a> and <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a> book HydraFacial for congestion and dehydration from sun and salt exposure—proximity that makes regular maintenance realistic.',
+      'The HydraFacial Syndeo platform does three things at once: lifts away dead surface cells, vacuums out congestion, and floods the skin with serum while it is still open enough to take it. It is the most forgiving corrective treatment on the menu, which is why it is usually where a new plan starts. <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills clients</a> are steps from the studio, while those from <a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park</a>, Hillcrest, and Bankers Hill are minutes away. Coastal clients from <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla</a> and <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a> book HydraFacial for congestion and dehydration from sun and salt exposure—proximity that makes regular maintenance realistic. Learn more about <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatments</a> and how to select the right approach for your skin.',
     image: hydrafacial,
     imageAlt: 'A HydraFacial treatment in progress in the KIAMO Skin studio',
     goodFor: [
@@ -181,7 +181,7 @@ export const treatments: Treatment[] = [
     opener:
       'Looking for DMK enzyme therapy in San Diego? Level 1 is $279 at the KIAMO SKIN studio in Mission Hills, and it is the treatment used when a barrier is too compromised to tolerate anything stronger.',
     intro:
-      'DMK Enzyme Therapy is designed to restore healthy skin function rather than simply exfoliating the surface. By supporting the skin\'s natural processes, it helps strengthen the skin barrier while encouraging healthy circulation and lymphatic activity. It\'s especially beneficial for skin that feels over-exfoliated, sensitized, inflamed, or slow to heal—common states for <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas surfers</a>, <a href="/service-areas/pacific-beach/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Pacific Beach residents</a>, and anyone whose barrier has been stripped by salt water, wind, or aggressive product use.',
+      'DMK Enzyme Therapy is designed to restore healthy skin function rather than simply exfoliating the surface. By supporting the skin\'s natural processes, it helps strengthen the skin barrier while encouraging healthy circulation and lymphatic activity. It\'s especially beneficial for skin that feels over-exfoliated, sensitized, inflamed, or slow to heal—common states for <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas surfers</a>, <a href="/service-areas/pacific-beach/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Pacific Beach residents</a>, and anyone whose barrier has been stripped by salt water, wind, or aggressive product use. This approach is part of KIAMO Skin\'s broader <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatment</a> philosophy, where treatment selection is based on current skin condition rather than following a fixed protocol.',
     image: enzyme,
     imageAlt: 'An enzyme masque setting during a treatment',
     goodFor: [
@@ -299,7 +299,7 @@ export const treatments: Treatment[] = [
     opener:
       'Looking for a chemical peel in San Diego that is safe on melanin-rich skin? That is the work this studio was built around.',
     intro:
-      'Pigmentation is the reason most people book, and it is also where the wrong treatment does lasting damage. Melanin-rich skin responds to trauma by producing more pigment, so the strength, the acid and the pacing all have to be selected deliberately. Lira\'s professional range is built for that kind of control. <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista clients</a> and those from <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a> book this treatment most often, where inland UV and melanin-rich skin demographics make melasma the county\'s most common pigmentation concern. Read more about <a href="/treatments/melasma/" class="border-b border-ink/40 hover:border-rose hover:text-rose">correcting melasma and post-inflammatory hyperpigmentation</a>.',
+      'Pigmentation is the reason most people book, and it is also where the wrong treatment does lasting damage. Melanin-rich skin responds to trauma by producing more pigment, so the strength, the acid and the pacing all have to be selected deliberately. Lira\'s professional range is built for that kind of control. <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista clients</a> and those from <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a> book this treatment most often, where inland UV and melanin-rich skin demographics make melasma the county\'s most common pigmentation concern. Read more about <a href="/treatments/melasma/" class="border-b border-ink/40 hover:border-rose hover:text-rose">correcting melasma and post-inflammatory hyperpigmentation</a>, or explore KIAMO Skin\'s full approach to <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatments</a>.',
     image: pigmentation,
     imageAlt: 'Close portrait of even, clear skin in warm natural light',
     goodFor: [
@@ -351,7 +351,7 @@ export const treatments: Treatment[] = [
     opener:
       'Looking for dermaplaning in San Diego? The dermaplane facial at KIAMO SKIN is performed by a licensed esthetician in Mission Hills, and it is $199.',
     intro:
-      'Dermaplaning uses a sterile surgical blade to remove dead surface cells and the fine vellus hair that sits on top of them. Nothing is pulled from the follicle and nothing penetrates the skin. What changes is the surface: product reaches live tissue instead of sitting on debris, and makeup stops catching on texture. Clients from <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills</a>, <a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park</a>, and <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla</a> book dermaplaning for events and before important occasions because there is zero downtime and the glow is immediate.',
+      'Dermaplaning uses a sterile surgical blade to remove dead surface cells and the fine vellus hair that sits on top of them. Nothing is pulled from the follicle and nothing penetrates the skin. What changes is the surface: product reaches live tissue instead of sitting on debris, and makeup stops catching on texture. Clients from <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills</a>, <a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park</a>, and <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla</a> book dermaplaning for events and before important occasions because there is zero downtime and the glow is immediate. Dermaplaning is one of several <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatments</a> that can be integrated into a broader skincare plan.',
     image: dermaplane,
     imageAlt: 'A close portrait of smooth, even skin across the cheekbone',
     goodFor: [
@@ -391,6 +391,65 @@ export const treatments: Treatment[] = [
     },
   },
   {
+    slug: 'corrective-skin-treatments',
+    name: 'Corrective Skin Treatments',
+    serviceType: 'Corrective skin therapy',
+    category: 'Corrective skin treatment',
+    areas: ['mission-hills', 'la-jolla', 'chula-vista', 'north-park', 'encinitas', 'carlsbad'],
+    title: 'Corrective Skin Treatments | KIAMO Skin',
+    description:
+      'Explore corrective skin treatments by KIAMO Skin for pigmentation, acne, texture, barrier health, and more. Find a personalized approach to healthier-looking skin.',
+    headline: 'Corrective Skin Treatments — Designed Around Your Skin',
+    opener:
+      'Healthy-looking skin is not always about adding another product to your routine. When concerns such as pigmentation, acne, post-inflammatory marks, uneven texture, dehydration, or a compromised skin barrier continue to show up, a more intentional approach may be needed.',
+    intro:
+      'KIAMO Skin provides corrective skin treatments designed to address specific skin concerns while considering the condition, history, and needs of your skin. Rather than treating every client or concern exactly the same way, the goal is to understand what is happening beneath the surface and select treatments that make sense for your current skin health. Corrective skincare may include treatments such as HydraFacial, DMK Enzyme Therapy, Procell Microchanneling, Lira Chemical Peels, Dermaplaning, and Keravive Scalp Therapy, depending on the concern being addressed.',
+    image: pigmentation,
+    imageAlt: 'Close portrait of even, clear skin showing results of corrective treatment',
+    goodFor: [
+      'Hyperpigmentation and uneven skin tone',
+      'Melasma and persistent pigmentation concerns',
+      'Acne and congestion',
+      'Post-inflammatory marks',
+      'Uneven skin texture',
+      'Dull or rough-looking skin',
+      'Dehydration and compromised skin barrier',
+      'Scalp buildup and scalp-health concerns',
+    ],
+    steps: [
+      {
+        title: 'Identify the primary concern',
+        body: 'The first step is determining what you want to improve—whether that is pigmentation, acne, texture, congestion, dehydration, or another concern.',
+      },
+      {
+        title: 'Consider current skin condition',
+        body: 'Your current skin health matters. A treatment that may be appropriate for one person may not be the right choice for another, particularly when the skin is irritated, sensitized, or experiencing barrier disruption.',
+      },
+      {
+        title: 'Select an appropriate treatment',
+        body: 'Depending on the concern, KIAMO Skin may recommend a treatment such as HydraFacial, DMK Enzyme Therapy, Procell Microchanneling, Lira Chemical Peels, or Dermaplaning.',
+      },
+      {
+        title: 'Build consistency',
+        body: 'Corrective skincare is often about more than one appointment. Depending on the concern, an appropriate treatment strategy may involve a series of treatments and supportive home care.',
+      },
+    ],
+    pricing: [
+      {
+        label: 'Treatment selection varies by concern',
+        price: PRICE_ON_CONSULTATION,
+        description:
+          'Corrective treatment pricing depends on which modality is selected. HydraFacial, chemical peels, microchanneling, DMK enzyme therapy, and dermaplaning each have different pricing structures based on the concern being addressed.',
+      },
+    ],
+    note: 'A corrective approach should begin with understanding the concern rather than immediately choosing a treatment. For clients with melanin-rich skin, treatment selection deserves additional consideration because pigmentation can be a significant concern.',
+    melaninNote:
+      'KIAMO Skin\'s treatment philosophy centers on personalized corrective care, with particular attention to melanin-rich skin and concerns commonly associated with pigmentation and uneven tone.',
+    membershipNote:
+      'Because corrective care is often about consistency over time, a monthly membership can make ongoing treatment more accessible.',
+    membershipAnchor: 'Explore monthly facial memberships',
+  },
+  {
     slug: 'acne',
     name: 'Acne Treatment',
     serviceType: 'Acne facial treatment',
@@ -403,7 +462,7 @@ export const treatments: Treatment[] = [
     opener:
       'Looking for acne treatment in San Diego? KIAMO SKIN offers corrective acne facials in Mission Hills — HydraFacial for active breakouts, DMK Enzyme Therapy for congestion, chemical peels for post-inflammatory hyperpigmentation, and Procell Microchanneling for acne scarring. Every treatment is customized for your skin type and concern.',
     intro:
-      'Acne treatment at KIAMO SKIN addresses three phases: active breakouts, congestion (blackheads and whiteheads), and post-acne concerns like hyperpigmentation and scarring. The treatment plan depends on what stage your skin is in. HydraFacial extracts congestion without manual pressure, DMK Enzyme Therapy rebuilds a compromised barrier that is keeping breakouts active, and chemical peels or microchanneling work through the marks and texture left behind. Every protocol is designed to clear acne without triggering post-inflammatory hyperpigmentation — the dark marks that last longer than the breakout itself.',
+      'Acne treatment at KIAMO Skin addresses three phases: active breakouts, congestion (blackheads and whiteheads), and post-acne concerns like hyperpigmentation and scarring. The treatment plan depends on what stage your skin is in. HydraFacial extracts congestion without manual pressure, DMK Enzyme Therapy rebuilds a compromised barrier that is keeping breakouts active, and chemical peels or microchanneling work through the marks and texture left behind. Every protocol is designed to clear acne without triggering post-inflammatory hyperpigmentation — the dark marks that last longer than the breakout itself. This multi-phase approach is part of KIAMO Skin\'s <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatment</a> philosophy.',
     image: acne,
     imageAlt: 'Clear, healthy skin along the cheek showing improved texture after acne treatment',
     goodFor: [

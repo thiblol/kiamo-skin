@@ -1,0 +1,524 @@
+---
+/**
+ * Corrective skin treatments overview page.
+ *
+ * SEO Strategy: Broad corrective skincare hub targeting multiple concerns
+ * Links to: individual treatment pages, concern-specific pages, melanin-rich skin
+ */
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
+import NapBlock from '../../components/NapBlock.astro';
+import Reveal from '../../components/Reveal.astro';
+import ServiceMenu from '../../components/sections/ServiceMenu.astro';
+import FaqSchema from '../../components/schema/FaqSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import { business } from '../../config/business';
+import { absolute, businessId, websiteId } from '../../config/urls';
+import { CTA_LABEL } from '../../config/nav';
+import pigmentation from '../../assets/concern-pigmentation.jpg';
+
+const site = Astro.site;
+const url = absolute('/treatments/corrective-skin-treatments', site);
+
+const title = 'Corrective Skin Treatments | KIAMO Skin';
+const description = 'Explore corrective skin treatments by KIAMO Skin for pigmentation, acne, texture, barrier health, and more. Find a personalized approach to healthier-looking skin.';
+
+const correctiveTreatments = [
+  {
+    name: 'HydraFacial',
+    description: 'Cleansing, exfoliation, extraction, and hydration for congested, dull, or dehydrated skin. An option for refreshing the appearance while supporting a more polished-looking complexion.',
+    href: '/treatments/hydrafacial/',
+  },
+  {
+    name: 'DMK Enzyme Therapy',
+    description: 'Focuses on skin barrier function and overall skin health. Considered when the goal is supporting healthier-looking skin rather than just surface-level refresh.',
+    href: '/treatments/dmk-enzyme-therapy/',
+  },
+  {
+    name: 'Procell Microchanneling',
+    description: 'Targeted treatment for concerns involving skin texture and the appearance of acne scarring. Treatment suitability determined by individual skin condition and goals.',
+    href: '/treatments/procell-microchanneling/',
+  },
+  {
+    name: 'Lira Chemical Peels',
+    description: 'Professional exfoliation for addressing the appearance of uneven tone, texture, and dullness. Peel selection depends on skin and desired treatment objective.',
+    href: '/treatments/lira-peels/',
+  },
+  {
+    name: 'Dermaplaning',
+    description: 'Physical exfoliation that removes surface buildup while creating a smoother-feeling skin surface. Can be incorporated into broader skincare strategies.',
+    href: '/treatments/dermaplaning/',
+  },
+  {
+    name: 'Keravive Scalp Therapy',
+    description: 'Scalp cleansing and care for clients experiencing scalp-related concerns. Corrective care extends beyond facial skin.',
+    href: '/treatments/keravive-scalp/',
+  },
+];
+
+const skinConcerns = [
+  'Hyperpigmentation and uneven skin tone',
+  'Melasma and persistent pigmentation concerns',
+  'Acne and congestion',
+  'Post-inflammatory marks',
+  'Uneven skin texture',
+  'Dull or rough-looking skin',
+  'Dehydration and compromised skin barrier',
+  'Scalp buildup and scalp-health concerns',
+];
+
+const correctiveFaqs = [
+  {
+    question: 'What are corrective skin treatments?',
+    answer: 'Corrective skin treatments are professional skincare treatments selected to address specific concerns such as pigmentation, acne, uneven texture, congestion, dehydration, or barrier health. Treatment selection depends on the individual\'s skin and goals.',
+  },
+  {
+    question: 'Which corrective treatment is best for hyperpigmentation?',
+    answer: 'There is no single treatment that is best for every pigmentation concern. Options may include chemical peels, Procell Microchanneling, HydraFacial, or other approaches depending on the skin\'s condition and the type of pigmentation involved.',
+  },
+  {
+    question: 'Are corrective skin treatments suitable for melanin-rich skin?',
+    answer: 'They can be, but treatment selection should take the characteristics and current condition of melanin-rich skin into account. KIAMO SKIN specifically incorporates melanin-rich skin into its corrective skincare focus.',
+  },
+  {
+    question: 'How do I know which corrective treatment I need?',
+    answer: 'The best starting point is to identify your primary concern and evaluate the current condition of your skin. From there, an appropriate treatment can be selected based on your goals, skin tolerance, and overall skincare strategy.',
+  },
+  {
+    question: 'Can corrective treatments be combined?',
+    answer: 'Different treatments may be incorporated into a broader skincare strategy when appropriate. However, treatments should not be combined simply because more procedures seem better. The sequence and frequency should make sense for the individual\'s skin and goals.',
+  },
+];
+
+const webpage = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalWebPage',
+  '@id': `${url}#webpage`,
+  url,
+  name: title,
+  description,
+  isPartOf: { '@id': websiteId(site) },
+  specialty: 'Dermatology',
+  inLanguage: 'en-US',
+};
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalTherapy',
+  '@id': `${url}#service`,
+  name: 'Corrective Skin Treatments',
+  description: 'Professional corrective skin treatments for pigmentation, acne, texture, barrier health, and other skin concerns—personalized to individual skin needs.',
+  url,
+  provider: { '@id': businessId(site) },
+  areaServed: business.schemaAreaServed.map((name) => ({ '@type': 'Place', name })),
+};
+---
+
+<BaseLayout {title} {description}>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(webpage)} slot="head" />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(service)} slot="head" />
+  <FaqSchema slot="head" faqs={correctiveFaqs} />
+  <BreadcrumbSchema
+    slot="head"
+    trail={[
+      { name: 'Treatments', path: '/treatments' },
+      { name: 'Corrective Skin Treatments', path: '/treatments/corrective-skin-treatments' },
+    ]}
+  />
+
+  <article>
+    <header class="bg-blush">
+      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+        <p class="t-eyebrow text-ink-soft">Corrective Skincare</p>
+        <h1 class="t-h2 mt-6 max-w-[20ch] text-[2.5rem] md:text-[4rem]">
+          Corrective Skin Treatments Designed Around Your Skin
+        </h1>
+        <p class="t-body mt-7 max-w-[62ch] text-[1.125rem]">
+          Healthy-looking skin is not always about adding another product to your routine. When
+          concerns such as pigmentation, acne, post-inflammatory marks, uneven texture, dehydration,
+          or a compromised skin barrier continue to show up, a more intentional approach may be needed.
+        </p>
+        <p class="t-body mt-5 max-w-[62ch]">
+          KIAMO Skin provides corrective skin treatments designed to address specific skin concerns
+          while considering the condition, history, and needs of your skin. Rather than treating
+          every client or concern exactly the same way, the goal is to understand what is happening
+          beneath the surface and select treatments that make sense for your current skin health.
+        </p>
+        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a
+            href={business.phone.href}
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            {business.phone.display}
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap grid items-center gap-12 md:grid-cols-[1fr_0.85fr] md:gap-20">
+        <div>
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Personalized approach</p>
+            <h2 class="t-h2 mt-4">What Makes KIAMO Skin's Corrective Approach Different?</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Corrective skincare starts with the understanding that different skin concerns can
+              require different approaches. Pigmentation is not necessarily addressed in the same
+              way as acne, dehydration, texture, or barrier damage.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              KIAMO Skin's treatment philosophy centers on personalized corrective care, with
+              particular attention to <strong>melanin-rich skin</strong> and concerns commonly
+              associated with pigmentation and uneven tone.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              The objective is to create a treatment plan based on the condition of the skin rather
+              than automatically recommending the same facial or procedure to everyone.
+            </p>
+          </Reveal>
+        </div>
+        <Reveal>
+          <Image
+            src={pigmentation}
+            alt="Close portrait of even, clear skin"
+            widths={[400, 800, 1200]}
+            sizes="(min-width: 840px) 40vw, 90vw"
+            loading="eager"
+            class="aspect-[0.92] w-full rounded-lg object-cover"
+          />
+        </Reveal>
+      </div>
+    </section>
+
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Concerns addressed</p>
+            <h2 class="t-h2 mt-4">A Corrective Approach Can Help Address</h2>
+            <ul class="t-body mt-8 space-y-2.5">
+              {skinConcerns.map((concern) => (
+                <li class="flex gap-3 leading-relaxed">
+                  <span class="mt-1 text-rose">•</span>
+                  <span>{concern}</span>
+                </li>
+              ))}
+            </ul>
+            <p class="t-body mt-6 leading-relaxed">
+              For clients whose primary concern is pigmentation, acne, or discoloration, treatment
+              selection can be especially important. A thoughtful approach considers the skin's
+              current tolerance, the concern being addressed, and how different treatments may fit
+              together over time.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">Treatment options</p>
+          <h2 class="t-h2 mt-4">Which Corrective Skin Treatment Is Right for You?</h2>
+          <p class="t-body mt-6 max-w-[62ch] leading-relaxed">
+            There is no single corrective treatment that is right for every skin concern. KIAMO
+            Skin offers several treatment modalities that can be used for different goals.
+          </p>
+        </Reveal>
+
+        <ul class="m-0 mt-14 grid list-none gap-7 p-0 md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8">
+          {correctiveTreatments.map((treatment) => (
+            <Reveal as="li">
+              <div class="flex h-full flex-col rounded-lg bg-ivory p-8 lg:p-9">
+                <h3 class="t-service text-[1.125rem]">{treatment.name}</h3>
+                <p class="t-body mt-4 flex-1 leading-relaxed text-[0.9375rem] text-ink-soft">
+                  {treatment.description}
+                </p>
+                <a
+                  href={treatment.href}
+                  class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose"
+                >
+                  Learn more
+                </a>
+              </div>
+            </Reveal>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Treatment process</p>
+            <h2 class="t-h2 mt-4">How Does a Corrective Skin Treatment Plan Work?</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              A corrective approach should begin with understanding the concern rather than
+              immediately choosing a treatment.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              A typical treatment decision may involve:
+            </p>
+          </Reveal>
+
+          <div class="mt-10 space-y-7">
+            <Reveal>
+              <div>
+                <h3 class="t-service text-[1.0625rem]">1. Identifying the primary concern</h3>
+                <p class="t-body mt-3 text-[0.9375rem] leading-relaxed text-ink-soft">
+                  The first step is determining what you want to improve—whether that is pigmentation,
+                  acne, texture, congestion, dehydration, or another concern.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal>
+              <div>
+                <h3 class="t-service text-[1.0625rem]">2. Considering current skin condition</h3>
+                <p class="t-body mt-3 text-[0.9375rem] leading-relaxed text-ink-soft">
+                  Your current skin health matters. A treatment that may be appropriate for one
+                  person may not be the right choice for another, particularly when the skin is
+                  irritated, sensitized, or experiencing barrier disruption.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal>
+              <div>
+                <h3 class="t-service text-[1.0625rem]">3. Selecting an appropriate treatment</h3>
+                <p class="t-body mt-3 text-[0.9375rem] leading-relaxed text-ink-soft">
+                  Depending on the concern, KIAMO Skin may recommend a treatment such as HydraFacial,
+                  DMK Enzyme Therapy, Procell Microchanneling, Lira Chemical Peels, or Dermaplaning.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal>
+              <div>
+                <h3 class="t-service text-[1.0625rem]">4. Building consistency</h3>
+                <p class="t-body mt-3 text-[0.9375rem] leading-relaxed text-ink-soft">
+                  Corrective skincare is often about more than one appointment. Depending on the
+                  concern, an appropriate treatment strategy may involve a series of treatments and
+                  supportive home care.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal>
+              <div>
+                <h3 class="t-service text-[1.0625rem]">5. Adjusting as the skin changes</h3>
+                <p class="t-body mt-3 text-[0.9375rem] leading-relaxed text-ink-soft">
+                  Your skin can change over time. A corrective treatment plan can be adjusted
+                  according to how your skin responds and what concerns become the priority.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+
+          <Reveal>
+            <p class="t-body mt-8 leading-relaxed">
+              This approach helps keep treatment decisions connected to the actual condition and
+              needs of your skin.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Who benefits</p>
+            <h2 class="t-h2 mt-4">Who Can Benefit From Corrective Skin Treatments?</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Corrective skin treatments may be appropriate for people who feel that their current
+              skincare routine is not adequately addressing a specific concern.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              You may be considering corrective care if you are dealing with persistent pigmentation,
+              acne or congestion, uneven texture, post-acne discoloration, dull or dehydrated-looking
+              skin, concerns related to melasma, a skin barrier that feels compromised, or a desire
+              for a more structured professional skincare plan.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              Corrective care can also be useful when you are unsure which treatment is appropriate.
+              Instead of selecting a treatment based solely on a trend or a single symptom, the
+              better question is often: <strong>What does my skin need right now?</strong>
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              For clients with melanin-rich skin, treatment selection deserves additional
+              consideration because pigmentation can be a significant concern. KIAMO Skin's focus on
+              melanin-rich skin is an important part of its corrective skincare positioning.
+            </p>
+            <p class="t-body mt-5">
+              <a
+                href="/melanin-rich-skin/"
+                class="border-b border-ink pb-0.5 hover:border-rose hover:text-rose"
+              >
+                Learn more about melanin-rich skin expertise
+              </a>
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Comparison</p>
+            <h2 class="t-h2 mt-4">How Do Corrective Treatments Compare With a Traditional Facial?</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              A traditional facial can be an excellent choice when the primary goal is relaxation,
+              cleansing, hydration, or routine maintenance.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              Corrective skin treatments take a more concern-focused approach.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              The difference is not that one type of treatment is universally better. It is that the
+              treatment objective is different.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              If your primary goal is relaxation and routine maintenance, a conventional facial may
+              be appropriate. If your goal is to address a specific concern such as pigmentation,
+              acne, texture, or barrier health, a corrective treatment plan may provide a more
+              targeted approach.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              KIAMO Skin can help you understand which treatment option best matches your current
+              concerns rather than expecting you to determine the answer on your own.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Common questions</p>
+            <h2 class="t-h2 mt-4">Frequently Asked Questions</h2>
+          </Reveal>
+          <div class="mt-12 space-y-0">
+            {correctiveFaqs.map((faq) => (
+              <div class="border-b border-line">
+                <details class="group">
+                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] transition-colors hover:text-rose md:text-[1.125rem]">
+                    <span>{faq.question}</span>
+                    <span
+                      aria-hidden="true"
+                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <div class="t-body pb-6 text-[0.9375rem] leading-relaxed" set:html={faq.answer} />
+                </details>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch] text-center">
+          <Reveal>
+            <h2 class="t-h2">Take the Next Step With KIAMO Skin</h2>
+            <p class="t-body mx-auto mt-6 max-w-[58ch]">
+              If you are ready to move beyond guessing which facial or treatment to book, start with
+              your actual skin concern. KIAMO Skin's corrective approach is designed to connect
+              treatment selection with the condition and needs of your skin.
+            </p>
+            <p class="t-body mx-auto mt-5 max-w-[58ch]">
+              Explore the individual treatment services to learn more about each approach, or explore
+              KIAMO Skin's resources on melanin-rich skin, acne, and pigmentation.
+            </p>
+            <div class="mt-8 text-left">
+              <p class="t-eyebrow text-ink-soft">Related pages</p>
+              <ul class="mt-4 space-y-2">
+                <li>
+                  <a href="/treatments/hydrafacial/" class="t-body border-b border-ink/40 pb-0.5 hover:border-rose hover:text-rose">
+                    HydraFacial
+                  </a>
+                </li>
+                <li>
+                  <a href="/treatments/dmk-enzyme-therapy/" class="t-body border-b border-ink/40 pb-0.5 hover:border-rose hover:text-rose">
+                    DMK Enzyme Therapy
+                  </a>
+                </li>
+                <li>
+                  <a href="/treatments/procell-microchanneling/" class="t-body border-b border-ink/40 pb-0.5 hover:border-rose hover:text-rose">
+                    Procell Microchanneling
+                  </a>
+                </li>
+                <li>
+                  <a href="/treatments/lira-peels/" class="t-body border-b border-ink/40 pb-0.5 hover:border-rose hover:text-rose">
+                    Lira Chemical Peels
+                  </a>
+                </li>
+                <li>
+                  <a href="/treatments/dermaplaning/" class="t-body border-b border-ink/40 pb-0.5 hover:border-rose hover:text-rose">
+                    Dermaplaning
+                  </a>
+                </li>
+                <li>
+                  <a href="/treatments/keravive-scalp/" class="t-body border-b border-ink/40 pb-0.5 hover:border-rose hover:text-rose">
+                    Keravive Scalp Therapy
+                  </a>
+                </li>
+                <li>
+                  <a href="/treatments/acne/" class="t-body border-b border-ink/40 pb-0.5 hover:border-rose hover:text-rose">
+                    Acne Treatment
+                  </a>
+                </li>
+                <li>
+                  <a href="/treatments/melasma/" class="t-body border-b border-ink/40 pb-0.5 hover:border-rose hover:text-rose">
+                    Melasma Treatment
+                  </a>
+                </li>
+                <li>
+                  <a href="/melanin-rich-skin/" class="t-body border-b border-ink/40 pb-0.5 hover:border-rose hover:text-rose">
+                    Melanin-Rich Skin
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="mt-9 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+              <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+              <a
+                href={business.phone.href}
+                class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+              >
+                {business.phone.display}
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <ServiceMenu />
+
+    <section class="bg-porcelain py-16 md:py-20">
+      <div class="wrap">
+        <NapBlock />
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  /* Safari still needs this to drop the disclosure triangle. */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
