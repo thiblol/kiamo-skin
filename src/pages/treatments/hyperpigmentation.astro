@@ -1,0 +1,557 @@
+---
+/**
+ * Hyperpigmentation Treatment landing page.
+ *
+ * Targets: "hyperpigmentation treatment san diego" cluster
+ * SEO Strategy: Corrective approach, AUDIO framework, entity-rich, melanin-rich skin focus
+ */
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Button from '../../components/Button.astro';
+import NapBlock from '../../components/NapBlock.astro';
+import Reveal from '../../components/Reveal.astro';
+import ServiceMenu from '../../components/sections/ServiceMenu.astro';
+import FaqSchema from '../../components/schema/FaqSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import { business } from '../../config/business';
+import { absolute, businessId, websiteId } from '../../config/urls';
+import { CTA_LABEL } from '../../config/nav';
+import pigmentation from '../../assets/hyperpigmentation-treatment-melanin-rich-skin-san-diego.jpg';
+
+const site = Astro.site;
+const url = absolute('/treatments/hyperpigmentation', site);
+
+const title = 'Hyperpigmentation Treatment | KIAMO SKIN';
+const description = 'Explore personalized hyperpigmentation treatments by KIAMO SKIN for dark marks, uneven tone, melasma, and post-inflammatory pigmentation.';
+
+const hyperpigmentationConcerns = [
+  'Dark marks left after acne or inflammation',
+  'Uneven skin tone',
+  'Post-inflammatory hyperpigmentation',
+  'Persistent discoloration',
+  'Melasma-related pigmentation',
+  'Dull or uneven-looking complexion',
+  'Visible contrast between areas of more and less pigmentation',
+];
+
+const treatmentOptions = [
+  {
+    name: 'Lira Chemical Peels',
+    description: 'Professionally selected exfoliation may be considered when uneven tone and texture are part of the concern.',
+    href: '/treatments/lira-peels/',
+  },
+  {
+    name: 'Procell Microchanneling',
+    description: 'May be considered when pigmentation exists alongside concerns such as uneven texture or the appearance of acne scarring.',
+    href: '/treatments/procell-microchanneling/',
+  },
+  {
+    name: 'HydraFacial',
+    description: 'Can provide cleansing, exfoliation, extraction, and hydration as part of a broader skincare strategy.',
+    href: '/treatments/hydrafacial/',
+  },
+  {
+    name: 'Dermaplaning',
+    description: 'Provides physical exfoliation and can help create a smoother-feeling skin surface when appropriate.',
+    href: '/treatments/dermaplaning/',
+  },
+  {
+    name: 'DMK Enzyme Therapy',
+    description: 'Takes a different approach centered on the overall condition and function of the skin.',
+    href: '/treatments/dmk-enzyme-therapy/',
+  },
+];
+
+const hyperpigmentationFaqs = [
+  {
+    question: 'What is the best treatment for hyperpigmentation?',
+    answer: 'There is no single treatment that is best for every type of hyperpigmentation. The appropriate approach depends on the cause and appearance of the pigmentation, the current condition of the skin, and the individual\'s treatment goals. Options may include chemical peels, Procell Microchanneling, HydraFacial, Dermaplaning, or other corrective approaches.',
+  },
+  {
+    question: 'Can hyperpigmentation from acne be treated?',
+    answer: 'Post-acne pigmentation can be addressed as part of a corrective skincare strategy. However, if active acne or inflammation is continuing to create new marks, acne management may need to be considered alongside pigmentation-focused treatment.',
+  },
+  {
+    question: 'Is hyperpigmentation treatment suitable for melanin-rich skin?',
+    answer: 'Professional pigmentation treatment can be considered for melanin-rich skin, but treatment selection should account for the skin\'s individual characteristics and current condition. KIAMO SKIN specifically incorporates melanin-rich skin into its corrective skincare focus.',
+  },
+  {
+    question: 'How long does hyperpigmentation treatment take to work?',
+    answer: 'The timeline varies depending on the type and persistence of pigmentation, the condition of the skin, the treatment approach, and consistency. Pigmentation is not always something that can be addressed with a single appointment, so an appropriate treatment plan may involve multiple steps over time.',
+  },
+  {
+    question: 'Should I treat acne or hyperpigmentation first?',
+    answer: 'It depends on the individual situation. If active acne and inflammation are continuing to create new dark marks, addressing those concerns may be an important part of a longer-term pigmentation strategy. A professional assessment can help determine the appropriate priorities.',
+  },
+  {
+    question: 'What causes post-inflammatory hyperpigmentation?',
+    answer: 'Post-inflammatory hyperpigmentation (PIH) is caused by an overproduction of melanin in response to skin trauma or inflammation—acne, a wound, a rash, a burn, or an overly aggressive treatment. Melanin-rich skin is more prone to PIH because deeper skin tones have more active melanocytes that respond aggressively to any perceived skin injury. The pigment that forms after a breakout or procedure is the skin\'s protective response, not permanent damage, which means it can fade—but the rate depends on keeping triggers under control and using a consistent corrective routine.',
+  },
+  {
+    question: 'How do I find an esthetician experienced with dark skin in San Diego?',
+    answer: 'Finding an esthetician trained specifically in melanin-rich skin requires asking direct questions before booking. The relevant questions are: what percentage of your clients have deeper skin tones, which peel protocols do you use on Brown and Black skin, and what is your response when post-inflammatory hyperpigmentation appears after a treatment. An esthetician who answers vaguely or defaults to "gentle works for everyone" may not have the relevant experience. KIAMO SKIN in Mission Hills, San Diego was built around corrective treatment for melanin-rich skin—hyperpigmentation, melasma, and post-inflammatory marks in skin tones where incorrect treatment causes more damage than it repairs.',
+  },
+  {
+    question: 'Should I see an esthetician or dermatologist for hyperpigmentation?',
+    answer: 'A dermatologist and a licensed esthetician treat hyperpigmentation differently, and for most people both are useful at different stages. A dermatologist prescribes topical medications—hydroquinone, tretinoin, tranexamic acid—that require a prescription and work at the cellular level. A licensed esthetician performs corrective in-office treatments (peels, microchanneling, enzyme therapy) and builds the home routine and maintenance plan that determines whether hyperpigmentation fades or returns. For stubborn hyperpigmentation or melasma, dermatologist-prescribed home care combined with regular corrective facials typically produces better results than either alone.',
+  },
+  {
+    question: 'Why is hyperpigmentation harder to treat in San Diego?',
+    answer: 'San Diego has year-round sun exposure with an average of 266 sunny days per year, and UV levels remain high even on overcast mornings when the marine layer is present. This makes hyperpigmentation particularly stubborn here because UV exposure is the primary trigger that worsens pigmentation. Many people skip sunscreen on cloudy days, but the UV is still there behind the marine layer—and a single day without SPF can reverse weeks of treatment progress. Successful hyperpigmentation treatment in San Diego requires strict daily sunscreen compliance, not just during summer.',
+  },
+  {
+    question: 'Can I treat hyperpigmentation at home or do I need professional treatments?',
+    answer: 'Home care is essential for hyperpigmentation treatment, but professional treatments can accelerate results when appropriate. A home routine with gentle exfoliation, targeted serums, and daily SPF creates the foundation. Professional treatments like chemical peels and microchanneling can provide more intensive correction when the skin is ready. The best approach typically combines both: professional treatments to address deeper pigmentation layers, and home care to maintain progress and prevent new dark marks from forming.',
+  },
+];
+
+const webpage = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalWebPage',
+  '@id': `${url}#webpage`,
+  url,
+  name: title,
+  description,
+  isPartOf: { '@id': websiteId(site) },
+  about: {
+    '@type': 'MedicalCondition',
+    name: 'Hyperpigmentation',
+    alternateName: ['Post-inflammatory hyperpigmentation', 'PIH', 'Dark marks', 'Uneven skin tone'],
+  },
+  specialty: 'Dermatology',
+  inLanguage: 'en-US',
+};
+
+const service = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalTherapy',
+  '@id': `${url}#service`,
+  name: 'Hyperpigmentation Treatment',
+  alternateName: 'Post-Inflammatory Hyperpigmentation Treatment',
+  description: 'Professional hyperpigmentation treatment using chemical peels, microchanneling, and corrective facials—safe for all skin tones, with specialized expertise in melanin-rich skin.',
+  url,
+  provider: { '@id': businessId(site) },
+  treatsHealthCondition: {
+    '@type': 'MedicalCondition',
+    name: 'Hyperpigmentation',
+  },
+  areaServed: business.schemaAreaServed.map((name) => ({ '@type': 'Place', name })),
+};
+---
+
+<BaseLayout {title} {description}>
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(webpage)} slot="head" />
+  <script type="application/ld+json" is:inline set:html={JSON.stringify(service)} slot="head" />
+  <FaqSchema slot="head" faqs={hyperpigmentationFaqs} />
+  <BreadcrumbSchema
+    slot="head"
+    trail={[
+      { name: 'Treatments', path: '/treatments' },
+      { name: 'Hyperpigmentation Treatment', path: '/treatments/hyperpigmentation' },
+    ]}
+  />
+
+  <article>
+    <header class="bg-blush">
+      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+        <p class="t-eyebrow text-ink-soft">Hyperpigmentation Treatment</p>
+        <h1 class="t-h2 mt-6 max-w-[20ch] text-[2.5rem] md:text-[4rem]">
+          Hyperpigmentation Treatment by KIAMO SKIN
+        </h1>
+        <p class="t-body mt-7 max-w-[62ch] text-[1.125rem]">
+          Hyperpigmentation can be one of the most frustrating skin concerns because it often remains
+          visible long after the original breakout, irritation, or inflammation has passed. Dark marks,
+          uneven tone, melasma, and post-inflammatory pigmentation can all make the complexion look less
+          even, even when the skin itself feels healthy.
+        </p>
+        <p class="t-body mt-5 max-w-[62ch]">
+          KIAMO SKIN approaches hyperpigmentation as a concern that deserves more than a one-size-fits-all
+          treatment. The right approach depends on what is contributing to the discoloration, the current
+          condition of the skin, and how well the skin can tolerate corrective treatments.
+        </p>
+        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a
+            href={business.phone.href}
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            {business.phone.display}
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap grid items-center gap-12 md:grid-cols-[1fr_0.85fr] md:gap-20">
+        <div>
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Authority</p>
+            <h2 class="t-h2 mt-4">A Corrective Approach to Hyperpigmentation</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Effective pigmentation care starts with understanding that not all hyperpigmentation is the same.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              Dark marks following acne can behave differently from melasma. Pigmentation associated with
+              inflammation may require a different strategy from generalized uneven tone. Skin that is
+              already irritated or experiencing barrier disruption may also need a different starting point
+              than skin that is stable and able to tolerate more intensive corrective treatments.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              KIAMO SKIN's corrective skincare philosophy considers these differences when determining an
+              appropriate treatment direction. This is especially relevant for melanin-rich skin, where
+              pigmentation is often a significant concern and treatment selection requires careful consideration.
+            </p>
+          </Reveal>
+        </div>
+        <Reveal>
+          <Image
+            src={pigmentation}
+            alt="Clear, even-toned skin after corrective treatment"
+            widths={[400, 800, 1200]}
+            sizes="(min-width: 840px) 40vw, 90vw"
+            loading="eager"
+            class="aspect-[0.92] w-full rounded-lg object-cover"
+          />
+        </Reveal>
+      </div>
+    </section>
+
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Understanding the concern</p>
+            <h2 class="t-h2 mt-4">What Hyperpigmentation Concerns Can Treatment Address?</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Rather than approaching discoloration as an isolated surface issue, corrective skincare looks
+              at the broader condition of the skin and the factors contributing to its appearance.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              Hyperpigmentation treatment may be appropriate for concerns including:
+            </p>
+            <ul class="t-body mt-6 space-y-2.5">
+              {hyperpigmentationConcerns.map((concern) => (
+                <li class="flex gap-3 leading-relaxed">
+                  <span class="mt-1 text-rose">•</span>
+                  <span>{concern}</span>
+                </li>
+              ))}
+            </ul>
+            <p class="t-body mt-6 leading-relaxed">
+              The purpose is not simply to make pigmentation disappear as quickly as possible. A thoughtful
+              corrective plan considers how the skin is behaving now and what approach is appropriate for
+              its current condition.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Uniqueness</p>
+            <h2 class="t-h2 mt-4">Hyperpigmentation Care for Melanin-Rich Skin</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Pigmentation is a particularly important consideration for people with melanin-rich skin. When
+              the skin responds to acne, irritation, inflammation, or other triggers by producing additional
+              pigment, the resulting marks can remain visible long after the original concern has improved.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              That means a treatment plan needs to consider more than the pigment itself.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              KIAMO SKIN's focus on melanin-rich skin is an important part of its corrective skincare identity.
+              Treatment selection can take into account the appearance of pigmentation, the overall condition
+              of the skin, and whether the skin is currently experiencing sensitivity, congestion, dryness,
+              or barrier concerns.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              This approach also helps avoid one of the most common mistakes in pigmentation care: assuming
+              that stronger treatment automatically means better treatment.
+            </p>
+            <p class="t-body mt-5">
+              <a
+                href="/melanin-rich-skin/"
+                class="border-b border-ink pb-0.5 hover:border-rose hover:text-rose"
+              >
+                Learn more about melanin-rich skin expertise
+              </a>
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Depth</p>
+            <h2 class="t-h2 mt-4">How Does Hyperpigmentation Treatment Work?</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              There is no universal hyperpigmentation protocol because the appropriate treatment depends on
+              the individual's skin and the nature of the concern.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              A professional treatment strategy can generally involve several stages:
+            </p>
+          </Reveal>
+
+          <div class="mt-10 space-y-7">
+            <Reveal>
+              <div>
+                <h3 class="t-service text-[1.0625rem]">1. Identify the pigmentation concern</h3>
+                <p class="t-body mt-3 text-[0.9375rem] leading-relaxed text-ink-soft">
+                  The first step is understanding what you are trying to improve. Is it post-acne discoloration?
+                  Persistent dark marks? Uneven tone? Melasma? Or a combination of concerns? Identifying the
+                  dominant concern helps determine which treatment options may make sense.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal>
+              <div>
+                <h3 class="t-service text-[1.0625rem]">2. Evaluate the condition of the skin</h3>
+                <p class="t-body mt-3 text-[0.9375rem] leading-relaxed text-ink-soft">
+                  Pigmentation does not exist independently from the rest of the skin. Dehydration, congestion,
+                  irritation, acne, and barrier disruption can all influence how the skin looks and how it may
+                  respond to treatment.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal>
+              <div>
+                <h3 class="t-service text-[1.0625rem]">3. Select an appropriate corrective treatment</h3>
+                <p class="t-body mt-3 text-[0.9375rem] leading-relaxed text-ink-soft">
+                  Depending on the skin and treatment goal, options may include chemical peels, Procell
+                  Microchanneling, HydraFacial, Dermaplaning, or DMK Enzyme Therapy. The appropriate option
+                  should be determined according to the individual's skin rather than selected solely because
+                  a particular treatment is currently popular.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal>
+              <div>
+                <h3 class="t-service text-[1.0625rem]">4. Build consistency</h3>
+                <p class="t-body mt-3 text-[0.9375rem] leading-relaxed text-ink-soft">
+                  Pigmentation concerns can take time to address. A treatment plan may involve a series of
+                  professional treatments alongside appropriate home care and attention to factors that can
+                  contribute to recurring discoloration.
+                </p>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">Treatment options</p>
+          <h2 class="t-h2 mt-4">Professional Treatment Options</h2>
+          <p class="t-body mt-6 max-w-[62ch] leading-relaxed">
+            Depending on the individual and the concern, professional options may include:
+          </p>
+        </Reveal>
+
+        <ul class="m-0 mt-14 grid list-none gap-7 p-0 md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8">
+          {treatmentOptions.map((treatment) => (
+            <Reveal as="li">
+              <div class="flex h-full flex-col rounded-lg bg-ivory p-8 lg:p-9">
+                <h3 class="t-service text-[1.125rem]">{treatment.name}</h3>
+                <p class="t-body mt-4 flex-1 leading-relaxed text-[0.9375rem] text-ink-soft">
+                  {treatment.description}
+                </p>
+                <a
+                  href={treatment.href}
+                  class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose"
+                >
+                  Learn more
+                </a>
+              </div>
+            </Reveal>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Intent</p>
+            <h2 class="t-h2 mt-4">Who Is Hyperpigmentation Treatment For?</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Hyperpigmentation treatment may be worth exploring if you feel that dark marks or uneven tone
+              are not improving with your current skincare routine.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              You may be looking for professional guidance if:
+            </p>
+            <ul class="t-body mt-5 list-disc space-y-2.5 pl-6">
+              <li>Acne has improved but dark marks remain</li>
+              <li>Your complexion looks uneven even when your skin feels healthy</li>
+              <li>You experience recurring pigmentation after breakouts or irritation</li>
+              <li>You have concerns about melasma</li>
+              <li>You have tried multiple products without a clear strategy</li>
+              <li>You are unsure which professional treatment is appropriate</li>
+              <li>You want a corrective skincare plan rather than a routine facial</li>
+            </ul>
+            <p class="t-body mt-6 leading-relaxed">
+              One important distinction is that treating pigmentation is not always the same as treating the
+              cause of the pigmentation. For example, if active acne continues to create inflammation,
+              addressing acne may be an important part of reducing the cycle of new post-inflammatory marks.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Optimization</p>
+            <h2 class="t-h2 mt-4">Building a Complete Corrective Skincare Strategy</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Hyperpigmentation can overlap with several other skin concerns, which makes internal treatment
+              planning especially important.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              For example, someone dealing with post-acne dark marks may benefit from a strategy that considers
+              both acne and pigmentation. Someone concerned about pigmentation and texture may have different
+              treatment priorities from someone whose primary issue is dehydration or barrier disruption.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              Related KIAMO SKIN services can therefore support different parts of a broader corrective strategy:
+            </p>
+            <ul class="t-body mt-5 space-y-2">
+              <li>
+                <a href="/treatments/acne/" class="border-b border-ink/40 hover:border-rose hover:text-rose">
+                  Acne Treatment
+                </a> for concerns involving breakouts and congestion
+              </li>
+              <li>
+                <a href="/treatments/melasma/" class="border-b border-ink/40 hover:border-rose hover:text-rose">
+                  Melasma
+                </a> for persistent pigmentation concerns associated with melasma
+              </li>
+              <li>
+                <a href="/treatments/procell-microchanneling/" class="border-b border-ink/40 hover:border-rose hover:text-rose">
+                  Procell Microchanneling
+                </a> for treatment considerations involving texture and the appearance of acne scarring
+              </li>
+              <li>
+                <a href="/treatments/lira-peels/" class="border-b border-ink/40 hover:border-rose hover:text-rose">
+                  Lira Chemical Peels
+                </a> for professional exfoliation
+              </li>
+              <li>
+                <a href="/treatments/hydrafacial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">
+                  HydraFacial
+                </a> for cleansing, exfoliation, extraction, and hydration
+              </li>
+              <li>
+                <a href="/treatments/dmk-enzyme-therapy/" class="border-b border-ink/40 hover:border-rose hover:text-rose">
+                  DMK Enzyme Therapy
+                </a> for a treatment approach focused on overall skin condition
+              </li>
+              <li>
+                <a href="/treatments/dermaplaning/" class="border-b border-ink/40 hover:border-rose hover:text-rose">
+                  Dermaplaning
+                </a> for physical exfoliation and a smoother-feeling surface
+              </li>
+              <li>
+                <a href="/melanin-rich-skin/" class="border-b border-ink/40 hover:border-rose hover:text-rose">
+                  Melanin-Rich Skin
+                </a> to learn more about KIAMO SKIN's specialized approach
+              </li>
+            </ul>
+            <p class="t-body mt-6 leading-relaxed">
+              The objective is not to stack treatments unnecessarily. It is to understand which concerns are
+              connected and determine which treatment sequence makes sense for the skin.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Common questions</p>
+            <h2 class="t-h2 mt-4">Frequently Asked Questions</h2>
+          </Reveal>
+          <div class="mt-12 space-y-0">
+            {hyperpigmentationFaqs.map((faq) => (
+              <div class="border-b border-line">
+                <details class="group">
+                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] transition-colors hover:text-rose md:text-[1.125rem]">
+                    <span>{faq.question}</span>
+                    <span
+                      aria-hidden="true"
+                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <div class="t-body pb-6 text-[0.9375rem] leading-relaxed" set:html={faq.answer} />
+                </details>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch] text-center">
+          <Reveal>
+            <h2 class="t-h2">Take the Next Step With KIAMO SKIN</h2>
+            <p class="t-body mx-auto mt-6 max-w-[58ch]">
+              If dark marks, uneven tone, or persistent pigmentation are making you feel frustrated with
+              your skin, you do not have to keep guessing which treatment to try next.
+            </p>
+            <p class="t-body mx-auto mt-5 max-w-[58ch]">
+              KIAMO SKIN's corrective approach starts with understanding the concern and the condition of
+              your skin, then selecting an appropriate treatment strategy. When you're ready to move from
+              trial and error toward a more intentional corrective skincare approach, contact KIAMO SKIN
+              to discuss your skin concerns and next steps.
+            </p>
+            <div class="mt-9 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+              <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+              <a
+                href={business.phone.href}
+                class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+              >
+                {business.phone.display}
+              </a>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <ServiceMenu />
+
+    <section class="bg-porcelain py-16 md:py-20">
+      <div class="wrap">
+        <NapBlock />
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  /* Safari still needs this to drop the disclosure triangle. */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

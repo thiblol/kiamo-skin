@@ -4,7 +4,8 @@ import hydrafacial from '../assets/hydrafacial-syndeo-treatment-mission-hills-sa
 import scalp from '../assets/keravive-scalp-treatment-hair-growth-san-diego.jpg';
 import enzyme from '../assets/dmk-enzyme-therapy-melanin-rich-skin-san-diego.jpg';
 import acne from '../assets/acne-treatment-melanin-rich-skin-san-diego.jpg';
-import pigmentation from '../assets/hyperpigmentation-treatment-melanin-rich-skin-san-diego.jpg';
+import hyperpigmentationTreatment from '../assets/hyperpigmentation-treatment-melanin-rich-skin-san-diego.jpg';
+import correctiveSkin from '../assets/corrective-skin-treatment-melanin-rich-approach-san-diego.jpg';
 // No dedicated dermaplaning photograph exists yet. The barrier image is the
 // closest honest match — a clear, even skin surface. Swap when one is shot.
 import dermaplane from '../assets/skin-barrier-repair-treatment-san-diego.jpg';
@@ -303,7 +304,7 @@ export const treatments: Treatment[] = [
       'Looking for a chemical peel in San Diego that is safe on melanin-rich skin? That is the work this studio was built around.',
     intro:
       'Pigmentation is the reason most people book, and it is also where the wrong treatment does lasting damage. Melanin-rich skin responds to trauma by producing more pigment, so the strength, the acid and the pacing all have to be selected deliberately. Lira\'s professional range is built for that kind of control. <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista clients</a> and those from <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a> book this treatment most often, where inland UV and melanin-rich skin demographics make melasma the county\'s most common pigmentation concern. Read more about <a href="/treatments/melasma/" class="border-b border-ink/40 hover:border-rose hover:text-rose">correcting melasma and post-inflammatory hyperpigmentation</a>, or explore KIAMO Skin\'s full approach to <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatments</a>.',
-    image: pigmentation,
+    image: hyperpigmentationTreatment,
     imageAlt: 'Close portrait of even, clear skin in warm natural light',
     goodFor: [
       'Melasma and hormonal pigmentation',
@@ -407,7 +408,7 @@ export const treatments: Treatment[] = [
       'Healthy-looking skin is not always about adding another product to your routine. When concerns such as pigmentation, acne, post-inflammatory marks, uneven texture, dehydration, or a compromised skin barrier continue to show up, a more intentional approach may be needed.',
     intro:
       'KIAMO Skin provides corrective skin treatments designed to address specific skin concerns while considering the condition, history, and needs of your skin. Rather than treating every client or concern exactly the same way, the goal is to understand what is happening beneath the surface and select treatments that make sense for your current skin health. Corrective skincare may include treatments such as HydraFacial, DMK Enzyme Therapy, Procell Microchanneling, Lira Chemical Peels, Dermaplaning, and Keravive Scalp Therapy, depending on the concern being addressed.',
-    image: pigmentation,
+    image: correctiveSkin,
     imageAlt: 'Close portrait of even, clear skin showing results of corrective treatment',
     goodFor: [
       'Hyperpigmentation and uneven skin tone',
@@ -521,6 +522,63 @@ export const treatments: Treatment[] = [
       },
     ],
     note: 'Acne treatment is not one-size-fits-all. Active cystic acne requires a different approach than blackhead congestion, and both differ from treating post-acne hyperpigmentation. The first consultation identifies which phase the skin is in and which treatment matches that phase. For severe or persistent acne, working with a dermatologist alongside corrective facials produces the best results — estheticians and dermatologists treat acne differently, and both roles matter.',
+  },
+  {
+    slug: 'hyperpigmentation',
+    name: 'Hyperpigmentation Treatment',
+    serviceType: 'Hyperpigmentation treatment',
+    category: 'Corrective skin treatment',
+    areas: ['mission-hills', 'chula-vista', 'la-jolla', 'north-park', 'la-mesa', 'encinitas'],
+    title: 'Hyperpigmentation Treatment | KIAMO SKIN',
+    description:
+      'Explore personalized hyperpigmentation treatments by KIAMO SKIN for dark marks, uneven tone, melasma, and post-inflammatory pigmentation.',
+    headline: 'Hyperpigmentation Treatment — corrective care for dark marks and uneven tone.',
+    opener:
+      'Looking for hyperpigmentation treatment in San Diego? KIAMO SKIN provides corrective skincare for dark marks, post-inflammatory pigmentation, melasma, and uneven tone—with specialized expertise in melanin-rich skin.',
+    intro:
+      'Hyperpigmentation treatment at KIAMO Skin addresses the visible discoloration that remains after acne, inflammation, or other skin concerns have passed. Whether you are dealing with post-acne dark marks, melasma, or generalized uneven tone, the appropriate treatment depends on what is contributing to the pigmentation and the current condition of your skin. Treatment options may include <a href="/treatments/lira-peels/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Lira Chemical Peels</a>, <a href="/treatments/procell-microchanneling/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Procell Microchanneling</a>, <a href="/treatments/hydrafacial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">HydraFacial</a>, or <a href="/treatments/dmk-enzyme-therapy/" class="border-b border-ink/40 hover:border-rose hover:text-rose">DMK Enzyme Therapy</a> depending on the concern. This corrective approach is especially relevant for <a href="/melanin-rich-skin/" class="border-b border-ink/40 hover:border-rose hover:text-rose">melanin-rich skin</a>, where pigmentation is often a primary concern and treatment selection requires careful consideration.',
+    image: hyperpigmentationTreatment,
+    imageAlt: 'Clear, even-toned skin after corrective hyperpigmentation treatment',
+    goodFor: [
+      'Dark marks left after acne or inflammation',
+      'Uneven skin tone',
+      'Post-inflammatory hyperpigmentation (PIH)',
+      'Melasma-related pigmentation',
+      'Dull or uneven-looking complexion',
+      'Persistent discoloration',
+    ],
+    steps: [
+      {
+        title: 'Identify the pigmentation concern',
+        body: 'Understanding what you are trying to improve—whether post-acne discoloration, melasma, or uneven tone—helps determine which treatment options may be appropriate.',
+      },
+      {
+        title: 'Evaluate skin condition',
+        body: 'Pigmentation does not exist independently from the rest of the skin. Dehydration, irritation, congestion, and barrier concerns can all influence how the skin responds to treatment.',
+      },
+      {
+        title: 'Select appropriate treatment',
+        body: 'Depending on the individual and the concern, options may include chemical peels, microchanneling, HydraFacial, or DMK Enzyme Therapy.',
+      },
+      {
+        title: 'Build consistency',
+        body: 'Pigmentation concerns often require a series of treatments alongside appropriate home care and attention to factors that can contribute to recurring discoloration.',
+      },
+    ],
+    pricing: [
+      {
+        label: 'Treatment selection varies by concern',
+        price: PRICE_ON_CONSULTATION,
+        description:
+          'Hyperpigmentation treatment pricing depends on which modality is selected. Chemical peels, microchanneling, HydraFacial, and DMK enzyme therapy each have different pricing structures.',
+      },
+    ],
+    note: 'Effective pigmentation care is not about making dark marks disappear as quickly as possible. A thoughtful corrective plan considers the current condition of the skin, what approach is appropriate, and whether the skin can tolerate more intensive corrective treatments. For melanin-rich skin, treatment selection deserves additional consideration because the wrong treatment can create new pigmentation rather than correcting existing concerns.',
+    melaninNote:
+      'KIAMO SKIN\'s focus on melanin-rich skin is an important part of its corrective skincare identity. Treatment selection takes into account the appearance of pigmentation, the overall condition of the skin, and whether the skin is currently experiencing sensitivity or barrier concerns.',
+    membershipNote:
+      'Pigmentation treatment is typically approached as a series rather than a single visit, which makes a monthly membership plan a practical way to maintain consistency.',
+    membershipAnchor: 'Explore monthly membership options',
   },
 ];
 
