@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
 import Reveal from '../../components/Reveal.astro';
 import Button from '../../components/Button.astro';
 import NapBlock from '../../components/NapBlock.astro';
@@ -12,6 +13,7 @@ import { areas } from '../../data/areas';
 import { business, verifiedPrices } from '../../config/business';
 import { absolute, businessId, gbpDirectionsUrl } from '../../config/urls';
 import { CTA_LABEL } from '../../config/nav';
+import studioImage from '../../assets/kiamo-skin-studio-mission-hills-san-diego.jpg';
 
 const site = Astro.site;
 const pageUrl = absolute('/service-areas', site);
@@ -169,41 +171,55 @@ const areaGroups = [
   <!-- HEADER -->
   <header class="bg-blush">
     <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-      <p class="t-eyebrow text-ink-soft">Service areas - San Diego County</p>
-      <h1 class="t-h2 mt-6 max-w-[26ch] text-[2.5rem] md:text-[4rem]">
-        San Diego's corrective facial specialist - serving 9 areas from Mission Hills
-      </h1>
-      <p class="t-body mt-7 text-[1.125rem] max-w-[62ch]">
-        Clinical corrective facials at our Mission Hills studio near Hillcrest
-        Medical Center and Balboa Park. HydraFacial Syndeo, Procell Microchanneling, DMK Enzyme Therapy,
-        and Lira Clinical peels - performed by a California-licensed esthetician specializing in acne,
-        melasma, and post-inflammatory hyperpigmentation treatment for all skin types.
-      </p>
-      <p class="t-body mt-5 max-w-[62ch]">
-        One treatment room at 3067 Reynard Way in Mission Hills - clients travel from North Park (8 minutes),
-        La Jolla (18 minutes), Chula Vista (25 minutes), Downtown San Diego, Pacific Beach, Encinitas,
-        Carlsbad, Del Mar, and La Mesa. Every area page below covers the primary skin concern from that
-        neighborhood, honest drive time via I-5 or SR-163, and landmark-based directions.
-      </p>
+      <div class="grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-20 items-center">
+        <div>
+          <p class="t-eyebrow text-ink-soft">Service areas - San Diego County</p>
+          <h1 class="t-h2 mt-6 max-w-[26ch] text-[2.5rem] md:text-[4rem]">
+            San Diego's corrective facial specialist - serving 9 areas from Mission Hills
+          </h1>
+          <p class="t-body mt-7 text-[1.125rem] max-w-[62ch]">
+            Clinical corrective facials at our Mission Hills studio near Hillcrest
+            Medical Center and Balboa Park. HydraFacial Syndeo, Procell Microchanneling, DMK Enzyme Therapy,
+            and Lira Clinical peels - performed by a California-licensed esthetician specializing in acne,
+            melasma, and post-inflammatory hyperpigmentation treatment for all skin types.
+          </p>
+          <p class="t-body mt-5 max-w-[62ch]">
+            One treatment room at 3067 Reynard Way in Mission Hills - clients travel from North Park (8 minutes),
+            La Jolla (18 minutes), Chula Vista (25 minutes), Downtown San Diego, Pacific Beach, Encinitas,
+            Carlsbad, Del Mar, and La Mesa. Every area page below covers the primary skin concern from that
+            neighborhood, honest drive time via I-5 or SR-163, and landmark-based directions.
+          </p>
 
-      {/* Trust strip */}
-      <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-soft">
-        <span>450+ clients across 9 areas</span>
-        <span class="text-rose">·</span>
-        <span>Licensed Esthetician</span>
-        <span class="text-rose">·</span>
-        <span>7+ years in San Diego</span>
-        <span class="text-rose">·</span>
-        <span>HydraFacial Syndeo Certified</span>
-        <span class="text-rose">·</span>
-        <span>All skin types</span>
-      </div>
+          {/* Trust strip */}
+          <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-soft">
+            <span>450+ clients across 9 areas</span>
+            <span class="text-rose">·</span>
+            <span>Licensed Esthetician</span>
+            <span class="text-rose">·</span>
+            <span>7+ years in San Diego</span>
+            <span class="text-rose">·</span>
+            <span>HydraFacial Syndeo Certified</span>
+            <span class="text-rose">·</span>
+            <span>All skin types</span>
+          </div>
 
-      <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-        <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
-        <a href={business.phone.href} class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose">
-          {business.phone.display}
-        </a>
+          <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+            <a href={business.phone.href} class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose">
+              {business.phone.display}
+            </a>
+          </div>
+        </div>
+
+        <div class="order-first md:order-last">
+          <Image
+            src={studioImage}
+            alt="KIAMO Skin Mission Hills studio - corrective facial treatment room serving 9 San Diego areas"
+            class="w-full h-auto rounded-sm shadow-lg"
+            widths={[400, 600, 800]}
+            sizes="(max-width: 768px) 100vw, 50vw"
+          />
+        </div>
       </div>
     </div>
   </header>
