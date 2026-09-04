@@ -3,16 +3,56 @@ import NapBlock from '../NapBlock.astro';
 import LocationMap from '../LocationMap.astro';
 import Button from '../Button.astro';
 import FaqSchema from '../schema/FaqSchema.astro';
-import { faqs } from '../../data/faqs';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import { gbpDirectionsUrl, gbpReviewsUrl } from '../../config/urls';
+
+/**
+ * Conversion-optimized FAQs using FAQ Money Printer PRO methodology.
+ * Targets 8 buyer hesitation categories: price, time, trust, comparison,
+ * risk reversal, location, qualification, results skepticism.
+ */
+const faqs = [
+  {
+    question: "What's the difference between KIAMO and a regular spa facial in San Diego?",
+    answer: "KIAMO offers corrective skin treatments, not spa facials. While spa facials focus on relaxation and surface-level care, corrective treatments target specific skin concerns—acne, hyperpigmentation, melasma, scarring, and barrier damage—using clinical-grade technology like HydraFacial Syndeo, medical-grade chemical peels, and Procell Microchanneling. Every treatment is customized by a California-licensed esthetician based on your skin type, concern, and goals. You'll still relax during your session, but results come first."
+  },
+  {
+    question: "Is KIAMO safe for my skin type? I have sensitive/darker skin.",
+    answer: "Yes. KIAMO treats all skin types safely, from Fitzpatrick I to VI. Kiki has 7+ years of experience working with sensitive skin, reactive skin, acne-prone skin, and darker skin tones that are prone to post-inflammatory hyperpigmentation. Every treatment protocol is customized to your skin's barrier function, melanin response, and sensitivity level. We never use aggressive treatments that compromise your skin barrier or cause unnecessary inflammation."
+  },
+  {
+    question: "How much do treatments cost at KIAMO?",
+    answer: "First-time client consultations start at $249 and include a full skin analysis and customized treatment. HydraFacial sessions are $259. Chemical peels range from $199 to $299 depending on depth. Procell Microchanneling is $475 per session or $1,199 for a series of three. Scalp treatments (Keravive) are $599 per session. Monthly memberships start at $199 and include one treatment per month plus discounts on additional services. Exact pricing depends on your custom treatment plan."
+  },
+  {
+    question: "Where is KIAMO located and is parking available?",
+    answer: "KIAMO Skin is located at 3067 Reynard Way in Mission Hills, San Diego—minutes from Hillcrest Medical Center, Little Italy, and Balboa Park. Free street parking is available on Reynard Way and surrounding streets. The studio is easily accessible from Downtown San Diego (10 minutes), North Park (8 minutes), and the I-5/I-8 interchange. Appointments are by appointment only—no walk-ins."
+  },
+  {
+    question: "How long does it take to see results?",
+    answer: "It depends on your skin concern. For barrier repair and hydration, you'll see improvement after one HydraFacial session. For acne, hyperpigmentation, melasma, and scarring, expect visible progress within 4-6 weeks with a consistent treatment plan. Corrective skincare is not a quick fix—it's a process. Kiki will create a realistic timeline during your first consultation based on your skin's current condition and your goals. Most clients commit to monthly treatments for 3-6 months to achieve lasting results."
+  },
+  {
+    question: "Do I need to do anything before my first appointment?",
+    answer: "Arrive with a clean face—no makeup, sunscreen, or active skincare products on the day of your appointment. If you're using prescription retinoids (tretinoin, Retin-A) or acids (AHAs, BHAs), stop 3-5 days before your appointment to avoid over-exfoliation. Avoid tanning, waxing, or other facial treatments 1 week before. If you have active cold sores, reschedule—facial treatments can trigger outbreaks. Bring a list of current skincare products and any medications you're taking. That's it."
+  },
+  {
+    question: "Can I book same-day or do I need to schedule in advance?",
+    answer: "KIAMO operates by appointment only—no walk-ins. Same-day appointments are occasionally available, but most clients book 1-2 weeks in advance, especially for weekend slots. First-time clients should book at least 3-5 days ahead to ensure availability for a full consultation. You can book online through the Vagaro booking system or call the studio directly. Memberships include priority booking for monthly treatment slots."
+  }
+];
+
+const schemaFaqs = faqs.map(faq => ({
+  question: faq.question,
+  answer: faq.answer
+}));
 
 const directionsUrl = gbpDirectionsUrl(business.gbpPlaceId, business.address.full);
 const reviewsUrl = gbpReviewsUrl(business.gbpPlaceId);
 ---
 
-<FaqSchema />
+<FaqSchema faqs={schemaFaqs} />
 
 <section class="bg-ivory">
   <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.8fr] md:gap-20">
