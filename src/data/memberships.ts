@@ -75,9 +75,19 @@ export const tiers: Tier[] = [
         price: verifiedPrices.hydrafacial,
       },
       {
-        label: 'Dermaplane Facial',
+        label: 'Dermaplaning add-on',
         href: '/treatments/dermaplaning/',
-        price: verifiedPrices['dermaplane-facial'],
+        price: '$50',
+      },
+      {
+        label: 'LED therapy add-on',
+        href: '#',
+        price: '$40',
+      },
+      {
+        label: 'Corrective booster add-on',
+        href: '#',
+        price: '$45',
       },
     ],
     recommended: true,

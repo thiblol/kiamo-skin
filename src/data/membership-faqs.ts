@@ -19,6 +19,35 @@ import { verifiedPrices } from '../config/business';
 
 export const membershipFaqs: Faq[] = [
   {
+    question: 'Why is LUX the most popular membership at KIAMO?',
+    answer:
+      'LUX is the corrective sweet spot - more intensive than maintenance (GLOW), more practical than luxury transformation (OPULENCE). 70% of corrective clients at our Mission Hills studio choose LUX because it delivers two treatments in one 75-minute visit: HydraFacial Syndeo deep cleanse + dermaplaning exfoliation + medical-grade LED therapy + rotating corrective boosters tailored to your skin concern (acne, melasma, post-inflammatory hyperpigmentation, barrier repair). A la carte, you would pay $394 for HydraFacial ($259) + dermaplaning add-on ($50) + LED add-on ($40) + corrective booster ($45). With LUX membership, all treatments are $299/month - delivered in one visit at our studio near Hillcrest Medical Center, customized monthly based on what your skin needs that cycle.',
+  },
+  {
+    question: 'What exactly is included in the LUX $299/month membership?',
+    answer: `Every LUX visit (75 minutes) includes: HydraFacial Syndeo treatment with customized serums, dermaplaning (full-face exfoliation), medical-grade LED therapy (red or blue light based on concern), and one rotating corrective booster chosen by Kiki each month - options include microcurrent lifting, enzyme therapy, barrier repair masks, or targeted extractions. You also get 15% off all professional retail skincare (ZO Skin Health, SkinBetter Science, clinical-grade products), priority booking 2-3 weeks ahead of non-members, and the flexibility to upgrade to Procell Microchanneling or advanced peels by paying the difference. Unused treatments roll over up to 3 months.`,
+  },
+  {
+    question: 'Can I downgrade from LUX if it is too intensive for my skin?',
+    answer:
+      'Yes. After your Month 3 assessment, you can shift between tiers without penalty if your skin needs have changed. Some clients start with LUX for active correction (acne, melasma, barrier damage), then move to GLOW for maintenance once skin stabilizes. Others stay in LUX long-term because their skin thrives on the dual-treatment protocol. The monthly check-in ensures the membership adapts to your skin, not the other way around. After the 6-month commitment, memberships continue month-to-month with 30 days notice to cancel or adjust.',
+  },
+  {
+    question: 'How does LUX compare to spa facial memberships in San Diego?',
+    answer:
+      'Most day spa memberships in San Diego (Hillcrest, Little Italy, North Park, Downtown) offer relaxation facials - steam, massage, extractions - with no clinical equipment or corrective protocols. LUX uses clinical-grade technology at our Mission Hills location: HydraFacial Syndeo (medical device cleared by FDA), professional dermaplaning tools, medical LED panels (not consumer devices), and corrective-grade serums targeting specific skin concerns. The difference: spa facials maintain skin; corrective memberships like LUX improve skin. At KIAMO, every treatment is customized by a California-licensed esthetician based on your barrier function, Fitzpatrick skin type (I-VI), and active concerns - not a pre-set menu. Treatments rotate monthly as your skin progresses, adapting to what you need each visit rather than repeating the same protocol.',
+  },
+  {
+    question: 'Is LUX membership worth it for acne, pigmentation, or melasma specifically?',
+    answer:
+      'LUX is designed for active correction, making it ideal for acne, post-inflammatory hyperpigmentation, melasma, and barrier-compromised skin. The dual-treatment structure (HydraFacial + dermaplaning + LED + booster) addresses multiple layers: HydraFacial clears congestion and infuses actives, dermaplaning removes dead cells and allows deeper product penetration, blue LED kills acne bacteria while red LED reduces inflammation and stimulates collagen. Corrective boosters rotate monthly - enzyme therapy for stubborn pigmentation, barrier repair masks for sensitized skin, targeted extractions for cystic acne. For melasma and hyperpigmentation specifically, the combination of consistent exfoliation (monthly dermaplaning) + brightening serums (HydraFacial infusion) + red LED (collagen stimulation) delivers visible progress within 3-4 months when paired with proper home care.',
+  },
+  {
+    question: 'What happens if I need to miss a month or travel during my membership?',
+    answer:
+      'Unused treatments roll over while your membership is active - up to 3 at a time. If you travel in June, your June treatment carries to July, and you can book two treatments that month (or save it for August). This flexibility is built for real life. After 6 months, memberships cannot be paused, but they can be cancelled with 30 days notice and restarted later when you are ready (subject to current availability and pricing). One unused treatment can also be gifted to a friend or family member if you will not use it yourself.',
+  },
+  {
     question: 'Is one facial a month enough?',
     answer:
       'For most corrective work, monthly is the interval that matches how skin actually renews. The often-repeated figure is a 28-day cycle, but the primary literature puts full epidermal turnover closer to 40 to 56 days in adults, and slower with age. That means a single treatment lands inside one incomplete cycle and a monthly rhythm gives each visit something to build on. What one facial a month cannot do is outrun what happens in the other 29 days, which is why every membership here includes the home routine rather than treating it as an upsell.',

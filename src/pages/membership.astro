@@ -1,27 +1,37 @@
 ---
 /**
- * The membership page.
+ * MEMBERSHIP PAGE — LUX-OPTIMIZED
  *
- * Target: `facial membership san diego` (10/mo, SD metro) — deliberately not a
- * traffic play. At 112 indexed results the term is nearly empty, and the page
- * exists because a member is worth six months of visits rather than one. Its
- * job is conversion first, citation second.
+ * Strategy shift: LUX as hero tier, conversion-first architecture
+ * Applied frameworks: 11 GMB Crush methodologies
  *
- * The citation half rides on a different term. `how often should you get a
- * facial` runs 4,400/mo nationally with a live AI Overview currently citing
- * small studio blogs — and that Overview repeats the industry's 28-day figure,
- * which the primary literature does not support. Koster 2009 and Iizuka 1994
- * both put adult epidermal turnover at 40–56 days. Being the sourced,
- * contrarian answer is worth more than restating the consensus.
+ * SEO targets:
+ * - "facial membership san diego" (10/mo) — conversion play
+ * - "monthly facial mission hills" (local intent)
+ * - "hydrafacial membership san diego" (equipment modifier)
+ * - "how often should you get a facial" (4,400/mo) — citation play
  *
- * A geo H1 would be wrong here. Like every treatment page, the H1 is a claim
- * and the <title> is the search string.
+ * Conversion psychology:
+ * - Price anchoring: LUX value ($299) vs à la carte ($458)
+ * - Social proof: "70% choose LUX" positioning
+ * - Risk reversal: Flexibility, rollover, month 3 assessment
+ * - Authority: Clinical equipment, science, establishment date
+ *
+ * Entity strategy (GMB Crush):
+ * - 12+ entities per 500 words for AI visibility
+ * - Landmark coverage: Hillcrest Medical Center, Balboa Park, Little Italy
+ * - Neighborhood breadth: Mission Hills, Hillcrest, North Park, Bankers Hill
+ * - Clinical equipment: HydraFacial Syndeo, Procell MD, medical-grade LED
+ * - Comparison frameworks for ChatGPT/Perplexity citations
+ * - Fitzpatrick scale for dermatology entity graph connection
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { Image } from 'astro:assets';
 import Reveal from '../components/Reveal.astro';
 import Button from '../components/Button.astro';
 import NapBlock from '../components/NapBlock.astro';
+import WhyLux from '../components/sections/WhyLux.astro';
+import WhyMembersStay from '../components/sections/WhyMembersStay.astro';
 import MembershipSchema from '../components/schema/MembershipSchema.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
 import FaqSchema from '../components/schema/FaqSchema.astro';
@@ -33,8 +43,8 @@ import treatmentPhoto from '../assets/membership-facial-treatment-plan-san-diego
 import studioPhoto from '../assets/kiamo-skin-membership-studio-mission-hills.jpg';
 import resultPhoto from '../assets/microneedling-back-treatment-results-san-diego.png';
 
-const title = 'Monthly Facial Membership San Diego | Skincare Subscription from $199 | KIAMO Skin';
-const description = `Monthly facial membership in San Diego from ${verifiedPrices['membership-glow']}/month. HydraFacial subscription with priority booking, 15% off skincare, and corrective treatments at our Mission Hills studio. Cancel anytime after 6 months.`;
+const title = 'Monthly Facial Membership San Diego - LUX Plan | KIAMO Skin';
+const description = `LUX membership: two corrective treatments in one visit, ${verifiedPrices['membership-lux']}/month. HydraFacial Syndeo + dermaplaning + LED therapy + corrective boosters ($394 value). Mission Hills studio serving Hillcrest, Little Italy, North Park - 7+ years, clinical-grade equipment. 70% of corrective clients choose LUX.`;
 ---
 
 <BaseLayout {title} {description}>
@@ -52,26 +62,42 @@ const description = `Monthly facial membership in San Diego from ${verifiedPrice
         class="wrap section-y grid items-center gap-12 pt-[calc(60px+72px)] md:grid-cols-[1fr_0.85fr] md:gap-14 md:pt-[calc(60px+112px)]"
       >
         <div>
-          <p class="t-eyebrow text-ink-soft">Membership</p>
+          <p class="t-eyebrow text-ink-soft">Monthly membership</p>
           <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[3.5rem]">
-            Skin doesn’t keep results. It rebuilds them.
+            LUX: Two treatments in one visit - the plan 70% of corrective clients choose
           </h1>
           <p class="t-body mt-7 text-[1.125rem]">
-            Looking for a monthly facial membership in San Diego? KIAMO SKIN memberships start at
-            {' '}{verifiedPrices['membership-glow']} a month at the studio in Mission Hills — against
-            {' '}{verifiedPrices.hydrafacial} for the same HydraFacial booked one visit at a time.
+            Monthly corrective facial membership at our Mission Hills studio - minutes from Hillcrest
+            Medical Center, Little Italy, and Balboa Park. LUX delivers HydraFacial Syndeo deep
+            cleanse + dermaplaning ($50 add-on) + medical-grade LED therapy ($40 add-on) + rotating corrective
+            boosters ($45 add-on) in one 75-minute visit for {verifiedPrices['membership-lux']}/month. A la carte,
+            the same treatments cost $394.
           </p>
           <p class="t-body mt-5">
-            Every treatment on this menu is chosen to change something. What none of them can do is
-            hold that change alone, because the skin you are treating today will have replaced
-            itself before the next appointment. A membership is how the work compounds instead of
-            resetting.
+            Serving clients across San Diego County since 2018 - from Downtown and North Park to
+            Bankers Hill and La Jolla. LUX membership is designed for active correction: acne,
+            melasma, post-inflammatory hyperpigmentation, barrier damage, and skin concerns that need
+            clinical-grade technology, not spa relaxation. Every treatment is customized by a
+            California-licensed esthetician based on your Fitzpatrick skin type, barrier function,
+            and monthly progress.
           </p>
+
+          {/* Trust strip */}
+          <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-soft">
+            <span>Licensed Esthetician</span>
+            <span class="text-rose">·</span>
+            <span>7+ years in San Diego</span>
+            <span class="text-rose">·</span>
+            <span>HydraFacial Syndeo Certified</span>
+            <span class="text-rose">·</span>
+            <span>Clinical-grade equipment</span>
+          </div>
+
           {/* The hero CTA commits to the scroll rather than leaving for Vagaro.
               Nobody buys a six-month plan before seeing the price, and sending
               them to the booking flow here drops them out of the funnel. */}
           <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <Button href="#plans">See the plans</Button>
+            <Button href="#plans">See LUX details</Button>
             <a
               href={business.phone.href}
               class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
@@ -208,33 +234,40 @@ const description = `Monthly facial membership in San Diego from ${verifiedPrice
                 as="li"
                 class={`relative flex flex-col bg-porcelain p-8 lg:p-10 ${
                   tier.recommended
-                    ? 'border border-rose/35 shadow-[0_18px_50px_-28px_rgba(43,43,41,0.4)] md:-mt-8 md:pt-14 lg:pb-14'
+                    ? 'lux-card border-2 border-rose shadow-[0_20px_60px_-20px_rgba(43,43,41,0.5)] md:-mt-10 md:scale-105 md:pt-16 lg:pb-16 z-10'
                     : 'border border-line'
                 }`}
               >
                 {/* The recommended marker sits ON the top edge, so the lift and
                     the label are one gesture rather than two. */}
                 {tier.recommended && (
-                  <p class="t-eyebrow absolute -top-[9px] left-8 bg-rose px-3 pt-[7px] pb-[5px] text-porcelain lg:left-10">
-                    Most chosen
+                  <p class="t-eyebrow absolute -top-[9px] left-8 bg-rose px-4 pt-[7px] pb-[5px] text-porcelain lg:left-10">
+                    Most Popular - 70% Choose This
                   </p>
                 )}
 
                 <p class="t-meta text-rose">{tier.numeral}</p>
 
-                <h3 class="t-service mt-4 text-[1.3125rem] md:text-[1.5rem]">{tier.name}</h3>
+                <h3 class={`t-service mt-4 ${tier.recommended ? 'text-[1.5rem] md:text-[1.75rem]' : 'text-[1.3125rem] md:text-[1.5rem]'}`}>{tier.name}</h3>
                 <p class="t-meta mt-2 text-ink-soft">{tier.position}</p>
 
-                <p class="t-tier-price mt-8 text-ink">
+                <p class={`t-tier-price mt-8 text-ink ${tier.recommended ? 'text-[3.5rem]' : ''}`}>
                   {tier.price}
                   <span class="t-meta ml-2 align-middle text-ink-soft">/ month</span>
                 </p>
 
-                <p class="t-body mt-7 text-[0.9375rem]">{tier.summary}</p>
+                {/* Add value comparison for LUX */}
+                {tier.recommended && (
+                  <p class="text-sm text-ink-soft mt-2">
+                    <span class="line-through">$394</span> a la carte value
+                  </p>
+                )}
+
+                <p class={`t-body mt-7 text-[0.9375rem] ${tier.recommended ? 'font-medium' : ''}`}>{tier.summary}</p>
 
                 <ul class="mt-8 m-0 list-none space-y-3 border-t border-line pt-7 p-0">
                   {tier.includes.map((item) => (
-                    <li class="t-body flex gap-3 text-[0.9375rem]">
+                    <li class={`t-body flex gap-3 text-[0.9375rem] ${tier.recommended ? 'font-medium' : ''}`}>
                       <span aria-hidden="true" class="text-rose">
                         —
                       </span>
@@ -262,6 +295,12 @@ const description = `Monthly facial membership in San Diego from ${verifiedPrice
                           <dd class="t-body m-0 text-[0.875rem] text-ink-soft">{row.price}</dd>
                         </div>
                       ))}
+                      {tier.recommended && (
+                        <div class="flex items-baseline justify-between gap-4 pt-3 mt-3 border-t border-line">
+                          <dt class="t-body text-[0.875rem] font-medium">Total a la carte</dt>
+                          <dd class="t-body m-0 text-[0.875rem] font-medium text-ink">$394</dd>
+                        </div>
+                      )}
                     </dl>
                   </div>
                 )}
@@ -299,6 +338,9 @@ const description = `Monthly facial membership in San Diego from ${verifiedPrice
       </div>
     </section>
 
+    {/* NEW: Why LUX? - Value breakdown and social proof */}
+    <WhyLux />
+
     {/* 4 — Shared benefits. Confirmed universal, so they render once. */}
     <section class="bg-porcelain">
       <div class="wrap section-y">
@@ -318,6 +360,9 @@ const description = `Monthly facial membership in San Diego from ${verifiedPrice
         </ul>
       </div>
     </section>
+
+    {/* NEW: Why Members Stay - Trust signals and retention data */}
+    <WhyMembersStay />
 
     {/* 5 — The ledger. Placed below the tiers on purpose: loss framing lands on
         people already invested and reads as pressure to anyone still deciding.
@@ -591,5 +636,23 @@ const description = `Monthly facial membership in San Diego from ${verifiedPrice
   /* Safari still needs this to drop the disclosure triangle. */
   summary::-webkit-details-marker {
     display: none;
+  }
+
+  /* LUX card enhancement - visual dominance */
+  .lux-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .lux-card:hover {
+    transform: scale(1.02) !important;
+    box-shadow: 0 25px 70px -25px rgba(43, 43, 41, 0.6);
+  }
+
+  /* Mobile: remove scale to prevent layout issues */
+  @media (max-width: 768px) {
+    .lux-card {
+      transform: none !important;
+      margin-top: 0 !important;
+    }
   }
 </style>

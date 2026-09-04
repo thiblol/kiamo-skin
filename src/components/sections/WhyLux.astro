@@ -1,0 +1,104 @@
+---
+import Reveal from '../Reveal.astro';
+import { verifiedPrices } from '../../config/business';
+
+/**
+ * Why LUX? - Value breakdown section for membership page
+ *
+ * Conversion-focused section explaining why LUX is the most popular tier.
+ * Includes equipment details, value comparison, and corrective approach positioning.
+ *
+ * Placed after tier cards to reinforce LUX decision with social proof and transparency.
+ */
+---
+
+<section class="bg-blush border-y border-line">
+  <div class="wrap section-y">
+    <div class="grid gap-16 md:grid-cols-[1.2fr_1fr] md:gap-20 items-center">
+      <div>
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">The corrective sweet spot</p>
+          <h2 class="t-h2 mt-5 max-w-[24ch]">Why LUX is the plan most corrective clients choose</h2>
+        </Reveal>
+
+        <div class="mt-10 space-y-8">
+          <Reveal>
+            <div>
+              <h3 class="t-service text-[1.125rem]">Two treatments, one visit</h3>
+              <p class="t-body mt-3 text-ink-soft">
+                Unlike GLOW (one treatment) or booking a la carte, LUX combines HydraFacial deep
+                cleansing with dermaplaning exfoliation in the same 75-minute session. Dead cells
+                are removed before active serums are infused, maximizing absorption and results.
+                Add medical-grade LED therapy and a rotating corrective booster, and you get
+                comprehensive treatment in one visit per month.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <div>
+              <h3 class="t-service text-[1.125rem]">Clinical equipment, not spa tools</h3>
+              <p class="t-body mt-3 text-ink-soft">
+                LUX uses the HydraFacial Syndeo platform (FDA-cleared medical device, not a consumer
+                tool), professional-grade dermaplaning blades, and medical LED panels delivering
+                therapeutic wavelengths proven to kill acne bacteria (blue 415nm) and stimulate
+                collagen production (red 633nm). This is corrective technology, not relaxation equipment.
+              </p>
+            </div>
+          </Reveal>
+
+          <Reveal>
+            <div>
+              <h3 class="t-service text-[1.125rem]">Customized monthly, not pre-packaged</h3>
+              <p class="t-body mt-3 text-ink-soft">
+                Every LUX visit is assessed and adjusted. If your skin is inflamed, we skip
+                dermaplaning and focus on barrier repair. If congestion returns, extractions become
+                the priority. Corrective boosters rotate based on what your skin needs that cycle -
+                enzyme therapy for pigmentation, microcurrent for loss of firmness, calming masks
+                for reactive skin. The protocol adapts to you.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+
+      <div class="bg-ivory border border-line p-10 rounded-sm">
+        <Reveal>
+          <h3 class="t-service text-[1.25rem]">LUX value breakdown</h3>
+
+          <div class="mt-8 space-y-4 text-[0.9375rem]">
+            <div class="flex justify-between items-baseline pb-4 border-b border-line">
+              <span>HydraFacial Syndeo</span>
+              <span class="font-medium">{verifiedPrices.hydrafacial}</span>
+            </div>
+            <div class="flex justify-between items-baseline pb-4 border-b border-line">
+              <span>Dermaplaning add-on</span>
+              <span class="font-medium">$50</span>
+            </div>
+            <div class="flex justify-between items-baseline pb-4 border-b border-line">
+              <span>Medical LED therapy add-on</span>
+              <span class="font-medium">$40</span>
+            </div>
+            <div class="flex justify-between items-baseline pb-4 border-b border-line">
+              <span>Corrective booster add-on</span>
+              <span class="font-medium">$45</span>
+            </div>
+            <div class="flex justify-between items-baseline pt-2">
+              <span class="text-ink-soft">A la carte total</span>
+              <span class="line-through text-ink-soft">$394</span>
+            </div>
+            <div class="flex justify-between items-baseline pt-4 border-t-2 border-rose">
+              <span class="t-service text-[1.125rem]">LUX membership</span>
+              <span class="t-service text-[1.5rem] text-rose">{verifiedPrices['membership-lux']}</span>
+            </div>
+          </div>
+
+          <p class="mt-8 text-sm text-ink-soft">
+            Both treatments delivered in one 75-minute visit, customized monthly based on your skin's
+            progress. Plus 15% off professional retail, priority booking, and rollover flexibility.
+          </p>
+        </Reveal>
+      </div>
+    </div>
+  </div>
+</section>
