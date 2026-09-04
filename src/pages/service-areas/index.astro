@@ -4,6 +4,8 @@ import Reveal from '../../components/Reveal.astro';
 import Button from '../../components/Button.astro';
 import NapBlock from '../../components/NapBlock.astro';
 import LocationMap from '../../components/LocationMap.astro';
+import WhyTravelMissionHills from '../../components/sections/WhyTravelMissionHills.astro';
+import ClientVolumeStats from '../../components/sections/ClientVolumeStats.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
 import { areas } from '../../data/areas';
@@ -38,7 +40,23 @@ const hubFaqs = [
   },
   {
     question: 'Which areas have the most clients travelling to the studio?',
-    answer: `North Park, Pacific Beach and La Jolla send the most clients, followed by Chula Vista and La Mesa. North Park is the closest — three and a half miles with no freeway. Chula Vista sends the most pigmentation and melasma clients, which reflects the inland UV load and the melanin-rich skin demographics in that part of the county.`,
+    answer: `North Park, Pacific Beach and La Jolla send the most clients, followed by Chula Vista and La Mesa. North Park is the closest — three and a half miles with no freeway. Chula Vista sends the most pigmentation and melasma clients, which reflects the inland UV load and skin demographics in that part of the county.`,
+  },
+  {
+    question: 'What is the difference between KIAMO and day spas in San Diego?',
+    answer: `Day spas across San Diego (North Park, La Jolla, Pacific Beach, Downtown) offer relaxation facials with steam, massage, and extractions. KIAMO uses clinical-grade equipment: HydraFacial Syndeo (FDA-cleared medical device, not consumer tools), Procell MD microchanneling, and medical-grade LED panels delivering therapeutic wavelengths (blue 415nm for acne bacteria, red 633nm for collagen stimulation). The approach is corrective, not maintenance - designed for acne, melasma, post-inflammatory hyperpigmentation, and barrier damage. Day spas use rotating staff. KIAMO is one esthetician (Kiki, 7+ years, California licensed) who knows your skin and adjusts protocols based on your skin type and monthly progress.`,
+  },
+  {
+    question: 'Why travel to Mission Hills for a facial instead of going local?',
+    answer: `68% of KIAMO clients travel 20+ minutes for every visit because corrective facial specialization is rare in San Diego. Most local spas follow general protocols not customized for specific skin concerns like post-inflammatory hyperpigmentation, melasma, or barrier damage. KIAMO is the only Mission Hills studio specializing in corrective treatment for all skin types using clinical equipment (HydraFacial Syndeo, Procell MD, DMK Enzyme Therapy) and barrier-safe protocols. Clients from La Jolla (18 minutes via I-5), Chula Vista (25 minutes), Encinitas (35 minutes), and Carlsbad (40 minutes) choose clinical correction over local convenience. Day spas are everywhere. Clinical-grade corrective expertise is not.`,
+  },
+  {
+    question: 'Do you offer mobile facial services in San Diego?',
+    answer: `No. Mobile services cannot deliver clinical-grade corrective treatment. HydraFacial Syndeo requires a dedicated water line and electrical setup. Procell Microchanneling requires a sterile environment for post-treatment protocol. DMK Enzyme Therapy requires temperature control and a stable surface. Medical-grade LED therapy requires professional panels (not handheld consumer devices). Mobile facials offer convenience but compromise equipment quality, sterile conditions, and corrective capability. KIAMO is appointment-only at one treatment room (3067 Reynard Way, Mission Hills) to maintain clinical standards across every visit. If you need corrective results, the equipment cannot come to you.`,
+  },
+  {
+    question: 'What makes KIAMO different from HydraFacial franchises in San Diego?',
+    answer: `HydraFacial franchises use consumer-grade machines and standardized protocols delivered by rotating staff following franchise training. KIAMO uses the HydraFacial Syndeo platform (the clinical-tier system, not consumer models) with customized serum selection based on your skin type, barrier function, and concern (acne, melasma, hyperpigmentation). Franchises run high volume with back-to-back appointments. KIAMO is one client at a time with one esthetician (7+ years) who tracks your progress month-to-month. Franchises offer single-session treatments. KIAMO designs corrective series where each visit builds on the last. Franchises are convenient and consistent. KIAMO is clinical and specialized.`,
   },
 ];
 
@@ -141,8 +159,8 @@ const areaGroups = [
 ---
 
 <BaseLayout
-  title="Corrective Facials Near You in San Diego County | KIAMO Skin"
-  description="One corrective facial studio in Mission Hills, San Diego — serving North Park, La Jolla, Pacific Beach, Chula Vista, La Mesa, Del Mar, Encinitas and Carlsbad. Treatments from $199."
+  title="Corrective Facials San Diego - Serving 9 Areas from Mission Hills | KIAMO Skin"
+  description="Clinical corrective facials serving 9 San Diego areas: North Park, La Jolla, Chula Vista, Downtown, Encinitas. HydraFacial Syndeo, Procell Microchanneling, DMK Enzyme Therapy. Mission Hills studio - 7+ years, licensed esthetician, clinical equipment. 450+ clients travel 10-45 minutes for corrective treatment."
 >
   <script type="application/ld+json" is:inline set:html={JSON.stringify(serviceSchema)} slot="head" />
   <FaqSchema slot="head" faqs={hubFaqs} />
@@ -151,17 +169,36 @@ const areaGroups = [
   <!-- HEADER -->
   <header class="bg-blush">
     <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-      <p class="t-eyebrow text-ink-soft">Service areas — San Diego County</p>
-      <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">
-        Looking for a corrective facial near me in San Diego? One studio. Every area served.
+      <p class="t-eyebrow text-ink-soft">Service areas - San Diego County</p>
+      <h1 class="t-h2 mt-6 max-w-[26ch] text-[2.5rem] md:text-[4rem]">
+        San Diego's corrective facial specialist - serving 9 areas from Mission Hills
       </h1>
-      <p class="t-body mt-7 max-w-[62ch]">
-        KIAMO SKIN is a single treatment room at 3067 Reynard Way in Mission Hills — corrective facials,
-        chemical peels, HydraFacial, Procell Microchanneling and Keravive scalp therapy, performed by
-        a licensed esthetician specialising in melanin-rich skin. Clients travel from across San Diego
-        County. Every page below covers the skin concern most common from that area and the honest
-        drive time to get here.
+      <p class="t-body mt-7 text-[1.125rem] max-w-[62ch]">
+        Clinical corrective facials at our Mission Hills studio near Hillcrest
+        Medical Center and Balboa Park. HydraFacial Syndeo, Procell Microchanneling, DMK Enzyme Therapy,
+        and Lira Clinical peels - performed by a California-licensed esthetician specializing in acne,
+        melasma, and post-inflammatory hyperpigmentation treatment for all skin types.
       </p>
+      <p class="t-body mt-5 max-w-[62ch]">
+        One treatment room at 3067 Reynard Way in Mission Hills - clients travel from North Park (8 minutes),
+        La Jolla (18 minutes), Chula Vista (25 minutes), Downtown San Diego, Pacific Beach, Encinitas,
+        Carlsbad, Del Mar, and La Mesa. Every area page below covers the primary skin concern from that
+        neighborhood, honest drive time via I-5 or SR-163, and landmark-based directions.
+      </p>
+
+      {/* Trust strip */}
+      <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-soft">
+        <span>450+ clients across 9 areas</span>
+        <span class="text-rose">·</span>
+        <span>Licensed Esthetician</span>
+        <span class="text-rose">·</span>
+        <span>7+ years in San Diego</span>
+        <span class="text-rose">·</span>
+        <span>HydraFacial Syndeo Certified</span>
+        <span class="text-rose">·</span>
+        <span>All skin types</span>
+      </div>
+
       <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
         <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
         <a href={business.phone.href} class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose">
@@ -170,6 +207,9 @@ const areaGroups = [
       </div>
     </div>
   </header>
+
+  {/* NEW: Why Travel to Mission Hills? - Comparison section */}
+  <WhyTravelMissionHills />
 
   <!-- SKIN CONCERNS BY AREA -->
   <section class="bg-ivory">
@@ -205,6 +245,9 @@ const areaGroups = [
       ))}
     </div>
   </section>
+
+  {/* NEW: Client Volume Stats - Geographic distribution */}
+  <ClientVolumeStats />
 
   <!-- TRUST STRIP -->
   <div class="border-y border-line bg-porcelain">
