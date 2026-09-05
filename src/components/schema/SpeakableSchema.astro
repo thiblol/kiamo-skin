@@ -1,0 +1,24 @@
+---
+/**
+ * SpeakableSchema component - Voice search optimization
+ * Marks content for Google Assistant and voice search extraction
+ */
+
+interface Props {
+  url: string;
+}
+
+const { url } = Astro.props;
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "@id": url,
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": [".quick-answer", ".faq-section"]
+  }
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />
