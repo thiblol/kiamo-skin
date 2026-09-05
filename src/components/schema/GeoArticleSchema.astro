@@ -1,0 +1,49 @@
+---
+/**
+ * Article schema with Speakable markup for GeoArticles
+ *
+ * Article schema signals long-form content to search engines and AI crawlers.
+ * Speakable schema marks priority sections for voice assistant extraction.
+ */
+import { absolute, businessId } from '../../config/urls';
+import type { GeoArticle } from '../../data/geo-articles';
+
+interface Props {
+  article: GeoArticle;
+  speakableSelector?: string; // CSS selector for speakable content (default: .quick-answer)
+}
+
+const { article, speakableSelector = '.quick-answer' } = Astro.props;
+const site = Astro.site;
+const url = absolute(`/service-areas/${article.areaSlug}/${article.slug}/`, site);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  '@id': `${url}#article`,
+  headline: article.h1,
+  description: article.description,
+  url,
+  mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+  datePublished: article.datePublished,
+  dateModified: article.dateModified,
+  author: { '@id': `${absolute('/about', site)}#kiki` },
+  publisher: { '@id': businessId(site) },
+  inLanguage: 'en-US',
+  isAccessibleForFree: true,
+  wordCount: article.wordCount,
+  about: {
+    '@type': 'Place',
+    name: article.areaSlug
+      .split('-')
+      .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+      .join(' '),
+  },
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: [speakableSelector],
+  },
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

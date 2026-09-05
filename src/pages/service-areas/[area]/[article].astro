@@ -1,0 +1,369 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Reveal from '../../../components/Reveal.astro';
+import Button from '../../../components/Button.astro';
+import NapBlock from '../../../components/NapBlock.astro';
+import GeoArticleSchema from '../../../components/schema/GeoArticleSchema.astro';
+import BreadcrumbSchema from '../../../components/schema/BreadcrumbSchema.astro';
+import FaqSchema from '../../../components/schema/FaqSchema.astro';
+import { geoArticles, getGeoArticle } from '../../../data/geo-articles';
+import { getArea } from '../../../data/areas';
+import { business } from '../../../config/business';
+import { CTA_LABEL } from '../../../config/nav';
+
+export function getStaticPaths() {
+  return geoArticles.map((article) => ({
+    params: {
+      area: article.areaSlug,
+      article: article.slug,
+    },
+  }));
+}
+
+const { area: areaSlug, article: articleSlug } = Astro.params;
+const article = getGeoArticle(areaSlug!, articleSlug!);
+const area = getArea(areaSlug!);
+
+if (!article || !area) {
+  return Astro.redirect('/404');
+}
+
+const breadcrumbs = [
+  { name: 'Service Areas', path: '/service-areas/' },
+  { name: area.name, path: `/service-areas/${area.slug}/` },
+  { name: article.h1, path: `/service-areas/${area.slug}/${article.slug}/` },
+];
+---
+
+<BaseLayout title={article.title} description={article.description} ogType="article">
+  <GeoArticleSchema slot="head" article={article} />
+  <BreadcrumbSchema slot="head" trail={breadcrumbs} />
+  <FaqSchema slot="head" faqs={article.faqs} />
+
+  <article>
+    <!-- Hero Section -->
+    <section class="bg-porcelain pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+      <div class="wrap pb-16 pt-12 md:pb-20 md:pt-16">
+        <div class="mx-auto max-w-[46rem]">
+          <Reveal>
+            <nav class="t-body mb-8 text-[0.875rem] text-ink-soft">
+              <a href="/service-areas/" class="hover:text-rose">Service Areas</a>
+              <span class="mx-2">/</span>
+              <a href={`/service-areas/${area.slug}/`} class="hover:text-rose">{area.name}</a>
+            </nav>
+          </Reveal>
+
+          <Reveal delay={100}>
+            <h1 class="t-h1">{article.h1}</h1>
+          </Reveal>
+
+          <!-- Quick Answer Block (Speakable) -->
+          <Reveal delay={200}>
+            <div
+              class="quick-answer mt-10 border-l-4 border-rose bg-ivory px-8 py-6 text-[1.0625rem] leading-relaxed"
+            >
+              <p class="m-0">{article.quickAnswer}</p>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="bg-porcelain">
+      <div class="wrap pb-20">
+        <div class="mx-auto max-w-[46rem]">
+          <Reveal>
+            <div class="article-content">
+            <!-- Why Ocean Swimming Damages Skin -->
+            <h2 class="t-h3 mt-12 mb-6">Why Ocean Swimming Damages Skin</h2>
+            <p>
+              The Pacific Ocean contains roughly 35 parts per thousand of dissolved salt—primarily
+              sodium chloride, but also magnesium, calcium, and potassium salts. When salt water
+              dries on skin, those minerals bond with sebum, the natural oil your skin produces to
+              protect itself. The rinse you take after swimming removes the salt, but it also
+              washes away the sebum-salt complex. Over one session, that is manageable. Over weeks
+              and months of daily swimming, the cumulative effect leaves skin tight, reactive, and
+              chronically dehydrated.
+            </p>
+            <p>
+              The problem is not the salt alone—it is the cycle. Swim, rinse, repeat. Each rinse
+              strips a little more of the barrier, and the skin never fully recovers between
+              sessions. La Jolla swimmers face this year-round, not seasonally. The Cove is
+              swimmable in January, and Windansea holds surf in every month. There is no off-season
+              where the barrier gets a chance to rebuild on its own.
+            </p>
+            <p>
+              Wind off the bluffs compounds the issue. The cliffs above the Cove and the open
+              exposure at Windansea mean wind hits wet skin while you are still dripping,
+              accelerating evaporation and pulling moisture out before you even towel off. The
+              combination of salt, wind, and repeated rinsing creates a state dermatologists call
+              transepidermal water loss—the skin cannot hold hydration because the barrier that
+              would normally prevent evaporation is no longer intact.
+            </p>
+            <p>
+              UV adds the final layer. The blufftop above the Cove receives direct afternoon sun
+              with no tree cover, and swimmers coming out of the water stand in full sun while they
+              dry off. UVA penetrates the marine layer even on gray mornings, and it drives
+              oxidative stress in skin that is already compromised. Sun damage and barrier damage
+              are not the same problem, but they reinforce each other—one makes the other worse.
+            </p>
+
+            <!-- How HydraFacial Addresses Salt Water Damage -->
+            <h2 class="t-h3 mt-12 mb-6">How HydraFacial Addresses Salt Water Damage</h2>
+            <p>
+              HydraFacial Syndeo performs three actions simultaneously, and all three matter for
+              salt-damaged skin. First, enzymatic resurfacing lifts the layer of dead cells and
+              salt residue that builds up on the surface. This is not mechanical scrubbing—it is a
+              chemical process that loosens debris without the abrasion a compromised barrier cannot
+              handle.
+            </p>
+            <p>
+              Second, vortex extraction vacuums salt deposits and mineral buildup out of follicles
+              at controlled pressure—30 to 70 millimeters of mercury, calibrated to remove
+              congestion without traumatizing the skin. San Diego's municipal water contains 280 to
+              320 parts per million of dissolved minerals, which means even the rinse you take after
+              swimming leaves calcium and magnesium deposits in your pores. Standard cleansing does
+              not clear those. Vortex extraction does.
+            </p>
+            <p>
+              Third, peptide infusion floods the skin with hydration and growth factors while pores
+              are still open and receptive. The booster serum is selected based on what your skin
+              needs that day—for swimmers, that usually means hyaluronic acid to bind water into the
+              tissue and peptides to support barrier repair. The infusion happens under the same
+              vacuum pressure that just cleared the follicles, which drives the active ingredients
+              deeper than topical application alone would reach.
+            </p>
+            <p>
+              The treatment takes roughly forty-five minutes, and there is no downtime. You can swim
+              the next day if the skin feels ready, though most people wait twenty-four hours to let
+              the barrier settle. The result is immediate hydration, reduced tightness, and skin
+              that stops stinging under products. One session addresses the acute damage. A series
+              addresses the cumulative state most year-round swimmers are in—where the barrier has
+              been eroding for months and needs more than one rebuild cycle to stabilize.
+            </p>
+            <p>
+              LED light therapy follows every HydraFacial at KIAMO SKIN. Red and near-infrared
+              wavelengths reduce inflammation from wind and UV exposure, and they support the
+              cellular repair the peptides just initiated. This is included in every session, not an
+              add-on.
+            </p>
+
+            <!-- What La Jolla Swimmers Should Expect -->
+            <h2 class="t-h3 mt-12 mb-6">What La Jolla Swimmers Should Expect</h2>
+            <p>
+              The first HydraFacial will feel like relief. Skin that was tight and reactive before
+              treatment feels plump and calm afterward, and the tightness that used to set in within
+              hours of swimming takes longer to return. That immediate response is hydration—the
+              vortex infusion replaced what salt and rinsing stripped away.
+            </p>
+            <p>
+              The deeper repair happens over a series. Barrier function rebuilds in layers, not in
+              one session, and swimmers who are in the water four to six days a week are stripping
+              the barrier faster than a single treatment can rebuild it. Most La Jolla swimmers book
+              monthly maintenance during active swimming season—the season being year-round here,
+              which is the whole reason this treatment exists in the first place.
+            </p>
+            <p>
+              Home care between sessions matters. A barrier repair serum applied morning and night
+              supports the work the HydraFacial started, and mineral sunscreen prevents UV from
+              undoing it. The serum recommendation is specific to what your skin showed during the
+              treatment—KIAMO does not sell a fixed product line, so the recommendation is clinical,
+              not commercial.
+            </p>
+            <p>
+              The timeline for full barrier restoration depends on how compromised the skin is when
+              you start. Two to three treatments over two to three months is the usual plan for
+              swimmers with moderate damage. Severe cases—skin that stings under everything, flakes
+              despite moisturizer, or stays red for hours after swimming—may need enzyme therapy
+              instead of or in addition to HydraFacial. That is a consultation call, not something
+              you can self-diagnose.
+            </p>
+            <p>
+              Results hold as long as you maintain them. A monthly HydraFacial during swimming
+              season keeps the barrier ahead of the damage cycle. Stop the maintenance, and the
+              tightness returns within weeks. This is not a cure—it is management of an ongoing
+              exposure.
+            </p>
+
+            <!-- When HydraFacial Is Not Enough -->
+            <h2 class="t-h3 mt-12 mb-6">When HydraFacial Is Not Enough</h2>
+            <p>
+              HydraFacial works for barriers that are damaged but still functional. If your skin has
+              crossed into a state where it reacts to almost everything—stinging under plain
+              moisturizer, staying red for hours after swimming, flaking despite hydration—that is a
+              compromised barrier that needs enzymatic repair, not just hydration.
+            </p>
+            <p>
+              <a href="/treatments/dmk-enzyme-therapy/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                DMK Enzyme Therapy
+              </a> rebuilds barrier function at a deeper level than HydraFacial reaches. The enzyme masque
+              works with the skin's own processes to restore healthy circulation and lymphatic activity,
+              which supports long-term barrier integrity rather than just replacing lost hydration.
+              It is the treatment for swimmers whose skin has been reactive for months and nothing topical
+              has fixed it.
+            </p>
+            <p>
+              The decision between HydraFacial and enzyme therapy is made at consultation based on
+              what the skin shows that day. If the barrier is intact but dehydrated, HydraFacial is
+              the answer. If the barrier is compromised to the point of chronic reactivity, enzyme
+              therapy comes first. Both can be part of the same plan—enzyme therapy to rebuild, then
+              HydraFacial to maintain once the barrier stabilizes.
+            </p>
+            <p>
+              <a href="/treatments/keravive-scalp/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                Keravive scalp therapy
+              </a> addresses the same salt buildup on the scalp that HydraFacial clears from the face.
+              The part line takes as much salt and UV as the cheeks, and daily rinsing never fully clears
+              it. Keravive uses the same vortex technology to extract buildup from the scalp and deliver
+              peptides directly to the follicles. If your scalp feels tight, flaky, or dry despite regular
+              shampooing, that is salt residue and mineral deposits—not dandruff.
+            </p>
+
+            <!-- Drive Time and Logistics from La Jolla -->
+            <h2 class="t-h3 mt-12 mb-6">Drive Time and Logistics from La Jolla</h2>
+            <p>
+              From La Jolla Village near Prospect Street and the Cove, take Torrey Pines Road
+              south—not Coast Highway—to I-5 past UCSD and Rose Canyon, exiting at Washington
+              Street. Twelve miles, roughly twenty minutes outside the commute. From Bird Rock, head
+              north on La Jolla Boulevard to La Jolla Parkway east to I-5 south. From La Jolla
+              Shores near Scripps Institution, Torrey Pines Road south picks up I-5 near UCSD.
+            </p>
+            <p>
+              Southbound I-5 stacks through UTC and Sorrento Valley during the morning commute.
+              Mid-morning and early afternoon are consistently the easier windows for the drive
+              down. Most La Jolla swimmers book morning appointments before hitting the water, or
+              early afternoon after a morning swim.
+            </p>
+            <p>
+              The studio is at 3067 Reynard Way in Mission Hills, off Washington Street. Free
+              parking on site. By appointment only, so a space is always available when you arrive.
+              Appointments are one-to-one with Kiki, a California licensed esthetician with seven
+              years treating barrier damage and pigmentation in all skin types, including
+              melanin-rich skin.
+            </p>
+            <p>
+              Full directions, neighborhood context, and what to expect at a first visit are on the{' '}
+              <a href="/service-areas/la-jolla/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                La Jolla service area page
+              </a>.
+            </p>
+          </div>
+        </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="mx-auto max-w-[46rem]">
+          <Reveal>
+            <h2 class="t-h3">Frequently Asked Questions</h2>
+          </Reveal>
+
+          <div class="mt-10 space-y-8">
+            {
+              article.faqs.map((faq, i) => (
+                <Reveal delay={i * 50}>
+                  <div>
+                    <h3 class="t-service mb-3 text-[1.125rem]">{faq.question}</h3>
+                    <p class="t-body m-0 text-[0.9375rem] leading-relaxed text-ink-soft">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </Reveal>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Links -->
+    <section class="wrap section-y">
+      <div class="mx-auto max-w-[46rem]">
+        <Reveal>
+          <h2 class="t-h3">Related Treatments & Areas</h2>
+        </Reveal>
+
+        <Reveal delay={100}>
+          <ul class="mt-8 space-y-3 text-[0.9375rem]">
+            {
+              article.relatedLinks.map((link) => (
+                <li>
+                  <a
+                    href={link.href}
+                    class="border-b border-ink/40 pb-1 hover:border-rose hover:text-rose"
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </Reveal>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="mx-auto max-w-[46rem] text-center">
+          <Reveal>
+            <h2 class="t-h3">Ready to rebuild your barrier?</h2>
+            <p class="t-body mt-6 text-[1rem] text-ink-soft">
+              Book a consultation at KIAMO SKIN in Mission Hills.
+            </p>
+          </Reveal>
+
+          <Reveal delay={100}>
+            <div class="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+              <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+              <Button variant="ghost" href={`/service-areas/${area.slug}/`}>
+                View {area.name} page
+              </Button>
+            </div>
+          </Reveal>
+
+          <Reveal delay={200}>
+            <div class="mt-10">
+              <p class="t-body text-[0.9375rem] text-ink-soft">
+                <strong class="font-medium text-ink">3067 Reynard Way, Mission Hills</strong><br />
+                <a href={business.phone.href} class="border-b border-ink/40 pb-1 hover:border-rose hover:text-rose">
+                  {business.phone.display}
+                </a>
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .article-content {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .article-content h2 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content p {
+    margin-bottom: 1.5rem;
+  }
+
+  .article-content a {
+    transition: all 0.2s ease;
+  }
+
+  @media (min-width: 768px) {
+    .article-content {
+      font-size: 1.0625rem;
+    }
+  }
+</style>
