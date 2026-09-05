@@ -1,0 +1,25 @@
+---
+/**
+ * UniquenessBlock component - What makes KIAMO different
+ */
+
+interface Props {
+  heading: string;
+  points: string[];
+  class?: string;
+}
+
+const { heading, points, class: className = '' } = Astro.props;
+---
+
+<div class={`uniqueness-block ${className}`}>
+  <h2 class="t-h3">{heading}</h2>
+  <ul class="mt-8 space-y-6">
+    {points.map((point) => (
+      <li class="flex gap-4">
+        <span class="text-rose mt-1 shrink-0" aria-hidden="true">✓</span>
+        <p class="t-body text-[0.9375rem] leading-relaxed">{point}</p>
+      </li>
+    ))}
+  </ul>
+</div>

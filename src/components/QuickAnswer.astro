@@ -1,0 +1,27 @@
+---
+/**
+ * QuickAnswer component - AI Overview optimization block
+ * 2-3 sentence entity-dense summary for voice search and AI citations
+ */
+
+interface Props {
+  content: string;
+  class?: string;
+}
+
+const { content, class: className = '' } = Astro.props;
+---
+
+<div class={`quick-answer bg-ivory border border-line p-8 ${className}`} itemscope itemtype="https://schema.org/Answer">
+  <p class="t-eyebrow text-ink-soft mb-4">Quick Answer</p>
+  <div class="t-body text-[1.0625rem] leading-relaxed" itemprop="text">
+    {content}
+  </div>
+</div>
+
+<style>
+  .quick-answer {
+    /* Optimized for Speakable schema targeting */
+    speak: literal-punctuation;
+  }
+</style>

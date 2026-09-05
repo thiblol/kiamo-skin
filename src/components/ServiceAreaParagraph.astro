@@ -1,0 +1,19 @@
+---
+/**
+ * ServiceAreaParagraph component - Geo-entity injection block
+ */
+
+interface Props {
+  content: string;
+  class?: string;
+}
+
+const { content, class: className = '' } = Astro.props;
+---
+
+<div class={`service-area-paragraph ${className}`}>
+  <h2 class="t-h3">Service areas</h2>
+  <p class="t-body mt-7 max-w-[72ch] leading-relaxed text-ink-soft">
+    {content}
+  </p>
+</div>

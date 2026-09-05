@@ -1,0 +1,40 @@
+---
+/**
+ * ProcessBlock component - Technical treatment process with steps
+ */
+
+interface Props {
+  heading: string;
+  intro: string;
+  steps: Array<{ title: string; description: string }>;
+  footer?: string;
+  class?: string;
+}
+
+const { heading, intro, steps, footer, class: className = '' } = Astro.props;
+---
+
+<div class={`process-block ${className}`}>
+  <h3 class="t-h3 text-[1.5rem]">{heading}</h3>
+  <p class="t-body mt-6 max-w-[62ch] leading-relaxed">{intro}</p>
+
+  <div class="mt-10 space-y-6">
+    {steps.map((step, index) => (
+      <div class="flex gap-5">
+        <div class="shrink-0">
+          <span class="flex h-8 w-8 items-center justify-center rounded-full bg-rose text-porcelain font-medium text-sm">
+            {index + 1}
+          </span>
+        </div>
+        <div>
+          <h4 class="t-service text-[1.0625rem] font-medium">{step.title}</h4>
+          <p class="t-body mt-2 text-[0.9375rem] text-ink-soft leading-relaxed">{step.description}</p>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  {footer && (
+    <p class="t-body mt-8 text-[0.875rem] text-ink-soft italic max-w-[62ch]">{footer}</p>
+  )}
+</div>

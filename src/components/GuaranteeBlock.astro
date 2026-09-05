@@ -1,0 +1,25 @@
+---
+/**
+ * GuaranteeBlock component - Trust signals and commitments
+ */
+
+interface Props {
+  heading: string;
+  commitments: Array<{ title: string; body: string }>;
+  class?: string;
+}
+
+const { heading, commitments, class: className = '' } = Astro.props;
+---
+
+<div class={`guarantee-block ${className}`}>
+  <h2 class="t-h3">{heading}</h2>
+  <div class="mt-10 grid gap-8 md:grid-cols-2">
+    {commitments.map((commitment) => (
+      <div class="border-l-2 border-rose pl-6">
+        <h3 class="t-service text-[1.0625rem] font-medium">{commitment.title}</h3>
+        <p class="t-body mt-3 text-[0.9375rem] leading-relaxed text-ink-soft">{commitment.body}</p>
+      </div>
+    ))}
+  </div>
+</div>

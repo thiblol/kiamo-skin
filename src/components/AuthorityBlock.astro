@@ -1,0 +1,20 @@
+---
+/**
+ * AuthorityBlock component - Credentials and expertise display
+ */
+
+interface Props {
+  heading: string;
+  body: string;
+  class?: string;
+}
+
+const { heading, body, class: className = '' } = Astro.props;
+---
+
+<div class={`authority-block ${className}`}>
+  <h2 class="t-h3">{heading}</h2>
+  <div class="t-body mt-7 max-w-[62ch] leading-relaxed">
+    {body}
+  </div>
+</div>
