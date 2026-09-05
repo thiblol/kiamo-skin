@@ -14,6 +14,7 @@ import { business, verifiedPrices } from '../../config/business';
 import { absolute, businessId, gbpDirectionsUrl } from '../../config/urls';
 import { CTA_LABEL } from '../../config/nav';
 import studioImage from '../../assets/kiamo-skin-studio-mission-hills-san-diego.jpg';
+import heroServiceAreasHub from '../../assets/hero-service-areas-hub-san-diego-coverage-map-kiamo.jpg';
 
 const site = Astro.site;
 const pageUrl = absolute('/service-areas', site);
@@ -161,8 +162,8 @@ const areaGroups = [
 ---
 
 <BaseLayout
-  title="Corrective Facials San Diego - Serving 9 Areas from Mission Hills | KIAMO Skin"
-  description="Clinical corrective facials serving 9 San Diego areas: North Park, La Jolla, Chula Vista, Downtown, Encinitas. HydraFacial Syndeo, Procell Microchanneling, DMK Enzyme Therapy. Mission Hills studio - 7+ years, licensed esthetician, clinical equipment. 450+ clients travel 10-45 minutes for corrective treatment."
+  title="Corrective Facials San Diego | KIAMO Skin Serves 9 Areas"
+  description="Clinical corrective facials serving 9 San Diego areas from Mission Hills studio. HydraFacial Syndeo, Procell Microchanneling, DMK Enzyme Therapy, Lira peels. Licensed esthetician, 7+ years, melanin-rich skin specialist. North Park, La Jolla, Pacific Beach, Encinitas, Del Mar, Carlsbad, La Mesa, Chula Vista."
 >
   <script type="application/ld+json" is:inline set:html={JSON.stringify(serviceSchema)} slot="head" />
   <FaqSchema slot="head" faqs={hubFaqs} />
@@ -173,9 +174,9 @@ const areaGroups = [
     <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
       <div class="grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-20 items-center">
         <div>
-          <p class="t-eyebrow text-ink-soft">Service areas - San Diego County</p>
+          <p class="t-eyebrow text-ink-soft">Service areas — San Diego County</p>
           <h1 class="t-h2 mt-6 max-w-[26ch] text-[2.5rem] md:text-[4rem]">
-            San Diego's corrective facial specialist - serving 9 areas from Mission Hills
+            KIAMO Skin — Corrective Facials Across 9 San Diego Areas
           </h1>
           <p class="t-body mt-7 text-[1.125rem] max-w-[62ch]">
             Clinical corrective facials at our Mission Hills studio near Hillcrest
@@ -213,8 +214,8 @@ const areaGroups = [
 
         <div class="order-first md:order-last">
           <Image
-            src={studioImage}
-            alt="KIAMO Skin Mission Hills studio - corrective facial treatment room serving 9 San Diego areas"
+            src={heroServiceAreasHub}
+            alt="San Diego service area coverage map showing KIAMO Skin corrective facial services across 9 neighborhoods"
             class="w-full h-auto rounded-sm shadow-lg"
             widths={[400, 600, 800]}
             sizes="(max-width: 768px) 100vw, 50vw"
