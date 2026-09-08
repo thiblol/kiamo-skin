@@ -1,14 +1,14 @@
 import type { ImageMetadata } from 'astro';
 import { verifiedPrices, PRICE_ON_CONSULTATION } from '../config/business';
 import hydrafacial from '../assets/hydrafacial-syndeo-treatment-mission-hills-san-diego.jpg';
-import scalp from '../assets/keravive-scalp-treatment-hair-growth-san-diego.jpg';
-import enzyme from '../assets/dmk-enzyme-therapy-melanin-rich-skin-san-diego.jpg';
-import acne from '../assets/acne-treatment-melanin-rich-skin-san-diego.jpg';
-import hyperpigmentationTreatment from '../assets/hyperpigmentation-treatment-melanin-rich-skin-san-diego.jpg';
-import correctiveSkin from '../assets/corrective-skin-treatment-melanin-rich-approach-san-diego.jpg';
-// No dedicated dermaplaning photograph exists yet. The barrier image is the
-// closest honest match — a clear, even skin surface. Swap when one is shot.
-import dermaplane from '../assets/skin-barrier-repair-treatment-san-diego.jpg';
+import scalp from '../assets/keravive-scalp-treatment-mission-hills-san-diego.jpg';
+import enzyme from '../assets/dmk-enzyme-therapy-treatment-mission-hills-san-diego.jpg';
+import acne from '../assets/acne-treatment-facial-extraction-mission-hills-san-diego.jpg';
+import hyperpigmentationTreatment from '../assets/hyperpigmentation-treatment-serum-application-san-diego.jpg';
+import correctiveSkin from '../assets/corrective-skin-treatment-consultation-mission-hills-san-diego.jpg';
+import dermaplane from '../assets/dermaplaning-facial-treatment-mission-hills-san-diego.jpg';
+import procell from '../assets/procell-microchanneling-treatment-mission-hills-san-diego.jpg';
+import liraPeel from '../assets/lira-chemical-peel-treatment-mission-hills-san-diego.jpg';
 
 export interface Treatment {
   slug: string;
@@ -137,7 +137,7 @@ export const treatments: Treatment[] = [
     intro:
       'HydraFacial Keravive deeply cleanses, exfoliates, and hydrates the scalp while removing buildup that contributes to dryness, flaking, and irritation. The Keravive Peptide Complex nourishes sebaceous glands and supports a healthier environment for hair growth. In San Diego, hard water — averaging 16 grains per gallon — makes scalp buildup especially common. From <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla ocean swimmers</a> dealing with daily salt water exposure to <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas surfers</a> facing wind and UV damage, scalp conditions here are shaped by year-round outdoor living. Inland clients from <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista</a> and <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a> book Keravive for hard water mineral deposits that shampoo cannot clear. Every treatment includes a take-home peptide spray to continue supporting scalp health between visits.',
     image: scalp,
-    imageAlt: 'Scalp therapy being performed at the part line',
+    imageAlt: 'Keravive scalp treatment in progress at KIAMO Skin Mission Hills - licensed esthetician performing professional scalp therapy with Keravive device',
     goodFor: [
       'Flaking, itching, or scalp tightness',
       'Product buildup and hard water mineral deposits',
@@ -187,7 +187,7 @@ export const treatments: Treatment[] = [
     intro:
       'DMK Enzyme Therapy is designed to restore healthy skin function rather than simply exfoliating the surface. By supporting the skin\'s natural processes, it helps strengthen the skin barrier while encouraging healthy circulation and lymphatic activity. It\'s especially beneficial for skin that feels over-exfoliated, sensitized, inflamed, or slow to heal—common states for <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas surfers</a>, <a href="/service-areas/pacific-beach/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Pacific Beach residents</a>, and anyone whose barrier has been stripped by salt water, wind, or aggressive product use. This approach is part of KIAMO Skin\'s broader <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatment</a> philosophy, where treatment selection is based on current skin condition rather than following a fixed protocol.',
     image: enzyme,
-    imageAlt: 'An enzyme masque setting during a treatment',
+    imageAlt: 'DMK enzyme therapy treatment in progress at KIAMO Skin Mission Hills - licensed esthetician performing corrective enzyme masque facial',
     goodFor: [
       'A compromised skin barrier — stinging, redness, or tightness after products',
       'Skin recovering from over-exfoliation or aggressive at-home products',
@@ -232,8 +232,8 @@ export const treatments: Treatment[] = [
       'Most microneedling providers in San Diego use devices that work well on lighter skin tones but carry real risk for Black and brown skin. The radiofrequency heat in RF microneedling systems — Morpheus8, Vivace, Potenza — stimulates melanocytes in darker Fitzpatrick skin types and can produce post-inflammatory hyperpigmentation: new dark marks caused by the very treatment meant to clear them. At KIAMO Skin, we use Procell microchanneling. No RF heat. Mechanical channels only. Growth factor serums delivered directly into the treatment zones. The mechanism matches what melanin-rich skin actually needs.',
     intro:
       'Procell Therapies microchanneling is a skin resurfacing treatment that creates thousands of microscopic channels in the skin surface using a precision-engineered handpiece. Those channels trigger the skin\'s natural wound-healing response — collagen production, elastin remodeling, and controlled surface cell renewal. What separates Procell from conventional microneedling is what happens immediately after the channels are created. Procell\'s proprietary stem cytokine growth factor serums are applied directly into the open channels, communicating with skin cells to direct the repair process toward specific outcomes: collagen synthesis, pigment correction, and texture resurfacing. The result is faster recovery and more targeted correction than standard microneedling alone. Ideal candidates include those with acne scarring (ice pick, boxcar, and rolling scar types), post-inflammatory hyperpigmentation (PIH) — dark marks left after acne, injury, or trauma, uneven skin tone and diffuse sun damage, skin texture irregularities and enlarged pores, fine lines and mild skin laxity, and Fitzpatrick Type IV, V, and VI skin tones. For clients traveling from <a href="/service-areas/carlsbad/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Carlsbad</a>, <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a>, or <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas</a>, the series is planned as a block at consultation — scheduling all three sessions at once accounts for the drive and makes completion realistic.',
-    image: acne,
-    imageAlt: 'Portrait of smooth, healthy skin along the cheek and jaw',
+    image: procell,
+    imageAlt: 'Procell microchanneling treatment in progress at KIAMO Skin Mission Hills - licensed esthetician performing microneedling for acne scars and texture',
     goodFor: [
       'Acne scarring — ice pick, boxcar, and rolling scar types',
       'Post-inflammatory hyperpigmentation (PIH) — dark marks left after acne, injury, or trauma',
@@ -304,8 +304,8 @@ export const treatments: Treatment[] = [
       'Looking for a chemical peel in San Diego that is safe on melanin-rich skin? That is the work this studio was built around.',
     intro:
       'Pigmentation is the reason most people book, and it is also where the wrong treatment does lasting damage. Melanin-rich skin responds to trauma by producing more pigment, so the strength, the acid and the pacing all have to be selected deliberately. Lira\'s professional range is built for that kind of control. <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista clients</a> and those from <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a> book this treatment most often, where inland UV and melanin-rich skin demographics make melasma the county\'s most common pigmentation concern. Read more about <a href="/treatments/melasma/" class="border-b border-ink/40 hover:border-rose hover:text-rose">correcting melasma and post-inflammatory hyperpigmentation</a>, or explore KIAMO Skin\'s full approach to <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatments</a>.',
-    image: hyperpigmentationTreatment,
-    imageAlt: 'Close portrait of even, clear skin in warm natural light',
+    image: liraPeel,
+    imageAlt: 'Lira chemical peel application in progress at KIAMO Skin Mission Hills - licensed esthetician applying professional peel for melanin-rich skin pigmentation',
     goodFor: [
       'Melasma and hormonal pigmentation',
       'Post-inflammatory marks left behind by acne',
@@ -357,7 +357,7 @@ export const treatments: Treatment[] = [
     intro:
       'Dermaplaning uses a sterile surgical blade to remove dead surface cells and the fine vellus hair that sits on top of them. Nothing is pulled from the follicle and nothing penetrates the skin. What changes is the surface: product reaches live tissue instead of sitting on debris, and makeup stops catching on texture. Clients from <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills</a>, <a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park</a>, and <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla</a> book dermaplaning for events and before important occasions because there is zero downtime and the glow is immediate. Dermaplaning is one of several <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatments</a> that can be integrated into a broader skincare plan.',
     image: dermaplane,
-    imageAlt: 'A close portrait of smooth, even skin across the cheekbone',
+    imageAlt: 'Dermaplaning treatment in progress at KIAMO Skin Mission Hills - licensed esthetician performing precise blade exfoliation technique',
     goodFor: [
       'Rough or uneven surface texture',
       'Makeup that clings to fine facial hair',
@@ -409,7 +409,7 @@ export const treatments: Treatment[] = [
     intro:
       'KIAMO Skin provides corrective skin treatments designed to address specific skin concerns while considering the condition, history, and needs of your skin. Rather than treating every client or concern exactly the same way, the goal is to understand what is happening beneath the surface and select treatments that make sense for your current skin health. Corrective skincare may include treatments such as HydraFacial, DMK Enzyme Therapy, Procell Microchanneling, Lira Chemical Peels, Dermaplaning, and Keravive Scalp Therapy, depending on the concern being addressed.',
     image: correctiveSkin,
-    imageAlt: 'Close portrait of even, clear skin showing results of corrective treatment',
+    imageAlt: 'Corrective skin consultation at KIAMO Skin Mission Hills - licensed esthetician examining client skin with magnifying lamp for personalized treatment',
     goodFor: [
       'Hyperpigmentation and uneven skin tone',
       'Melasma and persistent pigmentation concerns',
@@ -468,7 +468,7 @@ export const treatments: Treatment[] = [
     intro:
       'Acne treatment at KIAMO Skin addresses three phases: active breakouts, congestion (blackheads and whiteheads), and post-acne concerns like hyperpigmentation and scarring. The treatment plan depends on what stage your skin is in. HydraFacial extracts congestion without manual pressure, DMK Enzyme Therapy rebuilds a compromised barrier that is keeping breakouts active, and chemical peels or microchanneling work through the marks and texture left behind. Every protocol is designed to clear acne without triggering post-inflammatory hyperpigmentation — the dark marks that last longer than the breakout itself. This multi-phase approach is part of KIAMO Skin\'s <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatment</a> philosophy.',
     image: acne,
-    imageAlt: 'Clear, healthy skin along the cheek showing improved texture after acne treatment',
+    imageAlt: 'Acne treatment in progress at KIAMO Skin Mission Hills - licensed esthetician performing HydraFacial extraction for congested acne-prone skin',
     goodFor: [
       'Active hormonal acne and inflammatory breakouts',
       'Cystic acne and nodular acne lesions',
@@ -538,7 +538,7 @@ export const treatments: Treatment[] = [
     intro:
       'Hyperpigmentation treatment at KIAMO Skin addresses the visible discoloration that remains after acne, inflammation, or other skin concerns have passed. Whether you are dealing with post-acne dark marks, melasma, or generalized uneven tone, the appropriate treatment depends on what is contributing to the pigmentation and the current condition of your skin. Treatment options may include <a href="/treatments/lira-peels/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Lira Chemical Peels</a>, <a href="/treatments/procell-microchanneling/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Procell Microchanneling</a>, <a href="/treatments/hydrafacial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">HydraFacial</a>, or <a href="/treatments/dmk-enzyme-therapy/" class="border-b border-ink/40 hover:border-rose hover:text-rose">DMK Enzyme Therapy</a> depending on the concern. This corrective approach is especially relevant for <a href="/melanin-rich-skin/" class="border-b border-ink/40 hover:border-rose hover:text-rose">melanin-rich skin</a>, where pigmentation is often a primary concern and treatment selection requires careful consideration.',
     image: hyperpigmentationTreatment,
-    imageAlt: 'Clear, even-toned skin after corrective hyperpigmentation treatment',
+    imageAlt: 'Hyperpigmentation treatment in progress at KIAMO Skin Mission Hills - licensed esthetician applying brightening serum for melanin-rich skin pigmentation correction',
     goodFor: [
       'Dark marks left after acne or inflammation',
       'Uneven skin tone',
