@@ -5,6 +5,7 @@ import Reveal from '../../components/Reveal.astro';
 import Button from '../../components/Button.astro';
 import NapBlock from '../../components/NapBlock.astro';
 import LocationMap from '../../components/LocationMap.astro';
+import CertificateModal from '../../components/CertificateModal.astro';
 import { hydrafacialAreas } from '../../data/hydrafacial-areas';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
@@ -107,6 +108,27 @@ const imageAlt = `HydraFacial treatment in progress at KIAMO Skin Mission Hills 
           <Reveal>
             <h2 class="t-h3">{area.authority.heading}</h2>
             <p class="t-body mt-7">{area.authority.body}</p>
+          </Reveal>
+
+          {/* Certification Badges */}
+          <Reveal class="mt-8 block">
+            <div class="pt-6 border-t border-line">
+              <p class="t-body text-[0.875rem] text-ink-soft mb-4">Advanced certifications — click to view:</p>
+              <div class="flex gap-6">
+                <CertificateModal
+                  id={`cert-hydrafacial-${area.slug}`}
+                  image="/images/hydrafacial-certified-provider-san-diego.jpg"
+                  alt="HydraFacial Certified Provider certificate - KIAMO Skin, San Diego California"
+                  title="HydraFacial Certified Provider"
+                />
+                <CertificateModal
+                  id={`cert-dmk-${area.slug}`}
+                  image="/images/dmk-certified-skin-therapist-kiki-kiamo.jpg"
+                  alt="DMK Certified Skin Therapist certificate - Kiki, KIAMO Skin San Diego"
+                  title="DMK Certified Skin Therapist"
+                />
+              </div>
+            </div>
           </Reveal>
 
           {/* Uniqueness Section */}

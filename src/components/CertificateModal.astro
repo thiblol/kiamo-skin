@@ -1,0 +1,149 @@
+---
+/**
+ * Certificate Modal - Lightbox for viewing certification images
+ * Click thumbnail to view full certificate in modal overlay
+ */
+
+interface Props {
+  id: string;
+  image: string;
+  alt: string;
+  title: string;
+}
+
+const { id, image, alt, title } = Astro.props;
+---
+
+<button
+  type="button"
+  class="certificate-trigger group cursor-pointer"
+  data-modal-trigger={id}
+  aria-label={`View ${title} certificate`}
+>
+  <img
+    src={image}
+    alt={alt}
+    loading="lazy"
+    class="h-20 w-auto object-contain border border-line rounded-sm bg-ivory p-2 transition-all duration-300 group-hover:scale-105 group-hover:shadow-md group-hover:border-rose"
+  />
+</button>
+
+<div
+  id={id}
+  class="certificate-modal fixed inset-0 z-[1000] hidden items-center justify-center bg-espresso/90 p-4 backdrop-blur-sm"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby={`${id}-title`}
+  data-modal={id}
+>
+  <div class="modal-content relative max-w-4xl w-full max-h-[90vh] bg-porcelain rounded-lg shadow-2xl overflow-hidden">
+    <div class="modal-header flex items-center justify-between p-4 border-b border-line bg-ivory">
+      <h3 id={`${id}-title`} class="t-h4 text-[1.125rem]">{title}</h3>
+      <button
+        type="button"
+        class="modal-close p-2 rounded-sm hover:bg-blush transition-colors"
+        aria-label="Close certificate view"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="modal-body p-6 overflow-auto max-h-[calc(90vh-5rem)]">
+      <img
+        src={image}
+        alt={alt}
+        class="w-full h-auto object-contain"
+      />
+    </div>
+
+    <div class="modal-footer p-4 border-t border-line bg-ivory text-center">
+      <p class="t-body text-[0.875rem] text-ink-soft">Click outside or press ESC to close</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const triggers = document.querySelectorAll('[data-modal-trigger]');
+    const modals = document.querySelectorAll('[data-modal]');
+
+    triggers.forEach(trigger => {
+      trigger.addEventListener('click', () => {
+        const modalId = trigger.getAttribute('data-modal-trigger');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+          document.body.style.overflow = 'hidden';
+
+          // Focus the close button for accessibility
+          const closeBtn = modal.querySelector('.modal-close');
+          if (closeBtn) {
+            setTimeout(() => (closeBtn as HTMLElement).focus(), 100);
+          }
+        }
+      });
+    });
+
+    modals.forEach(modal => {
+      const closeBtn = modal.querySelector('.modal-close');
+
+      // Close on button click
+      closeBtn?.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        document.body.style.overflow = '';
+      });
+
+      // Close on backdrop click
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          document.body.style.overflow = '';
+        }
+      });
+
+      // Close on ESC key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  .certificate-modal {
+    animation: fadeIn 0.2s ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .modal-content {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  @keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+</style>

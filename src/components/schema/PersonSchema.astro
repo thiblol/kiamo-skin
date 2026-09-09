@@ -1,0 +1,67 @@
+---
+import { business } from '../../config/business';
+
+/**
+ * Person schema for Kiki with professional credentials
+ * Includes hasCredential property for certifications
+ */
+
+const siteUrl = business.url || 'https://kiamoskin.com';
+---
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": `${siteUrl}#kiki`,
+  "name": "Kiki",
+  "jobTitle": "Licensed Esthetician & Founder",
+  "worksFor": {
+    "@type": "LocalBusiness",
+    "@id": `${siteUrl}#business`,
+    "name": business.name
+  },
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "HydraFacial Certified Provider",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "HydraFacial"
+      },
+      "image": `${siteUrl}/images/hydrafacial-certified-provider-san-diego.jpg`
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "certification",
+      "name": "DMK Certified Skin Therapist",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "DMK Skin Care"
+      },
+      "image": `${siteUrl}/images/dmk-certified-skin-therapist-kiki-kiamo.jpg`
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "license",
+      "name": "California Esthetician License",
+      "issuedBy": {
+        "@type": "Organization",
+        "name": "California Board of Barbering and Cosmetology"
+      }
+    }
+  ],
+  "knowsAbout": [
+    "HydraFacial treatments",
+    "DMK Enzyme Therapy",
+    "Hyperpigmentation treatment",
+    "Melasma treatment",
+    "Chemical peels",
+    "Microchanneling",
+    "Corrective skincare"
+  ],
+  "url": siteUrl,
+  "sameAs": [
+    business.instagram?.url
+  ].filter(Boolean)
+})} />

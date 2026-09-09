@@ -3,10 +3,12 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AboutSchema from '../components/schema/AboutSchema.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import PersonSchema from '../components/schema/PersonSchema.astro';
 import Reveal from '../components/Reveal.astro';
 import PanelWipe from '../components/PanelWipe.astro';
 import Button from '../components/Button.astro';
 import NapBlock from '../components/NapBlock.astro';
+import CertificateModal from '../components/CertificateModal.astro';
 import portrait from '../assets/kiki-licensed-esthetician-melanin-rich-skin-specialist-san-diego.jpg';
 import studio from '../assets/kiamo-skin-studio-mission-hills-san-diego.jpg';
 import { business } from '../config/business';
@@ -35,6 +37,7 @@ const values = [
 >
   <AboutSchema slot="head" />
   <BreadcrumbSchema slot="head" trail={[{ name: 'About', path: '/about' }]} />
+  <PersonSchema slot="head" />
   <header class="bg-blush">
     <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
       <p class="t-eyebrow text-ink-soft">About</p>
@@ -78,7 +81,25 @@ const values = [
           This isn’t just a spa facial. This is strategy, correction, intention.
         </blockquote>
 
-        <div class="mt-10">
+        <div class="mt-10 space-y-8">
+          <div class="border-t border-line pt-8">
+            <p class="t-body text-[0.875rem] text-ink-soft mb-4">Advanced certifications — click to view:</p>
+            <div class="flex gap-6">
+              <CertificateModal
+                id="cert-hydrafacial-about"
+                image="/images/hydrafacial-certified-provider-san-diego.jpg"
+                alt="HydraFacial Certified Provider certificate - KIAMO Skin, San Diego California"
+                title="HydraFacial Certified Provider"
+              />
+              <CertificateModal
+                id="cert-dmk-about"
+                image="/images/dmk-certified-skin-therapist-kiki-kiamo.jpg"
+                alt="DMK Certified Skin Therapist certificate - Kiki, KIAMO Skin San Diego"
+                title="DMK Certified Skin Therapist"
+              />
+            </div>
+          </div>
+
           <Button href="/treatments/" variant="ghost">See the treatments</Button>
         </div>
       </div>

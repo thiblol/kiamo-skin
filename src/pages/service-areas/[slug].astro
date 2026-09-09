@@ -5,10 +5,12 @@ import Reveal from '../../components/Reveal.astro';
 import Button from '../../components/Button.astro';
 import NapBlock from '../../components/NapBlock.astro';
 import LocationMap from '../../components/LocationMap.astro';
+import CertificateModal from '../../components/CertificateModal.astro';
 import AreaServiceSchema from '../../components/schema/AreaServiceSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
+import PersonSchema from '../../components/schema/PersonSchema.astro';
 import AreaReview from '../../components/sections/AreaReview.astro';
 import { enhancedAreas, type EnhancedArea } from '../../data/areas-enhanced';
 import { areaFaqs } from '../../data/area-faqs';
@@ -108,6 +110,7 @@ const canonicalUrl = `${business.url}/service-areas/${area.slug}/`;
   />
   {allFaqs.length > 0 && <FaqSchema slot="head" faqs={allFaqs} />}
   {area.quickAnswer && <SpeakableSchema slot="head" url={canonicalUrl} />}
+  <PersonSchema slot="head" />
 
   <article>
     <!-- HERO: Simplified, focused on booking action -->
@@ -153,6 +156,23 @@ const canonicalUrl = `${business.url}/service-areas/${area.slug}/`;
                 )}
               </div>
             )}
+
+            <!-- Certification Badges -->
+            <div class="mt-8 flex flex-wrap items-center gap-4">
+              <p class="text-[0.8125rem] text-ink-soft">Advanced certifications — click to view:</p>
+              <CertificateModal
+                id="cert-hydrafacial-area"
+                image="/images/hydrafacial-certified-provider-san-diego.jpg"
+                alt="HydraFacial Certified Provider certificate - KIAMO Skin, San Diego California"
+                title="HydraFacial Certified Provider"
+              />
+              <CertificateModal
+                id="cert-dmk-area"
+                image="/images/dmk-certified-skin-therapist-kiki-kiamo.jpg"
+                alt="DMK Certified Skin Therapist certificate - Kiki, KIAMO Skin San Diego"
+                title="DMK Certified Skin Therapist"
+              />
+            </div>
 
             <!-- Primary CTA -->
             <div class="mt-10 flex flex-wrap items-center gap-4">

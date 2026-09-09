@@ -12,12 +12,14 @@ import SanDiegoContext from '../components/sections/SanDiegoContext.astro';
 import AreasNearby from '../components/sections/AreasNearby.astro';
 import TreatmentMarquee from '../components/sections/TreatmentMarquee.astro';
 import FaqLocation from '../components/sections/FaqLocation.astro';
+import PersonSchema from '../components/schema/PersonSchema.astro';
 ---
 
 <BaseLayout
   title="Skincare Clinic San Diego — Corrective Facials | KIAMO"
   description="Expert treatment for pigmentation, acne, scalp concerns in Mission Hills. HydraFacial, chemical peels, microchanneling—safe for all skin tones."
 >
+  <PersonSchema slot="head" />
   <Hero />
   <TreatmentMarquee />
   <Credentials />
