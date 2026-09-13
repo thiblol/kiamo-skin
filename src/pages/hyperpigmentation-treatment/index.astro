@@ -1,0 +1,568 @@
+---
+/**
+ * /hyperpigmentation-treatment/ — Hyperpigmentation Treatment parent hub.
+ *
+ * Role: highest-commercial-intent page for "hyperpigmentation treatment san diego"
+ * queries. Pairs with the existing /treatments/hyperpigmentation/ educational
+ * page (informational intent) — the two are differentiated by intent, not by
+ * topic. See Section 11 of the S-tier plan.
+ *
+ * The seven area subpages (/hyperpigmentation-treatment/{slug}/) are clustered
+ * here as a GeoHub root. The schema's hasOfferCatalog enumerates each as a
+ * referenced child Service, so AI systems can extract the hub-and-spoke
+ * relationship and cite this page as the topical authority.
+ */
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Reveal from '../../components/Reveal.astro';
+import Button from '../../components/Button.astro';
+import NapBlock from '../../components/NapBlock.astro';
+import CertificateModal from '../../components/CertificateModal.astro';
+import { business } from '../../config/business';
+import { CTA_LABEL } from '../../config/nav';
+import { hyperpigmentationAreas } from '../../data/hyperpigmentation-areas';
+import HyperpigmentationHubSchema from '../../components/schema/HyperpigmentationHubSchema.astro';
+import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import heroHyperpigmentation from '../../assets/hyperpigmentation-treatment-serum-application-san-diego.jpg';
+
+const title = 'Hyperpigmentation Treatment in San Diego | KIAMO';
+const description =
+  'Hyperpigmentation treatment in San Diego from KIAMO Skin in Mission Hills. Melasma, PIH, dark spot correction. Safe for all Fitzpatrick I-VI skin tones. Licensed esthetician.';
+
+const treatmentOptions = [
+  {
+    name: 'Lira Chemical Peels',
+    href: '/treatments/lira-peels/',
+    blurb: 'Professional exfoliation calibrated for every Fitzpatrick type.',
+  },
+  {
+    name: 'Procell Microchanneling',
+    href: '/treatments/procell-microchanneling/',
+    blurb: 'Mechanical channels, no RF heat. Safe for melanin-rich skin.',
+  },
+  {
+    name: 'HydraFacial',
+    href: '/hydrafacial/',
+    blurb: 'Maintenance between corrective sessions. AI skin analysis with Syndeo.',
+  },
+  {
+    name: 'Dermaplaning',
+    href: '/treatments/dermaplaning/',
+    blurb: 'Physical exfoliation when appropriate. Skipped over active inflammation.',
+  },
+  {
+    name: 'DMK Enzyme Therapy',
+    href: '/treatments/dmk-enzyme-therapy/',
+    blurb: 'Function-first approach to pigmentation and barrier health.',
+  },
+];
+
+const faqs = [
+  {
+    question: 'What is hyperpigmentation treatment and how does it work?',
+    answer:
+      'Hyperpigmentation treatment at KIAMO Skin addresses dark marks, melasma, post-inflammatory hyperpigmentation (PIH), and uneven tone. The plan usually combines surface pigment removal, melanin-pathway inhibition (tyrosinase inhibitors), and barrier restoration. Most clients see visible fading in 8-12 weeks; melasma and deep PIH may take 6-9 months.',
+  },
+  {
+    question: 'How much does hyperpigmentation treatment cost in San Diego?',
+    answer:
+      'Pricing depends on the modality selected. Lira Chemical Peels range from $199-$299. Procell Microchanneling is $475 per session ($1,199 for a series of three). HydraFacial is $259. First-time clients start at $249 for consultation and treatment. Most clients need a series of treatments spaced 4-6 weeks apart.',
+  },
+  {
+    question: 'Is hyperpigmentation treatment safe for darker skin tones?',
+    answer:
+      'Yes, when protocols are calibrated to the skin. KIAMO uses treatments tailored to every Fitzpatrick type I-VI to prevent post-inflammatory hyperpigmentation, which is a real risk when aggressive peels, lasers, or RF heat are used on melanin-rich skin without adjustment. Kiki has 7+ years of experience customizing treatments across all skin tones.',
+  },
+  {
+    question: 'Can melasma be permanently removed?',
+    answer:
+      'Melasma is managed rather than permanently cured. It is triggered by hormones, UV, and heat, so even after significant fading, ongoing maintenance is required. KIAMO\'s approach combines clinic treatments to fade existing pigment with a homecare protocol to prevent recurrence. Most clients achieve 60-80% fading.',
+  },
+  {
+    question: 'How long does hyperpigmentation treatment take to see results?',
+    answer:
+      'Most clients see visible fading in 8-12 weeks with monthly treatments (chemical peels or microchanneling) plus daily clinical homecare. Melasma and deep PIH may require 6-9 months of consistent work. Each clinic session at KIAMO takes 60-75 minutes.',
+  },
+  {
+    question: 'Should I see an esthetician or a dermatologist for hyperpigmentation?',
+    answer:
+      'Both are useful at different stages. A dermatologist prescribes topical medications — hydroquinone, tretinoin, tranexamic acid — that work at the cellular level. A licensed esthetician performs in-office corrective treatments (peels, microchanneling, enzyme therapy) and builds the home routine and maintenance plan. For stubborn hyperpigmentation or melasma, dermatologist-prescribed home care combined with regular corrective facials typically produces better results than either alone.',
+  },
+  {
+    question: 'Why is hyperpigmentation harder to treat in San Diego?',
+    answer:
+      'San Diego has year-round sun exposure with an average of 266 sunny days per year, and UV levels remain high even on overcast mornings when the marine layer is present. UV is the primary trigger that worsens pigmentation. A single day without SPF can reverse weeks of treatment progress, which is why daily sunscreen compliance — not just during summer — is non-negotiable.',
+  },
+  {
+    question: 'Where is KIAMO Skin located for hyperpigmentation treatment near me?',
+    answer:
+      'KIAMO Skin is at 3067 Reynard Way in Mission Hills, San Diego. The studio is minutes from Downtown via Washington Street, 5 minutes from Hillcrest, and within 10 minutes of North Park, University Heights, Little Italy, and Balboa Park. Free parking is on site. By appointment only.',
+  },
+];
+
+const heroAlt =
+  'Hyperpigmentation treatment serum application at KIAMO Skin studio in Mission Hills, San Diego';
+---
+
+<BaseLayout {title} {description}>
+  <HyperpigmentationHubSchema slot="head" />
+  <SpeakableSchema slot="head" url="https://kiamoskin.com/hyperpigmentation-treatment/" />
+  <BreadcrumbSchema
+    slot="head"
+    trail={[{ name: 'Hyperpigmentation Treatment in San Diego', path: '/hyperpigmentation-treatment/' }]}
+  />
+
+  <article>
+    <header class="bg-blush">
+      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+        <p class="t-eyebrow text-ink-soft">KIAMO Skin · Mission Hills</p>
+        <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">Hyperpigmentation Treatment in San Diego</h1>
+
+        {/* AI Overview quick-answer block. */}
+        <p class="t-body quick-answer mt-7 max-w-[62ch] text-[1.125rem] font-medium">
+          KIAMO Skin in Mission Hills corrects melasma, post-inflammatory hyperpigmentation, and
+          dark spots using protocols calibrated for all skin types (Fitzpatrick I-VI). Treatment
+          pricing starts at $249 for consultation and is customized per concern, with most
+          clients seeing visible fading in 8-12 weeks.
+        </p>
+
+        <p class="t-body mt-5 max-w-[62ch]">
+          Hyperpigmentation can be one of the most stubborn skin concerns to address because it
+          often remains visible long after the original breakout, irritation, or sun exposure has
+          passed. The right corrective approach depends on what is contributing to the
+          discoloration, the current condition of the skin, and how well the skin can tolerate
+          treatment.
+        </p>
+
+        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a
+            href={business.phone.href}
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            {business.phone.display}
+          </a>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[0.875rem] text-ink-soft">
+          <span class="font-medium">{business.experience} experience</span>
+          <span aria-hidden="true">·</span>
+          <span>Safe for all skin types (Fitzpatrick I-VI)</span>
+          <span aria-hidden="true">·</span>
+          <span>Calibrated corrective protocols</span>
+          <span aria-hidden="true">·</span>
+          <span>Licensed Esthetician</span>
+          <span aria-hidden="true">·</span>
+          <span>Mission Hills, San Diego</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y grid items-start gap-16 md:grid-cols-[1.1fr_0.9fr] md:gap-20">
+        <div>
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">A corrective approach</p>
+            <h2 class="t-h2 mt-4">Why hyperpigmentation needs more than one treatment</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Dark marks following acne behave differently from melasma. Pigmentation associated
+              with inflammation may need a different strategy than generalized uneven tone. Skin
+              that is already irritated or experiencing barrier disruption may need a different
+              starting point than skin that is stable.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              KIAMO Skin's corrective philosophy considers these differences when determining an
+              appropriate treatment direction. The plan typically combines surface pigment
+              removal, melanin-pathway inhibition (tyrosinase inhibitors such as kojic acid,
+              tranexamic acid, and alpha arbutin), and barrier repair — spaced 4-6 weeks apart
+              so the barrier has time to recover between sessions.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              This is especially relevant for melanin-rich skin, where pigmentation is often a
+              significant concern and treatment selection requires deliberate,,
+              consideration. Aggressive peels or RF heat without proper calibration can trigger
+              post-inflammatory hyperpigmentation, which is why protocols at KIAMO are matched to
+              your Fitzpatrick type rather than selected from a generic menu.
+            </p>
+          </Reveal>
+
+          <Reveal class="mt-10 block">
+            <div class="border-t border-line pt-6">
+              <p class="t-body text-[0.875rem] text-ink-soft mb-4">Advanced certifications — click to view:</p>
+              <div class="flex flex-wrap gap-6">
+                <CertificateModal
+                  id="cert-hydrafacial-hp-hub"
+                  image="/images/hydrafacial-certified-provider-san-diego.jpg"
+                  alt="HydraFacial Certified Provider certificate - KIAMO Skin, San Diego California"
+                  title="HydraFacial Certified Provider"
+                />
+                <CertificateModal
+                  id="cert-dmk-hp-hub"
+                  image="/images/dmk-certified-skin-therapist-kiki-kiamo.jpg"
+                  alt="DMK Certified Skin Therapist certificate - Kiki, KIAMO Skin San Diego"
+                  title="DMK Certified Skin Therapist"
+                />
+              </div>
+            </div>
+          </Reveal>
+        </div>
+
+        <aside>
+          <Image
+            src={heroHyperpigmentation}
+            alt={heroAlt}
+            widths={[400, 800, 1200]}
+            sizes="(min-width: 768px) 45vw, 100vw"
+            loading="eager"
+            class="aspect-4/3 w-full rounded-lg object-cover"
+          />
+          <div class="mt-8 border border-line bg-ivory p-8">
+            <p class="t-eyebrow text-ink-soft">The studio</p>
+            <div class="mt-6">
+              <NapBlock tone="light" />
+            </div>
+            <div class="mt-6">
+              <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">What we address</p>
+            <h2 class="t-h2 mt-4">Hyperpigmentation concerns we treat at KIAMO</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Rather than treating discoloration as an isolated surface issue, KIAMO's corrective
+              approach looks at the broader condition of the skin and the factors contributing to
+              its appearance. Concerns that may be addressed as part of a hyperpigmentation plan:
+            </p>
+            <ul class="t-body mt-7 m-0 list-none space-y-3 p-0">
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Dark marks left after acne or inflammation (post-inflammatory hyperpigmentation)</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Uneven skin tone across the cheeks, forehead, or jawline</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Persistent discoloration that has not responded to over-the-counter products</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Melasma-related pigmentation, including hormonal triggers</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Sun damage from San Diego's year-round UV exposure</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Dull or uneven-looking complexion that foundation cannot even out</span></li>
+            </ul>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">Treatment options</p>
+          <h2 class="t-h2 mt-4">Professional hyperpigmentation treatment options</h2>
+          <p class="t-body mt-6 max-w-[62ch] leading-relaxed">
+            Depending on the concern and the condition of your skin, KIAMO may recommend one of
+            the following corrective modalities, or a combination over time.
+          </p>
+        </Reveal>
+
+        <ul class="m-0 mt-12 grid list-none gap-7 md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8">
+          {treatmentOptions.map((option) => (
+            <Reveal as="li">
+              <div class="flex h-full flex-col rounded-lg bg-ivory p-8">
+                <h3 class="t-service text-[1.125rem]">{option.name}</h3>
+                <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                  {option.blurb}
+                </p>
+                <a
+                  href={option.href}
+                  class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose"
+                >
+                  Learn more
+                </a>
+              </div>
+            </Reveal>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:gap-16">
+          <div>
+            <h2 class="t-h2">Hyperpigmentation treatment pricing in San Diego</h2>
+            <p class="t-body mt-6 max-w-[58ch] leading-relaxed">
+              Hyperpigmentation treatment pricing depends on which modality is selected. Chemical
+              peels, Procell Microchanneling, HydraFacial, and DMK Enzyme Therapy each address
+              different concerns and have different pricing structures.
+            </p>
+            <p class="t-body mt-5 max-w-[58ch] leading-relaxed">
+              Chemical peels range from $199-$299. Procell Microchanneling is $475 per session.
+              HydraFacial is $259. Most clients need a series of treatments spaced 4-6 weeks
+              apart for visible pigmentation fading.
+            </p>
+            <p class="t-body mt-5 text-[0.875rem] text-ink-soft">
+              First-time clients start at $249 for consultation and treatment.{' '}
+              <a href="/contact/" class="border-b border-ink/40 hover:border-rose hover:text-rose">
+                Questions about pricing? Contact us
+              </a>.
+            </p>
+          </div>
+          <div class="border border-line bg-porcelain p-8">
+            <p class="t-eyebrow text-ink-soft">Treatment options</p>
+            <dl class="mt-7 m-0 space-y-6">
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">Chemical Peels</dt>
+                <dd class="t-price m-0 mt-2">$199-$299</dd>
+              </div>
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">Procell Microchanneling</dt>
+                <dd class="t-price m-0 mt-2">$475</dd>
+              </div>
+              <div class="pb-0">
+                <dt class="t-service text-[1rem]">First-time clients</dt>
+                <dd class="t-price m-0 mt-2">$249</dd>
+              </div>
+            </dl>
+            <div class="mt-8">
+              <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">Locations</p>
+          <h2 class="t-h2 mt-4">Hyperpigmentation treatment across San Diego</h2>
+          <p class="t-body mt-6 max-w-[68ch] leading-relaxed">
+            Every page below targets the same KIAMO studio in Mission Hills with travel times,
+            landmarks, and the pigmentation triggers common to each neighborhood.
+          </p>
+        </Reveal>
+
+        <ul class="m-0 mt-12 grid list-none gap-x-8 gap-y-0 p-0 md:grid-cols-2 lg:grid-cols-3">
+          {hyperpigmentationAreas.map((area) => (
+            <li class="border-b border-line">
+              <a href={`/hyperpigmentation-treatment/${area.slug}/`} class="group block py-7">
+                <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                  Hyperpigmentation Treatment in {area.name}
+                </h3>
+                <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">
+                  {area.intro.split('.')[0]}.
+                </p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">San Diego skin</p>
+            <h2 class="t-h2 mt-4">Why San Diego makes pigmentation harder to treat</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              San Diego averages 266 sunny days per year — more than Miami, more than Honolulu.
+              Even on overcast mornings when the marine layer is present, UV levels remain high
+              enough to trigger melanin production. UV is the single biggest driver of
+              pigmentation recurrence, which is why hyperpigmentation treatment in San Diego
+              requires stricter daily sun protection than the same treatment plan would in a
+              cloudier climate.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              The marine layer is misleading. Many people skip sunscreen on cloudy mornings
+              because the sky looks grey, but UVA penetrates cloud cover at near-full strength.
+              A single overcast morning without SPF can reverse weeks of corrective treatment
+              progress. The treatment result depends on consistent daily broad-spectrum SPF 50+,
+              not just beach-day application.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              Heat is the second-most-overlooked trigger. Melasma in particular is driven by
+              hormones plus heat plus UV — and San Diego's Santa Ana wind events bring dry,
+              hot air from the desert that can trigger melasma flare-ups even in clients whose
+              pigmentation was previously stable. Hot yoga, saunas, and prolonged cooking over a
+              hot stove produce similar heat-driven flare-ups.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              Hormonal pigmentation (melasma) is common in the population KIAMO serves. The
+              condition responds to treatment but cannot be permanently cured because the
+              triggers are ongoing: UV, heat, hormones, and the skin's own melanocyte
+              sensitivity. KIAMO's approach is to achieve measurable fading (typically 60-80%)
+              with clinic treatments and homecare, then hold the result with strict maintenance
+              — daily SPF, heat avoidance where possible, and periodic corrective sessions when
+              the season or life stage warrants.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              For clients traveling from North Park, Hillcrest, University Heights, Little Italy,
+              Balboa Park, and Downtown, the practical implication is the same: treatment
+              success depends as much on daily compliance at home as it does on what happens in
+              the studio. Skipping sunscreen on overcast days is the single most common reason
+              pigmentation treatment stalls or regresses in San Diego.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    {faqs.length > 0 && (
+      <section class="bg-blush">
+        <div class="wrap section-y">
+          <p class="t-eyebrow text-ink-soft">Before you book</p>
+          <h2 class="t-h2 mt-5">Hyperpigmentation treatment questions, answered</h2>
+          <div class="faq-section mt-12 max-w-[68ch]">
+            {faqs.map((faq) => (
+              <div class="border-b border-line">
+                <details class="group">
+                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
+                    <span>{faq.question}</span>
+                    <span
+                      aria-hidden="true"
+                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <div class="t-body pb-6 text-[0.9375rem] leading-relaxed">{faq.answer}</div>
+                </details>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">Related resources</p>
+          <h2 class="t-h2 mt-4">More on hyperpigmentation at KIAMO Skin</h2>
+          <p class="t-body mt-6 max-w-[62ch] leading-relaxed">
+            The existing encyclopedia page covers hyperpigmentation in depth, including the
+            science of melanin production, San Diego UV triggers, and the role of dermatologist
+            prescriptions alongside corrective facials.
+          </p>
+        </Reveal>
+
+        <ul class="m-0 mt-10 grid list-none gap-7 md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8">
+          <Reveal as="li">
+            <div class="flex h-full flex-col rounded-lg bg-porcelain p-8">
+              <h3 class="t-service text-[1.0625rem]">Hyperpigmentation — Treatment Overview</h3>
+              <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                The full hyperpigmentation encyclopedia page: causes, treatment philosophy, FAQs,
+                and related treatments.
+              </p>
+              <a href="/treatments/hyperpigmentation/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                Learn more
+              </a>
+            </div>
+          </Reveal>
+          <Reveal as="li">
+            <div class="flex h-full flex-col rounded-lg bg-porcelain p-8">
+              <h3 class="t-service text-[1.0625rem]">Melasma</h3>
+              <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                Persistent pigmentation concerns associated with hormonal triggers. Managed rather
+                than cured.
+              </p>
+              <a href="/treatments/melasma/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                Learn more
+              </a>
+            </div>
+          </Reveal>
+          <Reveal as="li">
+            <div class="flex h-full flex-col rounded-lg bg-porcelain p-8">
+              <h3 class="t-service text-[1.0625rem]">Melanin-Rich Skin Expertise</h3>
+              <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                KIAMO's specialization in treating melanin-rich skin safely: training, philosophy,
+                and protocol differences from generic skincare.
+              </p>
+              <a href="/melanin-rich-skin/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                Learn more
+              </a>
+            </div>
+          </Reveal>
+          <Reveal as="li">
+            <div class="flex h-full flex-col rounded-lg bg-porcelain p-8">
+              <h3 class="t-service text-[1.0625rem]">HydraFacial in San Diego</h3>
+              <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                Maintenance between corrective sessions, safe for all skin tones. Foundation of
+                many pigment-management plans at KIAMO.
+              </p>
+              <a href="/hydrafacial/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                Learn more
+              </a>
+            </div>
+          </Reveal>
+          <Reveal as="li">
+            <div class="flex h-full flex-col rounded-lg bg-porcelain p-8">
+              <h3 class="t-service text-[1.0625rem]">Lira Chemical Peels</h3>
+              <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                Professional peels formulated for corrective work, with protocols matched to your
+                Fitzpatrick type.
+              </p>
+              <a href="/treatments/lira-peels/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                Learn more
+              </a>
+            </div>
+          </Reveal>
+          <Reveal as="li">
+            <div class="flex h-full flex-col rounded-lg bg-porcelain p-8">
+              <h3 class="t-service text-[1.0625rem]">Procell Microchanneling</h3>
+              <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                Mechanical (no RF heat) microchanneling for texture, acne scarring, and
+                pigmentation.
+              </p>
+              <a href="/treatments/procell-microchanneling/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                Learn more
+              </a>
+            </div>
+          </Reveal>
+        </ul>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y text-center">
+        <h2 class="t-h3 max-w-[28ch] mx-auto">Ready to address hyperpigmentation in San Diego?</h2>
+        <p class="t-body mt-5 max-w-[52ch] mx-auto">
+          One treatment room. One practitioner. Request an appointment and Kiki will confirm a
+          time by the next business day.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a
+            href={business.phone.href}
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            {business.phone.display}
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
+
+<script
+  type="application/ld+json"
+  is:inline
+  set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  })}
+  slot="head"
+/>

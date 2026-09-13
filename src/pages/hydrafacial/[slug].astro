@@ -58,8 +58,9 @@ const imageAlt = `HydraFacial treatment in progress at KIAMO Skin Mission Hills 
   <BreadcrumbSchema
     slot="head"
     trail={[
-      { name: 'HydraFacial', path: '/treatments/hydrafacial' },
-      { name: area.name, path: `/hydrafacial/${area.slug}` },
+      { name: 'Treatments', path: '/treatments/' },
+      { name: 'HydraFacial in San Diego', path: '/hydrafacial/' },
+      { name: area.name, path: `/hydrafacial/${area.slug}/` },
     ]}
   />
   {area.faqs.length > 0 && (
@@ -88,16 +89,25 @@ const imageAlt = `HydraFacial treatment in progress at KIAMO Skin Mission Hills 
           <a href="/treatments/hydrafacial/" class="hover:text-rose">HydraFacial</a> · {area.name}
         </p>
         <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">{area.h1}</h1>
-        <p class="t-body mt-7 max-w-[62ch]">{area.intro}</p>
+        <div class="t-body mt-7 max-w-[62ch] text-[1.0625rem] leading-relaxed">
+          <p class="font-medium">{area.intro.split('.')[0]}.</p>
+          <p class="mt-4">{area.intro.split('.').slice(1).join('.').trim()}</p>
+        </div>
         <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
           <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
           <a href={business.phone.href} class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose">
             {business.phone.display}
           </a>
         </div>
-        <p class="t-body mt-6 text-[0.875rem] text-ink-soft">
-          {business.experience} treating melanin-rich skin · HydraFacial Syndeo · Licensed Esthetician · Mission Hills, San Diego
-        </p>
+        <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[0.875rem] text-ink-soft">
+          <span class="font-medium">{business.experience} treating melanin-rich skin</span>
+          <span aria-hidden="true">·</span>
+          <span>HydraFacial Syndeo</span>
+          <span aria-hidden="true">·</span>
+          <span>Licensed Esthetician</span>
+          <span aria-hidden="true">·</span>
+          <span>Mission Hills, San Diego</span>
+        </div>
       </div>
     </header>
 
@@ -325,8 +335,8 @@ const imageAlt = `HydraFacial treatment in progress at KIAMO Skin Mission Hills 
             ))}
           </ul>
           <p class="t-body mt-9 text-[0.9375rem]">
-            <a href="/treatments/hydrafacial/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
-              Learn more about HydraFacial treatments at KIAMO Skin
+            <a href="/hydrafacial/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+              Learn more about HydraFacial across San Diego at KIAMO Skin
             </a>
           </p>
         </div>

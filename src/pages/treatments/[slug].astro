@@ -287,6 +287,24 @@ const localAreas = treatment.areas
                 See all areas served across San Diego County
               </a>
             </p>
+            {
+              treatment.slug === 'hydrafacial' && (
+                <p class="t-body mt-5 text-[0.9375rem]">
+                  <a href="/hydrafacial/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                    Browse HydraFacial by San Diego neighborhood
+                  </a>
+                </p>
+              )
+            }
+            {
+              treatment.slug === 'hyperpigmentation' && (
+                <p class="t-body mt-5 text-[0.9375rem]">
+                  <a href="/hyperpigmentation-treatment/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                    Browse hyperpigmentation treatment by San Diego neighborhood
+                  </a>
+                </p>
+              )
+            }
           </div>
         </div>
       )

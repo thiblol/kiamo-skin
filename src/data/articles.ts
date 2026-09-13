@@ -74,7 +74,7 @@ export const articles: Article[] = [
         p: 'Almost everyone who books here for pigmentation arrives with a product that did not work. Usually a brightening serum, sometimes a hydroquinone cream bought without guidance, occasionally the aftermath of a peel somewhere else that left the marks darker than before. The product is rarely the problem. The problem is that three different conditions produce brown patches on a face, they look similar enough to confuse, and the treatment that clears one can visibly worsen another.',
       },
       {
-        p: 'So before choosing a treatment, it is worth working out which one you actually have.',
+        p: 'So before choosing a treatment, it is worth working out which one you actually have. KIAMO offers <a href="/hyperpigmentation-treatment/">hyperpigmentation treatment across San Diego neighborhoods</a> from the Mission Hills studio, with protocols calibrated for each presentation.',
       },
 
       { h2: 'What are the three kinds of hyperpigmentation?' },
@@ -547,7 +547,7 @@ export const articles: Article[] = [
       {
         question: 'What is the best facial treatment for Black skin?',
         answer:
-          'There is no single answer, because it depends on what the skin is doing. Congestion and dullness are usually addressed with a HydraFacial, a reactive barrier with enzyme therapy, pigmentation with a prepared series of peels, and scarring or texture with microchanneling. The first appointment is an assessment rather than a fixed protocol.',
+          'There is no single answer, because it depends on what the skin is doing. Congestion and dullness are usually addressed with a <a href="/hydrafacial/">HydraFacial</a> from KIAMO Skin in Mission Hills, a reactive barrier with enzyme therapy, pigmentation with a prepared series of peels, and scarring or texture with microchanneling. The first appointment is an assessment rather than a fixed protocol.',
       },
     ],
     cta: { label: 'See Procell microchanneling', href: '/treatments/procell-microchanneling/' },
