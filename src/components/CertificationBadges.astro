@@ -1,0 +1,85 @@
+---
+/**
+ * CertificationBadges component - Displays professional certifications
+ * Supports two variants: 'full' (standalone section) and 'inline' (embedded in content)
+ */
+
+interface Props {
+  variant?: 'full' | 'inline';
+  class?: string;
+}
+
+const { variant = 'full', class: className = '' } = Astro.props;
+
+const certifications = [
+  {
+    image: '/images/hydrafacial-certified-provider-san-diego.jpg',
+    alt: 'HydraFacial Certified Provider certificate - KIAMO Skin, San Diego California',
+    title: 'HydraFacial Certified Provider',
+    description: 'Advanced certification in HydraFacial treatment protocols, contraindications, and safety procedures for all skin types.',
+  },
+  {
+    image: '/images/dmk-certified-skin-therapist-kiki-kiamo.jpg',
+    alt: 'DMK Certified Skin Therapist certificate - Kiki, KIAMO Skin San Diego',
+    title: 'DMK Certified Skin Therapist',
+    description: 'Specialized training in DMK Enzyme Therapy and DMK\'s signature treatment protocols for skin revision.',
+  },
+];
+---
+
+{variant === 'full' ? (
+  <section class={`bg-porcelain border-y border-line ${className}`}>
+    <div class="wrap py-16 md:py-20">
+      <div class="max-w-[68ch] mx-auto text-center">
+        <p class="t-eyebrow text-ink-soft">Professional Credentials</p>
+        <h2 class="t-h2 mt-5 mb-4">Licensed & Certified</h2>
+        <p class="t-body text-ink-soft">
+          California-licensed esthetician with advanced certifications in clinical-grade treatments and protocols.
+        </p>
+      </div>
+
+      <div class="mt-12 grid gap-8 md:grid-cols-2 md:gap-10 max-w-5xl mx-auto">
+        {certifications.map((cert) => (
+          <div class="credential-card group">
+            <div class="aspect-[4/3] overflow-hidden rounded-sm border border-line bg-ivory">
+              <img
+                src={cert.image}
+                alt={cert.alt}
+                loading="lazy"
+                class="size-full object-contain p-4 transition-transform duration-500 group-hover:scale-105"
+              />
+            </div>
+            <div class="mt-5">
+              <h3 class="t-service text-[1rem]">{cert.title}</h3>
+              <p class="t-body text-[0.9375rem] text-ink-soft mt-2 leading-relaxed">
+                {cert.description}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="mt-10 text-center max-w-[68ch] mx-auto">
+        <p class="t-body text-[0.9375rem] text-ink-soft">
+          <strong class="text-ink">California Esthetician License</strong> — Licensed and regulated by the
+          California Board of Barbering and Cosmetology
+        </p>
+      </div>
+    </div>
+  </section>
+) : (
+  <div class={`inline-credentials ${className}`}>
+    <div class="flex flex-wrap gap-6 items-center">
+      {certifications.map((cert) => (
+        <div class="inline-badge group flex-shrink-0">
+          <img
+            src={cert.image}
+            alt={cert.alt}
+            loading="lazy"
+            class="h-20 w-auto object-contain border border-line rounded-sm bg-ivory p-2 transition-transform duration-300 group-hover:scale-105"
+          />
+        </div>
+      ))}
+    </div>
+  </div>
+)}

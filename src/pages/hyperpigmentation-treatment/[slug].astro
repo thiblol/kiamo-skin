@@ -1,0 +1,326 @@
+---
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Reveal from '../../components/Reveal.astro';
+import Button from '../../components/Button.astro';
+import NapBlock from '../../components/NapBlock.astro';
+import LocationMap from '../../components/LocationMap.astro';
+import CertificateModal from '../../components/CertificateModal.astro';
+import { hyperpigmentationAreas } from '../../data/hyperpigmentation-areas';
+import { business } from '../../config/business';
+import { CTA_LABEL } from '../../config/nav';
+import HyperpigmentationAreaSchema from '../../components/schema/HyperpigmentationAreaSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import pigmentation from '../../assets/hyperpigmentation-treatment-melanin-rich-skin-san-diego.jpg';
+
+export function getStaticPaths() {
+  return hyperpigmentationAreas.map((area) => ({
+    params: { slug: area.slug },
+    props: { area },
+  }));
+}
+
+const { area } = Astro.props;
+
+const adjacentAreaLinks = area.adjacentAreas
+  .map((slug) => hyperpigmentationAreas.find((a) => a.slug === slug))
+  .filter((a): a is typeof area => a !== undefined);
+
+const imageAlt = `Clear, even-toned skin after corrective hyperpigmentation treatment for melanin-rich skin`;
+---
+
+<BaseLayout title={area.title} description={area.description}>
+  <HyperpigmentationAreaSchema slot="head" area={area} />
+  <BreadcrumbSchema
+    slot="head"
+    trail={[
+      { name: 'Treatments', path: '/treatments/' },
+      { name: 'Hyperpigmentation', path: '/treatments/hyperpigmentation/' },
+      { name: area.name, path: `/hyperpigmentation-treatment/${area.slug}/` },
+    ]}
+  />
+  {area.faqs.length > 0 && (
+    <script
+      slot="head"
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: area.faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: faq.answer,
+          },
+        })),
+      })}
+    />
+  )}
+
+  <article>
+    <header class="bg-blush">
+      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+        <p class="t-eyebrow text-ink-soft">
+          <a href="/treatments/hyperpigmentation/" class="hover:text-rose">Hyperpigmentation Treatment</a> · {area.name}
+        </p>
+        <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">{area.h1}</h1>
+        <div class="t-body mt-7 max-w-[62ch] text-[1.0625rem] leading-relaxed">
+          <p class="font-medium">{area.intro.split('.')[0]}.</p>
+          <p class="mt-4">{area.intro.split('.').slice(1).join('.').trim()}</p>
+        </div>
+        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a href={business.phone.href} class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose">
+            {business.phone.display}
+          </a>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[0.875rem] text-ink-soft">
+          <span class="font-medium">{business.experience} experience</span>
+          <span aria-hidden="true">·</span>
+          <span>All skin types (Fitzpatrick I-VI)</span>
+          <span aria-hidden="true">·</span>
+          <span>Licensed Esthetician</span>
+          <span aria-hidden="true">·</span>
+          <span>Mission Hills, San Diego</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.7fr] md:gap-20">
+        <div>
+          {/* Authority Section */}
+          <Reveal>
+            <h2 class="t-h3">{area.authority.heading}</h2>
+            <p class="t-body mt-7">{area.authority.body}</p>
+          </Reveal>
+
+          {/* Certification Badges */}
+          <Reveal class="mt-8 block">
+            <div class="pt-6 border-t border-line">
+              <p class="t-body text-[0.875rem] text-ink-soft mb-4">Advanced certifications — click to view:</p>
+              <div class="flex gap-6">
+                <CertificateModal
+                  id={`cert-hydrafacial-${area.slug}`}
+                  image="/images/hydrafacial-certified-provider-san-diego.jpg"
+                  alt="HydraFacial Certified Provider certificate - KIAMO Skin, San Diego California"
+                  title="HydraFacial Certified Provider"
+                />
+                <CertificateModal
+                  id={`cert-dmk-${area.slug}`}
+                  image="/images/dmk-certified-skin-therapist-kiki-kiamo.jpg"
+                  alt="DMK Certified Skin Therapist certificate - Kiki, KIAMO Skin San Diego"
+                  title="DMK Certified Skin Therapist"
+                />
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Uniqueness Section */}
+          <Reveal class="mt-16 block">
+            <h2 class="t-h3">{area.uniqueness.heading}</h2>
+            <p class="t-body mt-7">{area.uniqueness.body}</p>
+            {area.uniqueness.bullets && (
+              <ul class="mt-6 m-0 list-none space-y-3 p-0">
+                {area.uniqueness.bullets.map((bullet) => (
+                  <li class="t-body flex gap-4 text-[0.9375rem]">
+                    <span aria-hidden="true" class="text-rose">—</span>
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </Reveal>
+
+          {/* Getting Here */}
+          <Reveal class="mt-16 block">
+            <h2 class="t-h3">Getting here from {area.name}</h2>
+            <p class="t-body mt-7">{area.gettingHere}</p>
+            <LocationMap origin={area.name} aspect="aspect-16/10" class="mt-9" />
+          </Reveal>
+        </div>
+
+        <aside>
+          <Image
+            src={pigmentation}
+            alt={imageAlt}
+            widths={[400, 600]}
+            sizes="(min-width: 768px) 30vw, 100vw"
+            loading="lazy"
+            class="mb-8 w-full"
+          />
+          <div class="border border-line bg-ivory p-8">
+            <h2 class="t-eyebrow text-ink-soft">The studio</h2>
+            <div class="mt-7">
+              <NapBlock tone="light" />
+            </div>
+            <div class="mt-8">
+              <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    {/* Depth Section - Process */}
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <Reveal>
+          <h2 class="t-h3">{area.depth.heading}</h2>
+          <p class="t-body mt-7 max-w-[62ch]">{area.depth.body}</p>
+          {area.depth.process && (
+            <ol class="mt-12 m-0 list-none space-y-9 p-0 max-w-[68ch]">
+              {area.depth.process.map((step, i) => (
+                <li class="border-t border-line pt-7">
+                  <p class="t-meta text-rose">{String(i + 1).padStart(2, '0')}</p>
+                  <h3 class="t-service mt-3 text-[1.125rem] md:text-[1.3125rem]">{step.step}</h3>
+                  <p class="t-body mt-3 text-[0.9375rem]">{step.description}</p>
+                </li>
+              ))}
+            </ol>
+          )}
+        </Reveal>
+      </div>
+    </section>
+
+    {/* Intent Section */}
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <h2 class="t-h3">{area.intent.heading}</h2>
+            <p class="t-body mt-7">{area.intent.body}</p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    {/* Pricing */}
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:gap-16">
+          <div>
+            <h2 class="t-h3">Hyperpigmentation treatment pricing in {area.name}</h2>
+            <p class="t-body mt-7 max-w-[58ch]">
+              Hyperpigmentation treatment pricing depends on which modality is selected. Chemical peels, microchanneling, HydraFacial, and DMK enzyme therapy each address different concerns and have different pricing structures.
+            </p>
+            <p class="t-body mt-5 max-w-[58ch]">
+              Chemical peels range from $199-$299. Procell Microchanneling is $475 per session. HydraFacial is $259. Most clients need a series of treatments spaced 4-6 weeks apart for visible pigmentation fading.
+            </p>
+            <p class="t-body mt-5 text-[0.875rem] text-ink-soft">
+              First-time clients start at $249 for consultation and treatment.{' '}
+              <a href="/contact/" class="border-b border-ink/40 hover:border-rose hover:text-rose">
+                Questions about pricing? Contact us
+              </a>.
+            </p>
+          </div>
+          <div class="border border-line bg-porcelain p-8">
+            <h3 class="t-eyebrow text-ink-soft">Treatment options</h3>
+            <dl class="mt-7 m-0 space-y-6">
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">Chemical Peels</dt>
+                <dd class="t-price m-0 mt-2">$199–$299</dd>
+              </div>
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">Procell Microchanneling</dt>
+                <dd class="t-price m-0 mt-2">$475</dd>
+              </div>
+              <div class="pb-0">
+                <dt class="t-service text-[1rem]">First-time clients</dt>
+                <dd class="t-price m-0 mt-2">$249</dd>
+              </div>
+            </dl>
+            <div class="mt-8">
+              <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {/* FAQs */}
+    {area.faqs.length > 0 && (
+      <section class="bg-blush">
+        <div class="wrap section-y">
+          <p class="t-eyebrow text-ink-soft">Before you book</p>
+          <h2 class="t-h2 mt-5">Hyperpigmentation questions from {area.name}</h2>
+          <div class="mt-12 max-w-[68ch]">
+            {area.faqs.map((faq) => (
+              <div class="border-b border-line">
+                <details class="group">
+                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
+                    <span>{faq.question}</span>
+                    <span
+                      aria-hidden="true"
+                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <div class="t-body pb-6 text-[0.9375rem]">{faq.answer}</div>
+                </details>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    {/* CTA Section */}
+    <section class="bg-ivory">
+      <div class="wrap section-y text-center">
+        <h2 class="t-h3 max-w-[28ch] mx-auto">Ready to address your hyperpigmentation in {area.name}?</h2>
+        <p class="t-body mt-5 max-w-[52ch] mx-auto">
+          One treatment room. One practitioner. Request an appointment and Kiki will confirm a time by the next business day.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a href={business.phone.href} class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose">
+            {business.phone.display}
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {/* Adjacent Areas - Lateral Linking */}
+    {adjacentAreaLinks.length > 0 && (
+      <section class="bg-porcelain">
+        <div class="wrap section-y">
+          <h2 class="t-h3">Hyperpigmentation treatment in nearby neighborhoods</h2>
+          <ul class="mt-10 m-0 grid list-none gap-x-10 gap-y-0 p-0 md:grid-cols-2">
+            {adjacentAreaLinks.map((adjArea) => (
+              <li class="border-b border-line">
+                <a href={`/hyperpigmentation-treatment/${adjArea.slug}/`} class="group block py-7">
+                  <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                    Hyperpigmentation treatment in {adjArea.name}
+                  </h3>
+                  <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">
+                    {adjArea.name === 'Hillcrest' ? '5 minutes away' :
+                     adjArea.name === 'University Heights' ? '8 minutes away' :
+                     adjArea.name === 'North Park' ? '8 minutes away' :
+                     adjArea.name === 'Little Italy' ? '7 minutes away' :
+                     adjArea.name === 'Downtown San Diego' ? '10 minutes away' :
+                     'Nearby'}
+                  </p>
+                </a>
+              </li>
+            ))}
+          </ul>
+          <p class="t-body mt-9 text-[0.9375rem]">
+            <a href="/treatments/hyperpigmentation/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
+              Learn more about hyperpigmentation treatment at KIAMO Skin
+            </a>
+          </p>
+        </div>
+      </section>
+    )}
+  </article>
+</BaseLayout>
+
+<style>
+  /* Safari still needs this to drop the disclosure triangle. */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
