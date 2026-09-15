@@ -1,13 +1,13 @@
 import type { ImageMetadata } from 'astro';
 import { verifiedPrices, PRICE_ON_CONSULTATION } from '../config/business';
-import hydrafacial from '../assets/hydrafacial-syndeo-treatment-mission-hills-san-diego.jpg';
-import scalp from '../assets/keravive-scalp-treatment-mission-hills-san-diego.jpg';
-import enzyme from '../assets/dmk-enzyme-therapy-treatment-mission-hills-san-diego.jpg';
+import hydrafacial from '../assets/hydrafacial-treatment-san-diego.jpg';
+import scalp from '../assets/keravive-scalp-treatment-san-diego.jpg';
+import enzyme from '../assets/dmk-enzyme-therapy-san-diego.jpg';
 import acne from '../assets/acne-treatment-facial-extraction-mission-hills-san-diego.jpg';
 import hyperpigmentationTreatment from '../assets/hyperpigmentation-treatment-serum-application-san-diego.jpg';
 import correctiveSkin from '../assets/corrective-skin-treatment-consultation-mission-hills-san-diego.jpg';
 import dermaplane from '../assets/dermaplaning-facial-treatment-mission-hills-san-diego.jpg';
-import procell from '../assets/procell-microchanneling-treatment-mission-hills-san-diego.jpg';
+import procell from '../assets/procell-microchanneling-san-diego.jpg';
 import liraPeel from '../assets/lira-chemical-peel-treatment-mission-hills-san-diego.jpg';
 
 export interface Treatment {
@@ -79,7 +79,7 @@ export const treatments: Treatment[] = [
     intro:
       'HydraFacial Syndeo performs three clinical actions simultaneously: enzymatic resurfacing lifts dead surface cells without abrasive scrubbing, patented vortex extraction vacuums mineral deposits and sebum from follicles at controlled pressure, and precision infusion floods skin with hydration and antioxidants while pores remain receptive. This is medical-grade extraction technology, not a spa facial with suction. <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills clients</a> walk to the studio. Urban professionals from <a href="/hydrafacial/downtown-san-diego/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Downtown San Diego</a>, <a href="/hydrafacial/gaslamp-quarter/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Gaslamp Quarter</a>, and <a href="/hydrafacial/little-italy/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Little Italy</a> book same-day lunchtime appointments. Residential clients from <a href="/hydrafacial/bankers-hill/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Banker\'s Hill</a> and <a href="/hydrafacial/hillcrest/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Hillcrest</a> are 5 minutes away for monthly maintenance. Coastal clients from <a href="/hydrafacial/point-loma/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Point Loma</a>, <a href="/hydrafacial/harbor-island/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Harbor Island</a>, and <a href="/hydrafacial/midway-district/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Midway District</a> address salt air dehydration and barrier damage from waterfront exposure. HydraFacial is the most forgiving corrective treatment—safe for all Fitzpatrick skin types including melanin-rich skin with zero risk of post-inflammatory hyperpigmentation.',
     image: hydrafacial,
-    imageAlt: 'A HydraFacial treatment in progress in the KIAMO Skin studio',
+    imageAlt: 'HydraFacial treatment in progress at KIAMO Skin San Diego — licensed esthetician performing professional facial treatment',
     goodFor: [
       'Congested pores and blackheads',
       'Dull, dehydrated skin',
@@ -137,7 +137,7 @@ export const treatments: Treatment[] = [
     intro:
       'HydraFacial Keravive deeply cleanses, exfoliates, and hydrates the scalp while removing buildup that contributes to dryness, flaking, and irritation. The Keravive Peptide Complex nourishes sebaceous glands and supports a healthier environment for hair growth. In San Diego, hard water — averaging 16 grains per gallon — makes scalp buildup especially common. From <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla ocean swimmers</a> dealing with daily salt water exposure to <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas surfers</a> facing wind and UV damage, scalp conditions here are shaped by year-round outdoor living. Inland clients from <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista</a> and <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a> book Keravive for hard water mineral deposits that shampoo cannot clear. Every treatment includes a take-home peptide spray to continue supporting scalp health between visits.',
     image: scalp,
-    imageAlt: 'Keravive scalp treatment in progress at KIAMO Skin Mission Hills - licensed esthetician performing professional scalp therapy with Keravive device',
+    imageAlt: 'Licensed esthetician performing Keravive scalp therapy on a client at KIAMO Skin San Diego — clinical scalp treatment for buildup, flaking, and hair-thinning support',
     goodFor: [
       'Flaking, itching, or scalp tightness',
       'Product buildup and hard water mineral deposits',
@@ -187,7 +187,7 @@ export const treatments: Treatment[] = [
     intro:
       'DMK Enzyme Therapy is designed to restore healthy skin function rather than simply exfoliating the surface. By supporting the skin\'s natural processes, it helps strengthen the skin barrier while encouraging healthy circulation and lymphatic activity. It\'s especially beneficial for skin that feels over-exfoliated, sensitized, inflamed, or slow to heal—common states for <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas surfers</a>, <a href="/service-areas/pacific-beach/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Pacific Beach residents</a>, and anyone whose barrier has been stripped by salt water, wind, or aggressive product use. This approach is part of KIAMO Skin\'s broader <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatment</a> philosophy, where treatment selection is based on current skin condition rather than following a fixed protocol.',
     image: enzyme,
-    imageAlt: 'DMK enzyme therapy treatment in progress at KIAMO Skin Mission Hills - licensed esthetician performing corrective enzyme masque facial',
+    imageAlt: 'DMK enzyme therapy treatment in progress at KIAMO Skin San Diego — licensed esthetician performing corrective enzyme therapy on a client',
     goodFor: [
       'A compromised skin barrier — stinging, redness, or tightness after products',
       'Skin recovering from over-exfoliation or aggressive at-home products',
@@ -233,7 +233,7 @@ export const treatments: Treatment[] = [
     intro:
       'Procell Therapies microchanneling is a skin resurfacing treatment that creates thousands of microscopic channels in the skin surface using a precision-engineered handpiece. Those channels trigger the skin\'s natural wound-healing response — collagen production, elastin remodeling, and controlled surface cell renewal. What separates Procell from conventional microneedling is what happens immediately after the channels are created. Procell\'s proprietary stem cytokine growth factor serums are applied directly into the open channels, communicating with skin cells to direct the repair process toward specific outcomes: collagen synthesis, pigment correction, and texture resurfacing. The result is faster recovery and more targeted correction than standard microneedling alone. Ideal candidates include those with acne scarring (ice pick, boxcar, and rolling scar types), post-inflammatory hyperpigmentation (PIH) — dark marks left after acne, injury, or trauma, uneven skin tone and diffuse sun damage, skin texture irregularities and enlarged pores, fine lines and mild skin laxity, and Fitzpatrick Type IV, V, and VI skin tones. For clients traveling from <a href="/service-areas/carlsbad/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Carlsbad</a>, <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a>, or <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas</a>, the series is planned as a block at consultation — scheduling all three sessions at once accounts for the drive and makes completion realistic.',
     image: procell,
-    imageAlt: 'Procell microchanneling treatment in progress at KIAMO Skin Mission Hills - licensed esthetician performing microneedling for acne scars and texture',
+    imageAlt: 'Procell microchanneling treatment in progress at KIAMO Skin San Diego — licensed esthetician performing corrective microchanneling on a client',
     goodFor: [
       'Acne scarring — ice pick, boxcar, and rolling scar types',
       'Post-inflammatory hyperpigmentation (PIH) — dark marks left after acne, injury, or trauma',

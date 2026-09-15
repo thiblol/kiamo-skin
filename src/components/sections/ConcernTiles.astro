@@ -2,42 +2,39 @@
 import { Image } from 'astro:assets';
 import Reveal from '../Reveal.astro';
 import PanelWipe from '../PanelWipe.astro';
-import pigmentation from '../../assets/hyperpigmentation-treatment-melanin-rich-skin-san-diego.jpg';
-import acne from '../../assets/acne-treatment-melanin-rich-skin-san-diego.jpg';
-import barrier from '../../assets/skin-barrier-repair-treatment-san-diego.jpg';
-import scalp from '../../assets/scalp-treatment-keravive-san-diego.jpg';
+import pigmentation from '../../assets/lira-chemical-peel-treatment-mission-hills-san-diego.jpg';
+import acne from '../../assets/procell-microchanneling-san-diego.jpg';
+import barrier from '../../assets/dmk-enzyme-therapy-san-diego.jpg';
+import scalp from '../../assets/keravive-scalp-treatment-san-diego.jpg';
 
 /**
- * Spec §10: tiles show the RESOLVED state. The label names the concern; the image
- * shows where treatment gets you. Visible damage appears only in the matched
- * before/after pairs further down the page.
- *
- * Alt text therefore describes what is actually in the frame, not the label.
+ * Tiles show the treatment in action, sourced from each linked treatment page.
+ * Alt text describes what is actually in the frame.
  */
 const tiles = [
   {
     label: 'Pigmentation & Melasma',
     href: '/treatments/melasma/',
     image: pigmentation,
-    alt: 'Close portrait of even, clear skin in warm natural light',
+    alt: 'Lira chemical peel application in progress at KIAMO Skin San Diego — licensed esthetician applying professional peel for pigmentation and melasma correction',
   },
   {
     label: 'Acne & Scarring',
     href: '/treatments/procell-microchanneling/',
     image: acne,
-    alt: 'Profile portrait of smooth, healthy cheek and jawline',
+    alt: 'Procell microchanneling treatment in progress at KIAMO Skin San Diego — licensed esthetician performing corrective microchanneling on a client',
   },
   {
     label: 'Barrier & Dehydration',
     href: '/treatments/dmk-enzyme-therapy/',
     image: barrier,
-    alt: 'Side-lit portrait of calm, well-hydrated skin with visible natural texture',
+    alt: 'DMK enzyme therapy treatment in progress at KIAMO Skin San Diego — licensed esthetician performing corrective enzyme therapy on a client',
   },
   {
     label: 'Scalp Health',
     href: '/treatments/keravive-scalp/',
     image: scalp,
-    alt: 'Detail of a healthy scalp and hairline at the part',
+    alt: 'Keravive scalp treatment in progress at KIAMO Skin San Diego — licensed esthetician performing clinical scalp therapy on a client',
   },
 ];
 ---
