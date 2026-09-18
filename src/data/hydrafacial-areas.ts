@@ -801,4 +801,102 @@ export const hydrafacialAreas: HydrafacialArea[] = [
     ],
     schemaDescription: `HydraFacial treatments for Gaslamp Quarter clients at KIAMO Skin in Mission Hills. Pre-event glow specialists, 7 minutes from Fifth Avenue, safe for all skin tones.`,
   },
+  {
+    slug: 'pacific-beach',
+    name: 'Pacific Beach',
+    title: 'HydraFacial in Pacific Beach San Diego - Coastal Skin Specialists | KIAMO',
+    description: 'Professional HydraFacial treatments serving Pacific Beach. 15 minutes from KIAMO Skin in Mission Hills. Salt air, UV, and beach-lifestyle skin specialists. Safe for all skin types (Fitzpatrick I-VI). Book today.',
+    h1: 'HydraFacial in Pacific Beach, San Diego',
+    intro: `KIAMO Skin provides HydraFacial treatments to Pacific Beach clients living the coastal lifestyle between Crystal Pier and Tourmaline Surfing Park. Located about 15 minutes away in Mission Hills at 3067 Reynard Way, our studio addresses the specific skin challenges that come with daily beach exposure - salt air, UV reflection off the water, sunscreen buildup, and the dehydration that ocean wind creates. Every HydraFacial is performed by Kiki, a California licensed esthetician with 7+ years of experience, safe for all skin types (Fitzpatrick I-VI).`,
+    authority: {
+      heading: 'Coastal lifestyle skin specialists',
+      body: `Pacific Beach sits directly on the Pacific Ocean between Mission Bay and La Jolla, which means year-round exposure to salt air, ocean wind, and UV intensified by water reflection. KIAMO Skin uses HydraFacial Syndeo with AI-powered skin analysis to customize treatments for the specific barrier breakdown, dehydration, and sun-related pigmentation that beach-lifestyle skin develops. Kiki has 7+ years of experience treating coastal skin and understands the difference between beach-area clients who swim, surf, or run on the boardwalk daily and those whose exposure is occasional. The 15-minute drive from Pacific Beach via I-8 makes monthly barrier maintenance realistic, and the single-practitioner model means you build a treatment relationship rather than explaining your skin to a new provider each visit.`,
+    },
+    uniqueness: {
+      heading: 'HydraFacial for beach-lifestyle skin',
+      body: `Pacific Beach clients face skin challenges that inland neighborhoods do not. Daily exposure to salt air, UV reflection off the water, sunscreen and zinc oxide buildup from beach days, and the dehydration that ocean wind creates all need specific treatment. KIAMO's HydraFacial approach for Pacific Beach addresses:`,
+      bullets: [
+        'Salt air dehydration - ocean wind and salt strip the skin barrier with every beach day',
+        'Sunscreen and zinc oxide buildup - mineral and chemical SPF accumulates in pores along the hairline, forehead, and neck',
+        'UV reflection off water - sun damage accumulates faster on boardwalk, beach, and bay-side skin',
+        'Barrier repair focus - strengthens the protective layer against ongoing coastal stress',
+        'Anti-aging focus for outdoor lifestyle - addresses accumulated photoaging from years of beach exposure',
+      ],
+    },
+    depth: {
+      heading: 'The HydraFacial process at KIAMO for coastal skin',
+      body: `HydraFacial combines cleansing, extraction, and intensive hydration in one 45-minute session using patented Vortex-Fusion technology - ideal for Pacific Beach skin dealing with constant salt, sunscreen, and sun exposure. Anti-aging hydrafacial in Pacific Beach is one of the most common requests we see, particularly from clients who have spent years on the boardwalk, in the water, or running the seawall and now want to address the photoaging that lifestyle produces.`,
+      process: [
+        {
+          step: 'Cleanse + Resurface',
+          description: 'Removes salt deposits, mineral SPF buildup, and environmental debris from daily beach exposure. Gentle enzymatic exfoliation safe for barrier-stressed skin common in Pacific Beach clients.',
+        },
+        {
+          step: 'Extract + Hydrate',
+          description: 'Vortex suction clears the sunscreen and sebum that clog pores along the hairline and forehead - the most common complaint from Pacific Beach clients. Simultaneous hydration floods the dehydrated barrier with hyaluronic acid.',
+        },
+        {
+          step: 'Fuse + Protect',
+          description: 'Antioxidants and peptides are delivered to strengthen the barrier against ongoing coastal exposure. For anti-aging concerns, brightening boosters address the cumulative sun damage that beach-lifestyle skin develops over years.',
+        },
+      ],
+    },
+    intent: {
+      heading: 'Who books HydraFacial in Pacific Beach',
+      body: `Pacific Beach clients book HydraFacial for barrier repair after noticing their skin has become reactive, tight, or sensitized from constant beach exposure. Many are surfers, paddleboarders, open-water swimmers, runners on the boardwalk, or simply residents who walk their dog on the beach every morning. Anti-aging hydrafacial in Pacific Beach is increasingly common among clients in their 30s and 40s who have accumulated years of UV reflection damage and want to address the fine lines, uneven tone, and texture that beach lifestyle produces. Dermaplaning pairs naturally with HydraFacial for Pacific Beach clients - the blade removes the sunscreen-loaded surface layer that even daily cleansing cannot, and HydraFacial then hydrates and infuses the freshly exposed skin. HydraFacial is the gentlest corrective option for already-stressed skin - no downtime, no purging, and it rebuilds the barrier rather than stripping it further. Regular monthly treatments (realistic when the studio is 15 minutes away) maintain results against continuous coastal exposure.`,
+    },
+    gettingHere: `From Crystal Pier or the Pacific Beach boardwalk, take Garnet Avenue east to Ingraham Street, continue to Mission Boulevard, take I-8 east to Highway 163 south, exit Washington Street and head west. About 15 minutes. From Tourmaline Surfing Park or the north end of Pacific Beach, take La Jolla Mesa Drive to La Jolla Village Drive, then I-5 south to I-8 east, exit Highway 163 south. From Mission Beach or the south end, take Mission Boulevard north to I-8 east. Free parking on site at 3067 Reynard Way.`,
+    landmarks: [
+      'Crystal Pier',
+      'Garnet Avenue',
+      'Pacific Beach Drive',
+      'Tourmaline Surfing Park',
+      'Pacific Beach Boardwalk',
+      'Mission Bay (adjacent)',
+      'Kate Sessions Park',
+      'Pacific Beach Plaza',
+      'North Pacific Beach',
+      'Ocean Front Walk',
+      'Reverie at the Park',
+      'Mission Boulevard corridor',
+    ],
+    adjacentAreas: ['hillcrest', 'downtown-san-diego', 'little-italy'],
+    geo: {
+      latitude: 32.7978,
+      longitude: -117.2522,
+    },
+    geoRadius: '2000',
+    cityModifiers: [
+      'Direct Pacific Ocean exposure with daily salt spray',
+      'UV reflection off water intensifies sun damage',
+      'Sunscreen and zinc oxide buildup common from beach days',
+      'Marine layer sits heaviest along the coast in May and June',
+      'Active outdoor lifestyle - surfing, paddleboarding, running, beach volleyball',
+      'Higher UV exposure year-round than inland San Diego neighborhoods',
+    ],
+    postalCodes: ['92109'],
+    faqs: [
+      {
+        question: 'How far is KIAMO Skin from Pacific Beach?',
+        answer: `KIAMO Skin is about 15 minutes from Pacific Beach via I-8 east to Highway 163 south, exiting Washington Street. The studio is at 3067 Reynard Way in Mission Hills with free parking. Close enough for monthly maintenance treatments, which is the typical cadence for barrier repair against constant coastal exposure.`,
+      },
+      {
+        question: 'Is HydraFacial safe for darker skin tones in Pacific Beach?',
+        answer: `Yes. HydraFacial is safe for all Fitzpatrick types (I-VI) including melanin-rich skin. It uses gentle suction and hydration with zero risk of post-inflammatory hyperpigmentation. KIAMO specializes in melanin-rich skin - Kiki has 7+ years of experience customizing treatments for every skin tone, and the protocol is the same regardless of beach exposure level.`,
+      },
+      {
+        question: 'Can HydraFacial help with sun damage from beach living in Pacific Beach?',
+        answer: `Yes. Anti-aging hydrafacial in Pacific Beach addresses accumulated sun damage through brightening boosters (Britenol for tone, peptides for firmness, growth factors for barrier repair) applied after the extraction step. For significant photoaging, HydraFacial is typically paired with corrective treatments like Lira chemical peels, with HydraFacial maintaining results between peel sessions and keeping the barrier hydrated against ongoing UV exposure.`,
+      },
+      {
+        question: 'Does dermaplaning help with Pacific Beach skin?',
+        answer: `Yes - dermaplaning pairs naturally with HydraFacial for Pacific Beach clients. The blade removes the sunscreen-loaded surface layer (mineral SPF, zinc oxide, and sebum) that daily cleansing cannot fully clear, and the immediately following HydraFacial then hydrates and infuses the freshly exposed skin. The <a href="/journal/dermaplaning-safe-dark-skin-san-diego/">dermaplaning guide for melanin-rich skin</a> covers technique and timing in more detail.`,
+      },
+      {
+        question: 'How often should Pacific Beach residents get HydraFacial?',
+        answer: `Monthly treatments maintain the barrier against constant coastal exposure. Pacific Beach clients who swim, surf, or spend daily time on the beach often notice their skin becomes reactive or tight between monthly sessions - that is the salt air and UV compromising the barrier. Regular HydraFacial keeps the protective layer strong and addresses accumulated sun damage before it becomes harder to reverse.`,
+      },
+    ],
+    schemaDescription: `HydraFacial treatments for Pacific Beach clients at KIAMO Skin in Mission Hills. 15 minutes via I-8, beach-lifestyle skin specialists addressing salt air, sunscreen buildup, and UV reflection damage. Safe for all skin types (Fitzpatrick I-VI).`,
+  },
 ];

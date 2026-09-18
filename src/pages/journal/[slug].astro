@@ -8,6 +8,7 @@ import { CTA_LABEL } from '../../config/nav';
 import ArticleSchema from '../../components/schema/ArticleSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
+import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 
 export function getStaticPaths() {
   return articles.map((article) => ({
@@ -19,11 +20,13 @@ export function getStaticPaths() {
 const { article } = Astro.props;
 const others = articles.filter((a) => a.slug !== article.slug);
 const faqs = article.faqs ?? [];
+const articleUrl = `${Astro.site ?? 'https://kiamoskin.com'}journal/${article.slug}/`;
 ---
 
 <BaseLayout title={article.title} description={article.description} ogType="article">
   <ArticleSchema slot="head" article={article} />
   {faqs.length > 0 && <FaqSchema slot="head" faqs={faqs} />}
+  <SpeakableSchema slot="head" url={articleUrl} />
   <BreadcrumbSchema
     slot="head"
     trail={[
@@ -45,6 +48,11 @@ const faqs = article.faqs ?? [];
           </p>
           <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[3.5rem]">{article.headline}</h1>
           <p class="t-body mt-7 text-[1.125rem]">{article.standfirst}</p>
+          {article.quickAnswer && (
+            <p class="quick-answer t-body mt-7 border-l-2 border-rose pl-6 text-[1.0625rem] font-medium max-w-[62ch]">
+              {article.quickAnswer}
+            </p>
+          )}
         </div>
 
         <Image
@@ -151,7 +159,7 @@ const faqs = article.faqs ?? [];
           <div class="wrap section-y">
             <p class="t-eyebrow text-ink-soft">Common questions</p>
             <h2 class="t-h2 mt-5">{article.faqHeading ?? 'Hyperpigmentation questions'}</h2>
-            <div class="mt-12 max-w-[68ch]">
+            <div class="faq-section mt-12 max-w-[68ch]">
               {faqs.map((faq) => (
                 <div class="border-b border-line">
                   <details class="group">

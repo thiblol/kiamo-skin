@@ -50,6 +50,14 @@ export interface Article {
    * H2 about hyperpigmentation over questions that are not about it.
    */
   faqHeading?: string;
+  /**
+   * 2-sentence direct answer block rendered above the body, marked with the
+   * .quick-answer CSS class so SpeakableSchema and AI Overview extractors pick
+   * it up. Must mention the named entity and the answer in plain language,
+   * with no filler openers. Optional - the journal index still works without
+   * it, but articles targeting featured-snippet queries should set one.
+   */
+  quickAnswer?: string;
   /** Internal link out at the end of the piece. */
   cta: { label: string; href: string };
 }
@@ -562,9 +570,11 @@ export const articles: Article[] = [
       'The question is not really whether dermaplaning works on darker skin. It is whether the blade angle and pressure match the skin in front of it.',
     readingTime: '7 min read',
     datePublished: '2026-08-13',
-    dateModified: '2026-08-13',
+    dateModified: '2026-09-18',
     image: dermaplaning,
     imageAlt: 'Dermaplaning blade held at 45 degrees above deep brown skin, with angle annotation',
+    quickAnswer:
+      'Dermaplaning is safe for Black skin when the blade angle and pressure match the skin in front of it. The treatment uses no heat and no acid - the two inputs most associated with post-inflammatory hyperpigmentation in deeper skin tones - so the risk comes from technique, not the blade itself. At 45 degrees with light, even strokes, dermaplaning for Black skin removes dead cells without reaching living tissue; a shallower angle or heavier pressure creates the micro-injury that triggers pigment production in melanin-rich melanocytes. At KIAMO Skin in Mission Hills, dermaplaning is performed by a California licensed esthetician with 7+ years treating Fitzpatrick I-VI, and is followed by broad-spectrum SPF 30+ with iron oxides because freshly exfoliated skin is more vulnerable to UV and visible light.',
     body: [
       {
         p: 'Most people searching for dermaplaning in San Diego have the same question underneath it: is this safe for my skin? The answer depends less on the treatment than on the provider. Dermaplaning removes dead surface cells and fine vellus hair using a sterile surgical blade. On melanin-rich skin, the version of that sentence that matters is this: the blade does not decide the outcome. The technique does.',

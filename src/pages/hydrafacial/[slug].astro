@@ -20,6 +20,7 @@ import hydrafacialPointLoma from '../../assets/hydrafacial-point-loma-san-diego.
 import hydrafacialMidway from '../../assets/hydrafacial-midway-district-san-diego.jpg';
 import hydrafacialHillcrest from '../../assets/hydrafacial-hillcrest-san-diego.jpg';
 import hydrafacialGaslamp from '../../assets/hydrafacial-gaslamp-quarter-san-diego.jpg';
+import hydrafacialPacificBeach from '../../assets/hydrafacial-pacific-beach-san-diego.jpg';
 
 export function getStaticPaths() {
   return hydrafacialAreas.map((area) => ({
@@ -45,6 +46,7 @@ const locationImages: Record<string, any> = {
   'midway-district': hydrafacialMidway,
   'hillcrest': hydrafacialHillcrest,
   'gaslamp-quarter': hydrafacialGaslamp,
+  'pacific-beach': hydrafacialPacificBeach,
 };
 
 const heroImage = locationImages[area.slug] || studioInterior;
