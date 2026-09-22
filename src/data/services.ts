@@ -15,6 +15,14 @@ export interface Service {
 /** Menu order: the entry point first, then each category from lightest to deepest. */
 export const services: Service[] = [
   {
+    name: 'Facials in San Diego',
+    category: 'Facials',
+    description:
+      'The umbrella-category guide to every facial modality offered at KIAMO Skin — HydraFacial, Lira chemical peels, DMK enzyme therapy, and dermaplaning — each calibrated to every Fitzpatrick skin type.',
+    price: verifiedPrices['first-time-client'],
+    href: '/facial/',
+  },
+  {
     name: 'First-Time Client Treatment',
     category: 'Facials',
     description:

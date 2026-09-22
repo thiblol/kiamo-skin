@@ -1,0 +1,511 @@
+---
+/**
+ * /facial/best-facial-san-diego/ — GeoArticle 1 (commercial long-tail intent).
+ *
+ * Targets "best facial san diego" (320/mo, KD 16, $4.56 CPC). The article
+ * matches modality (HydraFacial, chemical peel, enzyme therapy, dermaplaning)
+ * to concern and skin tone — so this page is the right answer for the
+ * commercial-intent query even though /hydrafacial/ and
+ * /hyperpigmentation-treatment/ each satisfy their own narrower intent.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Reveal from '../../components/Reveal.astro';
+import Button from '../../components/Button.astro';
+import NapBlock from '../../components/NapBlock.astro';
+import { business } from '../../config/business';
+import { CTA_LABEL } from '../../config/nav';
+import FacialHubSchema from '../../components/schema/FacialHubSchema.astro';
+import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+
+const title = 'Best Facial in San Diego: How to Choose (2026 Guide) | KIAMO';
+const description =
+  'How to choose the best facial in San Diego for your skin. HydraFacial, Lira chemical peels, DMK enzyme therapy, dermaplaning compared. Matched to concern and Fitzpatrick type.';
+
+const faqs = [
+  {
+    question: 'How do I know which facial is right for me in San Diego?',
+    answer:
+      'Start with your primary concern, not the modality name. Congested pores point to HydraFacial Syndeo with Vortex-Fusion extraction. Pigmentation or uneven tone points to a Lira chemical peel at Fitzpatrick-calibrated concentrations. Barrier damage or reactive skin points to DMK Enzyme Therapy. Surface dullness ahead of an event points to dermaplaning. Kiki assesses your skin on the day and recommends the modality that fits — first-time consultation and treatment starts at $249.',
+  },
+  {
+    question: 'Is there a consultation before the facial?',
+    answer:
+      'Yes. First-time clients start at $249 for consultation and treatment. The consultation includes skin analysis (HydraFacial Syndeo AI analysis or manual Fitzpatrick evaluation), review of current homecare and any corrective work in progress, and the first treatment. Subsequent treatments are booked without a separate consultation unless the skin has changed significantly.',
+  },
+  {
+    question: 'Can I switch modalities between visits?',
+    answer:
+      'Yes. Many KIAMO clients alternate between HydraFacial Syndeo maintenance and Lira chemical peel corrective work, with DMK Enzyme Therapy when the barrier needs repair. The treatment plan adjusts to the season (heavier barrier work in winter, lighter glow work in summer) and to your skin on the day. There is no contract locking you to one modality.',
+  },
+  {
+    question: 'What if my skin reacts after a facial?',
+    answer:
+      'Mild flush for 30-60 minutes after a facial is normal. More persistent redness, breakouts, or irritation is not. Call (310) 595-0872 if you have a reaction — Kiki will adjust the next treatment, recommend a calming homecare routine, and decide whether the modality needs to change. Most reactions resolve within 48-72 hours with the right homecare.',
+  },
+  {
+    question: 'How often should I get a facial in San Diego?',
+    answer:
+      'Monthly is the typical cadence for maintenance. Every 4-6 weeks is the standard interval for corrective plans addressing pigmentation or barrier damage. Some clients book every 2-3 weeks during an intensive corrective phase and reduce to monthly once the goal is met. Kiki will recommend the cadence based on your skin and your goal.',
+  },
+];
+---
+
+const heroAlt =
+  'HydraFacial Syndeo treatment at KIAMO Skin studio on Reynard Way in Mission Hills, San Diego';
+---
+
+<BaseLayout {title} {description}>
+  <FacialHubSchema slot="head" />
+  <SpeakableSchema slot="head" url="https://kiamoskin.com/facial/best-facial-san-diego/" />
+  <BreadcrumbSchema
+    slot="head"
+    trail={[
+      { name: 'Facial in San Diego', path: '/facial/' },
+      { name: 'Best Facial in San Diego', path: '/facial/best-facial-san-diego/' },
+    ]}
+  />
+  {faqs.length > 0 && (
+    <script
+      slot="head"
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+        })),
+      })}
+    />
+  )}
+
+  <article>
+    <header class="bg-blush">
+      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+        <p class="t-eyebrow text-ink-soft">Facial guide · 2026</p>
+        <h1 class="t-h2 mt-6 max-w-[30ch] text-[2.5rem] md:text-[4rem]">Best Facial in San Diego: How to Choose the Right One for Your Skin</h1>
+
+        {/* AI Overview quick-answer block. */}
+        <p class="t-body quick-answer mt-7 max-w-[62ch] text-[1.125rem] font-medium">
+          The best facial in San Diego is the one matched to your skin on the day — your
+          Fitzpatrick type (I-VI), your primary concern, and the season. KIAMO Skin offers
+          four modalities (HydraFacial Syndeo, Lira chemical peels, DMK enzyme therapy, and
+          dermaplaning), each safe across every skin tone when protocols are calibrated.
+          First-time consultation and treatment starts at $249.
+        </p>
+
+        <p class="t-body mt-5 max-w-[62ch]">
+          There is no single "best facial" — there is the best facial for your skin. The
+          right modality depends on what you are trying to address (congestion, pigmentation,
+          barrier damage, dullness), your skin tone, and what your skin can tolerate on the
+          day. This guide walks through the four modalities at KIAMO Skin and when each one
+          fits.
+        </p>
+
+        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a
+            href={business.phone.href}
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            {business.phone.display}
+          </a>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[0.875rem] text-ink-soft">
+          <span class="font-medium">{business.experience} experience</span>
+          <span aria-hidden="true">·</span>
+          <span>Safe for all skin types (Fitzpatrick I-VI)</span>
+          <span aria-hidden="true">·</span>
+          <span>Licensed Esthetician</span>
+          <span aria-hidden="true">·</span>
+          <span>Mission Hills, San Diego</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Setting expectations</p>
+            <h2 class="t-h2 mt-4">What "best facial" actually means</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              "Best facial in San Diego" is a search query, not a clinical answer. A chain
+              spa will say "our signature facial." A medspa will say "our HydraFacial
+              plus booster." A dermatologist's office will say "our chemical peel." Each of
+              those answers is a sales pitch for one modality — the one they happen to sell.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              The clinically correct answer is that the best facial is the one matched to
+              your skin on the day. Skin changes: barrier damage from a vacation, residual
+              sun damage from the summer, hormonal shifts in fall and spring, reactive
+              flare-ups from a new product. The modality that fits your skin in January is
+              not necessarily the modality that fits in July.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              At KIAMO Skin, the assessment happens before any treatment is selected. Kiki
+              evaluates your skin tone, primary concern, and the modality that fits — not the
+              modality the studio most needs to sell that day. The same practitioner who
+              assesses your skin is the one who treats it.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">The four modalities</p>
+            <h2 class="t-h2 mt-4">What KIAMO Skin offers — and when each fits</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              KIAMO offers four modalities rather than a single "signature facial." Each
+              has a different role. The right one depends on what your skin needs.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:gap-16">
+          <div>
+            <h2 class="t-h2">HydraFacial Syndeo</h2>
+            <p class="t-body mt-6 max-w-[58ch] leading-relaxed">
+              The 45-minute medical-grade facial that cleanses, exfoliates, extracts, and
+              hydrates in one session. HydraFacial Syndeo pairs patented Vortex-Fusion
+              extraction with AI-powered skin analysis that reads hydration, congestion,
+              and pigmentation patterns before the first step.
+            </p>
+            <p class="t-body mt-5 max-w-[58ch] leading-relaxed">
+              <strong>Best for:</strong> maintenance, monthly glow, pre-event preparation,
+              barrier support between more intensive corrective treatments. <strong>Pricing:</strong>
+              {' '}$259 per session. <strong>Downtime:</strong> none — skin may look slightly
+              flushed for 30-60 minutes. <strong>Skin tones:</strong> safe across the full
+              Fitzpatrick I-VI spectrum; zero risk of post-inflammatory hyperpigmentation.
+            </p>
+          </div>
+          <div class="border border-line bg-ivory p-8">
+            <p class="t-eyebrow text-ink-soft">Quick facts</p>
+            <dl class="mt-7 m-0 space-y-6">
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">Price</dt>
+                <dd class="t-price m-0 mt-2">$259</dd>
+              </div>
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">Duration</dt>
+                <dd class="t-body m-0 mt-2 text-[0.9375rem]">45 minutes</dd>
+              </div>
+              <div class="pb-0">
+                <dt class="t-service text-[1rem]">Downtime</dt>
+                <dd class="t-body m-0 mt-2 text-[0.9375rem]">None</dd>
+              </div>
+            </dl>
+            <div class="mt-8">
+              <Button href="/hydrafacial/" external class="w-full">Learn more</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:gap-16">
+          <div>
+            <h2 class="t-h2">Lira Chemical Peels</h2>
+            <p class="t-body mt-6 max-w-[58ch] leading-relaxed">
+              Professional-grade peels formulated for corrective work. Lira peels use
+              calibrated lactic, mandelic, or TCA at concentrations matched to your
+              Fitzpatrick type. The peels address pigmentation, texture, and tone at the
+              cellular level.
+            </p>
+            <p class="t-body mt-5 max-w-[58ch] leading-relaxed">
+              <strong>Best for:</strong> melasma, post-inflammatory hyperpigmentation, sun
+              damage, uneven tone, texture refinement. <strong>Pricing:</strong> $199-$299
+              depending on peel depth. <strong>Downtime:</strong> mild peeling for 3-5 days
+              post-treatment. <strong>Skin tones:</strong> safe across the full Fitzpatrick
+              I-VI spectrum when calibrated; standard peel concentrations can trigger
+              post-inflammatory hyperpigmentation in melanin-rich skin, which is why KIAMO
+              matches the acid and concentration to the skin tone.
+            </p>
+          </div>
+          <div class="border border-line bg-porcelain p-8">
+            <p class="t-eyebrow text-ink-soft">Quick facts</p>
+            <dl class="mt-7 m-0 space-y-6">
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">Price</dt>
+                <dd class="t-price m-0 mt-2">$199-$299</dd>
+              </div>
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">Duration</dt>
+                <dd class="t-body m-0 mt-2 text-[0.9375rem]">45-60 minutes</dd>
+              </div>
+              <div class="pb-0">
+                <dt class="t-service text-[1rem]">Downtime</dt>
+                <dd class="t-body m-0 mt-2 text-[0.9375rem]">3-5 days peeling</dd>
+              </div>
+            </dl>
+            <div class="mt-8">
+              <Button href="/treatments/lira-peels/" external class="w-full">Learn more</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:gap-16">
+          <div>
+            <h2 class="t-h2">DMK Enzyme Therapy</h2>
+            <p class="t-body mt-6 max-w-[58ch] leading-relaxed">
+              Function-first enzyme treatment focused on barrier repair, not just surface
+              appearance. DMK Enzyme Therapy rebuilds the skin's underlying function through
+              enzyme and nutrient delivery rather than aggressive exfoliation.
+            </p>
+            <p class="t-body mt-5 max-w-[58ch] leading-relaxed">
+              <strong>Best for:</strong> sensitive skin, rosacea-prone skin, reactive skin,
+              barrier damage, post-peel recovery, post-sun recovery. <strong>Pricing:</strong> from
+              $279. <strong>Downtime:</strong> none to mild; skin may look flushed for a few
+              hours. <strong>Skin tones:</strong> safe across the full Fitzpatrick I-VI
+              spectrum — the gentlest corrective modality offered at KIAMO.
+            </p>
+          </div>
+          <div class="border border-line bg-ivory p-8">
+            <p class="t-eyebrow text-ink-soft">Quick facts</p>
+            <dl class="mt-7 m-0 space-y-6">
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">Price</dt>
+                <dd class="t-price m-0 mt-2">From $279</dd>
+              </div>
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">Duration</dt>
+                <dd class="t-body m-0 mt-2 text-[0.9375rem]">60-75 minutes</dd>
+              </div>
+              <div class="pb-0">
+                <dt class="t-service text-[1rem]">Downtime</dt>
+                <dd class="t-body m-0 mt-2 text-[0.9375rem]">None to mild</dd>
+              </div>
+            </dl>
+            <div class="mt-8">
+              <Button href="/treatments/dmk-enzyme-therapy/" external class="w-full">Learn more</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:gap-16">
+          <div>
+            <h2 class="t-h2">Dermaplaning</h2>
+            <p class="t-body mt-6 max-w-[58ch] leading-relaxed">
+              Physical exfoliation that removes the surface layer of dead skin and vellus
+              hair before serum infusion. Dermaplaning produces immediate smoothness and
+              creates the perfect base for makeup application.
+            </p>
+            <p class="t-body mt-5 max-w-[58ch] leading-relaxed">
+              <strong>Best for:</strong> surface dullness, pre-event preparation, vellus
+              hair removal, makeup base preparation, pairing with other modalities.
+              {' '}<strong>Pricing:</strong> from $199. <strong>Downtime:</strong> none. Skin
+              tones: safe across the full Fitzpatrick I-VI spectrum — the blade never
+              abrades the skin deeply enough to trigger post-inflammatory hyperpigmentation.
+            </p>
+          </div>
+          <div class="border border-line bg-porcelain p-8">
+            <p class="t-eyebrow text-ink-soft">Quick facts</p>
+            <dl class="mt-7 m-0 space-y-6">
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">Price</dt>
+                <dd class="t-price m-0 mt-2">From $199</dd>
+              </div>
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">Duration</dt>
+                <dd class="t-body m-0 mt-2 text-[0.9375rem]">45 minutes</dd>
+              </div>
+              <div class="pb-0">
+                <dt class="t-service text-[1rem]">Downtime</dt>
+                <dd class="t-body m-0 mt-2 text-[0.9375rem]">None</dd>
+              </div>
+            </dl>
+            <div class="mt-8">
+              <Button href="/treatments/dermaplaning/" external class="w-full">Learn more</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Matching modality to concern</p>
+            <h2 class="t-h2 mt-4">Decision table: modality by concern</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Use this table as a starting point. The actual recommendation comes from the
+              skin-on-the-day assessment, not from a generic table.
+            </p>
+          </Reveal>
+        </div>
+        <div class="mt-12 overflow-x-auto">
+          <table class="w-full border-collapse text-left text-[0.9375rem]">
+            <thead>
+              <tr class="border-b border-line">
+                <th class="py-4 pr-6 font-medium">Concern</th>
+                <th class="py-4 pr-6 font-medium">Best modality</th>
+                <th class="py-4 font-medium">Why</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border-b border-line">
+                <td class="py-4 pr-6">Congested pores</td>
+                <td class="py-4 pr-6 font-medium">HydraFacial Syndeo</td>
+                <td class="py-4">Vortex-Fusion extraction clears sebum and mineral deposits at controlled pressure</td>
+              </tr>
+              <tr class="border-b border-line">
+                <td class="py-4 pr-6">Melasma or dark spots</td>
+                <td class="py-4 pr-6 font-medium">Lira Chemical Peel</td>
+                <td class="py-4">Tyrosinase-safe at Fitzpatrick-calibrated concentrations; addresses pigment at the cellular level</td>
+              </tr>
+              <tr class="border-b border-line">
+                <td class="py-4 pr-6">Dehydration or barrier damage</td>
+                <td class="py-4 pr-6 font-medium">DMK Enzyme Therapy</td>
+                <td class="py-4">Function-first rebuilds barrier rather than stripping the skin further</td>
+              </tr>
+              <tr class="border-b border-line">
+                <td class="py-4 pr-6">Surface dullness before an event</td>
+                <td class="py-4 pr-6 font-medium">Dermaplaning</td>
+                <td class="py-4">Immediate smoothness, perfect makeup base, zero downtime</td>
+              </tr>
+              <tr class="border-b border-line">
+                <td class="py-4 pr-6">All of the above, monthly maintenance</td>
+                <td class="py-4 pr-6 font-medium">HydraFacial Syndeo</td>
+                <td class="py-4">Gentlest option with AI analysis; foundation of long-term skin health</td>
+              </tr>
+              <tr>
+                <td class="py-4 pr-6">Sensitive or reactive skin</td>
+                <td class="py-4 pr-6 font-medium">DMK Enzyme Therapy</td>
+                <td class="py-4">The gentlest corrective modality — works with reactive skin rather than against it</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Skin-tone calibration</p>
+            <h2 class="t-h2 mt-4">Why every modality at KIAMO is safe across all Fitzpatrick types</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Standard chemical peels and aggressive exfoliation can trigger post-inflammatory
+              hyperpigmentation in melanin-rich skin (Fitzpatrick IV-VI) when applied at
+              concentrations designed for lighter skin tones. The protocols at KIAMO are
+              calibrated to the skin tone, not selected from a generic menu.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              HydraFacial Syndeo uses gentle suction and hydration rather than abrasion —
+              zero PIH risk across the spectrum. Lira peels use lactic, mandelic, or TCA at
+              concentrations matched to the skin tone, not the skin concern. DMK Enzyme
+              Therapy rebuilds barrier function without stripping. Dermaplaning removes only
+              the surface layer — no abrasion deep enough to trigger PIH.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              Kiki has 7+ years of experience treating the full Fitzpatrick spectrum and
+              adjusts every modality to the skin on the day. This is the difference between
+              a facial at a chain spa (where protocols come from corporate) and a facial at
+              a private studio (where the practitioner sees every client).
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Pricing & cadence</p>
+            <h2 class="t-h2 mt-4">Facial pricing at KIAMO Skin</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Pricing depends on modality. First-time clients start at $249 for consultation
+              and treatment. The session includes a skin analysis, modality selection, and
+              the first treatment. Monthly memberships from $199/month include one facial
+              plus discounts on additional treatments.
+            </p>
+          </Reveal>
+
+          <ul class="mt-10 m-0 list-none space-y-3 p-0">
+            <li class="flex gap-4 border-b border-line pb-4"><span aria-hidden="true" class="text-rose">—</span><span><strong>Dermaplaning Facial</strong> — from $199, 45 minutes, zero downtime</span></li>
+            <li class="flex gap-4 border-b border-line pb-4"><span aria-hidden="true" class="text-rose">—</span><span><strong>HydraFacial Syndeo</strong> — $259, 45 minutes, zero downtime</span></li>
+            <li class="flex gap-4 border-b border-line pb-4"><span aria-hidden="true" class="text-rose">—</span><span><strong>Lira Chemical Peels</strong> — $199-$299, 45-60 minutes, 3-5 days mild peeling</span></li>
+            <li class="flex gap-4 border-b border-line pb-4"><span aria-hidden="true" class="text-rose">—</span><span><strong>DMK Enzyme Therapy</strong> — from $279, 60-75 minutes, none to mild downtime</span></li>
+            <li class="flex gap-4 pb-1"><span aria-hidden="true" class="text-rose">—</span><span><strong>First-time clients</strong> — $249 for consultation and treatment</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {faqs.length > 0 && (
+      <section class="bg-blush">
+        <div class="wrap section-y">
+          <p class="t-eyebrow text-ink-soft">Before you book</p>
+          <h2 class="t-h2 mt-5">Frequently asked questions</h2>
+          <div class="faq-section mt-12 max-w-[68ch]">
+            {faqs.map((faq) => (
+              <div class="border-b border-line">
+                <details class="group">
+                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
+                    <span>{faq.question}</span>
+                    <span
+                      aria-hidden="true"
+                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <div class="t-body pb-6 text-[0.9375rem] leading-relaxed">{faq.answer}</div>
+                </details>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <section class="bg-ivory">
+      <div class="wrap section-y text-center">
+        <h2 class="t-h3 max-w-[28ch] mx-auto">Ready to find the best facial for your skin?</h2>
+        <p class="t-body mt-5 max-w-[52ch] mx-auto">
+          First-time consultation and treatment starts at $249. Kiki assesses your skin and
+          recommends the modality that fits — no contract, no upsell.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a
+            href={business.phone.href}
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            {business.phone.display}
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

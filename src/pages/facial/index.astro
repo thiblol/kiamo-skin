@@ -1,0 +1,647 @@
+---
+/**
+ * /facial/ — Facial umbrella-category parent hub.
+ *
+ * Role: highest-commercial-intent page for "facial san diego" / "facial
+ * treatment san diego" / "best facial san diego" queries. Pairs with the
+ * device-specific /hydrafacial/ hub and the outcome-specific
+ * /hyperpigmentation-treatment/ hub — each has its own intent.
+ *
+ * The nine area subpages (/facial/{slug}/) are clustered here as a GeoHub
+ * root. The schema's hasOfferCatalog enumerates each as a referenced child
+ * Service, so AI systems can extract the hub-and-spoke relationship and cite
+ * this page as the umbrella-category answer.
+ */
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Reveal from '../../components/Reveal.astro';
+import Button from '../../components/Button.astro';
+import NapBlock from '../../components/NapBlock.astro';
+import CertificateModal from '../../components/CertificateModal.astro';
+import { business } from '../../config/business';
+import { CTA_LABEL } from '../../config/nav';
+import { facialAreas } from '../../data/facial-areas';
+import FacialHubSchema from '../../components/schema/FacialHubSchema.astro';
+import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import heroImage from '../../assets/hydrafacial-treatment-san-diego.jpg';
+
+const title = 'Facial in San Diego | All Skin Types | KIAMO';
+const description =
+  'Facial treatments in San Diego from KIAMO Skin in Mission Hills. HydraFacial, chemical peels, dermaplaning, enzyme therapy. Safe for every Fitzpatrick I-VI skin tone. Licensed esthetician.';
+
+const faqs = [
+  {
+    question: 'What is the best facial treatment in San Diego for my skin type?',
+    answer:
+      'There is no single "best" facial — the right one depends on your skin tone (Fitzpatrick I-VI), primary concern, and schedule. At KIAMO Skin, Kiki matches the modality to the skin on the day: HydraFacial Syndeo with AI skin analysis for maintenance and glow, Lira chemical peels at Fitzpatrick-calibrated concentrations for pigmentation and texture, DMK enzyme therapy for barrier repair, and dermaplaning for surface refinement. First-time clients start at $249 for consultation and treatment, which includes a skin analysis and recommendation.',
+  },
+  {
+    question: 'How much does a facial cost in San Diego at KIAMO Skin?',
+    answer:
+      'Pricing depends on modality. Dermaplaning facials start at $199. Lira Chemical Peels range from $199-$299. DMK Enzyme Therapy starts at $279. HydraFacial is $259. First-time clients start at $249 for consultation and treatment. Monthly memberships from $199/month include one facial plus discounts on additional treatments. There are no hidden fees — pricing is published and confirmed at booking.',
+  },
+  {
+    question: 'How long does a facial take, and how often should I get one?',
+    answer:
+      'Sessions at KIAMO Skin run 45-75 minutes depending on modality. HydraFacial Syndeo takes 45 minutes. Dermaplaning takes 45 minutes. DMK Enzyme Therapy takes 60-75 minutes. Lira Chemical Peels take 45-60 minutes. Most clients book monthly for maintenance; every 4-6 weeks is the typical cadence. For corrective plans addressing pigmentation or barrier damage, Kiki may recommend a series of treatments spaced 4-6 weeks apart.',
+  },
+  {
+    question: 'Is facial treatment safe for darker skin tones (Fitzpatrick IV-VI)?',
+    answer:
+      'Yes, when protocols are calibrated to the skin. Standard chemical peels and aggressive exfoliation can trigger post-inflammatory hyperpigmentation in melanin-rich skin if applied at concentrations designed for lighter skin tones. KIAMO uses treatments calibrated to every Fitzpatrick type I-VI, with special attention to preventing complications in darker skin. Kiki has 7+ years of experience treating the full spectrum of skin tones.',
+  },
+  {
+    question: 'What is the difference between HydraFacial, a chemical peel, and dermaplaning?',
+    answer:
+      'HydraFacial Syndeo is a 45-minute medical-grade facial that cleanses, exfoliates, extracts, and hydrates in one session — gentlest of the three, zero downtime, safe for every skin tone. Lira Chemical Peels use calibrated acids (lactic, mandelic, TCA) to address pigmentation, texture, and tone — visible peeling for 3-5 days after treatment. Dermaplaning is physical exfoliation that removes the surface layer of dead skin and vellus hair — immediate smoothness, no downtime. Kiki recommends the modality that fits your concern, not a generic menu.',
+  },
+  {
+    question: 'Can I get a facial if I have sensitive skin or rosacea?',
+    answer:
+      'Yes, with the right modality. DMK Enzyme Therapy is the gentlest corrective option for sensitive, reactive, or barrier-compromised skin — it rebuilds barrier function rather than stripping the skin. HydraFacial Syndeo also works for sensitive skin because the AI analysis calibrates pressure and serum selection. Kiki assesses your skin on the day and adjusts the treatment to avoid irritation.',
+  },
+  {
+    question: 'What should I avoid after a facial in San Diego?',
+    answer:
+      'Avoid direct sun exposure for 24-48 hours after a chemical peel or DMK Enzyme Therapy — wear broad-spectrum SPF 50+ on top of any treatment-applied SPF. Avoid retinoids, vitamin A derivatives, and strong exfoliants for 3-5 days after a peel. Avoid heat exposure (saunas, hot yoga, prolonged cooking) for 48 hours after melasma-focused treatments. HydraFacial Syndeo has no downtime — you can return to normal activity immediately.',
+  },
+  {
+    question: 'Where is KIAMO Skin located for facials near me?',
+    answer:
+      'KIAMO Skin is at 3067 Reynard Way in Mission Hills, San Diego. The studio is minutes from Hillcrest and Bankers Hill via Washington Street, 10 minutes from Downtown San Diego, North Park, and Point Loma, and reachable from every San Diego neighborhood via I-5, I-8, or Highway 163. Free parking is on site. By appointment only.',
+  },
+];
+
+const heroAlt =
+  'HydraFacial Syndeo treatment at KIAMO Skin studio on Reynard Way in Mission Hills, San Diego';
+---
+
+<BaseLayout {title} {description}>
+  <FacialHubSchema slot="head" />
+  <SpeakableSchema slot="head" url="https://kiamoskin.com/facial/" />
+  <BreadcrumbSchema
+    slot="head"
+    trail={[{ name: 'Facial in San Diego', path: '/facial/' }]}
+  />
+
+  <article>
+    <header class="bg-blush">
+      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+        <p class="t-eyebrow text-ink-soft">KIAMO Skin · Mission Hills</p>
+        <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">Facial in San Diego</h1>
+
+        {/* AI Overview quick-answer block — extracted first by ChatGPT/Perplexity/AIO. */}
+        <p class="t-body quick-answer mt-7 max-w-[62ch] text-[1.125rem] font-medium">
+          KIAMO Skin in Mission Hills offers 45-75 minute facial treatments — HydraFacial
+          Syndeo, Lira chemical peels, dermaplaning, and DMK enzyme therapy — performed by a
+          California licensed esthetician. Treatments are calibrated for every Fitzpatrick type
+          (I-VI), with pricing from $199 for dermaplaning and $249 for first-time consultation and
+          treatment.
+        </p>
+
+        <p class="t-body mt-5 max-w-[62ch]">
+          The right facial depends on your skin tone (Fitzpatrick I-VI), primary concern, and
+          schedule — there is no single best answer. At KIAMO Skin, the licensed esthetician
+          assesses your skin on the day and selects the modality that fits, rather than running
+          through a generic menu.
+        </p>
+
+        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a
+            href={business.phone.href}
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            {business.phone.display}
+          </a>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[0.875rem] text-ink-soft">
+          <span class="font-medium">{business.experience} experience</span>
+          <span aria-hidden="true">·</span>
+          <span>Safe for all skin types (Fitzpatrick I-VI)</span>
+          <span aria-hidden="true">·</span>
+          <span>Licensed Esthetician</span>
+          <span aria-hidden="true">·</span>
+          <span>Mission Hills, San Diego</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y grid items-start gap-16 md:grid-cols-[1.1fr_0.9fr] md:gap-20">
+        <div>
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Why KIAMO Skin</p>
+            <h2 class="t-h2 mt-4">Facials from a single esthetician, calibrated to your skin</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              KIAMO Skin is a one-room studio in Mission Hills. Kiki, a California licensed
+              esthetician with 7+ years of experience, performs every facial personally.
+              There is no handoff between staff and no rotation between providers — the
+              practitioner who assesses your skin is the one who treats it.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              The studio is equipped with HydraFacial Syndeo, the current-generation device
+              with AI-powered skin analysis, alongside Lira chemical peels, DMK Enzyme Therapy,
+              and dermaplaning tools. Every facial is matched to your Fitzpatrick type, your
+              concern, and the condition of your skin on the day.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              Because each modality is calibrated to the skin tone, every facial at KIAMO is
+              safe across the full Fitzpatrick I-VI spectrum. Standard chemical peels and
+              aggressive exfoliation can trigger post-inflammatory hyperpigmentation in
+              melanin-rich skin if applied at concentrations designed for lighter skin tones —
+              the protocols here are matched to your skin, not selected from a generic menu.
+            </p>
+          </Reveal>
+
+          <Reveal class="mt-10 block">
+            <div class="border-t border-line pt-6">
+              <p class="t-body text-[0.875rem] text-ink-soft mb-4">Advanced certifications — click to view:</p>
+              <div class="flex flex-wrap gap-6">
+                <CertificateModal
+                  id="cert-hydrafacial-facial-hub"
+                  image="/images/hydrafacial-certified-provider-san-diego.jpg"
+                  alt="HydraFacial Certified Provider certificate - KIAMO Skin, San Diego California"
+                  title="HydraFacial Certified Provider"
+                />
+                <CertificateModal
+                  id="cert-dmk-facial-hub"
+                  image="/images/dmk-certified-skin-therapist-kiki-kiamo.jpg"
+                  alt="DMK Certified Skin Therapist certificate - Kiki, KIAMO Skin San Diego"
+                  title="DMK Certified Skin Therapist"
+                />
+              </div>
+            </div>
+          </Reveal>
+        </div>
+
+        <aside>
+          <Image
+            src={heroImage}
+            alt={heroAlt}
+            widths={[400, 800, 1200]}
+            sizes="(min-width: 768px) 45vw, 100vw"
+            loading="eager"
+            class="aspect-4/3 w-full rounded-lg object-cover"
+          />
+          <div class="mt-8 border border-line bg-ivory p-8">
+            <p class="t-eyebrow text-ink-soft">The studio</p>
+            <div class="mt-6">
+              <NapBlock tone="light" />
+            </div>
+            <div class="mt-6">
+              <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Modalities</p>
+            <h2 class="t-h2 mt-4">Types of facials we perform at KIAMO Skin</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              KIAMO offers the full facial menu rather than a single modality, so the
+              treatment is selected to match your skin on the day. Each modality has its own
+              page with deeper detail:
+            </p>
+            <ul class="t-body mt-7 m-0 list-none space-y-3 p-0">
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span><a href="/hydrafacial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">HydraFacial Syndeo</a> — 45-minute medical-grade facial with AI skin analysis, Vortex-Fusion extraction, zero downtime</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span><a href="/treatments/lira-peels/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Lira Chemical Peels</a> — calibrated lactic, mandelic, or TCA at Fitzpatrick-matched concentrations, addresses pigmentation and texture</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span><a href="/treatments/dmk-enzyme-therapy/" class="border-b border-ink/40 hover:border-rose hover:text-rose">DMK Enzyme Therapy</a> — function-first protocol rebuilding barrier function, ideal for sensitive or reactive skin</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span><a href="/treatments/dermaplaning/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Dermaplaning</a> — physical exfoliation removing surface dead skin and vellus hair before serum infusion</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span><a href="/hyperpigmentation-treatment/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Hyperpigmentation Treatment</a> — multi-modal corrective plans for melasma, post-inflammatory hyperpigmentation, sun damage</span></li>
+            </ul>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">What it addresses</p>
+            <h2 class="t-h2 mt-4">What a facial at KIAMO can address</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              A facial at KIAMO is matched to the concern that brought you in. The most
+              common reasons San Diego clients book:
+            </p>
+            <ul class="t-body mt-7 m-0 list-none space-y-3 p-0">
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Congested pores from urban pollution, sunscreen, or marine-layer humidity</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Dehydration from air-conditioned offices, coastal salt air, or hard water mineral deposits</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Dull or uneven tone ahead of an event, presentation, or trip</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Monthly maintenance between more intensive corrective treatments</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Barrier support for skin recovering from acne, peels, or sun exposure</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Hyperpigmentation, melasma, or sun damage — paired with corrective plans when needed</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>A first corrective facial when starting a long-term skin plan</span></li>
+            </ul>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">The process</p>
+            <h2 class="t-h2 mt-4">How a facial works at KIAMO Skin</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Every facial at KIAMO follows a three-step structure: assessment, treatment, and
+              homecare. The modality is selected to match your skin on the day.
+            </p>
+          </Reveal>
+
+          <ol class="mt-12 m-0 list-none space-y-9 p-0">
+            <Reveal>
+              <li class="border-t border-line pt-7">
+                <p class="t-meta text-rose">01</p>
+                <h3 class="t-service mt-3 text-[1.125rem] md:text-[1.3125rem]">Assessment</h3>
+                <p class="t-body mt-3 text-[0.9375rem] leading-relaxed">
+                  Kiki evaluates your skin tone (Fitzpatrick I-VI), primary concern, and the
+                  modality that fits. For San Diego clients, the assessment accounts for
+                  coastal UV exposure, hard water mineral deposits, and any current corrective
+                  work. For HydraFacial Syndeo, the AI skin analysis reads hydration,
+                  congestion, and pigmentation patterns.
+                </p>
+              </li>
+            </Reveal>
+            <Reveal>
+              <li class="border-t border-line pt-7">
+                <p class="t-meta text-rose">02</p>
+                <h3 class="t-service mt-3 text-[1.125rem] md:text-[1.3125rem]">Treatment</h3>
+                <p class="t-body mt-3 text-[0.9375rem] leading-relaxed">
+                  Sessions run 45-75 minutes depending on modality. HydraFacial Syndeo pairs
+                  Vortex-Fusion extraction with selected boosters. Lira peels use Fitzpatrick-
+                  calibrated acid concentrations. DMK enzyme therapy rebuilds barrier
+                  function. Dermaplaning refines surface texture before serum infusion. No
+                  modality is selected without checking it is safe for your skin tone.
+                </p>
+              </li>
+            </Reveal>
+            <Reveal>
+              <li class="border-t border-line pt-7">
+                <p class="t-meta text-rose">03</p>
+                <h3 class="t-service mt-3 text-[1.125rem] md:text-[1.3125rem]">Homecare</h3>
+                <p class="t-body mt-3 text-[0.9375rem] leading-relaxed">
+                  Medical-grade homecare extends the result between visits. Kiki prescribes a
+                  daily regimen — ceramide-rich moisturizers for barrier repair, tyrosinase
+                  inhibitors when pigmentation is a concern, broad-spectrum SPF 50+ for San
+                  Diego's year-round UV. Daily compliance represents the majority of long-term
+                  result.
+                </p>
+              </li>
+            </Reveal>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="grid gap-12 md:grid-cols-[1.2fr_0.8fr] md:gap-16">
+          <div>
+            <h2 class="t-h2">Facial pricing in San Diego</h2>
+            <p class="t-body mt-6 max-w-[58ch] leading-relaxed">
+              Facial pricing at KIAMO Skin depends on the modality selected. Dermaplaning
+              facials start at $199. Lira Chemical Peels range from $199-$299. DMK Enzyme
+              Therapy starts at $279. HydraFacial is $259. First-time clients start at $249
+              for consultation and treatment.
+            </p>
+            <p class="t-body mt-5 max-w-[58ch] leading-relaxed">
+              Monthly memberships from $199/month include one facial plus discounts on
+              additional treatments. There are no hidden fees — pricing is published and
+              confirmed at booking.
+            </p>
+            <p class="t-body mt-5 text-[0.875rem] text-ink-soft">
+              Monthly memberships available — see {' '}
+              <a href="/membership/" class="border-b border-ink/40 hover:border-rose hover:text-rose">
+                membership details
+              </a>.
+            </p>
+          </div>
+          <div class="border border-line bg-ivory p-8">
+            <p class="t-eyebrow text-ink-soft">Quick facts</p>
+            <dl class="mt-7 m-0 space-y-6">
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">Dermaplaning Facial</dt>
+                <dd class="t-price m-0 mt-2">From $199</dd>
+              </div>
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">HydraFacial</dt>
+                <dd class="t-price m-0 mt-2">$259</dd>
+              </div>
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">Lira Chemical Peels</dt>
+                <dd class="t-price m-0 mt-2">$199-$299</dd>
+              </div>
+              <div class="border-b border-line pb-6">
+                <dt class="t-service text-[1rem]">First-time clients</dt>
+                <dd class="t-price m-0 mt-2">$249</dd>
+              </div>
+              <div class="pb-0">
+                <dt class="t-service text-[1rem]">Duration</dt>
+                <dd class="t-body m-0 mt-2 text-[0.9375rem]">45-75 minutes</dd>
+              </div>
+            </dl>
+            <div class="mt-8">
+              <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">Locations</p>
+          <h2 class="t-h2 mt-4">Facial across San Diego neighborhoods</h2>
+          <p class="t-body mt-6 max-w-[68ch] leading-relaxed">
+            Every page below targets the same KIAMO studio in Mission Hills with travel
+            times, landmarks, and neighborhood-specific skin concerns. From the cliffs of
+            La Jolla to the urban village of North Park, KIAMO serves clients across San
+            Diego.
+          </p>
+        </Reveal>
+
+        <ul class="m-0 mt-12 grid list-none gap-x-8 gap-y-0 p-0 md:grid-cols-2 lg:grid-cols-3">
+          {facialAreas.map((area) => (
+            <li class="border-b border-line">
+              <a href={`/facial/${area.slug}/`} class="group block py-7">
+                <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                  Facial in {area.name}
+                </h3>
+                <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">
+                  {area.intro.split('.')[0]}.
+                </p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">San Diego skin</p>
+            <h2 class="t-h2 mt-4">Why San Diego skin needs specific care</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              San Diego is one of the easier places in the country to damage a skin barrier,
+              and one of the harder places to rebuild it. The same marine climate that makes
+              the city pleasant also produces conditions that strip moisture from skin and
+              clog pores faster than inland environments do.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              The marine layer rolls in from the Pacific between April and June and
+              persists for much of the morning. High humidity and salt air leave a mineral
+              residue on the skin that binds with sebum and clogs follicles. Downtown, the
+              Gaslamp Quarter, and the Convention Center district add urban pollution —
+              vehicle exhaust, construction dust, and recirculated office air conditioning
+              that further dehydrates the barrier. Coastal neighborhoods from La Jolla to
+              Pacific Beach, Ocean Beach, and Point Loma sit two miles or less from the
+              Pacific and experience direct salt-spray exposure on most days.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              San Diego's municipal water supply is also among the hardest in California,
+              with roughly 280-320 parts per million of dissolved calcium and magnesium.
+              These minerals bond with sebum and skincare products, forming calcium carbonate
+              deposits in follicles that ordinary cleansing cannot remove. Mission Hills
+              residents and anyone who showers before bed experience this daily.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              UV exposure compounds the damage. San Diego averages 266 sunny days per year,
+              and UV levels remain high even on overcast mornings when the marine layer is
+              present. UVA penetrates cloud cover at near-full strength — a single overcast
+              morning without SPF can reverse weeks of corrective treatment progress. Daily
+              broad-spectrum SPF 50+ is non-negotiable, not just during summer.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              The full facial menu at KIAMO Skin — HydraFacial Syndeo for Vortex-Fusion
+              extraction, Lira chemical peels for pigmentation, DMK enzyme therapy for
+              barrier repair, dermaplaning for surface refinement — addresses every layer of
+              the coastal San Diego skin challenge. The right modality depends on your skin
+              tone, your primary concern, and the season. Kiki will recommend the path.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    {faqs.length > 0 && (
+      <section class="bg-blush">
+        <div class="wrap section-y">
+          <p class="t-eyebrow text-ink-soft">Before you book</p>
+          <h2 class="t-h2 mt-5">Facial questions, answered</h2>
+          <div class="faq-section mt-12 max-w-[68ch]">
+            {faqs.map((faq) => (
+              <div class="border-b border-line">
+                <details class="group">
+                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
+                    <span>{faq.question}</span>
+                    <span
+                      aria-hidden="true"
+                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <div class="t-body pb-6 text-[0.9375rem] leading-relaxed">{faq.answer}</div>
+                </details>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">Long-form guides</p>
+          <h2 class="t-h2 mt-4">More on facials at KIAMO Skin</h2>
+          <p class="t-body mt-6 max-w-[62ch] leading-relaxed">
+            Three guides cover the most common facial questions we hear from San Diego
+            clients. Each is written for AI Overview extraction and grounded in Kiki's
+            clinical practice.
+          </p>
+        </Reveal>
+
+        <ul class="m-0 mt-10 grid list-none gap-7 md:grid-cols-3 md:gap-6 lg:gap-8">
+          <Reveal as="li">
+            <div class="flex h-full flex-col rounded-lg bg-porcelain p-8">
+              <h3 class="t-service text-[1.0625rem]">Best Facial in San Diego: How to Choose</h3>
+              <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                A 2026 guide to matching modality (HydraFacial, peel, enzyme, dermaplaning)
+                to concern, skin tone, and schedule.
+              </p>
+              <a href="/facial/best-facial-san-diego/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                Read the guide
+              </a>
+            </div>
+          </Reveal>
+          <Reveal as="li">
+            <div class="flex h-full flex-col rounded-lg bg-porcelain p-8">
+              <h3 class="t-service text-[1.0625rem]">Facial for Melanin-Rich Skin</h3>
+              <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                Why standard facials fail darker skin tones, what makes a facial safe
+                across the Fitzpatrick I-VI spectrum, and the protocols used at KIAMO.
+              </p>
+              <a href="/facial/facial-for-melanin-rich-skin-san-diego/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                Read the guide
+              </a>
+            </div>
+          </Reveal>
+          <Reveal as="li">
+            <div class="flex h-full flex-col rounded-lg bg-porcelain p-8">
+              <h3 class="t-service text-[1.0625rem]">Facial After Sun Exposure</h3>
+              <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                The 24-72 hour window after significant sun exposure, what to do and what
+                not to do, and when to book the next facial.
+              </p>
+              <a href="/facial/facial-after-sun-exposure-san-diego/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                Read the guide
+              </a>
+            </div>
+          </Reveal>
+        </ul>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">Related treatments</p>
+          <h2 class="t-h2 mt-4">Other treatments at KIAMO Skin</h2>
+          <p class="t-body mt-6 max-w-[62ch] leading-relaxed">
+            A facial at KIAMO is the foundation of many treatment plans. As your skin
+            changes, corrective modalities are introduced when appropriate.
+          </p>
+        </Reveal>
+
+        <ul class="m-0 mt-10 grid list-none gap-7 md:grid-cols-2 lg:grid-cols-3 md:gap-6 lg:gap-8">
+          <Reveal as="li">
+            <div class="flex h-full flex-col rounded-lg bg-porcelain p-8">
+              <h3 class="t-service text-[1.0625rem]">HydraFacial in San Diego</h3>
+              <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                The 45-minute medical-grade facial with AI skin analysis and Vortex-Fusion
+                extraction. Foundation of the KIAMO facial menu.
+              </p>
+              <a href="/hydrafacial/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                Learn more
+              </a>
+            </div>
+          </Reveal>
+          <Reveal as="li">
+            <div class="flex h-full flex-col rounded-lg bg-porcelain p-8">
+              <h3 class="t-service text-[1.0625rem]">Hyperpigmentation Treatment</h3>
+              <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                Corrective treatment for melasma, post-inflammatory hyperpigmentation, and
+                dark spots. Calibrated for every Fitzpatrick type I-VI.
+              </p>
+              <a href="/hyperpigmentation-treatment/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                Learn more
+              </a>
+            </div>
+          </Reveal>
+          <Reveal as="li">
+            <div class="flex h-full flex-col rounded-lg bg-porcelain p-8">
+              <h3 class="t-service text-[1.0625rem]">Lira Chemical Peels</h3>
+              <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                Professional-grade peels formulated for corrective work, with protocols
+                matched to your Fitzpatrick type.
+              </p>
+              <a href="/treatments/lira-peels/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                Learn more
+              </a>
+            </div>
+          </Reveal>
+          <Reveal as="li">
+            <div class="flex h-full flex-col rounded-lg bg-porcelain p-8">
+              <h3 class="t-service text-[1.0625rem]">DMK Enzyme Therapy</h3>
+              <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                Function-first enzyme treatment focused on barrier repair, not just surface
+                appearance.
+              </p>
+              <a href="/treatments/dmk-enzyme-therapy/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                Learn more
+              </a>
+            </div>
+          </Reveal>
+          <Reveal as="li">
+            <div class="flex h-full flex-col rounded-lg bg-porcelain p-8">
+              <h3 class="t-service text-[1.0625rem]">Dermaplaning</h3>
+              <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                Physical exfoliation that removes surface dead skin and vellus hair before
+                serum infusion. Zero downtime.
+              </p>
+              <a href="/treatments/dermaplaning/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                Learn more
+              </a>
+            </div>
+          </Reveal>
+          <Reveal as="li">
+            <div class="flex h-full flex-col rounded-lg bg-porcelain p-8">
+              <h3 class="t-service text-[1.0625rem]">Procell Microchanneling</h3>
+              <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                Mechanical (no RF heat) microchanneling for texture, acne scarring, and
+                pigmentation. Safe for every Fitzpatrick type.
+              </p>
+              <a href="/treatments/procell-microchanneling/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                Learn more
+              </a>
+            </div>
+          </Reveal>
+        </ul>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y text-center">
+        <h2 class="t-h3 max-w-[28ch] mx-auto">Ready to book a facial in San Diego?</h2>
+        <p class="t-body mt-5 max-w-[52ch] mx-auto">
+          One treatment room. One practitioner. Request an appointment and Kiki will
+          confirm a time by the next business day.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a
+            href={business.phone.href}
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            {business.phone.display}
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>
+
+<script
+  type="application/ld+json"
+  is:inline
+  set:html={JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  })}
+  slot="head"
+/>

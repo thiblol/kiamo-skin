@@ -1,0 +1,411 @@
+---
+/**
+ * /facial/facial-for-melanin-rich-skin-san-diego/ — GeoArticle 2 (authority).
+ *
+ * Long-tail authority article answering the question San Diego clients with
+ * melanin-rich skin ask before booking: "is facial treatment safe for darker
+ * skin tones, and what should I look for?"
+ *
+ * Per the project's positioning rule (feedback_no_melanin_specialist_positioning):
+ * this page positions KIAMO's expertise as discipline across the FULL Fitzpatrick
+ * I-VI spectrum — not as a "melanin-rich skin specialist" identity. The framing
+ * is "we have 7+ years treating every Fitzpatrick type, including melanin-rich
+ * skin" — never "we specialize in darker skin."
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Reveal from '../../components/Reveal.astro';
+import Button from '../../components/Button.astro';
+import NapBlock from '../../components/NapBlock.astro';
+import { business } from '../../config/business';
+import { CTA_LABEL } from '../../config/nav';
+import FacialHubSchema from '../../components/schema/FacialHubSchema.astro';
+import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+
+const title = 'Facial for Melanin-Rich Skin in San Diego | KIAMO';
+const description =
+  'Facial treatments calibrated for melanin-rich skin in San Diego. Why standard facials fail darker skin tones, what makes a facial safe across the Fitzpatrick I-VI spectrum, and the protocols used at KIAMO.';
+
+const faqs = [
+  {
+    question: 'Why do standard facials sometimes make melanin-rich skin worse?',
+    answer:
+      'Aggressive peels, microdermabrasion, and high-percentage acids can trigger post-inflammatory hyperpigmentation (PIH) in melanin-rich skin (Fitzpatrick IV-VI). PIH is the dark mark left when inflammation stimulates melanocytes to produce more pigment — the same inflammation the aggressive treatment was meant to fix becomes the new problem. The protocols at KIAMO are calibrated to avoid triggering this response.',
+  },
+  {
+    question: 'What makes a facial safe for melanin-rich skin?',
+    answer:
+      'Three things: modality selection (avoiding aggressive abrasion when barrier is reactive), concentration calibration (matching acid strength and peel depth to the skin tone, not just the concern), and practitioner experience (7+ years of treating the full Fitzpatrick spectrum). KIAMO uses HydraFacial Syndeo for Vortex-Fusion extraction (zero abrasion), Lira peels at Fitzpatrick-matched concentrations, DMK enzyme therapy for barrier repair (the gentlest corrective option), and dermaplaning for surface refinement (no abrasion deep enough to trigger PIH).',
+  },
+  {
+    question: 'Can melanin-rich skin get a facial before an event?',
+    answer:
+      'Yes. HydraFacial Syndeo is the most popular pre-event facial for melanin-rich skin — zero downtime, immediate glow, no risk of post-inflammatory hyperpigmentation. Book 1-2 days before the event for the best glow window. Kiki assesses the skin on the day and adjusts modality if the skin needs barrier repair before the event.',
+  },
+  {
+    question: 'How long does it take to see results on melanin-rich skin?',
+    answer:
+      'For pigmentation and melasma correction, most clients see measurable fading in 8-12 weeks with monthly Lira peels plus daily clinical homecare (tyrosinase inhibitors, ceramide barrier repair, broad-spectrum SPF 50+). For maintenance and barrier health, results are immediate — the glow from a single HydraFacial is visible within hours and lasts 5-7 days.',
+  },
+  {
+    question: 'Do I need a different homecare routine for melanin-rich skin?',
+    answer:
+      'Daily broad-spectrum SPF 50+ is non-negotiable — UV is the single biggest trigger for pigmentation recurrence. Kiki prescribes a medical-grade homecare regimen that typically includes tyrosinase inhibitors (kojic acid, tranexamic acid, alpha arbutin) for melanin-pathway inhibition, ceramide-rich moisturizers for barrier repair, and gentle vitamin A derivatives when the barrier can tolerate them. Homecare represents 70% of long-term result.',
+  },
+];
+---
+
+<BaseLayout {title} {description}>
+  <FacialHubSchema slot="head" />
+  <SpeakableSchema slot="head" url="https://kiamoskin.com/facial/facial-for-melanin-rich-skin-san-diego/" />
+  <BreadcrumbSchema
+    slot="head"
+    trail={[
+      { name: 'Facial in San Diego', path: '/facial/' },
+      { name: 'Facial for Melanin-Rich Skin', path: '/facial/facial-for-melanin-rich-skin-san-diego/' },
+    ]}
+  />
+  {faqs.length > 0 && (
+    <script
+      slot="head"
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+        })),
+      })}
+    />
+  )}
+
+  <article>
+    <header class="bg-blush">
+      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+        <p class="t-eyebrow text-ink-soft">Facial guide · Skin-tone calibration</p>
+        <h1 class="t-h2 mt-6 max-w-[30ch] text-[2.5rem] md:text-[4rem]">Facial for Melanin-Rich Skin in San Diego</h1>
+
+        {/* AI Overview quick-answer block. */}
+        <p class="t-body quick-answer mt-7 max-w-[62ch] text-[1.125rem] font-medium">
+          Every facial at KIAMO Skin is calibrated to the skin tone, including melanin-rich
+          skin (Fitzpatrick IV-VI). The protocols use HydraFacial Syndeo for zero-abrasion
+          extraction, Lira chemical peels at Fitzpatrick-matched concentrations, DMK enzyme
+          therapy for barrier repair, and dermaplaning for surface refinement — each safe
+          across the full Fitzpatrick I-VI spectrum when protocols are calibrated.
+        </p>
+
+        <p class="t-body mt-5 max-w-[62ch]">
+          Standard facials sometimes fail melanin-rich skin because aggressive peels,
+          microdermabrasion, and high-percentage acids can trigger post-inflammatory
+          hyperpigmentation (PIH) — the dark mark left when inflammation stimulates the
+          melanocytes to produce more pigment. The same inflammation the treatment was
+          meant to fix becomes the new problem. KIAMO's protocols are calibrated to avoid
+          triggering this response.
+        </p>
+
+        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a
+            href={business.phone.href}
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            {business.phone.display}
+          </a>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[0.875rem] text-ink-soft">
+          <span class="font-medium">{business.experience} experience</span>
+          <span aria-hidden="true">·</span>
+          <span>Safe for all skin types (Fitzpatrick I-VI)</span>
+          <span aria-hidden="true">·</span>
+          <span>Licensed Esthetician</span>
+          <span aria-hidden="true">·</span>
+          <span>Mission Hills, San Diego</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">The problem</p>
+            <h2 class="t-h2 mt-4">Why standard facials sometimes fail melanin-rich skin</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Post-inflammatory hyperpigmentation (PIH) is the dark mark left when
+              inflammation stimulates melanocytes to produce more pigment. It can be
+              triggered by aggressive peels, microdermabrasion, RF heat treatments, and
+              any procedure that causes enough inflammation to activate the melanocyte
+              response. The same inflammation the treatment was meant to fix becomes the
+              new problem.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              In melanin-rich skin (Fitzpatrick IV-VI), the melanocyte response is more
+              reactive. The inflammatory threshold that triggers PIH in lighter skin tones
+              triggers a stronger pigment response in darker skin tones. This is why a
+              single aggressive treatment can produce weeks or months of additional
+              pigmentation rather than the clearer skin the client was hoping for.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              San Diego adds a compounding factor: year-round UV exposure averaging 266
+              sunny days per year. UV is the single biggest trigger for pigmentation
+              recurrence. A treatment plan that works in Seattle or Boston — where UV
+              exposure is lower — has to be more conservative in San Diego, particularly
+              for melanin-rich skin where the melanocyte response is already reactive.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">The fix</p>
+            <h2 class="t-h2 mt-4">What makes a facial safe for melanin-rich skin</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Three things — modality selection, concentration calibration, and
+              practitioner experience. KIAMO's protocols address all three.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <h2 class="t-h3">Modality selection</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              The first decision is which modality fits the skin on the day. Each
+              modality at KIAMO has a different inflammatory profile.
+            </p>
+            <ul class="t-body mt-7 m-0 list-none space-y-3 p-0">
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span><strong>HydraFacial Syndeo</strong> — Vortex-Fusion extraction uses gentle suction at controlled pressure. Zero abrasion. Zero PIH risk across the Fitzpatrick I-VI spectrum. The gentlest extraction option available.</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span><strong>Lira Chemical Peels</strong> — calibrated to the skin tone. Lactic acid 30-50%, mandelic 40%, or TCA at lower concentrations for melanin-rich skin. The acid and concentration matter more than the peel "strength."</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span><strong>DMK Enzyme Therapy</strong> — function-first enzyme treatment that rebuilds barrier function rather than stripping the skin. The gentlest corrective modality offered at KIAMO. Ideal for sensitive, reactive, or barrier-compromised skin.</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span><strong>Dermaplaning</strong> — physical exfoliation that removes the surface layer only. No abrasion deep enough to trigger post-inflammatory hyperpigmentation.</span></li>
+            </ul>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <h2 class="t-h3">Concentration calibration</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              The second decision is concentration. The same peel can be safe or risky
+              depending on concentration and the skin tone.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              Standard peel protocols designed for lighter skin tones use higher
+              concentrations of TCA, glycolic acid, and resorcinol. Applied to melanin-rich
+              skin, these concentrations can trigger the inflammatory response that
+              produces post-inflammatory hyperpigmentation. The protocols at KIAMO use
+              lower concentrations of the appropriate acid for the skin tone, with the
+              goal of producing the cellular turnover the skin needs without producing
+              inflammation the melanocytes will react to.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              This is why a "medium peel" at a chain medspa can produce a beautiful result
+              on Fitzpatrick II-III skin and a hyperpigmentation disaster on Fitzpatrick
+              V-VI skin. The protocol is the same. The skin is different.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <h2 class="t-h3">Practitioner experience</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              The third decision — and the most important — is the practitioner.
+              Concentration calibration is not something that comes from a textbook. It
+              comes from treating the full Fitzpatrick spectrum, week after week, and
+              seeing how the skin responds.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              Kiki has 7+ years of experience treating every Fitzpatrick type at KIAMO.
+              The same licensed esthetician performs every treatment. There is no
+              rotation between junior staff and senior staff, no handoff between
+              consultation and treatment, no "signature facial" protocol applied to
+              every client. The practitioner who assesses your skin is the one who
+              treats it.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              This is the difference between a facial at a chain spa (where protocols
+              come from corporate) and a facial at a private studio (where the
+              practitioner sees every client). For melanin-rich skin, the difference is
+              whether you walk out glowing or walking out with weeks of additional
+              pigmentation.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">What to expect</p>
+            <h2 class="t-h2 mt-4">A facial at KIAMO with melanin-rich skin</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              The assessment, treatment, and homecare steps are the same as for any
+              other skin tone. The difference is in the calibration — concentration,
+              pressure, and modality selection adjusted to the skin tone.
+            </p>
+          </Reveal>
+
+          <ol class="mt-12 m-0 list-none space-y-9 p-0">
+            <Reveal>
+              <li class="border-t border-line pt-7">
+                <p class="t-meta text-rose">01</p>
+                <h3 class="t-service mt-3 text-[1.125rem] md:text-[1.3125rem]">Assessment</h3>
+                <p class="t-body mt-3 text-[0.9375rem] leading-relaxed">
+                  Kiki evaluates your Fitzpatrick type, current skin condition, and the
+                  modality that fits on the day. For melanin-rich skin, the assessment
+                  also considers any prior PIH, current pigmentation patterns, and
+                  whether the barrier can tolerate more intensive modalities.
+                </p>
+              </li>
+            </Reveal>
+            <Reveal>
+              <li class="border-t border-line pt-7">
+                <p class="t-meta text-rose">02</p>
+                <h3 class="t-service mt-3 text-[1.125rem] md:text-[1.3125rem]">Treatment</h3>
+                <p class="t-body mt-3 text-[0.9375rem] leading-relaxed">
+                  Sessions run 45-75 minutes. HydraFacial Syndeo is the gentlest option
+                  — most melanin-rich skin clients start here. Lira peels are added
+                  for pigmentation correction at Fitzpatrick-calibrated concentrations.
+                  DMK enzyme therapy rebuilds the barrier when reactive. Dermaplaning
+                  refines the surface without abrasion.
+                </p>
+              </li>
+            </Reveal>
+            <Reveal>
+              <li class="border-t border-line pt-7">
+                <p class="t-meta text-rose">03</p>
+                <h3 class="t-service mt-3 text-[1.125rem] md:text-[1.3125rem]">Homecare</h3>
+                <p class="t-body mt-3 text-[0.9375rem] leading-relaxed">
+                  Daily homecare is non-negotiable for long-term result. Kiki prescribes
+                  tyrosinase inhibitors (kojic acid, tranexamic acid, alpha arbutin) to
+                  inhibit melanin-pathway overproduction, ceramide-rich moisturizers for
+                  barrier repair, and broad-spectrum SPF 50+ as the foundation. Daily
+                  SPF compliance is the single biggest determinant of whether
+                  pigmentation treatment succeeds or recurs.
+                </p>
+              </li>
+            </Reveal>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Related</p>
+            <h2 class="t-h2 mt-4">More on melanin-rich skin expertise at KIAMO</h2>
+            <p class="t-body mt-6 max-w-[62ch] leading-relaxed">
+              The dedicated melanin-rich skin page covers the broader philosophy and
+              training behind the protocols — including the difference between
+              Fitzpatrick typing and racial skin-tone assumptions.
+            </p>
+          </Reveal>
+
+          <ul class="mt-10 m-0 grid list-none gap-7 md:grid-cols-2 md:gap-6 lg:gap-8">
+            <Reveal as="li">
+              <div class="flex h-full flex-col rounded-lg bg-ivory p-8">
+                <h3 class="t-service text-[1.0625rem]">Melanin-Rich Skin Expertise</h3>
+                <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                  KIAMO\'s approach to treating every Fitzpatrick type, the Fitzpatrick
+                  scale itself, and how the protocols differ from generic skincare.
+                </p>
+                <a href="/melanin-rich-skin/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                  Read more
+                </a>
+              </div>
+            </Reveal>
+            <Reveal as="li">
+              <div class="flex h-full flex-col rounded-lg bg-ivory p-8">
+                <h3 class="t-service text-[1.0625rem]">Hyperpigmentation Treatment in San Diego</h3>
+                <p class="t-body mt-4 flex-1 text-[0.9375rem] leading-relaxed text-ink-soft">
+                  The outcome-specific hub for melasma, PIH, and sun damage correction.
+                  Pairs with this facial guide for clients whose primary concern is
+                  pigmentation.
+                </p>
+                <a href="/hyperpigmentation-treatment/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                  Read more
+                </a>
+              </div>
+            </Reveal>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    {faqs.length > 0 && (
+      <section class="bg-blush">
+        <div class="wrap section-y">
+          <p class="t-eyebrow text-ink-soft">Before you book</p>
+          <h2 class="t-h2 mt-5">Frequently asked questions</h2>
+          <div class="faq-section mt-12 max-w-[68ch]">
+            {faqs.map((faq) => (
+              <div class="border-b border-line">
+                <details class="group">
+                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
+                    <span>{faq.question}</span>
+                    <span
+                      aria-hidden="true"
+                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <div class="t-body pb-6 text-[0.9375rem] leading-relaxed">{faq.answer}</div>
+                </details>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <section class="bg-ivory">
+      <div class="wrap section-y text-center">
+        <h2 class="t-h3 max-w-[28ch] mx-auto">Ready to book a facial for melanin-rich skin?</h2>
+        <p class="t-body mt-5 max-w-[52ch] mx-auto">
+          First-time consultation and treatment starts at $249. Kiki assesses your skin
+          and recommends the modality that fits — every Fitzpatrick type, every concern.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a
+            href={business.phone.href}
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            {business.phone.display}
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

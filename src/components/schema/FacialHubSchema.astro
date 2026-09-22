@@ -1,0 +1,156 @@
+---
+/**
+ * FacialHubSchema
+ *
+ * LocalBusiness schema for the /facial/ umbrella-category hub. Models KIAMO
+ * Skin as the canonical provider and uses hasOfferCatalog to enumerate every
+ * neighborhood subpage as a referenced child Service. This turns the hub
+ * into a knowledge-graph root for AI citation systems (ChatGPT, Perplexity,
+ * Google AI Overview).
+ *
+ * Mirrors the structure of HydrafacialHubSchema so reviewers can diff them
+ * line for line; the only intentional differences are:
+ *   - url / @id anchor to /facial/ (the umbrella hub), not /hydrafacial/
+ *   - serviceType values name the broader "Facial" category rather than the
+ *     specific device — so the schema is the right answer for queries about
+ *     facial treatments in general, while /hydrafacial/ remains the canonical
+ *     answer for the device-specific query.
+ */
+import { facialAreas } from '../../data/facial-areas';
+import { business } from '../../config/business';
+
+const site = Astro.site;
+
+const neighborhoods = facialAreas.map((a) => a.name);
+const schemaDescription =
+  'Facial treatments across San Diego from KIAMO Skin in Mission Hills. ' +
+  'HydraFacial Syndeo, Lira chemical peels, dermaplaning, DMK enzyme therapy. ' +
+  'Safe for every Fitzpatrick I-VI skin tone. California licensed esthetician.';
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${site}facial/#local-business`,
+  name: business.name,
+  url: `${site}facial/`,
+  logo: `${site}logo.png`,
+  image: [
+    `${site}studio-interior-1x1.jpg`,
+    `${site}studio-interior-4x3.jpg`,
+    `${site}studio-interior-16x9.jpg`,
+  ],
+  description: schemaDescription,
+  telephone: business.phone.href.replace('tel:', ''),
+  email: business.email,
+  priceRange: business.priceRange,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: business.address.street,
+    addressLocality: business.address.city,
+    addressRegion: business.address.region,
+    postalCode: business.address.postalCode,
+    addressCountry: business.address.country,
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: business.geo.latitude,
+    longitude: business.geo.longitude,
+  },
+  areaServed: [
+    ...business.schemaAreaServed.map((name) => ({
+      '@type': 'City',
+      name: `${name}, San Diego, CA`,
+    })),
+    ...neighborhoods
+      .filter((name) => !business.schemaAreaServed.includes(name))
+      .map((name) => ({ '@type': 'City', name: `${name}, San Diego, CA` })),
+  ],
+  hasMap: `https://maps.google.com/?cid=${business.gbpPlaceId}`,
+  sameAs: [business.instagram.url, business.yelpUrl, business.bookingUrl],
+  openingHoursSpecification: {
+    '@type': 'OpeningHoursSpecification',
+    dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+    opens: '09:00',
+    closes: '18:00',
+  },
+  currenciesAccepted: 'USD',
+  paymentAccepted: 'Cash, Credit Card, Debit Card',
+  founder: {
+    '@type': 'Person',
+    '@id': `${site}#founder`,
+    name: business.ownerName,
+    jobTitle: 'Licensed Esthetician',
+    hasCredential: {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'license',
+      name: 'California Licensed Esthetician',
+      recognizedBy: {
+        '@type': 'Organization',
+        name: 'California Board of Barbering & Cosmetology',
+      },
+    },
+    knowsAbout: [
+      'Facial treatments',
+      'HydraFacial Syndeo',
+      'Chemical peels',
+      'Dermaplaning',
+      'Enzyme therapy',
+      'Melanin-rich skin care',
+      'Corrective skin treatments',
+    ],
+  },
+  knowsAbout: [
+    'HydraFacial Syndeo',
+    'Lira Chemical Peels',
+    'DMK Enzyme Therapy',
+    'Dermaplaning',
+    'Vortex-Fusion extraction',
+    'Melanin-rich skin treatments',
+    'Hyperpigmentation correction',
+    'Barrier repair',
+    'Coastal skin care',
+    'Fitzpatrick skin typing I-VI',
+  ],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Facial treatments across San Diego neighborhoods',
+    itemListElement: facialAreas.map((area) => ({
+      '@type': 'Offer',
+      itemOffered: {
+        '@type': 'Service',
+        '@id': `${site}facial/${area.slug}/#service`,
+        name: `Facial in ${area.name}`,
+        url: `${site}facial/${area.slug}/`,
+        areaServed: {
+          '@type': 'City',
+          name: `${area.name}, San Diego, CA`,
+          containedIn: { '@type': 'City', name: 'San Diego', containedIn: 'California' },
+        },
+        provider: { '@id': `${site}facial/#local-business` },
+        serviceType: 'Facial Treatment',
+      },
+      price: '199',
+      priceCurrency: 'USD',
+    })),
+  },
+  potentialAction: {
+    '@type': 'ReserveAction',
+    target: {
+      '@type': 'EntryPoint',
+      urlTemplate: business.bookingUrl,
+      inLanguage: 'en-US',
+      actionPlatform: [
+        'http://schema.org/DesktopWebPlatform',
+        'http://schema.org/IOSPlatform',
+        'http://schema.org/AndroidPlatform',
+      ],
+    },
+    result: {
+      '@type': 'Reservation',
+      name: 'Facial Appointment in San Diego',
+    },
+  },
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

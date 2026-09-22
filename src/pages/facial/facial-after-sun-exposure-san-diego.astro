@@ -1,0 +1,316 @@
+---
+/**
+ * /facial/facial-after-sun-exposure-san-diego/ — GeoArticle 3 (problem-aware).
+ *
+ * Long-tail problem-aware article answering the question San Diego clients ask
+ * after a vacation, beach weekend, or unexpected sun exposure: "when can I get
+ * a facial, and what should I do (or not do) in the meantime?"
+ *
+ * Pairs with the existing /journal/june-gloom-is-not-sun-protection/ post.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Reveal from '../../components/Reveal.astro';
+import Button from '../../components/Button.astro';
+import NapBlock from '../../components/NapBlock.astro';
+import { business } from '../../config/business';
+import { CTA_LABEL } from '../../config/nav';
+import FacialHubSchema from '../../components/schema/FacialHubSchema.astro';
+import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+
+const title = 'Facial After Sun Exposure in San Diego | KIAMO';
+const description =
+  'When to book a facial after sun exposure in San Diego. The 24-72 hour window, what to do and not do, and how to support barrier recovery.';
+
+const faqs = [
+  {
+    question: 'How soon after sun exposure can I get a facial?',
+    answer:
+      'For HydraFacial Syndeo and DMK Enzyme Therapy, 24-48 hours after the visible burn or flush has resolved. For Lira Chemical Peels, wait at least 7-10 days — the skin needs full barrier recovery before peel application. For dermaplaning, wait at least 5-7 days. Kiki assesses the skin on the day and adjusts the timeline if needed.',
+  },
+  {
+    question: 'What should I do immediately after sun exposure?',
+    answer:
+      'Cool the skin with a gentle thermal water mist or cold compress. Apply a ceramide-rich moisturizer to support barrier repair. Take an oral NSAID if there is discomfort. Avoid retinoids, vitamin C, and exfoliants for 5-7 days. Apply broad-spectrum SPF 50+ the moment you step outside — even in the house if you are near windows.',
+  },
+  {
+    question: 'What should I avoid after sun exposure?',
+    answer:
+      'Avoid retinoids (retinol, tretinoin, adapalene) for 5-7 days. Avoid vitamin C serums and other strong actives. Avoid chemical peels, microdermabrasion, microneedling, and laser treatments for 7-14 days. Avoid hot yoga, saunas, and prolonged cooking over a hot stove for 48 hours (heat is a separate trigger for melasma and pigmentation).',
+  },
+  {
+    question: 'Will a facial help undo sun damage?',
+    answer:
+      'A single facial will not undo accumulated sun damage, but the right facial at the right time accelerates the recovery process and supports the cellular turnover that lightens pigmentation over time. HydraFacial Syndeo with brightening boosters (Britenol, peptides, growth factors) addresses tone and supports barrier repair in the days after exposure. Lira peels at Fitzpatrick-calibrated concentrations, spaced 4-6 weeks apart, address pigmentation at the cellular level over months.',
+  },
+  {
+    question: 'Can a facial be done before a beach vacation?',
+    answer:
+      'Yes — and it should be. A HydraFacial Syndeo 5-7 days before a beach trip supports the barrier so the skin can tolerate the UV exposure better. Avoid Lira chemical peels within 2 weeks of significant sun exposure — the barrier is more vulnerable during the peel recovery window, and post-peel UV exposure can trigger post-inflammatory hyperpigmentation.',
+  },
+];
+---
+
+<BaseLayout {title} {description}>
+  <FacialHubSchema slot="head" />
+  <SpeakableSchema slot="head" url="https://kiamoskin.com/facial/facial-after-sun-exposure-san-diego/" />
+  <BreadcrumbSchema
+    slot="head"
+    trail={[
+      { name: 'Facial in San Diego', path: '/facial/' },
+      { name: 'Facial After Sun Exposure', path: '/facial/facial-after-sun-exposure-san-diego/' },
+    ]}
+  />
+  {faqs.length > 0 && (
+    <script
+      slot="head"
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+        })),
+      })}
+    />
+  )}
+
+  <article>
+    <header class="bg-blush">
+      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+        <p class="t-eyebrow text-ink-soft">Facial guide · Sun recovery</p>
+        <h1 class="t-h2 mt-6 max-w-[30ch] text-[2.5rem] md:text-[4rem]">Facial After Sun Exposure in San Diego</h1>
+
+        {/* AI Overview quick-answer block. */}
+        <p class="t-body quick-answer mt-7 max-w-[62ch] text-[1.125rem] font-medium">
+          Wait 24-48 hours after visible sun flush or burn before a HydraFacial Syndeo or
+          DMK Enzyme Therapy. Wait 7-10 days before a Lira chemical peel. Avoid retinoids,
+          vitamin C, and exfoliants for 5-7 days post-exposure. Apply broad-spectrum SPF
+          50+ the moment you step outside — UV is the single biggest trigger for
+          pigmentation recurrence in San Diego's year-round sun.
+        </p>
+
+        <p class="t-body mt-5 max-w-[62ch]">
+          San Diego averages 266 sunny days per year, and UV levels remain high even on
+          overcast mornings when the marine layer is present. UVA penetrates cloud cover
+          at near-full strength. After significant sun exposure — a beach weekend, an
+          unexpected sunburn, a vacation in higher-UV destinations — the skin needs
+          specific care for 24-72 hours before a facial, and specific timing on which
+          modality is safe when.
+        </p>
+
+        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a
+            href={business.phone.href}
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            {business.phone.display}
+          </a>
+        </div>
+
+        <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[0.875rem] text-ink-soft">
+          <span class="font-medium">{business.experience} experience</span>
+          <span aria-hidden="true">·</span>
+          <span>Safe for all skin types (Fitzpatrick I-VI)</span>
+          <span aria-hidden="true">·</span>
+          <span>Licensed Esthetician</span>
+          <span aria-hidden="true">·</span>
+          <span>Mission Hills, San Diego</span>
+        </div>
+      </div>
+    </header>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">San Diego context</p>
+            <h2 class="t-h2 mt-4">Why sun recovery matters more in San Diego</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              San Diego averages 266 sunny days per year — more than Miami, more than
+              Honolulu. Even on overcast mornings when the marine layer is present, UV
+              levels remain high enough to trigger melanin production. UVA penetrates
+              cloud cover at near-full strength.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              The marine layer is misleading. Many people skip sunscreen on cloudy mornings
+              because the sky looks grey, but the UV is still there. A single overcast
+              morning without SPF can reverse weeks of corrective treatment progress. The
+              treatment result depends on consistent daily broad-spectrum SPF 50+, not
+              just beach-day application.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              Heat is the second-most-overlooked trigger. Melasma in particular is driven
+              by hormones plus heat plus UV — and San Diego's Santa Ana wind events bring
+              dry, hot air from the desert that can trigger melasma flare-ups even in
+              clients whose pigmentation was previously stable. Hot yoga, saunas, and
+              prolonged cooking over a hot stove produce similar heat-driven flare-ups.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">First 24 hours</p>
+            <h2 class="t-h2 mt-4">The 24-72 hour window</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              The first 24-72 hours after significant sun exposure are about barrier
+              repair, not about correction. The skin barrier has been disrupted by UV
+              exposure. Aggressive treatments during this window can deepen the damage
+              rather than fix it.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <h2 class="t-h3">What to do</h2>
+            <ul class="t-body mt-7 m-0 list-none space-y-3 p-0">
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Cool the skin with a gentle thermal water mist or cold compress (not ice — too aggressive on inflamed skin)</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Apply a ceramide-rich moisturizer within the first hour after sun exposure ends</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Take an oral NSAID (ibuprofen, aspirin) if there is discomfort or visible inflammation — anti-inflammatory effect supports barrier recovery</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Drink extra water — UV exposure dehydrates the skin from the inside out</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Apply broad-spectrum SPF 50+ the moment you step outside, even on overcast mornings</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Sleep in a cool room — heat drives pigmentation recurrence</span></li>
+            </ul>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <h2 class="t-h3">What NOT to do</h2>
+            <ul class="t-body mt-7 m-0 list-none space-y-3 p-0">
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Retinoids (retinol, tretinoin, adapalene) for 5-7 days — they increase cell turnover on already-stressed skin</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Vitamin C serums and other strong actives for 5-7 days</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Chemical peels, microdermabrasion, microneedling, and laser treatments for 7-14 days</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Hot yoga, saunas, hot tubs for 48 hours — heat is a separate pigmentation trigger</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Prolonged cooking over a hot stove for 48 hours — kitchen heat is surprisingly pigment-driving</span></li>
+              <li class="flex gap-4"><span aria-hidden="true" class="text-rose">—</span><span>Skipping SPF on overcast mornings — UV penetrates cloud cover at near-full strength</span></li>
+            </ul>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Booking timing</p>
+            <h2 class="t-h2 mt-4">When to book which facial</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Different modalities have different recovery windows. The right time to book
+              depends on the modality your skin needs.
+            </p>
+          </Reveal>
+
+          <ul class="mt-10 m-0 list-none space-y-3 p-0">
+            <li class="flex gap-4 border-b border-line pb-4"><span aria-hidden="true" class="text-rose">—</span><span><strong>HydraFacial Syndeo</strong> — wait 24-48 hours after the visible flush or burn has resolved. This is the gentlest post-sun option.</span></li>
+            <li class="flex gap-4 border-b border-line pb-4"><span aria-hidden="true" class="text-rose">—</span><span><strong>DMK Enzyme Therapy</strong> — wait 24-48 hours. The function-first enzyme treatment rebuilds the barrier without stripping.</span></li>
+            <li class="flex gap-4 border-b border-line pb-4"><span aria-hidden="true" class="text-rose">—</span><span><strong>Dermaplaning</strong> — wait 5-7 days. The blade on freshly sun-stressed skin can cause unnecessary inflammation.</span></li>
+            <li class="flex gap-4 border-b border-line pb-4"><span aria-hidden="true" class="text-rose">—</span><span><strong>Lira Chemical Peels</strong> — wait at least 7-10 days. The barrier needs full recovery before peel application. For melanin-rich skin, the wait may be longer.</span></li>
+            <li class="flex gap-4 pb-1"><span aria-hidden="true" class="text-rose">—</span><span><strong>Procell Microchanneling</strong> — wait 14 days. Microchanneling on freshly sun-stressed skin creates unnecessary inflammation.</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Long-term</p>
+            <h2 class="t-h2 mt-4">Will a facial undo sun damage over time?</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              A single facial will not undo accumulated sun damage, but the right facial
+              at the right time accelerates the recovery process and supports the
+              cellular turnover that lightens pigmentation over months.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              HydraFacial Syndeo with brightening boosters (Britenol for tone, peptides
+              for firmness, growth factors for barrier repair) supports barrier recovery
+              in the days after exposure. Lira peels at Fitzpatrick-calibrated
+              concentrations, spaced 4-6 weeks apart, address pigmentation at the
+              cellular level over a 3-6 month arc. Daily homecare (tyrosinase
+              inhibitors, ceramide moisturizers, broad-spectrum SPF 50+) represents the
+              majority of long-term result.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              San Diego's year-round UV exposure is the single biggest variable in
+              whether pigmentation treatment succeeds or recurs. A treatment plan that
+              works in Seattle or Boston — where UV exposure is lower — has to be more
+              disciplined in San Diego, particularly for melanin-rich skin.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    {faqs.length > 0 && (
+      <section class="bg-blush">
+        <div class="wrap section-y">
+          <p class="t-eyebrow text-ink-soft">Before you book</p>
+          <h2 class="t-h2 mt-5">Frequently asked questions</h2>
+          <div class="faq-section mt-12 max-w-[68ch]">
+            {faqs.map((faq) => (
+              <div class="border-b border-line">
+                <details class="group">
+                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
+                    <span>{faq.question}</span>
+                    <span
+                      aria-hidden="true"
+                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                    >
+                      +
+                    </span>
+                  </summary>
+                  <div class="t-body pb-6 text-[0.9375rem] leading-relaxed">{faq.answer}</div>
+                </details>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <section class="bg-ivory">
+      <div class="wrap section-y text-center">
+        <h2 class="t-h3 max-w-[28ch] mx-auto">Ready to book a post-sun facial?</h2>
+        <p class="t-body mt-5 max-w-[52ch] mx-auto">
+          Kiki assesses your skin on the day and recommends the right modality for the
+          right time. First-time consultation and treatment starts at $249.
+        </p>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a
+            href={business.phone.href}
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            {business.phone.display}
+          </a>
+        </div>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

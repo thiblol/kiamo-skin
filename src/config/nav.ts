@@ -1,5 +1,6 @@
 /** Shared by the header overlay and the footer. */
 export const treatmentLinks = [
+  { label: 'Facial in San Diego', href: '/facial/' },
   { label: 'HydraFacial', href: '/treatments/hydrafacial/' },
   { label: 'Keravive Scalp Therapy', href: '/treatments/keravive-scalp/' },
   { label: 'DMK Enzyme Therapy', href: '/treatments/dmk-enzyme-therapy/' },
