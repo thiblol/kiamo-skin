@@ -84,6 +84,21 @@ const heroAlt =
     slot="head"
     trail={[{ name: 'Facial in San Diego', path: '/facial/' }]}
   />
+  {faqs.length > 0 && (
+    <script
+      slot="head"
+      type="application/ld+json"
+      set:html={JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((faq) => ({
+          '@type': 'Question',
+          name: faq.question,
+          acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+        })),
+      })}
+    />
+  )}
 
   <article>
     <header class="bg-blush">
@@ -630,18 +645,3 @@ const heroAlt =
     display: none;
   }
 </style>
-
-<script
-  type="application/ld+json"
-  is:inline
-  set:html={JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-    })),
-  })}
-  slot="head"
-/>
