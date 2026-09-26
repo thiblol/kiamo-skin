@@ -33,6 +33,19 @@ home-videos/
 # editor + agent local state
 .vscode/
 .claude/
+.codex/
+.playwright-mcp/
+
+# audit and pull scripts (not site code — local working tools)
+audit-*.py
+audits/
+
+# client deliverables (delivered to clients, not part of site source)
+clients/
+
+# backup files
+*.backup
+*.astro.backup
 
 # raw research — contains unpublishable client identifiers
 docs/research/
@@ -49,3 +62,5 @@ AGENTS.md
 # internal working docs — build-status notes and unverified client details
 gaps.md
 CLIENT-INPUTS.md
+build.log
+image-prompt.md
