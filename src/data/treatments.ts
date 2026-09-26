@@ -330,7 +330,7 @@ export const treatments: Treatment[] = [
       { label: 'LIRA Gentle Renewal Peel', price: verifiedPrices['lira-light-peel'] },
       { label: 'LIRA Advanced Peel', price: verifiedPrices['lira-advanced-peel'] },
     ],
-    note: 'Peel strength is matched to your skin at consultation. The Gentle Renewal Peel refreshes and maintains; the Advanced Peel goes deeper for pigmentation and scarring. Pigmentation is treated as a series with home care between visits — there is no single-session version of this.',
+    note: 'Peel strength is matched to your skin at consultation. The Gentle Renewal Peel refreshes and maintains; the Advanced Peel goes deeper for pigmentation and scarring. Pigmentation is treated as a series — most plans run every 4 to 6 weeks — with home care between visits. There is no single-session version of this.',
     membershipNote:
       'Because pigmentation is only ever treated as a series, a monthly membership is usually the cheaper way to run one.',
     membershipAnchor: 'Monthly facial memberships in San Diego',
@@ -525,60 +525,77 @@ export const treatments: Treatment[] = [
   },
   {
     slug: 'hyperpigmentation',
-    name: 'Hyperpigmentation Treatment',
-    serviceType: 'Hyperpigmentation treatment',
+    name: 'Post-Inflammatory Hyperpigmentation Treatment',
+    serviceType: 'Post-inflammatory hyperpigmentation treatment',
     category: 'Corrective skin treatment',
     areas: ['mission-hills', 'chula-vista', 'la-jolla', 'north-park', 'la-mesa', 'encinitas'],
-    title: 'Hyperpigmentation Treatment | KIAMO SKIN',
+    title: 'Post-Inflammatory Hyperpigmentation Treatment San Diego | KIAMO SKIN',
     description:
-      'Explore personalized hyperpigmentation treatments by KIAMO SKIN for dark marks, uneven tone, melasma, and post-inflammatory pigmentation.',
-    headline: 'Hyperpigmentation Treatment — corrective care for dark marks and uneven tone.',
+      'Post-inflammatory hyperpigmentation (PIH) treatment in San Diego from KIAMO SKIN in Mission Hills. Corrective care for the dark marks left behind after acne, eczema, ingrown hairs, or injury. Calibrated for every Fitzpatrick type I-VI.',
+    headline: 'Post-Inflammatory Hyperpigmentation — corrective care for dark marks left after acne or injury.',
     opener:
-      'Looking for hyperpigmentation treatment in San Diego? KIAMO SKIN provides corrective skincare for dark marks, post-inflammatory pigmentation, melasma, and uneven tone—with specialized expertise in melanin-rich skin.',
+      'Looking for post-inflammatory hyperpigmentation treatment in San Diego? KIAMO SKIN corrects the dark marks that acne, eczema, ingrown hairs, and skin injuries leave behind — the marks dermatologists call PIH — with protocols calibrated for melanin-rich skin and the San Diego UV load.',
     intro:
-      'Hyperpigmentation treatment at KIAMO Skin addresses the visible discoloration that remains after acne, inflammation, or other skin concerns have passed. Whether you are dealing with post-acne dark marks, melasma, or generalized uneven tone, the appropriate treatment depends on what is contributing to the pigmentation and the current condition of your skin. Treatment options may include <a href="/treatments/lira-peels/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Lira Chemical Peels</a>, <a href="/treatments/procell-microchanneling/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Procell Microchanneling</a>, <a href="/treatments/hydrafacial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">HydraFacial</a>, or <a href="/treatments/dmk-enzyme-therapy/" class="border-b border-ink/40 hover:border-rose hover:text-rose">DMK Enzyme Therapy</a> depending on the concern. This corrective approach is especially relevant for <a href="/melanin-rich-skin/" class="border-b border-ink/40 hover:border-rose hover:text-rose">melanin-rich skin</a>, where pigmentation is often a primary concern and treatment selection requires careful consideration.',
+      'Post-inflammatory hyperpigmentation (PIH) is the most common pigmentation concern clients bring to KIAMO SKIN. It is what the skin does in response to inflammation — acne, eczema, an ingrown hair, a nick while shaving, an over-aggressive peel somewhere else. The mark is melanin produced by the injury response, sitting in the surface and mid-layers of the skin. PIH is distinct from melasma (which is hormonal and light-driven) and from sun damage (which is UV-driven and tends to cluster on the highest-exposure areas). Each of those three conditions is treated differently, and choosing the wrong approach is the most common reason treatment fails. For PIH specifically, the right plan is a series of gentle Lira Chemical Peels or Procell Microchanneling, paired with strict daily SPF — see <a href="/treatments/lira-peels/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Lira Chemical Peels</a>, <a href="/treatments/procell-microchanneling/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Procell Microchanneling</a>, and <a href="/melanin-rich-skin/" class="border-b border-ink/40 hover:border-rose hover:text-rose">melanin-rich skin expertise</a> for the protocol details.',
     image: hyperpigmentationTreatment,
     imageAlt: 'Hyperpigmentation treatment in progress at KIAMO Skin Mission Hills - licensed esthetician applying brightening serum for melanin-rich skin pigmentation correction',
     goodFor: [
-      'Dark marks left after acne or inflammation',
-      'Uneven skin tone',
-      'Post-inflammatory hyperpigmentation (PIH)',
-      'Melasma-related pigmentation',
-      'Dull or uneven-looking complexion',
-      'Persistent discoloration',
+      'Dark marks left after acne (post-acne marks)',
+      'Dark marks after eczema, psoriasis, or other inflammatory rashes',
+      'Ingrown hair marks on the face, neck, or body',
+      'Post-procedure marks after an over-aggressive peel or laser elsewhere',
+      'PIH in melanin-rich skin — Fitzpatrick types IV through VI',
     ],
     steps: [
       {
-        title: 'Identify the pigmentation concern',
-        body: 'Understanding what you are trying to improve—whether post-acne discoloration, melasma, or uneven tone—helps determine which treatment options may be appropriate.',
+        title: 'Identify the inflammation source',
+        body: 'PIH keeps re-forming if the inflammation that caused it is still active. Active acne, recurring eczema, or repeated shaving all need to be addressed before fading the marks themselves, otherwise the same dark spots keep returning.',
       },
       {
-        title: 'Evaluate skin condition',
-        body: 'Pigmentation does not exist independently from the rest of the skin. Dehydration, irritation, congestion, and barrier concerns can all influence how the skin responds to treatment.',
+        title: 'Evaluate skin condition and barrier',
+        body: 'PIH fades fastest on skin with an intact barrier. Dehydration, irritation, or active sensitivity slows the result and raises the risk of the corrective treatment creating new marks. Barrier repair with DMK Enzyme Therapy or HydraFacial maintenance is often the first step, before any peel or microchanneling begins.',
       },
       {
-        title: 'Select appropriate treatment',
-        body: 'Depending on the individual and the concern, options may include chemical peels, microchanneling, HydraFacial, or DMK Enzyme Therapy.',
+        title: 'Match treatment to skin tone',
+        body: 'On melanin-rich skin (Fitzpatrick IV–VI), PIH responds well to gentle Lira peels and Procell Microchanneling. On lighter skin tones, the same plan can be paced more aggressively. The protocol is matched to your Fitzpatrick type, not a generic menu.',
       },
       {
-        title: 'Build consistency',
-        body: 'Pigmentation concerns often require a series of treatments alongside appropriate home care and attention to factors that can contribute to recurring discoloration.',
+        title: 'Series and home care',
+        body: 'Most PIH clears in 3–6 sessions spaced 4–6 weeks apart, with daily SPF 30+ (ideally with iron oxides) and a tyrosinase-inhibiting home routine between visits. The home routine is doing as much work as the in-office treatment.',
       },
     ],
     pricing: [
       {
-        label: 'Treatment selection varies by concern',
-        price: PRICE_ON_CONSULTATION,
+        label: 'LIRA Gentle Renewal Peel',
+        price: verifiedPrices['lira-light-peel'],
         description:
-          'Hyperpigmentation treatment pricing depends on which modality is selected. Chemical peels, microchanneling, HydraFacial, and DMK enzyme therapy each have different pricing structures.',
+          'The starting peel for most PIH plans. Refreshing, low-downtime, and safe for melanin-rich skin at the strengths used here.',
+      },
+      {
+        label: 'LIRA Advanced Peel',
+        price: verifiedPrices['lira-advanced-peel'],
+        description:
+          'Goes deeper for stubborn PIH or scarring. Strength is escalated across a series, not in one visit.',
+      },
+      {
+        label: 'Procell Microchanneling — Single Session',
+        price: verifiedPrices.procell,
+        description:
+          'Mechanical channels (no RF heat) paired with stem cytokine growth factor serums. Safe for melanin-rich skin.',
+      },
+      {
+        label: 'Procell Microchanneling — 3 Treatment Series',
+        price: verifiedPrices['procell-series'],
+        description:
+          'The usual PIH plan when scarring is part of the picture. Sessions spaced 4–6 weeks apart.',
       },
     ],
-    note: 'Effective pigmentation care is not about making dark marks disappear as quickly as possible. A thoughtful corrective plan considers the current condition of the skin, what approach is appropriate, and whether the skin can tolerate more intensive corrective treatments. For melanin-rich skin, treatment selection deserves additional consideration because the wrong treatment can create new pigmentation rather than correcting existing concerns.',
+    note: 'Effective PIH care is not about making dark marks disappear as quickly as possible — it is about removing the inflammation source first, then fading the marks in a way the barrier can sustain. For melanin-rich skin, treatment selection deserves additional consideration because the wrong treatment can create new pigmentation rather than correcting existing concerns.',
     melaninNote:
-      'KIAMO SKIN\'s focus on melanin-rich skin is an important part of its corrective skincare identity. Treatment selection takes into account the appearance of pigmentation, the overall condition of the skin, and whether the skin is currently experiencing sensitivity or barrier concerns.',
+      'PIH is more common and more severe in Fitzpatrick types IV through VI. Melanin-rich skin produces pigment more readily in response to inflammation, and the marks run deeper and last longer. KIAMO\'s protocols on melanin-rich skin are built around avoiding the trigger that caused PIH in the first place — the wrong peel at the wrong strength can turn one mark into three.',
     membershipNote:
-      'Pigmentation treatment is typically approached as a series rather than a single visit, which makes a monthly membership plan a practical way to maintain consistency.',
-    membershipAnchor: 'Explore monthly membership options',
+      'PIH treatment runs across a series, which makes a monthly membership the practical way to stay on schedule. Membership treatments can be applied to peels or microchanneling by paying the difference.',
+    membershipAnchor: 'Monthly membership options',
   },
 ];
 

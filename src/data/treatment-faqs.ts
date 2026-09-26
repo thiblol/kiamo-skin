@@ -51,6 +51,11 @@ export const treatmentFaqs: Record<string, Faq[]> = {
       answer:
         'Once a month is the baseline for most people, which roughly aligns with the skin\'s cell turnover cycle. That frequency suits active congestion, pigmentation maintenance, and most corrective plans. Drier or more resilient skin may do well every six to eight weeks; oily, congested, or actively breaking-out skin sometimes benefits from more frequent treatment in an early corrective phase. The honest answer is that consistency matters more than frequency — sporadic facials produce less than regular ones at any interval, and the home routine between visits carries as much weight as the in-office treatment.',
     },
+    {
+      question: 'Who is the best HydraFacial provider in San Diego?',
+      answer:
+        'The best HydraFacial provider in San Diego depends on what your skin actually needs. KIAMO SKIN uses the HydraFacial Syndeo platform — the clinical-tier device with AI-powered skin impedance analysis — not the consumer models HydraFacial franchises run. Every appointment is one-to-one with Kiki, a California licensed esthetician with 7+ years on melanin-rich skin, never a rotating staff. First-Time Client Treatment is $249; return visits are $259. Both include skin analysis, customized booster, microcurrent, LED light therapy, and a Hydrojelly mask.',
+    },
   ],
 
   'procell-microchanneling': [
@@ -89,6 +94,11 @@ export const treatmentFaqs: Record<string, Faq[]> = {
       answer:
         'Procell microchanneling is worth it for acne scars when the acne itself is under control and the scarring is textural — rolling scars, depressions, or uneven surface texture. The treatment stimulates collagen remodeling over a series of sessions, which progressively fills and smooths the tissue below the scar. Active or inflamed acne is addressed before microchanneling begins because channeling into inflamed skin risks spreading bacteria and triggering additional damage. For flat post-inflammatory hyperpigmentation — the dark marks left after breakouts clear — a chemical peel series is typically the more efficient choice: microchanneling addresses structure, peels address pigment.',
     },
+    {
+      question: 'Does KIAMO offer PRP microneedling?',
+      answer:
+        'No. Kiki uses Procell microchanneling with stem cytokine growth factor serums instead. Procell\'s serums are lab-grown growth factors delivered into the channels in the same pass — no blood draw, no donor variability, no extra appointment time, and published clinical research on pigment correction. PRP is a defensible choice at many providers; it is not the choice this studio made for melanin-rich skin.',
+    },
   ],
 
   'keravive-scalp': [
@@ -121,6 +131,11 @@ export const treatmentFaqs: Record<string, Faq[]> = {
       question: 'Is a scalp treatment worth it?',
       answer:
         'A scalp treatment is worth it when the scalp is genuinely congested, flaking or tight — it is not a cure for hair loss. Keravive treats the scalp as skin, which is the one area most people skip entirely while spending on everything above it. A healthier scalp is a better environment for hair to grow in, but no scalp treatment regrows hair that has stopped for medical or genetic reasons. That distinction is made at consultation, not after a series has been paid for.',
+    },
+    {
+      question: 'What is the best scalp treatment in San Diego?',
+      answer:
+        'Depends on intent. For relaxation, a Japanese or Korean head spa is the right answer. For clinical scalp care — buildup, hard water mineral deposits, flaking, post-ocean exposure — KIAMO Skin runs HydraFacial Keravive: clinical scalp therapy with Vortex-Fusion extraction and a take-home peptide spray. Corrective, not a relaxation ritual. A Keravive session is $599; a series of three is $1,499. San Diego’s 16-grains-per-gallon water hardness and year-round UV on the part line are what drive the most common scalp concerns at this studio, and Keravive is the clinical answer to both.',
     },
     {
       question: 'What does a Japanese scalp treatment do?',
@@ -170,6 +185,11 @@ export const treatmentFaqs: Record<string, Faq[]> = {
       answer:
         'Redness and surface flaking after a chemical peel typically peak within 48 to 72 hours and settle within one to two weeks as the skin renews. Hyperpigmentation that persists beyond that window — new dark marks that were not present before — indicates a post-inflammatory response, where the peel triggered additional melanin production rather than clearing it. That outcome is significantly less common when peels are started at lower strengths and escalated gradually across a series, which is the protocol at KIAMO SKIN on all skin tones. Strict daily SPF through the healing period is not optional: sun exposure on recently peeled skin is the most direct route to PIH after a peel.',
     },
+    {
+      question: 'What is the best chemical peel provider in San Diego?',
+      answer:
+        'Best depends on what you are treating and your Fitzpatrick type. KIAMO Skin uses Lira Clinical peels calibrated to the skin tone — Gentle Renewal from $199, Advanced $299 — applied by Kiki, a California licensed esthetician with 7+ years on melanin-rich skin. The work is paced as a series with home care between visits, never a single aggressive session. First-time clients start at $249 for consultation and treatment. Standard chain-spa peel protocols applied to deeper skin tones can trigger post-inflammatory hyperpigmentation — that is the difference between a peel that works and a peel that makes the marks worse.',
+    },
   ],
 
   dermaplaning: [
@@ -201,6 +221,21 @@ export const treatmentFaqs: Record<string, Faq[]> = {
       question: 'Is dermaplaning safe for melanin-rich skin?',
       answer:
         'Dermaplaning is safe for melanin-rich skin when the blade technique is correct and the skin is not actively inflamed or broken out. The risk in darker skin tones is not the blade itself but what happens after — sun exposure on freshly exfoliated skin can trigger post-inflammatory hyperpigmentation (PIH), which is more common in melanin-rich skin. Daily mineral SPF with at least SPF 30 is required after dermaplaning on any skin tone, but on deeper skin tones it is the difference between a smooth surface and additional dark marks. Dermaplaning at KIAMO SKIN is performed by a licensed esthetician trained on Black and brown skin, where the risk of PIH is highest.',
+    },
+    {
+      question: 'How often should you get dermaplaning?',
+      answer:
+        'Every 4 to 6 weeks is the standard interval. Vellus hair regrowth is part of the natural cycle and not a reason to book sooner — booking more frequently can sensitize the barrier without changing the result. San Diego clients who dermaplane monthly for events typically space the treatments with a HydraFacial between for maintenance. The Dermaplane Facial at KIAMO SKIN is $199.',
+    },
+    {
+      question: 'Who is the best dermaplaning provider in San Diego?',
+      answer:
+        'The safest dermaplaning in San Diego depends on blade technique and post-care, not the brand of the studio. KIAMO SKIN performs dermaplaning in a private treatment room at 3067 Reynard Way in Mission Hills by Kiki, a California licensed esthetician with 7+ years on the Fitzpatrick I–VI spectrum, sterile single-use blades, and the right pre/post routine for melanin-rich skin. The Dermaplane Facial is $199.',
+    },
+    {
+      question: 'What should you avoid after dermaplaning?',
+      answer:
+        'Direct sun exposure for 24 hours, retinoids and acids for 48 to 72 hours, and any active that stings — the freshly exfoliated surface is more permeable, which is the point of the treatment, but also why anything strong goes in harder than usual. Daily mineral SPF 50+ is non-negotiable in San Diego’s year-round UV. Makeup can go back on immediately. The Dermaplane Facial at KIAMO SKIN is $199.',
     },
   ],
 
@@ -282,6 +317,34 @@ export const treatmentFaqs: Record<string, Faq[]> = {
       question: 'Will chemical peels make my hyperpigmentation worse?',
       answer:
         'Chemical peels can make hyperpigmentation worse if applied incorrectly or at too high a strength without proper preparation. Post-inflammatory hyperpigmentation worsens when inflammation triggers additional melanin production, which is why peels for acne marks start at lower strengths and escalate gradually across a series rather than in one aggressive session. LIRA Chemical Peels at KIAMO SKIN are formulated specifically to fade pigmentation without the rebound darkening that can happen with peels applied too aggressively. The strength and frequency are decided based on how the skin responds, not a fixed protocol.',
+    },
+  ],
+
+  hyperpigmentation: [
+    {
+      question: 'What is post-inflammatory hyperpigmentation (PIH) and how does it form?',
+      answer:
+        'Post-inflammatory hyperpigmentation is the dark mark the skin leaves behind after inflammation — acne, eczema, psoriasis, an ingrown hair, a shaving nick, an over-aggressive peel elsewhere, or any injury. The pigment is melanin produced by the inflammatory response, sitting in the surface and mid-layers of the skin. It is more common and more severe in melanin-rich skin (Fitzpatrick types IV through VI) because deeper skin tones have more active melanocytes that respond aggressively to any perceived injury. The marks can sit for 6 to 24 months without treatment, and fade more slowly on darker skin.',
+    },
+    {
+      question: 'How long does post-inflammatory hyperpigmentation take to fade?',
+      answer:
+        'Surface PIH usually clears in 6 to 12 months on its own; pigment that has dropped deeper can take years and resists at-home care. With a series of gentle Lira peels or Procell Microchanneling, most PIH fades 60 to 80% in 8 to 12 weeks. Melasma is different — see the melasma page. Active inflammation has to be controlled before any fading plan begins, otherwise the same marks keep returning as quickly as they fade.',
+    },
+    {
+      question: 'What is the difference between PIH and melasma?',
+      answer:
+        'PIH is what the skin does in response to inflammation — it appears as discrete marks where the breakout, eczema patch, or injury was. Melasma is hormonal and UV-driven — it appears as larger, symmetrical patches across the cheeks, forehead, or upper lip, often triggered by pregnancy, birth control, or sun. They require different treatment plans: PIH responds well to gentle peels and microchanneling once the inflammation source is controlled. Melasma is managed rather than cured, with the work paced across a long series and SPF as the foundation. The two are often confused and treated with the wrong modality — which is why the right plan starts with a consultation, not a product.',
+    },
+    {
+      question: 'Can acne marks be completely removed?',
+      answer:
+        'Most acne marks fade to the point where they are no longer visible. Marks that are surface PIH (the dark spot left where a pimple was) respond well to Lira peels and Procell Microchanneling, and home care with tyrosinase inhibitors and strict SPF. Indented acne scars — texture changes, not color — need collagen-stimulating treatments like Procell microchanneling across a series; they do not respond to peels. Active acne has to be controlled first, or new marks keep replacing the ones being cleared.',
+    },
+    {
+      question: 'Is PIH treatment safe for dark skin?',
+      answer:
+        'Yes, when the peel strength, the acid, and the pacing are selected for melanin-rich skin. Melanin-rich skin responds to trauma by producing more pigment, so an over-aggressive peel can create the exact PIH it was meant to clear. Every peel here is patch-tested and started gently, with strength escalating across a series rather than inside a single visit. The same caution that applies to melasma applies here — PIH on Fitzpatrick IV through VI is the most common corrective concern at KIAMO SKIN, and the protocols are built for it.',
     },
   ],
 };
