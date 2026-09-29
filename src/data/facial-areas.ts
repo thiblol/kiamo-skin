@@ -55,6 +55,112 @@ export interface FacialArea {
 
 export const facialAreas: FacialArea[] = [
   {
+    slug: 'mission-hills',
+    name: 'Mission Hills',
+    title: 'Facial in Mission Hills, San Diego — The Studio Location | KIAMO',
+    description:
+      'Facial treatments at KIAMO Skin in Mission Hills — the studio itself at 3067 Reynard Way. Five-minute walk for most Mission Hills residents, five minutes from Hillcrest, Bankers Hill, and Little Italy. HydraFacial, peels, dermaplaning, enzyme therapy. Safe for every Fitzpatrick type I-VI.',
+    h1: 'Facial in Mission Hills, San Diego',
+    intro: `KIAMO Skin is the studio — a single treatment room at 3067 Reynard Way in Mission Hills, San Diego. Mission Hills residents walk to the studio; Hillcrest, Bankers Hill, and Little Italy residents are five minutes away via Washington Street. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, in a private one-room studio with free on-site parking. Treatments are calibrated for every Fitzpatrick type I-VI, including melanin-rich skin where standard peels trigger post-inflammatory hyperpigmentation.`,
+    authority: {
+      heading: 'Why Mission Hills residents choose the studio in their own neighborhood',
+      body: `Mission Hills is a canyon-rim residential neighborhood built on streets that follow the bluff line above Mission Valley — craftsman bungalows, mature canopy, and quiet residential blocks. KIAMO Skin sits at 3067 Reynard Way, off Washington Street between First Avenue and Reynard Way's short commercial strip. For Mission Hills residents, the studio is closer than a coffee run — most addresses in the neighborhood are a five-minute walk or shorter. Kiki has 7+ years treating every Fitzpatrick type. The single-practitioner model means the person who assesses your skin is the one who treats it — no rotation between staff, no handoff between consultation and treatment, and no surprise in the modality selected.`,
+    },
+    uniqueness: {
+      heading: 'Facials that meet you where you live',
+      body: `Mission Hills clients choose KIAMO because the studio is in their own neighborhood — the walk takes the same time as parking and waiting at a chain spa:`,
+      bullets: [
+        'Walk-in convenience — most of Mission Hills is a five-minute walk to the studio',
+        'Free on-site parking at 3067 Reynard Way for clients who drive',
+        'Single-practitioner model — Kiki performs every treatment',
+        'All Fitzpatrick types — melanin-rich skin protocols calibrated per session',
+        'No franchise overhead or upsells — pricing published and confirmed at booking',
+      ],
+    },
+    depth: {
+      heading: 'How a facial works at KIAMO Skin',
+      body: `Every facial follows the same three-step structure with modality selected to match the skin on the day. For Mission Hills clients, the assessment is unhurried — most arrive within ten minutes of leaving home.`,
+      process: [
+        {
+          step: 'Assessment',
+          description:
+            'Kiki evaluates your skin tone (Fitzpatrick I-VI), primary concern, and the modality that fits — HydraFacial Syndeo with AI skin analysis, Lira chemical peel at Fitzpatrick-calibrated concentrations, DMK enzyme therapy for barrier repair, or dermaplaning for surface refinement. For Mission Hills clients, the assessment includes any current corrective plan and home routine.',
+        },
+        {
+          step: 'Treatment',
+          description:
+            'Sessions are 45-75 minutes depending on modality. HydraFacial Syndeo pairs Vortex-Fusion extraction with AI analysis and selected boosters. Lira peels use lactic, mandelic, or TCA at concentrations matched to your skin tone. DMK enzyme therapy rebuilds barrier function. Dermaplaning removes the surface layer of dead skin and vellus hair before serum infusion. No modality is selected without checking it is safe for your Fitzpatrick type.',
+        },
+        {
+          step: 'Homecare',
+          description:
+            'Medical-grade homecare extends the result between visits. Kiki prescribes a daily regimen: ceramide-rich moisturizers for barrier repair, tyrosinase inhibitors for pigmentation-prone skin, broad-spectrum SPF 50+ for San Diego\'s year-round UV. For Mission Hills residents who walk or spend time outdoors, daily SPF is non-negotiable. Homecare represents the majority of long-term result.',
+        },
+      ],
+    },
+    intent: {
+      heading: 'Who books a facial in Mission Hills',
+      body: `Mission Hills clients book facials for the full range of reasons — pre-event preparation, monthly maintenance against cumulative UV, recovery from travel or sun exposure, or the foundation of a longer corrective plan addressing pigmentation, texture, or aging concerns. Many walk to the studio on a lunch break; others book after-work appointments and arrive in five minutes from a Hillcrest or Bankers Hill office. KIAMO is the right fit when the priority is one practitioner who knows your skin over time, no upsells, and protocols calibrated to every skin tone — including melanin-rich skin, where standard peels risk post-inflammatory hyperpigmentation.`,
+    },
+    gettingHere:
+      'KIAMO Skin is at 3067 Reynard Way in Mission Hills. From anywhere in Mission Hills, the studio is a five-minute walk or shorter — turn west off Hawk Street, Goldfinch Street, or any of the north-south residential streets to Reynard Way. From Hillcrest, take University Avenue west to Washington Street, then south. From Bankers Hill, take Washington Street west past First Avenue. From Little Italy, take India Street or Date Street south to Washington Street. Free on-site parking at the studio. By appointment only.',
+    landmarks: [
+      'Presidio Park',
+      'Pioneer Park',
+      'Mission Hills Library',
+      'Washington Street',
+      'Reynard Way',
+      'Fort Stockton Drive',
+      'Old Town San Diego (across the valley)',
+      'Hillcrest (adjacent east)',
+      'Bankers Hill (adjacent south)',
+      'Little Italy (adjacent southwest)',
+    ],
+    adjacentAreas: ['hillcrest'],
+    geo: {
+      latitude: 32.7374,
+      longitude: -117.1696,
+    },
+    geoRadius: '1500',
+    cityModifiers: [
+      'Canyon-rim residential neighborhood with craftsman bungalows',
+      'Walking distance for most residents to the studio',
+      'Quiet streets with mature canopy and low traffic',
+      'Lower UV reflection than coastal San Diego — slightly cooler microclimate',
+      'Adjacent to Hillcrest, Bankers Hill, Little Italy, and Old Town',
+    ],
+    postalCodes: ['92103'],
+    faqs: [
+      {
+        question: 'Do Mission Hills residents walk to KIAMO Skin?',
+        answer:
+          'Yes — most of Mission Hills is a five-minute walk or shorter to the studio at 3067 Reynard Way. Free parking is also on site for clients who drive or who are not within walking distance.',
+      },
+      {
+        question: 'How far is KIAMO Skin from Hillcrest and Bankers Hill?',
+        answer:
+          'About 5 minutes via University Avenue and Washington Street. The studio sits on the west end of Mission Hills, just over the ridge from Hillcrest and a short drive from Bankers Hill and Little Italy.',
+      },
+      {
+        question: 'Is there parking at the studio in Mission Hills?',
+        answer:
+          'Yes — free parking on site at 3067 Reynard Way. The studio is single-room and single-practitioner, so a space is always available when you arrive.',
+      },
+      {
+        question: 'What facial is right for first-time Mission Hills clients?',
+        answer:
+          'The First-Time Client Treatment at $249 includes consultation, AI skin analysis, customized modality selection, and the first treatment. Kiki assesses your skin and recommends the modality that fits — HydraFacial Syndeo, Lira chemical peel, DMK enzyme therapy, or dermaplaning.',
+      },
+      {
+        question: 'Is KIAMO Skin the closest facial studio to Mission Hills?',
+        answer:
+          'Yes — KIAMO is in Mission Hills itself, at 3067 Reynard Way. There are no closer standalone facial studios. Other spa options in the immediate area are part of larger hotel or resort properties, not private correction-focused studios.',
+      },
+    ],
+    schemaDescription:
+      'Facial treatments at KIAMO Skin in Mission Hills, San Diego — the studio itself at 3067 Reynard Way. Walking distance for Mission Hills residents, 5 minutes from Hillcrest, Bankers Hill, and Little Italy. Safe for every Fitzpatrick type I-VI skin tone.',
+  },
+  {
     slug: 'la-jolla',
     name: 'La Jolla',
     title: 'Facial in La Jolla, San Diego — All Skin Types | KIAMO',
