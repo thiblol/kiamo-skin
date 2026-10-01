@@ -1577,4 +1577,168 @@ export const articles: Article[] = [
     ],
     cta: { label: 'Request chemical peel consultation', href: 'https://www.vagaro.com/kiamoskin' },
   },
+  {
+    slug: 'melasma-chemical-peel-san-diego',
+    headline: 'Best chemical peel for melasma, and what the answer actually depends on',
+    title: 'Best Chemical Peel for Melasma in San Diego | KIAMO Skin',
+    description:
+      'Glycolic, mandelic, Cosmelan, Jessner — which chemical peel works for melasma on melanin-rich skin, and why the answer depends more on protocol than acid name.',
+    standfirst:
+      '"Best peel for melasma" is a search query, not a clinical answer. The right peel is the one your Fitzpatrick type can tolerate every four to six weeks, repeated across a series, with melanin production quieted between sessions.',
+    readingTime: '10 min read',
+    datePublished: '2026-10-01',
+    dateModified: '2026-10-01',
+    image: hyperpigmentationHero,
+    imageAlt:
+      'Melasma patches on the cheek and forehead of a woman with melanin-rich skin, lit by natural window light',
+    quickAnswer:
+      'For melasma on melanin-rich skin (Fitzpatrick IV–VI), a superficial-to-medium peel with mandelic or lactic acid at concentrations matched to your skin type is the safe choice, run as a series rather than one strong session. At KIAMO SKIN in Mission Hills, the Lira Gentle Renewal Peel ($199) and Lira Advanced Peel ($299) use mandelic and lactic acids calibrated per skin tone, with tyrosinase-inhibitor prep between sessions and broad-spectrum SPF 50+ with iron oxides daily.',
+    body: [
+      {
+        p: '"Best chemical peel for melasma" is the kind of search that ends in a list of acids and a "consult your provider" footnote. The clinically useful answer is more specific and harder to find: the right peel is the one your skin tone can tolerate every four to six weeks, repeated across a series, with melanin production quieted between sessions. Everything else is packaging.',
+      },
+      {
+        p: 'This article walks through the four peel families that show up for melasma searches (Cosmelan, glycolic, mandelic, Jessner), what the evidence says about each, and why the safe-on-melanin-rich-skin choice is narrower than the popular list suggests. KIAMO offers <a href="/hyperpigmentation-treatment/">melasma and hyperpigmentation treatment across San Diego neighborhoods</a> from the Mission Hills studio, with the Lira Clinical peels designed around that constraint.',
+      },
+
+      { h2: 'What kinds of peels are used for melasma?' },
+      {
+        answer:
+          'Four peel families dominate the published melasma protocol: depigmentation systems like Cosmelan, glycolic acid at 30 to 70 percent, mandelic acid at 30 to 50 percent, and Jessner solution (lactic, salicylic, and resorcinol in ethanol). Each works through a different mechanism and carries a different safety profile on darker skin tones.',
+      },
+      {
+        table: {
+          caption: 'Comparing peel families for melasma',
+          head: ['Family', 'What it does', 'Best for', 'Risk on melanin-rich skin (IV–VI)'],
+          rows: [
+            [
+              'Cosmelan / Melanage',
+              'Two-step depigmentation mask; suppresses tyrosinase over weeks',
+              'Stubborn epidermal and dermal melasma, Fitzpatrick III–IV',
+              'Medium — formulation matters; the standard protocol stays at light depth',
+            ],
+            [
+              'Glycolic acid 30–70%',
+              'AHA; speeds cell turnover to lift pigment',
+              'Mild-to-moderate epidermal melasma',
+              'Higher — deep peels (>50%) risk rebound pigmentation',
+            ],
+            [
+              'Mandelic acid 30–50%',
+              'Large-molecule AHA; slower penetration',
+              'Sensitive skin, Fitzpatrick IV–VI, melasma with active inflammation',
+              'Lower — gentler, fits the no-deep-wound rule',
+            ],
+            [
+              'Jessner solution',
+              'Lactic + salicylic + resorcinol; controlled layered peel',
+              'Combined epidermal + mild dermal pigment',
+              'Medium — depends on layer count and concentration',
+            ],
+          ],
+        },
+      },
+      {
+        p: 'The consensus in the published literature is converging on a single principle: lower concentration, longer series, with melanin production suppressed between sessions. The <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5724304/" rel="noopener" target="_blank">2018 Indian Pigmentary Expert Group consensus on chemical peels in melasma</a> explicitly cautions against high-concentration peels in skin of color and recommends escalating-strength protocols across a series rather than aggressive single sessions.',
+      },
+      {
+        p: 'Notice what the table does not include: TCA at 20 to 35 percent. That is the medium-depth peel most medspas offer, and it is exactly the peel that the systematic review of pigment work in skin of color flagged as the highest-risk intervention. The Lira Clinical peels used at KIAMO do not include it — they stay within the light-to-medium depth range by design.',
+      },
+
+      { h2: 'What makes a peel safe on melanin-rich skin?' },
+      {
+        answer:
+          'The safety criterion is whether the peel triggers inflammation severe enough to activate melanocytes. Mandelic acid wins on this score because its larger molecule penetrates more slowly, so it exfoliates without wounding. Glycolic acid works but only at concentrations matched to the skin on the day.',
+      },
+      {
+        p: 'This is the mechanism behind most of the stories that start "I had a peel once and it made my melasma worse". Inflammation is what triggers pigment production in melanin-rich skin. A peel that penetrates faster than the skin can buffer creates exactly the wound response the melanocytes are trying to avoid. The result is not failure to treat the melasma. The result is new pigment forming where the peel was applied.',
+      },
+      {
+        p: 'Lira Clinical formulations handle this in two ways. The acids selected — lactic and mandelic at the Gentle Renewal Peel concentrations — penetrate slowly enough that the skin can buffer the response. The protocol layers melanin-suppression work before each peel and SPF that blocks visible light (not just UV) after. The "avoid deep peels" safety stance the published guidance keeps returning to is built into the protocol, not added as a footnote.',
+      },
+      {
+        p: 'For deeper melasma that requires medium-depth work, <a href="/treatments/lira-peels/">the Lira Advanced Peel</a> escalates strength across a series — never within a single appointment — and is paired with home prep between visits. Each peel in the series is light. The cumulative effect is what addresses pigment at the cellular level.',
+      },
+
+      { h2: 'What does a Lira melasma peel actually do?' },
+      {
+        answer:
+          'The Lira Gentle Renewal Peel applies lactic and mandelic acids at concentrations matched to your Fitzpatrick classification. The peel sits for a controlled duration, then is neutralized. After neutralization, tyrosinase-inhibitor serums are applied and SPF is layered over.',
+      },
+      {
+        p: 'In practice the appointment runs about 45 minutes. You leave looking like you had a facial — mild flush for 30 to 60 minutes, no visible peeling for most clients at this depth. Over the next four to six weeks, pigment lifts as cells turn over. The series is what produces measurable fading; the single peel refreshes.',
+      },
+      {
+        p: 'For melasma specifically, the work happens between appointments, not during them. The peel lifts pigment that has already formed. The tyrosinase inhibitors applied during the peel and the home routine between sessions suppress new pigment formation. The two together produce the fading that neither does alone. Melasma is a chronic condition. The protocol treats it that way.',
+      },
+
+      { h2: 'How does San Diego\'s UV climate affect peel timing?' },
+      {
+        answer:
+          'A melasma peel applied in late spring in San Diego, with the patient resuming unprotected outdoor activity, will reverse within weeks. The same peel in fall, with strict daily SPF, will hold for months. The peel is the lever. The season and the home routine are what decide whether the lever moves anything.',
+      },
+      {
+        p: 'San Diego\'s UV index sits at 8 to 10 from April through October — the highest band on the index. Visible light adds a second pigment trigger that pure SPF does not address, which is why tinted sunscreen with iron oxides is non-negotiable for melasma, not optional. <a href="/journal/june-gloom-is-not-sun-protection/">June Gloom is not sun protection</a>; the overcast mornings in May and June still deliver meaningful UV. Car windows filter UVB but not UVA, so daily commuters get cumulative one-sided exposure on the driving-side cheek.',
+      },
+      {
+        p: 'For inland neighborhoods — <a href="/service-areas/chula-vista/">Chula Vista</a>, <a href="/service-areas/la-mesa/">La Mesa</a>, El Cajon — — cumulative UV runs higher year-round than along the coastal strip. The marine layer that softens May and June along the boardwalk does not reach the inland corridor with the same effect. Melasma in those areas reflects that, and the peel protocol is timed accordingly. The closer to the coast, the more year-round humidity; the further inland, the more year-round direct sun.',
+      },
+
+      { h2: 'What does realistic fading look like?' },
+      {
+        answer:
+          'Measurable fading for epidermal melasma is typically 8 to 12 weeks into a prepared series, with continued improvement across the second and third peels. Dermal melasma — pigment that sits deeper — takes longer and may require combination work that includes dermatology-grade intervention beyond what an esthetician protocol covers.',
+      },
+      {
+        p: 'The honest unit of measurement is months rather than weeks. Anyone promising dramatic fading in one session for melasma is describing a different condition than the one you have. The published literature is candid: <a href="https://www.ncbi.nlm.nih.gov/books/NBK459271/" rel="noopener" target="_blank">StatPearls describes melasma</a> as a chronic, relapsing pigmentary disorder best understood as chronic disease control rather than cure, with improvements "frequently transient in the absence of sustained photoprotection and maintenance therapy." That is the consensus the AAD and the consensus reviews all adopt.',
+      },
+      {
+        p: 'What a safe peel protocol delivers: visible fading across a series, with the caveat that maintenance is required. A single summer unprotected is enough to undo six months of careful work. The peel protocol here is paired with the home routine that protects the result between visits. <a href="/journal/three-kinds-of-dark-mark/">The kind of mark you have</a> decides what comes first; melasma is managed, not cured.',
+      },
+
+      { h2: 'What should you ask before booking a melasma peel?' },
+      {
+        answer:
+          'Ask two questions: whether the protocol is calibrated to your Fitzpatrick type, and whether the practitioner can answer why the peel they are recommending is safer than the alternatives for your skin tone.',
+      },
+      {
+        p: 'A practitioner who works with melanin-rich skin routinely will answer both without hesitating. Vague answers on either point are the signal to walk out. The wrong peel on the wrong skin tone produces exactly the rebound pigment the protocol is trying to clear.',
+      },
+      {
+        p: 'The deeper consideration is whether a peel is the right tool at all. Melasma that sits too deep for surface treatment, or that is being driven by hormonal medication the patient is still taking, may need prescription-strength intervention or a dermatology referral first. A good peel protocol is part of a broader plan, not the whole plan. <a href="/melanin-rich-skin/">KIAMO\'s practice</a> is built around that framing — melanin-rich skin as the whole discipline rather than a service line — so the answer that gets given at consultation is the one that fits the patient in front of the practitioner.',
+      },
+      {
+        p: '<a href="/treatments/lira-peels/">Lira peels at KIAMO</a> are run as part of a pigment workup at consultation, not sold as a standalone fix. The First-Time Client Treatment ($249) is a diagnostic session that ends with a phased plan: home prep, the peel series at the right concentration for your skin, and the maintenance routine that protects the result. The studio is in Mission Hills at 3067 Reynard Way, five minutes from Hillcrest, Bankers Hill, and Little Italy, with free parking.',
+      },
+    ],
+    faqHeading: 'Melasma peel questions',
+    faqs: [
+      {
+        question: 'Which peel is best for melasma on dark skin?',
+        answer:
+          'Mandelic acid at 30 to 50 percent is the safer choice on Fitzpatrick IV–VI because its larger molecule penetrates more slowly and is less likely to trigger the inflammatory response that produces rebound pigment. Glycolic acid works but only at lower concentrations, paired with home prep between sessions. TCA above 15 percent is generally not appropriate for melanin-rich skin.',
+      },
+      {
+        question: 'Is a chemical peel safe if I have melasma?',
+        answer:
+          'A chemical peel is safe for melasma when the protocol is calibrated to your Fitzpatrick type and run as a prepared series rather than one aggressive session. The risk to manage is rebound pigment from a peel that penetrates deeper than the skin can buffer. Light to medium peels with mandelic or lactic acid, paired with tyrosinase-inhibitor home care, carry the lowest documented risk on melanin-rich skin.',
+      },
+      {
+        question: 'How many sessions of chemical peel does it take to fade melasma?',
+        answer:
+          'Most patients see measurable fading after three to four peels in a prepared series, spaced four to six weeks apart, with the home routine running between visits. Single-session melasma promises are a red flag — the condition is chronic and responds to cumulative work, not one strong session.',
+      },
+      {
+        question: 'How long after a melasma peel does pigment fade?',
+        answer:
+          'Pigment lifts as cells turn over in the weeks after each peel, so the visible fading shows up in the second and third week after a session. Cumulative fading across the series is what produces the result a single appointment cannot. Between sessions, the home routine — tyrosinase inhibitors plus tinted SPF with iron oxides — is what protects the lift.',
+      },
+      {
+        question: 'What should you avoid after a melasma peel?',
+        answer:
+          'Avoid unprotected sun for at least two weeks after the peel, since freshly exfoliated skin is more reactive to UV and visible light. Avoid retinoids, vitamin A derivatives, and irritating actives for five to seven days. Avoid heat exposure (saunas, hot yoga, prolonged cooking) for 48 to 72 hours, because heat is itself a pigment driver in melasma. And apply tinted SPF 50+ with iron oxides every morning, regardless of the weather.',
+      },
+    ],
+    cta: { label: 'See peels for melasma', href: '/treatments/lira-peels/' },
+  },
 ];
