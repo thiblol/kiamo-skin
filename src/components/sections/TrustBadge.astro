@@ -1,0 +1,83 @@
+---
+/**
+ * TrustBadge
+ * ----------
+ * The site-wide visible "40 five-star Google reviews" signal.
+ *
+ * Why this exists:
+ *   - Trust Signal Gap Hunter Module 1: a verifiable Google review count
+ *     and rating is the single highest-weight trust signal in the audit
+ *     framework (3 points on a 100-point scale). Until this component,
+ *     KIAMO carried the count nowhere on the site — the GBP page itself
+ *     held it, and every visitor who didn't follow the "Read reviews on
+ *     Google" link never saw the social proof.
+ *   - GBP Optimization Checklist Phase 1: the studio confirmed a verified
+ *     count of 40 five-star reviews on 2026-10-03. That number is the
+ *     source of truth for this component.
+ *
+ * What this does NOT do:
+ *   - It does not emit an `aggregateRating` JSON-LD node. The Trust
+ *     Signal Gap Hunter and the studio's own guard suite both forbid
+ *     schema-claimed review counts because fabricated or stale numbers
+ *     are an explicit disqualifier. The 40 lives only in visible HTML.
+ *   - It does not render a counter widget that updates live. The count
+ *     is read from src/data/review-stats.ts, which carries a
+ *     `lastVerified` date so the freshness of the claim is visible.
+ *
+ * Visual choices:
+ *   - Five inline SVG stars. No raster, no icon font, no third-party
+ *     widget. Stars fill with var(--color-rose) — the established accent
+ *     in the existing palette — which reads as gold-adjacent on the
+ *     porcelain background. Five separate <svg> nodes so screen readers
+ *     announce the row coherently rather than as a single glyph.
+ *   - Text uses the existing type scale. The number is the only
+ *     information-dense element on the row, so it carries `font-medium`
+ *     while the surrounding text stays at the body weight.
+ *   - The verification line is small and ink-soft, with a "Verified on"
+ *     label so the freshness claim reads as an audit, not a slogan.
+ */
+import { reviewStats } from '../../data/review-stats';
+---
+
+<section
+  aria-label="Google reviews"
+  class="bg-porcelain"
+>
+  <div class="wrap pb-12 md:pb-16">
+    <div
+      class="flex flex-col items-start gap-4 rounded-lg border border-line bg-ivory p-6 md:flex-row md:items-center md:gap-6 md:p-8"
+    >
+      <div
+        class="flex items-center gap-1 text-rose"
+        aria-hidden="true"
+      >
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z"/></svg>
+      </div>
+
+      <div class="flex-1">
+        <p class="t-body text-[1.0625rem] font-medium leading-[1.4] text-ink">
+          <span class="sr-only">Rated {reviewStats.rating} out of 5 stars.</span>
+          <span aria-hidden="true" class="text-ink">
+            {reviewStats.rating}.0
+          </span>
+          {' '}—{' '}
+          <a
+            href={reviewStats.reviewsUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="border-b border-ink/40 pb-0.5 hover:border-rose hover:text-rose"
+          >
+            {reviewStats.count} five-star Google reviews
+          </a>
+        </p>
+        <p class="t-meta mt-2 text-ink-soft">
+          Verified on {reviewStats.lastVerified} · Independent of the studio
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

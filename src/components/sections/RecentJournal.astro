@@ -1,0 +1,119 @@
+---
+/**
+ * RecentJournal
+ * -------------
+ * Three most recent journal articles on the homepage, ordered newest first.
+ *
+ * Why this exists:
+ *   - SEO Content Decay Detector: the homepage is the single highest-
+ *     authority page on the site, and surfacing the freshest content
+ *     here is the strongest available "freshness" signal for visitors and
+ *     for Googlebot. The decay detector ranks pages with no date stamps
+ *     as "Unknown" and considers them unverified; this section puts
+ *     publish dates in the visible HTML where they are verifiable.
+ *   - Agent-Ready Local Visibility Checklist Part 1.4 ("GBP Posts as
+ *     temporal signals"): the same logic that says the GBP should post
+ *     regularly applies to the site itself. A visible "fresh writing"
+ *     block is the on-site equivalent of a recent post — the same
+ *     freshness validator that Google applies to a GBP applies to the
+ *     editorial surface, and this section is where it shows.
+ *   - Orphan Pages Module: a journal post linked from the homepage is
+ *     one step further from being orphaned. Currently the journal index
+ *     is only linked from the header nav and the footer; surfacing the
+ *     freshest post on the homepage keeps new content immediately
+ *     reachable from the highest-traffic page.
+ *
+ * Copy rules:
+ *   - Article cards use the article `headline` as the link anchor
+ *     (keyword-rich, matches the page H1 — orphan-pages Module 4).
+ *   - Date is rendered with the published day, month, and year so the
+ *     reader sees the freshness claim at a glance.
+ *   - The standfirst is the article's own 1-line summary, not
+ *     paraphrased, so the card matches the page it links to.
+ *
+ * Data source: src/data/articles.ts. The data file's existing
+ * `datePublished` field drives the order. Three posts, newest first.
+ * No filtering by topic — the spec calls for "recent" not "selected".
+ */
+import { Image } from 'astro:assets';
+import Reveal from '../Reveal.astro';
+import { articles } from '../../data/articles';
+
+const recent = [...articles]
+  .sort((a, b) => (a.datePublished < b.datePublished ? 1 : -1))
+  .slice(0, 3);
+
+const formatDate = (iso: string): string => {
+  // ISO is YYYY-MM-DD. Render as "Month D, YYYY" without locale flakiness:
+  // split the string, avoid the Date constructor, so server and client
+  // render the same string for the same input.
+  const [year, month, day] = iso.split('-');
+  const months = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
+  ];
+  const monthName = months[Number(month) - 1] ?? month;
+  return `${monthName} ${Number(day)}, ${year}`;
+};
+---
+
+<section class="bg-ivory">
+  <div class="wrap section-y">
+    <Reveal>
+      <p class="t-eyebrow text-ink-soft">From the journal</p>
+      <h2 class="t-h2 mt-5 max-w-[28ch]">Recent writing on skin in San Diego.</h2>
+    </Reveal>
+
+    <ul class="mt-14 grid list-none gap-x-8 gap-y-12 p-0 md:grid-cols-3">
+      {
+        recent.map((article) => (
+          <Reveal as="li">
+            <article class="group flex h-full flex-col">
+              <a
+                href={`/journal/${article.slug}/`}
+                class="block"
+                aria-label={article.headline}
+              >
+                <div class="aspect-4/3 w-full overflow-hidden bg-porcelain">
+                  <Image
+                    src={article.image}
+                    alt={article.imageAlt}
+                    widths={[400, 800]}
+                    sizes="(min-width: 52.5rem) 30vw, 90vw"
+                    loading="lazy"
+                    decoding="async"
+                    class="size-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105"
+                  />
+                </div>
+                <p class="t-meta mt-6 text-ink-soft">
+                  <time datetime={article.datePublished}>{formatDate(article.datePublished)}</time>
+                </p>
+                <h3 class="t-h3 mt-3 text-[1.25rem] transition-colors duration-300 group-hover:text-rose">
+                  {article.headline}
+                </h3>
+              </a>
+              <p class="t-body mt-3 flex-1 text-[0.9375rem] leading-[1.55] text-ink-soft">
+                {article.standfirst}
+              </p>
+              <a
+                href={`/journal/${article.slug}/`}
+                class="t-button mt-5 inline-block self-start border-b border-ink pb-1 hover:border-rose hover:text-rose"
+              >
+                Read the article
+              </a>
+            </article>
+          </Reveal>
+        ))
+      }
+    </ul>
+
+    <p class="mt-12">
+      <a
+        href="/journal/"
+        class="t-button border-b border-ink pb-1 hover:border-rose hover:text-rose"
+      >
+        All journal articles
+      </a>
+    </p>
+  </div>
+</section>

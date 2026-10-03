@@ -1,0 +1,55 @@
+---
+/**
+ * QuickAnswer
+ * ----------
+ * The 2-sentence AIO-targeted block that lives directly under the hero.
+ *
+ * Why this exists:
+ *   - Brave AI Indexing skill: every high-intent page needs a labelled,
+ *     immediately-extractable answer block that AI engines can lift into
+ *     their summaries. The same pattern already ships on the facial hub
+ *     (facial/index.astro), the journal articles (journal/[slug].astro)
+ *     and the area pages (service-areas/[slug].astro) — the homepage was
+ *     the missing one.
+ *   - LLM Optimization Agent Module 4.1: homepage content must contain a
+ *     2-sentence "Quick Answer" block in AIO-triggerable format.
+ *   - SpeakableSchema (src/components/schema/SpeakableSchema.astro) already
+ *     targets `cssSelector: [".quick-answer", ".faq-section"]`. The
+ *     homepage now ships both, so voice search and AIO extractors have
+ *     explicit targets on the highest-traffic page.
+ *
+ * The summary copy is the locked wording from the plan: brand, service,
+ * city, neighborhood, license, years, all-skin-types, four service
+ * categories, and the verified 40 five-star Google review count. It is
+ * entity-dense by design — every SEO audit called for homepage entity
+ * density, and this block concentrates it where the AIO extractors look
+ * first.
+ *
+ * Visual treatment mirrors the existing pattern on other hub pages:
+ * rose-tinted left border, slight weight bump, no background fill. Reusing
+ * the same look keeps the site visually consistent without introducing a
+ * new component class.
+ */
+---
+
+<section
+  aria-labelledby="quick-answer-label"
+  class="bg-porcelain border-y border-line"
+>
+  <div class="wrap py-10 md:py-12">
+    <p
+      id="quick-answer-label"
+      class="t-eyebrow mb-3 text-rose"
+    >
+      Quick answer
+    </p>
+    <p
+      class="quick-answer t-body text-[1.0625rem] md:text-[1.125rem] font-medium max-w-[68ch] leading-[1.55]"
+    >
+      KIAMO Skin is a facial and scalp studio in Mission Hills, San Diego, run by a
+      licensed esthetician with 7+ years of experience treating every skin type. The
+      studio performs corrective facials, pigmentation correction, acne treatment, and
+      Keravive scalp therapy, with 40 five-star Google reviews.
+    </p>
+  </div>
+</section>

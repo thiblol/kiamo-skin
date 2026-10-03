@@ -1,6 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/sections/Hero.astro';
+import QuickAnswer from '../components/sections/QuickAnswer.astro';
+import TrustBadge from '../components/sections/TrustBadge.astro';
+import TreatmentMarquee from '../components/sections/TreatmentMarquee.astro';
 import Credentials from '../components/sections/Credentials.astro';
 import Positioning from '../components/sections/Positioning.astro';
 import ConcernTiles from '../components/sections/ConcernTiles.astro';
@@ -10,17 +13,46 @@ import Results from '../components/sections/Results.astro';
 import SocialReels from '../components/sections/SocialReels.astro';
 import SanDiegoContext from '../components/sections/SanDiegoContext.astro';
 import AreasNearby from '../components/sections/AreasNearby.astro';
-import TreatmentMarquee from '../components/sections/TreatmentMarquee.astro';
+import RecentJournal from '../components/sections/RecentJournal.astro';
 import FaqLocation from '../components/sections/FaqLocation.astro';
 import PersonSchema from '../components/schema/PersonSchema.astro';
+import SpeakableSchema from '../components/schema/SpeakableSchema.astro';
+
+/* Anchor dates for the WebPage schema node. The values are not invented
+   per-build: they are the studio's launch and the current verification
+   month. The build re-emits them on every render. */
+const homepagePublished = '2025-01-01';
+const homepageModified = '2026-10-03';
+
+const homepageUrl = Astro.site ? new URL('/', Astro.site).href : 'https://kiamoskin.com/';
+const websiteId = Astro.site ? new URL('/#website', Astro.site).href : 'https://kiamoskin.com/#website';
+
+const webPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': new URL('/#webpage', Astro.site).href,
+  url: homepageUrl,
+  name: 'Facial & Scalp Studio in Mission Hills, San Diego | KIAMO',
+  description:
+    'Licensed esthetician in Mission Hills, San Diego. Facials, pigmentation, acne, and scalp therapy — safe for every skin type. 40 five-star Google reviews. Request an appointment.',
+  isPartOf: { '@id': websiteId },
+  inLanguage: 'en-US',
+  datePublished: homepagePublished,
+  dateModified: homepageModified,
+};
 ---
 
 <BaseLayout
-  title="Skincare Clinic San Diego — Corrective Facials | KIAMO"
-  description="Expert treatment for pigmentation, acne, scalp concerns in Mission Hills. HydraFacial, chemical peels, microchanneling—safe for all skin tones."
+  title="Facial & Scalp Studio in Mission Hills, San Diego | KIAMO"
+  description="Licensed esthetician in Mission Hills, San Diego. Facials, pigmentation, acne, and scalp therapy — safe for every skin type. 40 five-star Google reviews. Request an appointment."
 >
   <PersonSchema slot="head" />
+  <SpeakableSchema slot="head" url={homepageUrl} />
+  <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(webPageSchema)} />
+
   <Hero />
+  <QuickAnswer />
+  <TrustBadge />
   <TreatmentMarquee />
   <Credentials />
   <Positioning />
@@ -31,5 +63,6 @@ import PersonSchema from '../components/schema/PersonSchema.astro';
   <SocialReels />
   <SanDiegoContext />
   <AreasNearby />
+  <RecentJournal />
   <FaqLocation />
 </BaseLayout>
