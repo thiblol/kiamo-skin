@@ -1,0 +1,803 @@
+---
+/**
+ * Before/After Results Gallery
+ *
+ * Schema strategy — 5 connected JSON-LD blocks, knowledge-graph linked:
+ *
+ *   1. CollectionPage + ImageGallery — the page identity, with
+ *      `mainEntity` pointing at the ItemList below and `image` pointing
+ *      at the hero composite for rich-result cards.
+ *
+ *   2. ItemList — every case in display order with `@id`, `url`,
+ *      `image`, and an `about` MedicalCondition reference. AI agents
+ *      and image search can walk this list precisely.
+ *
+ *   3. MedicalCondition × N — one per concern represented, linked
+ *      forward into the CreativeWork items. Establishes the
+ *      `Condition → Treatment → Case` chain Google's medical knowledge
+ *      graph looks for.
+ *
+ *   4. CreativeWork × N — one per case, with `associatedMedia`
+ *      pointing at the case's ImageObject. Pairs Google Images
+ *      attribution back to its case.
+ *
+ *   5. ImageObject × N — full contentUrl + width + height + caption +
+ *      keywords per photo. Each photo is parseable in isolation,
+ *      including by AI Overview when answering "show me a real
+ *      before-and-after for [concern]".
+ */
+import { Image } from 'astro:assets';
+import { getImage } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Reveal from '../components/Reveal.astro';
+import Button from '../components/Button.astro';
+import BeforeAfter from '../components/BeforeAfter.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import SpeakableSchema from '../components/schema/SpeakableSchema.astro';
+import FaqSchema from '../components/schema/FaqSchema.astro';
+import PersonSchema from '../components/schema/PersonSchema.astro';
+import {
+  galleryCases,
+  galleryConditions,
+  galleryFilters,
+  galleryFaqs,
+  gallerySupport,
+  galleryTreatmentOffers,
+} from '../data/gallery';
+import { business } from '../config/business';
+import { CTA_LABEL } from '../config/nav';
+import { absolute, businessId, websiteId, gbpListingUrl } from '../config/urls';
+
+const site = Astro.site;
+const url = absolute('/gallery', site);
+const galleryId = `${url}#gallery`;
+const imageGalleryId = `${url}#imagegallery`;
+const itemListId = `${url}#cases`;
+
+const heroCase = galleryCases.find((c) => c.id === 'melasma-chemical-peel-composite') ?? galleryCases[0];
+
+/**
+ * Resolve each case's image to its processed WebP URL and intrinsic
+ * dimensions. The graph values come from `ImageMetadata` directly; the
+ * processed `src` is what ships to `/gallery/after-...-1024w.webp`.
+ */
+const caseGraph = await Promise.all(
+  galleryCases.map(async (c) => {
+    const sourceImage = c.composite ?? c.before ?? c.after;
+    const processed = await getImage({ src: sourceImage, format: 'webp', width: 1600, quality: 78 });
+    const imageId = `${url}#case-${c.slug}-image`;
+    const caseNodeId = `${url}#case-${c.slug}`;
+
+    return {
+      case: c,
+      sourceImage,
+      processedSrc: processed.src,
+      imageId,
+      caseNodeId,
+      width: sourceImage.width,
+      height: sourceImage.height,
+    };
+  }),
+);
+
+const heroGraph = caseGraph.find((g) => g.case.id === heroCase.id) ?? caseGraph[0];
+
+/* ---------------------------------------------------------------- */
+/* MedicalCondition nodes — one per concern represented.            */
+/* ---------------------------------------------------------------- */
+const medicalConditionSchemas = galleryConditions.map((c) => ({
+  '@context': 'https://schema.org',
+  '@type': 'MedicalCondition',
+  '@id': `${url}#condition-${c.id}`,
+  name: c.name,
+  ...(c.alternateName ? { alternateName: c.alternateName } : {}),
+  description: c.description,
+  associatedAnatomy: {
+    '@type': 'AnatomicalStructure',
+    name: c.associatedAnatomy,
+  },
+  riskFactor: c.riskFactor ?? [],
+  ...(c.epidemiology ? { epidemiology: c.epidemiology } : {}),
+  possibleTreatment: galleryCases
+    .filter((c2) => c2.conditionSchemaId === c.id)
+    .map((c2) => ({
+      '@type': 'MedicalTherapy',
+      name: c2.treatmentName,
+      url: absolute(`/treatments/${c2.treatmentSlug}/`, site),
+      provider: { '@id': businessId(site) },
+    })),
+}));
+
+/* ---------------------------------------------------------------- */
+/* ImageObject × N + CreativeWork × N — one pair per case.          */
+/* ---------------------------------------------------------------- */
+const caseSchemas = caseGraph.map((g) => ({
+  image: {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    '@id': g.imageId,
+    contentUrl: new URL(g.processedSrc, site).href,
+    url: new URL(g.processedSrc, site).href,
+    width: { '@type': 'QuantitativeValue', value: g.width },
+    height: { '@type': 'QuantitativeValue', value: g.height },
+    name: g.case.title,
+    description: g.case.compositeAlt ?? g.case.afterAlt,
+    caption: g.case.eyebrow,
+    keywords: [
+      g.case.eyebrow,
+      g.case.treatmentName,
+      g.case.concern,
+      'KIAMO Skin',
+      'before and after',
+      'San Diego',
+      'Mission Hills',
+    ],
+    creator: { '@id': businessId(site) },
+    copyrightHolder: { '@id': businessId(site) },
+    copyrightNotice: `© ${business.name}. Published with client consent.`,
+    contentLocation: {
+      '@type': 'Place',
+      name: 'KIAMO Skin studio, Mission Hills',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: business.address.street,
+        addressLocality: business.address.city,
+        addressRegion: business.address.region,
+        postalCode: business.address.postalCode,
+        addressCountry: business.address.country,
+      },
+    },
+    isPartOf: { '@id': galleryId },
+  },
+
+  work: {
+    '@context': 'https://schema.org',
+    '@type': 'CreativeWork',
+    '@id': g.caseNodeId,
+    name: g.case.title,
+    description: g.case.narrative,
+    about: { '@id': `${url}#condition-${g.case.conditionSchemaId}` },
+    contributor: { '@id': businessId(site) },
+    publisher: { '@id': businessId(site) },
+    dateCreated: '2025-01-01',
+    associatedMedia: [{ '@id': g.imageId }],
+    keywords: [
+      g.case.eyebrow,
+      g.case.treatmentName,
+      g.case.concern,
+      g.case.fitzpatrick,
+      'Mission Hills',
+      'before and after',
+      'corrective skincare',
+    ],
+    spatialCoverage: {
+      '@type': 'Place',
+      name: 'KIAMO Skin studio, Mission Hills, San Diego',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: business.address.street,
+        addressLocality: business.address.city,
+        addressRegion: business.address.region,
+        postalCode: business.address.postalCode,
+        addressCountry: business.address.country,
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: business.geo.latitude,
+        longitude: business.geo.longitude,
+      },
+    },
+    isPartOf: { '@id': imageGalleryId },
+  },
+}));
+
+/* ---------------------------------------------------------------- */
+/* ItemList — walkable enumeration of the case graph.                */
+/* ---------------------------------------------------------------- */
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  '@id': itemListId,
+  name: 'KIAMO Skin results gallery — closed cases on display',
+  description:
+    'Closed, consented before-and-after cases photographed in the Mission Hills studio, sorted by concern.',
+  numberOfItems: galleryCases.length,
+  itemListOrder: 'https://schema.org/ItemListUnordered',
+  itemListElement: caseGraph.map((g, idx) => ({
+    '@type': 'ListItem',
+    position: idx + 1,
+    item: { '@id': g.caseNodeId },
+    name: g.case.title,
+  })),
+};
+
+/* ---------------------------------------------------------------- */
+/* CollectionPage + ImageGallery wrapper — the page identity.       */
+/* ---------------------------------------------------------------- */
+const galleryPageSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': ['CollectionPage', 'ImageGallery'],
+      '@id': imageGalleryId,
+      url,
+      name: 'Before & After Gallery | Real Results from KIAMO Skin San Diego',
+      description:
+        'Consented before-and-after photographs from KIAMO Skin in Mission Hills. Lira Chemical Peels, Procell Microchanneling, Keravive Scalp Therapy, DMK Enzyme Therapy. No retouching, no stock imagery, no curation for marketing. Results vary.',
+      inLanguage: 'en-US',
+      isPartOf: { '@id': websiteId(site) },
+      about: { '@id': businessId(site) },
+      provider: { '@id': businessId(site) },
+      mainEntity: { '@id': itemListId },
+      image: [
+        new URL(heroGraph.processedSrc, site).href,
+      ],
+      primaryImageOfPage: {
+        '@type': 'ImageObject',
+        '@id': heroGraph.imageId,
+        contentUrl: new URL(heroGraph.processedSrc, site).href,
+      },
+      hasPart: caseGraph.map((g) => ({
+        '@type': 'CreativeWork',
+        '@id': g.caseNodeId,
+        name: g.case.title,
+        url: `${url}#case-${g.case.slug}`,
+        about: { '@id': `${url}#condition-${g.case.conditionSchemaId}` },
+        image: { '@id': g.imageId },
+      })),
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.quick-answer', '.faq-section', 'h1'],
+      },
+      aboutAttributes: {
+        '@type': 'Thing',
+        name: 'medicalSpecialty',
+        value: 'Dermatology · Corrective Skincare · Scalp Therapy',
+      },
+    },
+  ],
+};
+
+/* ---------------------------------------------------------------- */
+/* FAQPage with mainEntity as proper Question nodes.               */
+/* ---------------------------------------------------------------- */
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  '@id': `${url}#faq`,
+  mainEntity: galleryFaqs.map((faq, idx) => ({
+    '@type': 'Question',
+    '@id': `${url}#faq-${idx + 1}`,
+    position: idx + 1,
+    name: faq.question,
+    answerCount: 1,
+    acceptedAnswer: {
+      '@type': 'Answer',
+      text: faq.answer,
+      inLanguage: 'en-US',
+    },
+  })),
+};
+
+/* ---------------------------------------------------------------- */
+/* Page metadata                                                      */
+/* ---------------------------------------------------------------- */
+const title = 'Before & After Gallery | Real Results from KIAMO Skin San Diego';
+const description =
+  'Consented before-and-after photographs from KIAMO Skin in Mission Hills. Lira Chemical Peels, Procell Microchanneling, Keravive Scalp Therapy, DMK Enzyme Therapy. No retouching, no stock imagery, no curation for marketing. Results vary.';
+---
+<BaseLayout {title} {description}>
+  {/* 1. CollectionPage + ImageGallery wrapper */}
+  <script
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify(galleryPageSchema)}
+    slot="head"
+  />
+
+  {/* 2. ItemList of cases */}
+  <script
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify(itemListSchema)}
+    slot="head"
+  />
+
+  {/* 3. MedicalCondition nodes */}
+  {
+    medicalConditionSchemas.map((c) => (
+      <script
+        type="application/ld+json"
+        is:inline
+        set:html={JSON.stringify(c)}
+        slot="head"
+      />
+    ))
+  }
+
+  {/* 4. ImageObject + CreativeWork per case */}
+  {
+    caseSchemas.flatMap((s) => [
+      <script
+        type="application/ld+json"
+        is:inline
+        set:html={JSON.stringify(s.image)}
+        slot="head"
+      />,
+      <script
+        type="application/ld+json"
+        is:inline
+        set:html={JSON.stringify(s.work)}
+        slot="head"
+      />,
+    ])
+  }
+
+  {/* 5. FAQPage with mainEntity */}
+  <script
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify(faqSchema)}
+    slot="head"
+  />
+
+  {/* Site-wide schemas from components */}
+  <BreadcrumbSchema slot="head" trail={[{ name: 'Gallery', path: '/gallery' }]} />
+  <FaqSchema slot="head" faqs={galleryFaqs} />
+  <SpeakableSchema slot="head" url={url} />
+  <PersonSchema slot="head" />
+
+  <article>
+    {/* HERO */}
+    <header class="bg-blush">
+      <div class="wrap grid items-center gap-12 pt-[calc(60px+112px)] pb-24 md:grid-cols-[0.95fr_1fr] md:gap-16 md:pb-32">
+        <Reveal class="md:order-2">
+          <Image
+            src={heroGraph.sourceImage}
+            alt={heroGraph.case.compositeAlt ?? heroGraph.case.afterAlt}
+            widths={[640, 960, 1400]}
+            sizes="(min-width: 840px) 50vw, 100vw"
+            loading="eager"
+            class="aspect-[0.85] w-full object-cover"
+          />
+          <p class="t-meta mt-5 text-ink-soft">
+            {heroGraph.case.eyebrow} · {heroGraph.case.treatmentName} · {heroGraph.case.sessions}{' '}
+            sessions · {heroGraph.case.timeframe}
+          </p>
+        </Reveal>
+
+        <div class="md:order-1">
+          <p class="t-eyebrow text-ink-soft">Results gallery · Mission Hills studio</p>
+          <h1 class="t-h2 mt-6 max-w-[18ch] text-[2.5rem] md:text-[3.5rem]">
+            Before and after, named honestly.
+          </h1>
+          <p class="t-body mt-7 max-w-[58ch] text-[1.125rem]">
+            Every photo in this gallery was taken at the Mission Hills studio, of clients who
+            consented in writing to share their results. Every caption names the treatment,
+            the concern, the number of sessions, and the elapsed time.
+          </p>
+          <p class="t-body mt-5 max-w-[58ch]">
+            No retouching. No filters. No stock photography. No cases staged for marketing —
+            these are the actual sessions, in the order they happened.
+          </p>
+
+          <p class="t-meta mt-8 text-ink-soft">
+            Patient consent on file · All photos taken in studio · Results vary
+          </p>
+
+          <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <Button href={business.bookingUrl} external trackEvent="booking_click">
+              {CTA_LABEL}
+            </Button>
+            <a
+              href={business.phone.href}
+              class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+            >
+              {business.phone.display}
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    {/* FILTER BAR */}
+    <section class="border-y border-line bg-porcelain">
+      <div
+        class="wrap flex flex-col gap-4 py-5 md:flex-row md:items-center md:justify-between md:py-6"
+      >
+        <div
+          role="tablist"
+          aria-label="Filter cases by concern"
+          class="flex flex-wrap gap-2"
+        >
+          {
+            galleryFilters.map((filter) => (
+              <button
+                type="button"
+                role="tab"
+                aria-selected={filter.id === 'all' ? 'true' : 'false'}
+                data-filter={filter.id}
+                class="t-meta px-4 py-2 border border-line transition-colors duration-200 aria-selected:bg-ink aria-selected:text-porcelain hover:border-ink"
+              >
+                {filter.label}
+              </button>
+            ))
+          }
+        </div>
+
+        <p class="t-meta text-ink-soft">
+          {galleryCases.length} cases · Sorted by concern
+        </p>
+      </div>
+    </section>
+
+    {/* GALLERY GRID */}
+    <section class="bg-ivory">
+      <div class="wrap py-20 md:py-28">
+        <ul
+          id="gallery-grid"
+          data-active="all"
+          class="m-0 grid list-none gap-x-10 gap-y-20 p-0 md:grid-cols-2"
+          aria-live="polite"
+        >
+          {
+            galleryCases.map((c) => (
+              <li data-concern={c.concern} id={`case-${c.slug}`}>
+                <article class="flex h-full flex-col">
+                  <div class="relative aspect-square overflow-hidden bg-porcelain">
+                    {c.kind === 'paired' && c.before ? (
+                      <BeforeAfter
+                        id={`ba-${c.id}`}
+                        before={c.before}
+                        after={c.after}
+                        beforeAlt={c.beforeAlt ?? ''}
+                        afterAlt={c.afterAlt}
+                      />
+                    ) : (
+                      <>
+                        <Image
+                          src={c.composite ?? c.after}
+                          alt={c.compositeAlt ?? c.afterAlt}
+                          widths={[400, 800, 1200]}
+                          sizes="(min-width: 768px) 45vw, 90vw"
+                          loading="lazy"
+                          class="size-full object-cover"
+                        />
+                        <span class="t-meta pointer-events-none absolute left-3 top-3 bg-porcelain/85 px-2 py-1">
+                          {c.kind === 'composite' ? 'Before / After' : 'After'}
+                        </span>
+                      </>
+                    )}
+                  </div>
+
+                  <div class="mt-7 flex flex-1 flex-col">
+                    <p class="t-eyebrow text-rose">{c.eyebrow}</p>
+                    <h2 class="t-h3 mt-3 text-[1.25rem] leading-[1.3]">
+                      <a href={`/treatments/${c.treatmentSlug}/`} class="hover:text-rose">
+                        {c.title}
+                      </a>
+                    </h2>
+
+                    <p class="t-body mt-4 text-[0.9375rem]">{c.narrative}</p>
+
+                    {c.caseNote && (
+                      <p class="t-body mt-4 text-[0.9375rem] border-l-2 border-rose pl-4 italic text-ink-soft">
+                        {c.caseNote}
+                      </p>
+                    )}
+
+                    <dl class="mt-8 m-0 grid grid-cols-3 gap-x-4 gap-y-3 border-t border-line pt-5 text-[0.8125rem]">
+                      <div>
+                        <dt class="t-meta">Treatment</dt>
+                        <dd class="t-body mt-1 m-0 text-ink">
+                          <a
+                            href={`/treatments/${c.treatmentSlug}/`}
+                            class="border-b border-ink/30 hover:border-rose hover:text-rose"
+                          >
+                            {c.treatmentName}
+                          </a>
+                        </dd>
+                      </div>
+                      <div>
+                        <dt class="t-meta">Sessions</dt>
+                        <dd class="t-body mt-1 m-0 text-ink">{c.sessions}</dd>
+                      </div>
+                      <div>
+                        <dt class="t-meta">Over</dt>
+                        <dd class="t-body mt-1 m-0 text-ink">{c.timeframe}</dd>
+                      </div>
+                    </dl>
+
+                    <p class="t-meta mt-4 text-ink-soft">
+                      Fitzpatrick {c.fitzpatrick} · Results vary with the skin on the day
+                    </p>
+                  </div>
+                </article>
+              </li>
+            ))
+          }
+        </ul>
+
+        <p id="gallery-empty" hidden class="t-body mt-12 text-center text-[0.9375rem] text-ink-soft">
+          No cases match this filter yet — try another concern.
+        </p>
+      </div>
+    </section>
+
+    {/* BEHIND THE CASES — Kiki + studio portraits */}
+    <section class="bg-porcelain">
+      <div class="wrap py-20 md:py-28 grid items-start gap-14 md:grid-cols-[1fr_1.3fr] md:gap-20">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">Behind the cases</p>
+          <h2 class="t-h2 mt-5 max-w-[18ch]">The hands on every photo.</h2>
+          <p class="t-body mt-7 max-w-[58ch]">
+            Every case on this page was performed by Kiki — a California-licensed esthetician
+            with seven years of treatment in the studio and zero rotating staff. The
+            photos are not curated to a model; the same person does every consultation, every
+            treatment, and every after photo in the room.
+          </p>
+          <p class="t-body mt-5 max-w-[58ch]">
+            One client at a time, in a single private treatment room at 3067 Reynard Way. The
+            room on the page is the same room the cases were photographed in.
+          </p>
+          <Button href="/about/" variant="ghost" class="mt-9">
+            Read more about Kiki
+          </Button>
+        </Reveal>
+
+        <div class="grid grid-cols-2 gap-4">
+          <Reveal>
+            <Image
+              src={gallerySupport.kikiPortrait.src}
+              alt={gallerySupport.kikiPortrait.alt}
+              widths={[400, 800, 1200]}
+              sizes="(min-width: 840px) 30vw, 45vw"
+              loading="lazy"
+              class="aspect-[3/4] w-full object-cover"
+            />
+          </Reveal>
+          <Reveal class="mt-12">
+            <Image
+              src={gallerySupport.kikiTreatment.src}
+              alt={gallerySupport.kikiTreatment.alt}
+              widths={[400, 800, 1200]}
+              sizes="(min-width: 840px) 30vw, 45vw"
+              loading="lazy"
+              class="aspect-[3/4] w-full object-cover"
+            />
+          </Reveal>
+          <Reveal class="col-span-2 -mt-6">
+            <Image
+              src={gallerySupport.hydrafacialInProgress.src}
+              alt={gallerySupport.hydrafacialInProgress.alt}
+              widths={[600, 1200, 1800]}
+              sizes="(min-width: 840px) 60vw, 90vw"
+              loading="lazy"
+              class="aspect-[16/10] w-full object-cover"
+            />
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    {/* HOW THE GALLERY IS MADE */}
+    <section class="bg-ivory">
+      <div class="wrap py-20 md:py-28 grid items-start gap-12 md:grid-cols-[1fr_1.2fr] md:gap-20">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">How the gallery is made</p>
+          <h2 class="t-h2 mt-5 max-w-[18ch]">The rules under which a photo is published.</h2>
+        </Reveal>
+
+        <div class="space-y-6 t-body text-[0.9375rem]">
+          <Reveal>
+            <p>
+              <strong class="font-medium text-ink">Same room, same LED, same phone.</strong>{' '}
+              Every photograph on this page was taken in the same studio room on 3067 Reynard
+              Way under the same overhead LED, with the practitioner's phone. There is no
+              second rig and there is no glamour light. Crops do differ between cases because
+              phone orientations differ — that's not a lighting choice, just the operator's
+              reach.
+            </p>
+          </Reveal>
+
+          <Reveal>
+            <p>
+              <strong class="font-medium text-ink">No retouching, no staging.</strong>{' '}
+              Photos are not softened, brightened, or airbrushed. The skin in the after photo
+              is the skin on the day, with whatever warmth shift the season brought.
+            </p>
+          </Reveal>
+
+          <Reveal>
+            <p>
+              <strong class="font-medium text-ink">A paired photo only when the change is large
+              enough to read.</strong> Some concerns produce changes too subtle for a paired
+              comparison — texture refinement on Procell at series end, hair-thinning support
+              on Keravive. For those we publish only the after, with a case note explaining
+              why.
+            </p>
+          </Reveal>
+
+          <Reveal>
+            <p>
+              <strong class="font-medium text-ink">Each case names four facts.</strong>{' '}
+              The treatment performed. The concern being addressed. The number of sessions
+              completed. The elapsed time across the case. Anything else — name, exact date,
+              cost — stays out of the public gallery.
+            </p>
+          </Reveal>
+
+          <Reveal>
+            <p>
+              <strong class="font-medium text-ink">Fitzpatrick band, not skin tone.</strong>{' '}
+              Photographs don't carry named skin tones honestly. Each case names a Fitzpatrick
+              band — I–II, III–IV, V–VI — which is the most a case photo can say about its
+              subject without inventing a label.
+            </p>
+          </Reveal>
+
+          <Reveal>
+            <p>
+              <strong class="font-medium text-ink">A case publishes when the client is
+              ready.</strong> Consent is revocable. If a client decides later that they don't
+              want their photo on the site, the photo comes down. Nothing about a paired case
+              tells you it would still be there tomorrow.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    {/* WHY THE CASES DIFFER */}
+    <section class="bg-espresso text-porcelain">
+      <div class="wrap py-20 md:py-28 grid items-start gap-12 md:grid-cols-[1.2fr_1fr] md:gap-20">
+        <Reveal>
+          <p class="t-eyebrow text-porcelain/60">Why your case may move differently</p>
+          <h2 class="t-h2 mt-5 max-w-[24ch]">What determines your result.</h2>
+        </Reveal>
+
+        <div class="space-y-6 t-body text-[0.9375rem] text-porcelain/85">
+          <p>
+            <strong class="font-medium text-porcelain">Five things decide the speed of a
+            result, and only the first two are about the treatment.</strong>
+          </p>
+          <ol class="m-0 list-decimal space-y-4 pl-5 marker:text-blush">
+            <li>The depth of pigment or scarring — surface pigment clears fastest, deeper pigment can take a year or more.</li>
+            <li>How long the condition has been there — long-standing pigment responds slower than recent.</li>
+            <li>What triggered it — UV-driven pigmentation responds differently than hormonal melasma.</li>
+            <li>Barrier condition at the consultation — a damaged barrier is rebuilt before any corrective work begins.</li>
+            <li>The home-care routine between visits — what you do at home is doing as much work as what happens on the table.</li>
+          </ol>
+          <p>
+            None of these will be true of a new client in the same combination. The after photo
+            on this page shows what was possible for that person in that time. Your plan will
+            be written from your skin on the day.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    {/* FAQ */}
+    <section class="bg-ivory faq-section">
+      <div class="wrap py-20 md:py-28">
+        <p class="t-eyebrow text-ink-soft">Before you read the cases</p>
+        <h2 class="t-h2 mt-5">Gallery questions</h2>
+
+        <div class="mt-12 max-w-[68ch]">
+          {
+            galleryFaqs.map((faq) => (
+              <details class="group border-b border-line">
+                <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
+                  <span>{faq.question}</span>
+                  <span
+                    aria-hidden="true"
+                    class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                  >
+                    +
+                  </span>
+                </summary>
+                <div class="t-body pb-6 text-[0.9375rem]">
+                  {faq.answer}
+                </div>
+              </details>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    {/* CLOSING CTA */}
+    <section class="bg-espresso text-porcelain">
+      <div class="wrap py-20 md:py-28 grid gap-12 md:grid-cols-[1.2fr_1fr] md:gap-20">
+        <div>
+          <Reveal>
+            <p class="t-eyebrow text-porcelain/60">The next step</p>
+            <h2 class="t-h2 mt-5 max-w-[24ch]">Bring the gallery to your own skin.</h2>
+            <p class="t-body mt-7 max-w-[58ch] text-porcelain/85">
+              The first visit at KIAMO Skin is a consultation, not a fixed protocol. The cases
+              on this page show what the studio has done; the consultation decides what your
+              skin actually needs now, and the plan follows from that.
+            </p>
+
+            <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+              <Button href={business.bookingUrl} external trackEvent="booking_click">
+                {CTA_LABEL}
+              </Button>
+              <a
+                href={business.phone.href}
+                class="t-body border-b border-porcelain/40 pb-1 hover:border-blush hover:text-blush"
+              >
+                {business.phone.display}
+              </a>
+            </div>
+          </Reveal>
+        </div>
+
+        <aside>
+          <div class="border border-porcelain/20 p-8">
+            <p class="t-eyebrow text-porcelain/60">Studio visit</p>
+            <div class="mt-7 space-y-4 text-[0.9375rem]">
+              <p>{business.address.full}</p>
+              <p>Free parking on site</p>
+              <p class="text-porcelain/70">{business.cancellation}</p>
+              <p class="text-porcelain/70">
+                First-time visit package{' '}
+                <span class="t-tier-price text-[2rem] text-porcelain">$249</span>
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<script>
+  const grid = document.getElementById('gallery-grid');
+  const empty = document.getElementById('gallery-empty');
+  const buttons = document.querySelectorAll<HTMLButtonElement>('[data-filter]');
+
+  if (grid && empty && buttons.length) {
+    const apply = (id: string) => {
+      grid.dataset.active = id;
+      buttons.forEach((b) => {
+        b.setAttribute('aria-selected', String(b.dataset.filter === id));
+      });
+
+      const cards = grid.querySelectorAll<HTMLElement>('[data-concern]');
+      let visible = 0;
+      cards.forEach((card) => {
+        if (id === 'all' || card.dataset.concern === id) visible += 1;
+      });
+      empty.hidden = visible > 0;
+    };
+
+    buttons.forEach((b) => {
+      b.addEventListener('click', () => apply(b.dataset.filter ?? 'all'));
+    });
+  }
+</script>
+
+<style>
+  #gallery-grid[data-active='all'] [data-concern],
+  #gallery-grid:not([data-active='all']) [data-concern]:not([hidden]) {
+    display: list-item;
+  }
+
+  #gallery-grid[data-active='pigmentation'] [data-concern]:not([data-concern='pigmentation']),
+  #gallery-grid[data-active='melasma'] [data-concern]:not([data-concern='melasma']),
+  #gallery-grid[data-active='acne'] [data-concern]:not([data-concern='acne']),
+  #gallery-grid[data-active='barrier'] [data-concern]:not([data-concern='barrier']),
+  #gallery-grid[data-active='scalp'] [data-concern]:not([data-concern='scalp']) {
+    display: none;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  [role='tab']:focus-visible {
+    outline: 2px solid var(--color-rose);
+    outline-offset: 3px;
+  }
+</style>
