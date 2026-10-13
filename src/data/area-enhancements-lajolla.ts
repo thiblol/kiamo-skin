@@ -30,7 +30,7 @@ export interface AreaEnhancement {
     body: string;
   };
 
-  /** What makes KIAMO different */
+  /** What makes KIAMO Skin different */
   uniqueness: {
     heading: string;
     points: string[];
@@ -89,10 +89,10 @@ export interface AreaEnhancement {
 
 export const laJollaEnhanced: AreaEnhancement = {
   quickAnswer:
-    "KIAMO SKIN treats barrier damage and scalp conditions from year-round ocean exposure at a one-room studio in Mission Hills, San Diego (92103), about 12 miles south of La Jolla Village via I-5. Kiki, a California licensed esthetician with 7+ years specializing in melanin-rich skin, uses HydraFacial Syndeo vortex extraction and Keravive scalp therapy for swimmers from La Jolla Cove, Windansea, and La Jolla Shores. Treatments start at $259, with series planning for ocean swimmers who need multiple visits.",
+    "KIAMO Skin treats barrier damage and scalp conditions from year-round ocean exposure at a one-room studio in Mission Hills, San Diego (92103), about 12 miles south of La Jolla Village via I-5. Kiki, a California licensed esthetician with 7+ years specializing in melanin-rich skin, uses HydraFacial Syndeo vortex extraction and Keravive scalp therapy for swimmers from La Jolla Cove, Windansea, and La Jolla Shores. Treatments start at $259, with series planning for ocean swimmers who need multiple visits.",
 
   serviceAreaParagraph:
-    "KIAMO SKIN serves clients from across La Jolla, including the Village near Prospect Street and Girard Avenue (92037), Bird Rock at the southern coastal edge (92037), La Jolla Shores near Scripps Institution of Oceanography and Kellogg Park (92037), the UCSD campus and graduate housing corridor (92093), and Windansea Beach neighborhoods along Neptune Place. Many clients also travel from adjacent UTC near Westfield mall and the Costa Verde shopping district, Torrey Pines Mesa above Torrey Pines Golf Course, the northern Pacific Beach border along Tourmaline Street, and University City east of I-5. The studio is in Mission Hills, San Diego County (92103), making it accessible to all coastal areas via southbound I-5 from La Jolla Village Drive (Exit 28), Gilman Drive (Exit 27), or Genesee Avenue (Exit 26).",
+    "KIAMO Skin serves clients from across La Jolla, including the Village near Prospect Street and Girard Avenue (92037), Bird Rock at the southern coastal edge (92037), La Jolla Shores near Scripps Institution of Oceanography and Kellogg Park (92037), the UCSD campus and graduate housing corridor (92093), and Windansea Beach neighborhoods along Neptune Place. Many clients also travel from adjacent UTC near Westfield mall and the Costa Verde shopping district, Torrey Pines Mesa above Torrey Pines Golf Course, the northern Pacific Beach border along Tourmaline Street, and University City east of I-5. The studio is in Mission Hills, San Diego County (92103), making it accessible to all coastal areas via southbound I-5 from La Jolla Village Drive (Exit 28), Gilman Drive (Exit 27), or Genesee Avenue (Exit 26).",
 
   navigationContext:
     "From La Jolla Cove near Coast Boulevard and the Children's Pool, head east on Torrey Pines Road toward I-5 — you'll pass UCSD Medical Center Hillcrest on the right after about three miles. Merge onto I-5 south just past the Genesee Avenue interchange (Exit 26). Stay in the center lanes through the Sorrento Valley corridor where right lanes stack during commute hours. Washington Street (Exit 17) comes up about 8 miles south of the merge, just past Old Town Transit Center. Turn left at the exit, cross over the freeway, and Reynard Way is the first right turn after you pass through the Washington Street and India Street intersection. The studio at 3067 Reynard Way sits between Mission Hills and Middletown, approximately 0.4 miles from the freeway exit with free parking on site.",
@@ -250,7 +250,7 @@ export const laJollaEnhanced: AreaEnhancement = {
     {
       question: "How much does Keravive scalp treatment cost for La Jolla ocean swimmers?",
       answer:
-        "Keravive is $599 per session at KIAMO SKIN, or $1,499 for a series of three (saving $298 compared to individual pricing). Most ocean swimmers book the three-session series because scalp buildup from daily salt water exposure requires more than one treatment to fully clear the follicles. Sessions are spaced thirty days apart to allow the scalp barrier to rebuild between treatments. The first visit includes a scalp analysis, full Keravive treatment, and take-home serum. Each session takes about twenty-five minutes with no downtime — you can swim the same day if needed.",
+        "Keravive is $599 per session at KIAMO Skin, or $1,499 for a series of three (saving $298 compared to individual pricing). Most ocean swimmers book the three-session series because scalp buildup from daily salt water exposure requires more than one treatment to fully clear the follicles. Sessions are spaced thirty days apart to allow the scalp barrier to rebuild between treatments. The first visit includes a scalp analysis, full Keravive treatment, and take-home serum. Each session takes about twenty-five minutes with no downtime — you can swim the same day if needed.",
       entityCount: 9,
     },
     {
@@ -268,7 +268,7 @@ export const laJollaEnhanced: AreaEnhancement = {
     {
       question: "Do I need a consultation first or can I book a HydraFacial directly from La Jolla?",
       answer:
-        "New clients always start with a consultation that includes a full treatment on the same visit — it's not a separate appointment. The consultation at KIAMO SKIN covers skin analysis, barrier assessment, UV damage evaluation, treatment goals, and series planning if your condition requires multiple visits. You'll receive either a HydraFacial ($259), DMK Enzyme Therapy Level 1 ($279), or another appropriate first treatment during that same session based on what your skin needs. First-time consultation + treatment packages start at $249. You can book online at kiamoskin.com or call — we respond within 24 hours on business days. The studio is at 3067 Reynard Way in Mission Hills with free parking on site.",
+        "New clients always start with a consultation that includes a full treatment on the same visit — it's not a separate appointment. The consultation at KIAMO Skin covers skin analysis, barrier assessment, UV damage evaluation, treatment goals, and series planning if your condition requires multiple visits. You'll receive either a HydraFacial ($259), DMK Enzyme Therapy Level 1 ($279), or another appropriate first treatment during that same session based on what your skin needs. First-time consultation + treatment packages start at $249. You can book online at kiamoskin.com or call — we respond within 24 hours on business days. The studio is at 3067 Reynard Way in Mission Hills with free parking on site.",
       entityCount: 10,
     },
   ],

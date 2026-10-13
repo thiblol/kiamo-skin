@@ -57,7 +57,7 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'mission-hills',
     name: 'Mission Hills',
-    title: 'Facial in Mission Hills, San Diego — The Studio Location | KIAMO',
+    title: 'Facial in Mission Hills, San Diego — The Studio Location | KIAMO Skin',
     description:
       'Facial treatments at KIAMO Skin in Mission Hills — the studio itself at 3067 Reynard Way. Five-minute walk for most Mission Hills residents, five minutes from Hillcrest, Bankers Hill, and Little Italy. HydraFacial, peels, dermaplaning, enzyme therapy. Safe for every Fitzpatrick type I-VI.',
     h1: 'Facial in Mission Hills, San Diego',
@@ -68,7 +68,7 @@ export const facialAreas: FacialArea[] = [
     },
     uniqueness: {
       heading: 'Facials that meet you where you live',
-      body: `Mission Hills clients choose KIAMO because the studio is in their own neighborhood — the walk takes the same time as parking and waiting at a chain spa:`,
+      body: `Mission Hills clients choose KIAMO Skin because the studio is in their own neighborhood — the walk takes the same time as parking and waiting at a chain spa:`,
       bullets: [
         'Walk-in convenience — most of Mission Hills is a five-minute walk to the studio',
         'Free on-site parking at 3067 Reynard Way for clients who drive',
@@ -100,7 +100,7 @@ export const facialAreas: FacialArea[] = [
     },
     intent: {
       heading: 'Who books a facial in Mission Hills',
-      body: `Mission Hills clients book facials for the full range of reasons — pre-event preparation, monthly maintenance against cumulative UV, recovery from travel or sun exposure, or the foundation of a longer corrective plan addressing pigmentation, texture, or aging concerns. Many walk to the studio on a lunch break; others book after-work appointments and arrive in five minutes from a Hillcrest or Bankers Hill office. KIAMO is the right fit when the priority is one practitioner who knows your skin over time, no upsells, and protocols calibrated to every skin tone — including melanin-rich skin, where standard peels risk post-inflammatory hyperpigmentation.`,
+      body: `Mission Hills clients book facials for the full range of reasons — pre-event preparation, monthly maintenance against cumulative UV, recovery from travel or sun exposure, or the foundation of a longer corrective plan addressing pigmentation, texture, or aging concerns. Many walk to the studio on a lunch break; others book after-work appointments and arrive in five minutes from a Hillcrest or Bankers Hill office. KIAMO Skin is the right fit when the priority is one practitioner who knows your skin over time, no upsells, and protocols calibrated to every skin tone — including melanin-rich skin, where standard peels risk post-inflammatory hyperpigmentation.`,
     },
     gettingHere:
       'KIAMO Skin is at 3067 Reynard Way in Mission Hills. From anywhere in Mission Hills, the studio is a five-minute walk or shorter — turn west off Hawk Street, Goldfinch Street, or any of the north-south residential streets to Reynard Way. From Hillcrest, take University Avenue west to Washington Street, then south. From Bankers Hill, take Washington Street west past First Avenue. From Little Italy, take India Street or Date Street south to Washington Street. Free on-site parking at the studio. By appointment only.',
@@ -154,7 +154,7 @@ export const facialAreas: FacialArea[] = [
       {
         question: 'Is KIAMO Skin the closest facial studio to Mission Hills?',
         answer:
-          'Yes — KIAMO is in Mission Hills itself, at 3067 Reynard Way. There are no closer standalone facial studios. Other spa options in the immediate area are part of larger hotel or resort properties, not private correction-focused studios.',
+          'Yes — KIAMO Skin is in Mission Hills itself, at 3067 Reynard Way. There are no closer standalone facial studios. Other spa options in the immediate area are part of larger hotel or resort properties, not private correction-focused studios.',
       },
     ],
     schemaDescription:
@@ -163,18 +163,18 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'la-jolla',
     name: 'La Jolla',
-    title: 'Facial in La Jolla, San Diego — All Skin Types | KIAMO',
+    title: 'Facial in La Jolla, San Diego — All Skin Types | KIAMO Skin',
     description:
       'Facial treatments serving La Jolla from KIAMO Skin Mission Hills. HydraFacial, chemical peels, dermaplaning, enzyme therapy. Safe for every Fitzpatrick I-VI skin tone. Licensed esthetician.',
     h1: 'Facial in La Jolla, San Diego',
     intro: `KIAMO Skin provides facial treatments to La Jolla residents and the surrounding coastal communities. Located in Mission Hills at 3067 Reynard Way, our studio is reachable from La Jolla Village Drive via I-5 south to Washington Street. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, in a private one-room studio. Treatments are calibrated for every Fitzpatrick type I-VI — including melanin-rich skin where aggressive exfoliation risks post-inflammatory hyperpigmentation.`,
     authority: {
-      heading: 'Why La Jolla clients trust KIAMO for facials',
+      heading: 'Why La Jolla clients trust KIAMO Skin for facials',
       body: `La Jolla's coastal exposure, year-round UV, and proximity to UCSD create a specific set of skin concerns — barrier damage from coastal humidity, pigmentation from constant UV reflection off the ocean, and post-inflammatory recovery from active outdoor lifestyles. KIAMO Skin uses HydraFacial Syndeo with AI-powered skin analysis (the current-generation device, not older consumer-grade equipment), Lira chemical peels at Fitzpatrick-calibrated concentrations, DMK Enzyme Therapy for barrier-first protocols, and dermaplaning when surface refinement is the goal. Kiki has 7+ years of experience treating every skin tone. The one-practitioner model means the person who assesses your skin is the one who treats it — no rotation between junior staff, no handoff between consultation and treatment.`,
     },
     uniqueness: {
       heading: 'Facials customized for La Jolla skin and lifestyle',
-      body: `La Jolla clients choose KIAMO for facials that respect both the skin and the coastal lifestyle. The approach addresses:`,
+      body: `La Jolla clients choose KIAMO Skin for facials that respect both the skin and the coastal lifestyle. The approach addresses:`,
       bullets: [
         'All Fitzpatrick types (I-VI) — protocols calibrated per skin tone, no one-size-fits-all peels',
         'Coastal barrier repair — hydration and lipid replacement for salt air and wind exposure',
@@ -185,7 +185,7 @@ export const facialAreas: FacialArea[] = [
     },
     depth: {
       heading: 'How a facial works at KIAMO Skin',
-      body: `Every facial at KIAMO follows a three-step structure: assessment, treatment, and homecare. The assessment uses HydraFacial Syndeo's AI skin analysis or a manual Fitzpatrick-and-concern evaluation depending on the modality. The treatment is calibrated to the skin on the day — not a generic protocol. The homecare plan extends the result between visits.`,
+      body: `Every facial at KIAMO Skin follows a three-step structure: assessment, treatment, and homecare. The assessment uses HydraFacial Syndeo's AI skin analysis or a manual Fitzpatrick-and-concern evaluation depending on the modality. The treatment is calibrated to the skin on the day — not a generic protocol. The homecare plan extends the result between visits.`,
       process: [
         {
           step: 'Assessment',
@@ -206,7 +206,7 @@ export const facialAreas: FacialArea[] = [
     },
     intent: {
       heading: 'Who books a facial in La Jolla',
-      body: `La Jolla clients book facials for pre-event preparation (galas at the Museum of Contemporary Art, weddings at La Jolla Cove hotels, UCSD functions), monthly maintenance against coastal environmental stress, recovery from travel or sun exposure, or as the foundation of a longer corrective plan addressing pigmentation, texture, or aging concerns. KIAMO is the right fit when the priority is one practitioner, no upsells, and protocols safe across every skin tone — including melanin-rich skin, where standard peels risk post-inflammatory hyperpigmentation.`,
+      body: `La Jolla clients book facials for pre-event preparation (galas at the Museum of Contemporary Art, weddings at La Jolla Cove hotels, UCSD functions), monthly maintenance against coastal environmental stress, recovery from travel or sun exposure, or as the foundation of a longer corrective plan addressing pigmentation, texture, or aging concerns. KIAMO Skin is the right fit when the priority is one practitioner, no upsells, and protocols safe across every skin tone — including melanin-rich skin, where standard peels risk post-inflammatory hyperpigmentation.`,
     },
     gettingHere:
       'From La Jolla Village Drive, take I-5 south to the Washington Street exit, head west on Washington Street to Reynard Way and turn right. The studio is at 3067 Reynard Way. From UCSD, take Gilman Drive to I-5 south. From La Jolla Shores, take Torrey Pines Road to La Jolla Village Drive, then I-5 south. Free parking on site.',
@@ -251,7 +251,7 @@ export const facialAreas: FacialArea[] = [
       {
         question: 'What facial addresses sun damage from La Jolla coastal exposure?',
         answer:
-          'For cumulative sun damage, KIAMO pairs HydraFacial Syndeo maintenance with Lira chemical peels calibrated to your Fitzpatrick type. Brightening boosters in the HydraFacial step (Britenol, peptides, growth factors) address tone, while a series of peels targets pigment at the cellular level. Homecare includes broad-spectrum SPF 50+ and tyrosinase inhibitors where appropriate.',
+          'For cumulative sun damage, KIAMO Skin pairs HydraFacial Syndeo maintenance with Lira chemical peels calibrated to your Fitzpatrick type. Brightening boosters in the HydraFacial step (Britenol, peptides, growth factors) address tone, while a series of peels targets pigment at the cellular level. Homecare includes broad-spectrum SPF 50+ and tyrosinase inhibitors where appropriate.',
       },
       {
         question: 'Do you offer evening appointments for La Jolla professionals?',
@@ -261,7 +261,7 @@ export const facialAreas: FacialArea[] = [
       {
         question: 'Can I get a facial if I am visiting La Jolla from out of town?',
         answer:
-          'Yes. KIAMO regularly sees visitors who book a facial during a La Jolla stay. Same-week appointments are often available, and a single session provides a visible result that lasts 5-7 days. Call (310) 595-0872 or request online.',
+          'Yes. KIAMO Skin regularly sees visitors who book a facial during a La Jolla stay. Same-week appointments are often available, and a single session provides a visible result that lasts 5-7 days. Call (310) 595-0872 or request online.',
       },
     ],
     schemaDescription:
@@ -270,18 +270,18 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'del-mar',
     name: 'Del Mar',
-    title: 'Facial in Del Mar, San Diego — Licensed Esthetician | KIAMO',
+    title: 'Facial in Del Mar, San Diego — Licensed Esthetician | KIAMO Skin',
     description:
       'Facial treatments for Del Mar residents from KIAMO Skin Mission Hills. 20 minutes via I-5. HydraFacial, peels, dermaplaning, enzyme therapy. Safe for every Fitzpatrick type I-VI.',
     h1: 'Facial in Del Mar, San Diego',
-    intro: `KIAMO Skin provides facial treatments to Del Mar residents seeking protocols calibrated for every Fitzpatrick type I-VI. Located in Mission Hills at 3067 Reynard Way, the studio is reachable via I-5 south to Washington Street — about 20 minutes from most Del Mar addresses. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, in a private one-room studio. Del Mar clients choose KIAMO for fair-season UV recovery, pre-event preparation, and corrective plans that respect the skin.`,
+    intro: `KIAMO Skin provides facial treatments to Del Mar residents seeking protocols calibrated for every Fitzpatrick type I-VI. Located in Mission Hills at 3067 Reynard Way, the studio is reachable via I-5 south to Washington Street — about 20 minutes from most Del Mar addresses. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, in a private one-room studio. Del Mar clients choose KIAMO Skin for fair-season UV recovery, pre-event preparation, and corrective plans that respect the skin.`,
     authority: {
       heading: 'Facials that match Del Mar skin and the fair-season calendar',
       body: `Del Mar's coastal climate, horse-racing social calendar, and fair-season UV produce a specific skin rhythm — increased UV exposure between mid-July and Labor Day, indoor events the rest of the year, and constant coastal humidity. KIAMO Skin offers the full facial menu (HydraFacial Syndeo, Lira chemical peels, dermaplaning, DMK enzyme therapy) with protocols calibrated to your Fitzpatrick type. Kiki has 7+ years treating the full spectrum of skin tones, including melanin-rich skin where standard peels trigger post-inflammatory hyperpigmentation. The single-practitioner studio means continuity across every visit — the same person assessing your skin and treating it.`,
     },
     uniqueness: {
       heading: 'Facials for Del Mar coastal and fair-season lifestyles',
-      body: `KIAMO's facials for Del Mar clients account for the specific environmental and social rhythms of the area:`,
+      body: `KIAMO Skin's facials for Del Mar clients account for the specific environmental and social rhythms of the area:`,
       bullets: [
         'Fair-season UV recovery — barrier repair and pigmentation support after summer exposure',
         'Pre-event facials — for opening day, races, weddings at L\'Auberge or the Del Mar Plaza',
@@ -313,7 +313,7 @@ export const facialAreas: FacialArea[] = [
     },
     intent: {
       heading: 'Who books a facial in Del Mar',
-      body: `Del Mar clients book facials for fair-season UV recovery, pre-event preparation at L'Auberge, weddings at the Del Mar Plaza, social events at the fairgrounds, or as the foundation of a longer corrective plan. Many are second-homeowners whose skin rhythm shifts between Del Mar summers and inland winters. KIAMO is the right fit when the priority is one practitioner, no upsells, and protocols calibrated for the skin on the day — including melanin-rich skin tones that need deliberate care to avoid post-inflammatory hyperpigmentation.`,
+      body: `Del Mar clients book facials for fair-season UV recovery, pre-event preparation at L'Auberge, weddings at the Del Mar Plaza, social events at the fairgrounds, or as the foundation of a longer corrective plan. Many are second-homeowners whose skin rhythm shifts between Del Mar summers and inland winters. KIAMO Skin is the right fit when the priority is one practitioner, no upsells, and protocols calibrated for the skin on the day — including melanin-rich skin tones that need deliberate care to avoid post-inflammatory hyperpigmentation.`,
     },
     gettingHere:
       'From Del Mar, take I-5 south to the Washington Street exit, head west on Washington Street to Reynard Way and turn right. About 20 minutes without traffic. From Del Mar Heights, take Carmel Valley Road to I-5 south. Free parking on site at 3067 Reynard Way.',
@@ -357,7 +357,7 @@ export const facialAreas: FacialArea[] = [
       {
         question: 'Is a facial safe for melanin-rich skin in Del Mar?',
         answer:
-          'Yes — every modality at KIAMO is calibrated to the skin tone, including melanin-rich skin (Fitzpatrick IV-VI). Standard peels and aggressive exfoliation can trigger post-inflammatory hyperpigmentation in darker skin tones. Kiki has 7+ years of experience across every Fitzpatrick type and uses concentrations and protocols matched to the skin on the day.',
+          'Yes — every modality at KIAMO Skin is calibrated to the skin tone, including melanin-rich skin (Fitzpatrick IV-VI). Standard peels and aggressive exfoliation can trigger post-inflammatory hyperpigmentation in darker skin tones. Kiki has 7+ years of experience across every Fitzpatrick type and uses concentrations and protocols matched to the skin on the day.',
       },
       {
         question: 'Can I get a facial before a Del Mar wedding or event?',
@@ -376,18 +376,18 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'encinitas',
     name: 'Encinitas',
-    title: 'Facial in Encinitas, San Diego — Coastal Skin Specialists | KIAMO',
+    title: 'Facial in Encinitas, San Diego — Coastal Skin Specialists | KIAMO Skin',
     description:
       'Facial treatments serving Encinitas from KIAMO Skin Mission Hills. 25 minutes via I-5. Salt air, surfer barrier repair, UV recovery. Safe for every Fitzpatrick type I-VI.',
     h1: 'Facial in Encinitas, San Diego',
-    intro: `KIAMO Skin provides facial treatments to Encinitas residents facing daily coastal exposure from Moonlight Beach, Swami's, and the Cardiff border. Located in Mission Hills at 3067 Reynard Way, the studio is about 25 minutes south via I-5. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, calibrated for every Fitzpatrick type I-VI. Encinitas clients choose KIAMO for surfer barrier repair, UV-driven pigmentation support, and pre-event facials that respect the skin.`,
+    intro: `KIAMO Skin provides facial treatments to Encinitas residents facing daily coastal exposure from Moonlight Beach, Swami's, and the Cardiff border. Located in Mission Hills at 3067 Reynard Way, the studio is about 25 minutes south via I-5. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, calibrated for every Fitzpatrick type I-VI. Encinitas clients choose KIAMO Skin for surfer barrier repair, UV-driven pigmentation support, and pre-event facials that respect the skin.`,
     authority: {
       heading: 'Coastal and surfer-lifestyle facial protocols',
       body: `Encinitas is one of San Diego's most surf-intensive communities — Swami's, Cardiff Reef, and the Moonlight Beach breaks produce clients who spend hours in salt water daily. That lifestyle creates barrier breakdown, mineral and zinc-oxide buildup, and accelerated photoaging. KIAMO Skin uses HydraFacial Syndeo with AI skin analysis to identify and treat coastal damage, Lira chemical peels at Fitzpatrick-calibrated concentrations for pigmentation, and DMK enzyme therapy for barrier repair. Kiki has 7+ years treating coastal skin and understands the difference between daily surfers and occasional beachgoers. The single-practitioner model means continuity — the person who reads your skin today is the one who treats it.`,
     },
     uniqueness: {
       heading: 'Facials for Encinitas coastal living',
-      body: `Encinitas clients choose KIAMO for facials that address the specific effects of coastal and surf lifestyle on the skin:`,
+      body: `Encinitas clients choose KIAMO Skin for facials that address the specific effects of coastal and surf lifestyle on the skin:`,
       bullets: [
         'Surfer barrier repair — hydration and lipid replacement after daily salt exposure',
         'Mineral SPF buildup clearance — extraction for sunscreen-loaded pores',
@@ -419,7 +419,7 @@ export const facialAreas: FacialArea[] = [
     },
     intent: {
       heading: 'Who books a facial in Encinitas',
-      body: `Encinitas clients book facials for surfer barrier repair, UV-driven pigmentation support, pre-event preparation (weddings at the Encinitas Ranch or coastal venues), or as the foundation of a longer corrective plan addressing sun damage, melasma, or barrier breakdown. KIAMO is the right fit when the priority is one practitioner who understands coastal skin, protocols safe across every Fitzpatrick type, and treatment plans that respect the surf or beach lifestyle rather than fighting it.`,
+      body: `Encinitas clients book facials for surfer barrier repair, UV-driven pigmentation support, pre-event preparation (weddings at the Encinitas Ranch or coastal venues), or as the foundation of a longer corrective plan addressing sun damage, melasma, or barrier breakdown. KIAMO Skin is the right fit when the priority is one practitioner who understands coastal skin, protocols safe across every Fitzpatrick type, and treatment plans that respect the surf or beach lifestyle rather than fighting it.`,
     },
     gettingHere:
       'From Encinitas, take I-5 south to the Washington Street exit, head west on Washington Street to Reynard Way and turn right. About 25 minutes without traffic. From Leucadia, take Coast Highway 101 to I-5 south. From Cardiff, take Birmingham Drive to I-5 south. Free parking on site at 3067 Reynard Way.',
@@ -453,7 +453,7 @@ export const facialAreas: FacialArea[] = [
       {
         question: 'How does daily surfing affect my skin in Encinitas?',
         answer:
-          'Daily salt exposure strips the skin barrier with every session, and mineral SPF buildup clogs pores along the hairline and forehead. Combined with UV reflection off the water, this creates barrier breakdown, pigmentation, and accelerated photoaging. KIAMO\'s facials address all three — barrier repair, extraction of mineral buildup, and pigmentation support.',
+          'Daily salt exposure strips the skin barrier with every session, and mineral SPF buildup clogs pores along the hairline and forehead. Combined with UV reflection off the water, this creates barrier breakdown, pigmentation, and accelerated photoaging. KIAMO Skin\'s facials address all three — barrier repair, extraction of mineral buildup, and pigmentation support.',
       },
       {
         question: 'How far is KIAMO Skin from Encinitas?',
@@ -463,7 +463,7 @@ export const facialAreas: FacialArea[] = [
       {
         question: 'Is a facial safe for melanin-rich skin in Encinitas?',
         answer:
-          'Yes. Every modality at KIAMO is calibrated to your Fitzpatrick type. Standard peels and aggressive exfoliation can trigger post-inflammatory hyperpigmentation in melanin-rich skin. Kiki has 7+ years of experience across every Fitzpatrick type and uses concentrations matched to the skin on the day.',
+          'Yes. Every modality at KIAMO Skin is calibrated to your Fitzpatrick type. Standard peels and aggressive exfoliation can trigger post-inflammatory hyperpigmentation in melanin-rich skin. Kiki has 7+ years of experience across every Fitzpatrick type and uses concentrations matched to the skin on the day.',
       },
       {
         question: 'Can I get a facial if I surf every morning in Encinitas?',
@@ -482,7 +482,7 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'carlsbad',
     name: 'Carlsbad',
-    title: 'Facial in Carlsbad, San Diego — Coastal Skin Specialists | KIAMO',
+    title: 'Facial in Carlsbad, San Diego — Coastal Skin Specialists | KIAMO Skin',
     description:
       'Facial treatments serving Carlsbad from KIAMO Skin Mission Hills. 30 minutes via I-5. Salt air, family-friendly beach lifestyle. Safe for every Fitzpatrick type I-VI.',
     h1: 'Facial in Carlsbad, San Diego',
@@ -493,7 +493,7 @@ export const facialAreas: FacialArea[] = [
     },
     uniqueness: {
       heading: 'Facials for Carlsbad coastal skin',
-      body: `Carlsbad clients choose KIAMO for facials that address their specific lifestyle:`,
+      body: `Carlsbad clients choose KIAMO Skin for facials that address their specific lifestyle:`,
       bullets: [
         'Coastal barrier repair — hydration and lipid replacement for salt air exposure',
         'Pre-event facials — weddings at the Carlsbad Flower Fields, Omni La Costa, or coastal venues',
@@ -525,7 +525,7 @@ export const facialAreas: FacialArea[] = [
     },
     intent: {
       heading: 'Who books a facial in Carlsbad',
-      body: `Carlsbad clients book facials for coastal barrier repair, pre-event preparation, recovery from sun exposure, or as the foundation of a longer corrective plan addressing pigmentation, texture, or aging concerns. KIAMO is the right fit when the priority is one practitioner, no upsells, and protocols safe across every skin tone.`,
+      body: `Carlsbad clients book facials for coastal barrier repair, pre-event preparation, recovery from sun exposure, or as the foundation of a longer corrective plan addressing pigmentation, texture, or aging concerns. KIAMO Skin is the right fit when the priority is one practitioner, no upsells, and protocols safe across every skin tone.`,
     },
     gettingHere:
       'From Carlsbad, take I-5 south to the Washington Street exit, head west on Washington Street to Reynard Way and turn right. About 30 minutes without traffic. From Carlsbad Village, take Carlsbad Village Drive to I-5 south. From La Costa, take El Camino Real to I-5 south. Free parking on site at 3067 Reynard Way.',
@@ -559,7 +559,7 @@ export const facialAreas: FacialArea[] = [
       {
         question: 'How does Carlsbad coastal living affect my skin?',
         answer:
-          'Year-round salt air exposure strips the skin barrier, mineral SPF buildup clogs pores, and UV reflection off the water intensifies photoaging. KIAMO\'s facials address barrier repair, extraction, and pigmentation support — calibrated to your Fitzpatrick type.',
+          'Year-round salt air exposure strips the skin barrier, mineral SPF buildup clogs pores, and UV reflection off the water intensifies photoaging. KIAMO Skin\'s facials address barrier repair, extraction, and pigmentation support — calibrated to your Fitzpatrick type.',
       },
       {
         question: 'How far is KIAMO Skin from Carlsbad?',
@@ -569,7 +569,7 @@ export const facialAreas: FacialArea[] = [
       {
         question: 'Is a facial safe for melanin-rich skin in Carlsbad?',
         answer:
-          'Yes. Every modality at KIAMO is calibrated to your Fitzpatrick type. Standard peels and aggressive exfoliation can trigger post-inflammatory hyperpigmentation in melanin-rich skin. Kiki has 7+ years of experience across every Fitzpatrick type.',
+          'Yes. Every modality at KIAMO Skin is calibrated to your Fitzpatrick type. Standard peels and aggressive exfoliation can trigger post-inflammatory hyperpigmentation in melanin-rich skin. Kiki has 7+ years of experience across every Fitzpatrick type.',
       },
       {
         question: 'Can I get a facial before a Carlsbad wedding or event?',
@@ -588,7 +588,7 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'pacific-beach',
     name: 'Pacific Beach',
-    title: 'Facial in Pacific Beach, San Diego — Beach-Lifestyle Specialists | KIAMO',
+    title: 'Facial in Pacific Beach, San Diego — Beach-Lifestyle Specialists | KIAMO Skin',
     description:
       'Facial treatments serving Pacific Beach from KIAMO Skin Mission Hills. 15 minutes via I-8. Salt air, UV, beach-lifestyle skin. Safe for every Fitzpatrick type I-VI.',
     h1: 'Facial in Pacific Beach, San Diego',
@@ -599,7 +599,7 @@ export const facialAreas: FacialArea[] = [
     },
     uniqueness: {
       heading: 'Facials for beach-lifestyle skin in Pacific Beach',
-      body: `Pacific Beach clients face skin challenges that inland neighborhoods do not. KIAMO's facials address:`,
+      body: `Pacific Beach clients face skin challenges that inland neighborhoods do not. KIAMO Skin's facials address:`,
       bullets: [
         'Salt air dehydration — ocean wind and salt strip the skin barrier with every beach day',
         'Mineral SPF buildup — zinc oxide and chemical SPF accumulate in pores along the hairline and forehead',
@@ -631,7 +631,7 @@ export const facialAreas: FacialArea[] = [
     },
     intent: {
       heading: 'Who books a facial in Pacific Beach',
-      body: `Pacific Beach clients book facials for barrier repair after constant beach exposure, anti-aging support for accumulated UV reflection damage, pre-event preparation, or as the foundation of a corrective plan addressing sun damage, melasma, or texture concerns. Many are surfers, paddleboarders, runners on the boardwalk, or simply residents who walk their dog on the beach every morning. KIAMO is the right fit when the priority is one practitioner who understands coastal skin and protocols safe across every Fitzpatrick type.`,
+      body: `Pacific Beach clients book facials for barrier repair after constant beach exposure, anti-aging support for accumulated UV reflection damage, pre-event preparation, or as the foundation of a corrective plan addressing sun damage, melasma, or texture concerns. Many are surfers, paddleboarders, runners on the boardwalk, or simply residents who walk their dog on the beach every morning. KIAMO Skin is the right fit when the priority is one practitioner who understands coastal skin and protocols safe across every Fitzpatrick type.`,
     },
     gettingHere:
       'From Pacific Beach, take Garnet Avenue east to Ingraham Street, continue to Mission Boulevard, take I-8 east to Highway 163 south, exit Washington Street and head west. About 15 minutes. From Crystal Pier or the boardwalk, take Garnet Avenue east. From Tourmaline or north Pacific Beach, take La Jolla Mesa Drive to La Jolla Village Drive, then I-5 south to I-8 east. Free parking on site at 3067 Reynard Way.',
@@ -670,12 +670,12 @@ export const facialAreas: FacialArea[] = [
       {
         question: 'Is a facial safe for melanin-rich skin in Pacific Beach?',
         answer:
-          'Yes. Every modality at KIAMO is calibrated to your Fitzpatrick type. Kiki has 7+ years of experience across every skin tone, and the protocol is the same regardless of beach exposure level.',
+          'Yes. Every modality at KIAMO Skin is calibrated to your Fitzpatrick type. Kiki has 7+ years of experience across every skin tone, and the protocol is the same regardless of beach exposure level.',
       },
       {
         question: 'What facial addresses sun damage from beach living in Pacific Beach?',
         answer:
-          'HydraFacial Syndeo with brightening boosters (Britenol for tone, peptides for firmness, growth factors for barrier repair) addresses accumulated sun damage. For significant photoaging, KIAMO pairs HydraFacial maintenance with Lira chemical peels — HydraFacial between peel sessions keeps the barrier hydrated against ongoing UV.',
+          'HydraFacial Syndeo with brightening boosters (Britenol for tone, peptides for firmness, growth factors for barrier repair) addresses accumulated sun damage. For significant photoaging, KIAMO Skin pairs HydraFacial maintenance with Lira chemical peels — HydraFacial between peel sessions keeps the barrier hydrated against ongoing UV.',
       },
       {
         question: 'How often should Pacific Beach residents get facials?',
@@ -694,7 +694,7 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'point-loma',
     name: 'Point Loma',
-    title: 'Facial in Point Loma, San Diego — Maritime Skin Specialists | KIAMO',
+    title: 'Facial in Point Loma, San Diego — Maritime Skin Specialists | KIAMO Skin',
     description:
       'Facial treatments serving Point Loma from KIAMO Skin Mission Hills. 10 minutes via Rosecrans. Salt air, UV reflection, coastal skin. Safe for every Fitzpatrick type I-VI.',
     h1: 'Facial in Point Loma, San Diego',
@@ -705,7 +705,7 @@ export const facialAreas: FacialArea[] = [
     },
     uniqueness: {
       heading: 'Facials for Point Loma maritime living',
-      body: `Point Loma and Harbor Island residents face skin challenges that inland neighborhoods do not. KIAMO's facials address:`,
+      body: `Point Loma and Harbor Island residents face skin challenges that inland neighborhoods do not. KIAMO Skin's facials address:`,
       bullets: [
         'Salt air dehydration from both Pacific and bay exposure',
         'UV reflection off water on both sides of the peninsula',
@@ -737,7 +737,7 @@ export const facialAreas: FacialArea[] = [
     },
     intent: {
       heading: 'Who books a facial in Point Loma',
-      body: `Point Loma clients book facials for barrier repair after maritime exposure, anti-aging support for accumulated UV reflection damage, pre-event preparation, or as the foundation of a corrective plan addressing sun damage, melasma, or texture concerns. Many live near Ocean Beach, Sunset Cliffs, Liberty Station, or Shelter Island. KIAMO is the right fit when the priority is one practitioner who understands maritime skin and protocols safe across every Fitzpatrick type.`,
+      body: `Point Loma clients book facials for barrier repair after maritime exposure, anti-aging support for accumulated UV reflection damage, pre-event preparation, or as the foundation of a corrective plan addressing sun damage, melasma, or texture concerns. Many live near Ocean Beach, Sunset Cliffs, Liberty Station, or Shelter Island. KIAMO Skin is the right fit when the priority is one practitioner who understands maritime skin and protocols safe across every Fitzpatrick type.`,
     },
     gettingHere:
       'From Liberty Station, take Rosecrans Street east to Washington Street and turn left. About 10 minutes. From Ocean Beach or Sunset Cliffs, take Sunset Cliffs Boulevard to Point Loma Avenue, continue to Rosecrans and turn left, then follow to Washington Street. From Shelter Island, take Rosecrans Street east. From the Cabrillo peninsula, take Catalina Boulevard north to Rosecrans. Free parking on site at 3067 Reynard Way.',
@@ -771,7 +771,7 @@ export const facialAreas: FacialArea[] = [
       {
         question: 'How does Point Loma maritime living affect skin?',
         answer:
-          'Point Loma\'s peninsula location means constant salt air from both the Pacific and San Diego Bay. Salt draws moisture from the skin barrier with every exposure, leading to dehydration, sensitivity, and accelerated aging. Wind compounds the damage. KIAMO\'s facials counteract this with intensive hydration and barrier repair.',
+          'Point Loma\'s peninsula location means constant salt air from both the Pacific and San Diego Bay. Salt draws moisture from the skin barrier with every exposure, leading to dehydration, sensitivity, and accelerated aging. Wind compounds the damage. KIAMO Skin\'s facials counteract this with intensive hydration and barrier repair.',
       },
       {
         question: 'How long does it take to get to KIAMO Skin from Point Loma?',
@@ -786,7 +786,7 @@ export const facialAreas: FacialArea[] = [
       {
         question: 'Is a facial safe for melanin-rich skin in Point Loma?',
         answer:
-          'Yes. Every modality at KIAMO is calibrated to your Fitzpatrick type. Kiki has 7+ years of experience across every skin tone.',
+          'Yes. Every modality at KIAMO Skin is calibrated to your Fitzpatrick type. Kiki has 7+ years of experience across every skin tone.',
       },
       {
         question: 'What should Point Loma residents expect after a facial?',
@@ -800,7 +800,7 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'coronado',
     name: 'Coronado',
-    title: 'Facial in Coronado, San Diego — Coastal Skin Specialists | KIAMO',
+    title: 'Facial in Coronado, San Diego — Coastal Skin Specialists | KIAMO Skin',
     description:
       'Facial treatments serving Coronado from KIAMO Skin Mission Hills. 15 minutes via the Coronado Bridge. Salt air, UV reflection, island skin. Safe for every Fitzpatrick type I-VI.',
     h1: 'Facial in Coronado, San Diego',
@@ -811,7 +811,7 @@ export const facialAreas: FacialArea[] = [
     },
     uniqueness: {
       heading: 'Facials for Coronado island-coastal skin',
-      body: `Coronado clients choose KIAMO for facials that address the specific effects of island living on the skin:`,
+      body: `Coronado clients choose KIAMO Skin for facials that address the specific effects of island living on the skin:`,
       bullets: [
         'Pacific Ocean and bay salt air exposure — barrier repair and hydration',
         'UV reflection off water on both sides — pigmentation support',
@@ -843,7 +843,7 @@ export const facialAreas: FacialArea[] = [
     },
     intent: {
       heading: 'Who books a facial in Coronado',
-      body: `Coronado clients book facials for barrier repair after maritime exposure, pre-event preparation at Hotel del Coronado or the Beach Village, anti-aging support for accumulated UV reflection damage, or as the foundation of a corrective plan addressing sun damage, melasma, or texture concerns. Many are military families, retirees, and professionals who value consistency. KIAMO is the right fit when the priority is one practitioner who understands coastal skin and protocols safe across every Fitzpatrick type.`,
+      body: `Coronado clients book facials for barrier repair after maritime exposure, pre-event preparation at Hotel del Coronado or the Beach Village, anti-aging support for accumulated UV reflection damage, or as the foundation of a corrective plan addressing sun damage, melasma, or texture concerns. Many are military families, retirees, and professionals who value consistency. KIAMO Skin is the right fit when the priority is one practitioner who understands coastal skin and protocols safe across every Fitzpatrick type.`,
     },
     gettingHere:
       'From Coronado, take the Coronado Bridge (State Route 75) north to I-5 south, exit Washington Street, head west on Washington Street to Reynard Way and turn right. About 15 minutes. From the Hotel del Coronado, take Orange Avenue north to the bridge. From the Silver Strand, take State Route 75 north. Free parking on site at 3067 Reynard Way.',
@@ -877,7 +877,7 @@ export const facialAreas: FacialArea[] = [
       {
         question: 'How does Coronado island living affect skin?',
         answer:
-          'Coronado is surrounded by water on multiple sides, producing constant salt air exposure and UV reflection. The barrier breaks down with every beach day, mineral SPF accumulates in pores, and photoaging accelerates. KIAMO\'s facials address barrier repair, extraction, and pigmentation support.',
+          'Coronado is surrounded by water on multiple sides, producing constant salt air exposure and UV reflection. The barrier breaks down with every beach day, mineral SPF accumulates in pores, and photoaging accelerates. KIAMO Skin\'s facials address barrier repair, extraction, and pigmentation support.',
       },
       {
         question: 'How far is KIAMO Skin from Coronado?',
@@ -892,7 +892,7 @@ export const facialAreas: FacialArea[] = [
       {
         question: 'Is a facial safe for melanin-rich skin in Coronado?',
         answer:
-          'Yes. Every modality at KIAMO is calibrated to your Fitzpatrick type. Kiki has 7+ years of experience across every skin tone.',
+          'Yes. Every modality at KIAMO Skin is calibrated to your Fitzpatrick type. Kiki has 7+ years of experience across every skin tone.',
       },
       {
         question: 'Do you treat military families from Naval Base Coronado?',
@@ -906,7 +906,7 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'north-park',
     name: 'North Park',
-    title: 'Facial in North Park, San Diego — Urban Village Specialists | KIAMO',
+    title: 'Facial in North Park, San Diego — Urban Village Specialists | KIAMO Skin',
     description:
       'Facial treatments serving North Park from KIAMO Skin Mission Hills. 10 minutes via 30th Street. Brewery patios, walkable urban skin. Safe for every Fitzpatrick type I-VI.',
     h1: 'Facial in North Park, San Diego',
@@ -917,7 +917,7 @@ export const facialAreas: FacialArea[] = [
     },
     uniqueness: {
       heading: 'Facials for North Park urban-village skin',
-      body: `North Park clients choose KIAMO for facials that address their specific urban-village lifestyle:`,
+      body: `North Park clients choose KIAMO Skin for facials that address their specific urban-village lifestyle:`,
       bullets: [
         'Year-round outdoor dining and brewery patio exposure',
         'Walkable urban skin rhythm — high daily UV from street time',
@@ -949,7 +949,7 @@ export const facialAreas: FacialArea[] = [
     },
     intent: {
       heading: 'Who books a facial in North Park',
-      body: `North Park clients book facials for pre-event preparation (concerts at The Observatory, gallery nights, restaurant openings), monthly maintenance against urban environmental stress, recovery from sun exposure, or as the foundation of a corrective plan addressing pigmentation, texture, or aging concerns. Many are creative professionals, service-industry workers, and young families who value consistent care. KIAMO is the right fit when the priority is one practitioner, no upsells, and protocols safe across every skin tone.`,
+      body: `North Park clients book facials for pre-event preparation (concerts at The Observatory, gallery nights, restaurant openings), monthly maintenance against urban environmental stress, recovery from sun exposure, or as the foundation of a corrective plan addressing pigmentation, texture, or aging concerns. Many are creative professionals, service-industry workers, and young families who value consistent care. KIAMO Skin is the right fit when the priority is one practitioner, no upsells, and protocols safe across every skin tone.`,
     },
     gettingHere:
       'From North Park, take 30th Street north to University Avenue west, then Washington Street west to Reynard Way and turn right. About 10 minutes. From El Cajon Boulevard, head west to 30th Street, then north. From University Avenue, head west to Washington Street. Free parking on site at 3067 Reynard Way.',
@@ -983,7 +983,7 @@ export const facialAreas: FacialArea[] = [
       {
         question: 'How does North Park outdoor culture affect facial skin?',
         answer:
-          'North Park\'s brewery patios and outdoor dining mean constant UV exposure year-round. UV is the primary trigger that worsens pigmentation and accelerates photoaging. KIAMO\'s facials emphasize daily SPF 50+ and barrier protection specifically for high-UV urban lifestyles.',
+          'North Park\'s brewery patios and outdoor dining mean constant UV exposure year-round. UV is the primary trigger that worsens pigmentation and accelerates photoaging. KIAMO Skin\'s facials emphasize daily SPF 50+ and barrier protection specifically for high-UV urban lifestyles.',
       },
       {
         question: 'How far is KIAMO Skin from North Park?',
@@ -998,7 +998,7 @@ export const facialAreas: FacialArea[] = [
       {
         question: 'Is a facial safe for melanin-rich skin in North Park?',
         answer:
-          'Yes. Every modality at KIAMO is calibrated to your Fitzpatrick type. Kiki has 7+ years of experience across every skin tone.',
+          'Yes. Every modality at KIAMO Skin is calibrated to your Fitzpatrick type. Kiki has 7+ years of experience across every skin tone.',
       },
       {
         question: 'Do you offer evening appointments for North Park professionals?',
@@ -1012,7 +1012,7 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'hillcrest',
     name: 'Hillcrest',
-    title: 'Facial in Hillcrest, San Diego — LGBTQ+ Welcoming | KIAMO',
+    title: 'Facial in Hillcrest, San Diego — LGBTQ+ Welcoming | KIAMO Skin',
     description:
       'Facial treatments serving Hillcrest from KIAMO Skin Mission Hills. 5 minutes via University Avenue. LGBTQ+ welcoming, urban village. Safe for every Fitzpatrick type I-VI.',
     h1: 'Facial in Hillcrest, San Diego',
@@ -1023,7 +1023,7 @@ export const facialAreas: FacialArea[] = [
     },
     uniqueness: {
       heading: 'Facials for Hillcrest urban-village skin',
-      body: `Hillcrest clients choose KIAMO for facials that respect both the skin and the community:`,
+      body: `Hillcrest clients choose KIAMO Skin for facials that respect both the skin and the community:`,
       bullets: [
         'LGBTQ+ welcoming environment — inclusive, affirming care',
         'All Fitzpatrick types — melanin-rich skin protocols per session',
@@ -1055,7 +1055,7 @@ export const facialAreas: FacialArea[] = [
     },
     intent: {
       heading: 'Who books a facial in Hillcrest',
-      body: `Hillcrest clients book facials for pre-event preparation (Pride, restaurant openings, Farmers Market mornings), monthly maintenance against urban environmental stress, recovery from sun exposure, or as the foundation of a corrective plan addressing pigmentation, texture, or aging concerns. KIAMO is the right fit when the priority is one practitioner, no upsells, and an inclusive environment where every skin tone is treated safely.`,
+      body: `Hillcrest clients book facials for pre-event preparation (Pride, restaurant openings, Farmers Market mornings), monthly maintenance against urban environmental stress, recovery from sun exposure, or as the foundation of a corrective plan addressing pigmentation, texture, or aging concerns. KIAMO Skin is the right fit when the priority is one practitioner, no upsells, and an inclusive environment where every skin tone is treated safely.`,
     },
     gettingHere:
       'From University Avenue in Hillcrest, head west toward Mission Hills, turn right on Washington Street. The studio is at 3067 Reynard Way, first left after the small commercial strip. About 5 minutes. From Fifth Avenue near the Hillcrest sign, take Fifth north to Washington and turn left. From Balboa Park side of Hillcrest, take Park Boulevard to University, continue west to Washington. Free parking on site.',
@@ -1104,7 +1104,7 @@ export const facialAreas: FacialArea[] = [
       {
         question: 'Is a facial safe for melanin-rich skin in Hillcrest?',
         answer:
-          'Yes. Every modality at KIAMO is calibrated to your Fitzpatrick type. Kiki has 7+ years of experience across every skin tone.',
+          'Yes. Every modality at KIAMO Skin is calibrated to your Fitzpatrick type. Kiki has 7+ years of experience across every skin tone.',
       },
       {
         question: 'Do you offer evening appointments near Hillcrest?',

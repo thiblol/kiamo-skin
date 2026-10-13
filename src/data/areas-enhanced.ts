@@ -172,9 +172,9 @@ export const enhancedAreas: EnhancedArea[] = areas.map((area) => {
     case 'mission-hills':
       return {
         ...baseArea,
-        title: 'Mission Hills Facials — HydraFacial & DMK Enzyme | KIAMO',
-        description: 'KIAMO SKIN corrective facial studio at 3067 Reynard Way, Mission Hills. HydraFacial, DMK, Lira peels, Procell. 5 min from Hillcrest. Free parking. From $199.',
-        h1: 'Corrective Facials at KIAMO SKIN Studio in Mission Hills',
+        title: 'Mission Hills Facials — HydraFacial & DMK Enzyme | KIAMO Skin',
+        description: 'KIAMO Skin corrective facial studio at 3067 Reynard Way, Mission Hills. HydraFacial, DMK, Lira peels, Procell. 5 min from Hillcrest. Free parking. From $199.',
+        h1: 'Corrective Facials at KIAMO Skin Studio in Mission Hills',
         quickAnswer: missionHillsEnhanced.quickAnswer,
         serviceAreaParagraph: missionHillsEnhanced.serviceAreaParagraph,
         navigationContext: missionHillsEnhanced.navigationContext,
@@ -187,8 +187,8 @@ export const enhancedAreas: EnhancedArea[] = areas.map((area) => {
     case 'la-jolla':
       return {
         ...baseArea,
-        title: 'La Jolla Facials — HydraFacial & Keravive | KIAMO SKIN',
-        description: 'KIAMO SKIN treats ocean swimmers from La Jolla with HydraFacial Syndeo and Keravive scalp therapy. Mission Hills studio, 12 miles south via I-5. Licensed esthetician. From $259.',
+        title: 'La Jolla Facials — HydraFacial & Keravive | KIAMO Skin',
+        description: 'KIAMO Skin treats ocean swimmers from La Jolla with HydraFacial Syndeo and Keravive scalp therapy. Mission Hills studio, 12 miles south via I-5. Licensed esthetician. From $259.',
         h1: 'HydraFacial & Barrier Repair Facials for La Jolla Clients',
         quickAnswer: laJollaEnhanced.quickAnswer,
         serviceAreaParagraph: laJollaEnhanced.serviceAreaParagraph,
@@ -202,11 +202,11 @@ export const enhancedAreas: EnhancedArea[] = areas.map((area) => {
     case 'chula-vista':
       return {
         ...baseArea,
-        title: 'Chula Vista Facials — Lira Peels & DMK | KIAMO SKIN',
-        description: 'KIAMO SKIN treats melasma and hyperpigmentation for Chula Vista clients with Lira Chemical Peels and DMK Enzyme Therapy. Mission Hills studio, 13 miles north via I-5. From $199.',
+        title: 'Chula Vista Facials — Lira Peels & DMK | KIAMO Skin',
+        description: 'KIAMO Skin treats melasma and hyperpigmentation for Chula Vista clients with Lira Chemical Peels and DMK Enzyme Therapy. Mission Hills studio, 13 miles north via I-5. From $199.',
         h1: 'Chemical Peels & Pigmentation Facials for Chula Vista Clients',
-        quickAnswer: 'KIAMO SKIN treats melasma and hyperpigmentation from inland UV exposure at a one-room studio in Mission Hills, San Diego (92103), about 13 miles north of Chula Vista via I-5. Kiki, a California licensed esthetician specializing in melanin-rich skin, uses Lira Chemical Peels and DMK Enzyme Therapy for clients from Eastlake, Otay Ranch, and Rancho del Rey. Treatments start at $199, with series planning for melanin-rich skin types (Fitzpatrick III-VI) to prevent post-inflammatory hyperpigmentation.',
-        serviceAreaParagraph: 'KIAMO SKIN serves clients from across Chula Vista, including Eastlake near Olympic Training Center and Terra Nova Plaza (91915), Otay Ranch near Millenia shopping district (91913), Rancho del Rey along Paseo Ranchero (91914), the Bonita border near Sweetwater Reservoir, San Miguel Ranch north of SR-54, and the Rolling Hills Ranch area east of I-805. The studio is in Mission Hills, San Diego County (92103), accessible via northbound I-5 from Palomar Street (Exit 5), Main Street (Exit 6), or Cesar Chavez Parkway (Exit 7A), or via I-805 north to I-5 north through National City.',
+        quickAnswer: 'KIAMO Skin treats melasma and hyperpigmentation from inland UV exposure at a one-room studio in Mission Hills, San Diego (92103), about 13 miles north of Chula Vista via I-5. Kiki, a California licensed esthetician specializing in melanin-rich skin, uses Lira Chemical Peels and DMK Enzyme Therapy for clients from Eastlake, Otay Ranch, and Rancho del Rey. Treatments start at $199, with series planning for melanin-rich skin types (Fitzpatrick III-VI) to prevent post-inflammatory hyperpigmentation.',
+        serviceAreaParagraph: 'KIAMO Skin serves clients from across Chula Vista, including Eastlake near Olympic Training Center and Terra Nova Plaza (91915), Otay Ranch near Millenia shopping district (91913), Rancho del Rey along Paseo Ranchero (91914), the Bonita border near Sweetwater Reservoir, San Miguel Ranch north of SR-54, and the Rolling Hills Ranch area east of I-805. The studio is in Mission Hills, San Diego County (92103), accessible via northbound I-5 from Palomar Street (Exit 5), Main Street (Exit 6), or Cesar Chavez Parkway (Exit 7A), or via I-805 north to I-5 north through National City.',
         navigationContext: 'From Eastlake near Olympic Parkway and Hunte Parkway, head west on Olympic toward SR-125 north. Merge onto SR-125 north (toll road) toward I-805, passing Sweetwater Reservoir on your right. Exit onto I-805 north near Bonita Road, then continue north past South Bay and National City. Merge onto I-5 north at the interchange near Downtown San Diego, staying in the center lanes. Washington Street (Exit 17) comes up about 3 miles after the merge. Turn right at the exit, then immediate left onto Reynard Way. The studio at 3067 Reynard Way is 0.3 miles from the exit with free parking on site.',
         cityModifiers: 'Chula Vista sits inland from the marine layer that buffers coastal neighborhoods, resulting in higher UV exposure and warmer summer temperatures (85-95°F afternoons May through October) compared to coastal San Diego. The city is San Diego County\'s second-largest and fastest-growing between 1990-2010, with a 60% Hispanic/Latino population and significant melanin-rich demographic (Fitzpatrick types III-VI). Most residential construction post-2000 consists of planned communities with stucco exteriors, concrete slab foundations, and minimal landscaping — resulting in high heat reflection and cumulative UV exposure for residents. Eastlake, Otay Ranch, and Rancho del Rey developments sit 5-8 miles inland from San Diego Bay, where afternoon temperatures run 10-15°F warmer than coastal areas and the inland sun drives higher rates of melasma and pigmentation concerns in melanin-rich skin.',
         processBlocks: [
@@ -249,7 +249,7 @@ export const enhancedAreas: EnhancedArea[] = areas.map((area) => {
           },
           {
             question: 'How much does a chemical peel cost for Chula Vista clients with melasma?',
-            answer: 'Lira Chemical Peels at KIAMO SKIN start at $199 for Gentle Renewal and $299 for Advanced peel formulations. Most clients with melasma or hyperpigmentation need a series of 4-6 peels to see meaningful lightening, which is why we offer series pricing: $749 for a 4-peel series (saves $97) or $1,399 for 6 peels (saves $195). The first visit includes a skin analysis, Fitzpatrick type assessment, and discussion of realistic timelines for pigmentation reduction. Series pricing is confirmed at consultation before you commit. Each peel session takes 45-60 minutes with 3-5 days of mild flaking.',
+            answer: 'Lira Chemical Peels at KIAMO Skin start at $199 for Gentle Renewal and $299 for Advanced peel formulations. Most clients with melasma or hyperpigmentation need a series of 4-6 peels to see meaningful lightening, which is why we offer series pricing: $749 for a 4-peel series (saves $97) or $1,399 for 6 peels (saves $195). The first visit includes a skin analysis, Fitzpatrick type assessment, and discussion of realistic timelines for pigmentation reduction. Series pricing is confirmed at consultation before you commit. Each peel session takes 45-60 minutes with 3-5 days of mild flaking.',
             entityCount: 8,
           },
           {
@@ -264,7 +264,7 @@ export const enhancedAreas: EnhancedArea[] = areas.map((area) => {
           },
           {
             question: 'Do I need a consultation before booking a chemical peel from Chula Vista?',
-            answer: 'Yes. New clients start with a consultation that includes a skin analysis and first treatment (not a separate appointment). The consultation at KIAMO SKIN covers Fitzpatrick type assessment, melasma pattern analysis (centrofacial, malar, mandibular), current skincare routine review, and realistic timeline for pigment reduction. You\'ll receive either a Lira Chemical Peel, DMK Enzyme Therapy Level 1, or HydraFacial during the same visit based on your skin\'s current condition. First-time consultation + treatment starts at $249. You can book online or call — we respond within 24 hours on business days. The studio is at 3067 Reynard Way in Mission Hills with free parking.',
+            answer: 'Yes. New clients start with a consultation that includes a skin analysis and first treatment (not a separate appointment). The consultation at KIAMO Skin covers Fitzpatrick type assessment, melasma pattern analysis (centrofacial, malar, mandibular), current skincare routine review, and realistic timeline for pigment reduction. You\'ll receive either a Lira Chemical Peel, DMK Enzyme Therapy Level 1, or HydraFacial during the same visit based on your skin\'s current condition. First-time consultation + treatment starts at $249. You can book online or call — we respond within 24 hours on business days. The studio is at 3067 Reynard Way in Mission Hills with free parking.',
             entityCount: 10,
           },
         ],
@@ -296,8 +296,8 @@ export const enhancedAreas: EnhancedArea[] = areas.map((area) => {
     case 'la-mesa':
       return {
         ...baseArea,
-        title: 'La Mesa Facials — Melasma & Sun Damage Treatment | KIAMO',
-        description: 'KIAMO SKIN treats inland UV damage and melasma for La Mesa clients. Lira peels, DMK, HydraFacial. 20 min west via I-8. Melanin-rich skin specialization. From $199.',
+        title: 'La Mesa Facials — Melasma & Sun Damage Treatment | KIAMO Skin',
+        description: 'KIAMO Skin treats inland UV damage and melasma for La Mesa clients. Lira peels, DMK, HydraFacial. 20 min west via I-8. Melanin-rich skin specialization. From $199.',
         h1: 'Melasma & Sun Damage Treatment for La Mesa Clients',
         quickAnswer: laMesaEnhanced.quickAnswer,
         serviceAreaParagraph: laMesaEnhanced.serviceAreaParagraph,
@@ -311,8 +311,8 @@ export const enhancedAreas: EnhancedArea[] = areas.map((area) => {
     case 'carlsbad':
       return {
         ...baseArea,
-        title: 'Carlsbad Facials — Procell & Keravive Series | KIAMO',
-        description: 'KIAMO SKIN provides Procell microchanneling and Keravive scalp series for Carlsbad clients. Series planned at consultation. 35 min south via I-5. From $599.',
+        title: 'Carlsbad Facials — Procell & Keravive Series | KIAMO Skin',
+        description: 'KIAMO Skin provides Procell microchanneling and Keravive scalp series for Carlsbad clients. Series planned at consultation. 35 min south via I-5. From $599.',
         h1: 'Procell & Keravive Treatment Series for Carlsbad Clients',
         quickAnswer: carlsbadEnhanced.quickAnswer,
         serviceAreaParagraph: carlsbadEnhanced.serviceAreaParagraph,
@@ -326,8 +326,8 @@ export const enhancedAreas: EnhancedArea[] = areas.map((area) => {
     case 'del-mar':
       return {
         ...baseArea,
-        title: 'Del Mar Facials — Texture & UV Damage Treatment | KIAMO',
-        description: 'KIAMO SKIN treats fair and race season UV damage for clients traveling from Del Mar. Procell microchanneling, Keravive, HydraFacial. 25 min south. From $259.',
+        title: 'Del Mar Facials — Texture & UV Damage Treatment | KIAMO Skin',
+        description: 'KIAMO Skin treats fair and race season UV damage for clients traveling from Del Mar. Procell microchanneling, Keravive, HydraFacial. 25 min south. From $259.',
         h1: 'Texture & UV Damage Treatment for Clients from Del Mar',
         quickAnswer: delMarEnhanced.quickAnswer,
         serviceAreaParagraph: delMarEnhanced.serviceAreaParagraph,
@@ -341,8 +341,8 @@ export const enhancedAreas: EnhancedArea[] = areas.map((area) => {
     case 'encinitas':
       return {
         ...baseArea,
-        title: 'Encinitas Facials — Barrier Repair for Surfers | KIAMO',
-        description: 'KIAMO SKIN treats barrier damage from surf exposure for Encinitas clients. DMK Enzyme Therapy, Keravive scalp, HydraFacial. 30 min south via I-5. From $259.',
+        title: 'Encinitas Facials — Barrier Repair for Surfers | KIAMO Skin',
+        description: 'KIAMO Skin treats barrier damage from surf exposure for Encinitas clients. DMK Enzyme Therapy, Keravive scalp, HydraFacial. 30 min south via I-5. From $259.',
         h1: 'Barrier Repair & Scalp Therapy for Encinitas Surfers',
         quickAnswer: encinitasEnhanced.quickAnswer,
         serviceAreaParagraph: encinitasEnhanced.serviceAreaParagraph,
@@ -356,8 +356,8 @@ export const enhancedAreas: EnhancedArea[] = areas.map((area) => {
     case 'north-park':
       return {
         ...baseArea,
-        title: 'North Park Facials — Pigmentation & Acne Scarring | KIAMO',
-        description: 'KIAMO SKIN treats PIH and acne scarring in melanin-rich skin for North Park clients. Lira peels, dermaplaning, HydraFacial. 10 min, no freeway. From $199.',
+        title: 'North Park Facials — Pigmentation & Acne Scarring | KIAMO Skin',
+        description: 'KIAMO Skin treats PIH and acne scarring in melanin-rich skin for North Park clients. Lira peels, dermaplaning, HydraFacial. 10 min, no freeway. From $199.',
         h1: 'Pigmentation & Acne Scar Treatment for North Park Clients',
         quickAnswer: northParkEnhanced.quickAnswer,
         serviceAreaParagraph: northParkEnhanced.serviceAreaParagraph,
@@ -371,8 +371,8 @@ export const enhancedAreas: EnhancedArea[] = areas.map((area) => {
     case 'pacific-beach':
       return {
         ...baseArea,
-        title: 'Pacific Beach Facials — Sun Damage & Barrier Repair | KIAMO',
-        description: 'KIAMO SKIN treats May Gray sun damage for Pacific Beach clients with Lira Peels, DMK Enzyme Therapy, and Keravive. Mission Hills studio, 15 minutes east. From $199.',
+        title: 'Pacific Beach Facials — Sun Damage & Barrier Repair | KIAMO Skin',
+        description: 'KIAMO Skin treats May Gray sun damage for Pacific Beach clients with Lira Peels, DMK Enzyme Therapy, and Keravive. Mission Hills studio, 15 minutes east. From $199.',
         h1: 'Sun Damage & Barrier Repair Facials for Pacific Beach Clients',
         quickAnswer: pacificBeachEnhanced.quickAnswer,
         serviceAreaParagraph: pacificBeachEnhanced.serviceAreaParagraph,

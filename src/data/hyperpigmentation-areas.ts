@@ -54,12 +54,12 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     h1: 'Hyperpigmentation Treatment in Mission Hills',
     intro: `KIAMO Skin specializes in hyperpigmentation correction for Mission Hills residents dealing with melasma, post-inflammatory hyperpigmentation, sun damage, and uneven skin tone. Located at 3067 Reynard Way, just off Washington Street near the Mission Hills Nursery and Presidio Park, our clinic uses corrective treatment protocols safe for all skin types (Fitzpatrick I-VI). Kiki is a California licensed esthetician with 7+ years of experience treating hyperpigmentation across all skin tones, using calibrated protocols that prevent complications.`,
     authority: {
-      heading: 'Why Mission Hills clients trust KIAMO for hyperpigmentation',
+      heading: 'Why Mission Hills clients trust KIAMO Skin for hyperpigmentation',
       body: `Hyperpigmentation correction requires specialized protocols calibrated for your specific skin type. Aggressive treatments can trigger post-inflammatory hyperpigmentation, especially in Fitzpatrick IV-VI skin, creating more damage than the original concern. Kiki has 7+ years of experience with advanced corrective modalities - chemical peels at safe concentrations for all skin types, microneedling at precise depths, targeted serums with tyrosinase inhibitors, and LED therapy. KIAMO Skin is equipped with medical-grade devices, not day spa equipment. Every treatment plan is customized to your Fitzpatrick type, pigmentation pattern, and lifestyle factors affecting Mission Hills residents - UV exposure from canyon hiking, heat from Santa Ana winds triggering melasma, and hard water mineral deposits aggravating skin barrier function.`,
     },
     uniqueness: {
       heading: 'Hyperpigmentation protocols for all skin types',
-      body: `Mission Hills is one of San Diego's most walkable neighborhoods, which means outdoor UV exposure year-round. KIAMO's hyperpigmentation protocols account for this lifestyle:`,
+      body: `Mission Hills is one of San Diego's most walkable neighborhoods, which means outdoor UV exposure year-round. KIAMO Skin's hyperpigmentation protocols account for this lifestyle:`,
       bullets: [
         'Skin-type calibrated treatments - protocols for Fitzpatrick I-VI to prevent complications',
         'Progressive treatment plans - gradual correction minimizes inflammation risk across all skin tones',
@@ -69,8 +69,8 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
       ],
     },
     depth: {
-      heading: 'How hyperpigmentation correction works at KIAMO',
-      body: `Hyperpigmentation correction requires addressing both surface pigment and the biological triggers causing overproduction of melanin. KIAMO uses a layered approach combining exfoliation, melanin pathway inhibition, and barrier repair.`,
+      heading: 'How hyperpigmentation correction works at KIAMO Skin',
+      body: `Hyperpigmentation correction requires addressing both surface pigment and the biological triggers causing overproduction of melanin. KIAMO Skin uses a layered approach combining exfoliation, melanin pathway inhibition, and barrier repair.`,
       process: [
         {
           step: 'Assessment + Fitzpatrick Typing',
@@ -88,7 +88,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     },
     intent: {
       heading: 'Who seeks hyperpigmentation treatment in Mission Hills',
-      body: `Mission Hills clients typically book hyperpigmentation correction for melasma (hormonal dark patches on cheeks and forehead), post-inflammatory hyperpigmentation from acne or past aggressive treatments, sun damage from outdoor San Diego lifestyle, and uneven tone that makeup cannot conceal. Many have tried OTC products without results or have experienced worsening pigmentation from treatments not calibrated for their skin type. The treatment addresses biological melanin overproduction, not just surface discoloration. KIAMO uses protocols calibrated for all Fitzpatrick types (I-VI), with special attention to preventing post-inflammatory hyperpigmentation in darker skin tones where standard protocols risk complications. Mission Hills clients value the neighborhood proximity and skin-type specific expertise that chain medspas and general dermatology practices often lack.`,
+      body: `Mission Hills clients typically book hyperpigmentation correction for melasma (hormonal dark patches on cheeks and forehead), post-inflammatory hyperpigmentation from acne or past aggressive treatments, sun damage from outdoor San Diego lifestyle, and uneven tone that makeup cannot conceal. Many have tried OTC products without results or have experienced worsening pigmentation from treatments not calibrated for their skin type. The treatment addresses biological melanin overproduction, not just surface discoloration. KIAMO Skin uses protocols calibrated for all Fitzpatrick types (I-VI), with special attention to preventing post-inflammatory hyperpigmentation in darker skin tones where standard protocols risk complications. Mission Hills clients value the neighborhood proximity and skin-type specific expertise that chain medspas and general dermatology practices often lack.`,
     },
     gettingHere: `KIAMO Skin is located at 3067 Reynard Way in Mission Hills, just off Washington Street. From Presidio Park, head west on Taylor Street to Reynard Way. From Mission Hills Nursery, head east on Washington to Reynard Way and turn left. From Hillcrest (University Avenue), take Washington Street west, turn right on Reynard Way. From Old Town, take Taylor Street east to Reynard Way. From I-8, exit at Taylor Street, head south to Reynard Way. Free parking on site.`,
     landmarks: [
@@ -122,7 +122,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
       },
       {
         question: 'Is hyperpigmentation treatment safe for all skin types in Mission Hills?',
-        answer: `Yes, when protocols are properly calibrated. KIAMO uses treatments tailored to your specific Fitzpatrick type (I-VI) to prevent post-inflammatory hyperpigmentation. We avoid aggressive one-size-fits-all approaches that can trigger complications, especially in darker skin tones (Fitzpatrick IV-VI). Kiki has 7+ years of experience treating hyperpigmentation across all skin types, which is critical for Mission Hills' diverse community.`,
+        answer: `Yes, when protocols are properly calibrated. KIAMO Skin uses treatments tailored to your specific Fitzpatrick type (I-VI) to prevent post-inflammatory hyperpigmentation. We avoid aggressive one-size-fits-all approaches that can trigger complications, especially in darker skin tones (Fitzpatrick IV-VI). Kiki has 7+ years of experience treating hyperpigmentation across all skin types, which is critical for Mission Hills' diverse community.`,
       },
       {
         question: 'What causes hyperpigmentation in Mission Hills residents?',
@@ -130,7 +130,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
       },
       {
         question: 'Can melasma be permanently removed in Mission Hills?',
-        answer: `Melasma can be significantly faded but is managed rather than permanently cured, as it's triggered by hormones, UV exposure, and heat. Mission Hills lifestyle (outdoor activities, heat events) means ongoing maintenance. KIAMO's approach combines clinic treatments to fade existing pigment with homecare protocols to prevent recurrence. Most clients achieve 60-80% fading.`,
+        answer: `Melasma can be significantly faded but is managed rather than permanently cured, as it's triggered by hormones, UV exposure, and heat. Mission Hills lifestyle (outdoor activities, heat events) means ongoing maintenance. KIAMO Skin's approach combines clinic treatments to fade existing pigment with homecare protocols to prevent recurrence. Most clients achieve 60-80% fading.`,
       },
       {
         question: 'What should I avoid after hyperpigmentation treatment in Mission Hills?',
@@ -152,7 +152,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     },
     uniqueness: {
       heading: 'Hyperpigmentation protocols for Hillcrest lifestyles',
-      body: `Hillcrest is San Diego's most walkable urban neighborhood, with year-round outdoor dining, shopping, and social culture. KIAMO's protocols account for this UV-intensive lifestyle:`,
+      body: `Hillcrest is San Diego's most walkable urban neighborhood, with year-round outdoor dining, shopping, and social culture. KIAMO Skin's protocols account for this UV-intensive lifestyle:`,
       bullets: [
         'Calibrated for all skin types - Fitzpatrick I-VI protocols preventing complications',
         'Progressive treatment approach - gradual correction without inflammation risk',
@@ -181,7 +181,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     },
     intent: {
       heading: 'Why Hillcrest clients seek hyperpigmentation treatment',
-      body: `Hillcrest clients book hyperpigmentation correction for melasma (hormonal dark patches that worsen with sun exposure), post-inflammatory hyperpigmentation from acne or harsh treatments, sun damage from San Diego's outdoor culture, and uneven tone that foundation cannot cover. Many have tried dermatologist laser treatments that made pigmentation worse, or OTC products without results. KIAMO uses protocols calibrated for all skin types with special attention to preventing complications in darker tones. The treatment addresses melanin overproduction at biological level. Hillcrest clients value the neighborhood proximity (5 minutes from University Avenue), LGBTQ+ affirming environment, and skin-type specific expertise rare in mainstream aesthetic practices.`,
+      body: `Hillcrest clients book hyperpigmentation correction for melasma (hormonal dark patches that worsen with sun exposure), post-inflammatory hyperpigmentation from acne or harsh treatments, sun damage from San Diego's outdoor culture, and uneven tone that foundation cannot cover. Many have tried dermatologist laser treatments that made pigmentation worse, or OTC products without results. KIAMO Skin uses protocols calibrated for all skin types with special attention to preventing complications in darker tones. The treatment addresses melanin overproduction at biological level. Hillcrest clients value the neighborhood proximity (5 minutes from University Avenue), LGBTQ+ affirming environment, and skin-type specific expertise rare in mainstream aesthetic practices.`,
     },
     gettingHere: `From University Avenue in Hillcrest, take any north-south street (Park Boulevard, Normal Street, or Fourth Avenue) north toward Washington Street. Turn left on Washington, then right on Reynard Way. About 5 minutes. From Balboa Park, take Sixth Avenue north to University, turn left, then continue to Washington and Reynard. From North Park, take University Avenue west to Washington. KIAMO Skin is at 3067 Reynard Way. Free parking on site.`,
     landmarks: [
@@ -211,18 +211,18 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     faqs: [
       {
         question: 'What types of hyperpigmentation do you treat in Hillcrest?',
-        answer: `KIAMO treats melasma (hormonal dark patches), post-inflammatory hyperpigmentation from acne or harsh treatments, sun damage, uneven tone, and dark spots. We use protocols calibrated for all Fitzpatrick types (I-VI) with special attention to preventing complications in darker skin tones. Most Hillcrest clients present with melasma or PIH from previous aggressive treatments.`,
+        answer: `KIAMO Skin treats melasma (hormonal dark patches), post-inflammatory hyperpigmentation from acne or harsh treatments, sun damage, uneven tone, and dark spots. We use protocols calibrated for all Fitzpatrick types (I-VI) with special attention to preventing complications in darker skin tones. Most Hillcrest clients present with melasma or PIH from previous aggressive treatments.`,
       },
       {
-        question: 'How is KIAMO different from Hillcrest dermatology offices?',
-        answer: `KIAMO specializes exclusively in corrective esthetics with protocols for all skin types, while most dermatology practices treat all skin conditions. Our protocols are calibrated for each Fitzpatrick type to prevent post-inflammatory hyperpigmentation. Kiki has 7+ years focused on hyperpigmentation correction - this depth of specialization is rare in general dermatology.`,
+        question: 'How is KIAMO Skin different from Hillcrest dermatology offices?',
+        answer: `KIAMO Skin specializes exclusively in corrective esthetics with protocols for all skin types, while most dermatology practices treat all skin conditions. Our protocols are calibrated for each Fitzpatrick type to prevent post-inflammatory hyperpigmentation. Kiki has 7+ years focused on hyperpigmentation correction - this depth of specialization is rare in general dermatology.`,
       },
       {
         question: 'Can I combine hyperpigmentation treatment with other services in Hillcrest?',
         answer: `Yes, many Hillcrest clients combine hyperpigmentation correction with acne treatment, barrier repair, or other corrective protocols. Treatments are sequenced to avoid overwhelming your skin. For example, we address active acne first to prevent new PIH, then treat existing hyperpigmentation. Treatment plans are customized to your specific concerns.`,
       },
       {
-        question: 'Is KIAMO LGBTQ+ welcoming for hyperpigmentation treatment?',
+        question: 'Is KIAMO Skin LGBTQ+ welcoming for hyperpigmentation treatment?',
         answer: `Yes. KIAMO Skin is an LGBTQ+ affirming practice serving Hillcrest's diverse community. Kiki provides inclusive, respectful care regardless of gender identity or expression. Many LGBTQ+ Hillcrest clients seek hyperpigmentation treatment related to hormonal transitions, stress-related melasma, or correcting damage from past aesthetic treatments.`,
       },
       {
@@ -245,7 +245,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     },
     uniqueness: {
       heading: 'Hyperpigmentation protocols for University Heights lifestyles',
-      body: `University Heights combines urban density with neighborhood walkability - from Park Boulevard dining to canyon trails. KIAMO's protocols address this lifestyle:`,
+      body: `University Heights combines urban density with neighborhood walkability - from Park Boulevard dining to canyon trails. KIAMO Skin's protocols address this lifestyle:`,
       bullets: [
         'All skin type calibration - treatments for Fitzpatrick I-VI preventing complications',
         'Progressive multi-session approach - gradual correction minimizing inflammation',
@@ -255,8 +255,8 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
       ],
     },
     depth: {
-      heading: 'How we correct hyperpigmentation at KIAMO',
-      body: `Hyperpigmentation correction requires both removing existing surface pigment and stopping the biological processes causing melanin overproduction. KIAMO uses a three-layer approach combining exfoliation, melanin pathway inhibition, and barrier strengthening.`,
+      heading: 'How we correct hyperpigmentation at KIAMO Skin',
+      body: `Hyperpigmentation correction requires both removing existing surface pigment and stopping the biological processes causing melanin overproduction. KIAMO Skin uses a three-layer approach combining exfoliation, melanin pathway inhibition, and barrier strengthening.`,
       process: [
         {
           step: 'Comprehensive Pigmentation Assessment',
@@ -274,7 +274,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     },
     intent: {
       heading: 'Why University Heights clients seek hyperpigmentation treatment',
-      body: `University Heights clients book hyperpigmentation correction for stubborn melasma worsening with heat and sun exposure, post-inflammatory hyperpigmentation from acne or past aggressive aesthetic treatments, sun damage from San Diego outdoor lifestyle, and uneven tone resistant to OTC products. Many have experienced worsening pigmentation from laser treatments or high-percentage peels not calibrated for their skin type. KIAMO uses protocols for all Fitzpatrick types with special attention to preventing complications in darker tones. The treatment targets melanin production at cellular level using progressive, inflammation-minimizing protocols. University Heights clients value the neighborhood proximity (8 minutes from Park Boulevard), skin-type specific expertise, and medical-grade approach unavailable at day spas or chain aesthetic franchises.`,
+      body: `University Heights clients book hyperpigmentation correction for stubborn melasma worsening with heat and sun exposure, post-inflammatory hyperpigmentation from acne or past aggressive aesthetic treatments, sun damage from San Diego outdoor lifestyle, and uneven tone resistant to OTC products. Many have experienced worsening pigmentation from laser treatments or high-percentage peels not calibrated for their skin type. KIAMO Skin uses protocols for all Fitzpatrick types with special attention to preventing complications in darker tones. The treatment targets melanin production at cellular level using progressive, inflammation-minimizing protocols. University Heights clients value the neighborhood proximity (8 minutes from Park Boulevard), skin-type specific expertise, and medical-grade approach unavailable at day spas or chain aesthetic franchises.`,
     },
     gettingHere: `From Park Boulevard in University Heights, head west on Madison Avenue or Adams Avenue to Normal Street, then north to Washington Street and turn left. Continue to Reynard Way and turn right. About 8 minutes. From Talmadge or Normal Heights, take Adams Avenue west to Park Boulevard, then follow above. From I-805, exit at El Cajon Boulevard west, continue to Park Boulevard, head north to Adams or Madison. KIAMO Skin is at 3067 Reynard Way in Mission Hills. Free parking on site.`,
     landmarks: [
@@ -308,19 +308,19 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
       },
       {
         question: 'Why does hyperpigmentation get worse with some treatments in University Heights?',
-        answer: `Aggressive treatments trigger inflammation, which can cause post-inflammatory hyperpigmentation in darker skin tones - more darkening as a wound response. Many University Heights clients come to KIAMO after laser treatments or high-percentage peels made their pigmentation worse. Our protocols use lower-inflammation modalities calibrated specifically for each Fitzpatrick type.`,
+        answer: `Aggressive treatments trigger inflammation, which can cause post-inflammatory hyperpigmentation in darker skin tones - more darkening as a wound response. Many University Heights clients come to KIAMO Skin after laser treatments or high-percentage peels made their pigmentation worse. Our protocols use lower-inflammation modalities calibrated specifically for each Fitzpatrick type.`,
       },
       {
         question: 'Can hyperpigmentation from acne scars be treated in University Heights?',
-        answer: `Yes. Post-inflammatory hyperpigmentation from acne is one of the most common concerns for University Heights clients. KIAMO uses progressive chemical peels, microneedling, and tyrosinase inhibitor serums to fade PIH. Active acne must be controlled first to prevent new PIH formation while treating existing pigmentation.`,
+        answer: `Yes. Post-inflammatory hyperpigmentation from acne is one of the most common concerns for University Heights clients. KIAMO Skin uses progressive chemical peels, microneedling, and tyrosinase inhibitor serums to fade PIH. Active acne must be controlled first to prevent new PIH formation while treating existing pigmentation.`,
       },
       {
         question: 'What causes melasma to worsen in University Heights residents?',
-        answer: `The primary melasma triggers for University Heights clients are UV exposure from walking culture and canyon trails, heat exposure from cooking or exercise, and hormonal fluctuations from pregnancy or birth control. Stress also worsens melasma. KIAMO's protocols address both fading existing melasma and preventing recurrence through UV protection and heat avoidance.`,
+        answer: `The primary melasma triggers for University Heights clients are UV exposure from walking culture and canyon trails, heat exposure from cooking or exercise, and hormonal fluctuations from pregnancy or birth control. Stress also worsens melasma. KIAMO Skin's protocols address both fading existing melasma and preventing recurrence through UV protection and heat avoidance.`,
       },
       {
         question: 'Do you treat hyperpigmentation from previous laser treatments in University Heights?',
-        answer: `Yes. Many University Heights clients come to KIAMO with post-inflammatory hyperpigmentation triggered by laser treatments not calibrated for their skin tone. We use progressive non-laser protocols (chemical peels, microneedling, clinical serums) to fade laser-induced PIH safely. This requires 6-12 months of consistent treatment to reverse the damage.`,
+        answer: `Yes. Many University Heights clients come to KIAMO Skin with post-inflammatory hyperpigmentation triggered by laser treatments not calibrated for their skin tone. We use progressive non-laser protocols (chemical peels, microneedling, clinical serums) to fade laser-induced PIH safely. This requires 6-12 months of consistent treatment to reverse the damage.`,
       },
     ],
     schemaDescription: `Hyperpigmentation treatment for University Heights at KIAMO Skin Mission Hills. Melasma and PIH correction for all skin types. 8 minutes from Park Boulevard, licensed esthetician.`,
@@ -338,7 +338,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     },
     uniqueness: {
       heading: 'Hyperpigmentation correction for urban professional lifestyles',
-      body: `Downtown professionals face unique hyperpigmentation triggers - stress affecting hormonal melasma, UV exposure from harbor walks and rooftop venues, fluorescent office lighting, air conditioning dehydration. KIAMO's protocols address this:`,
+      body: `Downtown professionals face unique hyperpigmentation triggers - stress affecting hormonal melasma, UV exposure from harbor walks and rooftop venues, fluorescent office lighting, air conditioning dehydration. KIAMO Skin's protocols address this:`,
       bullets: [
         'All skin type specialization - Fitzpatrick I-VI protocols preventing complications',
         'Professional-friendly scheduling - evening and weekend appointments available',
@@ -367,7 +367,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     },
     intent: {
       heading: 'Why Downtown professionals seek hyperpigmentation treatment',
-      body: `Downtown San Diego clients book hyperpigmentation correction for stress-related melasma affecting professional appearance, post-inflammatory hyperpigmentation from acne or previous aggressive treatments, sun damage from harbor walks and rooftop venues, and uneven tone that makeup cannot fully conceal in video conferences and client meetings. Many have tried dermatologist laser treatments that worsened pigmentation, or high-end skincare products without clinical results. KIAMO uses protocols for all Fitzpatrick types with special attention to preventing complications in darker skin tones. The treatment addresses melanin overproduction at cellular level using progressive, science-backed protocols. Downtown professionals value the proximity (10 minutes from Convention Center and Gaslamp), evening appointment availability, skin-type specific expertise, and medical-grade approach unavailable at day spas.`,
+      body: `Downtown San Diego clients book hyperpigmentation correction for stress-related melasma affecting professional appearance, post-inflammatory hyperpigmentation from acne or previous aggressive treatments, sun damage from harbor walks and rooftop venues, and uneven tone that makeup cannot fully conceal in video conferences and client meetings. Many have tried dermatologist laser treatments that worsened pigmentation, or high-end skincare products without clinical results. KIAMO Skin uses protocols for all Fitzpatrick types with special attention to preventing complications in darker skin tones. The treatment addresses melanin overproduction at cellular level using progressive, science-backed protocols. Downtown professionals value the proximity (10 minutes from Convention Center and Gaslamp), evening appointment availability, skin-type specific expertise, and medical-grade approach unavailable at day spas.`,
     },
     gettingHere: `From Downtown San Diego (Gaslamp Quarter or Convention Center), take Harbor Drive north to Hawthorn Street, west to India Street, then north to Washington Street and turn right. Continue to Reynard Way and turn right. About 10 minutes. From East Village or Petco Park, take Park Boulevard north to University Avenue, west to Washington Street. From Little Italy, take India Street north to Washington, turn right. From I-5 southbound, exit at Washington Street. KIAMO Skin is at 3067 Reynard Way. Free parking on site.`,
     landmarks: [
@@ -403,15 +403,15 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
       },
       {
         question: 'Can stress from Downtown work make hyperpigmentation worse?',
-        answer: `Yes. Stress triggers hormonal changes that worsen melasma, one of the most common hyperpigmentation patterns in Downtown professionals. Cortisol elevation stimulates melanocytes to overproduce pigment. KIAMO's protocols address both fading existing stress-related melasma and managing triggers through UV protection and barrier repair to minimize future flares.`,
+        answer: `Yes. Stress triggers hormonal changes that worsen melasma, one of the most common hyperpigmentation patterns in Downtown professionals. Cortisol elevation stimulates melanocytes to overproduce pigment. KIAMO Skin's protocols address both fading existing stress-related melasma and managing triggers through UV protection and barrier repair to minimize future flares.`,
       },
       {
         question: 'Is there downtime after hyperpigmentation treatment in Downtown?',
-        answer: `Minimal downtime with KIAMO's calibrated protocols. You may have mild redness for 2-4 hours post-treatment, light flaking for 3-5 days with chemical peels. Most Downtown professionals return to office environment immediately. We avoid aggressive treatments that cause extended peeling or inflammation, which would interfere with professional responsibilities.`,
+        answer: `Minimal downtime with KIAMO Skin's calibrated protocols. You may have mild redness for 2-4 hours post-treatment, light flaking for 3-5 days with chemical peels. Most Downtown professionals return to office environment immediately. We avoid aggressive treatments that cause extended peeling or inflammation, which would interfere with professional responsibilities.`,
       },
       {
-        question: 'Why do Downtown professionals choose KIAMO over dermatology offices?',
-        answer: `KIAMO specializes exclusively in corrective esthetics with protocols for all skin types, while dermatology practices treat all skin conditions. Our protocols are calibrated for each Fitzpatrick type to prevent post-inflammatory hyperpigmentation. Kiki has 7+ years focused on hyperpigmentation correction - this depth is rare in general dermatology. Plus evening appointments fit Downtown professional schedules.`,
+        question: 'Why do Downtown professionals choose KIAMO Skin over dermatology offices?',
+        answer: `KIAMO Skin specializes exclusively in corrective esthetics with protocols for all skin types, while dermatology practices treat all skin conditions. Our protocols are calibrated for each Fitzpatrick type to prevent post-inflammatory hyperpigmentation. Kiki has 7+ years focused on hyperpigmentation correction - this depth is rare in general dermatology. Plus evening appointments fit Downtown professional schedules.`,
       },
       {
         question: 'Do you offer consultations for hyperpigmentation in Downtown?',
@@ -433,7 +433,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     },
     uniqueness: {
       heading: 'Protocols for Little Italy lifestyles',
-      body: `Little Italy's waterfront dining and pedestrian culture means constant outdoor exposure. KIAMO's protocols address this:`,
+      body: `Little Italy's waterfront dining and pedestrian culture means constant outdoor exposure. KIAMO Skin's protocols address this:`,
       bullets: [
         'All Fitzpatrick type calibration - I-VI protocols preventing complications',
         'Progressive treatment plans - gradual correction without inflammation',
@@ -462,7 +462,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     },
     intent: {
       heading: 'Who seeks treatment in Little Italy',
-      body: `Little Italy clients book correction for melasma worsened by waterfront sun exposure, post-inflammatory hyperpigmentation from acne or past treatments, sun damage from outdoor dining culture, and uneven tone resistant to drugstore products. Many have tried treatments that made pigmentation worse. KIAMO uses protocols for all skin types with attention to preventing complications. Little Italy clients value the 7-minute proximity, skin-type expertise, and medical-grade approach.`,
+      body: `Little Italy clients book correction for melasma worsened by waterfront sun exposure, post-inflammatory hyperpigmentation from acne or past treatments, sun damage from outdoor dining culture, and uneven tone resistant to drugstore products. Many have tried treatments that made pigmentation worse. KIAMO Skin uses protocols for all skin types with attention to preventing complications. Little Italy clients value the 7-minute proximity, skin-type expertise, and medical-grade approach.`,
     },
     gettingHere: `From Little Italy, take India Street north to Washington Street and turn right. Continue to Reynard Way and turn right. About 7 minutes. From the waterfront, take any street east to India Street. From I-5, exit at Washington Street. KIAMO Skin is at 3067 Reynard Way in Mission Hills. Free parking on site.`,
     landmarks: [
@@ -491,7 +491,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     faqs: [
       {
         question: 'How does Little Italy sun exposure affect hyperpigmentation treatment?',
-        answer: `Little Italy's waterfront location and outdoor dining culture means constant UV exposure, which triggers melasma and worsens existing hyperpigmentation. KIAMO's protocols emphasize daily SPF 50+ and barrier protection specifically for this high-UV lifestyle. Treatments are timed and spaced to account for your outdoor exposure patterns.`,
+        answer: `Little Italy's waterfront location and outdoor dining culture means constant UV exposure, which triggers melasma and worsens existing hyperpigmentation. KIAMO Skin's protocols emphasize daily SPF 50+ and barrier protection specifically for this high-UV lifestyle. Treatments are timed and spaced to account for your outdoor exposure patterns.`,
       },
       {
         question: 'What types of hyperpigmentation are most common in Little Italy clients?',
@@ -521,11 +521,11 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     intro: `KIAMO Skin provides hyperpigmentation correction for North Park residents at our Mission Hills location, 8 minutes from University Avenue via 30th Street. We treat melasma, post-inflammatory hyperpigmentation, and uneven skin tone using protocols calibrated for all skin types (Fitzpatrick I-VI). Located at 3067 Reynard Way, our clinic uses medical-grade treatments. Kiki is a California licensed esthetician with 7+ years of experience correcting hyperpigmentation.`,
     authority: {
       heading: 'Professional hyperpigmentation protocols',
-      body: `North Park's walkable urban culture and outdoor scene mean year-round UV exposure affecting pigmentation. Kiki has 7+ years with protocols for all Fitzpatrick types - chemical peels at concentrations that fade pigment safely, microneedling at precise depths, tyrosinase inhibitor serums, and barrier repair. KIAMO uses medical-grade devices and clinical serums. Treatment plans are customized to your skin type and North Park lifestyle - UV from walking culture, heat exposure, environmental factors.`,
+      body: `North Park's walkable urban culture and outdoor scene mean year-round UV exposure affecting pigmentation. Kiki has 7+ years with protocols for all Fitzpatrick types - chemical peels at concentrations that fade pigment safely, microneedling at precise depths, tyrosinase inhibitor serums, and barrier repair. KIAMO Skin uses medical-grade devices and clinical serums. Treatment plans are customized to your skin type and North Park lifestyle - UV from walking culture, heat exposure, environmental factors.`,
     },
     uniqueness: {
       heading: 'Protocols for North Park lifestyles',
-      body: `North Park's brewery culture, outdoor dining, and walkability mean constant sun exposure. KIAMO addresses this:`,
+      body: `North Park's brewery culture, outdoor dining, and walkability mean constant sun exposure. KIAMO Skin addresses this:`,
       bullets: [
         'Fitzpatrick I-VI protocols - preventing complications across all skin types',
         'Progressive correction - gradual fading without inflammation risk',
@@ -554,7 +554,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     },
     intent: {
       heading: 'Why North Park clients seek treatment',
-      body: `North Park clients book correction for melasma worsened by outdoor culture, post-inflammatory hyperpigmentation from acne or past harsh treatments, sun damage from San Diego lifestyle, and uneven tone that makeup cannot cover. Many have tried laser treatments that made pigmentation worse. KIAMO uses protocols for all Fitzpatrick types with attention to preventing complications. North Park clients value the 8-minute proximity from University Avenue, skin-type expertise, and medical-grade approach.`,
+      body: `North Park clients book correction for melasma worsened by outdoor culture, post-inflammatory hyperpigmentation from acne or past harsh treatments, sun damage from San Diego lifestyle, and uneven tone that makeup cannot cover. Many have tried laser treatments that made pigmentation worse. KIAMO Skin uses protocols for all Fitzpatrick types with attention to preventing complications. North Park clients value the 8-minute proximity from University Avenue, skin-type expertise, and medical-grade approach.`,
     },
     gettingHere: `From North Park (University Avenue and 30th Street), take 30th Street north to University Avenue west, then Washington Street west to Reynard Way. About 8 minutes. From El Cajon Boulevard, head west to 30th Street, then north. KIAMO Skin is at 3067 Reynard Way in Mission Hills. Free parking on site.`,
     landmarks: [
@@ -590,8 +590,8 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
         answer: `Yes, with strict UV protection. You must wear SPF 50+ daily and reapply every 2 hours outdoors. Unprotected patio sitting or walks will counteract treatments. Most clients adjust outdoor timing (early morning, late afternoon) during the correction phase to minimize UV exposure.`,
       },
       {
-        question: 'How is KIAMO different from North Park medispas?',
-        answer: `KIAMO specializes in corrective treatments with protocols calibrated for each Fitzpatrick type. Most medispas use one-size-fits-all approaches that risk complications in darker skin. Kiki has 7+ years focused on hyperpigmentation correction - depth unavailable at general wellness spas.`,
+        question: 'How is KIAMO Skin different from North Park medispas?',
+        answer: `KIAMO Skin specializes in corrective treatments with protocols calibrated for each Fitzpatrick type. Most medispas use one-size-fits-all approaches that risk complications in darker skin. Kiki has 7+ years focused on hyperpigmentation correction - depth unavailable at general wellness spas.`,
       },
       {
         question: 'How long does hyperpigmentation correction take in North Park?',
@@ -613,11 +613,11 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     intro: `KIAMO Skin provides hyperpigmentation correction for Balboa Park area residents at our Mission Hills studio, 10 minutes from the park's west entrance. We treat melasma, post-inflammatory hyperpigmentation, and uneven skin tone using protocols calibrated for all skin types (Fitzpatrick I-VI). Located at 3067 Reynard Way, our clinic uses medical-grade treatments. Kiki is a California licensed esthetician with 7+ years of experience treating hyperpigmentation.`,
     authority: {
       heading: 'Expert correction for all skin types',
-      body: `Balboa Park area residents benefit from protocols calibrated for their specific Fitzpatrick type. The park's outdoor culture means year-round UV exposure that triggers melasma and worsens existing pigmentation. Kiki has 7+ years with progressive protocols - chemical peels at safe concentrations for all skin types, microneedling at precise depths, tyrosinase inhibitor serums, and barrier repair. KIAMO uses medical-grade devices and clinical serums with proven efficacy.`,
+      body: `Balboa Park area residents benefit from protocols calibrated for their specific Fitzpatrick type. The park's outdoor culture means year-round UV exposure that triggers melasma and worsens existing pigmentation. Kiki has 7+ years with progressive protocols - chemical peels at safe concentrations for all skin types, microneedling at precise depths, tyrosinase inhibitor serums, and barrier repair. KIAMO Skin uses medical-grade devices and clinical serums with proven efficacy.`,
     },
     uniqueness: {
       heading: 'Protocols for Balboa Park lifestyles',
-      body: `Living near Balboa Park means outdoor walking, running, and recreational culture with high UV exposure. KIAMO addresses this:`,
+      body: `Living near Balboa Park means outdoor walking, running, and recreational culture with high UV exposure. KIAMO Skin addresses this:`,
       bullets: [
         'All skin type protocols - Fitzpatrick I-VI preventing complications',
         'Progressive correction - gradual fading minimizing inflammation',
@@ -627,7 +627,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
       ],
     },
     depth: {
-      heading: 'Hyperpigmentation correction at KIAMO',
+      heading: 'Hyperpigmentation correction at KIAMO Skin',
       body: `Correction requires removing surface pigment and stopping melanin overproduction without inflammation.`,
       process: [
         {
@@ -646,7 +646,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     },
     intent: {
       heading: 'Why Balboa Park clients seek treatment',
-      body: `Balboa Park area clients book correction for melasma worsened by outdoor activities, post-inflammatory hyperpigmentation from acne or harsh treatments, sun damage from park culture, and uneven tone. Many have tried treatments that made pigmentation worse. KIAMO uses protocols for all Fitzpatrick types with attention to preventing complications. Clients value the 10-minute proximity from park, skin-type expertise, and medical-grade approach.`,
+      body: `Balboa Park area clients book correction for melasma worsened by outdoor activities, post-inflammatory hyperpigmentation from acne or harsh treatments, sun damage from park culture, and uneven tone. Many have tried treatments that made pigmentation worse. KIAMO Skin uses protocols for all Fitzpatrick types with attention to preventing complications. Clients value the 10-minute proximity from park, skin-type expertise, and medical-grade approach.`,
     },
     gettingHere: `From Balboa Park west entrance (Sixth Avenue), head north to University Avenue, turn left, continue to Washington Street and turn right. Continue to Reynard Way and turn right. About 10 minutes. From park museums, exit west to Sixth Avenue. KIAMO Skin is at 3067 Reynard Way in Mission Hills. Free parking on site.`,
     landmarks: [
@@ -675,7 +675,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
     faqs: [
       {
         question: 'How does Balboa Park outdoor culture affect hyperpigmentation treatment?',
-        answer: `Balboa Park's outdoor recreation culture means constant UV exposure from walking, running, and park activities. This triggers melasma and worsens existing pigmentation. KIAMO's protocols emphasize daily SPF 50+ and timing outdoor activities (early morning, late afternoon) to minimize UV during the correction phase.`,
+        answer: `Balboa Park's outdoor recreation culture means constant UV exposure from walking, running, and park activities. This triggers melasma and worsens existing pigmentation. KIAMO Skin's protocols emphasize daily SPF 50+ and timing outdoor activities (early morning, late afternoon) to minimize UV during the correction phase.`,
       },
       {
         question: 'Can I exercise in Balboa Park during hyperpigmentation treatment?',
@@ -691,7 +691,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
       },
       {
         question: 'Is hyperpigmentation treatment safe for all skin tones near Balboa Park?',
-        answer: `Yes, when protocols are calibrated for your Fitzpatrick type. KIAMO uses treatments matched to your skin to prevent post-inflammatory hyperpigmentation. We avoid aggressive approaches that risk complications in darker tones. Kiki has 7+ years treating all Fitzpatrick types - critical for Balboa Park's diverse community.`,
+        answer: `Yes, when protocols are calibrated for your Fitzpatrick type. KIAMO Skin uses treatments matched to your skin to prevent post-inflammatory hyperpigmentation. We avoid aggressive approaches that risk complications in darker tones. Kiki has 7+ years treating all Fitzpatrick types - critical for Balboa Park's diverse community.`,
       },
     ],
     schemaDescription: `Hyperpigmentation treatment for Balboa Park area at KIAMO Skin Mission Hills. Melasma and sun damage correction for all skin types. 10 minutes from park, outdoor lifestyle protocols.`,

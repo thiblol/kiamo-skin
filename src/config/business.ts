@@ -15,7 +15,7 @@
 export const PRICE_ON_CONSULTATION = 'Pricing at consultation.';
 
 export const business = {
-  name: 'KIAMO SKIN',
+  name: 'KIAMO Skin',
   shortName: 'KIAMO Skin',
   /** Public-facing first name only. Never render a surname. */
   ownerName: 'Kiki',

@@ -1,5 +1,5 @@
 /**
- * Verified Yelp and Google reviews for KIAMO SKIN.
+ * Verified Yelp and Google reviews for KIAMO Skin.
  *
  * Rules enforced by test/guards.test.js:
  * - No pronouns (she/her/hers/he/him/his) — build fails
@@ -51,7 +51,7 @@ export const testimonials: Testimonial[] = [
     platform: 'Google',
   },
   {
-    quote: 'Kiamo Skin got my skin looking amazing!! The monthly membership is absolutely worth it.',
+    quote: 'KIAMO Skin got my skin looking amazing!! The monthly membership is absolutely worth it.',
     attribution: 'Kayla T.',
     platform: 'Google',
   },
@@ -61,12 +61,12 @@ export const testimonials: Testimonial[] = [
     platform: 'Google',
   },
   {
-    quote: 'I\'ve been going to Kiamo Skin for over a year and can\'t recommend it enough. Real, visible results.',
+    quote: 'I\'ve been going to KIAMO Skin for over a year and can\'t recommend it enough. Real, visible results.',
     attribution: 'Brian A.',
     platform: 'Google',
   },
   {
-    quote: 'I feel like I\'ve been aging backwards since going to Kiamo Skin. My skin is so glowy and smooth.',
+    quote: 'I feel like I\'ve been aging backwards since going to KIAMO Skin. My skin is so glowy and smooth.',
     attribution: 'Morg A.',
     platform: 'Google',
   },
@@ -76,7 +76,7 @@ export const testimonials: Testimonial[] = [
     platform: 'Google',
   },
   {
-    quote: 'This is your sign to book at Kiamo Skin. Kiki is so knowledgeable and you can feel you\'re in good hands.',
+    quote: 'This is your sign to book at KIAMO Skin. Kiki is so knowledgeable and you can feel you\'re in good hands.',
     attribution: 'Rheshanna C.',
     platform: 'Google',
   },

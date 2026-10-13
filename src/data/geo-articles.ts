@@ -57,10 +57,10 @@ export const geoArticles: GeoArticle[] = [
     slug: 'hydrafacial-ocean-swimmers',
     areaSlug: 'la-jolla',
     serviceSlug: 'hydrafacial',
-    title: 'HydraFacial for Ocean Swimmers La Jolla | KIAMO Barrier Repair',
-    description: 'Daily ocean swimming strips your barrier. HydraFacial at KIAMO in Mission Hills rebuilds hydration for La Jolla Cove swimmers. Clinical-grade extraction + repair.',
+    title: 'HydraFacial for Ocean Swimmers La Jolla | KIAMO Skin Barrier Repair',
+    description: 'Daily ocean swimming strips your barrier. HydraFacial at KIAMO Skin in Mission Hills rebuilds hydration for La Jolla Cove swimmers. Clinical-grade extraction + repair.',
     h1: 'HydraFacial for Ocean Swimmers in La Jolla: Barrier Repair After Salt Water',
-    quickAnswer: 'Daily ocean swimming at La Jolla Cove, Windansea, and La Jolla Shores strips the skin barrier with salt water and repeated rinsing. HydraFacial at KIAMO SKIN in Mission Hills uses vortex extraction to remove salt deposits from follicles and peptide infusion to rebuild hydration—twenty minutes south on I-5 from La Jolla Village.',
+    quickAnswer: 'Daily ocean swimming at La Jolla Cove, Windansea, and La Jolla Shores strips the skin barrier with salt water and repeated rinsing. HydraFacial at KIAMO Skin in Mission Hills uses vortex extraction to remove salt deposits from follicles and peptide infusion to rebuild hydration—twenty minutes south on I-5 from La Jolla Village.',
     faqs: [
       {
         question: 'How soon after swimming can I get a HydraFacial?',
@@ -179,7 +179,7 @@ export const geoArticles: GeoArticle[] = [
   been eroding for months and needs more than one rebuild cycle to stabilize.
 </p>
 <p>
-  LED light therapy follows every HydraFacial at KIAMO SKIN. Red and near-infrared
+  LED light therapy follows every HydraFacial at KIAMO Skin. Red and near-infrared
   wavelengths reduce inflammation from wind and UV exposure, and they support the
   cellular repair the peptides just initiated. This is included in every session, not an
   add-on.
@@ -203,7 +203,7 @@ export const geoArticles: GeoArticle[] = [
   Home care between sessions matters. A barrier repair serum applied morning and night
   supports the work the HydraFacial started, and mineral sunscreen prevents UV from
   undoing it. The serum recommendation is specific to what your skin showed during the
-  treatment—KIAMO does not sell a fixed product line, so the recommendation is clinical,
+  treatment—KIAMO Skin does not sell a fixed product line, so the recommendation is clinical,
   not commercial.
 </p>
 <p>
@@ -286,12 +286,12 @@ export const geoArticles: GeoArticle[] = [
     slug: 'hydrafacial-pacific-beach-sun-damage',
     areaSlug: 'pacific-beach',
     serviceSlug: 'hydrafacial',
-    title: 'HydraFacial for Pacific Beach Sun Damage: Reversing May Gray UV | KIAMO',
+    title: 'HydraFacial for Pacific Beach Sun Damage: Reversing May Gray UV | KIAMO Skin',
     description:
-      'Pacific Beach sits inside the May Gray marine layer belt. HydraFacial at KIAMO in Mission Hills reverses the UV-loaded surface layer. From $199.',
+      'Pacific Beach sits inside the May Gray marine layer belt. HydraFacial at KIAMO Skin in Mission Hills reverses the UV-loaded surface layer. From $199.',
     h1: 'HydraFacial for Pacific Beach Sun Damage: Reversing May Gray UV Exposure',
     quickAnswer:
-      'Pacific Beach sits inside the May Gray marine layer belt, and the UV that penetrates thin cloud is the most consistent cause of new pigmentation in the clients we see from the neighborhood. HydraFacial at KIAMO SKIN in Mission Hills uses enzymatic resurfacing and peptide infusion to lift the UV-loaded surface cells and replace hydration, with LED light therapy included in every session — about fifteen minutes east on I-8 from Pacific Beach.',
+      'Pacific Beach sits inside the May Gray marine layer belt, and the UV that penetrates thin cloud is the most consistent cause of new pigmentation in the clients we see from the neighborhood. HydraFacial at KIAMO Skin in Mission Hills uses enzymatic resurfacing and peptide infusion to lift the UV-loaded surface cells and replace hydration, with LED light therapy included in every session — about fifteen minutes east on I-8 from Pacific Beach.',
     faqs: [
       {
         question: 'How soon after sun exposure should I book a HydraFacial?',
@@ -365,7 +365,7 @@ export const geoArticles: GeoArticle[] = [
 
 <h2 class="t-h3 mt-12 mb-6">How HydraFacial Reverses the Surface Layer</h2>
 <p>
-  HydraFacial Syndeo at KIAMO SKIN performs three actions, and all three matter for UV-loaded Pacific Beach skin. First, enzymatic resurfacing lifts the layer of dead cells and surface pigment that the UV exposure has been driving upward. This is not mechanical scrubbing — it is a chemical process that loosens debris without the abrasion a barrier that has been working overtime cannot afford.
+  HydraFacial Syndeo at KIAMO Skin performs three actions, and all three matter for UV-loaded Pacific Beach skin. First, enzymatic resurfacing lifts the layer of dead cells and surface pigment that the UV exposure has been driving upward. This is not mechanical scrubbing — it is a chemical process that loosens debris without the abrasion a barrier that has been working overtime cannot afford.
 </p>
 <p>
   Second, vortex extraction vacuums mineral deposits and oxidized sebum out of follicles at controlled pressure. Pacific Beach residents who are also in the water get the same salt buildup as La Jolla swimmers. Residents who are not in the water still get the mineral residue from San Diego's hard water — local supply runs 16 grains per gallon, which means every rinse leaves calcium and magnesium in the pores. Standard cleansing does not clear it.
@@ -374,7 +374,7 @@ export const geoArticles: GeoArticle[] = [
   Third, peptide infusion floods the skin with hydration while the pores are still open and receptive. The booster serum is selected at consultation based on what your skin is doing that day — for Pacific Beach clients in late summer, that usually means a pigment-calming peptide stack layered over hyaluronic acid. The infusion happens under the same vacuum pressure that just cleared the follicles, which drives the active ingredients deeper than topical application alone would reach.
 </p>
 <p>
-  LED light therapy follows every HydraFacial at KIAMO. Red and near-infrared wavelengths reduce the inflammation UV has been driving at the cellular level, and they support the repair the peptides just initiated. This is included in every session, not an add-on.
+  LED light therapy follows every HydraFacial at KIAMO Skin. Red and near-infrared wavelengths reduce the inflammation UV has been driving at the cellular level, and they support the repair the peptides just initiated. This is included in every session, not an add-on.
 </p>
 <p>
   The treatment takes about forty-five minutes, and there is no downtime. You can be back at the beach the next day if the skin feels ready, though most clients wait twenty-four hours to let the barrier settle. The result is immediate hydration, reduced reactivity, and skin that stops stinging under products that were stinging before. One session addresses the acute state. A series addresses the cumulative state most Pacific Beach residents are in by the time they book.
@@ -388,7 +388,7 @@ export const geoArticles: GeoArticle[] = [
   Most Pacific Beach clients book monthly maintenance during the high-UV months — May through October, roughly. The cadence is set at consultation based on how the skin is responding and how much cumulative exposure the calendar is asking for. Off-season, every six to eight weeks is often enough to hold the gains.
 </p>
 <p>
-  Home care between sessions matters more in Pacific Beach than in most neighborhoods, because the daily exposure does not stop. A pigment-calming serum applied morning and night supports the work the HydraFacial started, and a broad-spectrum mineral sunscreen reapplied every two hours during beach time is the single most important variable. The sunscreen recommendation at KIAMO is specific to the skin in front of the esthetician — the studio does not sell a fixed product line, so the recommendation is clinical, not commercial.
+  Home care between sessions matters more in Pacific Beach than in most neighborhoods, because the daily exposure does not stop. A pigment-calming serum applied morning and night supports the work the HydraFacial started, and a broad-spectrum mineral sunscreen reapplied every two hours during beach time is the single most important variable. The sunscreen recommendation at KIAMO Skin is specific to the skin in front of the esthetician — the studio does not sell a fixed product line, so the recommendation is clinical, not commercial.
 </p>
 <p>
   The timeline for visible pigment reduction depends on how deep the pigment sits and how long it has been accumulating. Two to three treatments over two to three months is a reasonable starting point. More entrenched pigment — the kind that has been building for years — may need a <a href="/treatments/lira-peels/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">Lira peel</a> or <a href="/treatments/procell-microchanneling/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">Procell microchanneling</a> layered in. That is a consultation call, not a self-diagnosis.
@@ -426,12 +426,12 @@ export const geoArticles: GeoArticle[] = [
     slug: 'lira-peel-la-mesa-melasma',
     areaSlug: 'la-mesa',
     serviceSlug: 'lira-peels',
-    title: 'Lira Chemical Peel for La Mesa Melasma: Inland Valley Heat Protocol | KIAMO',
+    title: 'Lira Chemical Peel for La Mesa Melasma: Inland Valley Heat Protocol | KIAMO Skin',
     description:
-      'La Mesa heat is inland heat — different UV than the coast. Lira peels at KIAMO in Mission Hills recalibrate melasma in melanin-rich skin. From $199.',
+      'La Mesa heat is inland heat — different UV than the coast. Lira peels at KIAMO Skin in Mission Hills recalibrate melasma in melanin-rich skin. From $199.',
     h1: 'Lira Chemical Peel for La Mesa Melasma: The Inland Valley Heat Protocol',
     quickAnswer:
-      'La Mesa is far enough inland that the marine layer no longer moderates its UV. Summer temperatures push 95°F and the heat-driven component of melasma kicks in for clients with Fitzpatrick III-V skin. The Lira peel at KIAMO SKIN in Mission Hills is calibrated to lift pigment without triggering post-inflammatory hyperpigmentation in melanin-rich skin — roughly twenty minutes south on I-15 from La Mesa.',
+      'La Mesa is far enough inland that the marine layer no longer moderates its UV. Summer temperatures push 95°F and the heat-driven component of melasma kicks in for clients with Fitzpatrick III-V skin. The Lira peel at KIAMO Skin in Mission Hills is calibrated to lift pigment without triggering post-inflammatory hyperpigmentation in melanin-rich skin — roughly twenty minutes south on I-15 from La Mesa.',
     faqs: [
       {
         question: 'How does La Mesa heat make melasma worse?',
@@ -456,7 +456,7 @@ export const geoArticles: GeoArticle[] = [
       {
         question: 'What happens if the melasma has been present for years?',
         answer:
-          'Melasma that has been present for more than three or four summers often has dermal as well as epidermal pigment. A peel still helps — it lifts the epidermal layer and resets the surface — but it does not reach the dermal layer on its own. The protocol at KIAMO combines a Lira peel series with <a href="/treatments/procell-microchanneling/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">Procell microchanneling</a> for entrenched cases, and the consultation determines whether the combination is needed. The honest answer is that deep melasma takes longer to lift than surface melasma, and the timeline is six to twelve months rather than three.',
+          'Melasma that has been present for more than three or four summers often has dermal as well as epidermal pigment. A peel still helps — it lifts the epidermal layer and resets the surface — but it does not reach the dermal layer on its own. The protocol at KIAMO Skin combines a Lira peel series with <a href="/treatments/procell-microchanneling/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">Procell microchanneling</a> for entrenched cases, and the consultation determines whether the combination is needed. The honest answer is that deep melasma takes longer to lift than surface melasma, and the timeline is six to twelve months rather than three.',
       },
     ],
     relatedLinks: [
@@ -494,7 +494,7 @@ export const geoArticles: GeoArticle[] = [
   La Mesa sits far enough inland that the marine layer no longer moderates its UV. The neighborhood runs ten to fifteen degrees hotter than the coast through July and August, and the heat component of melasma — independent of UV — kicks in for clients with Fitzpatrick III to V skin. Melasma concentrates in the pigment cells that respond enthusiastically to three triggers at once: hormones, heat, and UVA. La Mesa supplies two of those three on a regular afternoon in August.
 </p>
 <p>
-  The geography matters. Coastal San Diego gets a temperature ceiling from the ocean. La Mesa, in the foothills east of the city, does not. Summer temperatures at the KIAMO studio on the day a La Mesa client walks in will typically be in the mid-eighties, and the temperature differential between the coast and La Mesa is what produces the heat-driven component of melasma that is rarer in the marine layer neighborhoods.
+  The geography matters. Coastal San Diego gets a temperature ceiling from the ocean. La Mesa, in the foothills east of the city, does not. Summer temperatures at the KIAMO Skin studio on the day a La Mesa client walks in will typically be in the mid-eighties, and the temperature differential between the coast and La Mesa is what produces the heat-driven component of melasma that is rarer in the marine layer neighborhoods.
 </p>
 <p>
   La Mesa's population is also the demographic reality. The neighborhood is one of the more diverse in the county, and melasma in melanin-rich skin is the single most common pigmentation concern treated at the studio. The combination of heat, UV, and Fitzpatrick III-V skin is the clinical context that <a href="/treatments/lira-peels/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">Lira peels</a> are built to address, and the reason La Mesa clients respond to them at a rate the coastline does not always match.
@@ -565,15 +565,15 @@ export const geoArticles: GeoArticle[] = [
     serviceSlug: 'procell-microchanneling',
     title: 'Procell Microchanneling in North Park for Acne Scars | KIAMO Skin',
     description:
-      'Acne scar revision in melanin-rich skin needs depth-controlled microchanneling. Procell at KIAMO in Mission Hills serves North Park with safe-for-Fitzpatrick I-VI protocols. From $599.',
+      'Acne scar revision in melanin-rich skin needs depth-controlled microchanneling. Procell at KIAMO Skin in Mission Hills serves North Park with safe-for-Fitzpatrick I-VI protocols. From $599.',
     h1: 'Procell Microchanneling for North Park Acne Scars: Depth-Controlled Revision for All Skin Types',
     quickAnswer:
-      'Acne scar revision in melanin-rich skin is depth-controlled work. Too shallow and the scars do not respond. Too deep and you risk post-inflammatory hyperpigmentation that is worse than the scars. Procell microchanneling at KIAMO SKIN in Mission Hills is set to a depth calibrated at consultation based on scar type and Fitzpatrick — the same studio, ten minutes south of North Park via I-805.',
+      'Acne scar revision in melanin-rich skin is depth-controlled work. Too shallow and the scars do not respond. Too deep and you risk post-inflammatory hyperpigmentation that is worse than the scars. Procell microchanneling at KIAMO Skin in Mission Hills is set to a depth calibrated at consultation based on scar type and Fitzpatrick — the same studio, ten minutes south of North Park via I-805.',
     faqs: [
       {
         question: 'Can microchanneling make acne scars worse on dark skin?',
         answer:
-          'Yes, if the depth is set too deep. The default depth on most microchanneling devices is calibrated for Fitzpatrick I-III skin, and applying that default to Fitzpatrick IV-VI skin can trigger post-inflammatory hyperpigmentation that is darker and more persistent than the original scarring. The protocol at KIAMO stays within a narrower depth window for melanin-rich skin, and the depth is recorded per session so the next session can be calibrated against the response. A studio that uses a default depth on darker skin without calibration is the studio to avoid.',
+          'Yes, if the depth is set too deep. The default depth on most microchanneling devices is calibrated for Fitzpatrick I-III skin, and applying that default to Fitzpatrick IV-VI skin can trigger post-inflammatory hyperpigmentation that is darker and more persistent than the original scarring. The protocol at KIAMO Skin stays within a narrower depth window for melanin-rich skin, and the depth is recorded per session so the next session can be calibrated against the response. A studio that uses a default depth on darker skin without calibration is the studio to avoid.',
       },
       {
         question: 'How many Procell sessions does acne scar revision take?',
@@ -588,7 +588,7 @@ export const geoArticles: GeoArticle[] = [
       {
         question: 'What is the difference between Procell and other microchanneling devices?',
         answer:
-          'The device is the tool, not the treatment. Procell, SkinPen, Vivace, and Dermapen are all motorized microchanneling devices that create controlled micro-injuries. The treatment is the depth, and the depth is set per session based on the scar type and the Fitzpatrick type. A studio that uses the most expensive device at a default depth that does not match the scar is performing a different service than a studio that uses a less expensive device at a calibrated depth. The protocol at KIAMO uses Procell because the cartridge system allows precise depth adjustment per pass, and that adjustability is what the acne scar revision protocol depends on.',
+          'The device is the tool, not the treatment. Procell, SkinPen, Vivace, and Dermapen are all motorized microchanneling devices that create controlled micro-injuries. The treatment is the depth, and the depth is set per session based on the scar type and the Fitzpatrick type. A studio that uses the most expensive device at a default depth that does not match the scar is performing a different service than a studio that uses a less expensive device at a calibrated depth. The protocol at KIAMO Skin uses Procell because the cartridge system allows precise depth adjustment per pass, and that adjustability is what the acne scar revision protocol depends on.',
       },
       {
         question: 'Will my acne scars come back after the series?',
@@ -631,7 +631,7 @@ export const geoArticles: GeoArticle[] = [
   Acne scars come in categories that respond to different treatments, and choosing the right one depends on what the scar actually is. Post-inflammatory hyperpigmentation — the dark mark left after a pimple heals — fades with time and a pigment-calming peel. Atrophic or pitted scars — icepick, boxcar, rolling — sit below the surface and need controlled injury to the dermis to respond. Hypertrophic scars sit above the surface and need a different protocol entirely. North Park clients come in with all three, often on the same face.
 </p>
 <p>
-  Depth is the variable that determines whether microchanneling helps or hurts. Too shallow and the micro-injuries never reach the depth the scar needs to remodel. Too deep and the wound response produces post-inflammatory hyperpigmentation that is worse than the scar. The Procell device at KIAMO is set per treatment based on the scar type and the Fitzpatrick type, and the depth is recorded so the next session can be calibrated against the response.
+  Depth is the variable that determines whether microchanneling helps or hurts. Too shallow and the micro-injuries never reach the depth the scar needs to remodel. Too deep and the wound response produces post-inflammatory hyperpigmentation that is worse than the scar. The Procell device at KIAMO Skin is set per treatment based on the scar type and the Fitzpatrick type, and the depth is recorded so the next session can be calibrated against the response.
 </p>
 <p>
   Melanin-rich skin adds a constraint that many devices are not designed to address. The default depth on most microchanneling devices is set for Fitzpatrick I-III skin, and applying that setting to Fitzpatrick IV-VI skin produces inconsistent results. The Procell protocol at the studio is calibrated at consultation to a starting depth that stays within the window melanin-rich skin can resolve cleanly, and the depth is adjusted based on how the first session responds.

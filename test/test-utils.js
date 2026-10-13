@@ -102,7 +102,7 @@ export function getJsonLdBlocks(html) {
  * Verified business data - single source of truth
  */
 export const VERIFIED = {
-  name: 'KIAMO SKIN',
+  name: 'KIAMO Skin',
   address: {
     street: '3067 Reynard Way',
     city: 'San Diego',

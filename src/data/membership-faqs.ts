@@ -19,7 +19,7 @@ import { verifiedPrices } from '../config/business';
 
 export const membershipFaqs: Faq[] = [
   {
-    question: 'Why is LUX the most popular membership at KIAMO?',
+    question: 'Why is LUX the most popular membership at KIAMO Skin?',
     answer:
       'LUX is the corrective sweet spot - more intensive than maintenance (GLOW), more practical than luxury transformation (OPULENCE). 70% of corrective clients at our Mission Hills studio choose LUX because it delivers two treatments in one 75-minute visit: HydraFacial Syndeo deep cleanse + dermaplaning exfoliation + medical-grade LED therapy + rotating corrective boosters tailored to your skin concern (acne, melasma, post-inflammatory hyperpigmentation, barrier repair). A la carte, you would pay $394 for HydraFacial ($259) + dermaplaning add-on ($50) + LED add-on ($40) + corrective booster ($45). With LUX membership, all treatments are $299/month - delivered in one visit at our studio near Hillcrest Medical Center, customized monthly based on what your skin needs that cycle.',
   },
@@ -35,7 +35,7 @@ export const membershipFaqs: Faq[] = [
   {
     question: 'How does LUX compare to spa facial memberships in San Diego?',
     answer:
-      'Most day spa memberships in San Diego (Hillcrest, Little Italy, North Park, Downtown) offer relaxation facials - steam, massage, extractions - with no clinical equipment or corrective protocols. LUX uses clinical-grade technology at our Mission Hills location: HydraFacial Syndeo (medical device cleared by FDA), professional dermaplaning tools, medical LED panels (not consumer devices), and corrective-grade serums targeting specific skin concerns. The difference: spa facials maintain skin; corrective memberships like LUX improve skin. At KIAMO, every treatment is customized by a California-licensed esthetician based on your barrier function, Fitzpatrick skin type (I-VI), and active concerns - not a pre-set menu. Treatments rotate monthly as your skin progresses, adapting to what you need each visit rather than repeating the same protocol.',
+      'Most day spa memberships in San Diego (Hillcrest, Little Italy, North Park, Downtown) offer relaxation facials - steam, massage, extractions - with no clinical equipment or corrective protocols. LUX uses clinical-grade technology at our Mission Hills location: HydraFacial Syndeo (medical device cleared by FDA), professional dermaplaning tools, medical LED panels (not consumer devices), and corrective-grade serums targeting specific skin concerns. The difference: spa facials maintain skin; corrective memberships like LUX improve skin. At KIAMO Skin, every treatment is customized by a California-licensed esthetician based on your barrier function, Fitzpatrick skin type (I-VI), and active concerns - not a pre-set menu. Treatments rotate monthly as your skin progresses, adapting to what you need each visit rather than repeating the same protocol.',
   },
   {
     question: 'Is LUX membership worth it for acne, pigmentation, or melasma specifically?',
@@ -88,7 +88,7 @@ export const membershipFaqs: Faq[] = [
   },
   {
     question: 'What is a skincare membership?',
-    answer: `A skincare membership is a monthly plan that includes regular corrective facials and ongoing access to professional guidance, priority booking, and retail discounts. At KIAMO SKIN, skincare memberships range from ${verifiedPrices['membership-glow']} to ${verifiedPrices['membership-opulence']} per month and include personalized treatments, product recommendations, and progress assessments—everything needed to maintain corrected skin rather than chasing results one visit at a time.`,
+    answer: `A skincare membership is a monthly plan that includes regular corrective facials and ongoing access to professional guidance, priority booking, and retail discounts. At KIAMO Skin, skincare memberships range from ${verifiedPrices['membership-glow']} to ${verifiedPrices['membership-opulence']} per month and include personalized treatments, product recommendations, and progress assessments—everything needed to maintain corrected skin rather than chasing results one visit at a time.`,
   },
   {
     question: 'Do you offer a facial subscription service?',

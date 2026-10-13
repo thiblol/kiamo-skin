@@ -1,5 +1,5 @@
 /**
- * The nine areas KIAMO serves, and the pages that target them.
+ * The nine areas KIAMO Skin serves, and the pages that target them.
  *
  * There is ONE studio, in Mission Hills. The other eight are places clients
  * travel from — never locations. Del Mar especially: a previous studio there is
@@ -98,12 +98,12 @@ export const areas: Area[] = [
   {
     slug: 'mission-hills',
     name: 'Mission Hills',
-    title: 'HydraFacial & Corrective Facials, Mission Hills | KIAMO',
+    title: 'HydraFacial & Corrective Facials, Mission Hills | KIAMO Skin',
     description:
-      'Corrective facials, HydraFacial and DMK enzyme therapy at the KIAMO SKIN studio on Reynard Way in Mission Hills, San Diego. One-room, one esthetician, free parking on site. From $199.',
+      'Corrective facials, HydraFacial and DMK enzyme therapy at the KIAMO Skin studio on Reynard Way in Mission Hills, San Diego. One-room, one esthetician, free parking on site. From $199.',
     h1: 'HydraFacial & Enzyme Therapy in Mission Hills, San Diego',
     intro:
-      'Looking for a corrective facial in Mission Hills? KIAMO SKIN is the studio — a single treatment room at 3067 Reynard Way, a few minutes from Hillcrest, Bankers Hill, Middletown and Old Town. Every appointment is one-to-one with Kiki, a licensed esthetician. Parking is free on site, and the studio runs by appointment only.',
+      'Looking for a corrective facial in Mission Hills? KIAMO Skin is the studio — a single treatment room at 3067 Reynard Way, a few minutes from Hillcrest, Bankers Hill, Middletown and Old Town. Every appointment is one-to-one with Kiki, a licensed esthetician. Parking is free on site, and the studio runs by appointment only.',
     gettingHere:
       'From the 5th Avenue and University intersection in Hillcrest, head west on Washington Street to Reynard Way — about five minutes, no freeway. From Bankers Hill near Balboa Park, Washington Street west runs directly there. From Old Town, head east on Washington Street from the transit center; Reynard Way is the first left past the I-5 overpass. From I-5, take the Washington Street exit and turn east. From I-8 or SR-163, come west along Washington Street.',
     localConcern: {
@@ -121,7 +121,7 @@ export const areas: Area[] = [
       neighborhoodMentions: ['Hillcrest', 'Bankers Hill', 'Middletown', 'Old Town', 'Little Italy']
     },
     schemaDescription:
-      'HydraFacial, DMK enzyme therapy and corrective facials at the KIAMO SKIN studio on Reynard Way in Mission Hills, San Diego, with free parking on site.',
+      'HydraFacial, DMK enzyme therapy and corrective facials at the KIAMO Skin studio on Reynard Way in Mission Hills, San Diego, with free parking on site.',
     allAbout: {
       body:
         "Mission Hills sits on the canyon rim above Old Town, one of San Diego's oldest residential neighborhoods, built on streets that follow the bluff line above Mission Valley. Reynard Way runs down through the neighborhood toward Middletown, which is why five minutes covers most of it. Washington Street is the main connector — Hillcrest runs east, I-5 and Old Town are west, and Bankers Hill sits between Mission Hills and the park. The studio is on Reynard Way between those two poles: close enough to Hillcrest's density to draw from it, close enough to Old Town to catch the western end of the canyon.",
@@ -174,10 +174,10 @@ export const areas: Area[] = [
     name: 'La Jolla',
     title: 'Corrective Facials & Scalp Therapy in La Jolla | KIAMO Skin',
     description:
-      'Corrective facials and scalp therapy for La Jolla clients at KIAMO SKIN in Mission Hills, San Diego. Twenty minutes south on I-5. HydraFacial from $259, Keravive from $599.',
+      'Corrective facials and scalp therapy for La Jolla clients at KIAMO Skin in Mission Hills, San Diego. Twenty minutes south on I-5. HydraFacial from $259, Keravive from $599.',
     h1: 'Scalp Therapy & Corrective Facials in La Jolla',
     intro:
-      'Looking for a facial in La Jolla? KIAMO SKIN is a one-room corrective studio in Mission Hills, about twenty minutes south on I-5, treating pigmentation, barrier damage and scalp conditions driven by year-round ocean exposure. Clients travel from the Village, Bird Rock, La Jolla Shores, Windansea and the UCSD corridor. Every appointment is one-to-one with Kiki, a licensed esthetician, by appointment only.',
+      'Looking for a facial in La Jolla? KIAMO Skin is a one-room corrective studio in Mission Hills, about twenty minutes south on I-5, treating pigmentation, barrier damage and scalp conditions driven by year-round ocean exposure. Clients travel from the Village, Bird Rock, La Jolla Shores, Windansea and the UCSD corridor. Every appointment is one-to-one with Kiki, a licensed esthetician, by appointment only.',
     gettingHere:
       'From La Jolla Village near Prospect Street and the Cove, take Torrey Pines Road south — not Coast Highway — to I-5 past UCSD and Rose Canyon, exiting at Washington Street. Twelve miles, roughly twenty minutes outside the commute. From Bird Rock, head north on La Jolla Boulevard to La Jolla Parkway east to I-5 south. From La Jolla Shores near Scripps Institution, Torrey Pines Road south picks up I-5 near UCSD. From the UCSD campus itself, La Jolla Village Drive east drops directly onto I-5 south — the campus is only ten miles from Mission Hills. Southbound I-5 stacks through UTC and Sorrento Valley during the morning commute; mid-morning and early afternoon are consistently the easier windows for the drive down.',
     localConcern: {
@@ -196,7 +196,7 @@ export const areas: Area[] = [
       neighborhoodMentions: ['La Jolla Village', 'Bird Rock', 'La Jolla Shores', 'Windansea', 'the Cove', 'UCSD']
     },
     schemaDescription:
-      'Corrective facials and scalp therapy for La Jolla clients at the KIAMO SKIN studio in Mission Hills, San Diego.',
+      'Corrective facials and scalp therapy for La Jolla clients at the KIAMO Skin studio in Mission Hills, San Diego.',
     allAbout: {
       body:
         'La Jolla wraps seven miles of coast north of the city — the Village and Prospect Street at the north end, Bird Rock at the south, and La Jolla Shores and the Cove between them. The Cove has hosted an open-water swim since 1916; a group swims there every morning. Windansea has a surf break that works year-round. Scripps Institution of Oceanography sits at the base of the bluffs near Shores, and UCSD occupies the mesa above Torrey Pines Road. That is the useful fact about skin in La Jolla: the ocean is not seasonal, so the exposure that drives barrier damage and scalp conditions is not seasonal either.',
@@ -249,10 +249,10 @@ export const areas: Area[] = [
     name: 'Chula Vista',
     title: 'Melasma & Pigmentation Facials in Chula Vista | KIAMO Skin',
     description:
-      'Melasma and pigmentation treatment for Chula Vista clients at KIAMO SKIN in Mission Hills, San Diego. Lira peels matched for melanin-rich skin. From $199.',
+      'Melasma and pigmentation treatment for Chula Vista clients at KIAMO Skin in Mission Hills, San Diego. Lira peels matched for melanin-rich skin. From $199.',
     h1: 'Melasma & Pigmentation Facials in Chula Vista',
     intro:
-      'Looking for melasma or pigmentation treatment in Chula Vista? KIAMO SKIN is a one-room corrective studio in Mission Hills, about twenty-five minutes north, and pigmentation in melanin-rich skin is the work it is built around. Clients travel from across the city — Eastlake, Rancho del Rey, Otay Ranch, Bonita and the Third Avenue Village corridor. Every appointment is one-to-one with Kiki, a licensed esthetician, by appointment only.',
+      'Looking for melasma or pigmentation treatment in Chula Vista? KIAMO Skin is a one-room corrective studio in Mission Hills, about twenty-five minutes north, and pigmentation in melanin-rich skin is the work it is built around. Clients travel from across the city — Eastlake, Rancho del Rey, Otay Ranch, Bonita and the Third Avenue Village corridor. Every appointment is one-to-one with Kiki, a licensed esthetician, by appointment only.',
     gettingHere:
       'From Third Avenue Village, head north on Broadway to SR-54 west, then I-805 north to Washington Street — about twelve miles. From Eastlake or Rancho del Rey, take SR-125 north to SR-54 west to I-805 north; this avoids the National City stretch of I-5 where northbound delays build. From the Chula Vista bayfront near H Street or the marina district, I-5 north runs about thirteen miles to Washington Street. From Otay Ranch Town Center, SR-125 north is the most direct line. Off-peak any of these routes is twenty to twenty-five minutes; once the South Bay starts moving north, plan for forty.',
     localConcern: {
@@ -273,7 +273,7 @@ export const areas: Area[] = [
     melaninNote:
       'Pigmentation in melanin-rich skin is what this studio was built around:',
     schemaDescription:
-      'Melasma, pigmentation and corrective facial treatment for Chula Vista clients at the KIAMO SKIN studio in Mission Hills, San Diego.',
+      'Melasma, pigmentation and corrective facial treatment for Chula Vista clients at the KIAMO Skin studio in Mission Hills, San Diego.',
     allAbout: {
       body:
         'Chula Vista spans the bay to the foothills — the old walkable grid of Third Avenue Village and the bayfront waterfront in the west, the newer master-planned communities of Eastlake, Rancho del Rey and Otay Ranch spread across the inland hills. Roughly six in ten residents are Hispanic or Latino, making it the most demographically distinct major city in the county. The inland half of the city — east of I-805 — sits past the marine layer that softens UV along the coast, and summer afternoons there run measurably hotter. That combination of melanin-rich skin and cumulative inland UV is why pigmentation is the reason most Chula Vista clients book.',
@@ -326,10 +326,10 @@ export const areas: Area[] = [
     name: 'Encinitas',
     title: 'Barrier Repair Facials in Encinitas | KIAMO Skin',
     description:
-      'Barrier repair, scalp therapy and corrective facials for Encinitas clients, at the KIAMO SKIN studio in Mission Hills, San Diego — half an hour down I-5. DMK Enzyme Therapy from $279.',
+      'Barrier repair, scalp therapy and corrective facials for Encinitas clients, at the KIAMO Skin studio in Mission Hills, San Diego — half an hour down I-5. DMK Enzyme Therapy from $279.',
     h1: 'Barrier Repair Facials in Encinitas',
     intro:
-      "Looking for a facial in Encinitas? KIAMO SKIN is a one-room corrective studio in Mission Hills, half an hour south on I-5, and barrier repair is the most common reason Encinitas clients book. Clients travel from Leucadia, Cardiff-by-the-Sea, downtown Encinitas near Moonlight Beach, Olivenhain and Encinitas Ranch. Every appointment is one-to-one with Kiki, a licensed esthetician, by appointment only.",
+      "Looking for a facial in Encinitas? KIAMO Skin is a one-room corrective studio in Mission Hills, half an hour south on I-5, and barrier repair is the most common reason Encinitas clients book. Clients travel from Leucadia, Cardiff-by-the-Sea, downtown Encinitas near Moonlight Beach, Olivenhain and Encinitas Ranch. Every appointment is one-to-one with Kiki, a licensed esthetician, by appointment only.",
     gettingHere:
       "From Swami's Beach at the foot of K Street in Cardiff, head north on Coast Highway 101 to Leucadia Boulevard, then east to I-5 south — about twenty-five miles to Washington Street. From downtown Encinitas near Moonlight Beach, Encinitas Boulevard east reaches I-5 in three minutes. From Olivenhain, El Camino Real south connects to Leucadia Boulevard east to I-5 — add about ten minutes compared to the coast. From Encinitas Ranch, La Costa Avenue east reaches I-5 in under five minutes. Clear roads make the trip near thirty minutes; the southbound commute through Sorrento Valley pushes it to forty-five or more. Coast Highway 101 is the slower line and is not worth it for an appointment.",
     localConcern: {
@@ -354,7 +354,7 @@ export const areas: Area[] = [
           ]
     },
     schemaDescription:
-      'Barrier repair, scalp therapy and corrective facials for Encinitas clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
+      'Barrier repair, scalp therapy and corrective facials for Encinitas clients, at the KIAMO Skin studio in Mission Hills, San Diego.',
     allAbout: {
       body:
         "Encinitas runs five miles of coast north of Del Mar, stacked on bluffs above the sand. Coast Highway 101 threads through Leucadia at the north end, drops into downtown around Moonlight Beach and Encinitas Boulevard, then continues through Cardiff past the San Elijo Lagoon. Swami's is the most consistently surfed break on this stretch — a long right point that holds in most swells, with a morning lineup on almost any day the ocean is moving. Inland, Olivenhain is its own world: horse properties on winding roads past the cell towers and the Olivenhain Road corridor, far enough east to miss most of the marine layer. Skin here is usually reactive rather than pigmented, which is a different problem and a different plan.",
@@ -407,7 +407,7 @@ export const areas: Area[] = [
     name: 'Del Mar',
     title: 'Corrective Facials for Del Mar Clients | KIAMO Skin',
     description:
-      'Corrective facials and scalp therapy for Del Mar clients at KIAMO SKIN in Mission Hills, San Diego. Twenty-five minutes south on I-5. Procell and Keravive available.',
+      'Corrective facials and scalp therapy for Del Mar clients at KIAMO Skin in Mission Hills, San Diego. Twenty-five minutes south on I-5. Procell and Keravive available.',
     h1: 'Facials for Del Mar Clients',
     intro:
       'Looking for a facial in Del Mar? Clients travel from Del Mar to Mission Hills — about twenty-five minutes south on I-5 — for corrective facials and scalp therapy with Kiki, a licensed esthetician. Del Mar Village, Del Mar Heights, the Fairgrounds corridor and Solana Beach clients all make that drive. Treatment is one-to-one in a single room, by appointment only.',
@@ -436,7 +436,7 @@ export const areas: Area[] = [
     // "Del Mar" is kept more than 40 characters from studio/location/located/visit us
     // in every field — the guard regex scans in both directions.
     schemaDescription:
-      'Corrective facials and scalp therapy at the KIAMO SKIN studio in Mission Hills, San Diego, for clients travelling from Del Mar.',
+      'Corrective facials and scalp therapy at the KIAMO Skin studio in Mission Hills, San Diego, for clients travelling from Del Mar.',
     allAbout: {
       body:
         'Del Mar is two and a half miles of coast between the bluffs and the racetrack, small enough to cross on foot and defined entirely by its calendar. The county fair runs June into early July at the Fairgrounds on Jimmy Durante Boulevard; the summer thoroughbred race meet follows from mid-July through September, drawing Opening Day crowds and stakes races through the season. Del Mar Village clusters around 15th Street and Camino del Mar — small, walkable and oriented toward the beach below the bluffs. Both events mean weeks of long afternoons in open sun on a stretch of coast where the marine layer clears by early afternoon.',
@@ -489,10 +489,10 @@ export const areas: Area[] = [
     name: 'Carlsbad',
     title: 'Procell & Keravive Facials in Carlsbad | KIAMO Skin',
     description:
-      'Procell Microchanneling and Keravive scalp therapy for Carlsbad clients at KIAMO SKIN in Mission Hills, San Diego. Thirty-five miles south on I-5. Series from $1,199.',
+      'Procell Microchanneling and Keravive scalp therapy for Carlsbad clients at KIAMO Skin in Mission Hills, San Diego. Thirty-five miles south on I-5. Series from $1,199.',
     h1: 'Procell & Keravive Treatments in Carlsbad',
     intro:
-      'Looking for Procell microchanneling or Keravive scalp therapy in Carlsbad? KIAMO SKIN is a one-room corrective studio in Mission Hills, San Diego — a genuine thirty-five to forty-five minute drive south on I-5. Clients travel from Carlsbad Village, La Costa, Bressi Ranch, Aviara and Calavera Hills. The treatment plan accounts for the distance: series work is scheduled as a block at the start, not booked visit by visit.',
+      'Looking for Procell microchanneling or Keravive scalp therapy in Carlsbad? KIAMO Skin is a one-room corrective studio in Mission Hills, San Diego — a genuine thirty-five to forty-five minute drive south on I-5. Clients travel from Carlsbad Village, La Costa, Bressi Ranch, Aviara and Calavera Hills. The treatment plan accounts for the distance: series work is scheduled as a block at the start, not booked visit by visit.',
     gettingHere:
       'From Carlsbad Village near the COASTER station on Carlsbad Village Drive, I-5 south runs about thirty-five miles to Washington Street. From La Costa or Aviara near Palomar Airport Road, I-5 south is about thirty miles — the closest part of the city to Mission Hills. From Bressi Ranch, Palomar Airport Road west reaches I-5 in five minutes. From Calavera Hills, College Boulevard south to Cannon Road west connects to I-5 south. The COASTER runs from Carlsbad Village to Santa Fe Depot in under an hour if you would rather not drive.',
     localConcern: {
@@ -517,7 +517,7 @@ export const areas: Area[] = [
           ]
     },
     schemaDescription:
-      'Procell Microchanneling, Keravive scalp therapy and corrective facials for Carlsbad clients at the KIAMO SKIN studio in Mission Hills, San Diego.',
+      'Procell Microchanneling, Keravive scalp therapy and corrective facials for Carlsbad clients at the KIAMO Skin studio in Mission Hills, San Diego.',
     allAbout: {
       body:
         'Carlsbad is the top of the county line, seven miles of coast from the Village down through La Costa and Aviara to the southern border near Batiquitos Lagoon. The Village clusters around Carlsbad Village Drive and the COASTER station — small, walkable and directly on I-5. Inland, Bressi Ranch and Calavera Hills spread east past El Camino Real, and La Costa and Aviara sit above Palomar Airport Road in the south half of the city. The flower fields on Palomar Airport Road bloom in spring and briefly back up I-5 in both directions. Distance is the thing that decides whether a treatment series gets finished — and at thirty to thirty-five miles, it is real.',
@@ -570,10 +570,10 @@ export const areas: Area[] = [
     name: 'Pacific Beach',
     title: 'Sun Damage Facials in Pacific Beach, San Diego | KIAMO Skin',
     description:
-      'Sun damage, barrier repair and scalp therapy for Pacific Beach clients at KIAMO SKIN in Mission Hills, San Diego. Fifteen minutes east. HydraFacial from $259.',
+      'Sun damage, barrier repair and scalp therapy for Pacific Beach clients at KIAMO Skin in Mission Hills, San Diego. Fifteen minutes east. HydraFacial from $259.',
     h1: 'Sun Damage Facials in Pacific Beach',
     intro:
-      'Looking for a facial in Pacific Beach? KIAMO SKIN is a one-room corrective studio in Mission Hills, about fifteen minutes east, and sun damage is the most common reason Pacific Beach clients book. Clients travel from the boardwalk area, Crown Point, Sail Bay, Mission Beach and the residential blocks around Kate Sessions Park. Every appointment is one-to-one with Kiki, a licensed esthetician, by appointment only.',
+      'Looking for a facial in Pacific Beach? KIAMO Skin is a one-room corrective studio in Mission Hills, about fifteen minutes east, and sun damage is the most common reason Pacific Beach clients book. Clients travel from the boardwalk area, Crown Point, Sail Bay, Mission Beach and the residential blocks around Kate Sessions Park. Every appointment is one-to-one with Kiki, a licensed esthetician, by appointment only.',
     gettingHere:
       'From the main strip near Crystal Pier, Garnet Avenue east runs directly to I-5 south — seven miles, fifteen minutes off-peak. From Crown Point or Sail Bay, take Ingraham Street south to Grand Avenue east to I-5 south. From Mission Beach or Belmont Park, head north on Mission Boulevard to Garnet, then east to I-5. From the residential streets around Kate Sessions Park, Grand Avenue east to I-5 south is the cleanest line. Summer afternoons and weekend beach traffic clog Garnet and Ingraham west of I-5 from late morning onward — an appointment before ten or after three avoids the thickest part of it.',
     localConcern: {
@@ -595,7 +595,7 @@ export const areas: Area[] = [
       neighborhoodMentions: ['Crystal Pier', 'Garnet Avenue', 'Mission Bay', 'Crown Point', 'Kate Sessions Park']
     },
     schemaDescription:
-      'Sun damage, barrier repair and scalp therapy for Pacific Beach clients at the KIAMO SKIN studio in Mission Hills, San Diego.',
+      'Sun damage, barrier repair and scalp therapy for Pacific Beach clients at the KIAMO Skin studio in Mission Hills, San Diego.',
     allAbout: {
       body:
         'Pacific Beach runs from Law Street south to Mission Bay — Garnet Avenue cuts through the middle, Crystal Pier anchors the ocean end, and the boardwalk runs more than three miles alongside the sand. It is the part of San Diego that genuinely lives outdoors: Tourmaline Surf Park catches waves at the north end, Sail Bay draws paddleboarders and kayakers year-round, and Crown Point fills on any dry afternoon. May Gray and June Gloom keep the mornings overcast, the sky burns off by early afternoon, and the UV underneath was never low. Damage here accumulates without ever looking like a sunburn.',
@@ -648,10 +648,10 @@ export const areas: Area[] = [
     name: 'La Mesa',
     title: 'Sun Damage & Pigmentation Facials in La Mesa | KIAMO Skin',
     description:
-      'Sun damage and pigmentation facials for La Mesa clients at KIAMO SKIN in Mission Hills, San Diego. Eleven miles west on I-8. Lira peels from $199, HydraFacial from $259.',
+      'Sun damage and pigmentation facials for La Mesa clients at KIAMO Skin in Mission Hills, San Diego. Eleven miles west on I-8. Lira peels from $199, HydraFacial from $259.',
     h1: 'Sun Damage & Pigmentation Facials in La Mesa',
     intro:
-      'Looking for a facial in La Mesa? KIAMO SKIN treats cumulative sun damage and pigmentation at a one-room studio in Mission Hills, about twenty minutes west on I-8. Clients travel from La Mesa Village, Mt. Helix, Grossmont, Spring Valley and the neighborhoods east of the SR-125 corridor. Every plan is built for how your skin tone actually responds, not to a fixed protocol.',
+      'Looking for a facial in La Mesa? KIAMO Skin treats cumulative sun damage and pigmentation at a one-room studio in Mission Hills, about twenty minutes west on I-8. Clients travel from La Mesa Village, Mt. Helix, Grossmont, Spring Valley and the neighborhoods east of the SR-125 corridor. Every plan is built for how your skin tone actually responds, not to a fixed protocol.',
     gettingHere:
       'From La Mesa Village on La Mesa Boulevard, take Spring Street west to I-8 westbound — about eleven miles through Mission Valley to Taylor Street or Hotel Circle, then up into Mission Hills. From Grossmont Center near Jackson Drive, head north on Jackson to I-8 west. From Mt. Helix, Fuerte Drive north connects to the Grossmont area and onto I-8. From Spring Valley, SR-125 north leads to I-8 west at the El Cajon interchange. Stay on I-8 past SR-163 and exit at Taylor Street or Hotel Circle — fifteen to twenty minutes on a clear freeway, twenty-five to thirty-five on the westbound commute.',
     localConcern: {
@@ -676,7 +676,7 @@ export const areas: Area[] = [
           ]
     },
     schemaDescription:
-      'Corrective facials for sun damage and pigmentation, for La Mesa clients, at the KIAMO SKIN studio in Mission Hills, San Diego.',
+      'Corrective facials for sun damage and pigmentation, for La Mesa clients, at the KIAMO Skin studio in Mission Hills, San Diego.',
     allAbout: {
       body:
         'La Mesa sits about ten miles inland, east of Mission Valley and built across hills around the village on La Mesa Boulevard — a walkable main street of older storefronts, the Spring Street trolley stop and a weekly farmers market. Mt. Helix rises to the southeast, one of the few genuine topographic features in the eastern county, with its cross visible from I-8. Grossmont Center, the indoor mall at Jackson Drive and Grossmont Center Drive, anchors the commercial north end. Ten miles is enough to miss the marine layer that keeps the coast gray through May and June, and summer afternoons run roughly eight to fifteen degrees warmer than La Jolla or Mission Beach. More clear days, year after year, is the quiet driver behind the pigmentation this area books for.',
@@ -731,15 +731,15 @@ export const areas: Area[] = [
     name: 'North Park',
     title: 'Corrective Facials in North Park, San Diego | KIAMO Skin',
     description:
-      'Corrective facials and peel series for North Park clients — ten minutes from Mission Hills with no freeway. KIAMO SKIN on Reynard Way. By appointment only.',
+      'Corrective facials and peel series for North Park clients — ten minutes from Mission Hills with no freeway. KIAMO Skin on Reynard Way. By appointment only.',
     h1: 'Corrective Facials in North Park, San Diego',
     intro:
-      'Looking for a facial in North Park? KIAMO SKIN is a one-room corrective studio in Mission Hills, about ten minutes away — the shortest trip of any area served, and the only one that needs no freeway. Clients travel from the 30th and University corridor, South Park, Normal Heights, Golden Hill and the craftsman residential blocks of Park Boulevard. Every appointment is one-to-one with Kiki, a licensed esthetician, by appointment only.',
+      'Looking for a facial in North Park? KIAMO Skin is a one-room corrective studio in Mission Hills, about ten minutes away — the shortest trip of any area served, and the only one that needs no freeway. Clients travel from the 30th and University corridor, South Park, Normal Heights, Golden Hill and the craftsman residential blocks of Park Boulevard. Every appointment is one-to-one with Kiki, a licensed esthetician, by appointment only.',
     gettingHere:
       'From the 30th and University intersection — the heart of North Park — take University Avenue west through Hillcrest, bear left onto Washington Street, then left onto Reynard Way. Three and a half miles, about ten minutes, no freeway. From South Park or Fern Street, head north on 30th to University and follow the same route west. From the Normal Street corridor, University west is the whole route. From Golden Hill, head north on 25th or 28th to University and continue west. North Park is the only area served where no on-ramp is involved — and that matters, because corrective work runs on intervals and ten-minute visits are the ones people keep.',
     localConcern: {
       heading: 'How does living ten minutes away change what is realistic?',
-      body: 'Corrective skin work runs on intervals — Lira peels escalate in strength across a series with specific home care between visits, and there is no single-session version of pigmentation or acne scarring treatment. The people who complete a course are almost always the ones for whom a visit costs ten minutes rather than an afternoon. North Park is three and a half miles from Mission Hills with no freeway between them, and that proximity changes the plan: a peel series that would be logistically difficult from Carlsbad or even Del Mar becomes a straightforward six-week cycle from University Avenue. Dermaplaning is the treatment built for a shorter visit — it clears dead skin and fine facial hair in one appointment, and it pairs with a peel because a cleared surface lets the acid penetrate evenly. North Park\'s demographics also matter: the neighbourhood is younger, denser and more diverse than most of the county, and melanin-rich skin is well-represented here — the same work that runs through all KIAMO treatment planning.',
+      body: 'Corrective skin work runs on intervals — Lira peels escalate in strength across a series with specific home care between visits, and there is no single-session version of pigmentation or acne scarring treatment. The people who complete a course are almost always the ones for whom a visit costs ten minutes rather than an afternoon. North Park is three and a half miles from Mission Hills with no freeway between them, and that proximity changes the plan: a peel series that would be logistically difficult from Carlsbad or even Del Mar becomes a straightforward six-week cycle from University Avenue. Dermaplaning is the treatment built for a shorter visit — it clears dead skin and fine facial hair in one appointment, and it pairs with a peel because a cleared surface lets the acid penetrate evenly. North Park\'s demographics also matter: the neighbourhood is younger, denser and more diverse than most of the county, and melanin-rich skin is well-represented here — the same work that runs through all KIAMO Skin treatment planning.',
     },
     keywordContext: {
       primaryKeyword: 'corrective facial North Park',
@@ -753,7 +753,7 @@ export const areas: Area[] = [
       neighborhoodMentions: ['30th Street', 'University Heights', 'Normal Heights', 'South Park', 'Observatory']
     },
     schemaDescription:
-      'Corrective facials, peel series and scalp therapy for North Park clients, ten minutes away at the KIAMO SKIN studio in Mission Hills, San Diego.',
+      'Corrective facials, peel series and scalp therapy for North Park clients, ten minutes away at the KIAMO Skin studio in Mission Hills, San Diego.',
     allAbout: {
       body:
         'North Park is Uptown\'s eastern half, built around the intersection of University and 30th, dense with craftsman bungalows and one of the few parts of San Diego that is genuinely walkable. South Park sits to the south along Fern Street, Normal Heights to the north, and Hillcrest between North Park and Mission Hills — which is why the two are only three and a half miles apart with no freeway in between. The neighbourhood is younger and more diverse than most of the county, with a bar and restaurant strip on 30th that draws from across the city and an arts presence centred on the North Park Theatre and the Observatory. Distance is the advantage here: corrective work runs on intervals, and a ten-minute trip is the one clients actually make.',

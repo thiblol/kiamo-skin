@@ -11,13 +11,13 @@ import { treatments } from '../../data/treatments';
 ---
 
 <BaseLayout
-  title="Skin & Scalp Treatments in San Diego | KIAMO"
+  title="Skin & Scalp Treatments in San Diego | KIAMO Skin"
   description="Corrective facials, scalp therapy, and advanced treatments in Mission Hills. HydraFacial, chemical peels, microchanneling, DMK enzyme therapy, and Keravive scalp treatment—safe for all skin tones."
 >
   <CollectionSchema
     slot="head"
     name="Skin & Scalp Treatments in San Diego"
-    description="The full corrective treatment menu at KIAMO SKIN in Mission Hills, San Diego — facials, scalp therapy, enzyme therapy, microchanneling, peels and dermaplaning."
+    description="The full corrective treatment menu at KIAMO Skin in Mission Hills, San Diego — facials, scalp therapy, enzyme therapy, microchanneling, peels and dermaplaning."
     items={treatments.map((treatment) => ({
       name: treatment.name,
       path: `/treatments/${treatment.slug}`,
@@ -31,7 +31,7 @@ import { treatments } from '../../data/treatments';
         Every step has a purpose.
       </h1>
       <p class="t-body mt-7 max-w-[62ch]">
-        At KIAMO, we don’t believe the most aggressive treatment is always the best treatment.
+        At KIAMO Skin, we don’t believe the most aggressive treatment is always the best treatment.
         Healthy skin is built through consistency, not constantly switching modalities — which is
         why most plans here run on a <a
           href="/membership/"

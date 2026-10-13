@@ -19,7 +19,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'How much does a HydraFacial cost in San Diego?',
       answer:
-        'A HydraFacial at KIAMO SKIN is $259. If it is your first visit, the First-Time Client Treatment is $249 and includes a full consultation, skin analysis, a customized booster, microcurrent, LED light therapy, a Hydrojelly mask and a long-term treatment plan.',
+        'A HydraFacial at KIAMO Skin is $259. If it is your first visit, the First-Time Client Treatment is $249 and includes a full consultation, skin analysis, a customized booster, microcurrent, LED light therapy, a Hydrojelly mask and a long-term treatment plan.',
     },
     {
       question: 'Will a HydraFacial remove blackheads?',
@@ -54,7 +54,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'Who is the best HydraFacial provider in San Diego?',
       answer:
-        'The best HydraFacial provider in San Diego depends on what your skin actually needs. KIAMO SKIN uses the HydraFacial Syndeo platform — the clinical-tier device with AI-powered skin impedance analysis — not the consumer models HydraFacial franchises run. Every appointment is one-to-one with Kiki, a California licensed esthetician with 7+ years on melanin-rich skin, never a rotating staff. First-Time Client Treatment is $249; return visits are $259. Both include skin analysis, customized booster, microcurrent, LED light therapy, and a Hydrojelly mask.',
+        'The best HydraFacial provider in San Diego depends on what your skin actually needs. KIAMO Skin uses the HydraFacial Syndeo platform — the clinical-tier device with AI-powered skin impedance analysis — not the consumer models HydraFacial franchises run. Every appointment is one-to-one with Kiki, a California licensed esthetician with 7+ years on melanin-rich skin, never a rotating staff. First-Time Client Treatment is $249; return visits are $259. Both include skin analysis, customized booster, microcurrent, LED light therapy, and a Hydrojelly mask.',
     },
   ],
 
@@ -62,7 +62,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'How much does microchanneling cost in San Diego?',
       answer:
-        'A single Procell microchanneling session at KIAMO SKIN is $475. The three-treatment series, which is how scarring and texture are usually worked through, is $1,199 in total.',
+        'A single Procell microchanneling session at KIAMO Skin is $475. The three-treatment series, which is how scarring and texture are usually worked through, is $1,199 in total.',
     },
     {
       question: 'How is Procell microchanneling different from microneedling?',
@@ -87,7 +87,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'Is microneedling safe for dark skin?',
       answer:
-        'Procell microchanneling is safe for dark skin when the depth is adjusted region by region and the protocol is specific to melanin-rich skin. Darker skin tones produce melanin more readily in response to inflammation, which means overly aggressive treatment can trigger post-inflammatory hyperpigmentation — more dark marks rather than fewer. At KIAMO SKIN, treatment depth on melanin-rich skin is not set uniformly across the face; it varies by region depending on skin thickness, tone, and the concern being treated. The growth factor serum delivered in the same pass supports healing and shortens the inflammatory window during which pigment can form.',
+        'Procell microchanneling is safe for dark skin when the depth is adjusted region by region and the protocol is specific to melanin-rich skin. Darker skin tones produce melanin more readily in response to inflammation, which means overly aggressive treatment can trigger post-inflammatory hyperpigmentation — more dark marks rather than fewer. At KIAMO Skin, treatment depth on melanin-rich skin is not set uniformly across the face; it varies by region depending on skin thickness, tone, and the concern being treated. The growth factor serum delivered in the same pass supports healing and shortens the inflammatory window during which pigment can form.',
     },
     {
       question: 'Is microneedling worth it for acne scars?',
@@ -95,7 +95,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
         'Procell microchanneling is worth it for acne scars when the acne itself is under control and the scarring is textural — rolling scars, depressions, or uneven surface texture. The treatment stimulates collagen remodeling over a series of sessions, which progressively fills and smooths the tissue below the scar. Active or inflamed acne is addressed before microchanneling begins because channeling into inflamed skin risks spreading bacteria and triggering additional damage. For flat post-inflammatory hyperpigmentation — the dark marks left after breakouts clear — a chemical peel series is typically the more efficient choice: microchanneling addresses structure, peels address pigment.',
     },
     {
-      question: 'Does KIAMO offer PRP microneedling?',
+      question: 'Does KIAMO Skin offer PRP microneedling?',
       answer:
         'No. Kiki uses Procell microchanneling with stem cytokine growth factor serums instead. Procell\'s serums are lab-grown growth factors delivered into the channels in the same pass — no blood draw, no donor variability, no extra appointment time, and published clinical research on pigment correction. PRP is a defensible choice at many providers; it is not the choice this studio made for melanin-rich skin.',
     },
@@ -105,12 +105,12 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'How much does a Keravive scalp treatment cost in San Diego?',
       answer:
-        'A single Keravive scalp treatment at KIAMO SKIN is $599. The series of three is $1,499 in total, which is the format most scalp concerns are treated in.',
+        'A single Keravive scalp treatment at KIAMO Skin is $599. The series of three is $1,499 in total, which is the format most scalp concerns are treated in.',
     },
     {
       question: 'Where can I get Keravive scalp treatment in San Diego?',
       answer:
-        'KIAMO SKIN offers Keravive scalp treatment at the Mission Hills studio, centrally located and easy to reach from Pacific Beach, La Jolla, Del Mar, Encinitas, Carlsbad, North Park, Hillcrest, and Mission Valley. The studio is fifteen minutes from Pacific Beach, twenty minutes from La Jolla, and thirty minutes from Encinitas. Parking is available near the studio.',
+        'KIAMO Skin offers Keravive scalp treatment at the Mission Hills studio, centrally located and easy to reach from Pacific Beach, La Jolla, Del Mar, Encinitas, Carlsbad, North Park, Hillcrest, and Mission Valley. The studio is fifteen minutes from Pacific Beach, twenty minutes from La Jolla, and thirty minutes from Encinitas. Parking is available near the studio.',
     },
     {
       question: 'How long does Keravive take if coming from Pacific Beach?',
@@ -140,7 +140,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'What does a Japanese scalp treatment do?',
       answer:
-        'A Japanese head spa is a water-based cleansing and massage ritual built around relaxation, lymphatic massage and a deep rinse. KIAMO SKIN does not offer Japanese or Korean method scalp treatments. The difference is intent — a head spa is primarily an experience, while Keravive is a clinical protocol aimed at buildup, scalp health and the environment hair grows in, with a take-home peptide spray to continue between visits. Both feel good; only one is corrective.',
+        'A Japanese head spa is a water-based cleansing and massage ritual built around relaxation, lymphatic massage and a deep rinse. KIAMO Skin does not offer Japanese or Korean method scalp treatments. The difference is intent — a head spa is primarily an experience, while Keravive is a clinical protocol aimed at buildup, scalp health and the environment hair grows in, with a take-home peptide spray to continue between visits. Both feel good; only one is corrective.',
     },
     {
       question: 'What do dermatologists recommend for scalp problems?',
@@ -153,12 +153,12 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'How much does a chemical peel cost in San Diego?',
       answer:
-        'The LIRA Gentle Renewal Peel at KIAMO SKIN is $199 and the LIRA Advanced Peel is $299. Which one you start with is decided at consultation, and on melanin-rich skin the gentle peel is almost always the starting point.',
+        'The LIRA Gentle Renewal Peel at KIAMO Skin is $199 and the LIRA Advanced Peel is $299. Which one you start with is decided at consultation, and on melanin-rich skin the gentle peel is almost always the starting point.',
     },
     {
       question: 'Are chemical peels safe for melanin-rich skin?',
       answer:
-        'Chemical peels are safe on melanin-rich skin when the acid, the strength and the pacing are selected for it. Melanin-rich skin responds to trauma by producing more pigment, so an over-aggressive peel can create the exact hyperpigmentation it was meant to clear. Every peel here is patch-tested and started gently, with strength escalating across a series rather than inside a single visit. Facials for Black and brown skin are the specialism at KIAMO SKIN, and that caution is the reason why.',
+        'Chemical peels are safe on melanin-rich skin when the acid, the strength and the pacing are selected for it. Melanin-rich skin responds to trauma by producing more pigment, so an over-aggressive peel can create the exact hyperpigmentation it was meant to clear. Every peel here is patch-tested and started gently, with strength escalating across a series rather than inside a single visit. Facials for Black and brown skin are the specialism at KIAMO Skin, and that caution is the reason why.',
     },
     {
       question: 'What is the best treatment for melasma?',
@@ -183,7 +183,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'How long does hyperpigmentation last after a chemical peel?',
       answer:
-        'Redness and surface flaking after a chemical peel typically peak within 48 to 72 hours and settle within one to two weeks as the skin renews. Hyperpigmentation that persists beyond that window — new dark marks that were not present before — indicates a post-inflammatory response, where the peel triggered additional melanin production rather than clearing it. That outcome is significantly less common when peels are started at lower strengths and escalated gradually across a series, which is the protocol at KIAMO SKIN on all skin tones. Strict daily SPF through the healing period is not optional: sun exposure on recently peeled skin is the most direct route to PIH after a peel.',
+        'Redness and surface flaking after a chemical peel typically peak within 48 to 72 hours and settle within one to two weeks as the skin renews. Hyperpigmentation that persists beyond that window — new dark marks that were not present before — indicates a post-inflammatory response, where the peel triggered additional melanin production rather than clearing it. That outcome is significantly less common when peels are started at lower strengths and escalated gradually across a series, which is the protocol at KIAMO Skin on all skin tones. Strict daily SPF through the healing period is not optional: sun exposure on recently peeled skin is the most direct route to PIH after a peel.',
     },
     {
       question: 'What is the best chemical peel provider in San Diego?',
@@ -195,12 +195,12 @@ export const treatmentFaqs: Record<string, Faq[]> = {
   dermaplaning: [
     {
       question: 'How much does dermaplaning cost in San Diego?',
-      answer: 'The Dermaplane Facial at KIAMO SKIN is $199.',
+      answer: 'The Dermaplane Facial at KIAMO Skin is $199.',
     },
     {
       question: 'Is dermaplaning legal in California?',
       answer:
-        'Dermaplaning is legal in California and sits within the scope of practice for licensed estheticians and cosmetologists. The California Board of Barbering & Cosmetology confirmed this in an industry bulletin effective January 1, 2022, following Senate Bill 803. The Board draws the line at depth — dermaplaning exfoliates the epidermis and removes vellus hair without going beyond it, which keeps it inside esthetician scope. Every blade used at KIAMO SKIN is sterile and single-use.',
+        'Dermaplaning is legal in California and sits within the scope of practice for licensed estheticians and cosmetologists. The California Board of Barbering & Cosmetology confirmed this in an industry bulletin effective January 1, 2022, following Senate Bill 803. The Board draws the line at depth — dermaplaning exfoliates the epidermis and removes vellus hair without going beyond it, which keeps it inside esthetician scope. Every blade used at KIAMO Skin is sterile and single-use.',
     },
     {
       question: 'What is the downside of dermaplaning?',
@@ -220,22 +220,22 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'Is dermaplaning safe for melanin-rich skin?',
       answer:
-        'Dermaplaning is safe for melanin-rich skin when the blade technique is correct and the skin is not actively inflamed or broken out. The risk in darker skin tones is not the blade itself but what happens after — sun exposure on freshly exfoliated skin can trigger post-inflammatory hyperpigmentation (PIH), which is more common in melanin-rich skin. Daily mineral SPF with at least SPF 30 is required after dermaplaning on any skin tone, but on deeper skin tones it is the difference between a smooth surface and additional dark marks. Dermaplaning at KIAMO SKIN is performed by a licensed esthetician trained on Black and brown skin, where the risk of PIH is highest.',
+        'Dermaplaning is safe for melanin-rich skin when the blade technique is correct and the skin is not actively inflamed or broken out. The risk in darker skin tones is not the blade itself but what happens after — sun exposure on freshly exfoliated skin can trigger post-inflammatory hyperpigmentation (PIH), which is more common in melanin-rich skin. Daily mineral SPF with at least SPF 30 is required after dermaplaning on any skin tone, but on deeper skin tones it is the difference between a smooth surface and additional dark marks. Dermaplaning at KIAMO Skin is performed by a licensed esthetician trained on Black and brown skin, where the risk of PIH is highest.',
     },
     {
       question: 'How often should you get dermaplaning?',
       answer:
-        'Every 4 to 6 weeks is the standard interval. Vellus hair regrowth is part of the natural cycle and not a reason to book sooner — booking more frequently can sensitize the barrier without changing the result. San Diego clients who dermaplane monthly for events typically space the treatments with a HydraFacial between for maintenance. The Dermaplane Facial at KIAMO SKIN is $199.',
+        'Every 4 to 6 weeks is the standard interval. Vellus hair regrowth is part of the natural cycle and not a reason to book sooner — booking more frequently can sensitize the barrier without changing the result. San Diego clients who dermaplane monthly for events typically space the treatments with a HydraFacial between for maintenance. The Dermaplane Facial at KIAMO Skin is $199.',
     },
     {
       question: 'Who is the best dermaplaning provider in San Diego?',
       answer:
-        'The safest dermaplaning in San Diego depends on blade technique and post-care, not the brand of the studio. KIAMO SKIN performs dermaplaning in a private treatment room at 3067 Reynard Way in Mission Hills by Kiki, a California licensed esthetician with 7+ years on the Fitzpatrick I–VI spectrum, sterile single-use blades, and the right pre/post routine for melanin-rich skin. The Dermaplane Facial is $199.',
+        'The safest dermaplaning in San Diego depends on blade technique and post-care, not the brand of the studio. KIAMO Skin performs dermaplaning in a private treatment room at 3067 Reynard Way in Mission Hills by Kiki, a California licensed esthetician with 7+ years on the Fitzpatrick I–VI spectrum, sterile single-use blades, and the right pre/post routine for melanin-rich skin. The Dermaplane Facial is $199.',
     },
     {
       question: 'What should you avoid after dermaplaning?',
       answer:
-        'Direct sun exposure for 24 hours, retinoids and acids for 48 to 72 hours, and any active that stings — the freshly exfoliated surface is more permeable, which is the point of the treatment, but also why anything strong goes in harder than usual. Daily mineral SPF 50+ is non-negotiable in San Diego’s year-round UV. Makeup can go back on immediately. The Dermaplane Facial at KIAMO SKIN is $199.',
+        'Direct sun exposure for 24 hours, retinoids and acids for 48 to 72 hours, and any active that stings — the freshly exfoliated surface is more permeable, which is the point of the treatment, but also why anything strong goes in harder than usual. Daily mineral SPF 50+ is non-negotiable in San Diego’s year-round UV. Makeup can go back on immediately. The Dermaplane Facial at KIAMO Skin is $199.',
     },
   ],
 
@@ -243,12 +243,12 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'What is DMK enzyme therapy?',
       answer:
-        'DMK enzyme therapy is a corrective skin treatment that works with the skin\'s own biological processes — circulation, lymphatic activity and cellular function — rather than stripping the surface the way an acid peel does. Level 1 at KIAMO SKIN in Mission Hills, San Diego is $279 and is how every DMK plan starts, regardless of what the skin\'s longer-term goals are.',
+        'DMK enzyme therapy is a corrective skin treatment that works with the skin\'s own biological processes — circulation, lymphatic activity and cellular function — rather than stripping the surface the way an acid peel does. Level 1 at KIAMO Skin in Mission Hills, San Diego is $279 and is how every DMK plan starts, regardless of what the skin\'s longer-term goals are.',
     },
     {
       question: 'How much does DMK enzyme therapy cost in San Diego?',
       answer:
-        'A DMK Level 1 enzyme treatment at KIAMO SKIN is $279. Level 2 and Level 3 treatments are prescribed and priced at consultation, because which one is appropriate depends on how your skin responds to Level 1.',
+        'A DMK Level 1 enzyme treatment at KIAMO Skin is $279. Level 2 and Level 3 treatments are prescribed and priced at consultation, because which one is appropriate depends on how your skin responds to Level 1.',
     },
     {
       question: 'What does DMK enzyme therapy do for the skin barrier?',
@@ -278,7 +278,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'How often should you have DMK enzyme therapy?',
       answer:
-        'DMK enzyme therapy is typically scheduled once a month as a standalone treatment, or every four to six weeks as part of a longer corrective plan. Frequency depends on what the treatment is addressing: a compromised barrier in an active phase may benefit from more consistent early attention, while maintenance of results can stretch to every four to six weeks. At KIAMO SKIN, frequency is set at consultation and adjusted based on how the skin responds rather than applied as a fixed interval. Skipping the home routine between visits limits what the in-office treatment can sustain.',
+        'DMK enzyme therapy is typically scheduled once a month as a standalone treatment, or every four to six weeks as part of a longer corrective plan. Frequency depends on what the treatment is addressing: a compromised barrier in an active phase may benefit from more consistent early attention, while maintenance of results can stretch to every four to six weeks. At KIAMO Skin, frequency is set at consultation and adjusted based on how the skin responds rather than applied as a fixed interval. Skipping the home routine between visits limits what the in-office treatment can sustain.',
     },
     {
       question: 'My skin looks worse after a facial — is that normal?',
@@ -301,7 +301,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'How much does acne treatment cost in San Diego?',
       answer:
-        'Acne treatment at KIAMO SKIN ranges from $199 to $475 per session depending on the treatment. HydraFacial for congestion and active breakouts is $259. LIRA Chemical Peels for post-acne hyperpigmentation start at $199. DMK Enzyme Therapy for barrier repair is $279. Procell Microchanneling for acne scarring is $475, with a three-treatment series at $1,199. The cost depends on which phase of acne is being treated — active breakouts, hyperpigmentation, or scarring.',
+        'Acne treatment at KIAMO Skin ranges from $199 to $475 per session depending on the treatment. HydraFacial for congestion and active breakouts is $259. LIRA Chemical Peels for post-acne hyperpigmentation start at $199. DMK Enzyme Therapy for barrier repair is $279. Procell Microchanneling for acne scarring is $475, with a three-treatment series at $1,199. The cost depends on which phase of acne is being treated — active breakouts, hyperpigmentation, or scarring.',
     },
     {
       question: 'How long does it take for acne treatment to work?',
@@ -316,7 +316,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'Will chemical peels make my hyperpigmentation worse?',
       answer:
-        'Chemical peels can make hyperpigmentation worse if applied incorrectly or at too high a strength without proper preparation. Post-inflammatory hyperpigmentation worsens when inflammation triggers additional melanin production, which is why peels for acne marks start at lower strengths and escalate gradually across a series rather than in one aggressive session. LIRA Chemical Peels at KIAMO SKIN are formulated specifically to fade pigmentation without the rebound darkening that can happen with peels applied too aggressively. The strength and frequency are decided based on how the skin responds, not a fixed protocol.',
+        'Chemical peels can make hyperpigmentation worse if applied incorrectly or at too high a strength without proper preparation. Post-inflammatory hyperpigmentation worsens when inflammation triggers additional melanin production, which is why peels for acne marks start at lower strengths and escalate gradually across a series rather than in one aggressive session. LIRA Chemical Peels at KIAMO Skin are formulated specifically to fade pigmentation without the rebound darkening that can happen with peels applied too aggressively. The strength and frequency are decided based on how the skin responds, not a fixed protocol.',
     },
   ],
 
@@ -344,7 +344,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'Is PIH treatment safe for dark skin?',
       answer:
-        'Yes, when the peel strength, the acid, and the pacing are selected for melanin-rich skin. Melanin-rich skin responds to trauma by producing more pigment, so an over-aggressive peel can create the exact PIH it was meant to clear. Every peel here is patch-tested and started gently, with strength escalating across a series rather than inside a single visit. The same caution that applies to melasma applies here — PIH on Fitzpatrick IV through VI is the most common corrective concern at KIAMO SKIN, and the protocols are built for it.',
+        'Yes, when the peel strength, the acid, and the pacing are selected for melanin-rich skin. Melanin-rich skin responds to trauma by producing more pigment, so an over-aggressive peel can create the exact PIH it was meant to clear. Every peel here is patch-tested and started gently, with strength escalating across a series rather than inside a single visit. The same caution that applies to melasma applies here — PIH on Fitzpatrick IV through VI is the most common corrective concern at KIAMO Skin, and the protocols are built for it.',
     },
   ],
 };

@@ -26,7 +26,7 @@ import type { Faq } from './faqs';
 export const areaFaqs: Record<string, Faq[]> = {
   'mission-hills': [
     {
-      question: 'How far is KIAMO SKIN from the rest of Mission Hills?',
+      question: 'How far is KIAMO Skin from the rest of Mission Hills?',
       answer:
         'Most of Mission Hills is inside a five-minute drive. The studio is at 3067 Reynard Way, which runs between the Washington Street end of the neighborhood and Middletown, and parking is free on site.',
     },
@@ -38,7 +38,7 @@ export const areaFaqs: Record<string, Faq[]> = {
     {
       question: 'Will the same esthetician treat me at every visit?',
       answer:
-        'Yes. KIAMO SKIN has one treatment room and no rotating roster, so the same licensed esthetician assesses your skin, performs the treatment and adjusts the plan next time. That continuity is the point of corrective work, because what to do next depends on how your skin responded last.',
+        'Yes. KIAMO Skin has one treatment room and no rotating roster, so the same licensed esthetician assesses your skin, performs the treatment and adjusts the plan next time. That continuity is the point of corrective work, because what to do next depends on how your skin responded last.',
     },
     {
       question: 'What skin concerns do Mission Hills clients most often book for?',
@@ -54,7 +54,7 @@ export const areaFaqs: Record<string, Faq[]> = {
 
   'la-jolla': [
     {
-      question: 'How far is KIAMO SKIN from La Jolla?',
+      question: 'How far is KIAMO Skin from La Jolla?',
       answer:
         'About twelve miles, or roughly twenty minutes outside the commute. From the Village near Prospect Street, Torrey Pines Road south connects to I-5 past UCSD and Rose Canyon — stay on to Washington Street. From Bird Rock, La Jolla Boulevard north to La Jolla Parkway east reaches I-5 in about five minutes. From La Jolla Shores, Torrey Pines Road south picks up the same I-5 entrance near UCSD.',
     },

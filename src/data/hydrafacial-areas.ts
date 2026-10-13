@@ -48,7 +48,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'downtown-san-diego',
     name: 'Downtown San Diego',
-    title: 'HydraFacial in Downtown San Diego - Same-Day Appointments | KIAMO',
+    title: 'HydraFacial in Downtown San Diego - Same-Day Appointments | KIAMO Skin',
     description: 'Professional HydraFacial treatments serving Downtown San Diego. 5 minutes from Gaslamp Quarter and Convention Center. Safe for all skin types (Fitzpatrick I-VI). Book today.',
     h1: 'HydraFacial in Downtown San Diego',
     intro: `KIAMO Skin provides professional HydraFacial treatments to clients throughout Downtown San Diego and the surrounding urban core. Located in nearby Mission Hills at 3067 Reynard Way (just off Washington Street), we're easily accessible from the I-5 and I-8 interchange, less than 5 minutes from Horton Plaza and the Gaslamp Quarter. Our clinic specializes in HydraFacial treatments safe for all skin types (Fitzpatrick I-VI), with protocols calibrated to each client's tone, concerns, and goals.`,
@@ -125,7 +125,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
       },
       {
         question: 'Is HydraFacial safe for melanin-rich skin in Downtown San Diego?',
-        answer: `Yes. HydraFacial is one of the safest professional facial treatments for melanin-rich skin (Fitzpatrick types IV-VI) because it uses gentle suction and hydration rather than harsh scrubs or aggressive acids. There's zero risk of post-inflammatory hyperpigmentation, which is why KIAMO specializes in this treatment for Downtown's diverse professional community.`,
+        answer: `Yes. HydraFacial is one of the safest professional facial treatments for melanin-rich skin (Fitzpatrick types IV-VI) because it uses gentle suction and hydration rather than harsh scrubs or aggressive acids. There's zero risk of post-inflammatory hyperpigmentation, which is why KIAMO Skin specializes in this treatment for Downtown's diverse professional community.`,
       },
       {
         question: 'Can I get a same-day HydraFacial appointment near Downtown San Diego?',
@@ -145,12 +145,12 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'bankers-hill',
     name: `Banker's Hill`,
-    title: `HydraFacial in Banker's Hill San Diego - Licensed Esthetician | KIAMO`,
+    title: `HydraFacial in Banker's Hill San Diego - Licensed Esthetician | KIAMO Skin`,
     description: `HydraFacial treatments for Banker's Hill clients. 5 minutes from KIAMO Skin in Mission Hills. Safe for all skin types (Fitzpatrick I-VI). Licensed esthetician.`,
     h1: `HydraFacial in Banker's Hill, San Diego`,
     intro: `Banker's Hill residents trust KIAMO Skin for HydraFacial treatments that respect their skin's integrity. Located less than 5 minutes away in Mission Hills at 3067 Reynard Way, our studio provides treatments safe for all skin types (Fitzpatrick types I-VI). Every HydraFacial is performed by Kiki, a California licensed esthetician with 7+ years of experience, in a private one-room studio with consistent, personalized care.`,
     authority: {
-      heading: `Why Banker's Hill trusts KIAMO for HydraFacial`,
+      heading: `Why Banker's Hill trusts KIAMO Skin for HydraFacial`,
       body: `Banker's Hill clients value quality skincare backed by expertise. KIAMO Skin is equipped with HydraFacial Syndeo - the latest generation device with AI-powered skin analysis - and every treatment is customized to your specific skin tone and concerns. Kiki specializes in melanin-rich skin where improper treatment can trigger post-inflammatory hyperpigmentation. The proximity from Banker's Hill (under 5 minutes via Fifth Avenue to Washington Street) makes regular maintenance realistic, and the single-practitioner model means you build a treatment relationship rather than explaining your skin to a new provider each visit.`,
     },
     uniqueness: {
@@ -165,7 +165,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
       ],
     },
     depth: {
-      heading: 'The HydraFacial process at KIAMO',
+      heading: 'The HydraFacial process at KIAMO Skin',
       body: `HydraFacial combines three essential steps in one 45-minute treatment, using patented technology that's safe for all skin tones including melanin-rich skin.`,
       process: [
         {
@@ -184,7 +184,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
     },
     intent: {
       heading: `Who HydraFacial is for in Banker's Hill`,
-      body: `Banker's Hill clients typically book HydraFacial for regular maintenance (monthly is realistic when the studio is 5 minutes away), pre-event preparation for social gatherings at venues near Balboa Park, or as the foundation of a corrective plan addressing hyperpigmentation, congestion, or dehydration. The treatment is ideal for clients who want professional results without the downtime or hyperpigmentation risk of more aggressive treatments. Many Banker's Hill clients with melanin-rich skin choose KIAMO specifically because HydraFacial won't trigger the post-inflammatory darkening that chemical peels or microdermabrasion can cause.`,
+      body: `Banker's Hill clients typically book HydraFacial for regular maintenance (monthly is realistic when the studio is 5 minutes away), pre-event preparation for social gatherings at venues near Balboa Park, or as the foundation of a corrective plan addressing hyperpigmentation, congestion, or dehydration. The treatment is ideal for clients who want professional results without the downtime or hyperpigmentation risk of more aggressive treatments. Many Banker's Hill clients with melanin-rich skin choose KIAMO Skin specifically because HydraFacial won't trigger the post-inflammatory darkening that chemical peels or microdermabrasion can cause.`,
     },
     gettingHere: `From Banker's Hill near Balboa Park, head west on Laurel Street or Upas Street to Fifth Avenue, then north to Washington Street, turn right. The studio is at 3067 Reynard Way, first left after the small commercial strip. About 5 minutes, free parking on site. From the Spruce Street Suspension Bridge area, take Fifth Avenue north to Washington. From Fourth Avenue near the medical district, head north to Washington Street and turn right.`,
     landmarks: [
@@ -224,7 +224,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
       },
       {
         question: `Can HydraFacial help with hyperpigmentation in Banker's Hill?`,
-        answer: `HydraFacial alone is a maintenance treatment, not a hyperpigmentation corrector. However, it's often the foundation of a corrective plan at KIAMO - we pair HydraFacial with Lira chemical peels (safe for melanin-rich skin) to address melasma and post-inflammatory marks. HydraFacial keeps skin hydrated and clear between peel sessions.`,
+        answer: `HydraFacial alone is a maintenance treatment, not a hyperpigmentation corrector. However, it's often the foundation of a corrective plan at KIAMO Skin - we pair HydraFacial with Lira chemical peels (safe for melanin-rich skin) to address melasma and post-inflammatory marks. HydraFacial keeps skin hydrated and clear between peel sessions.`,
       },
       {
         question: `Do you see the same esthetician every visit in Banker's Hill?`,
@@ -240,7 +240,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'little-italy',
     name: 'Little Italy',
-    title: 'HydraFacial in Little Italy San Diego - 3 Minutes Away | KIAMO',
+    title: 'HydraFacial in Little Italy San Diego - 3 Minutes Away | KIAMO Skin',
     description: `HydraFacial treatments for Little Italy clients at KIAMO Skin, 3 minutes away in Mission Hills. Waterfront exposure, salt air, urban pollution. Safe for all skin types (Fitzpatrick I-VI). Licensed esthetician.`,
     h1: 'HydraFacial in Little Italy, San Diego',
     intro: `KIAMO Skin provides HydraFacial treatments to Little Italy clients dealing with waterfront salt air and urban environmental exposure. Located 3 minutes away in Mission Hills at 3067 Reynard Way, our studio specializes in treatments that address barrier damage from coastal humidity and pollution. Every HydraFacial is performed by Kiki, a licensed esthetician with 7+ years of experience, safe for all skin types (Fitzpatrick I-VI).`,
@@ -250,7 +250,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
     },
     uniqueness: {
       heading: 'HydraFacial for coastal and urban exposure',
-      body: `Little Italy clients face a unique combination: waterfront salt air that strips the skin barrier, plus urban pollution from Harbor Drive traffic and cruise ship terminals. KIAMO's HydraFacial approach addresses both:`,
+      body: `Little Italy clients face a unique combination: waterfront salt air that strips the skin barrier, plus urban pollution from Harbor Drive traffic and cruise ship terminals. KIAMO Skin's HydraFacial approach addresses both:`,
       bullets: [
         'Deep hydration to combat salt air dehydration and barrier damage',
         'Extraction removes pollution debris and congestion from urban exposure',
@@ -327,7 +327,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
       },
       {
         question: 'Is HydraFacial safe for darker skin tones in Little Italy?',
-        answer: `Yes. HydraFacial is safe for all Fitzpatrick types (I-VI), including melanin-rich skin. Unlike microdermabrasion or aggressive peels, it uses gentle suction and hydration with zero risk of post-inflammatory hyperpigmentation. KIAMO specializes in melanin-rich skin - Kiki customizes every treatment to your specific tone.`,
+        answer: `Yes. HydraFacial is safe for all Fitzpatrick types (I-VI), including melanin-rich skin. Unlike microdermabrasion or aggressive peels, it uses gentle suction and hydration with zero risk of post-inflammatory hyperpigmentation. KIAMO Skin specializes in melanin-rich skin - Kiki customizes every treatment to your specific tone.`,
       },
     ],
     schemaDescription: `HydraFacial treatments for Little Italy clients at KIAMO Skin in Mission Hills. 3 minutes away, addresses salt air and pollution damage, safe for all skin types (Fitzpatrick I-VI).`,
@@ -335,7 +335,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'harbor-island',
     name: 'Harbor Island',
-    title: 'HydraFacial in Harbor Island San Diego - Airport Area Skin Clinic | KIAMO',
+    title: 'HydraFacial in Harbor Island San Diego - Airport Area Skin Clinic | KIAMO Skin',
     description: `Professional HydraFacial treatments serving Harbor Island and airport area. 10 minutes from KIAMO Skin. Coastal salt air specialists, safe for all skin types (Fitzpatrick I-VI). Book your appointment.`,
     h1: 'HydraFacial in Harbor Island, San Diego',
     intro: `Harbor Island and the surrounding airport area present unique skincare challenges from coastal salt air and constant sun exposure. KIAMO Skin provides specialized HydraFacial treatments designed for clients living or working in maritime environments, addressing dehydration, barrier damage, and windburn from waterfront conditions. Located 10 minutes away in Mission Hills at 3067 Reynard Way, our studio provides treatments safe for all skin types (Fitzpatrick I-VI).`,
@@ -345,7 +345,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
     },
     uniqueness: {
       heading: 'HydraFacial for coastal living',
-      body: `Living or working near the water is beautiful, but it accelerates skin aging. KIAMO's HydraFacial treatments for Harbor Island clients focus on:`,
+      body: `Living or working near the water is beautiful, but it accelerates skin aging. KIAMO Skin's HydraFacial treatments for Harbor Island clients focus on:`,
       bullets: [
         'Deep hydration to combat salt air dehydration and barrier damage',
         'Barrier repair serums to strengthen skin protective layer compromised by wind and humidity',
@@ -417,7 +417,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
       },
       {
         question: 'Is HydraFacial safe for darker skin tones in Harbor Island?',
-        answer: `Yes. HydraFacial is safe for all Fitzpatrick types (I-VI) including melanin-rich skin. It uses gentle suction and hydration with zero risk of post-inflammatory hyperpigmentation. KIAMO specializes in melanin-rich skin - every treatment is customized to your specific tone and concerns.`,
+        answer: `Yes. HydraFacial is safe for all Fitzpatrick types (I-VI) including melanin-rich skin. It uses gentle suction and hydration with zero risk of post-inflammatory hyperpigmentation. KIAMO Skin specializes in melanin-rich skin - every treatment is customized to your specific tone and concerns.`,
       },
       {
         question: 'How often should Harbor Island residents get HydraFacial?',
@@ -429,7 +429,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'point-loma',
     name: 'Point Loma',
-    title: 'HydraFacial Point Loma - Coastal Skin Specialists | KIAMO',
+    title: 'HydraFacial Point Loma - Coastal Skin Specialists | KIAMO Skin',
     description: `HydraFacial treatments for Point Loma residents. 10 minutes from Liberty Station via Rosecrans. Coastal climate specialists addressing salt air, sun damage, windburn. Safe for all skin types (Fitzpatrick I-VI).`,
     h1: 'HydraFacial in Point Loma, San Diego',
     intro: `Point Loma residents face unique skincare challenges from coastal salt air, intense sun exposure, and windburn from beach and water activities. KIAMO Skin provides specialized HydraFacial treatments customized for clients living in maritime climates. Located just 10 minutes from Liberty Station via Rosecrans Street at 3067 Reynard Way in Mission Hills, we provide treatments safe for all skin types (Fitzpatrick I-VI), with protocols calibrated to each client's tone and barrier condition.`,
@@ -511,7 +511,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
       },
       {
         question: 'Is HydraFacial safe for melanin-rich skin in Point Loma?',
-        answer: `Yes. HydraFacial is one of the safest professional treatments for melanin-rich skin (Fitzpatrick types IV-VI). It uses gentle suction and hydration with zero risk of post-inflammatory hyperpigmentation. KIAMO specializes in melanin-rich skin - Kiki customizes every treatment to your specific tone and concerns.`,
+        answer: `Yes. HydraFacial is one of the safest professional treatments for melanin-rich skin (Fitzpatrick types IV-VI). It uses gentle suction and hydration with zero risk of post-inflammatory hyperpigmentation. KIAMO Skin specializes in melanin-rich skin - Kiki customizes every treatment to your specific tone and concerns.`,
       },
       {
         question: 'What should Point Loma residents expect after HydraFacial?',
@@ -523,7 +523,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'midway-district',
     name: 'Midway District',
-    title: 'HydraFacial Midway District San Diego - Near Sports Arena | KIAMO',
+    title: 'HydraFacial Midway District San Diego - Near Sports Arena | KIAMO Skin',
     description: `HydraFacial treatments serving Midway District and Sports Arena area. 8 minutes from KIAMO Skin in Mission Hills. Safe for all skin tones, same-day appointments available.`,
     h1: 'HydraFacial in Midway District, San Diego',
     intro: `KIAMO Skin provides professional HydraFacial treatments to clients throughout the Midway District and Sports Arena area. Located just 8 minutes away in Mission Hills at 3067 Reynard Way, we're easily accessible via Rosecrans Street or Sports Arena Boulevard. Our clinic specializes in HydraFacial treatments safe for all skin types (Fitzpatrick I-VI), with protocols calibrated to each client's tone and concerns. Every treatment is performed by Kiki, a California licensed esthetician with 7+ years of experience.`,
@@ -532,8 +532,8 @@ export const hydrafacialAreas: HydrafacialArea[] = [
       body: `Midway District connects Point Loma, Harbor Island, and Old Town - a convenient central location for working professionals. KIAMO Skin is equipped with HydraFacial Syndeo, the latest generation device with AI-powered skin analysis. The 8-minute drive from Midway via Rosecrans or Sports Arena Boulevard makes regular monthly maintenance realistic. Unlike chain locations with rotating staff, you see the same licensed esthetician every visit in a private one-room studio.`,
     },
     uniqueness: {
-      heading: 'Why Midway District clients choose KIAMO',
-      body: `Midway District professionals value proximity and consistency. KIAMO's HydraFacial approach offers:`,
+      heading: 'Why Midway District clients choose KIAMO Skin',
+      body: `Midway District professionals value proximity and consistency. KIAMO Skin's HydraFacial approach offers:`,
       bullets: [
         'Same-day and next-day appointments for busy schedules',
         'One esthetician (Kiki) - not delegated to junior staff or rotating providers',
@@ -562,7 +562,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
     },
     intent: {
       heading: 'Who books HydraFacial in Midway District',
-      body: `Midway District clients typically work in the Sports Arena corridor or live in nearby apartment communities. They book HydraFacial for monthly maintenance, pre-event preparation, or as the foundation of a corrective plan addressing congestion, dehydration, or uneven texture. The treatment is ideal for busy professionals who want visible results without downtime - no purging period, no redness, and safe for all skin tones. Many choose KIAMO specifically for the melanin-rich skin expertise, ensuring zero risk of post-inflammatory hyperpigmentation.`,
+      body: `Midway District clients typically work in the Sports Arena corridor or live in nearby apartment communities. They book HydraFacial for monthly maintenance, pre-event preparation, or as the foundation of a corrective plan addressing congestion, dehydration, or uneven texture. The treatment is ideal for busy professionals who want visible results without downtime - no purging period, no redness, and safe for all skin tones. Many choose KIAMO Skin specifically for the melanin-rich skin expertise, ensuring zero risk of post-inflammatory hyperpigmentation.`,
     },
     gettingHere: `From Midway District, take Rosecrans Street east toward Old Town, continue to Washington Street and turn left. The studio is at 3067 Reynard Way, first left after the commercial strip. About 8 minutes. From Sports Arena Boulevard, head east to Rosecrans, turn left, continue to Washington and turn left. From the Point Loma side of Midway, take Midway Drive to Rosecrans. Free parking on site.`,
     landmarks: [
@@ -596,15 +596,15 @@ export const hydrafacialAreas: HydrafacialArea[] = [
       },
       {
         question: 'Is HydraFacial safe for darker skin tones in Midway?',
-        answer: `Yes. HydraFacial is safe for all Fitzpatrick types (I-VI) including melanin-rich skin. It uses gentle suction and hydration with zero risk of post-inflammatory hyperpigmentation. KIAMO specializes in melanin-rich skin - Kiki has 7+ years of experience customizing treatments for darker skin tones.`,
+        answer: `Yes. HydraFacial is safe for all Fitzpatrick types (I-VI) including melanin-rich skin. It uses gentle suction and hydration with zero risk of post-inflammatory hyperpigmentation. KIAMO Skin specializes in melanin-rich skin - Kiki has 7+ years of experience customizing treatments for darker skin tones.`,
       },
       {
         question: 'Can I get a same-day HydraFacial appointment near Midway?',
         answer: `Same-day appointments are often available at KIAMO Skin, just 8 minutes from Midway. Call (310) 595-0872 or request online. The single-room studio means limited daily availability, so booking ahead is recommended for specific times.`,
       },
       {
-        question: 'What makes KIAMO different from chain HydraFacial locations?',
-        answer: `KIAMO uses HydraFacial Syndeo (latest generation with AI analysis), not older equipment. Every treatment is performed by Kiki, a licensed esthetician with 7+ years specializing in melanin-rich skin - not delegated to junior staff. You see the same practitioner every visit in a private studio, building continuity for corrective work.`,
+        question: 'What makes KIAMO Skin different from chain HydraFacial locations?',
+        answer: `KIAMO Skin uses HydraFacial Syndeo (latest generation with AI analysis), not older equipment. Every treatment is performed by Kiki, a licensed esthetician with 7+ years specializing in melanin-rich skin - not delegated to junior staff. You see the same practitioner every visit in a private studio, building continuity for corrective work.`,
       },
       {
         question: 'How long does a HydraFacial take in Midway District?',
@@ -616,7 +616,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'hillcrest',
     name: 'Hillcrest',
-    title: 'HydraFacial in Hillcrest San Diego - 5 Minutes Away | KIAMO',
+    title: 'HydraFacial in Hillcrest San Diego - 5 Minutes Away | KIAMO Skin',
     description: `HydraFacial treatments for Hillcrest clients at KIAMO Skin, 5 minutes away in Mission Hills. Safe for all skin types (Fitzpatrick I-VI), LGBTQ+ welcoming, licensed esthetician. Book your appointment.`,
     h1: 'HydraFacial in Hillcrest, San Diego',
     intro: `KIAMO Skin provides professional HydraFacial treatments to Hillcrest residents and the surrounding urban village community. Located just 5 minutes away in Mission Hills at 3067 Reynard Way, we're easily accessible via University Avenue or Washington Street. Our clinic provides HydraFacial treatments safe for all skin types (Fitzpatrick I-VI), with protocols calibrated to each client's tone and concerns. Every treatment is performed by Kiki, a California licensed esthetician with 7+ years of experience, in an LGBTQ+ welcoming environment.`,
@@ -626,7 +626,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
     },
     uniqueness: {
       heading: 'HydraFacial for Hillcrest',
-      body: `Hillcrest clients choose KIAMO for professional skincare that respects their individuality. Our HydraFacial approach offers:`,
+      body: `Hillcrest clients choose KIAMO Skin for professional skincare that respects their individuality. Our HydraFacial approach offers:`,
       bullets: [
         'LGBTQ+ welcoming environment - inclusive, judgment-free care',
         'Safe for all skin tones including melanin-rich skin (Fitzpatrick types I-VI)',
@@ -655,7 +655,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
     },
     intent: {
       heading: 'Who books HydraFacial in Hillcrest',
-      body: `Hillcrest clients book HydraFacial for monthly maintenance, pre-event preparation for social gatherings in the community, or as the foundation of a corrective plan addressing congestion, hyperpigmentation, or aging concerns. Many work or live near University Avenue, shop at Whole Foods or Trader Joe's, or frequent the restaurant scene. The treatment is ideal for those who want professional results without downtime - no purging, no redness, safe for all skin tones. Hillcrest's diverse community particularly values KIAMO's melanin-rich skin expertise and LGBTQ+ inclusive environment.`,
+      body: `Hillcrest clients book HydraFacial for monthly maintenance, pre-event preparation for social gatherings in the community, or as the foundation of a corrective plan addressing congestion, hyperpigmentation, or aging concerns. Many work or live near University Avenue, shop at Whole Foods or Trader Joe's, or frequent the restaurant scene. The treatment is ideal for those who want professional results without downtime - no purging, no redness, safe for all skin tones. Hillcrest's diverse community particularly values KIAMO Skin's melanin-rich skin expertise and LGBTQ+ inclusive environment.`,
     },
     gettingHere: `From University Avenue in Hillcrest, head west toward Mission Hills, turn right on Washington Street. The studio is at 3067 Reynard Way, first left after the commercial strip. About 5 minutes. From Fifth Avenue near the Hillcrest sign, take Fifth north to Washington and turn left. From Balboa Park side of Hillcrest, take Park Boulevard to University, continue west to Washington. Free parking on site.`,
     landmarks: [
@@ -694,7 +694,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
       },
       {
         question: 'Is HydraFacial safe for darker skin tones in Hillcrest?',
-        answer: `Yes. HydraFacial is safe for all Fitzpatrick types (I-VI) including melanin-rich skin. It uses gentle suction and hydration with zero risk of post-inflammatory hyperpigmentation. KIAMO specializes in melanin-rich skin - Kiki customizes every treatment to your specific tone and concerns.`,
+        answer: `Yes. HydraFacial is safe for all Fitzpatrick types (I-VI) including melanin-rich skin. It uses gentle suction and hydration with zero risk of post-inflammatory hyperpigmentation. KIAMO Skin specializes in melanin-rich skin - Kiki customizes every treatment to your specific tone and concerns.`,
       },
       {
         question: 'Can I get evening appointments near Hillcrest?',
@@ -710,7 +710,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'gaslamp-quarter',
     name: 'Gaslamp Quarter',
-    title: 'HydraFacial in Gaslamp Quarter San Diego - Pre-Event Glow | KIAMO',
+    title: 'HydraFacial in Gaslamp Quarter San Diego - Pre-Event Glow | KIAMO Skin',
     description: `HydraFacial treatments for Gaslamp Quarter clients. Pre-event glow for San Diego nightlife, 7 minutes from KIAMO Skin. Safe for all skin types (Fitzpatrick I-VI), same-day appointments.`,
     h1: 'HydraFacial in Gaslamp Quarter, San Diego',
     intro: `KIAMO Skin provides professional HydraFacial treatments to Gaslamp Quarter clients preparing for events, nightlife, and social occasions. Located just 7 minutes away in Mission Hills at 3067 Reynard Way, we're easily accessible from Fifth Avenue and the historic entertainment district. Our clinic specializes in pre-event HydraFacial treatments that deliver instant glow, safe for all skin types (Fitzpatrick I-VI). Every treatment is performed by Kiki, a California licensed esthetician with 7+ years of experience.`,
@@ -780,7 +780,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
     faqs: [
       {
         question: 'Can I get HydraFacial the same day as a Gaslamp event?',
-        answer: `Yes. HydraFacial has zero downtime - you can attend your Gaslamp event immediately after treatment. Skin may look slightly flushed for 30-60 minutes, but the glow is instant. Many clients come directly from KIAMO to their Fifth Avenue venue. Book same-day appointments by calling (310) 595-0872.`,
+        answer: `Yes. HydraFacial has zero downtime - you can attend your Gaslamp event immediately after treatment. Skin may look slightly flushed for 30-60 minutes, but the glow is instant. Many clients come directly from KIAMO Skin to their Fifth Avenue venue. Book same-day appointments by calling (310) 595-0872.`,
       },
       {
         question: 'How far is KIAMO Skin from the Gaslamp Quarter?',
@@ -792,7 +792,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
       },
       {
         question: 'Is HydraFacial safe for darker skin tones before Gaslamp events?',
-        answer: `Yes. HydraFacial is safe for all Fitzpatrick types (I-VI) including melanin-rich skin. It uses gentle suction and hydration with zero risk of post-inflammatory hyperpigmentation or redness that would interfere with your Gaslamp event. KIAMO specializes in melanin-rich skin.`,
+        answer: `Yes. HydraFacial is safe for all Fitzpatrick types (I-VI) including melanin-rich skin. It uses gentle suction and hydration with zero risk of post-inflammatory hyperpigmentation or redness that would interfere with your Gaslamp event. KIAMO Skin specializes in melanin-rich skin.`,
       },
       {
         question: 'How long does the HydraFacial glow last for Gaslamp events?',
@@ -804,7 +804,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'pacific-beach',
     name: 'Pacific Beach',
-    title: 'HydraFacial in Pacific Beach San Diego - Coastal Skin Specialists | KIAMO',
+    title: 'HydraFacial in Pacific Beach San Diego - Coastal Skin Specialists | KIAMO Skin',
     description: 'Professional HydraFacial treatments serving Pacific Beach. 15 minutes from KIAMO Skin in Mission Hills. Salt air, UV, and beach-lifestyle skin specialists. Safe for all skin types (Fitzpatrick I-VI). Book today.',
     h1: 'HydraFacial in Pacific Beach, San Diego',
     intro: `KIAMO Skin provides HydraFacial treatments to Pacific Beach clients living the coastal lifestyle between Crystal Pier and Tourmaline Surfing Park. Located about 15 minutes away in Mission Hills at 3067 Reynard Way, our studio addresses the specific skin challenges that come with daily beach exposure - salt air, UV reflection off the water, sunscreen buildup, and the dehydration that ocean wind creates. Every HydraFacial is performed by Kiki, a California licensed esthetician with 7+ years of experience, safe for all skin types (Fitzpatrick I-VI).`,
@@ -814,7 +814,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
     },
     uniqueness: {
       heading: 'HydraFacial for beach-lifestyle skin',
-      body: `Pacific Beach clients face skin challenges that inland neighborhoods do not. Daily exposure to salt air, UV reflection off the water, sunscreen and zinc oxide buildup from beach days, and the dehydration that ocean wind creates all need specific treatment. KIAMO's HydraFacial approach for Pacific Beach addresses:`,
+      body: `Pacific Beach clients face skin challenges that inland neighborhoods do not. Daily exposure to salt air, UV reflection off the water, sunscreen and zinc oxide buildup from beach days, and the dehydration that ocean wind creates all need specific treatment. KIAMO Skin's HydraFacial approach for Pacific Beach addresses:`,
       bullets: [
         'Salt air dehydration - ocean wind and salt strip the skin barrier with every beach day',
         'Sunscreen and zinc oxide buildup - mineral and chemical SPF accumulates in pores along the hairline, forehead, and neck',
@@ -824,7 +824,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
       ],
     },
     depth: {
-      heading: 'The HydraFacial process at KIAMO for coastal skin',
+      heading: 'The HydraFacial process at KIAMO Skin for coastal skin',
       body: `HydraFacial combines cleansing, extraction, and intensive hydration in one 45-minute session using patented Vortex-Fusion technology - ideal for Pacific Beach skin dealing with constant salt, sunscreen, and sun exposure. Anti-aging hydrafacial in Pacific Beach is one of the most common requests we see, particularly from clients who have spent years on the boardwalk, in the water, or running the seawall and now want to address the photoaging that lifestyle produces.`,
       process: [
         {
@@ -882,7 +882,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
       },
       {
         question: 'Is HydraFacial safe for darker skin tones in Pacific Beach?',
-        answer: `Yes. HydraFacial is safe for all Fitzpatrick types (I-VI) including melanin-rich skin. It uses gentle suction and hydration with zero risk of post-inflammatory hyperpigmentation. KIAMO specializes in melanin-rich skin - Kiki has 7+ years of experience customizing treatments for every skin tone, and the protocol is the same regardless of beach exposure level.`,
+        answer: `Yes. HydraFacial is safe for all Fitzpatrick types (I-VI) including melanin-rich skin. It uses gentle suction and hydration with zero risk of post-inflammatory hyperpigmentation. KIAMO Skin specializes in melanin-rich skin - Kiki has 7+ years of experience customizing treatments for every skin tone, and the protocol is the same regardless of beach exposure level.`,
       },
       {
         question: 'Can HydraFacial help with sun damage from beach living in Pacific Beach?',

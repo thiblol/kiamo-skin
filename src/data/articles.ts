@@ -84,7 +84,7 @@ export const articles: Article[] = [
         p: 'Almost everyone who books here for pigmentation arrives with a product that did not work. Usually a brightening serum, sometimes a hydroquinone cream bought without guidance, occasionally the aftermath of a peel somewhere else that left the marks darker than before. The product is rarely the problem. The problem is that three different conditions produce brown patches on a face, they look similar enough to confuse, and the treatment that clears one can visibly worsen another.',
       },
       {
-        p: 'So before choosing a treatment, it is worth working out which one you actually have. KIAMO offers <a href="/hyperpigmentation-treatment/">hyperpigmentation treatment across San Diego neighborhoods</a> from the Mission Hills studio, with protocols calibrated for each presentation.',
+        p: 'So before choosing a treatment, it is worth working out which one you actually have. KIAMO Skin offers <a href="/hyperpigmentation-treatment/">hyperpigmentation treatment across San Diego neighborhoods</a> from the Mission Hills studio, with protocols calibrated for each presentation.',
       },
 
       { h2: 'What are the three kinds of hyperpigmentation?' },
@@ -482,7 +482,7 @@ export const articles: Article[] = [
           'Microchanneling creates controlled microchannels and delivers a growth factor serum through them, without heat and without light. A needle pen relies on adjustable needle depth to create the injury, and that depth is the variable most associated with pigment change on deeper skin tones.',
       },
       {
-        p: 'KIAMO SKIN does not perform needle-pen microneedling. The treatment offered here is <a href="/treatments/procell-microchanneling/">Procell microchanneling</a>, and that distinction is worth stating rather than blurring, because people arrive asking for one and are offered the other. Anyone who wants a needle pen specifically is better served booking somewhere that performs one.',
+        p: 'KIAMO Skin does not perform needle-pen microneedling. The treatment offered here is <a href="/treatments/procell-microchanneling/">Procell microchanneling</a>, and that distinction is worth stating rather than blurring, because people arrive asking for one and are offered the other. Anyone who wants a needle pen specifically is better served booking somewhere that performs one.',
       },
       {
         p: 'Microchanneling works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger. Depth is still adjusted across the face — deeper where correction is needed, lighter where skin is naturally thinner — and a growth factor serum is applied throughout rather than afterwards.',
@@ -506,7 +506,7 @@ export const articles: Article[] = [
       { h2: 'How much does microneedling cost in San Diego?' },
       {
         answer:
-          'Procell microchanneling at KIAMO SKIN is $475 for a single treatment, or $1,199 for a series of three. Most corrective plans use a series rather than one session, spaced four to six weeks apart.',
+          'Procell microchanneling at KIAMO Skin is $475 for a single treatment, or $1,199 for a series of three. Most corrective plans use a series rather than one session, spaced four to six weeks apart.',
       },
       {
         p: 'Published prices are unusual in this market. Most studios and med spas ask you to enquire, which makes comparing anything difficult and tends to work in the seller\'s favour. The series price exists because a single session rarely completes the work on scarring or texture, and quoting only the single-session figure would understate what correction actually costs.',
@@ -524,7 +524,7 @@ export const articles: Article[] = [
         p: 'Vague answers on either point are the signal worth acting on. Depth is the variable the literature keeps returning to, so a provider who has not thought about it for your skin specifically has not thought about your skin specifically.',
       },
       {
-        p: 'KIAMO SKIN is a private, single-practitioner studio in Mission Hills, San Diego, where <a href="/melanin-rich-skin/">melanin-rich skin is the whole practice rather than a service line</a>. Treatment is one-to-one with a licensed esthetician, in one room, with free parking on site. Clients travel in <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">from across San Diego County</a>, including <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista</a> and <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a>—inland areas where more clear days mean more cumulative UV year after year—for exactly this reason.',
+        p: 'KIAMO Skin is a private, single-practitioner studio in Mission Hills, San Diego, where <a href="/melanin-rich-skin/">melanin-rich skin is the whole practice rather than a service line</a>. Treatment is one-to-one with a licensed esthetician, in one room, with free parking on site. Clients travel in <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">from across San Diego County</a>, including <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista</a> and <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a>—inland areas where more clear days mean more cumulative UV year after year—for exactly this reason.',
       },
     ],
     faqHeading: 'Microneedling questions',
@@ -547,12 +547,12 @@ export const articles: Article[] = [
       {
         question: 'Can Black people have RF microneedling?',
         answer:
-          'Radiofrequency microneedling adds heat to the mechanical injury, and heat is itself a pigment trigger in melanin-rich skin, so it is a question worth putting directly to a provider who performs it. It is not offered at KIAMO SKIN. Procell microchanneling is used here instead, and it works without heat or light.',
+          'Radiofrequency microneedling adds heat to the mechanical injury, and heat is itself a pigment trigger in melanin-rich skin, so it is a question worth putting directly to a provider who performs it. It is not offered at KIAMO Skin. Procell microchanneling is used here instead, and it works without heat or light.',
       },
       {
         question: 'How much do three sessions of microneedling cost?',
         answer:
-          'At KIAMO SKIN, a series of three Procell microchanneling treatments is $1,199 and a single treatment is $475. A series spaced four to six weeks apart is the usual plan for scarring and texture, because one session rarely completes the work.',
+          'At KIAMO Skin, a series of three Procell microchanneling treatments is $1,199 and a single treatment is $475. A series spaced four to six weeks apart is the usual plan for scarring and texture, because one session rarely completes the work.',
       },
       {
         question: 'What is the best facial treatment for Black skin?',
@@ -590,7 +590,7 @@ export const articles: Article[] = [
         p: 'The safety distinction matters because melanin-rich skin responds to injury differently. When melanocytes are triggered by inflammation, they overproduce pigment — a well-documented mechanism covered in the <a href="https://jcadonline.com/postinflammatory-hyperpigmentation-a-review-of-the-epidemiology-clinical-features-and-treatment-options-in-skin-of-color/" rel="noopener" target="_blank">Journal of Clinical and Aesthetic Dermatology review of PIH in skin of color</a>. Dermaplaning carries no heat and no chemical load, which removes the two most common triggers for that response.',
       },
       {
-        p: 'The <a href="/treatments/dermaplaning/">dermaplane facial at KIAMO SKIN</a> is performed by a licensed esthetician on a dry surface, section by section, with active or inflamed areas worked around rather than over.',
+        p: 'The <a href="/treatments/dermaplaning/">dermaplane facial at KIAMO Skin</a> is performed by a licensed esthetician on a dry surface, section by section, with active or inflamed areas worked around rather than over.',
       },
       { h2: 'What makes dermaplaning risky, and what removes that risk?' },
       {
@@ -643,7 +643,7 @@ export const articles: Article[] = [
             ['Heat or chemical exposure', 'None', 'Acid — strength matched to your skin on the day'],
             ['PIH risk on dark skin', 'Low when technique is correct', 'Higher if unprepared or too strong'],
             ['Best use', 'Maintenance, event prep, between peel appointments', 'Corrective series over multiple visits'],
-            ['At KIAMO SKIN', '$199', '$199 Gentle Renewal · $299 Advanced'],
+            ['At KIAMO Skin', '$199', '$199 Gentle Renewal · $299 Advanced'],
           ],
         },
       },
@@ -678,10 +678,10 @@ export const articles: Article[] = [
       { h2: 'How much does dermaplaning cost in San Diego?' },
       {
         answer:
-          'The Dermaplane Facial at KIAMO SKIN is $199, performed by a licensed esthetician in Mission Hills, San Diego.',
+          'The Dermaplane Facial at KIAMO Skin is $199, performed by a licensed esthetician in Mission Hills, San Diego.',
       },
       {
-        p: 'Dermaplaning in San Diego ranges from roughly $80 to $200 depending on provider type and what is included. At KIAMO SKIN the $199 treatment is a full facial — cleanse, dermaplane, treatment serums while absorption is at its highest, and SPF to close. Published prices are unusual in this market. What is listed here is verified, not approximate.',
+        p: 'Dermaplaning in San Diego ranges from roughly $80 to $200 depending on provider type and what is included. At KIAMO Skin the $199 treatment is a full facial — cleanse, dermaplane, treatment serums while absorption is at its highest, and SPF to close. Published prices are unusual in this market. What is listed here is verified, not approximate.',
       },
       {
         p: 'The studio is in Mission Hills, five minutes from Hillcrest, Bankers Hill and Little Italy, with free parking. Clients travel <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">from across San Diego County</a>—<a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park clients</a> are ten minutes away with no freeway, while coastal areas like Pacific Beach and La Jolla are fifteen to twenty minutes. That proximity makes regular dermaplaning between peel appointments realistic rather than aspirational. Appointments are request-based. San Diego\'s UV index runs 8 to 10 from April through October—freshly dermaplaned skin has a temporarily reduced surface barrier, and applying SPF before you leave is part of the service. The <a href="/journal/june-gloom-is-not-sun-protection/">June Gloom piece</a> covers why that applies even on overcast San Diego mornings.',
@@ -712,7 +712,7 @@ export const articles: Article[] = [
       {
         question: 'How much does a dermaplaning facial cost in San Diego?',
         answer:
-          'The Dermaplane Facial at KIAMO SKIN is $199. The treatment includes cleanse, dermaplaning, treatment serums and SPF. Most San Diego providers charge between $80 and $200.',
+          'The Dermaplane Facial at KIAMO Skin is $199. The treatment includes cleanse, dermaplaning, treatment serums and SPF. Most San Diego providers charge between $80 and $200.',
       },
       {
         question: 'Who should avoid dermaplaning?',
@@ -734,7 +734,7 @@ export const articles: Article[] = [
     description:
       'Expert scalp treatment in Mission Hills, San Diego. Keravive therapy addresses dandruff, flaking, seborrheic dermatitis, dry scalp & hair thinning at the source. Book your consultation.',
     standfirst:
-      'Looking for professional scalp treatment in San Diego? KIAMO SKIN offers Keravive therapy for dandruff, seborrheic dermatitis, dry scalp, and hair thinning. While over-the-counter shampoos treat surface symptoms, Keravive addresses the root cause.',
+      'Looking for professional scalp treatment in San Diego? KIAMO Skin offers Keravive therapy for dandruff, seborrheic dermatitis, dry scalp, and hair thinning. While over-the-counter shampoos treat surface symptoms, Keravive addresses the root cause.',
     readingTime: '12 min read',
     datePublished: '2026-08-20',
     dateModified: '2026-08-20',
@@ -742,7 +742,7 @@ export const articles: Article[] = [
     imageAlt: 'HydraFacial Keravive scalp treatment device working through sectioned hair at the scalp',
     body: [
       {
-        p: 'Looking for professional scalp treatment in San Diego? If you\'ve been rotating through Head & Shoulders, Nizoral, and Selsun Blue for months and still see flakes, the problem isn\'t the shampoo you chose. Over-the-counter shampoos treat surface symptoms. Professional Keravive scalp therapy at KIAMO SKIN addresses the root cause: buildup, congestion, and inflammation below the surface that at-home products simply can\'t reach.',
+        p: 'Looking for professional scalp treatment in San Diego? If you\'ve been rotating through Head & Shoulders, Nizoral, and Selsun Blue for months and still see flakes, the problem isn\'t the shampoo you chose. Over-the-counter shampoos treat surface symptoms. Professional Keravive scalp therapy at KIAMO Skin addresses the root cause: buildup, congestion, and inflammation below the surface that at-home products simply can\'t reach.',
       },
       { h2: 'Why San Diego residents need professional scalp treatment' },
       {
@@ -899,7 +899,7 @@ export const articles: Article[] = [
         ],
       },
       {
-        p: 'The <a href="/treatments/keravive-scalp/">Keravive scalp treatment</a> at KIAMO removes years of product, oil, and mineral buildup in a single session--something no at-home shampoo can do. Clients from La Jolla to Carlsbad come in after their dermatologist prescribed medicated shampoo that didn\'t solve the underlying scalp congestion. Once the buildup is cleared, medicated shampoo actually works again.',
+        p: 'The <a href="/treatments/keravive-scalp/">Keravive scalp treatment</a> at KIAMO Skin removes years of product, oil, and mineral buildup in a single session--something no at-home shampoo can do. Clients from La Jolla to Carlsbad come in after their dermatologist prescribed medicated shampoo that didn\'t solve the underlying scalp congestion. Once the buildup is cleared, medicated shampoo actually works again.',
       },
       { h2: 'What is professional scalp treatment for dandruff?' },
       {
@@ -995,7 +995,7 @@ export const articles: Article[] = [
   {
     slug: 'san-diego-scalp-treatments-how-keravive-works',
     headline: 'San Diego Scalp Treatments: How Does Keravive Work?',
-    title: 'San Diego Scalp Treatments: How Does Keravive Work? | KIAMO SKIN',
+    title: 'San Diego Scalp Treatments: How Does Keravive Work? | KIAMO Skin',
     description:
       'How Keravive scalp treatment works for San Diego residents dealing with hard water buildup, ocean salt, and sun damage. The 3-step process explained by a licensed esthetician.',
     standfirst:
@@ -1021,7 +1021,7 @@ export const articles: Article[] = [
         p: 'The treatment addresses what at-home products can\'t: deep-seated congestion below the scalp surface. While medicated shampoos treat symptoms on the surface, Keravive targets the root cause—follicle congestion, mineral deposits, and inflammation that prevent your scalp from functioning properly.',
       },
       {
-        p: 'Keravive is performed at KIAMO SKIN in Mission Hills, serving clients from Pacific Beach, La Jolla, Del Mar, Encinitas, and Carlsbad. Every treatment is one-to-one with Kiki, a licensed esthetician.',
+        p: 'Keravive is performed at KIAMO Skin in Mission Hills, serving clients from Pacific Beach, La Jolla, Del Mar, Encinitas, and Carlsbad. Every treatment is one-to-one with Kiki, a licensed esthetician.',
       },
       { h2: 'How does Keravive work?' },
       {
@@ -1119,13 +1119,13 @@ export const articles: Article[] = [
       { h2: 'How much does Keravive cost in San Diego?' },
       {
         answer:
-          'A single Keravive treatment at KIAMO SKIN is $599. The three-treatment series is $1,499, which is how most scalp concerns are addressed. Each treatment includes a thirty-day supply of take-home peptide spray.',
+          'A single Keravive treatment at KIAMO Skin is $599. The three-treatment series is $1,499, which is how most scalp concerns are addressed. Each treatment includes a thirty-day supply of take-home peptide spray.',
       },
       {
         p: 'The series format exists because scalp dysfunction rarely resolves in one session. The first treatment clears accumulated buildup; the second and third treatments address new buildup while continuing to support scalp health. By the third session, the scalp is clear and the maintenance interval is established.',
       },
       {
-        p: '<a href="/treatments/keravive-scalp/">Book a Keravive consultation at KIAMO SKIN in Mission Hills.</a> The studio serves Pacific Beach, La Jolla, Del Mar, Encinitas, Carlsbad, Mission Valley, and North Park.',
+        p: '<a href="/treatments/keravive-scalp/">Book a Keravive consultation at KIAMO Skin in Mission Hills.</a> The studio serves Pacific Beach, La Jolla, Del Mar, Encinitas, Carlsbad, Mission Valley, and North Park.',
       },
     ],
     faqs: [
@@ -1160,7 +1160,7 @@ export const articles: Article[] = [
   {
     slug: 'hyperpigmentation-treatment-guide',
     headline: 'Hyperpigmentation Treatment Guide: What Actually Works for Dark Spots, Melasma & PIH',
-    title: 'Hyperpigmentation Treatment: What Works for Dark Spots | KIAMO',
+    title: 'Hyperpigmentation Treatment: What Works for Dark Spots | KIAMO Skin',
     description:
       'Evidence-based guide to treating hyperpigmentation, melasma and PIH. Learn which ingredients work, safe treatments for darker skin, and realistic timelines.',
     standfirst:
@@ -1220,7 +1220,7 @@ export const articles: Article[] = [
         p: 'Dermal pigmentation appears blue-gray under Wood\'s lamp and sits too deep for topical ingredients to reach effectively. This type requires professional treatments like <a href="/treatments/lira-peels/">chemical peels</a> that can reach the dermal layer. Even with professional intervention, expect 6-12 months for significant improvement.',
       },
       {
-        p: 'At KIAMO, we have seen remarkable transformations in patients who commit to comprehensive pigmentation protocols. One San Diego patient achieved dramatic improvement in stubborn melasma and post-inflammatory hyperpigmentation over several months using a multi-modal approach: prescription-strength topicals, professional treatments, and strict photoprotection. The before photos showed significant dark patches across the cheeks and forehead. After consistent treatment with medical-grade lightening agents, a series of targeted chemical peels, and unwavering commitment to mineral sunscreen with iron oxides, the improvement was striking: visibly clearer, more even-toned skin with the majority of the hyperpigmentation faded.',
+        p: 'At KIAMO Skin, we have seen remarkable transformations in patients who commit to comprehensive pigmentation protocols. One San Diego patient achieved dramatic improvement in stubborn melasma and post-inflammatory hyperpigmentation over several months using a multi-modal approach: prescription-strength topicals, professional treatments, and strict photoprotection. The before photos showed significant dark patches across the cheeks and forehead. After consistent treatment with medical-grade lightening agents, a series of targeted chemical peels, and unwavering commitment to mineral sunscreen with iron oxides, the improvement was striking: visibly clearer, more even-toned skin with the majority of the hyperpigmentation faded.',
       },
       {
         p: 'This transformation exemplifies what is possible when evidence-based treatments meet patient dedication. The key factors in success: starting with realistic expectations (6-12 months for significant improvement, not 6 weeks), understanding that melasma requires ongoing maintenance rather than a cure, committing to daily sunscreen regardless of weather or plans, and working with a provider who understands the unique challenges of treating pigmentation in melanin-rich skin.',
@@ -1253,7 +1253,7 @@ export const articles: Article[] = [
         p: '<strong>Visible light protection:</strong> UV protection alone is not sufficient for melasma in darker skin tones. Visible light also stimulates melanin production, which is why mineral sunscreens containing iron oxides (which physically block visible light) outperform chemical sunscreens for pigmentation concerns.',
       },
       {
-        p: 'At KIAMO, treating melanin-rich skin is the foundation of the practice. Protocols are modified from the ground up: chemical peels start at lower concentrations with extended intervals between treatments. Pre-treatment always includes tyrosinase inhibitors for 2-4 weeks before any professional treatment. The pacing matters more than the strength—slower, consistent progress prevents the inflammatory cascade that triggers post-inflammatory hyperpigmentation in reactive skin.',
+        p: 'At KIAMO Skin, treating melanin-rich skin is the foundation of the practice. Protocols are modified from the ground up: chemical peels start at lower concentrations with extended intervals between treatments. Pre-treatment always includes tyrosinase inhibitors for 2-4 weeks before any professional treatment. The pacing matters more than the strength—slower, consistent progress prevents the inflammatory cascade that triggers post-inflammatory hyperpigmentation in reactive skin.',
       },
       {
         p: 'This specialized approach means treatments that would be standard for lighter skin tones are carefully recalibrated for Fitzpatrick IV-VI patients, prioritizing safety and long-term results over aggressive quick fixes that often backfire. The studio does not use one-size-fits-all protocols—every treatment plan is adjusted based on the client\'s specific Fitzpatrick type, pigmentation depth (epidermal versus dermal), trigger factors (hormonal, inflammatory, UV), and treatment history.',
@@ -1315,13 +1315,13 @@ export const articles: Article[] = [
           'Chemical peels, microneedling, and laser treatments accelerate pigmentation improvement when combined with medical-grade topicals, with <a href="https://jcadonline.com/combination-approach-to-hyperpigmentation-unveiling-enhanced-aesthetic-results/" rel="noopener" target="_blank">combination protocols showing 94% patient preference</a> over single modalities. Treatment selection depends on pigmentation type, skin tone, and depth.',
       },
       {
-        p: 'KIAMO\'s chemical peel protocols prioritize safety for all skin tones. The Lira Gentle Renewal Peel ($199) uses lactic acid, mandelic acid, and kojic acid—larger-molecule acids that penetrate more slowly and carry lower PIH risk for melanin-rich skin. For more advanced concerns, the Lira Advanced Peel ($299) layers multiple mechanisms while maintaining controlled depth. Every peel includes mandatory pre-treatment: clients use tyrosinase inhibitors for 2-4 weeks before their first peel. Treatments are spaced 6-8 weeks apart rather than the typical 4 weeks. Results appear gradually: most clients see measurable improvement after 3-4 treatments in a series.',
+        p: 'KIAMO Skin\'s chemical peel protocols prioritize safety for all skin tones. The Lira Gentle Renewal Peel ($199) uses lactic acid, mandelic acid, and kojic acid—larger-molecule acids that penetrate more slowly and carry lower PIH risk for melanin-rich skin. For more advanced concerns, the Lira Advanced Peel ($299) layers multiple mechanisms while maintaining controlled depth. Every peel includes mandatory pre-treatment: clients use tyrosinase inhibitors for 2-4 weeks before their first peel. Treatments are spaced 6-8 weeks apart rather than the typical 4 weeks. Results appear gradually: most clients see measurable improvement after 3-4 treatments in a series.',
       },
       {
-        p: 'KIAMO\'s <a href="/treatments/procell-microchanneling/">Procell Microchanneling</a> ($475 per session, or $1,199 for a series of 3) combines controlled micro-injury with targeted serum infusion. The treatment creates precise microchannels in the skin, triggering collagen production while allowing up to 1000x better penetration of corrective serums. During treatment, growth factor serums and skin brightening actives are applied directly into these channels—ingredients like tranexamic acid, vitamin C, and peptides reach depths that topical application alone cannot achieve. The procedure is safe for all skin tones and generates minimal heat. Downtime is minimal: redness for 24-48 hours. Most clients achieve optimal results with 3-6 sessions spaced 4-6 weeks apart.',
+        p: 'KIAMO Skin\'s <a href="/treatments/procell-microchanneling/">Procell Microchanneling</a> ($475 per session, or $1,199 for a series of 3) combines controlled micro-injury with targeted serum infusion. The treatment creates precise microchannels in the skin, triggering collagen production while allowing up to 1000x better penetration of corrective serums. During treatment, growth factor serums and skin brightening actives are applied directly into these channels—ingredients like tranexamic acid, vitamin C, and peptides reach depths that topical application alone cannot achieve. The procedure is safe for all skin tones and generates minimal heat. Downtime is minimal: redness for 24-48 hours. Most clients achieve optimal results with 3-6 sessions spaced 4-6 weeks apart.',
       },
       {
-        p: 'KIAMO does not currently offer laser treatments—and that is intentional. The studio specializes in non-laser modalities that carry significantly lower risk for melanin-rich skin: chemical peels formulated for deeper skin tones, <a href="/treatments/procell-microchanneling/">Procell Microchanneling</a>, and medical-grade topical protocols. This approach eliminates the post-inflammatory hyperpigmentation risk that even newer picosecond lasers can trigger in reactive melanocytes.',
+        p: 'KIAMO Skin does not currently offer laser treatments—and that is intentional. The studio specializes in non-laser modalities that carry significantly lower risk for melanin-rich skin: chemical peels formulated for deeper skin tones, <a href="/treatments/procell-microchanneling/">Procell Microchanneling</a>, and medical-grade topical protocols. This approach eliminates the post-inflammatory hyperpigmentation risk that even newer picosecond lasers can trigger in reactive melanocytes.',
       },
 
       { h3: 'Understanding laser technology for pigmentation' },
@@ -1397,7 +1397,7 @@ export const articles: Article[] = [
         p: '<strong>Common mistakes that cause recurrence:</strong> Stopping sunscreen after improvement; discontinuing all actives once pigmentation fades; one sunburn undoing months of progress; picking and touching affected areas; using irritating products that trigger inflammation; hormonal changes (starting or stopping birth control, pregnancy, menopause).',
       },
       {
-        p: 'KIAMO\'s long-term maintenance protocols focus on sustainable management rather than aggressive cycles that lead to burnout. After achieving significant improvement (typically 60-80% lightening after 4-6 months of active treatment), clients transition to a maintenance phase: prescription retinoid 2-3 nights per week to maintain cell turnover, vitamin C or niacinamide serum every morning for ongoing tyrosinase inhibition, and mineral sunscreen with iron oxides as a non-negotiable daily step.',
+        p: 'KIAMO Skin\'s long-term maintenance protocols focus on sustainable management rather than aggressive cycles that lead to burnout. After achieving significant improvement (typically 60-80% lightening after 4-6 months of active treatment), clients transition to a maintenance phase: prescription retinoid 2-3 nights per week to maintain cell turnover, vitamin C or niacinamide serum every morning for ongoing tyrosinase inhibition, and mineral sunscreen with iron oxides as a non-negotiable daily step.',
       },
       {
         p: 'Professional maintenance involves quarterly chemical peels (every 12-16 weeks) rather than monthly treatments, with Procell Microchanneling sessions 2-3 times yearly to sustain collagen production and prevent regression. The clients who maintain their results long-term are the ones who accept that pigmentation management is ongoing—not a 3-month sprint followed by abandoning all protocols.',
@@ -1429,7 +1429,7 @@ export const articles: Article[] = [
           'See a dermatology or aesthetic provider if over-the-counter products have not improved your pigmentation after 12 weeks, if you need prescription-strength treatments, or if you are unsure whether your pigmentation is melasma, PIH, or another condition. Professional evaluation is especially important for melanin-rich skin.',
       },
       {
-        p: 'KIAMO\'s consultation process begins with understanding what you have already tried and why it did not work. The First-Time Client Treatment ($249) is a full corrective facial that also functions as a diagnostic session: skin is analyzed under magnification to assess pigmentation depth (epidermal vs dermal), identify contributing factors, and determine your Fitzpatrick type to ensure safe treatment protocols. This is not a relaxation facial—it is a strategic session where you learn exactly what is causing your pigmentation, which treatments are safe for your skin tone, and what realistic timelines look like. You leave with a phased treatment plan, home care recommendations, and realistic expectations. The studio is located in Mission Hills at 3067 Reynard Way, five minutes from Hillcrest, Bankers Hill, and Little Italy, with free parking. <a href="https://www.vagaro.com/kiamoskin" rel="noopener" target="_blank">Request appointments through Vagaro</a> or call <a href="tel:+13105950872">(310) 595-0872</a>.',
+        p: 'KIAMO Skin\'s consultation process begins with understanding what you have already tried and why it did not work. The First-Time Client Treatment ($249) is a full corrective facial that also functions as a diagnostic session: skin is analyzed under magnification to assess pigmentation depth (epidermal vs dermal), identify contributing factors, and determine your Fitzpatrick type to ensure safe treatment protocols. This is not a relaxation facial—it is a strategic session where you learn exactly what is causing your pigmentation, which treatments are safe for your skin tone, and what realistic timelines look like. You leave with a phased treatment plan, home care recommendations, and realistic expectations. The studio is located in Mission Hills at 3067 Reynard Way, five minutes from Hillcrest, Bankers Hill, and Little Italy, with free parking. <a href="https://www.vagaro.com/kiamoskin" rel="noopener" target="_blank">Request appointments through Vagaro</a> or call <a href="tel:+13105950872">(310) 595-0872</a>.',
       },
     ],
     faqs: [
@@ -1460,7 +1460,7 @@ export const articles: Article[] = [
     slug: 'chemical-peel-cost-san-diego',
     headline: 'How much does a chemical peel cost in San Diego?',
     title: 'Chemical Peel Cost in San Diego | KIAMO Skin',
-    description: 'Chemical peels in San Diego cost $150–$350 at an esthetician studio. KIAMO SKIN charges $199 for the Lira Gentle Renewal Peel and $299 for the Advanced Peel. What drives the price, and which peel is safe on melanin-rich skin.',
+    description: 'Chemical peels in San Diego cost $150–$350 at an esthetician studio. KIAMO Skin charges $199 for the Lira Gentle Renewal Peel and $299 for the Advanced Peel. What drives the price, and which peel is safe on melanin-rich skin.',
     standfirst: 'The price of a chemical peel in San Diego varies by depth, formulation, and whether it is part of a treatment series — but the more important question is which one your skin actually needs.',
     readingTime: '8 min read',
     datePublished: '2026-09-02',
@@ -1482,14 +1482,14 @@ export const articles: Article[] = [
           caption: 'Chemical peel pricing in San Diego by provider type',
           head: ['Provider Type', 'Peel Depth', 'Price Range', 'Example'],
           rows: [
-            ['Esthetician studio', 'Light (superficial)', '$150–$350', 'KIAMO SKIN: $199 (Gentle Renewal), $299 (Advanced)'],
+            ['Esthetician studio', 'Light (superficial)', '$150–$350', 'KIAMO Skin: $199 (Gentle Renewal), $299 (Advanced)'],
             ['Medspa / Dermatology', 'Medium (TCA 10-25%)', '$300–$800', 'Typical San Diego medspa pricing'],
             ['Plastic surgeon', 'Deep (phenol)', '$1,000–$3,000', 'Hospital or surgical center setting'],
           ],
         },
       },
       {
-        p: 'At KIAMO SKIN, the <strong>Lira Gentle Renewal Peel is $199</strong> and the <strong>Advanced Peel is $299</strong>. Both are formulated for melanin-rich skin and designed to be done in a series rather than as one aggressive session. <a href="https://rewindmd.com/chemical-peel-cost-dermatologist/" rel="noopener" target="_blank">Chemical peels are normally listed at $300 in San Diego</a> according to RewindMD, with light peels ranging from $150 to $400. <a href="https://www.belladerma.com/facials-chemical-peels-san-diego-ca/" rel="noopener" target="_blank">Belladerma lists their average starting cost at $150</a> for basic facials with light exfoliation.',
+        p: 'At KIAMO Skin, the <strong>Lira Gentle Renewal Peel is $199</strong> and the <strong>Advanced Peel is $299</strong>. Both are formulated for melanin-rich skin and designed to be done in a series rather than as one aggressive session. <a href="https://rewindmd.com/chemical-peel-cost-dermatologist/" rel="noopener" target="_blank">Chemical peels are normally listed at $300 in San Diego</a> according to RewindMD, with light peels ranging from $150 to $400. <a href="https://www.belladerma.com/facials-chemical-peels-san-diego-ca/" rel="noopener" target="_blank">Belladerma lists their average starting cost at $150</a> for basic facials with light exfoliation.',
       },
       {
         p: 'The national average for a chemical peel procedure is $519 according to the American Society of Plastic Surgeons, but that figure includes deep peels performed by surgeons, which are a completely different category of service. For the light to medium peels most people get at an esthetician or medspa, San Diego pricing sits in the middle of the national range.',
@@ -1512,17 +1512,17 @@ export const articles: Article[] = [
         p: '<a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3560164/" rel="noopener" target="_blank">Deep chemical peels cannot be used in dark-skinned patients</a> owing to the risk of prolonged hyperpigmentation, according to a 2012 NIH study on melasma treatment in melanin-rich skin. <a href="https://www.essence.com/beauty/black-women-chemical-peels-skincare-treatment/" rel="noopener" target="_blank">Essence confirms that deep chemical peels are generally not suitable</a> for darker skin tones in their April 2024 guide for Black women. <a href="https://www.eternaldermatology.com/chemical-peels-for-dark-skin-which-is-best/" rel="noopener" target="_blank">Eternal Dermatology notes that TCA peels at 25% and above</a> cause the most damage to dark skin.',
       },
       {
-        p: 'The Lira Clinical peels used at KIAMO are formulated specifically for controlled-depth resurfacing without the inflammation spike that triggers hyperpigmentation. The Gentle Renewal Peel uses lactic acid, mandelic acid, and kojic acid—ingredients that brighten without penetrating so deeply they cause a wound response. The Advanced Peel adds salicylic acid and a higher concentration of actives, but still stays within the light-to-medium depth range.',
+        p: 'The Lira Clinical peels used at KIAMO Skin are formulated specifically for controlled-depth resurfacing without the inflammation spike that triggers hyperpigmentation. The Gentle Renewal Peel uses lactic acid, mandelic acid, and kojic acid—ingredients that brighten without penetrating so deeply they cause a wound response. The Advanced Peel adds salicylic acid and a higher concentration of actives, but still stays within the light-to-medium depth range.',
       },
       {
         p: '<a href="https://www.worldsfamousdermatologist.com/safe-chemical-peels-for-dark-skin/" rel="noopener" target="_blank">Chemical peels are absolutely safe for dark skin</a> when properly selected and applied by a professional trained in treating skin of color, according to World\'s Famous Dermatologist. <a href="https://www.derrowdermatology.com/are-chemical-peels-safe-for-darker-skin-tones/" rel="noopener" target="_blank">Safe chemical peel practices begin with professional evaluation</a> and proper peel selection tailored to melanin-rich skin, Derrow Dermatology confirms.',
       },
       {
-        p: 'At KIAMO, every client with Fitzpatrick IV-VI skin gets a patch test before the first peel. The studio specializes in melanin-rich skin and understands that the "peel until it hurts" approach used on lighter skin tones does not translate. Clients typically do a series of 4-6 peels spaced 3-4 weeks apart, with each session building on the previous one without triggering inflammation.',
+        p: 'At KIAMO Skin, every client with Fitzpatrick IV-VI skin gets a patch test before the first peel. The studio specializes in melanin-rich skin and understands that the "peel until it hurts" approach used on lighter skin tones does not translate. Clients typically do a series of 4-6 peels spaced 3-4 weeks apart, with each session building on the previous one without triggering inflammation.',
       },
       { h2: 'Which peel is right for your skin concern?' },
       {
-        p: 'For <strong>pigmentation and melasma</strong>, the Lira Advanced Peel is the better choice. It contains kojic acid and mandelic acid, both tyrosinase inhibitors that slow melanin production while exfoliating existing pigment. You\'ll need a series of 4-6 treatments to see significant fading. The <a href="/treatments/melasma/">hyperpigmentation treatment</a> protocol at KIAMO pairs the peel with home care that includes vitamin C, niacinamide, and strict sunscreen use.',
+        p: 'For <strong>pigmentation and melasma</strong>, the Lira Advanced Peel is the better choice. It contains kojic acid and mandelic acid, both tyrosinase inhibitors that slow melanin production while exfoliating existing pigment. You\'ll need a series of 4-6 treatments to see significant fading. The <a href="/treatments/melasma/">hyperpigmentation treatment</a> protocol at KIAMO Skin pairs the peel with home care that includes vitamin C, niacinamide, and strict sunscreen use.',
       },
       {
         p: 'For <strong>post-acne marks and texture</strong>, the Gentle Renewal Peel is a good starting point. It\'s gentle enough to use during active breakouts and helps fade dark spots left behind by inflammation. If you have deeper textural scarring, you\'ll likely graduate to the Advanced Peel after 2-3 sessions.',
@@ -1535,7 +1535,7 @@ export const articles: Article[] = [
         p: 'One peel refreshes. A series corrects. If you\'re dealing with pigmentation, texture, or melasma, plan for 4-6 sessions spaced 3-4 weeks apart. Single-session pigmentation promises are a red flag—melanin-rich skin does not respond well to aggressive one-and-done treatments.',
       },
       {
-        p: 'A series is more cost-effective with a membership. KIAMO\'s <a href="/membership/">monthly facial membership</a> is $199 per month and includes one Lira peel or corrective facial per month. If you\'re doing a 6-session series, membership pricing saves you $600 compared to paying $299 per session.',
+        p: 'A series is more cost-effective with a membership. KIAMO Skin\'s <a href="/membership/">monthly facial membership</a> is $199 per month and includes one Lira peel or corrective facial per month. If you\'re doing a 6-session series, membership pricing saves you $600 compared to paying $299 per session.',
       },
       { h2: 'What should you ask before booking a chemical peel?' },
       {
@@ -1545,20 +1545,20 @@ export const articles: Article[] = [
         p: 'Red flags: providers who show you before/after photos of only light skin, providers who say "all peels are safe for all skin," and providers who promise dramatic results in one session. Chemical peels work through controlled inflammation. On melanin-rich skin, inflammation can trigger hyperpigmentation. The safe approach is to test your skin\'s response with a conservative first peel, then adjust strength based on how you heal.',
       },
       {
-        p: 'At KIAMO, the intake process includes a skin history review, a magnified skin analysis to assess pigmentation depth, and a discussion of what you\'ve tried before and why it didn\'t work. The First-Time Client Treatment ($249) functions as both a diagnostic session and a corrective facial—you leave with a phased treatment plan and realistic timelines, not a sales pitch.',
+        p: 'At KIAMO Skin, the intake process includes a skin history review, a magnified skin analysis to assess pigmentation depth, and a discussion of what you\'ve tried before and why it didn\'t work. The First-Time Client Treatment ($249) functions as both a diagnostic session and a corrective facial—you leave with a phased treatment plan and realistic timelines, not a sales pitch.',
       },
       {
         p: 'The studio is located in Mission Hills at 3067 Reynard Way, five minutes from Hillcrest, Bankers Hill, and Little Italy, with free parking. <a href="https://www.vagaro.com/kiamoskin" rel="noopener" target="_blank">Request appointments through Vagaro</a> or call <a href="tel:+13105950872">(310) 595-0872</a>.',
       },
       { h2: 'Final takeaway' },
       {
-        p: 'Chemical peels in San Diego cost $150 to $350 at an esthetician studio, with the real price driver being the practitioner\'s training and the peel\'s formulation for your skin tone. On melanin-rich skin, the provider matters more than the acid. If you\'re dealing with pigmentation and want to understand which peel makes sense for your concern, <a href="https://www.vagaro.com/kiamoskin" rel="noopener" target="_blank">request a consultation</a> at KIAMO SKIN.',
+        p: 'Chemical peels in San Diego cost $150 to $350 at an esthetician studio, with the real price driver being the practitioner\'s training and the peel\'s formulation for your skin tone. On melanin-rich skin, the provider matters more than the acid. If you\'re dealing with pigmentation and want to understand which peel makes sense for your concern, <a href="https://www.vagaro.com/kiamoskin" rel="noopener" target="_blank">request a consultation</a> at KIAMO Skin.',
       },
     ],
     faqs: [
       {
         question: 'How much does a chemical peel cost in San Diego?',
-        answer: 'A chemical peel in San Diego costs between $150 and $350 at an esthetician studio. At KIAMO SKIN, the Lira Gentle Renewal Peel is $199 and the Advanced Peel is $299. Medspa and dermatology clinics charge $300 to $800 for medium-depth peels.',
+        answer: 'A chemical peel in San Diego costs between $150 and $350 at an esthetician studio. At KIAMO Skin, the Lira Gentle Renewal Peel is $199 and the Advanced Peel is $299. Medspa and dermatology clinics charge $300 to $800 for medium-depth peels.',
       },
       {
         question: 'Are chemical peels safe for Black and brown skin?',
@@ -1594,13 +1594,13 @@ export const articles: Article[] = [
     imageAlt:
       'Melasma patches on the cheek and forehead of a woman with melanin-rich skin, lit by natural window light',
     quickAnswer:
-      'For melasma on melanin-rich skin (Fitzpatrick IV–VI), a superficial-to-medium peel with mandelic or lactic acid at concentrations matched to your skin type is the safe choice, run as a series rather than one strong session. At KIAMO SKIN in Mission Hills, the Lira Gentle Renewal Peel ($199) and Lira Advanced Peel ($299) use mandelic and lactic acids calibrated per skin tone, with tyrosinase-inhibitor prep between sessions and broad-spectrum SPF 50+ with iron oxides daily.',
+      'For melasma on melanin-rich skin (Fitzpatrick IV–VI), a superficial-to-medium peel with mandelic or lactic acid at concentrations matched to your skin type is the safe choice, run as a series rather than one strong session. At KIAMO Skin in Mission Hills, the Lira Gentle Renewal Peel ($199) and Lira Advanced Peel ($299) use mandelic and lactic acids calibrated per skin tone, with tyrosinase-inhibitor prep between sessions and broad-spectrum SPF 50+ with iron oxides daily.',
     body: [
       {
         p: '"Best chemical peel for melasma" is the kind of search that ends in a list of acids and a "consult your provider" footnote. The clinically useful answer is more specific and harder to find: the right peel is the one your skin tone can tolerate every four to six weeks, repeated across a series, with melanin production quieted between sessions. Everything else is packaging.',
       },
       {
-        p: 'This article walks through the four peel families that show up for melasma searches (Cosmelan, glycolic, mandelic, Jessner), what the evidence says about each, and why the safe-on-melanin-rich-skin choice is narrower than the popular list suggests. KIAMO offers <a href="/hyperpigmentation-treatment/">melasma and hyperpigmentation treatment across San Diego neighborhoods</a> from the Mission Hills studio, with the Lira Clinical peels designed around that constraint.',
+        p: 'This article walks through the four peel families that show up for melasma searches (Cosmelan, glycolic, mandelic, Jessner), what the evidence says about each, and why the safe-on-melanin-rich-skin choice is narrower than the popular list suggests. KIAMO Skin offers <a href="/hyperpigmentation-treatment/">melasma and hyperpigmentation treatment across San Diego neighborhoods</a> from the Mission Hills studio, with the Lira Clinical peels designed around that constraint.',
       },
 
       { h2: 'What kinds of peels are used for melasma?' },
@@ -1644,7 +1644,7 @@ export const articles: Article[] = [
         p: 'The consensus in the published literature is converging on a single principle: lower concentration, longer series, with melanin production suppressed between sessions. The <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC5724304/" rel="noopener" target="_blank">2018 Indian Pigmentary Expert Group consensus on chemical peels in melasma</a> explicitly cautions against high-concentration peels in skin of color and recommends escalating-strength protocols across a series rather than aggressive single sessions.',
       },
       {
-        p: 'Notice what the table does not include: TCA at 20 to 35 percent. That is the medium-depth peel most medspas offer, and it is exactly the peel that the systematic review of pigment work in skin of color flagged as the highest-risk intervention. The Lira Clinical peels used at KIAMO do not include it — they stay within the light-to-medium depth range by design.',
+        p: 'Notice what the table does not include: TCA at 20 to 35 percent. That is the medium-depth peel most medspas offer, and it is exactly the peel that the systematic review of pigment work in skin of color flagged as the highest-risk intervention. The Lira Clinical peels used at KIAMO Skin do not include it — they stay within the light-to-medium depth range by design.',
       },
 
       { h2: 'What makes a peel safe on melanin-rich skin?' },
@@ -1707,10 +1707,10 @@ export const articles: Article[] = [
         p: 'A practitioner who works with melanin-rich skin routinely will answer both without hesitating. Vague answers on either point are the signal to walk out. The wrong peel on the wrong skin tone produces exactly the rebound pigment the protocol is trying to clear.',
       },
       {
-        p: 'The deeper consideration is whether a peel is the right tool at all. Melasma that sits too deep for surface treatment, or that is being driven by hormonal medication the patient is still taking, may need prescription-strength intervention or a dermatology referral first. A good peel protocol is part of a broader plan, not the whole plan. <a href="/melanin-rich-skin/">KIAMO\'s practice</a> is built around that framing — melanin-rich skin as the whole discipline rather than a service line — so the answer that gets given at consultation is the one that fits the patient in front of the practitioner.',
+        p: 'The deeper consideration is whether a peel is the right tool at all. Melasma that sits too deep for surface treatment, or that is being driven by hormonal medication the patient is still taking, may need prescription-strength intervention or a dermatology referral first. A good peel protocol is part of a broader plan, not the whole plan. <a href="/melanin-rich-skin/">KIAMO Skin\'s practice</a> is built around that framing — melanin-rich skin as the whole discipline rather than a service line — so the answer that gets given at consultation is the one that fits the patient in front of the practitioner.',
       },
       {
-        p: '<a href="/treatments/lira-peels/">Lira peels at KIAMO</a> are run as part of a pigment workup at consultation, not sold as a standalone fix. The First-Time Client Treatment ($249) is a diagnostic session that ends with a phased plan: home prep, the peel series at the right concentration for your skin, and the maintenance routine that protects the result. The studio is in Mission Hills at 3067 Reynard Way, five minutes from Hillcrest, Bankers Hill, and Little Italy, with free parking.',
+        p: '<a href="/treatments/lira-peels/">Lira peels at KIAMO Skin</a> are run as part of a pigment workup at consultation, not sold as a standalone fix. The First-Time Client Treatment ($249) is a diagnostic session that ends with a phased plan: home prep, the peel series at the right concentration for your skin, and the maintenance routine that protects the result. The studio is in Mission Hills at 3067 Reynard Way, five minutes from Hillcrest, Bankers Hill, and Little Italy, with free parking.',
       },
     ],
     faqHeading: 'Melasma peel questions',
@@ -1890,7 +1890,7 @@ export const articles: Article[] = [
         p: 'The default depth on most microchanneling devices is set for Fitzpatrick I-III skin. Applying that default to Fitzpatrick IV-VI skin produces inconsistent results — sometimes visible improvement, sometimes rebound hyperpigmentation that is worse than the original concern. The protocol for melanin-rich skin stays within a narrower depth window and adjusts per session based on how the first session responded. <a href="/journal/microneedling-on-dark-skin-san-diego/">Microneedling on dark skin</a> is safe when the depth is calibrated, and unsafe when it is not.',
       },
       {
-        p: 'Barrier integrity is a separate variable that affects how the protocol works. Microchanneling on a compromised barrier — skin that is reactive, stinging under moisturizer, or flaking despite hydration — produces unpredictable results. The protocol at KIAMO starts with <a href="/treatments/dmk-enzyme-therapy/" class="border-b border-ink/40 hover:border-rose hover:text-rose">DMK Enzyme Therapy</a> when the barrier is compromised, and the microchanneling begins once the barrier stabilizes. The sequence is the protocol.',
+        p: 'Barrier integrity is a separate variable that affects how the protocol works. Microchanneling on a compromised barrier — skin that is reactive, stinging under moisturizer, or flaking despite hydration — produces unpredictable results. The protocol at KIAMO Skin starts with <a href="/treatments/dmk-enzyme-therapy/" class="border-b border-ink/40 hover:border-rose hover:text-rose">DMK Enzyme Therapy</a> when the barrier is compromised, and the microchanneling begins once the barrier stabilizes. The sequence is the protocol.',
       },
       { h2: 'The realistic timeline for visible change' },
       {
@@ -1925,7 +1925,7 @@ export const articles: Article[] = [
       {
         question: 'Is microchanneling safe for dark skin?',
         answer:
-          'Yes, when the protocol is calibrated for Fitzpatrick IV-VI skin. The default depth on most microchanneling devices is set for Fitzpatrick I-III, and applying that default to melanin-rich skin produces inconsistent results. The protocol at KIAMO stays within a narrower depth window for melanin-rich skin and adjusts per session based on the response. A studio that uses a default depth on darker skin without calibration is the studio to avoid.',
+          'Yes, when the protocol is calibrated for Fitzpatrick IV-VI skin. The default depth on most microchanneling devices is set for Fitzpatrick I-III, and applying that default to melanin-rich skin produces inconsistent results. The protocol at KIAMO Skin stays within a narrower depth window for melanin-rich skin and adjusts per session based on the response. A studio that uses a default depth on darker skin without calibration is the studio to avoid.',
       },
       {
         question: 'Can I get a facial while I still have active acne?',
