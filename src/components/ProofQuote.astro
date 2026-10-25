@@ -1,0 +1,42 @@
+---
+/**
+ * ProofQuote
+ * ---------
+ * A single testimonial, lifted out of the scrolling marquee and set as a
+ * standalone moment.
+ *
+ * Why it exists:
+ *   The homepage kept every one of its 24 quote elements inside one marquee
+ *   block that sits 52% down the page. A reader could scroll from the fold to
+ *   the middle of the page without meeting a single client. Trust has to
+ *   repeat — one proof point after each major section, so no scroll path
+ *   reaches the booking form unaccompanied.
+ *
+ * The quotes placed here are the outcome-stating ones ("my skin has never
+ * looked better", "I wouldn't trust anyone else with my skin"). A quote that
+ * only says "great service" is approval, not proof.
+ *
+ * Visual treatment: the display face at a reading size, a rose rule on the
+ * left, attribution in the small-caps utility style. Quiet, editorial, and
+ * deliberately unlike the marquee cards it comes from.
+ */
+import type { Testimonial } from '../data/testimonials';
+
+interface Props {
+  testimonial: Testimonial;
+  class?: string;
+}
+
+const { testimonial, class: className = '' } = Astro.props;
+---
+
+<figure class={`proof-quote border-l-2 border-rose pl-6 ${className}`}>
+  <blockquote
+    class="font-display text-[1.25rem] font-light leading-[1.4] text-balance text-ink md:text-[1.5rem]"
+  >
+    &ldquo;{testimonial.quote}&rdquo;
+  </blockquote>
+  <figcaption class="t-meta mt-4">
+    &mdash;&nbsp;{testimonial.attribution}{testimonial.platform ? `, ${testimonial.platform}` : ''}
+  </figcaption>
+</figure>

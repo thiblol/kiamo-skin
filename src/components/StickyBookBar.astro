@@ -4,7 +4,13 @@ import { CTA_LABEL } from '../config/nav';
 ---
 
 {/* Dual CTA — T8. Booking is request-based, so a call is the lower-friction
-    half, and mobile is where a tap-to-call is worth most. */}
+    half, and mobile is where a tap-to-call is worth most.
+
+    The bar carries the number itself, not the word "Call". A visible number
+    is what proves a real business is behind the page — and someone who
+    scrolls this far is close to booking, so the number belongs where they
+    are. The label is kept for screen readers only, since the digits are
+    unambiguous to anyone who can see them. */}
 <div
   id="sticky-book"
   data-visible="false"
@@ -21,9 +27,10 @@ import { CTA_LABEL } from '../config/nav';
   </a>
   <a
     href={business.phone.href}
-    class="t-button flex h-[56px] shrink-0 items-center justify-center border-l border-porcelain/25 bg-rose px-6 text-porcelain"
+    class="t-button flex h-[56px] shrink-0 items-center justify-center border-l border-porcelain/25 bg-rose px-4 text-porcelain"
+    onclick="if(typeof gtag !== 'undefined') gtag('event', 'phone_click', {event_category: 'engagement', event_label: 'sticky_bar', transport_type: 'beacon'});"
   >
-    Call
+    <span class="sr-only">Call the studio at </span>{business.phone.display}
   </a>
 </div>
 

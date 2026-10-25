@@ -8,16 +8,42 @@ import Credentials from '../components/sections/Credentials.astro';
 import Positioning from '../components/sections/Positioning.astro';
 import ConcernTiles from '../components/sections/ConcernTiles.astro';
 import ServiceMenu from '../components/sections/ServiceMenu.astro';
-import MeetKiki from '../components/sections/MeetKiki.astro';
+import Outcomes from '../components/sections/Outcomes.astro';
 import Results from '../components/sections/Results.astro';
+import MeetKiki from '../components/sections/MeetKiki.astro';
 import SocialReels from '../components/sections/SocialReels.astro';
 import SanDiegoContext from '../components/sections/SanDiegoContext.astro';
 import AreasNearby from '../components/sections/AreasNearby.astro';
 import RecentJournal from '../components/sections/RecentJournal.astro';
 import FaqLocation from '../components/sections/FaqLocation.astro';
+import ProofQuote from '../components/ProofQuote.astro';
 import { faqs as homepageFaqs } from '../data/faqs';
+import { testimonials } from '../data/testimonials';
 import PersonSchema from '../components/schema/PersonSchema.astro';
 import SpeakableSchema from '../components/schema/SpeakableSchema.astro';
+
+/**
+ * Proof, spread through the page.
+ *
+ * Every client quote used to sit inside one scrolling marquee at 52% down the
+ * page. A reader could scroll from the fold all the way past the treatment
+ * menu without meeting a single person who had been treated here — and the
+ * conversion rule is that trust has to repeat, so no scroll path reaches the
+ * booking form unaccompanied.
+ *
+ * These four are lifted out of that marquee and set as standalone moments at
+ * the points where a reader starts wondering whether to believe the page.
+ * They are the outcome-stating ones: what the skin looked like afterwards,
+ * not who recommended it.
+ *
+ * `getAreaTestimonials` is not used here — those carry a neighbourhood
+ * attribution that belongs on that area's page, not on the homepage.
+ */
+const generalReviews = testimonials.filter((t) => !t.area);
+const proofAfterMenu = generalReviews.find((t) => t.attribution === 'Brian A.')!;
+const proofAfterOutcomes = generalReviews.find((t) => t.attribution === 'Morg A.')!;
+const proofBeforeBooking = generalReviews.find((t) => t.attribution === 'Arica L.')!;
+const proofAtTheEnd = generalReviews.find((t) => t.attribution === 'David B.')!;
 
 /* Anchor dates for the WebPage schema node. The values are not invented
    per-build: they are the studio's launch and the current verification
@@ -59,11 +85,52 @@ const webPageSchema = {
   <Positioning />
   <ConcernTiles />
   <ServiceMenu />
-  <MeetKiki />
+
+  {/* First proof moment: straight after the prices. A reader who has just
+      seen what it costs wants to know whether it works before they read
+      another line of the page. */}
+  <section class="bg-ivory">
+    <div class="wrap py-20 md:py-28">
+      <ProofQuote testimonial={proofAfterMenu} class="max-w-[46ch]" />
+    </div>
+  </section>
+
+  <Outcomes />
+
+  <section class="bg-blush">
+    <div class="wrap py-20 md:py-28">
+      <ProofQuote testimonial={proofAfterOutcomes} class="max-w-[46ch]" />
+    </div>
+  </section>
+
+  {/* The proof itself — before/after imagery, then the client quotes. */}
   <Results />
+
   <SocialReels />
+
+  {/* The story now sits below the proof, not above it. People care about who
+      is behind the work once the work has already convinced them; leading with
+      the founder asked a reader to care about the studio before they knew it
+      could do anything for them. */}
+  <MeetKiki />
+
   <SanDiegoContext />
   <AreasNearby />
   <RecentJournal />
+
+  {/* Last proof moment: immediately before the booking form, so the question
+      "can I trust this with my face?" is answered at the moment it is asked. */}
+  <section class="bg-porcelain">
+    <div class="wrap py-20 md:py-28">
+      <ProofQuote testimonial={proofBeforeBooking} class="max-w-[46ch]" />
+    </div>
+  </section>
+
   <FaqLocation faqs={homepageFaqs} />
+
+  <section class="bg-porcelain">
+    <div class="wrap py-20 md:py-28">
+      <ProofQuote testimonial={proofAtTheEnd} class="max-w-[46ch]" />
+    </div>
+  </section>
 </BaseLayout>

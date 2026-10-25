@@ -5,6 +5,7 @@ import heroTall from '../../assets/licensed-esthetician-melanin-rich-skin-san-di
 import heroWide from '../../assets/kiamo-skin-esthetician-mission-hills-san-diego-hero.jpg';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
+import { gbpReviewsUrl } from '../../config/urls';
 
 // Astro's built-in <Picture> only switches format and size, not the source image,
 // so art direction needs a hand-built <picture> fed by getImage().
@@ -21,6 +22,8 @@ const wideAvif = await getImage({
   quality: 72,
 });
 const fallback = await getImage({ src: heroWide, format: 'jpeg', width: 1920, quality: 72 });
+
+const reviewsUrl = gbpReviewsUrl(business.gbpPlaceId);
 ---
 
 {/*
@@ -34,49 +37,63 @@ const fallback = await getImage({ src: heroWide, format: 'jpeg', width: 1920, qu
   or a scrim that washed out the photograph. Splitting instead gives the image a
   clean, uncovered frame and the copy full contrast on porcelain. No scrim, no
   compromise on either half.
+
+  The mobile photo is 40svh, not 56. At 56 the image alone pushed the H1 below the
+  fold and the CTA to 1047px on a 390×844 screen. 40 keeps the subject's face and
+  the wall above it, and lands the primary CTA inside the first viewport.
 */}
 <section class="relative isolate overflow-hidden">
-  <picture class="block h-[56svh] w-full sm:absolute sm:inset-0 sm:h-full">
+  <picture class="block h-[40svh] w-full sm:absolute sm:inset-0 sm:h-full">
     <source media="(max-width: 639px)" srcset={tallAvif.srcSet.attribute} type="image/avif" />
     <source media="(min-width: 640px)" srcset={wideAvif.srcSet.attribute} type="image/avif" />
     <img
       src={fallback.src}
       width={1920}
       height={1080}
-      alt=""
+      alt="A client resting on the treatment bed at the KIAMO Skin studio in Mission Hills, San Diego"
       fetchpriority="high"
       decoding="async"
-      class="ken-burns size-full object-cover object-[78%_50%] sm:object-[65%_50%] lg:object-center"
+      class="ken-burns size-full object-cover object-[78%_42%] sm:object-[65%_50%] lg:object-center"
     />
   </picture>
 
   <div
-    class="wrap relative flex flex-col justify-end pt-12 pb-16 sm:min-h-[92svh] sm:pt-[60px] sm:pb-20 md:min-h-[88svh] md:pb-28"
+    class="wrap relative flex flex-col justify-end pt-10 pb-12 sm:min-h-[92svh] sm:pt-[60px] sm:pb-20 md:min-h-[88svh] md:pb-28"
   >
     {/* The brand line moves to the kicker so the H1 can carry the geo claim.
         This is one of the two pages where a geo H1 is correct — strategy §1.13:
         the homepage and the category mirrors state the geography, every
         treatment H1 stays bare. */}
     <p class="t-eyebrow text-ink-soft sm:text-ink">Corrective skin studio · Mission Hills, San Diego</p>
-    <h1 class="t-hero mt-4 max-w-[16ch] sm:mt-5 sm:max-w-[18ch]">
-      Corrective skin & scalp treatments in San Diego—for pigmentation, acne, and scalp health.
+    <h1 class="t-hero mt-3 max-w-[16ch] sm:mt-5 sm:max-w-[18ch]">
+      Corrective skin &amp; scalp treatments in San Diego—for pigmentation, acne, and scalp health.
     </h1>
-    <p class="t-body mt-5 max-w-[52ch] sm:mt-6">
-      KIAMO Skin is a licensed corrective skin and scalp studio in {business.address.neighborhood},
-      San Diego—minutes from Hillcrest Medical Center, Little Italy, and Balboa Park. We specialize
-      in clinical-grade pigmentation treatment, acne scarring correction, scalp therapy, and barrier
-      repair using HydraFacial, chemical peels, and Procell Microchanneling—safe and effective for
-      all skin types, from fitzpatrick I to VI.
+    {/* Two lines, two different dimensions: what the studio is, then who it
+        suits. The old single 56-word paragraph buried the CTA under a wall of
+        proper nouns — treatments, modalities, Fitzpatrick types, landmarks.
+        The modality names live in the menu below; the landmarks live in the
+        location section. Neither needs to be in the first paragraph. */}
+    <p class="t-body mt-4 max-w-[52ch] sm:mt-6">
+      A licensed corrective skin and scalp studio in {business.address.neighborhood}, San Diego.
+      Pigmentation, acne scarring, barrier damage and scalp health, treated for every skin type.
     </p>
-    <div class="mt-8 flex flex-wrap items-center gap-3 sm:mt-9">
+    <div class="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3 sm:mt-8">
       <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
-      <Button variant="ghost" href="/treatments/">View treatments</Button>
+      {/* Rule 6: a visible number next to the CTA. A high-intent local visitor
+          who will not fill in a form can tap this instead. */}
+      <a
+        href={business.phone.href}
+        class="t-button border-b border-ink pb-1 hover:border-rose hover:text-rose"
+        onclick="if(typeof gtag !== 'undefined') gtag('event', 'phone_click', {event_category: 'engagement', event_label: 'hero', transport_type: 'beacon'});"
+      >
+        Call {business.phone.display}
+      </a>
     </div>
     <p class="t-body mt-5 text-[0.875rem] text-ink-soft">
-      Trusted by clients across San Diego County · <a
-        href={`https://www.google.com/maps/place/?q=place_id:${business.gbpPlaceId}`}
+      <a
+        href={reviewsUrl}
         target="_blank"
-        rel="noopener noreferrer"
+        rel="noopener"
         class="border-b border-ink/40 hover:border-rose hover:text-rose"
       >Read reviews on Google</a>
     </p>

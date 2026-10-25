@@ -51,7 +51,10 @@ const { before, after, beforeAlt, afterAlt, id } = Astro.props;
       value="55"
       id={id}
       class="mt-2 w-full accent-[var(--color-rose)]"
-      aria-label="Reveal the before and after image"
+      /* An aria-label overrides the wrapping label's own text for assistive
+         tech, so the visible "Drag to compare" instruction was never
+         announced. Carrying it here restores it. */
+      aria-label="Reveal the before and after image (drag to compare)"
     />
   </label>
 </div>

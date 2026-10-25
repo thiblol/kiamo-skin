@@ -9,9 +9,17 @@ import pigAfter from '../../assets/hyperpigmentation-after-treatment-results-san
 import scalpBefore from '../../assets/keravive-scalp-treatment-before-san-diego.jpg';
 import scalpAfter from '../../assets/keravive-scalp-treatment-after-results-san-diego.jpg';
 
-const homepageReviews = testimonials.filter((t) => !t.area);
-const row1 = homepageReviews.slice(0, 6);
-const row2 = homepageReviews.slice(6);
+/**
+ * The quotes used as standalone moments elsewhere on the homepage. They are
+ * excluded here so the same voice never appears twice on one page — once as a
+ * set-piece quote, once scrolling past in the marquee. The marquee is the
+ * long tail; the standalone quotes are the moments a reader actually stops on.
+ */
+const scattered = new Set(['Brian A.', 'Morg A.', 'Arica L.', 'David B.']);
+
+const homepageReviews = testimonials.filter((t) => !t.area && !scattered.has(t.attribution));
+const row1 = homepageReviews.slice(0, 4);
+const row2 = homepageReviews.slice(4);
 ---
 
 <section class="bg-porcelain">
@@ -64,7 +72,12 @@ const row2 = homepageReviews.slice(6);
     <h2 class="t-h2 reviews-h2">What clients say after corrective treatment in San Diego.</h2>
   </div>
 
-  <div class="reviews-marquee-wrap" aria-hidden="true">
+  {/* The marquee wrapper is NOT aria-hidden. The duplicate row inside each
+      track is what carries aria-hidden — that is the copy that exists only to
+      make the loop seamless. Hiding the wrapper as well hid all 24 quote
+      elements from screen readers and from anything parsing the DOM, so the
+      page's only client quotes were invisible to both. */}
+  <div class="reviews-marquee-wrap">
     <!-- Row 1: scrolls left -->
     <div class="reviews-track reviews-track--left">
       <ul class="reviews-row">
@@ -114,6 +127,14 @@ const row2 = homepageReviews.slice(6);
       class="reviews-cta"
     >
       Read our Google reviews ↗
+    </a>
+    {/* The gallery holds every consented case in full — sessions, timeframe,
+        Fitzpatrick band and the written consent. The homepage showed two
+        before/afters and linked to it nowhere in its body, so the strongest
+        proof on the site was one click and one menu away from a reader who
+        never opened the menu. */}
+    <a href="/gallery/" class="reviews-cta mt-6 block">
+      See every published result ↗
     </a>
   </div>
 </section>
@@ -168,7 +189,11 @@ const row2 = homepageReviews.slice(6);
     }
   }
 
-  .reviews-track:hover {
+  /* Auto-scrolling content needs a way to stop it. Hover covers a pointer,
+     but a keyboard user tabbing into the quotes needs the same control —
+     otherwise the review they are reading scrolls out from under them. */
+  .reviews-track:hover,
+  .reviews-track:focus-within {
     animation-play-state: paused;
   }
 

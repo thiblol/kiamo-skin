@@ -18,7 +18,7 @@ export const services: Service[] = [
     name: 'Facials in San Diego',
     category: 'Facials',
     description:
-      'The umbrella-category guide to every facial modality offered at KIAMO Skin — HydraFacial, Lira chemical peels, DMK enzyme therapy, and dermaplaning — each calibrated to every Fitzpatrick skin type.',
+      'The umbrella-category guide to every facial modality offered here — HydraFacial, Lira peels, DMK enzyme therapy and dermaplaning — each calibrated to every Fitzpatrick skin type.',
     price: verifiedPrices['first-time-client'],
     href: '/facial/',
   },
@@ -89,7 +89,7 @@ export const services: Service[] = [
     name: 'Procell Microchanneling — 3 Treatment Series',
     category: 'Advanced',
     description:
-      'Designed for clients committed to long-term correction. A series of three treatments supports progressive collagen remodeling and is recommended for concerns such as acne scars, uneven texture, fine lines, and overall skin rejuvenation. Treatments are typically scheduled 4–6 weeks apart.',
+      'A series of three treatments, typically spaced four to six weeks apart, supports progressive collagen remodeling. Recommended for concerns such as acne scars, uneven texture, fine lines, and overall skin rejuvenation.',
     price: verifiedPrices['procell-series'],
     href: '/treatments/procell-microchanneling/',
   },

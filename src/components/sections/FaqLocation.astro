@@ -50,6 +50,24 @@ const bookingFaqs: Faq[] = [
 
 const { faqs = bookingFaqs } = Astro.props as { faqs?: Faq[] };
 
+/**
+ * How many answers lead as full-size visible entries.
+ *
+ * The conversion audit found every question on this page hidden behind a
+ * `<details>` — and this is an SEO page, where collapsed answers earn
+ * measurably fewer organic sessions than the same copy shown as text.
+ *
+ * Every answer is now visible. The hierarchy is carried by type size instead
+ * of by a click: the first four lead at full size because they are the ones
+ * that block a booking outright — what it costs, what happens at the first
+ * visit, how many sessions it takes, and whether this is the right kind of
+ * studio. The rest run beneath as a quieter reference tier, smaller and
+ * tighter, because they are worth having but not worth leading with.
+ */
+const leadCount = 4;
+const leadFaqs = faqs.slice(0, leadCount);
+const referenceFaqs = faqs.slice(leadCount);
+
 const schemaFaqs = faqs.map(faq => ({
   question: faq.question,
   answer: faq.answer
@@ -67,27 +85,32 @@ const reviewsUrl = gbpReviewsUrl(business.gbpPlaceId);
       <p class="t-eyebrow text-ink-soft">Before you book</p>
       <h2 class="t-h2 mt-5 max-w-[20ch]">Facial questions answered — Mission Hills, San Diego</h2>
 
+      {/* The booking-blocking answers, at full size, in the HTML. */}
       <div class="mt-12">
         {
-          faqs.map((faq) => (
-            <div class="border-b border-line">
-              <details class="group">
-                <summary
-                  class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]"
-                >
-                  <span>{faq.question}</span>
-                  <span
-                    aria-hidden="true"
-                    class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
-                  >
-                    +
-                  </span>
-                </summary>
-                <div class="t-body pb-6 text-[0.9375rem]">{faq.answer}</div>
-              </details>
+          leadFaqs.map((faq) => (
+            <div class="border-b border-line py-7 first:pt-0">
+              <h3 class="t-service text-[1.0625rem] md:text-[1.1875rem]">{faq.question}</h3>
+              <p class="t-body mt-3 text-[0.9375rem]">{faq.answer}</p>
             </div>
           ))
         }
+      </div>
+
+      {/* The reference tier. Still fully visible — smaller, so it reads as
+          supplementary rather than as another wall of copy. */}
+      <div class="mt-12">
+        <p class="t-eyebrow text-ink-soft">Also asked</p>
+        <dl class="mt-6">
+          {
+            referenceFaqs.map((faq) => (
+              <div class="border-b border-line py-5 last:border-b-0">
+                <dt class="t-service text-[0.9375rem]">{faq.question}</dt>
+                <dd class="t-body mt-2 text-[0.9375rem] text-ink-soft">{faq.answer}</dd>
+              </div>
+            ))
+          }
+        </dl>
       </div>
     </div>
 
@@ -115,9 +138,48 @@ const reviewsUrl = gbpReviewsUrl(business.gbpPlaceId);
         <a
           href={business.phone.href}
           class="t-button border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          onclick="if(typeof gtag !== 'undefined') gtag('event', 'phone_click', {event_category: 'engagement', event_label: 'faq_column', transport_type: 'beacon'});"
         >
           Call {business.phone.display}
         </a>
+      </div>
+
+      {/* Risk reversal. The audit found no answer to "what if it doesn't work"
+          anywhere near the booking form — and that is the question that stops
+          a first-time visitor sending a request.
+
+          Every line here is a fact the studio already publishes, not a
+          promise invented to close a sale. A satisfaction guarantee is NOT
+          claimed here, because no such guarantee has been offered by the
+          business and inventing one would be a fabrication. What is offered is
+          the three things a cautious reader actually wants: the price before
+          the appointment, a consultation before the treatment, and a stated
+          cancellation window. If the studio wants a real guarantee, that is a
+          business decision to make, not a copy decision to fake. */}
+      <div class="mt-10 border-t border-line pt-8">
+        <p class="t-eyebrow text-rose">Before you commit</p>
+        <ul class="mt-6 m-0 list-none p-0">
+          <li class="border-l-2 border-rose pl-5">
+            <p class="t-service text-[0.9375rem]">The price comes first</p>
+            <p class="t-body mt-2 text-[0.9375rem]">
+              Every treatment price is published on the menu. Nothing is quoted at the door, and the
+              first visit includes the consultation that decides the plan.
+            </p>
+          </li>
+          <li class="mt-6 border-l-2 border-rose pl-5">
+            <p class="t-service text-[0.9375rem]">Nothing is treated before it is assessed</p>
+            <p class="t-body mt-2 text-[0.9375rem]">
+              A full consultation and skin analysis come first, and the treatment is chosen around
+              what your skin is doing that day.
+            </p>
+          </li>
+          <li class="mt-6 border-l-2 border-rose pl-5">
+            <p class="t-service text-[0.9375rem]">A stated cancellation window</p>
+            <p class="t-body mt-2 text-[0.9375rem]">
+              {business.cancellation}
+            </p>
+          </li>
+        </ul>
       </div>
 
       <div class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
