@@ -598,8 +598,8 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
         answer: `Most North Park clients see fading in 8-12 weeks with monthly treatments and daily homecare. Melasma requires 6-9 months. The outdoor culture means maintenance after initial correction. Each session takes 60-75 minutes at Mission Hills, 8 minutes from North Park.`,
       },
       {
-        question: 'Do you offer evening appointments for North Park professionals?',
-        answer: `Yes. Many North Park clients work in Hillcrest, Downtown, or locally and book after-work appointments. Evening slots fill quickly - book 2-3 weeks ahead. First-time clients start at $249 for consultation and treatment. Call (310) 595-0872 or book online.`,
+        question: 'How far ahead should North Park clients book?',
+        answer: `Book 2-3 weeks ahead. Many North Park clients work in Hillcrest, Downtown, or locally and book after-work appointments, and evening slots fill quickly because the studio is single-room and single-practitioner. First-time clients start at $249 for consultation and treatment. Call (310) 595-0872 or book online.`,
       },
     ],
     schemaDescription: `Hyperpigmentation treatment for North Park at KIAMO Skin Mission Hills. Melasma and PIH correction for all skin types. 8 minutes from University Avenue, outdoor lifestyle protocols.`,

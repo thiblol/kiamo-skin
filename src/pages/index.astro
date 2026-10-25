@@ -15,6 +15,7 @@ import SanDiegoContext from '../components/sections/SanDiegoContext.astro';
 import AreasNearby from '../components/sections/AreasNearby.astro';
 import RecentJournal from '../components/sections/RecentJournal.astro';
 import FaqLocation from '../components/sections/FaqLocation.astro';
+import { faqs as homepageFaqs } from '../data/faqs';
 import PersonSchema from '../components/schema/PersonSchema.astro';
 import SpeakableSchema from '../components/schema/SpeakableSchema.astro';
 
@@ -64,5 +65,5 @@ const webPageSchema = {
   <SanDiegoContext />
   <AreasNearby />
   <RecentJournal />
-  <FaqLocation />
+  <FaqLocation faqs={homepageFaqs} />
 </BaseLayout>

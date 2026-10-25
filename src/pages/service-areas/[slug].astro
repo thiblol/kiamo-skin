@@ -14,6 +14,7 @@ import PersonSchema from '../../components/schema/PersonSchema.astro';
 import AreaReview from '../../components/sections/AreaReview.astro';
 import { enhancedAreas, type EnhancedArea } from '../../data/areas-enhanced';
 import { areaFaqs } from '../../data/area-faqs';
+import { getGeoArticlesByArea } from '../../data/geo-articles';
 import { treatments } from '../../data/treatments';
 import { getAreaTestimonials } from '../../data/testimonials';
 import { business } from '../../config/business';
@@ -73,6 +74,13 @@ const featured = area.featured
 const others = enhancedAreas.filter((a) => a.slug !== area.slug);
 const faqs = areaFaqs[area.slug] ?? [];
 const areaReviews = getAreaTestimonials(area.slug);
+/**
+ * The GeoArticle published for this area, if there is one. Linked here so the
+ * article is reachable from the hub it supports. A GeoArticle with no inbound
+ * internal link is an orphan: it sits in the XML sitemap with no crawl path to
+ * it, and AI systems cannot cite what they cannot reach.
+ */
+const geoArticles = getGeoArticlesByArea(area.slug);
 
 // Combine base FAQs with enhanced FAQs (limit to 6 total for scannability)
 const allFaqs = [...faqs, ...(area.enhancedFaqs || [])].slice(0, 6);
@@ -309,6 +317,43 @@ const canonicalUrl = `${business.url}/service-areas/${area.slug}/`;
         </div>
       </section>
     ) : null}
+
+    <!-- LOCAL DEEP DIVE: the GeoArticle written for this area. This is the
+         inbound internal link that keeps the article off the orphan list. -->
+    {geoArticles.length > 0 && (
+      <section class="bg-porcelain">
+        <div class="wrap section-y">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Local deep dive</p>
+            <h2 class="t-h3 mt-4">Deeper on {area.name} skin</h2>
+          </Reveal>
+
+          <div class="mt-10 grid gap-6">
+            {geoArticles.map((ga, idx) => (
+              <Reveal delay={idx * 60}>
+                <a
+                  href={`/service-areas/${area.slug}/${ga.slug}/`}
+                  class="group block rounded-lg border border-line bg-blush p-8 transition-all duration-300 hover:border-rose hover:shadow-lg"
+                >
+                  <h3 class="t-service text-[1.125rem] font-medium transition-colors group-hover:text-rose">
+                    {ga.h1}
+                  </h3>
+                  <p class="t-body mt-4 text-[0.9375rem] leading-relaxed text-ink-soft">
+                    {ga.description}
+                  </p>
+                  <div class="mt-5 inline-flex items-center gap-1 text-[0.875rem] font-medium text-rose">
+                    Read the guide
+                    <svg class="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                    </svg>
+                  </div>
+                </a>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+    )}
 
     <!-- PROCESS: Collapsible accordions instead of full text -->
     {area.processBlocks && area.processBlocks.length > 0 && (

@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Reveal from '../components/Reveal.astro';
 import Button from '../components/Button.astro';
 import NapBlock from '../components/NapBlock.astro';
+import FaqSchema from '../components/schema/FaqSchema.astro';
 import { services } from '../data/services';
 import { business } from '../config/business';
 import { CTA_LABEL } from '../config/nav';
@@ -27,12 +28,40 @@ const steps = [
 ];
 
 const firstVisit = services.find((s) => s.name === 'First-Time Client Treatment');
+
+/**
+ * Pre-visit questions. These are the things that decide whether a treatment is
+ * safe to book, and the answers are already the studio's clinical protocol —
+ * the contraindications live on the treatment pages, and repeating the rule
+ * here is what stops a client booking straight into one.
+ */
+const faqs = [
+  {
+    question: 'How far in advance should I book my first appointment?',
+    answer:
+      'Requests are confirmed directly rather than held automatically, so booking early gives more choice. Most clients book one to two weeks ahead, and two to three weeks for a specific time slot or a weekend. First-time clients should book at least three to five days ahead so there is room for a full consultation rather than a shortened slot. Call ' +
+      business.phone.display +
+      ' if a specific time matters.',
+  },
+  {
+    question: 'Is it safe to get a facial while pregnant or breastfeeding?',
+    answer:
+      'Facials are generally fine during pregnancy, but the protocol narrows. Peels are the exception — peels are contraindicated during pregnancy, so they wait. The product list is screened as well: azelaic acid, niacinamide, kojic acid and vitamin C are the ones that stay, while retinoids and hydroquinone do not, and oral tranexamic acid is out too. Anything that cannot be confirmed as pregnancy-safe is left out rather than trialled on the spot. Strict mineral sunscreen with zinc oxide or titanium dioxide, SPF 50+, is the single most important step during pregnancy, and it applies whether or not a treatment is booked.',
+  },
+  {
+    question: 'Is a peel safe if I am on a retinoid?',
+    answer:
+      'Retinoids come off before a peel, not during. Stop tretinoin, Retin-A, adapalene and retinol a few days beforehand — the protocol here is three to five days — and leave them off for five to seven days afterwards while the peel does its work, because retinoids and acids together strip the barrier faster than either would alone. Isotretinoin is a different category: peels are not performed during a course of isotretinoin or soon after one, because the skin is rebuilding from nothing while that is happening. Bring the name of what you are using to the consultation and the timing is set around it.',
+  },
+];
 ---
 
 <BaseLayout
   title="Request an Appointment | KIAMO Skin San Diego"
   description="Request an appointment at KIAMO Skin in Mission Hills, San Diego. Appointment-only studio for corrective facials, peels and scalp therapy."
 >
+  <FaqSchema slot="head" faqs={faqs} />
+
   <header class="bg-blush">
     <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
       <p class="t-eyebrow text-ink-soft">Booking</p>
@@ -96,6 +125,36 @@ const firstVisit = services.find((s) => s.name === 'First-Time Client Treatment'
         <div class="mt-10">
           <NapBlock tone="light" />
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-porcelain">
+    <div class="wrap section-y">
+      <Reveal>
+        <p class="t-eyebrow text-ink-soft">Before you request</p>
+        <h2 class="t-h3">Questions to ask before booking</h2>
+      </Reveal>
+
+      <div class="faq-section mt-12 max-w-[72ch]">
+        {
+          faqs.map((faq) => (
+            <div class="border-b border-line">
+              <details class="group">
+                <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
+                  <span>{faq.question}</span>
+                  <span
+                    aria-hidden="true"
+                    class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                  >
+                    +
+                  </span>
+                </summary>
+                <div class="t-body pb-6 text-[0.9375rem] leading-relaxed">{faq.answer}</div>
+              </details>
+            </div>
+          ))
+        }
       </div>
     </div>
   </section>

@@ -56,6 +56,11 @@ export const treatmentFaqs: Record<string, Faq[]> = {
       answer:
         'The best HydraFacial provider in San Diego depends on what your skin actually needs. KIAMO Skin uses the HydraFacial Syndeo platform — the clinical-tier device with AI-powered skin impedance analysis — not the consumer models HydraFacial franchises run. Every appointment is one-to-one with Kiki, a California licensed esthetician with 7+ years on melanin-rich skin, never a rotating staff. First-Time Client Treatment is $249; return visits are $259. Both include skin analysis, customized booster, microcurrent, LED light therapy, and a Hydrojelly mask.',
     },
+    {
+      question: 'Why do my breakouts show up days after a facial rather than right away?',
+      answer:
+        'Timing that delayed is usually a purge rather than a reaction, and the two need different responses. A purge is extraction clearing congestion that was already there, so it surfaces a day or two later, follows the pattern of what was extracted, peaks within 48 to 72 hours and then clears. A reaction looks different: new redness, tenderness, or breakouts in areas that were not congested, with sensitivity that does not settle. If it is the second kind rather than the first, call (310) 595-0872 — the modality needs adjusting rather than repeating.',
+    },
   ],
 
   'procell-microchanneling': [
@@ -151,9 +156,9 @@ export const treatmentFaqs: Record<string, Faq[]> = {
 
   'lira-peels': [
     {
-      question: 'How much does a chemical peel cost in San Diego?',
+      question: 'What should I do before a chemical peel?',
       answer:
-        'The LIRA Gentle Renewal Peel at KIAMO Skin is $199 and the LIRA Advanced Peel is $299. Which one you start with is decided at consultation, and on melanin-rich skin the gentle peel is almost always the starting point.',
+        'Stop retinoids and exfoliating acids a few days before the peel, and skip waxing, threading or laser on the area. Arrive without makeup where you can. Any prescription topical, recent sun exposure or new product is raised at the consultation, because those change which peel is appropriate, and the plan is adjusted rather than pushed through.',
     },
     {
       question: 'Are chemical peels safe for melanin-rich skin?',
@@ -189,6 +194,16 @@ export const treatmentFaqs: Record<string, Faq[]> = {
       question: 'What is the best chemical peel provider in San Diego?',
       answer:
         'Best depends on what you are treating and your Fitzpatrick type. KIAMO Skin uses Lira Clinical peels calibrated to the skin tone — Gentle Renewal from $199, Advanced $299 — applied by Kiki, a California licensed esthetician with 7+ years on melanin-rich skin. The work is paced as a series with home care between visits, never a single aggressive session. First-time clients start at $249 for consultation and treatment. Standard chain-spa peel protocols applied to deeper skin tones can trigger post-inflammatory hyperpigmentation — that is the difference between a peel that works and a peel that makes the marks worse.',
+    },
+    {
+      question: 'My skin is burning and stinging after a peel. What do I do?',
+      answer:
+        'Stop adding to it. No retinoids, no acids and no exfoliants for five to seven days while the skin settles, and nothing that strips the barrier while it is still rebuilding. Keep it moisturised and keep it out of the sun — recently peeled skin is more reactive to UV and visible light than usual, and unprotected exposure is the most direct route to post-inflammatory hyperpigmentation after a peel. Redness and flaking peaking within 48 to 72 hours and settling within one to two weeks is the expected course. If the burning is still there after a couple of days instead of settling, call (310) 595-0872, because that is not expected and the protocol needs adjusting.',
+    },
+    {
+      question: 'What does a good home routine look like between peels?',
+      answer:
+        'Two things carry the work between sessions. Broad-spectrum SPF 50+ with iron oxides, every morning regardless of weather, because iron oxides are the only filters that block the visible light which keeps triggering pigment. And a gentle routine — nothing that strips the barrier while it is still rebuilding, and no retinoids or acids for five to seven days after a peel. Between sessions there is room to support the result with tyrosinase inhibitors such as vitamin C, niacinamide and azelaic acid, which is where the two-to-four week preparation phase before a peel comes from. The home care between visits is doing as much work as the peel itself.',
     },
   ],
 

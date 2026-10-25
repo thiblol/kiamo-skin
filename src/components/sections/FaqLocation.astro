@@ -6,13 +6,18 @@ import FaqSchema from '../schema/FaqSchema.astro';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import { gbpDirectionsUrl, gbpReviewsUrl } from '../../config/urls';
+import type { Faq } from '../../data/faqs';
 
 /**
  * Conversion-optimized FAQs using FAQ Money Printer PRO methodology.
  * Targets 8 buyer hesitation categories: price, time, trust, comparison,
  * risk reversal, location, qualification, results skepticism.
+ *
+ * This is the default set. A page can pass its own `faqs` prop to publish a
+ * different set: the same question on two pages is a duplicate-content signal
+ * and splits the authority between them.
  */
-const faqs = [
+const bookingFaqs: Faq[] = [
   {
     question: "What's the difference between KIAMO Skin and a regular spa facial in San Diego?",
     answer: "KIAMO Skin offers corrective skin treatments, not spa facials. While spa facials focus on relaxation and surface-level care, corrective treatments target specific skin concerns—acne, hyperpigmentation, melasma, scarring, and barrier damage—using clinical-grade technology like HydraFacial Syndeo, medical-grade chemical peels, and Procell Microchanneling. Every treatment is customized by a California-licensed esthetician based on your skin type, concern, and goals. You'll still relax during your session, but results come first."
@@ -42,6 +47,8 @@ const faqs = [
     answer: "KIAMO Skin operates by appointment only—no walk-ins. Same-day appointments are occasionally available, but most clients book 1-2 weeks in advance, especially for weekend slots. First-time clients should book at least 3-5 days ahead to ensure availability for a full consultation. You can book online through the Vagaro booking system or call the studio directly. Memberships include priority booking for monthly treatment slots."
   }
 ];
+
+const { faqs = bookingFaqs } = Astro.props as { faqs?: Faq[] };
 
 const schemaFaqs = faqs.map(faq => ({
   question: faq.question,

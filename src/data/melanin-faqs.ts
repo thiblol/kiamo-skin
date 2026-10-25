@@ -61,4 +61,24 @@ export const melaninFaqs: Faq[] = [
     answer:
       'Yes — acne scarring on Black skin can be treated safely with microchanneling, a technique that stimulates collagen production without the heat or light that can trigger additional pigmentation in darker skin tones. At KIAMO Skin in Mission Hills, Procell microchanneling is used because it works mechanically rather than with heat, making it safe for melanin-rich skin where heat-based treatments (like certain lasers) can worsen hyperpigmentation. Treatment is always paced across a series rather than performed aggressively in one session, and every pass is customized for skin tone and scar depth.',
   },
+  {
+    question: 'Will a peel or facial make my skin lighter permanently?',
+    answer:
+      'No. A peel or a facial removes surface cells, and what grows back is the skin\'s own melanin, not a lighter version of it. Skin tone is set by melanocyte activity, and no esthetic treatment changes that. What fades is pigment sitting in the upper layers — the marks left behind by acne, a reaction or sun damage — and what changes is how evenly the surface reflects light. That is the difference between skin that looks brighter and colour that has actually changed, and it is not what any peel does.',
+  },
+  {
+    question: 'Will my melasma come back if I stop treatment?',
+    answer:
+      'It usually does, and that is not a failure of the treatment. Melasma is a chronic condition with near-certain recurrence while the triggers stay active — hormonal change and UV are both still there after the last session. So the plan does not end with the correction; it moves into maintenance. What holds it steady is daily mineral sunscreen with iron oxides, a vitamin C or niacinamide serum each morning for ongoing tyrosinase inhibition, and a retinoid a couple of nights a week once the skin is stable. Melasma is manageable rather than permanently cured, and anyone promising a cure is describing a timeline that does not exist.',
+  },
+  {
+    question: 'Why did nothing work for my melasma?',
+    answer:
+      'Three reasons account for most of it. The wrong target — melasma is hormonal and sits deeper than sun damage, so a routine aimed at surface pigment can clear marks that were never the problem. The wrong pace — aggressive resurfacing is the most common way melasma gets made worse, and on melanin-rich skin a peel that is too strong triggers the exact darkening it was meant to clear. And the missing daily step — without sunscreen every morning, new pigment forms faster than any treatment clears it. Correct those three and the plan changes from a product list into a paced series with home care between the sessions.',
+  },
+  {
+    question: 'Are there treatments that work without a prescription?',
+    answer:
+      'Most of them. Chemical peels, microchanneling, enzyme therapy and dermaplaning are all in-office treatments that need no prescription, and they are what a corrective plan is built from. What needs a prescription is the topical medication layer — hydroquinone, tretinoin, tranexamic acid — which works at the cellular level and is prescribed by a dermatologist. For stubborn melasma the two together produce better results than either alone: the prescription handles the cellular side, and the in-office treatments plus the home routine handle the surface and the daily trigger.',
+  },
 ];

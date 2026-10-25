@@ -4,6 +4,12 @@
       "source": "/sitemap.xml",
       "destination": "/sitemap-index.xml",
       "permanent": true
+    },
+    {
+      "source": "/journal/best-facial-san-diego/",
+      "destination": "/facial/best-facial-san-diego/",
+      "permanent": true,
+      "statusCode": 301
     }
   ]
 }

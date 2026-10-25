@@ -115,6 +115,16 @@ const breadcrumbs = [
 
         <Reveal delay={100}>
           <ul class="mt-8 space-y-3 text-[0.9375rem]">
+            {/* The parent area page comes first: it is the hub this article
+                supports, and the reciprocal half of the internal link. */}
+            <li>
+              <a
+                href={`/service-areas/${area.slug}/`}
+                class="border-b border-ink/40 pb-1 hover:border-rose hover:text-rose"
+              >
+                More on {area.name} skin treatments
+              </a>
+            </li>
             {
               article.relatedLinks.map((link) => (
                 <li>

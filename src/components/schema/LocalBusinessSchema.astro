@@ -19,6 +19,9 @@ const services = [
   { name: 'Procell Microchanneling', url: 'treatments/procell-microchanneling', priced: 'procell' },
   { name: 'LIRA Advanced Peel', url: 'treatments/lira-peels', priced: 'lira-advanced-peel' },
   { name: 'DMK Level 2 & 3 Enzyme Treatment', url: 'treatments/dmk-enzyme-therapy', priced: null },
+  /** Package totals for the series of three, not per-session rates. */
+  { name: 'Procell Microchanneling — Series of Three', url: 'treatments/procell-microchanneling', priced: 'procell-series' },
+  { name: 'Keravive Scalp Treatment — Series of Three', url: 'treatments/keravive-scalp', priced: 'keravive-scalp-series' },
 ] as const;
 
 const schema = {
@@ -99,8 +102,30 @@ const schema = {
       '@type': 'EducationalOccupationalCredential',
       credentialCategory: 'license',
       name: business.ownerCredential,
+      // Naming the board that issued the licence is what makes the credential
+      // checkable rather than decorative — a prospect can look it up.
+      recognizedBy: {
+        '@type': 'Organization',
+        name: 'California Board of Barbering & Cosmetology',
+      },
     },
   },
+  /**
+   * The studio's own licence, at business level. A licence is a property of
+   * the business as well as of the person holding it — a studio can operate
+   * under someone else's licence, and the two are not the same claim.
+   */
+  hasCredential: [
+    {
+      '@type': 'EducationalOccupationalCredential',
+      credentialCategory: 'license',
+      name: 'Licensed Esthetician',
+      recognizedBy: {
+        '@type': 'Organization',
+        name: 'California Board of Barbering & Cosmetology',
+      },
+    },
+  ],
   areaServed: business.schemaAreaServed.map((name) => ({ '@type': 'Place', name })),
   // Vagaro is request-based; this is the request entry point, not instant booking.
   potentialAction: {

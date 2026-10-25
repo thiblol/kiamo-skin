@@ -5,10 +5,10 @@ import water from '../assets/san-diego-hard-water-skin-barrier-damage.jpg';
 import pigmentation from '../assets/post-inflammatory-hyperpigmentation-melanin-rich-skin.jpg';
 import microchanneling from '../assets/procell-microchanneling-acne-scars-san-diego.jpg';
 import dermaplaning from '../assets/dermaplaning-facial-treatment-san-diego.jpg';
+import dermaplaningTreatment from '../assets/dermaplaning-facial-treatment-mission-hills-san-diego.jpg';
 import keravive from '../assets/keravive-scalp-hydrafacial-treatment-san-diego.jpg';
 import hyperpigmentationHero from '../assets/hyperpigmentation-melasma-treatment-san-diego.jpg';
 import liraPeel from '../assets/lira-peel-chemical-peel-hyperpigmentation-san-diego.jpg';
-import bestFacial from '../assets/best-facial-san-diego-customized-consultation-mission-hills.jpg';
 import acneScars from '../assets/acne-scar-revision-procell-microchanneling-melanin-rich-skin-san-diego.jpg';
 
 export interface Article {
@@ -394,7 +394,7 @@ export const articles: Article[] = [
     description:
       'What the evidence says about needling melanin-rich skin, why depth decides the outcome, and the microchanneling offered instead in Mission Hills.',
     standfirst:
-      'The question is not really whether needling works on melanin-rich skin. It is whether the person holding the device has set the depth for the skin in front of them.',
+      'The question is not really whether needling works on melanin-rich skin. It is whether the person holding the device has set the depth correctly for the skin in front of the device.',
     readingTime: '9 min read',
     datePublished: '2026-08-07',
     dateModified: '2026-08-07',
@@ -1744,103 +1744,6 @@ export const articles: Article[] = [
     cta: { label: 'See peels for melasma', href: '/treatments/lira-peels/' },
   },
   {
-    slug: 'best-facial-san-diego',
-    headline: 'Best facial in San Diego: what "best" actually depends on',
-    title: 'Best Facial in San Diego: What Actually Makes a Facial the Best One | KIAMO Skin',
-    description:
-      'The best facial in San Diego is the one selected for what your skin is doing that day. A guide to evaluating studios, modalities, and what "best" really means for your skin type.',
-    standfirst:
-      'Search results and Yelp reviews are not what determines whether a facial is the best one for your skin. The consultation is.',
-    readingTime: '7 min read',
-    datePublished: '2026-10-07',
-    dateModified: '2026-10-07',
-    image: bestFacial,
-    imageAlt:
-      'Esthetician performing a customized facial treatment at KIAMO Skin studio in Mission Hills San Diego',
-    quickAnswer:
-      'The best facial in San Diego is the one selected after a proper skin analysis, performed by a licensed esthetician trained on your Fitzpatrick type, in a setting where the same person sees you every visit. The studio, the brand name, and the price are not the variables that determine whether a facial is right for your skin. The consultation is.',
-    body: [
-      {
-        p: 'Search results for "best facial in San Diego" return a list of studios ordered by reviews, proximity, and SEO rather than by whether the facial on the menu is right for the skin asking. The page that ranks first is not always the studio that does the best work for your <a href="/journal/three-kinds-of-dark-mark/">Fitzpatrick type</a> or your concern. The list is a starting point, not an answer.',
-      },
-      { h2: 'What "best facial" usually means in search results' },
-      {
-        p: 'The phrase "best facial" is competitive on Google Maps and in organic results, and the studios that win those positions are the ones with the most reviews, the most backlinks, and the longest track record. Some of those studios do excellent work. Many of them do a competent version of a standard facial that is not the same as the facial your skin actually needs. The review count and the ranking position are not the variables that determine whether a facial is right for you.',
-      },
-      {
-        p: 'This is not a criticism of those studios. A relaxation facial — steam, manual extraction, massage, a sheet mask — is a real service with real value, and the studios that specialize in it do it well. The question is whether "best facial" in the search results means best at relaxation or best at the corrective work that changes something. Those are two different categories of treatment, and the search results do not distinguish between them.',
-      },
-      { h2: 'What "best" actually depends on' },
-      {
-        p: 'The best facial in San Diego for your skin is the one that is selected after a proper skin analysis, performed by a licensed esthetician trained on your Fitzpatrick type, in a setting where the same person sees you every visit. The studio, the brand name, and the price are not the variables that determine whether a facial is right for your skin. The consultation is.',
-      },
-      {
-        p: 'A corrective facial — the kind that addresses pigmentation, scarring, barrier damage, or a condition that has not resolved on its own — is selected based on what the skin is doing that day. That selection requires the esthetician to see the skin in person, ask the right questions, and choose the modality, depth, and product stack based on the answer. A studio that offers one facial with a fixed name on a fixed menu cannot do this. A studio that calibrates each visit to the skin in front of them can.',
-      },
-      { h2: 'The three variables that determine whether a facial is right for your skin' },
-      {
-        answer:
-          'The three variables are: who is performing the treatment, what training they have on your specific Fitzpatrick type and concern, and whether the treatment is selected at consultation or pulled from a fixed menu. None of these variables show up in search results. All of them show up in a phone call before you book.',
-      },
-      {
-        p: 'The first variable is the esthetician. A licensed esthetician with seven years treating melanin-rich skin will read a Fitzpatrick V face differently from a new graduate who has seen mostly Fitzpatrick II in school. Both are licensed. Both can perform a facial. The clinical judgment that comes from years of specific experience is what makes the difference in a corrective protocol.',
-      },
-      {
-        p: 'The second variable is training. The advanced modalities — <a href="/treatments/dmk-enzyme-therapy/" class="border-b border-ink/40 hover:border-rose hover:text-rose">DMK Enzyme Therapy</a>, <a href="/treatments/procell-microchanneling/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Procell microchanneling</a>, medical-grade peels — require specific training that not every esthetician has. A studio that offers a corrective protocol without the training to back it up is offering a different service than it appears to be offering.',
-      },
-      {
-        p: 'The third variable is whether the treatment is selected at consultation or pulled from a fixed menu. A studio that performs the same facial every visit, with the same steps, for every client — regardless of what the skin shows — is performing a relaxation service under a corrective label. A studio that varies the protocol based on what the skin is doing that day is performing a corrective service.',
-      },
-      { h2: 'How to evaluate a studio before you book' },
-      {
-        p: 'Call the studio. Ask who performs the treatments and what their training is. Ask whether the facial on the menu is a fixed protocol or selected at consultation. Ask what happens if the skin shows something the menu does not address. The answers to these three questions will tell you more than any review count or ranking position.',
-      },
-      {
-        p: 'A corrective studio will answer these questions without hesitation and will describe a process that starts with a consultation, not a service. A relaxation studio will answer them too, and the answer will describe a service rather than a process. Both are legitimate. They are not the same service.',
-      },
-      { h2: 'What the first visit at a corrective studio looks like' },
-      {
-        p: 'The first visit at a corrective studio starts with a consultation and a skin analysis. The esthetician asks what brought you in, examines the skin under good light, and selects the treatment based on what the skin shows that day. The first visit is also a full treatment — the consultation is built into the appointment rather than billed separately.',
-      },
-      {
-        p: 'At <a href="/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">KIAMO Skin</a> in Mission Hills, the first visit is a full HydraFacial, a personalized booster, microcurrent, LED light therapy, a Hydrojelly mask, and a long-term treatment plan built around what the consultation showed. The same esthetician sees every visit. The plan adjusts as the skin responds.',
-      },
-      {
-        p: 'The plan is the part that distinguishes a corrective studio from a relaxation one. A corrective studio builds a plan because the work is a series, not a single appointment. The plan is what the studio is selling, and the facial on the day is one step in it.',
-      },
-      {
-        p: 'A first visit is also the moment to evaluate whether the studio is the right fit. The consultation is a conversation in both directions. If the esthetician cannot explain what they are doing and why, that is information about the studio. If the treatment selected does not match what the consultation showed, that is also information. The right studio will not be offended by a client who is paying attention.',
-      },
-      {
-        p: 'The framework that distinguishes a corrective facial from a relaxation one is the same one that determines which studio is "best" for a given skin: the consultation, the training, and the willingness to vary the protocol. None of these variables are visible in search results. All of them become visible in the first five minutes of a phone call.',
-      },
-    ],
-    faqHeading: 'Choosing a facial studio questions',
-    faqs: [
-      {
-        question: 'How do I know if a studio\'s facial is right for my skin?',
-        answer:
-          'Call the studio before you book. Ask who performs the treatments, what their training is on your specific Fitzpatrick type, and whether the facial on the menu is a fixed protocol or selected at consultation. The answers to these three questions will tell you more than any review count or search ranking. A corrective studio will describe a process that starts with a consultation. A relaxation studio will describe a service. Both are legitimate; they are not the same service.',
-      },
-      {
-        question: 'What should a corrective facial consultation include?',
-        answer:
-          'A consultation at a corrective studio should include a skin analysis under good light, a conversation about what brought you in, and a treatment selected based on what the skin shows that day. The consultation should be built into the appointment rather than billed separately. At KIAMO Skin in Mission Hills, the first visit is a full consultation, a customized HydraFacial, and a long-term treatment plan built around what the consultation showed.',
-      },
-      {
-        question: 'Is the most-reviewed studio in San Diego the best one?',
-        answer:
-          'Not necessarily. The studios that rank at the top of "best facial" searches are the ones with the most reviews, backlinks, and SEO, not necessarily the ones doing the most corrective work. A studio that specializes in relaxation facials can have a higher review count than a corrective studio and still not be the right fit for a skin concern like pigmentation, scarring, or barrier damage. The right fit depends on what the skin needs, not on the review count.',
-      },
-      {
-        question: 'What is the difference between a corrective facial and a relaxation facial?',
-        answer:
-          'A relaxation facial is a fixed protocol — steam, manual extraction, massage, a sheet mask — that produces a temporary feeling of comfort. A corrective facial is selected at consultation based on what the skin is doing that day, and the goal is to change something: pigmentation, scarring, barrier damage, or a condition that has not resolved on its own. Both can feel good. Only one is built to move the skin.',
-      },
-    ],
-    cta: { label: 'Book a consultation', href: '/book/' },
-  },
-  {
     slug: 'acne-scars-san-diego',
     headline: 'Acne scars in San Diego: which ones a facial can fix and which need microneedling',
     title: 'Acne Scars in San Diego: Facial vs Microneedling for Each Type | KIAMO Skin',
@@ -1934,5 +1837,183 @@ export const articles: Article[] = [
       },
     ],
     cta: { label: 'See Procell microchanneling', href: '/treatments/procell-microchanneling/' },
+  },
+  {
+    slug: 'dermaplaning-vs-chemical-peel-san-diego',
+    headline: 'Dermaplaning or a chemical peel: which one actually changes your skin?',
+    title: 'Dermaplaning vs Chemical Peel in San Diego | KIAMO Skin',
+    description:
+      'Dermaplaning or a chemical peel? One clears the surface, the other reaches pigment. What each does, what each costs, and when to book both.',
+    standfirst:
+      'The two sound like competing versions of the same thing and are not. One removes what is sitting on top of the skin; the other changes what happens underneath it.',
+    readingTime: '8 min read',
+    datePublished: '2026-10-26',
+    dateModified: '2026-10-26',
+    image: dermaplaningTreatment,
+    imageAlt:
+      'Dermaplaning treatment in progress at the KIAMO Skin studio in Mission Hills, with the blade held at a fixed angle against dry skin',
+    quickAnswer:
+      'Dermaplaning and a chemical peel work on different layers. Dermaplaning uses a sterile blade to remove dead surface cells and vellus hair — no heat, no acid, no downtime — which makes it the right choice for texture, peach fuzz and product absorption. A chemical peel puts acid on the skin so that the upper layers resurface over the following days, which makes it the right choice for brown patches and post-inflammatory marks. On melanin-rich skin the peel carries the higher risk of making pigment worse, so it is run as a prepared, escalating series. At KIAMO Skin in Mission Hills, dermaplaning is $199 and Lira peels are $199 for Gentle Renewal and $299 for Advanced.',
+    body: [
+      {
+        p: 'Two treatments get booked under the same expectation: smoother, brighter skin by the end of the month. The two do not deliver the same thing. One is a controlled removal of the surface layer. The other is a chemical process that changes what happens in the upper layers of skin over the days that follow. Clients who pick the wrong one for the concern usually end up disappointed for reasons that have nothing to do with the quality of the treatment.',
+      },
+      { h2: 'The short answer' },
+      {
+        answer:
+          'Dermaplaning removes dead surface cells and vellus hair with a sterile blade, and nothing else. A chemical peel applies acid to the skin so that the upper layers resurface over the days that follow. Texture, peach fuzz and product absorption are dermaplaning problems. Brown patches, post-inflammatory marks and uneven tone are peel problems. Most people who think a peel is the answer actually need the surface cleared first.',
+      },
+      {
+        p: 'The reason the two get confused is that both produce visible change, and both produce it within about a week of the appointment. What changed underneath is a different question, and it is the question a consultation actually answers.',
+      },
+      { h2: 'What dermaplaning actually does' },
+      {
+        answer:
+          'Dermaplaning takes the dead surface layer and the fine vellus hair sitting on top of it off the skin. That is the entire treatment. It does not dissolve pigment, does not stimulate collagen, and does not reach below the stratum corneum.',
+      },
+      {
+        p: 'The practical consequence is a face that takes product better. With the debris removed, serums land on live tissue rather than on a layer of dead cells, and makeup stops catching on hair and texture. The <a href="/treatments/dermaplaning/">dermaplane facial at KIAMO Skin</a> is a cleanse, a blade pass over dry skin, treatment serums while absorption is highest, and SPF to close.',
+      },
+      {
+        ul: [
+          'The skin is cleansed and taken completely dry. Dermaplaning is performed on a dry surface, because residual moisture changes how the blade sits.',
+          'The blade is held at a fixed angle and drawn across the skin in short, controlled strokes, section by section. Active or pustular acne is worked around rather than over.',
+          'Serums go on next, while absorption is at its peak, and the treatment closes with SPF.',
+          'There is no heat and no acid, which is exactly why the risk profile on melanin-rich skin is so different from a peel.',
+        ],
+      },
+      { h2: 'What a chemical peel actually does' },
+      {
+        answer:
+          'A chemical peel places acid on the skin, and the acid does controlled damage to the upper layers so that the skin resurfaces. The result is not a removal — it is a turnover. Pigment sitting in those layers comes away with the turnover, which is why peels work on discolouration and dermaplaning does not.',
+      },
+      {
+        p: 'This is where the risk sits, particularly for deeper skin tones. A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11514325/" rel="noopener" target="_blank">systematic review of PIH treatment in skin of colour</a> found that chemical peels accounted for 20% of trauma-induced post-inflammatory hyperpigmentation cases in its dataset, and that after two weeks of salicylic acid peels, 40% of patients showed new hyperpigmentation. The same review concluded that peels should not be used routinely as a first-line treatment in that population, but may have merit in refractory cases.',
+      },
+      {
+        p: 'That is why peels here run as a <a href="/treatments/lira-peels/">prepared Lira peel series</a> rather than a single strong appointment: lower strength first, escalation every four to six weeks, and daily sun protection as a condition of the plan. <a href="https://www.derrowdermatology.com/are-chemical-peels-safe-for-darker-skin-tones/" rel="noopener" target="_blank">Safe chemical peel practice begins with professional evaluation</a> and matching the peel to the skin in front of you.',
+      },
+      { h2: 'Which one for which concern' },
+      {
+        table: {
+          caption: 'Dermaplaning and chemical peels, side by side',
+          head: ['', 'Dermaplaning', 'Chemical peel'],
+          rows: [
+            [
+              'What it targets',
+              'Surface texture, vellus hair, dullness, product absorption',
+              'Pigment, uneven tone, post-inflammatory marks',
+            ],
+            [
+              'How it works',
+              'A blade removes the dead surface layer',
+              'Acid resurfaces the upper layers over several days',
+            ],
+            ['Heat or acid', 'Neither', 'Acid, with strength matched to the skin on the day'],
+            ['Depth', 'The stratum corneum only', 'The upper layers, and how far depends on strength'],
+            [
+              'Results arrive',
+              'In the room, and hold until the surface builds again',
+              'Over the days after, and build across a series',
+            ],
+            [
+              'Best on melanin-rich skin',
+              'Low risk, because there is no inflammation to trigger pigment',
+              'Workable, but only as a prepared, escalating series',
+            ],
+          ],
+        },
+      },
+      {
+        p: 'Read down the rows and the split becomes obvious. If the complaint is how the skin feels and how products sit on it, dermaplaning is the answer. If the complaint is the colour, the peel is the answer. Very few people have only one of those complaints, which is why the pairing comes up so often.',
+      },
+      { h2: 'What it costs and what the recovery looks like' },
+      {
+        table: {
+          caption: 'Cost, timing and recovery',
+          head: ['', 'Dermaplaning', 'Chemical peel'],
+          rows: [
+            ['Cost', '$199 for the full facial', '$199 for Gentle Renewal, $299 for Advanced'],
+            ['Appointments needed', 'One', 'A series, spaced every four to six weeks'],
+            ['Downtime', 'None. A light flush, and you are out', 'A day or two of visible peeling, depending on strength'],
+            ['Social calendar', 'Book it before an event', 'Book it with a couple of quiet days afterwards'],
+            ['Sun sensitivity after', 'Mild — the treatment closes with SPF', 'Higher — daily SPF is a condition of the plan'],
+            ['Keeping the result', 'Every few weeks, or before events', 'Home care between appointments holds it'],
+          ],
+        },
+      },
+      {
+        p: 'The <a href="/journal/chemical-peel-cost-san-diego/">chemical peel cost breakdown</a> covers the full price list in more detail, and it is worth reading before committing to a series rather than after the first appointment.',
+      },
+      { h2: 'Can you have both in the same visit?' },
+      {
+        answer:
+          'Yes, and pairing the two is often the most efficient option. Dermaplaning clears the surface first, and the peel then reaches the upper layers more evenly because there is no layer of dead cells in the way. The studio frequently pairs the two for exactly this reason.',
+      },
+      {
+        p: 'The order is not interchangeable. Surface first, acid second — never the reverse, because acid on an uncleared surface is uneven acid. And the timing between a standalone dermaplane and a peel series matters too: dermaplaning on freshly peeled skin is too much for one appointment.',
+      },
+      { h2: 'When neither is the right call' },
+      {
+        answer:
+          'When the concern sits deeper than either treatment reaches. Deep dermal pigment, melasma that has not responded to a prepared series, and scarring that has changed the texture of the skin all need a dermatologist rather than an esthetician.',
+      },
+      {
+        p: 'This is an esthetician studio. There is no laser here and no prescription-strength medication, and any client whose concern sits below what a surface treatment and a controlled peel can address is better served by a dermatologist. Saying so is more useful than selling a series that will not reach the depth involved. The <a href="/journal/three-kinds-of-dark-mark/">three kinds of dark mark</a> journal piece is a good first step for working out which category a concern falls into before booking either treatment.',
+      },
+      { h2: 'Why asking a studio that does both is the honest way to decide' },
+      {
+        answer:
+          'Because a provider who only sells one of these has a commercial reason to recommend it and no way to mention the other. A provider who performs both, and who can also say when neither is appropriate, is giving an answer rather than a sales pitch.',
+      },
+      {
+        p: 'It is also why the consultation at KIAMO Skin starts with the skin rather than the treatment. What shows up at the appointment — the texture, the pigment depth, the barrier state, the active breakouts, the recent sun exposure — decides which protocol runs and in what order. The same client can need dermaplaning alone in March and a peel series by July, and the reverse a year later.',
+      },
+      { h2: 'What most San Diego clients end up doing' },
+      {
+        p: 'The most common plan is a peel series for the pigment, with dermaplaning between appointments to keep the surface clear so that home care absorbs properly and the next peel lands on an even surface. The second most common is dermaplaning alone, before an event, with a peel series discussed separately once the client is ready for the commitment.',
+      },
+      {
+        p: 'One note specific to San Diego: <a href="/journal/june-gloom-is-not-sun-protection/">June gloom is not sun protection</a>. The overcast months remove the warmth people use to judge risk while letting a large share of ultraviolet through, and a peel plan that does not take daily light protection seriously will not hold its result. That is true of both treatments, and it is why both close with SPF.',
+      },
+      { h2: 'Questions worth asking before booking either one' },
+      {
+        ul: [
+          'Is the concern texture or colour? Those need different treatments, and naming one as the priority is worth doing out loud.',
+          'What happens to the barrier in the days afterwards, and what does the aftercare look like?',
+          'Is this a one-off appointment or the first of a series, and what does the series cost?',
+          'What is the plan if the treatment makes pigment worse rather than better?',
+        ],
+      },
+    ],
+    faqHeading: 'Dermaplaning and chemical peel questions',
+    faqs: [
+      {
+        question: 'Which is better for sun damage: dermaplaning or a chemical peel?',
+        answer:
+          'A chemical peel, if the sun damage has actually changed the colour of the skin — brown patches, mottled tone, or post-inflammatory marks. Dermaplaning works at the surface and will not lift pigment at any depth. Dermaplaning is the right choice when the complaint is texture, peach fuzz, or product that sits on the skin instead of absorbing. For accumulated UV damage the answer is a Lira peel series: $199 for Gentle Renewal and $299 for Advanced, with strength escalating every four to six weeks.',
+      },
+      {
+        question: 'Can you have dermaplaning and a chemical peel in the same visit?',
+        answer:
+          'Yes, and it is a common pairing. Dermaplaning goes first and clears the surface, then the peel reaches the upper layers more evenly because there is no layer of dead cells in the way. The order is not interchangeable — acid applied on an uncleared surface is uneven acid, and dermaplaning on freshly peeled skin in the same appointment is more than one visit should hold.',
+      },
+      {
+        question: 'Which one has more downtime?',
+        answer:
+          'The chemical peel. Dermaplaning has essentially none: the skin may look lightly flushed for a short while afterwards and then you are out, which is why it gets booked before events. A peel produces visible peeling for a day or two depending on the strength, so it needs to be booked with a couple of quiet days afterwards and daily sunscreen in between appointments.',
+      },
+      {
+        question: 'Is it worth booking both, or should you pick one?',
+        answer:
+          'Pick one when the concern is single-layered — texture alone means dermaplaning, colour alone means a peel. Book both when the concern is both: a peel series for the pigment, with dermaplaning between appointments to keep the surface clear so home care absorbs and the next peel lands evenly. Booking both in one visit is reasonable for a client who wants an immediate visible change alongside a corrective plan, but it is not a substitute for the series.',
+      },
+      {
+        question: 'What is the difference between exfoliating at home and dermaplaning in a studio?',
+        answer:
+          'Control. A home exfoliant works over weeks at a strength chosen by feel, and the irritation it causes strips the barrier that coastal wind and salt have already worked on. A studio dermaplane is one dose at a fixed blade angle on completely dry skin, with the plan and the aftercare decided in advance. If home exfoliation has already left the skin reactive, the studio will usually start with barrier work instead — the DMK Enzyme Therapy protocol — rather than adding a blade to compromised skin.',
+      },
+    ],
+    cta: { label: 'See dermaplaning in San Diego', href: '/treatments/dermaplaning/' },
   },
 ];

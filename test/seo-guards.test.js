@@ -71,7 +71,7 @@ describe('SEO Guards', () => {
   });
 
   describe('Schema Validation', () => {
-    test('LocalBusiness schema is valid JSON and carries the verified NAP', () => {
+    test('LocalBusiness schema is valid JSON and carries the verified NAP', async () => {
       const { getPage, getJsonLdBlocks, VERIFIED } = await import('./test-utils.js');
       const home = getPage('/');
       const blocks = getJsonLdBlocks(home.html);
@@ -91,7 +91,7 @@ describe('SEO Guards', () => {
       assert.equal(local.aggregateRating, undefined, 'schema contains unverified aggregateRating');
     });
 
-    test('homepage has FAQ schema with at least 4 questions', () => {
+    test('homepage has FAQ schema with at least 4 questions', async () => {
       const { getPage, getJsonLdBlocks } = await import('./test-utils.js');
       const home = getPage('/');
       const blocks = getJsonLdBlocks(home.html);

@@ -502,7 +502,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
         answer: `Point Loma's peninsula location means constant salt air from both the Pacific Ocean and San Diego Bay. Salt draws moisture from your skin barrier with every exposure, leading to dehydration, sensitivity, and accelerated aging. Wind compounds the damage. HydraFacial's intensive hydration and barrier repair counteracts this environmental stress.`,
       },
       {
-        question: 'How long does it take to get to KIAMO Skin from Point Loma?',
+        question: 'How long does it take to drive from Point Loma to Mission Hills for a HydraFacial?',
         answer: `About 10 minutes from Liberty Station via Rosecrans Street to Washington Street. From Ocean Beach or Sunset Cliffs, plan 12-15 minutes. The studio is at 3067 Reynard Way in Mission Hills with free parking. Close enough for monthly maintenance.`,
       },
       {
@@ -877,7 +877,7 @@ export const hydrafacialAreas: HydrafacialArea[] = [
     postalCodes: ['92109'],
     faqs: [
       {
-        question: 'How far is KIAMO Skin from Pacific Beach?',
+        question: 'How long does it take to drive from Pacific Beach to Mission Hills for a HydraFacial?',
         answer: `KIAMO Skin is about 15 minutes from Pacific Beach via I-8 east to Highway 163 south, exiting Washington Street. The studio is at 3067 Reynard Way in Mission Hills with free parking. Close enough for monthly maintenance treatments, which is the typical cadence for barrier repair against constant coastal exposure.`,
       },
       {

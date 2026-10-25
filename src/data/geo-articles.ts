@@ -45,6 +45,12 @@ export interface GeoArticle {
 
   /** Primary keyword for SEO */
   primaryKeyword: string;
+  /**
+   * One line naming the local condition this article covers. Rendered on the
+   * parent treatment page as the lead-in to the link, so the treatment page
+   * says WHY the area matters instead of dropping a bare link.
+   */
+  localGuideLead?: string;
 
   /** Word count (for Article schema) */
   wordCount: number;
@@ -112,6 +118,8 @@ export const geoArticles: GeoArticle[] = [
     datePublished: '2026-09-05',
     dateModified: '2026-09-05',
     primaryKeyword: 'HydraFacial for ocean swimmers La Jolla',
+    localGuideLead:
+      'Salt water changes what this treatment has to repair.',
     wordCount: 1450,
     body: `<h2 class="t-h3 mt-12 mb-6">Why Ocean Swimming Damages Skin</h2>
 <p>
@@ -288,7 +296,7 @@ export const geoArticles: GeoArticle[] = [
     serviceSlug: 'hydrafacial',
     title: 'HydraFacial for Pacific Beach Sun Damage: Reversing May Gray UV | KIAMO Skin',
     description:
-      'Pacific Beach sits inside the May Gray marine layer belt. HydraFacial at KIAMO Skin in Mission Hills reverses the UV-loaded surface layer. From $199.',
+      'Pacific Beach sits inside the May Gray marine layer belt. HydraFacial at KIAMO Skin in Mission Hills reverses the UV-loaded surface layer. From $259.',
     h1: 'HydraFacial for Pacific Beach Sun Damage: Reversing May Gray UV Exposure',
     quickAnswer:
       'Pacific Beach sits inside the May Gray marine layer belt, and the UV that penetrates thin cloud is the most consistent cause of new pigmentation in the clients we see from the neighborhood. HydraFacial at KIAMO Skin in Mission Hills uses enzymatic resurfacing and peptide infusion to lift the UV-loaded surface cells and replace hydration, with LED light therapy included in every session — about fifteen minutes east on I-8 from Pacific Beach.',
@@ -348,6 +356,8 @@ export const geoArticles: GeoArticle[] = [
     datePublished: '2026-10-07',
     dateModified: '2026-10-07',
     primaryKeyword: 'HydraFacial Pacific Beach',
+    localGuideLead:
+      'May Gray UV changes what this treatment has to lift.',
     wordCount: 1400,
     body: `<h2 class="t-h3 mt-12 mb-6">Why Pacific Beach Skin Shows UV Damage</h2>
 <p>
@@ -488,6 +498,8 @@ export const geoArticles: GeoArticle[] = [
     datePublished: '2026-10-07',
     dateModified: '2026-10-07',
     primaryKeyword: 'chemical peel La Mesa melasma',
+    localGuideLead:
+      'Inland heat changes how this treatment is calibrated.',
     wordCount: 1400,
     body: `<h2 class="t-h3 mt-12 mb-6">Why La Mesa Heat Drives Melasma Differently</h2>
 <p>
@@ -565,7 +577,7 @@ export const geoArticles: GeoArticle[] = [
     serviceSlug: 'procell-microchanneling',
     title: 'Procell Microchanneling in North Park for Acne Scars | KIAMO Skin',
     description:
-      'Acne scar revision in melanin-rich skin needs depth-controlled microchanneling. Procell at KIAMO Skin in Mission Hills serves North Park with safe-for-Fitzpatrick I-VI protocols. From $599.',
+      'Acne scar revision in melanin-rich skin needs depth-controlled microchanneling. Procell at KIAMO Skin in Mission Hills serves North Park with safe-for-Fitzpatrick I-VI protocols. From $475.',
     h1: 'Procell Microchanneling for North Park Acne Scars: Depth-Controlled Revision for All Skin Types',
     quickAnswer:
       'Acne scar revision in melanin-rich skin is depth-controlled work. Too shallow and the scars do not respond. Too deep and you risk post-inflammatory hyperpigmentation that is worse than the scars. Procell microchanneling at KIAMO Skin in Mission Hills is set to a depth calibrated at consultation based on scar type and Fitzpatrick — the same studio, ten minutes south of North Park via I-805.',
@@ -625,6 +637,8 @@ export const geoArticles: GeoArticle[] = [
     datePublished: '2026-10-07',
     dateModified: '2026-10-07',
     primaryKeyword: 'microneedling North Park acne scars',
+    localGuideLead:
+      'Scar depth changes how this treatment is set.',
     wordCount: 1500,
     body: `<h2 class="t-h3 mt-12 mb-6">Why Acne Scars in North Park Need Depth-Controlled Work</h2>
 <p>
@@ -693,6 +707,145 @@ export const geoArticles: GeoArticle[] = [
   Full directions, neighborhood context, and what to expect at a first visit are on the <a href="/service-areas/north-park/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">North Park service area page</a>.
 </p>`,
   },
+  {
+    slug: 'dermaplaning-la-jolla-sun-damaged-skin',
+    areaSlug: 'la-jolla',
+    serviceSlug: 'dermaplaning',
+    title: 'Dermaplaning in La Jolla for Sun-Damaged Skin | KIAMO Skin',
+    description:
+      'La Jolla skin takes direct coastal UV all year. Dermaplaning at KIAMO Skin in Mission Hills clears the surface without triggering dark marks. From $199.',
+    h1: 'Dermaplaning in La Jolla: What It Can and Cannot Do to Sun-Damaged Skin',
+    quickAnswer:
+      'La Jolla skin takes direct sun on the blufftop above the Cove and along the open coastal paths, and ocean swimming adds year-round abrasion on top of that. Dermaplaning removes the dead surface layer and vellus hair with a sterile blade on dry skin — nothing penetrates, nothing is pulled from the follicle, and the low-inflammation surface work is what makes it a safe reset on melanin-rich skin. It does not repair UV damage itself; brown patches and mottled tone are what a Lira chemical peel series reaches. The studio is in Mission Hills, twelve miles and roughly twenty minutes south on I-5.',
+    faqs: [
+      {
+        question: 'Does dermaplaning help with sun damage or only with texture?',
+        answer:
+          'Only with texture, and it is worth being precise about the difference. Dermaplaning removes dead surface cells and vellus hair with a sterile blade, so it improves the feel of the skin, evens the way makeup sits, and lets serums absorb better. It does not reach the pigment or the structural change that years of UV exposure cause in the deeper layers. For brown patches, mottled tone, or melasma, the treatment that addresses the pigment is a chemical peel series — the Lira Gentle Renewal peel is $199 and the Advanced peel is $299, with strength escalating every four to six weeks. Dermaplaning is frequently paired with a peel, because a cleared surface lets the acid work evenly.',
+      },
+      {
+        question: 'Is dermaplaning safe on skin that has been sunburned?',
+        answer:
+          'Not while the skin is still reacting. A sunburn is inflammation, and adding mechanical exfoliation to inflamed skin is the wrong sequence. Skin that is still hot, tender, or visibly pink gets no blade at all — the studio works around it or skips the treatment entirely. Once the skin has returned to normal and the barrier has settled, dermaplaning is safe. That is the reason every treatment closes with SPF and why recent sun exposure comes up at consultation. For skin that reacts this way regularly, the DMK Enzyme Therapy protocol rebuilds the barrier before any blade work begins.',
+      },
+      {
+        question: 'What does dermaplaning do to the dark marks left behind by old acne?',
+        answer:
+          'It removes the dead surface layer sitting on top of the mark, which makes it look less obvious right away, but it does not remove the pigment itself. Post-inflammatory hyperpigmentation sits in the upper layers of skin and responds to pigment-calming peels rather than to a blade. A Lira peel series is the protocol that fades those marks. Dermaplaning is still useful alongside it, because a cleared surface means the peel acid reaches evenly and the mark fades more predictably. The three kinds of dark mark journal piece explains how to tell post-inflammatory marks from melasma and from true scarring before choosing a protocol.',
+      },
+      {
+        question: 'Is dermaplaning worth it for La Jolla clients who spend every day outdoors?',
+        answer:
+          'It depends on what you want it to do. If you want smoother texture, makeup that stops catching on vellus hair, and product that actually absorbs, dermaplaning is one of the few treatments that delivers all three with zero downtime and an immediate glow — the full facial is $199. If you want the sun damage itself to change, a peel series is the treatment that reaches the pigment, and daily SPF is the only thing that stops new exposure from undoing the result. Clients who combine the two do better than clients who book either one alone. The consultation is where that sequence gets decided.',
+      },
+      {
+        question: 'Does dermaplaning work if you swim in the ocean the same week?',
+        answer:
+          'Yes, but order it. Salt water strips the skin barrier, so swimming the day after a dermaplane puts freshly treated skin in contact with salt and sun with no barrier of its own. The better sequence is dermaplaning first, then SPF, then the swim — and a hydra facial in the same cycle to rebuild what the salt took out. The studio asks about recent swimming at consultation, because ocean exposure changes the plan. The La Jolla service area page covers how the swim culture and the treatment calendar interact across a full week.',
+      },
+    ],
+    relatedLinks: [
+      {
+        label: 'Dermaplane Facial in San Diego',
+        href: '/treatments/dermaplaning/',
+      },
+      {
+        label: 'Dermaplane Facial for La Jolla clients',
+        href: '/facial/la-jolla/',
+      },
+      {
+        label: 'Lira Chemical Peels for Pigmentation',
+        href: '/treatments/lira-peels/',
+      },
+      {
+        label: 'Hyperpigmentation Treatment in San Diego',
+        href: '/treatments/hyperpigmentation/',
+      },
+      {
+        label: 'Is dermaplaning safe on dark skin?',
+        href: '/journal/dermaplaning-safe-dark-skin-san-diego/',
+      },
+      {
+        label: 'Corrective Facials and Scalp Therapy in La Jolla',
+        href: '/service-areas/la-jolla/',
+      },
+    ],
+    datePublished: '2026-10-26',
+    dateModified: '2026-10-26',
+    primaryKeyword: 'dermaplaning La Jolla',
+    localGuideLead:
+      'Coastal UV changes what a surface exfoliation can safely do.',
+    wordCount: 1320,
+    body: `<h2 class="t-h3 mt-12 mb-6">Why La Jolla Skin Needs a Calibrated Exfoliation</h2>
+<p>
+  La Jolla gets direct sun on an unusual number of surfaces. The blufftop above the Cove has no tree cover, and the coastal paths running from Windansea to La Jolla Shores follow open shoreline for most of the way. Between a morning group swim at the Cove and an afternoon walk on the bluff, La Jolla skin collects more ultraviolet exposure than most San Diego skin — and it collects it year-round rather than in a summer block. The visible result is a surface that photographs unevenly, holds dead cells longer than it should, and wears a fine layer of vellus hair that catches every product applied to it.
+</p>
+<p>
+  That combination is what dermaplaning addresses. It is not a treatment for UV damage itself, and any studio that markets it that way is selling a promise the blade cannot keep. What it is: a mechanical removal of the dead surface layer and the fine hair sitting on top of it. A reset that lets everything applied afterward reach live tissue instead of resting on debris. For a La Jolla client who spends the day outdoors and still wants results without a recovery window, that reset is the piece most corrective protocols are missing.
+</p>
+<p>
+  The setting matters because the alternative — chemical exfoliation at home, week after week, at whatever strength feels right — is where most La Jolla clients arrive. That approach inflames the skin, strips the barrier that coastal wind and salt have already worked on, and leaves the surface rougher than it started. A controlled blade pass in a studio is a different proposition: one dose, one angle, one controlled environment.
+</p>
+
+<h2 class="t-h3 mt-12 mb-6">What Dermaplaning Actually Removes, and What It Does Not</h2>
+<p>
+  A dermaplane uses a sterile surgical blade held at a fixed angle and drawn across dry skin in short, controlled strokes, section by section. It removes dead surface cells and vellus hair. It does not pull hair from the follicle, and it does not penetrate the skin. Nothing about the procedure touches the deeper layers where sun damage and pigment settle, which is exactly why it stays safe on melanin-rich skin. A surface-level removal is very unlikely to trigger the inflammatory response that produces post-inflammatory hyperpigmentation.
+</p>
+<p>
+  That distinction answers most of the questions La Jolla clients bring about dermaplaning on darker skin. The concern with resurfacing treatments in Fitzpatrick IV-VI skin is that inflammation drives excess melanin into the upper layers and leaves a dark mark behind. A blade working on the stratum corneum does not generate that kind of inflammation. Correct blade angle and light pressure are what keep it that way, and those are technique variables rather than skin-type variables — which is why the studio treats every Fitzpatrick type with the same protocol.
+</p>
+<p>
+  The vellus hair returns a few weeks later exactly as it was: same texture, same colour, same growth pattern. It cannot grow back thicker, because the blade never touches the follicle. The thing that does change is the surface — smoother, less fuzzy, and far more receptive to everything that goes on afterwards.
+</p>
+
+<h2 class="t-h3 mt-12 mb-6">When Dermaplaning Is the Wrong Call in La Jolla</h2>
+<p>
+  There are three situations where the studio skips the blade, and all three are worth naming before booking rather than after arriving. The first is active or inflamed acne. The blade is worked around active breakouts rather than across the infected skin, and a face carrying a heavy active breakout is a better candidate for a hydra facial that clears the active state first.
+</p>
+<p>
+  The second is a compromised barrier. Skin that stings under moisturizer, flakes despite hydration, or reacts to products it used to tolerate is not ready for mechanical exfoliation. The <a href="/treatments/dmk-enzyme-therapy/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">DMK Enzyme Therapy</a> protocol is the right starting point there — it rebuilds the foundation that the rest of the corrective work depends on.
+</p>
+<p>
+  The third is the one La Jolla clients most often push back on: a sunburn. Skin that is still hot, tender, or visibly pink from recent sun exposure gets no blade at all, because inflammation is precisely what should not be added to it. The <a href="/journal/june-gloom-is-not-sun-protection/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">June gloom is not sun protection</a> journal piece explains why coastal UV exposure is easier to underestimate than inland exposure, even in the middle of a foggy season.
+</p>
+
+<h2 class="t-h3 mt-12 mb-6">Dermaplaning or a Lira Peel in La Jolla</h2>
+<p>
+  This is the question the consultation actually answers, because the two treatments work on different layers. Dermaplaning removes what is on the surface. A chemical peel places acid on the surface and lets it work into the upper layers over a controlled peel-down. If the concern is texture, makeup that catches on vellus hair, or product that sits on the skin instead of absorbing, dermaplaning is the more direct answer.
+</p>
+<p>
+  If the concern is the accumulated UV damage itself — the uneven tone, the brown patches, the mottled colour that builds over years of exposure on open coastal surfaces — then a <a href="/treatments/lira-peels/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">Lira chemical peel</a> series is the treatment that reaches it. The Gentle Renewal peel is $199 and the Advanced peel is $299, with strength escalating across a series spaced every four to six weeks. A cleared surface actually makes the acid work more evenly, which is why the two are so often paired rather than chosen between.
+</p>
+<p>
+  For persistent melasma — the deeper, more patterned pigment that shows across the cheeks, forehead and upper lip — the <a href="/treatments/hyperpigmentation/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">hyperpigmentation protocol</a> is the right path, and dermaplaning is the surface preparation that helps it along. If it is not clear which of the three is being dealt with, the <a href="/journal/three-kinds-of-dark-mark/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">three kinds of dark mark</a> journal piece is the fastest way to tell the three apart before booking anything.
+</p>
+
+<h2 class="t-h3 mt-12 mb-6">What La Jolla Clients Should Expect</h2>
+<p>
+  The session opens with a cleanse and the skin taken completely dry — dermaplaning is performed on a dry surface, because any residual moisture changes how the blade sits. The blade pass comes next: section by section, short controlled strokes, with active or pustular acne worked around rather than over. Then the serums go on, and this is where the change becomes visible to everyone else. With the surface barrier of dead cells gone, absorption is at its highest, so the treatment actives actually land. The session closes with SPF, which matters more in La Jolla than almost anywhere else in the city.
+</p>
+<p>
+  There is zero downtime. Skin may look lightly flushed for a short while afterward, and the glow is immediate, which is why dermaplaning gets booked ahead of events. The full facial is $199, and it is often paired with a peel because a cleared surface lets the acid work evenly.
+</p>
+<p>
+  What dermaplaning will not do is rebuild the barrier that salt water and wind have stripped, and it will not lift pigment that has settled below the epidermis. For a La Jolla client who swims at the Cove most mornings, a hydra facial in the same cycle is often the better structural half of the plan. The <a href="/facial/la-jolla/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">La Jolla facial page</a> covers how the two combine across a year of coastal exposure.
+</p>
+
+<h2 class="t-h3 mt-12 mb-6">Drive Time and Logistics from La Jolla</h2>
+<p>
+  From La Jolla Village near Prospect Street and the Cove, take Torrey Pines Road south — not Coast Highway — to I-5 past UCSD and Rose Canyon, exiting at Washington Street. Twelve miles, roughly twenty minutes outside the commute. From Bird Rock, head north on La Jolla Boulevard to La Jolla Parkway east to I-5 south. From La Jolla Shores near Scripps Institution, Torrey Pines Road south picks up I-5 near UCSD. From the UCSD campus itself, La Jolla Village Drive east drops directly onto I-5 south, and the campus is only ten miles from Mission Hills.
+</p>
+<p>
+  Southbound I-5 stacks through UTC and Sorrento Valley during the morning commute, so mid-morning and early afternoon are consistently the easier windows for the drive down from the Village or the Cove. Most La Jolla clients book mid-morning, which also means arriving before the afternoon blufftop sun has had a chance to undo the work.
+</p>
+<p>
+  The studio is at 3067 Reynard Way in Mission Hills, off Washington Street, with free parking on site. Every appointment is one-to-one with Kiki, a licensed esthetician with seven years of experience treating sun-damaged skin and melanin-rich skin across all Fitzpatrick types. By appointment only, so a space is always there when you arrive.
+</p>
+<p>
+  Full directions, neighborhood context, and what to expect at a first visit are on the <a href="/service-areas/la-jolla/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">La Jolla service area page</a>.
+</p>
+`,
+  },
 ];
 
 export const getGeoArticle = (areaSlug: string, articleSlug: string) =>
@@ -700,3 +853,6 @@ export const getGeoArticle = (areaSlug: string, articleSlug: string) =>
 
 export const getGeoArticlesByArea = (areaSlug: string) =>
   geoArticles.filter((a) => a.areaSlug === areaSlug);
+
+export const getGeoArticlesByService = (serviceSlug: string) =>
+  geoArticles.filter((a) => a.serviceSlug === serviceSlug);

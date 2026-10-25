@@ -244,9 +244,9 @@ export const facialAreas: FacialArea[] = [
           'Yes. HydraFacial Syndeo has zero downtime — you can attend a beach event, gallery opening, or wedding the same day. Dermaplaning and Lira chemical peels may leave mild flush for a few hours; Kiki will advise based on the specific event timing. Most La Jolla clients book facials 1-2 days before major events for the best glow window.',
       },
       {
-        question: 'How far is KIAMO Skin from La Jolla?',
+        question: 'What should La Jolla clients expect after a facial?',
         answer:
-          'KIAMO Skin is about 15-20 minutes from most La Jolla addresses via I-5 south to Washington Street. The studio is at 3067 Reynard Way in Mission Hills with free parking. Monthly visits are realistic for clients who live or work along Prospect Street, Girard Avenue, or La Jolla Village Drive.',
+          'No downtime — return to the beach or boat activities immediately. Skin may look slightly flushed for 30-60 minutes. Most La Jolla clients notice smoother texture, smaller pores, and a glow lasting 5-7 days. The hydration and barrier protection is especially noticeable if you have been dealing with coastal dryness and salt water.',
       },
       {
         question: 'What facial addresses sun damage from La Jolla coastal exposure?',

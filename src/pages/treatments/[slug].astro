@@ -8,6 +8,7 @@ import CertificateModal from '../../components/CertificateModal.astro';
 import { treatments } from '../../data/treatments';
 import { treatmentFaqs } from '../../data/treatment-faqs';
 import { areas } from '../../data/areas';
+import { getGeoArticlesByService } from '../../data/geo-articles';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import ServiceSchema from '../../components/schema/ServiceSchema.astro';
@@ -29,6 +30,13 @@ const faqs = treatmentFaqs[treatment.slug] ?? [];
 const localAreas = treatment.areas
   .map((slug) => areas.find((a) => a.slug === slug))
   .filter((a) => a !== undefined);
+/**
+ * The GeoArticles written for this treatment in a specific service area. The
+ * treatment page is the parent hub for those pages, so it links down to them.
+ * Without this link a GeoArticle has no crawl path from the service page and
+ * sits on the orphan list.
+ */
+const localGuides = getGeoArticlesByService(treatment.slug);
 ---
 
 <BaseLayout title={treatment.title} description={treatment.description}>
@@ -391,6 +399,21 @@ const localAreas = treatment.areas
                   .
                 </p>
               )
+            }
+
+            {
+              localGuides.map((ga) => (
+                <p class="t-body mt-5 text-[0.875rem] text-ink-soft">
+                  {ga.localGuideLead}{' '}
+                  <a
+                    href={`/service-areas/${ga.areaSlug}/${ga.slug}/`}
+                    class="border-b border-ink/40 hover:border-rose hover:text-rose"
+                  >
+                    {ga.h1}
+                  </a>
+                  .
+                </p>
+              ))
             }
 
             {
