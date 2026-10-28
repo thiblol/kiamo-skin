@@ -172,7 +172,7 @@ export const northParkEnhanced: AreaEnhancement = {
       },
       {
         title: "Transparent pricing, no package pressure",
-        body: "All treatment costs published on this website and confirmed in writing before booking. Series pricing disclosed at consultation: Lira 4-peel series $749, DMK 6-session course $1,499, Procell 3-treatment series $1,199. No hidden fees, no mandatory product purchases beyond post-treatment healing essentials (mineral SPF, tyrosinase inhibitor serum). If a treatment won't work for your skin tone or concern, we tell you at consultation, not after you've paid for a series.",
+        body: "All treatment costs published on this website and confirmed in writing before booking. Series pricing disclosed at consultation: DMK 6-session course $1,499, Procell 3-treatment series $1,199, and a Lira peel series priced on consultation. No hidden fees, no mandatory product purchases beyond post-treatment healing essentials (mineral SPF, tyrosinase inhibitor serum). If a treatment won't work for your skin tone or concern, we tell you at consultation, not after you've paid for a series.",
       },
     ],
   },
@@ -193,7 +193,7 @@ export const northParkEnhanced: AreaEnhancement = {
     {
       question: "How much does a chemical peel series cost for North Park clients with hyperpigmentation?",
       answer:
-        "Lira Chemical Peels at KIAMO Skin start at $199 for Gentle Renewal (entry-level) and $299 for Advanced formulations. Most North Park clients with PIH or melasma need a series of 4-6 peels to see meaningful lightening, which is why we offer series pricing: $749 for a 4-peel series (saves $97 vs. individual pricing) or $1,399 for 6 peels (saves $195). The first visit includes Fitzpatrick type classification, PIH pattern mapping, and realistic timeline discussion — hyperpigmentation from acne, sun damage, or hormones doesn't resolve in one peel. Series pricing is confirmed at consultation before you commit. Each peel session takes 45-60 minutes with 3-5 days of mild flaking and strict 7-day sun avoidance. Proximity advantage: North Park's ten-minute drive makes completing the full series logistically realistic, while clients traveling from Carlsbad or Encinitas often abandon treatment after peel two when the biweekly commitment becomes unsustainable.",
+        "Lira Chemical Peels at KIAMO Skin start at $199 for Gentle Renewal (entry-level) and $299 for Advanced formulations. Most North Park clients with PIH or melasma need a series of 4-6 peels to see meaningful lightening, which is why a peel series is priced at consultation, with the full series cost confirmed before you commit. The first visit includes Fitzpatrick type classification, PIH pattern mapping, and realistic timeline discussion — hyperpigmentation from acne, sun damage, or hormones doesn't resolve in one peel. Series pricing is confirmed at consultation before you commit. Each peel session takes 45-60 minutes with 3-5 days of mild flaking and strict 7-day sun avoidance. Proximity advantage: North Park's ten-minute drive makes completing the full series logistically realistic, while clients traveling from Carlsbad or Encinitas often abandon treatment after peel two when the biweekly commitment becomes unsustainable.",
       entityCount: 11,
     },
     {

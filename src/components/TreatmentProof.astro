@@ -1,0 +1,86 @@
+---
+/**
+ * TreatmentProof
+ * --------------
+ * The proof that sits around a treatment: a quick answer an AI engine can
+ * lift, the three claims under the hero, a published case, and the risk
+ * reversal next to the booking form.
+ *
+ * Why these are one component:
+ *   The audit found the same gap on all eleven treatment pages. A reader could
+ *   scroll from the headline to the booking form without meeting a single
+ *   reason to believe the studio — no trust claim under the hero, no outcome,
+ *   no answer to "what if it doesn't work" near the CTA. Four separate
+ *   components scattered across a page is four chances to forget one.
+ *
+ * Every value comes from `data/treatment-trust.ts`, which holds only facts
+ * the studio already publishes. Nothing here is a claim invented to close a
+ * sale: no satisfaction guarantee (none has been offered), no rating or
+ * review count (verified once, on the homepage), and no urgency language
+ * (the site brief forbids it).
+ */
+import QuickAnswer from './QuickAnswer.astro';
+import GuaranteeBlock from './GuaranteeBlock.astro';
+import { treatmentTrust } from '../data/treatment-trust';
+import { outcomes } from '../data/outcomes';
+
+interface Props {
+  /** The treatment slug, used to look up its trust data. */
+  slug: string;
+  class?: string;
+}
+
+const { slug, class: className = '' } = Astro.props;
+
+const trust = treatmentTrust[slug];
+
+/**
+ * The published case for this treatment, if there is one. Null when the
+ * treatment has no matching case — a mismatched outcome is worse than none.
+ */
+const outcome = trust?.outcomeConcern
+  ? outcomes.find((o) => o.concern === trust.outcomeConcern) ?? null
+  : null;
+---
+
+{
+  trust && (
+    <>
+      <QuickAnswer content={trust.quickAnswer} class={className} />
+
+      {outcome && (
+        <div class="border-t border-line pt-10">
+          <p class="t-eyebrow text-ink-soft">A published case</p>
+          <p class="t-h3 mt-5 max-w-[34ch]">{outcome.outcome}</p>
+          <dl class="mt-7 m-0 flex flex-wrap gap-x-10 gap-y-4">
+            <div>
+              <dt class="t-meta">Treatment</dt>
+              <dd class="t-body mt-1 m-0 text-ink">{outcome.treatment}</dd>
+            </div>
+            <div>
+              <dt class="t-meta">Sessions</dt>
+              <dd class="t-body mt-1 m-0 text-ink">{outcome.sessions}</dd>
+            </div>
+            <div>
+              <dt class="t-meta">Over</dt>
+              <dd class="t-body mt-1 m-0 text-ink">{outcome.timeframe}</dd>
+            </div>
+          </dl>
+          <p class="t-body mt-6 text-[0.9375rem] text-ink-soft">
+            Every figure is the studio's own record from that case, photographed with written
+            consent and published in full.{' '}
+            <a href={outcome.href} class="border-b border-ink pb-0.5 hover:border-rose hover:text-rose">
+              See the full case
+            </a>
+          </p>
+        </div>
+      )}
+
+      <GuaranteeBlock
+        heading={trust.guarantee.heading}
+        commitments={trust.guarantee.commitments}
+        class={className}
+      />
+    </>
+  )
+}

@@ -16,6 +16,11 @@ import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
 import TreatmentAreaSchema from '../../components/schema/TreatmentAreaSchema.astro';
 import PersonSchema from '../../components/schema/PersonSchema.astro';
+import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
+import TreatmentProof from '../../components/TreatmentProof.astro';
+import TrustBar from '../../components/TrustBar.astro';
+import ProofQuote from '../../components/ProofQuote.astro';
+import { treatmentTrust, studioProof } from '../../data/treatment-trust';
 
 export function getStaticPaths() {
   return treatments.map((treatment) => ({
@@ -51,32 +56,42 @@ const localGuides = getGeoArticlesByService(treatment.slug);
   {faqs.length > 0 && <FaqSchema slot="head" faqs={faqs} />}
   <TreatmentAreaSchema slot="head" treatment={treatment} />
   <PersonSchema slot="head" />
+  {/* Speakable marks the quick answer for voice and AI extraction. The
+      treatment pages carry one that the area and facial pages already had
+      but these did not. */}
+  {treatmentTrust[treatment.slug] && (
+    <SpeakableSchema slot="head" url={Astro.site ? new URL(Astro.site).origin + Astro.url.pathname : Astro.url.pathname} />
+  )}
 
   <article>
     <header class="bg-blush">
-      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-        <div class="grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-20">
+      <div class="wrap pt-[calc(60px+40px)] pb-14 md:pt-[calc(60px+64px)] md:pb-20">
+        <div class="grid items-center gap-10 md:grid-cols-2 md:gap-14 lg:gap-20">
           <div>
             <p class="t-eyebrow text-ink-soft">
               <a href="/treatments/" class="hover:text-rose">Treatments</a> · {treatment.name}
             </p>
-            <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.5rem] md:text-[4rem]">{treatment.headline}</h1>
-            {/* set:html so an opener can carry an inline link on the claim it supports,
-                the same way `articles.ts` renders `p` and `ul`. Authored content only. */}
-            <p class="t-body mt-7 max-w-[62ch] text-[1.125rem]" set:html={treatment.opener} />
-            <p class="t-body mt-5 max-w-[62ch]" set:html={treatment.intro} />
-            <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.25rem] md:text-[3.5rem]">{treatment.headline}</h1>
+            {/* One subhead, three lines. The scenario-page rule: the hero
+                states the offer and gives the reason to act, and stops. The
+                longer `intro` lives in the section below, where a reader who
+                has decided to keep reading will find it — and where it does
+                not push the CTA off the fold. */}
+            <p class="t-body mt-6 max-w-[56ch] text-[1.125rem]" set:html={treatment.opener} />
+            <div class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
               <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+              {/* The phone is the secondary path for a high-intent visitor who
+                  will not fill in a form (site-brief §12). */}
               <a href={business.phone.href} class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose">
                 {business.phone.display}
               </a>
             </div>
-            <p class="t-body mt-6 text-[0.875rem] text-ink-soft">
-              Licensed Esthetician · {business.ownerCredential.split(',')[0]} · {business.experience} experience · One-to-one, private studio
-            </p>
           </div>
 
-          <div class="flex flex-col gap-6">
+          {/* The image runs to the edge of the content area, with the inner
+              corner rounded — so the hero reads as a photograph of the work
+              rather than a card floating beside the copy. */}
+          <div>
             <Image
               src={treatment.image}
               alt={treatment.imageAlt}
@@ -85,18 +100,38 @@ const localGuides = getGeoArticlesByService(treatment.slug);
               loading="eager"
               class="aspect-4/3 w-full rounded-lg object-cover"
             />
-            <div class="flex justify-center md:justify-start">
-              <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
-            </div>
           </div>
         </div>
       </div>
     </header>
 
+    {/* The trust band. It sits directly below the hero as its own strip
+        rather than inside it — the hero is the offer, and the claims are
+        the reason to believe it. Keeping them apart is also what lets the
+        hero fit the fold. */}
+    {treatmentTrust[treatment.slug] && (
+      <section class="bg-porcelain py-12 md:py-14">
+        <div class="wrap">
+          <TrustBar items={treatmentTrust[treatment.slug].claims} heading="Why this studio" />
+          {/* A client's words, directly under the studio's own claims. The
+              claims are the studio asserting things about itself; this is
+              somebody else saying it, and it belongs high on the page. */}
+          <div class="mt-10 border-t border-line pt-9 md:mt-12 md:pt-10">
+            <ProofQuote testimonial={studioProof} />
+          </div>
+        </div>
+      </section>
+    )}
+
     <div class="bg-ivory">
       <div class="wrap py-12">
         <div class="prose-treatment max-w-[68ch]">
-          <p class="t-body text-[0.9375rem] text-ink-soft">
+          {/* The `intro` that used to sit in the hero. It is the longer
+              explanation of what the treatment is and who it suits, and it
+              belongs after the fold — the hero now carries the offer, the
+              subhead, and the CTA, and nothing else. */}
+          <p class="t-body" set:html={treatment.intro} />
+          <p class="t-body mt-5 text-[0.9375rem] text-ink-soft">
             KIAMO Skin is equipped with HydraFacial Syndeo (the latest generation HydraFacial device with AI-powered skin analysis), Procell Therapies microchanneling system, DMK enzyme protocols developed by Danné Montague-King, LIRA Clinical professional-grade chemical peels, and Keravive scalp therapy using HydraFacial's proprietary peptide complex. These are not consumer devices adapted for professional use — they are clinical-grade systems designed for corrective outcomes.
           </p>
           <p class="t-body mt-4 text-[0.9375rem] text-ink-soft">
@@ -431,6 +466,14 @@ const localGuides = getGeoArticlesByService(treatment.slug);
             <div class="mt-8">
               <Button href={business.bookingUrl} external class="w-full">{CTA_LABEL}</Button>
             </div>
+
+            {/* Trust repeats. The band under the hero carries one quote;
+                this is the second one, next to the booking form, so a reader
+                who scrolls straight to the CTA still meets a client before
+                they meet the button. */}
+            <div class="mt-8 border-t border-line pt-8">
+              <ProofQuote testimonial={studioProof} />
+            </div>
           </div>
 
           <div class="mt-10">
@@ -560,30 +603,64 @@ const localGuides = getGeoArticlesByService(treatment.slug);
       </section>
     )}
 
+    {/* The proof. Sits after the treatment detail and before the questions,
+        so a reader has met the studio, a published case, a client, and the
+        risk reversal before the FAQ — and the booking form at the end is
+        answered rather than asserted. */}
+    {treatmentTrust[treatment.slug] && (
+      <section class="bg-porcelain py-20 md:py-28">
+        <div class="wrap">
+          <div class="mx-auto max-w-[68ch]">
+            <TreatmentProof slug={treatment.slug} />
+          </div>
+        </div>
+      </section>
+    )}
+
     {
       faqs.length > 0 && (
         <div class="bg-ivory">
           <div class="wrap section-y">
             <p class="t-eyebrow text-ink-soft">Before you book</p>
             <h2 class="t-h2 mt-5">{treatment.name} questions</h2>
-            <div class="mt-12 max-w-[68ch]">
-              {faqs.map((faq) => (
-                <div class="border-b border-line">
-                  <details class="group">
-                    <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
-                      <span>{faq.question}</span>
-                      <span
-                        aria-hidden="true"
-                        class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
-                      >
-                        +
-                      </span>
-                    </summary>
-                    <div class="t-body pb-6 text-[0.9375rem]">{faq.answer}</div>
-                  </details>
+
+            {/* The answers are visible text, not accordions. These are SEO
+                pages, and the studio's own booking FAQ block (FaqLocation)
+                already made this call for the same reason: a collapsed
+                answer earns fewer organic sessions than the same copy shown
+                outright. The hierarchy is carried by type size instead of by
+                a click — the questions that block a booking lead, and the
+                rest sit beneath as a quieter reference tier. */}
+            {(() => {
+              const leadCount = 4;
+              const leadFaqs = faqs.slice(0, leadCount);
+              const referenceFaqs = faqs.slice(leadCount);
+              return (
+                <div class="mt-12 max-w-[68ch]">
+                  <div>
+                    {leadFaqs.map((faq) => (
+                      <div class="border-b border-line py-7 first:pt-0">
+                        <h3 class="t-service text-[1.0625rem] md:text-[1.1875rem]">{faq.question}</h3>
+                        <p class="t-body mt-3 text-[0.9375rem]">{faq.answer}</p>
+                      </div>
+                    ))}
+                  </div>
+                  {referenceFaqs.length > 0 && (
+                    <div class="mt-12">
+                      <p class="t-eyebrow text-ink-soft">Also asked</p>
+                      <dl class="mt-6">
+                        {referenceFaqs.map((faq) => (
+                          <div class="border-b border-line py-5 last:border-b-0">
+                            <dt class="t-service text-[0.9375rem]">{faq.question}</dt>
+                            <dd class="t-body mt-2 text-[0.9375rem] text-ink-soft">{faq.answer}</dd>
+                          </div>
+                        ))}
+                      </dl>
+                    </div>
+                  )}
                 </div>
-              ))}
-            </div>
+              );
+            })()}
           </div>
         </div>
       )

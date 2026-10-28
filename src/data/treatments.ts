@@ -72,12 +72,12 @@ export const treatments: Treatment[] = [
     areas: ['downtown-san-diego', 'bankers-hill', 'little-italy', 'harbor-island', 'point-loma', 'midway-district', 'hillcrest', 'gaslamp-quarter'],
     title: 'HydraFacial in San Diego | KIAMO Skin',
     description:
-      'HydraFacial San Diego - Mission Hills studio. Deep extraction + customized booster + LED therapy for your skin concerns. Licensed esthetician. First visit $249.',
-    headline: 'HydraFacial San Diego — Medical-Grade Facial Treatment',
+      'HydraFacial in San Diego from the Mission Hills studio. Deep extraction, custom boosters, LED therapy. First visit $249. Request an appointment.',
+    headline: 'HydraFacial in San Diego — Medical-Grade, With a Booster for Your Skin',
     opener:
-      'Looking for HydraFacial in San Diego? KIAMO Skin is a licensed corrective skin studio in Mission Hills performing HydraFacial on the Syndeo platform—the latest generation device with AI-powered skin impedance analysis, enhanced vortex extraction at 30-70 mmHg controlled suction, and precision booster delivery targeting your specific skin concerns. Every HydraFacial is performed by Kiki, a California licensed esthetician with 7+ years specializing in melanin-rich skin. First-time clients pay $249 for comprehensive consultation, full skin analysis, customized HydraFacial with personalized booster, microcurrent, LED light therapy, and Hydrojelly mask. Return visits are $259.',
+      'Medical-grade extraction and hydration on a HydraFacial Syndeo, with a booster chosen for your skin. Performed by Kiki, a California licensed esthetician.',
     intro:
-      'HydraFacial Syndeo performs three clinical actions simultaneously: enzymatic resurfacing lifts dead surface cells without abrasive scrubbing, patented vortex extraction vacuums mineral deposits and sebum from follicles at controlled pressure, and precision infusion floods skin with hydration and antioxidants while pores remain receptive. This is medical-grade extraction technology, not a spa facial with suction. <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills clients</a> walk to the studio. Urban professionals from <a href="/hydrafacial/downtown-san-diego/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Downtown San Diego</a>, <a href="/hydrafacial/gaslamp-quarter/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Gaslamp Quarter</a>, and <a href="/hydrafacial/little-italy/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Little Italy</a> book same-day lunchtime appointments. Residential clients from <a href="/hydrafacial/bankers-hill/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Banker\'s Hill</a> and <a href="/hydrafacial/hillcrest/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Hillcrest</a> are 5 minutes away for monthly maintenance. Coastal clients from <a href="/hydrafacial/point-loma/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Point Loma</a>, <a href="/hydrafacial/harbor-island/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Harbor Island</a>, and <a href="/hydrafacial/midway-district/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Midway District</a> address salt air dehydration and barrier damage from waterfront exposure. HydraFacial is the most forgiving corrective treatment—safe for all Fitzpatrick skin types including melanin-rich skin with zero risk of post-inflammatory hyperpigmentation.',
+      'HydraFacial Syndeo performs three clinical actions simultaneously: enzymatic resurfacing lifts dead surface cells without abrasive scrubbing, patented vortex extraction vacuums mineral deposits and sebum from follicles at controlled pressure, and precision infusion floods skin with hydration and antioxidants while pores remain receptive. This is medical-grade extraction technology, not a spa facial with suction. <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills clients</a> walk to the studio. Urban professionals from <a href="/hydrafacial/downtown-san-diego/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Downtown San Diego</a>, <a href="/hydrafacial/gaslamp-quarter/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Gaslamp Quarter</a>, and <a href="/hydrafacial/little-italy/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Little Italy</a> book lunchtime appointments. Residential clients from <a href="/hydrafacial/bankers-hill/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Banker\'s Hill</a> and <a href="/hydrafacial/hillcrest/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Hillcrest</a> are 5 minutes away for monthly maintenance. Coastal clients from <a href="/hydrafacial/point-loma/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Point Loma</a>, <a href="/hydrafacial/harbor-island/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Harbor Island</a>, and <a href="/hydrafacial/midway-district/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Midway District</a> address salt air dehydration and barrier damage from waterfront exposure. HydraFacial is the most forgiving corrective treatment—safe for all Fitzpatrick skin types including melanin-rich skin with zero risk of post-inflammatory hyperpigmentation.',
     image: hydrafacial,
     imageAlt: 'HydraFacial treatment in progress at KIAMO Skin San Diego — licensed esthetician performing professional facial treatment',
     goodFor: [
@@ -130,10 +130,10 @@ export const treatments: Treatment[] = [
     areas: ['pacific-beach', 'la-jolla', 'encinitas', 'del-mar', 'carlsbad'],
     title: 'Keravive Scalp Treatment San Diego | Mission Hills Studio',
     description:
-      'Keravive scalp treatment San Diego - clinical therapy for dandruff, flaking, hair thinning & hard water buildup. Mission Hills studio. Ocean swimmers welcome. $599.',
-    headline: "HydraFacial Keravive — your scalp is skin. Treat it that way.",
+      'Keravive scalp treatment in San Diego for dandruff, flaking, hair thinning and hard water buildup. Mission Hills studio. $599. Request an appointment.',
+    headline: 'Keravive Scalp Therapy in San Diego — Clear Flaking, Buildup, and Irritation',
     opener:
-      "Looking for professional scalp treatment in San Diego? Keravive is clinical scalp therapy for buildup, flaking, dandruff, and the hard water mineral residue that accumulates on San Diego scalps. Performed at KIAMO Skin in Mission Hills, serving clients from Pacific Beach to Carlsbad.",
+      'Clinical scalp therapy for buildup, flaking, and the hard water residue San Diego scalps collect. Performed by Kiki, a California licensed esthetician.',
     intro:
       'HydraFacial Keravive deeply cleanses, exfoliates, and hydrates the scalp while removing buildup that contributes to dryness, flaking, and irritation. The Keravive Peptide Complex nourishes sebaceous glands and supports a healthier environment for hair growth. In San Diego, hard water — averaging 16 grains per gallon — makes scalp buildup especially common. From <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla ocean swimmers</a> dealing with daily salt water exposure to <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas surfers</a> facing wind and UV damage, scalp conditions here are shaped by year-round outdoor living. Inland clients from <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista</a> and <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a> book Keravive for hard water mineral deposits that shampoo cannot clear. Every treatment includes a take-home peptide spray to continue supporting scalp health between visits.',
     image: scalp,
@@ -181,9 +181,9 @@ export const treatments: Treatment[] = [
     title: 'DMK Enzyme Therapy in San Diego | KIAMO Skin',
     description:
       'DMK enzyme therapy in Mission Hills, San Diego. Enzymatic resurfacing that rebuilds a damaged barrier. Level 1 is $279; Level 2 and 3 at consultation.',
-    headline: 'DMK Enzyme Therapy — restore skin function from within.',
+    headline: 'DMK Enzyme Therapy in San Diego — Restore Skin Function',
     opener:
-      'Looking for DMK enzyme therapy in San Diego? Level 1 is $279 at the KIAMO Skin studio in Mission Hills, and it is the treatment used when a barrier is too compromised to tolerate anything stronger.',
+      'Enzymatic resurfacing that rebuilds a damaged barrier instead of stripping a healthy one. Performed by Kiki, a California licensed esthetician.',
     intro:
       'DMK Enzyme Therapy is designed to restore healthy skin function rather than simply exfoliating the surface. By supporting the skin\'s natural processes, it helps strengthen the skin barrier while encouraging healthy circulation and lymphatic activity. It\'s especially beneficial for skin that feels over-exfoliated, sensitized, inflamed, or slow to heal—common states for <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas surfers</a>, <a href="/service-areas/pacific-beach/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Pacific Beach residents</a>, and anyone whose barrier has been stripped by salt water, wind, or aggressive product use. This approach is part of KIAMO Skin\'s broader <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatment</a> philosophy, where treatment selection is based on current skin condition rather than following a fixed protocol.',
     image: enzyme,
@@ -224,12 +224,12 @@ export const treatments: Treatment[] = [
     category: 'Corrective skin treatment',
     alternateName: 'Microneedling San Diego',
     areas: ['la-jolla', 'carlsbad', 'del-mar', 'encinitas'],
-    title: 'Microneedling San Diego — Procell Microchanneling | KIAMO Skin',
+    title: 'Microneedling San Diego — Procell | KIAMO Skin',
     description:
-      'Procell microchanneling in San Diego — safe for melanin-rich and dark skin. No RF heat, no PIH risk. KIAMO Skin, Mission Hills. Acne scars, hyperpigmentation, texture. Book online or call (310) 595-0872.',
-    headline: "Microneedling in San Diego — Acne Scars, Hyperpigmentation & Texture",
+      'Procell microchanneling in San Diego for melanin-rich skin. No RF heat. Acne scars, hyperpigmentation, texture. Mission Hills. Request an appointment.',
+    headline: 'Procell Microchanneling in San Diego — Reduce Acne Scars and Texture',
     opener:
-      'Most microneedling providers in San Diego use devices that work well on lighter skin tones but carry real risk for Black and brown skin. The radiofrequency heat in RF microneedling systems — Morpheus8, Vivace, Potenza — stimulates melanocytes in darker Fitzpatrick skin types and can produce post-inflammatory hyperpigmentation: new dark marks caused by the very treatment meant to clear them. At KIAMO Skin, we use Procell microchanneling. No RF heat. Mechanical channels only. Growth factor serums delivered directly into the treatment zones. The mechanism matches what melanin-rich skin actually needs.',
+      'Controlled microchannels and a growth factor serum, with no RF heat at all. Performed by Kiki, a California licensed esthetician.',
     intro:
       'Procell Therapies microchanneling is a skin resurfacing treatment that creates thousands of microscopic channels in the skin surface using a precision-engineered handpiece. Those channels trigger the skin\'s natural wound-healing response — collagen production, elastin remodeling, and controlled surface cell renewal. What separates Procell from conventional microneedling is what happens immediately after the channels are created. Procell\'s proprietary stem cytokine growth factor serums are applied directly into the open channels, communicating with skin cells to direct the repair process toward specific outcomes: collagen synthesis, pigment correction, and texture resurfacing. The result is faster recovery and more targeted correction than standard microneedling alone. Ideal candidates include those with acne scarring (ice pick, boxcar, and rolling scar types), post-inflammatory hyperpigmentation (PIH) — dark marks left after acne, injury, or trauma, uneven skin tone and diffuse sun damage, skin texture irregularities and enlarged pores, fine lines and mild skin laxity, and Fitzpatrick Type IV, V, and VI skin tones. For clients traveling from <a href="/service-areas/carlsbad/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Carlsbad</a>, <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a>, or <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Encinitas</a>, the series is planned as a block at consultation — scheduling all three sessions at once accounts for the drive and makes completion realistic.',
     image: procell,
@@ -275,7 +275,7 @@ export const treatments: Treatment[] = [
         label: 'Procell Microchanneling — 3 Treatment Series',
         price: verifiedPrices['procell-series'],
         description:
-          'Recommended for acne scarring, moderate to significant PIH, and textural concerns. Sessions spaced 4–6 weeks apart. Save $226 compared to three single sessions. Growth factor serums and LED therapy included at each session.',
+          'Recommended for acne scarring, moderate to significant PIH, and textural concerns. Sessions spaced 4–6 weeks apart. The three-session series costs less than three single sessions. Growth factor serums and LED therapy included at each session.',
       },
     ],
     note: 'RF microneedling devices combine needle penetration with radiofrequency heat energy delivered through the tip. In lighter skin tones, the thermal effect stimulates collagen remodeling without significant risk. In melanin-rich skin — Fitzpatrick Type IV (olive to light brown), Type V (brown), and Type VI (deep brown to dark brown) — that heat activates melanocytes near the treatment zone, which can trigger post-inflammatory hyperpigmentation as a response to thermal trauma. Procell microchanneling creates mechanical channels without any thermal component. The inflammatory trigger is controlled and predictable. Combined with protocols designed for melanin-rich skin and growth factor serums that direct repair, the treatment corrects existing pigmentation without creating new dark marks. This is not a compromised version of microneedling. It is the correct selection for the patient population KIAMO Skin serves.',
@@ -299,9 +299,9 @@ export const treatments: Treatment[] = [
     title: 'Chemical Peels for Melanin-Rich Skin | KIAMO Skin San Diego',
     description:
       'Lira chemical peels in Mission Hills, San Diego for pigmentation and melasma in melanin-rich skin. Gentle Renewal $199, Advanced Peel $299.',
-    headline: 'Lira Chemical Peels — designed to brighten without compromising skin health.',
+    headline: 'Lira Chemical Peels in San Diego — Brighten Without Damaging Skin',
     opener:
-      'Looking for a chemical peel in San Diego that is safe on melanin-rich skin? That is the work this studio was built around.',
+      'Professional peels selected for the skin tone in front of you, with the strength raised only as the barrier allows. Performed by Kiki, a California licensed esthetician.',
     intro:
       'Pigmentation is the reason most people book, and it is also where the wrong treatment does lasting damage. Melanin-rich skin responds to trauma by producing more pigment, so the strength, the acid and the pacing all have to be selected deliberately. Lira\'s professional range is built for that kind of control. <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista clients</a> and those from <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a> book this treatment most often, where inland UV and melanin-rich skin demographics make melasma the county\'s most common pigmentation concern. Read more about <a href="/treatments/melasma/" class="border-b border-ink/40 hover:border-rose hover:text-rose">correcting melasma and post-inflammatory hyperpigmentation</a>, or explore KIAMO Skin\'s full approach to <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatments</a>.',
     image: liraPeel,
@@ -351,9 +351,9 @@ export const treatments: Treatment[] = [
     title: 'Dermaplaning in San Diego — Safe for Dark Skin | KIAMO Skin',
     description:
       'Dermaplaning in San Diego at KIAMO Skin, Mission Hills. Expert technique on melanin-rich and dark skin. $199 per session. By appointment.',
-    headline: 'Dermaplaning — a clean surface changes what everything else can do.',
+    headline: 'Dermaplaning in San Diego — Smoother Skin, No Downtime',
     opener:
-      'Looking for dermaplaning in San Diego? The dermaplane facial at KIAMO Skin is performed by a licensed esthetician in Mission Hills, and it is $199.',
+      'Physical exfoliation that clears surface buildup, so everything layered after it works better. Performed by Kiki, a California licensed esthetician.',
     intro:
       'Dermaplaning uses a sterile surgical blade to remove dead surface cells and the fine vellus hair that sits on top of them. Nothing is pulled from the follicle and nothing penetrates the skin. What changes is the surface: product reaches live tissue instead of sitting on debris, and makeup stops catching on texture. Clients from <a href="/service-areas/mission-hills/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Mission Hills</a>, <a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park</a>, and <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Jolla</a> book dermaplaning for events and before important occasions because there is zero downtime and the glow is immediate. Dermaplaning is one of several <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatments</a> that can be integrated into a broader skincare plan.',
     image: dermaplane,
@@ -403,9 +403,9 @@ export const treatments: Treatment[] = [
     title: 'Corrective Skin Treatments | KIAMO Skin',
     description:
       'Explore corrective skin treatments by KIAMO Skin for pigmentation, acne, texture, barrier health, and more. Find a personalized approach to healthier-looking skin.',
-    headline: 'Corrective Skin Treatments — Designed Around Your Skin',
+    headline: 'Corrective Skin Treatments in San Diego — Built Around Your Skin',
     opener:
-      'Healthy-looking skin is not always about adding another product to your routine. When concerns such as pigmentation, acne, post-inflammatory marks, uneven texture, dehydration, or a compromised skin barrier continue to show up, a more intentional approach may be needed.',
+      'Every treatment is selected for what your skin is doing, and paced to what it can tolerate. Performed by Kiki, a California licensed esthetician.',
     intro:
       'KIAMO Skin provides corrective skin treatments designed to address specific skin concerns while considering the condition, history, and needs of your skin. Rather than treating every client or concern exactly the same way, the goal is to understand what is happening beneath the surface and select treatments that make sense for your current skin health. Corrective skincare may include treatments such as HydraFacial, DMK Enzyme Therapy, Procell Microchanneling, Lira Chemical Peels, Dermaplaning, and Keravive Scalp Therapy, depending on the concern being addressed.',
     image: correctiveSkin,
@@ -459,12 +459,12 @@ export const treatments: Treatment[] = [
     serviceType: 'Acne facial treatment',
     category: 'Facial treatment',
     areas: ['mission-hills', 'north-park', 'la-jolla', 'pacific-beach', 'chula-vista'],
-    title: 'Acne Treatment San Diego | Acne Facials Mission Hills | KIAMO Skin',
+    title: 'Acne Treatment in San Diego | KIAMO Skin',
     description:
-      'Acne treatment San Diego - HydraFacial for breakouts, chemical peels for dark marks, microchanneling for scars. Corrective approach for all skin types. Mission Hills studio.',
-    headline: 'Acne Treatment in San Diego — clear breakouts, fade marks, smooth scars.',
+      'Acne treatment in San Diego from KIAMO Skin. HydraFacial for breakouts, peels for dark marks, microchanneling for scars. Request an appointment.',
+    headline: 'Acne Treatment in San Diego — Clear Breakouts, Fade the Marks',
     opener:
-      'Looking for acne treatment in San Diego? KIAMO Skin offers corrective acne facials in Mission Hills — HydraFacial for active breakouts, DMK Enzyme Therapy for congestion, chemical peels for post-inflammatory hyperpigmentation, and Procell Microchanneling for acne scarring. Every treatment is customized for your skin type and concern.',
+      'Corrective facials, peels for the marks they leave behind, and microchanneling for scarring. Performed by Kiki, a California licensed esthetician.',
     intro:
       'Acne treatment at KIAMO Skin addresses three phases: active breakouts, congestion (blackheads and whiteheads), and post-acne concerns like hyperpigmentation and scarring. The treatment plan depends on what stage your skin is in. HydraFacial extracts congestion without manual pressure, DMK Enzyme Therapy rebuilds a compromised barrier that is keeping breakouts active, and chemical peels or microchanneling work through the marks and texture left behind. Every protocol is designed to clear acne without triggering post-inflammatory hyperpigmentation — the dark marks that last longer than the breakout itself. This multi-phase approach is part of KIAMO Skin\'s <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatment</a> philosophy.',
     image: acne,
@@ -532,10 +532,9 @@ export const treatments: Treatment[] = [
     title: 'Post-Inflammatory Hyperpigmentation Treatment San Diego | KIAMO Skin',
     description:
       'Post-inflammatory hyperpigmentation (PIH) treatment in San Diego from KIAMO Skin in Mission Hills. Corrective care for the dark marks left behind after acne, eczema, ingrown hairs, or injury. Calibrated for every Fitzpatrick type I-VI.',
-    headline: 'Post-Inflammatory Hyperpigmentation — corrective care for dark marks left after acne or injury.',
+    headline: 'Hyperpigmentation Treatment in San Diego — Clear Post-Acne Marks',
     opener:
-      'Looking for post-inflammatory hyperpigmentation treatment in San Diego? KIAMO Skin corrects the dark marks that acne, eczema, ingrown hairs, and skin injuries leave behind — the marks dermatologists call PIH — with protocols calibrated for melanin-rich skin and the San Diego UV load.',
-    intro:
+      'A series of gentle LIRA peels or Procell microchanneling, paired with daily SPF. Performed by Kiki, a California licensed esthetician.',    intro:
       'Post-inflammatory hyperpigmentation (PIH) is the most common pigmentation concern clients bring to KIAMO Skin. It is what the skin does in response to inflammation — acne, eczema, an ingrown hair, a nick while shaving, an over-aggressive peel somewhere else. The mark is melanin produced by the injury response, sitting in the surface and mid-layers of the skin. PIH is distinct from melasma (which is hormonal and light-driven) and from sun damage (which is UV-driven and tends to cluster on the highest-exposure areas). Each of those three conditions is treated differently, and choosing the wrong approach is the most common reason treatment fails. For PIH specifically, the right plan is a series of gentle Lira Chemical Peels or Procell Microchanneling, paired with strict daily SPF — see <a href="/treatments/lira-peels/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Lira Chemical Peels</a>, <a href="/treatments/procell-microchanneling/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Procell Microchanneling</a>, and <a href="/melanin-rich-skin/" class="border-b border-ink/40 hover:border-rose hover:text-rose">melanin-rich skin expertise</a> for the protocol details.',
     image: hyperpigmentationTreatment,
     imageAlt: 'Hyperpigmentation treatment in progress at KIAMO Skin Mission Hills - licensed esthetician applying brightening serum for melanin-rich skin pigmentation correction',

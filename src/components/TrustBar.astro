@@ -1,0 +1,110 @@
+---
+/**
+ * TrustBar
+ * --------
+ * The row of three claims that sits directly under a treatment hero.
+ *
+ * Why it exists:
+ *   Every treatment page failed the trust check for the same reason — a
+ *   reader could scroll from the headline to the booking form without
+ *   meeting a single reason to believe the studio. The homepage solved this
+ *   with ProofQuote and Outcomes; the treatment pages had neither.
+ *
+ *   This is the third piece, and the cheapest: three claims, each one
+ *   specific and checkable, visible in the same scroll as the headline. It
+ *   answers the buyer's first three questions — is this a real business, are
+ *   they qualified, and is this going to cost me a surprise — before the
+ *   reader has to ask.
+ *
+ * The rules this follows:
+ *   - Every entry is a CLAIM, not a category. "Licensed esthetician" is a
+ *     category; "California Board of Barbering & Cosmetology" is a claim
+ *     someone can check.
+ *   - Nothing here is invented. Every value is passed in by the page from
+ *     `config/business.ts` or from a fact already stated in its own copy.
+ *   - No rating, no review count, no star graphic. Those live on the
+ *     homepage where the studio verified them, and the guard suite blocks
+ *     them elsewhere.
+ *   - No urgency or immediacy language. The site brief forbids "Same-day"
+ *     and any implied immediacy, so there is no clock in this row.
+ *
+ * Visual treatment: the display face is reserved for the claim itself. The
+ * icon is a stroked rose mark in a hairline circle, matching the line weight
+ * of the rest of the page. No filled badges — they read as certification
+ * seals, and a claim the reader cannot verify should not look like one.
+ */
+interface Props {
+  /** The claims. Each is a specific, checkable statement. */
+  items: Array<{ label: string; detail?: string }>;
+  /** Optional heading. Omit for a bar that reads as part of the hero. */
+  heading?: string;
+  class?: string;
+}
+
+const { items, heading, class: className = '' } = Astro.props;
+---
+
+<div class={`trust-bar ${className}`}>
+  {
+    heading && (
+      <p class="t-eyebrow text-ink-soft" role="presentation">
+        {heading}
+      </p>
+    )
+  }
+  <ul class="m-0 grid list-none gap-x-10 gap-y-8 p-0 sm:grid-cols-3">
+    {
+      items.map((item) => (
+        <li class="flex gap-4">
+          <span
+            class="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-rose/35 text-rose"
+            aria-hidden="true"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 20 20"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.4"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M4.5 10.5l3.5 3.5 7.5-8" />
+            </svg>
+          </span>
+          <span class="min-w-0">
+            <span class="t-body block text-[0.9375rem] leading-snug text-ink">{item.label}</span>
+            {item.detail && (
+              /* Sentence case, not the uppercase `t-meta` style. The eyebrow
+                 treatment is right for a label and wrong for a sentence — in
+                 caps this line loses its word shapes and turns into a wall of
+                 small letters. */
+              <span class="mt-2 block text-[0.8125rem] leading-relaxed text-ink-soft">
+                {item.detail}
+              </span>
+            )}
+          </span>
+        </li>
+      ))
+    }
+  </ul>
+</div>
+
+<style>
+  /* The row is a band, not a floating card. On wide screens the three claims
+     sit on one line separated by hairline rules — the structure carries the
+     meaning (three independent reasons), so it is shown rather than
+     described. Below the first breakpoint the rules drop away and the stack
+     takes over. */
+  @media (min-width: 640px) {
+    .trust-bar ul {
+      gap-inline: 2.5rem;
+    }
+
+    .trust-bar li + li {
+      border-left: 1px solid var(--color-line);
+      padding-left: 2.5rem;
+    }
+  }
+</style>

@@ -21,7 +21,7 @@ export const membershipFaqs: Faq[] = [
   {
     question: 'Why is LUX the most popular membership at KIAMO Skin?',
     answer:
-      'LUX is the corrective sweet spot - more intensive than maintenance (GLOW), more practical than luxury transformation (OPULENCE). 70% of corrective clients at our Mission Hills studio choose LUX because it delivers two treatments in one 75-minute visit: HydraFacial Syndeo deep cleanse + dermaplaning exfoliation + medical-grade LED therapy + rotating corrective boosters tailored to your skin concern (acne, melasma, post-inflammatory hyperpigmentation, barrier repair). A la carte, you would pay $394 for HydraFacial ($259) + dermaplaning add-on ($50) + LED add-on ($40) + corrective booster ($45). With LUX membership, all treatments are $299/month - delivered in one visit at our studio near Hillcrest Medical Center, customized monthly based on what your skin needs that cycle.',
+      'LUX is the corrective sweet spot - more intensive than maintenance (GLOW), more practical than luxury transformation (OPULENCE). 70% of corrective clients at our Mission Hills studio choose LUX because it delivers two treatments in one 75-minute visit: HydraFacial Syndeo deep cleanse + dermaplaning exfoliation + medical-grade LED therapy + rotating corrective boosters tailored to your skin concern (acne, melasma, post-inflammatory hyperpigmentation, barrier repair). A la carte, the same treatments cost more than the membership rate. With LUX membership, all treatments are $299/month - delivered in one visit at our studio near Hillcrest Medical Center, customized monthly based on what your skin needs that cycle.',
   },
   {
     question: 'What exactly is included in the LUX $299/month membership?',

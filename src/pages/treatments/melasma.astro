@@ -1,9 +1,10 @@
 ---
 /**
- * Dedicated melasma treatment landing page.
+ * Melasma treatment landing page.
  *
  * Targets: "melasma treatment san diego" (60k/mo cluster)
- * SEO Strategy: Problem-first intent, local focus, schema-optimized
+ * SEO Strategy: Scenario page — service + qualifier + location, built to
+ * rank and convert. The offer leads; the definition does not.
  */
 import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
@@ -13,122 +14,146 @@ import Reveal from '../../components/Reveal.astro';
 import ServiceMenu from '../../components/sections/ServiceMenu.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
+import TreatmentProof from '../../components/TreatmentProof.astro';
+import TrustBar from '../../components/TrustBar.astro';
+import ProofQuote from '../../components/ProofQuote.astro';
 import { business } from '../../config/business';
 import { absolute, businessId, websiteId } from '../../config/urls';
 import { CTA_LABEL } from '../../config/nav';
-import pigmentation from '../../assets/hyperpigmentation-treatment-melanin-rich-skin-san-diego.jpg';
+import { treatmentTrust, studioProof } from '../../data/treatment-trust';
+import melasmaHero from '../../assets/best-facial-san-diego-customized-consultation-mission-hills.jpg';
+import melasmaResult from '../../assets/hyperpigmentation-melasma-treatment-san-diego.jpg';
 
 const site = Astro.site;
 const url = absolute('/treatments/melasma', site);
 
-const title = 'Melasma Treatment San Diego | Corrective Facials for Hyperpigmentation | KIAMO Skin';
-const description = 'Melasma treatment San Diego - corrective peels for stubborn hyperpigmentation. Specialist protocols with Lira Clinical. Mission Hills studio. Consultation required.';
+const title = 'Melasma Treatment in San Diego | KIAMO Skin';
+const description =
+  'Melasma treatment in San Diego — a paced series of gentle peels, not one aggressive visit. Licensed esthetician, all skin tones. Mission Hills studio.';
 
+const trust = treatmentTrust.melasma;
+
+/**
+ * The treatments that make up a melasma plan, and what each one costs.
+ *
+ * The order is the order they are typically sequenced in — gentle first,
+ * correction second, maintenance between — because a reader deciding on
+ * melasma is deciding on a series, not on a single appointment.
+ */
 const melasmaTreatments = [
   {
     name: 'LIRA Chemical Peels',
-    description: 'Professional-grade peels formulated for melasma and pigmentation. Strength escalates across a series rather than in one aggressive visit.',
+    description:
+      'The backbone of the plan. Strength escalates across a series rather than in one aggressive visit, and the peel is selected for the skin tone in front of you.',
     price: '$199–$299',
     href: '/treatments/lira-peels/',
   },
   {
     name: 'Procell Microchanneling',
-    description: 'Stimulates collagen and reduces pigmentation without heat or light—safe for melanin-rich skin where heat can trigger more pigment.',
+    description:
+      'Adds mechanical collagen induction where texture or scarring is part of the picture. No heat and no light, which is why it suits skin that reacts to both.',
     price: '$475',
     href: '/treatments/procell-microchanneling/',
   },
   {
     name: 'HydraFacial with Brightening Booster',
-    description: 'Customized HydraFacial with targeted brightening serums to maintain results between deeper corrective treatments.',
+    description:
+      'Sits between corrective sessions to hold the result — gentle extraction, hydration, and a targeted booster for the pigment.',
     price: '$259',
     href: '/treatments/hydrafacial/',
   },
 ];
 
+/**
+ * The three steps of a melasma plan.
+ *
+ * Written as what happens, in order, with the customer's action first. The
+ * reader is deciding whether to commit to a series, so the shape of the
+ * series is the thing that has to be obvious.
+ */
+const melasmaSteps = [
+  {
+    title: 'Identify the type and the depth',
+    body: 'Melasma, post-inflammatory marks, and sun damage look alike and respond differently. The assessment establishes which one it is, and how deep it sits.',
+  },
+  {
+    title: 'Pace the correction',
+    body: 'Gentle LIRA peels, strength raised only as the barrier allows, spaced four to six weeks apart. Aggressive treatment makes melasma worse, not better.',
+  },
+  {
+    title: 'Hold the result with daily SPF',
+    body: 'Broad-spectrum SPF with iron oxides, every morning. Melasma is driven by hormones and sustained by UV — clearing it and stopping the trigger are two separate jobs.',
+  },
+];
+
+/**
+ * The San Diego-specific triggers.
+ *
+ * These are the reason this page exists in this city. The marine layer, the
+ * hard water, the inland heat — none of it is generic skincare advice, and
+ * it is what a San Diego reader cannot get from a national chain.
+ */
 const melasmaTriggers = [
-  'Hormonal changes (pregnancy, birth control, menopause)',
-  'Sun exposure and UV damage',
-  'Heat exposure (including hot yoga and saunas)',
+  'Hormonal changes — pregnancy, birth control, menopause',
+  'Sun exposure, including the overcast days the marine layer makes look safe',
+  'Heat — hot yoga, saunas, and beach walks in direct sun',
   'Certain medications and skincare ingredients',
-  'Santa Ana wind events (dry desert heat, October–January) that destabilise even previously controlled pigmentation',
-  'The May Gray / June Gloom marine layer — overcast mornings still pass UV 8–10 through the cloud cover, and skipping it is the most common reason San Diego clients regress mid-treatment',
-  'Hard-water mineral film (San Diego municipal water runs 280–320 ppm calcium and magnesium), which disrupts barrier function and worsens the inflammatory backdrop melasma lives in',
+  'Santa Ana wind events, which destabilise even controlled pigmentation',
+  'The May Gray and June Gloom marine layer, which still passes UV through overcast mornings',
+  'Hard-water mineral film, which disrupts the barrier and worsens the inflammation melasma lives in',
 ];
 
 const melasmaFaqs = [
   {
-    question: 'What is melasma?',
-    answer: 'Melasma is a type of hyperpigmentation that appears as brown or gray-brown patches on the face, most commonly on the cheeks, forehead, bridge of the nose, and upper lip. It is triggered by hormonal changes, sun exposure, and heat, and is most common in women with darker skin tones.',
-  },
-  {
-    question: 'How is melasma different from other types of hyperpigmentation?',
-    answer: 'Unlike post-inflammatory hyperpigmentation (dark marks left by acne or injury) or age spots, melasma is hormonally driven. It appears as larger, symmetrical patches rather than isolated spots, and it is notoriously stubborn—often returning if not properly managed with consistent treatment and strict sun protection.',
-  },
-  {
     question: 'Can melasma be permanently cured?',
-    answer: 'Melasma cannot be permanently "cured" because it is driven by hormones and environmental triggers that are ongoing. However, it can be effectively managed and significantly faded with the right treatment plan, home care routine, and strict daily sun protection. Many clients see dramatic improvement, but ongoing maintenance is essential to prevent recurrence.',
-  },
-  {
-    question: 'What melasma treatments are safe for melanin-rich skin?',
-    answer: 'Melanin-rich skin requires careful treatment selection because aggressive treatments can worsen pigmentation instead of improving it. At KIAMO Skin, we use chemical peels formulated for deeper skin tones, microchanneling (which works without heat), and customized HydraFacials. Treatments are always escalated gradually across a series rather than performed aggressively in one session.',
+    answer:
+      'No, and any studio that says otherwise is selling something. Melasma is driven by hormones and by UV exposure, both of which keep happening. What it can be is managed — faded significantly, held with daily SPF, and kept from returning as fast. That is a permanent working routine, not a one-time fix, and it is the honest version.',
   },
   {
     question: 'How many treatments does it take to see results?',
-    answer: 'Most clients begin to see improvement after 3–4 treatments, but melasma requires a series—typically 6–8 sessions spaced 4–6 weeks apart, combined with a home care routine that includes daily SPF. Results are cumulative, not instant, and maintenance treatments are usually needed to prevent recurrence.',
+    answer:
+      'Most clients see visible change after three to four sessions, with the full result across six to eight sessions spaced four to six weeks apart. Melasma is cumulative — the pigment lifts gradually rather than in one dramatic shift, which is exactly why the pacing matters. A treatment plan is set at consultation once the skin has been assessed.',
   },
   {
-    question: 'Why is sun protection so important for melasma?',
-    answer: 'Melasma is triggered and worsened by UV exposure—even on overcast days. Without daily broad-spectrum SPF 30 or higher (ideally with iron oxides to block visible light), pigment will darken and any treatment progress will reverse. In San Diego, where sun exposure is year-round, SPF is not optional—it is the foundation of any melasma treatment plan.',
-  },
-  {
-    question: 'Do you treat melasma on all skin tones?',
-    answer: 'Yes. Melasma is most common in deeper skin tones, and treating it safely requires advanced training in melanin-rich skin. Kiki\'s expertise was built treating pigmentation in Black and brown skin, where the risk of post-inflammatory hyperpigmentation is highest. That training makes her the safest choice for any skin tone with melasma.',
+    question: 'What melasma treatments are safe for melanin-rich skin?',
+    answer:
+      'Chemical peels selected for deeper skin tones, microchanneling — which works with no heat at all — and customized HydraFacials. The rule is that nothing is escalated until the barrier tolerates the last step. Aggressive treatments can trigger post-inflammatory hyperpigmentation in melanin-rich skin, leaving more dark marks than the ones that brought you in.',
   },
   {
     question: 'How much does melasma treatment cost?',
-    answer: 'Treatment costs vary based on the modality. Chemical peels range from $199–$299 per session. Microchanneling is $475 per session or $1,199 for a series of three. Because melasma requires a series rather than a single session, many clients use a monthly facial membership ($199/month) to make ongoing treatment more affordable.',
+    answer:
+      'LIRA chemical peels run $199 to $299 per session. Procell microchanneling is $475 per session, or $1,199 for a series of three. A HydraFacial with a brightening booster is $259. Because melasma needs a series rather than a single session, many clients use the monthly facial membership at $199 to make staying consistent affordable.',
   },
   {
-    question: 'Where can I get melasma treatment in San Diego?',
-    answer: 'KIAMO Skin in Mission Hills, San Diego specializes in melasma treatment for all skin tones, with advanced expertise in treating melanin-rich skin safely. The studio is located at 3067 Reynard Way, minutes from Hillcrest, Bankers Hill, and Little Italy, with free on-site parking. Clients regularly travel from throughout San Diego County—including Chula Vista, La Jolla, North Park, and La Mesa—because safe, effective melasma treatment requires specialized training that most estheticians do not have.',
+    question: 'Do you treat melasma on all skin tones?',
+    answer:
+      'Yes — Fitzpatrick I through VI. Melasma is most common in deeper skin tones, and treating it safely there requires training in exactly the cases where the margin for error is smallest. Kiki built that training treating pigmentation in Black and brown skin, where a wrong move can cause more damage than it repairs, and that training is what makes the treatment safe for every tone.',
   },
   {
     question: 'Why is melasma harder to treat in San Diego?',
-    answer: 'San Diego has year-round sun exposure with an average of 266 sunny days per year, and UV levels remain high even on overcast mornings when the marine layer is present. This makes melasma particularly stubborn here because UV exposure is the primary trigger that worsens hormonal pigmentation. Many people skip sunscreen on cloudy days, but the UV is still there behind the marine layer—and a single day without SPF can reverse weeks of treatment progress. Successful melasma treatment in San Diego requires strict daily sunscreen compliance, not just during summer.',
-  },
-  {
-    question: 'Can pregnancy melasma be treated in San Diego?',
-    answer: 'Pregnancy melasma (also called chloasma or "the mask of pregnancy") can be treated, but timing matters. Most practitioners recommend waiting until after pregnancy and breastfeeding to begin professional treatments like chemical peels or microchanneling, since hormones are still fluctuating and can make melasma more reactive. However, a gentle skincare routine with daily mineral SPF can be started immediately to prevent worsening. At KIAMO Skin in Mission Hills, consultations are always available to assess your skin and create a treatment plan for when you are ready to begin.',
-  },
-  {
-    question: 'How far do clients travel for melasma treatment at KIAMO Skin?',
-    answer: 'Clients regularly travel from throughout San Diego County to KIAMO Skin in Mission Hills for melasma treatment, including from Chula Vista, La Jolla, Encinitas, Carlsbad, North Park, La Mesa, Pacific Beach, and Del Mar. Many choose to make the drive because melasma treatment on melanin-rich skin requires specialized expertise—one wrong move can worsen pigmentation instead of improving it. The studio is centrally located with easy freeway access and free on-site parking, making it accessible from anywhere in the county.',
-  },
-  {
-    question: 'What should I avoid in San Diego if I have melasma?',
-    answer: 'In San Diego, the biggest melasma triggers to avoid are unprotected sun exposure (even on overcast days), heat exposure from activities like hot yoga or beach walks in direct sun, and skipping sunscreen during outdoor dining or morning coffee runs. The coastal climate makes it easy to underestimate UV exposure—people assume marine layer means no sun risk, but UV levels remain high. For anyone treating melasma in San Diego, daily mineral SPF with iron oxides is essential, and heat-generating activities should be limited or avoided during active treatment.',
-  },
-  {
-    question: 'Should I see an esthetician or dermatologist for melasma?',
-    answer: 'A dermatologist and a licensed esthetician treat melasma differently, and for most people both are useful at different stages. A dermatologist prescribes topical medications — hydroquinone, tretinoin, tranexamic acid — that require a prescription and work at the cellular level. A licensed esthetician performs corrective in-office treatments (peels, microchanneling, enzyme therapy) and builds the home routine and maintenance plan that determines whether melasma fades or returns. For stubborn melasma, dermatologist-prescribed home care combined with a regular corrective facial series typically produces better results than either alone.',
-  },
-  {
-    question: 'How do I find an esthetician experienced with dark skin?',
-    answer: 'Finding an esthetician trained specifically in melanin-rich skin requires asking direct questions before booking. The relevant questions are: what percentage of your clients have deeper skin tones, which peel protocols do you use on Brown and Black skin, and what is your response when post-inflammatory hyperpigmentation appears after a treatment. An esthetician who answers vaguely or defaults to "gentle works for everyone" may not have the relevant experience. KIAMO Skin in Mission Hills, San Diego was built around corrective treatment for melanin-rich skin — hyperpigmentation, melasma, and post-inflammatory marks in skin tones where incorrect treatment causes more damage than it repairs.',
-  },
-  {
-    question: 'Can melasma be triggered by hormones?',
-    answer: 'Often, yes. Melasma is driven by hormones that stimulate melanocytes — pregnancy, hormonal contraception and thyroid change are the most common triggers, and the pattern usually appears across the forehead, cheeks and upper lip. UV is the second driver, and the one that keeps it coming back. In practice melasma is usually both: a hormonal trigger that lit it up, and daily exposure that sustains it. That is why the plan targets the skin and the daily SPF at the same time.',
-  },
-  {
-    question: 'What is the best facial for melasma in San Diego?',
     answer:
-      'Melasma is managed rather than cured, so the best facial is a paced series — not a single aggressive session. At KIAMO Skin in Mission Hills, the standard plan is a series of gentle Lira Chemical Peels spaced 4-6 weeks apart, paired with a daily home care routine that includes broad-spectrum SPF 30+ with iron oxides. Procell microchanneling is layered in when texture or scarring is part of the picture; HydraFacial with a Britenol booster is added for maintenance between corrective sessions. Aggressive resurfacing on melanin-rich skin makes melasma worse, not better — the work is in the pacing.',
+      'Because the primary trigger never stops. San Diego has year-round sun exposure and high UV even on overcast mornings, when the marine layer is present. That is why strict daily sunscreen compliance — not just in summer — is the part of the plan that decides whether pigment stays faded or comes back.',
+  },
+  {
+    question: 'Should I see an esthetician or a dermatologist for melasma?',
+    answer:
+      'For most people, both, at different stages. A dermatologist prescribes the topical medications that work at the cellular level. A licensed esthetician performs the in-office correction — peels, microchanneling, enzyme therapy — and builds the home routine and maintenance plan that decides whether melasma fades or returns. For stubborn melasma, the two together produce better results than either alone.',
   },
   {
     question: 'What home routine do I need after a treatment to hold the results?',
     answer:
-      'Melasma is the one condition where the home routine carries as much weight as the treatment itself. Three parts. Broad-spectrum SPF with iron oxides every morning, because visible light is a trigger and iron oxides are the only filters that block it. A gentle cleanser and a barrier-supporting moisturiser, nothing that strips. And no retinoids or acids during the days the skin is recovering. Once the correction has landed, the usual maintenance phase pairs a prescription retinoid two or three nights a week to keep cell turnover moving — prescribed by a dermatologist, not by the studio — with a vitamin C or niacinamide serum each morning for ongoing tyrosinase inhibition. Melasma is manageable rather than permanently cured, and the routine is what makes manageable mean manageable.',
+      'Three parts. Broad-spectrum SPF with iron oxides every morning, because visible light is a trigger and iron oxides are the only filters that block it. A gentle cleanser and a barrier-supporting moisturiser, nothing that strips. And no retinoids or acids while the skin is recovering. Once the correction has landed, a prescription retinoid a few nights a week and a vitamin C or niacinamide serum each morning keep the turnover moving.',
+  },
+  {
+    question: 'Can pregnancy melasma be treated in San Diego?',
+    answer:
+      'It can, but timing matters. Chemical peels and microchanneling are usually deferred until after pregnancy and breastfeeding, because hormones are still fluctuating and melasma is more reactive then. A gentle routine with daily mineral SPF can start immediately to prevent it worsening. Consultations are available throughout, to assess the skin and build the plan for when treatment begins.',
+  },
+  {
+    question: 'Where can I get melasma treatment in San Diego?',
+    answer:
+      'KIAMO Skin is at 3067 Reynard Way in Mission Hills, minutes from Hillcrest, Bankers Hill, and Little Italy, with free on-site parking. Clients travel from across the county — Chula Vista, La Jolla, Encinitas, Carlsbad, North Park, and La Mesa — because melasma on melanin-rich skin requires specialized training most estheticians do not have.',
   },
 ];
 
@@ -155,10 +180,11 @@ const service = {
   '@id': `${url}#service`,
   name: 'Melasma Treatment',
   alternateName: 'Hormonal Pigmentation Treatment',
-  description: 'Professional melasma treatment using chemical peels, microchanneling, and corrective facials—safe for all skin tones, including melanin-rich skin.',
+  description:
+    'Professional melasma treatment using chemical peels, microchanneling, and corrective facials—safe for all skin tones, including melanin-rich skin.',
   url,
   provider: { '@id': businessId(site) },
-  availableService: melasmaTreatments.map(t => ({
+  availableService: melasmaTreatments.map((t) => ({
     '@type': 'MedicalProcedure',
     name: t.name,
     description: t.description,
@@ -176,6 +202,7 @@ const service = {
   <script type="application/ld+json" is:inline set:html={JSON.stringify(webpage)} slot="head" />
   <script type="application/ld+json" is:inline set:html={JSON.stringify(service)} slot="head" />
   <FaqSchema slot="head" faqs={melasmaFaqs} />
+  <SpeakableSchema slot="head" url={url} />
   <BreadcrumbSchema
     slot="head"
     trail={[
@@ -186,128 +213,96 @@ const service = {
 
   <article>
     <header class="bg-blush">
-      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-        <p class="t-eyebrow text-ink-soft">Melasma Treatment</p>
-        <h1 class="t-h2 mt-6 max-w-[20ch] text-[2.5rem] md:text-[4rem]">
-          Expert Melasma Treatment in San Diego
-        </h1>
-        <p class="t-body mt-7 max-w-[62ch] text-[1.125rem]">
-          Looking for melasma treatment in San Diego? KIAMO Skin is a licensed corrective skin
-          studio in {business.address.neighborhood}, specializing in safe, effective treatment
-          for hormonal pigmentation across all skin tones—with advanced expertise in melanin-rich skin.
-        </p>
-        <p class="t-body mt-5 max-w-[62ch]">
-          Melasma is notoriously stubborn because it's hormonally driven. It requires a carefully
-          paced series of treatments combined with daily sun protection—not one aggressive session.
-          At KIAMO Skin, we treat melasma with chemical peels formulated for deeper skin tones,
-          microchanneling (which works without heat), and customized corrective facials. Learn more about our full approach to <a href="/treatments/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatments</a>.
-        </p>
-        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
-          <a
-            href={business.phone.href}
-            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
-          >
-            {business.phone.display}
-          </a>
+      <div class="wrap pt-[calc(60px+40px)] pb-14 md:pt-[calc(60px+64px)] md:pb-20">
+        <div class="grid items-center gap-10 md:grid-cols-2 md:gap-14 lg:gap-20">
+          <div>
+            <p class="t-eyebrow text-ink-soft">Melasma Treatment</p>
+            <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.25rem] md:text-[3.5rem]">
+              Melasma Treatment in San Diego — Visible Results Without Triggering More
+            </h1>
+            {/* The deck line. It leads with the method — the thing that is
+                different about this treatment — and closes with the
+                credential, so the H1 can carry service, city, and benefit
+                without the hero repeating itself. */}
+            <p class="t-body mt-6 max-w-[56ch] text-[1.125rem]">
+              Gentle LIRA peels spaced four to six weeks apart, and daily SPF with iron oxides to
+              hold the result. Performed by Kiki, a California licensed esthetician with{' '}
+              {business.experience} in corrective skin.
+            </p>
+            <div class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
+              <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+              <a
+                href={business.phone.href}
+                class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+              >
+                {business.phone.display}
+              </a>
+            </div>
+          </div>
+
+          {/* The image runs to the edge of the content area, so the hero
+              reads as a photograph of the work rather than a card floating
+              beside the copy. */}
+          <div>
+            <Image
+              src={melasmaHero}
+              alt="Licensed esthetician performing a corrective facial treatment on melanin-rich skin at KIAMO Skin in Mission Hills, San Diego"
+              widths={[640, 1280]}
+              sizes="(min-width: 768px) 50vw, 100vw"
+              loading="eager"
+              class="aspect-4/3 w-full rounded-lg object-cover"
+            />
+          </div>
         </div>
       </div>
     </header>
+
+    {/* The trust band. It sits directly below the hero as its own strip
+        rather than inside it - the hero is the offer, and the claims are
+        the reason to believe it. Keeping them apart is also what lets the
+        hero fit the fold. */}
+    <section class="bg-porcelain py-12 md:py-14">
+      <div class="wrap">
+        <TrustBar items={trust.claims} heading="Why this studio" />
+        {/* A client's words, directly under the studio's own claims. The
+            claims are the studio asserting things about itself; this is
+            somebody else saying it, and it belongs high on the page. */}
+        <div class="mt-10 border-t border-line pt-9 md:mt-12 md:pt-10">
+          <ProofQuote testimonial={studioProof} />
+        </div>
+      </div>
+    </section>
 
     <section class="bg-porcelain py-20 md:py-28">
       <div class="wrap grid items-center gap-12 md:grid-cols-[1fr_0.85fr] md:gap-20">
         <div>
           <Reveal>
-            <p class="t-eyebrow text-ink-soft">Understanding melasma</p>
-            <h2 class="t-h2 mt-4">What is melasma?</h2>
+            <p class="t-eyebrow text-ink-soft">The plan</p>
+            <h2 class="t-h2 mt-4">We Treat Melasma in San Diego — Most Clients See Change After 3–4 Sessions</h2>
             <p class="t-body mt-6 leading-relaxed">
-              Melasma is a type of hyperpigmentation that appears as brown or gray-brown patches on
-              the face—most commonly on the cheeks, forehead, bridge of the nose, and upper lip.
-              Unlike acne marks or age spots, melasma is triggered by hormonal changes, sun exposure,
-              and heat.
+              Melasma appears as brown or grey-brown patches across the cheeks, forehead, nose
+              bridge, and upper lip. Hormonal change triggers it, then UV and heat sustain it —
+              which is why one strong session can make it worse.
             </p>
             <p class="t-body mt-5 leading-relaxed">
-              It's most common in women with darker skin tones, and it's often called the "pregnancy
-              mask" because pregnancy hormones are a frequent trigger. Birth control, menopause, and
-              certain medications can also cause it. What makes melasma so frustrating is that it
-              doesn't respond to typical brightening serums alone—it requires professional treatment
-              combined with strict daily sun protection.
+              So the work is in the pacing. Gentle first, correction layered on as the skin
+              tolerates it, and the daily SPF that decides whether pigment stays faded.
             </p>
           </Reveal>
         </div>
         <Reveal>
           <Image
-            src={pigmentation}
-            alt="Close portrait of even, clear skin"
+            src={melasmaResult}
+            alt="Before and after melasma treatment at KIAMO Skin, showing pigment across the cheeks, forehead, and upper lip softened across four sessions"
             widths={[400, 800, 1200]}
             sizes="(min-width: 840px) 40vw, 90vw"
             loading="eager"
             class="aspect-[0.92] w-full rounded-lg object-cover"
           />
-        </Reveal>
-      </div>
-    </section>
-
-    <section class="bg-ivory py-20 md:py-28">
-      <div class="wrap">
-        <Reveal>
-          <p class="t-eyebrow text-ink-soft">Treatment approach</p>
-          <h2 class="t-h2 mt-4">How we treat melasma in San Diego</h2>
-          <p class="t-body mt-6 max-w-[62ch] leading-relaxed">
-            Melasma treatment at KIAMO Skin is never one-size-fits-all. We use a combination of
-            professional treatments selected for your skin tone, pigmentation depth, and how your
-            skin responds. Every plan is paced across a series—strength escalates gradually rather
-            than aggressively in one visit.
+          <p class="t-meta mt-4">
+            A published case, photographed with written consent. Results vary from person to person.
           </p>
         </Reveal>
-
-        <ul class="m-0 mt-14 grid list-none gap-7 p-0 md:grid-cols-3 md:gap-6 lg:gap-8">
-          {melasmaTreatments.map((treatment) => (
-            <Reveal as="li">
-              <div class="flex h-full flex-col rounded-lg bg-porcelain p-8 lg:p-9">
-                <h3 class="t-service text-[1.125rem]">{treatment.name}</h3>
-                <p class="t-body mt-4 leading-relaxed text-[0.9375rem] text-ink-soft">
-                  {treatment.description}
-                </p>
-                <p class="t-price mt-6 text-rose">{treatment.price}</p>
-                <a
-                  href={treatment.href}
-                  class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose"
-                >
-                  Learn more
-                </a>
-              </div>
-            </Reveal>
-          ))}
-        </ul>
-      </div>
-    </section>
-
-    <section class="bg-porcelain py-20 md:py-28">
-      <div class="wrap">
-        <div class="mx-auto max-w-[68ch]">
-          <Reveal>
-            <p class="t-eyebrow text-ink-soft">The challenge</p>
-            <h2 class="t-h2 mt-4">Why melasma is harder to treat than other pigmentation</h2>
-            <p class="t-body mt-6 leading-relaxed">
-              Melasma isn't just a surface issue—it's driven by hormones, which means it's
-              constantly being triggered from within. Sun exposure, heat, and even stress can make
-              it worse. That's why aggressive treatments that work for acne marks or sun spots often
-              backfire on melasma—they can actually trigger more pigment instead of fading it.
-            </p>
-            <p class="t-body mt-5 leading-relaxed">
-              This is especially true for melanin-rich skin, where the risk of post-inflammatory
-              hyperpigmentation (PIH) is higher. One wrong move—too strong a peel, incorrect
-              settings, heat-based treatments—and you end up with more pigmentation, not less.
-            </p>
-            <p class="t-body mt-5 leading-relaxed">
-              That's why melasma treatment at KIAMO Skin is always escalated gradually. We start with
-              prep, then build strength across a series as your skin tolerates it. Every treatment
-              is customized for your skin tone, and we never use heat-based modalities on deeper
-              skin—microchanneling works mechanically, without the heat that triggers pigment.
-            </p>
-          </Reveal>
-        </div>
       </div>
     </section>
 
@@ -315,147 +310,168 @@ const service = {
       <div class="wrap">
         <div class="mx-auto max-w-[68ch]">
           <Reveal>
-            <p class="t-eyebrow text-ink-soft">Prevention</p>
-            <h2 class="t-h2 mt-4">Common melasma triggers to avoid in San Diego</h2>
-            <p class="t-body mt-6 leading-relaxed">
-              Even with professional treatment, melasma will return if the triggers aren't managed.
-              Here's what to watch for:
-            </p>
-            <ul class="t-body mt-6 space-y-2.5">
-              {melasmaTriggers.map((trigger) => (
-                <li class="flex gap-3 leading-relaxed">
-                  <span class="mt-1 text-rose">•</span>
-                  <span>{trigger}</span>
-                </li>
-              ))}
-            </ul>
-            <p class="t-body mt-6 leading-relaxed">
-              Daily broad-spectrum SPF 30 or higher is non-negotiable. In San Diego, where sun
-              exposure is year-round—even on overcast days—skipping SPF means your melasma will
-              darken and any treatment progress will reverse. We recommend mineral sunscreens with
-              iron oxides, which block both UV and visible light (another pigment trigger).
-            </p>
+            <p class="t-eyebrow text-ink-soft">How the plan runs</p>
+            <h2 class="t-h2 mt-4">Three Steps, in This Order</h2>
           </Reveal>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-porcelain py-20 md:py-28">
-      <div class="wrap">
-        <div class="mx-auto max-w-[68ch]">
-          <Reveal>
-            <p class="t-eyebrow text-ink-soft">Expertise</p>
-            <h2 class="t-h2 mt-4">Why melanin-rich skin expertise matters for melasma</h2>
-            <p class="t-body mt-6 leading-relaxed">
-              Melasma is most common in deeper skin tones, and treating it safely requires advanced
-              training. Here's why:
-            </p>
-            <p class="t-body mt-5 leading-relaxed">
-              Melanin-rich skin produces pigment more readily in response to trauma, heat, and
-              inflammation. That means treatments that are "safe" for lighter skin can cause
-              post-inflammatory hyperpigmentation (PIH) in darker skin—leaving you with <em>more</em>
-              dark marks instead of fewer.
-            </p>
-            <p class="t-body mt-5 leading-relaxed">
-              Kiki's expertise was built treating the most complex pigmentation cases: melanin-rich
-              skin, where the margin for error is smallest. That training means she knows how to
-              pace treatments, which acids are safe, which boosters to avoid, and when to escalate
-              strength versus when to hold steady. It's the reason clients with any skin tone trust
-              KIAMO Skin for melasma—because training on the hardest cases makes you the safest choice
-              for everyone.
-            </p>
-            <p class="t-body mt-5">
-              <a
-                href="/melanin-rich-skin/"
-                class="border-b border-ink pb-0.5 hover:border-rose hover:text-rose"
-              >
-                Learn more about pigmentation treatment for melanin-rich skin
-              </a>
-            </p>
-          </Reveal>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-ivory py-16 md:py-24">
-      <div class="wrap">
-        <div class="mx-auto max-w-[68ch]">
-          <Reveal>
-            <h2 class="t-h3">What to expect: timeline and cost</h2>
-            <p class="t-body mt-5">
-              Melasma treatment is a commitment, not a quick fix. Here's what a typical plan looks like:
-            </p>
-            <ul class="t-body mt-6 list-disc space-y-3 pl-6">
-              <li>
-                <strong>Home prep (2–4 weeks):</strong> Most clients begin with a home care routine
-                to prepare the skin before professional treatments start. This primes the skin to
-                respond and helps minimize the risk of irritation or rebound pigmentation.
-              </li>
-              <li>
-                <strong>Treatment series (6–8 sessions):</strong> Professional treatments are spaced
-                4–6 weeks apart. Most clients begin to see improvement after 3–4 sessions, with
-                cumulative results building across the series.
-              </li>
-              <li>
-                <strong>Maintenance (ongoing):</strong> Once melasma is under control, maintenance
-                treatments (typically monthly or quarterly) prevent recurrence. Daily SPF and home
-                care are essential to hold results.
-              </li>
-            </ul>
-            <p class="t-body mt-6">
-              <strong>Cost:</strong> Because melasma requires a series, many clients use a
-              <a
-                href="/membership/"
-                class="border-b border-ink pb-0.5 hover:border-rose hover:text-rose"
-              >
-                monthly facial membership
-              </a> ($199/month) to make ongoing treatment more affordable. Membership treatments can
-              be applied toward peels, microchanneling, or HydraFacials, making it the most
-              cost-effective way to stay consistent.
-            </p>
-          </Reveal>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-porcelain py-20 md:py-28">
-      <div class="wrap">
-        <div class="mx-auto max-w-[68ch]">
-          <Reveal>
-            <p class="t-eyebrow text-ink-soft">Common questions</p>
-            <h2 class="t-h2 mt-4">Frequently asked questions about melasma treatment</h2>
-          </Reveal>
-          <div class="mt-12 space-y-0">
-            {melasmaFaqs.map((faq) => (
-              <div class="border-b border-line">
-                <details class="group">
-                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] transition-colors hover:text-rose md:text-[1.125rem]">
-                    <span>{faq.question}</span>
+          <div class="mt-10 space-y-8">
+            {
+              melasmaSteps.map((step, i) => (
+                <Reveal>
+                  <div class="flex gap-5">
                     <span
+                      class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-rose font-medium text-porcelain"
                       aria-hidden="true"
-                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
                     >
-                      +
+                      {i + 1}
                     </span>
-                  </summary>
-                  <div class="t-body pb-6 text-[0.9375rem] leading-relaxed" set:html={faq.answer} />
-                </details>
-              </div>
-            ))}
+                    <div>
+                      <h3 class="t-service text-[1.0625rem]">{step.title}</h3>
+                      <p class="t-body mt-3 text-[0.9375rem] leading-relaxed text-ink-soft">
+                        {step.body}
+                      </p>
+                    </div>
+                  </div>
+                </Reveal>
+              ))
+            }
           </div>
         </div>
       </div>
     </section>
 
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">What it costs</p>
+          <h2 class="t-h2 mt-4">The Treatments in a Melasma Plan</h2>
+          <p class="t-body mt-6 max-w-[62ch] leading-relaxed">
+            Melasma needs a series rather than a single session, so the plan is usually built
+            across two or three of these. The sequence is set at consultation.
+          </p>
+        </Reveal>
+
+        <ul class="m-0 mt-14 grid list-none gap-7 p-0 md:grid-cols-3 md:gap-6 lg:gap-8">
+          {
+            melasmaTreatments.map((treatment) => (
+              <Reveal as="li">
+                <div class="flex h-full flex-col rounded-lg bg-ivory p-8 lg:p-9">
+                  <h3 class="t-service text-[1.125rem]">{treatment.name}</h3>
+                  <p class="t-body mt-4 flex-1 leading-relaxed text-[0.9375rem] text-ink-soft">
+                    {treatment.description}
+                  </p>
+                  <p class="t-price mt-6 text-rose">{treatment.price}</p>
+                  <a
+                    href={treatment.href}
+                    class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose"
+                  >
+                    Learn more
+                  </a>
+                </div>
+              </Reveal>
+            ))
+          }
+        </ul>
+
+        <p class="t-body mt-12 max-w-[62ch] text-[0.9375rem]">
+          Because the series is the point, many clients use the{' '}
+          <a href="/membership/" class="border-b border-ink pb-0.5 hover:border-rose hover:text-rose">
+            monthly facial membership
+          </a>{' '}
+          at $199 to keep the plan consistent and affordable. Membership treatments can be applied
+          toward peels, microchanneling, or HydraFacials.
+        </p>
+      </div>
+    </section>
+
     <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">The San Diego problem</p>
+            <h2 class="t-h2 mt-4">What Triggers Melasma in San Diego</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Melasma returns if the triggers are not managed, and San Diego has more of them than
+              most cities. Here is what to watch for:
+            </p>
+            <ul class="t-body mt-6 space-y-2.5">
+              {
+                melasmaTriggers.map((trigger) => (
+                  <li class="flex gap-3 leading-relaxed">
+                    <span class="mt-1 text-rose" aria-hidden="true">
+                      •
+                    </span>
+                    <span>{trigger}</span>
+                  </li>
+                ))
+              }
+            </ul>
+            <p class="t-body mt-6 leading-relaxed">
+              Daily broad-spectrum SPF 30 or higher is non-negotiable. Mineral sunscreens with
+              iron oxides block both UV and visible light — and visible light is a trigger most
+              people do not know about.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    {/* The proof. Quick answer for AI extraction, the published case, a client
+        quote, and the risk reversal — all together, so a reader has met the
+        studio before the questions and the booking form. */}
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch]">
+          <TreatmentProof slug="melasma" />
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Common questions</p>
+            <h2 class="t-h2 mt-4">Melasma Treatment Questions</h2>
+          </Reveal>
+          {/* Visible text, not accordions. These are SEO pages, and the
+              studio's own booking FAQ block made this call for the same
+              reason. The first four lead at full size because they are the
+              ones that block a booking outright. */}
+          <div class="mt-12">
+            {
+              melasmaFaqs.slice(0, 4).map((faq) => (
+                <div class="border-b border-line py-7 first:pt-0">
+                  <h3 class="t-service text-[1.0625rem] md:text-[1.1875rem]">{faq.question}</h3>
+                  <p class="t-body mt-3 text-[0.9375rem]">{faq.answer}</p>
+                </div>
+              ))
+            }
+          </div>
+          <div class="mt-12">
+            <p class="t-eyebrow text-ink-soft">Also asked</p>
+            <dl class="mt-6">
+              {
+                melasmaFaqs.slice(4).map((faq) => (
+                  <div class="border-b border-line py-5 last:border-b-0">
+                    <dt class="t-service text-[0.9375rem]">{faq.question}</dt>
+                    <dd class="t-body mt-2 text-[0.9375rem] text-ink-soft">{faq.answer}</dd>
+                  </div>
+                ))
+              }
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain py-20 md:py-28">
       <div class="wrap">
         <div class="mx-auto max-w-[68ch] text-center">
           <Reveal>
-            <h2 class="t-h2">Ready to start treating your melasma?</h2>
+            <h2 class="t-h2">Ready to Start Treating Your Melasma?</h2>
             <p class="t-body mx-auto mt-6 max-w-[58ch]">
-              Every melasma treatment plan starts with a consultation to assess your skin,
-              pigmentation depth, and treatment history. From there, we'll build a customized
-              plan paced for your skin tone and goals.
+              Every melasma plan starts with a consultation — your skin, your pigmentation depth,
+              and your treatment history — then a plan paced for your skin tone and goals.
             </p>
             <div class="mt-9 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
               <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
@@ -465,6 +481,14 @@ const service = {
               >
                 {business.phone.display}
               </a>
+            </div>
+
+            {/* Trust repeats. The band under the hero carries one quote;
+                this is the second one, next to the booking form, so a reader
+                who scrolls straight to the CTA still meets a client before
+                they meet the button. */}
+            <div class="mx-auto mt-10 max-w-[46ch] border-t border-line pt-9">
+              <ProofQuote testimonial={studioProof} />
             </div>
           </Reveal>
         </div>
@@ -480,10 +504,3 @@ const service = {
     </section>
   </article>
 </BaseLayout>
-
-<style>
-  /* Safari still needs this to drop the disclosure triangle. */
-  summary::-webkit-details-marker {
-    display: none;
-  }
-</style>

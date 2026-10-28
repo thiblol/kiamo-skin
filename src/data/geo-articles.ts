@@ -63,8 +63,8 @@ export const geoArticles: GeoArticle[] = [
     slug: 'hydrafacial-ocean-swimmers',
     areaSlug: 'la-jolla',
     serviceSlug: 'hydrafacial',
-    title: 'HydraFacial for Ocean Swimmers La Jolla | KIAMO Skin Barrier Repair',
-    description: 'Daily ocean swimming strips your barrier. HydraFacial at KIAMO Skin in Mission Hills rebuilds hydration for La Jolla Cove swimmers. Clinical-grade extraction + repair.',
+    title: 'HydraFacial for Ocean Swimmers La Jolla | KIAMO Skin',
+    description: 'Daily ocean swimming strips your barrier. HydraFacial at KIAMO Skin in Mission Hills rebuilds hydration for La Jolla Cove swimmers. Request an appointment.',
     h1: 'HydraFacial for Ocean Swimmers in La Jolla: Barrier Repair After Salt Water',
     quickAnswer: 'Daily ocean swimming at La Jolla Cove, Windansea, and La Jolla Shores strips the skin barrier with salt water and repeated rinsing. HydraFacial at KIAMO Skin in Mission Hills uses vortex extraction to remove salt deposits from follicles and peptide infusion to rebuild hydration—twenty minutes south on I-5 from La Jolla Village.',
     faqs: [
@@ -294,7 +294,7 @@ export const geoArticles: GeoArticle[] = [
     slug: 'hydrafacial-pacific-beach-sun-damage',
     areaSlug: 'pacific-beach',
     serviceSlug: 'hydrafacial',
-    title: 'HydraFacial for Pacific Beach Sun Damage: Reversing May Gray UV | KIAMO Skin',
+    title: 'HydraFacial for Pacific Beach Sun Damage | KIAMO Skin',
     description:
       'Pacific Beach sits inside the May Gray marine layer belt. HydraFacial at KIAMO Skin in Mission Hills reverses the UV-loaded surface layer. From $259.',
     h1: 'HydraFacial for Pacific Beach Sun Damage: Reversing May Gray UV Exposure',
@@ -436,7 +436,7 @@ export const geoArticles: GeoArticle[] = [
     slug: 'lira-peel-la-mesa-melasma',
     areaSlug: 'la-mesa',
     serviceSlug: 'lira-peels',
-    title: 'Lira Chemical Peel for La Mesa Melasma: Inland Valley Heat Protocol | KIAMO Skin',
+    title: 'Lira Chemical Peel for La Mesa Melasma | KIAMO Skin',
     description:
       'La Mesa heat is inland heat — different UV than the coast. Lira peels at KIAMO Skin in Mission Hills recalibrate melasma in melanin-rich skin. From $199.',
     h1: 'Lira Chemical Peel for La Mesa Melasma: The Inland Valley Heat Protocol',
@@ -575,9 +575,9 @@ export const geoArticles: GeoArticle[] = [
     slug: 'procell-microchanneling-north-park-acne-scars',
     areaSlug: 'north-park',
     serviceSlug: 'procell-microchanneling',
-    title: 'Procell Microchanneling in North Park for Acne Scars | KIAMO Skin',
+    title: 'Procell Microchanneling in North Park | KIAMO Skin',
     description:
-      'Acne scar revision in melanin-rich skin needs depth-controlled microchanneling. Procell at KIAMO Skin in Mission Hills serves North Park with safe-for-Fitzpatrick I-VI protocols. From $475.',
+      'Acne scar revision in melanin-rich skin needs depth-controlled microchanneling. Procell at KIAMO Skin serves North Park. Request an appointment.',
     h1: 'Procell Microchanneling for North Park Acne Scars: Depth-Controlled Revision for All Skin Types',
     quickAnswer:
       'Acne scar revision in melanin-rich skin is depth-controlled work. Too shallow and the scars do not respond. Too deep and you risk post-inflammatory hyperpigmentation that is worse than the scars. Procell microchanneling at KIAMO Skin in Mission Hills is set to a depth calibrated at consultation based on scar type and Fitzpatrick — the same studio, ten minutes south of North Park via I-805.',

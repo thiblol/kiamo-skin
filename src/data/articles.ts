@@ -681,7 +681,7 @@ export const articles: Article[] = [
           'The Dermaplane Facial at KIAMO Skin is $199, performed by a licensed esthetician in Mission Hills, San Diego.',
       },
       {
-        p: 'Dermaplaning in San Diego ranges from roughly $80 to $200 depending on provider type and what is included. At KIAMO Skin the $199 treatment is a full facial — cleanse, dermaplane, treatment serums while absorption is at its highest, and SPF to close. Published prices are unusual in this market. What is listed here is verified, not approximate.',
+        p: 'Dermaplaning in San Diego ranges widely in price depending on provider type and what is included. At KIAMO Skin the $199 treatment is a full facial — cleanse, dermaplane, treatment serums while absorption is at its highest, and SPF to close. Published prices are unusual in this market. What is listed here is verified, not approximate.',
       },
       {
         p: 'The studio is in Mission Hills, five minutes from Hillcrest, Bankers Hill and Little Italy, with free parking. Clients travel <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">from across San Diego County</a>—<a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park clients</a> are ten minutes away with no freeway, while coastal areas like Pacific Beach and La Jolla are fifteen to twenty minutes. That proximity makes regular dermaplaning between peel appointments realistic rather than aspirational. Appointments are request-based. San Diego\'s UV index runs 8 to 10 from April through October—freshly dermaplaned skin has a temporarily reduced surface barrier, and applying SPF before you leave is part of the service. The <a href="/journal/june-gloom-is-not-sun-protection/">June Gloom piece</a> covers why that applies even on overcast San Diego mornings.',
@@ -712,7 +712,7 @@ export const articles: Article[] = [
       {
         question: 'How much does a dermaplaning facial cost in San Diego?',
         answer:
-          'The Dermaplane Facial at KIAMO Skin is $199. The treatment includes cleanse, dermaplaning, treatment serums and SPF. Most San Diego providers charge between $80 and $200.',
+          'The Dermaplane Facial at KIAMO Skin is $199. The treatment includes cleanse, dermaplaning, treatment serums and SPF. Published prices are unusual in this market, and most San Diego providers quote a session rate only.',
       },
       {
         question: 'Who should avoid dermaplaning?',
@@ -730,9 +730,9 @@ export const articles: Article[] = [
   {
     slug: 'dandruff-treatment-san-diego',
     headline: 'Professional Scalp Treatment San Diego: Keravive for Dandruff, Flaking & Hair Health',
-    title: 'Professional Scalp Treatment San Diego | Keravive Therapy for Dandruff & Hair Loss',
+    title: 'Professional Scalp Treatment San Diego | KIAMO Skin',
     description:
-      'Expert scalp treatment in Mission Hills, San Diego. Keravive therapy addresses dandruff, flaking, seborrheic dermatitis, dry scalp & hair thinning at the source. Book your consultation.',
+      'Expert scalp treatment in Mission Hills, San Diego. Keravive therapy for dandruff, flaking and hair thinning. Request an appointment.',
     standfirst:
       'Looking for professional scalp treatment in San Diego? KIAMO Skin offers Keravive therapy for dandruff, seborrheic dermatitis, dry scalp, and hair thinning. While over-the-counter shampoos treat surface symptoms, Keravive addresses the root cause.',
     readingTime: '12 min read',
@@ -995,9 +995,9 @@ export const articles: Article[] = [
   {
     slug: 'san-diego-scalp-treatments-how-keravive-works',
     headline: 'San Diego Scalp Treatments: How Does Keravive Work?',
-    title: 'San Diego Scalp Treatments: How Does Keravive Work? | KIAMO Skin',
+    title: 'San Diego Scalp Treatments: How Keravive Works | KIAMO Skin',
     description:
-      'How Keravive scalp treatment works for San Diego residents dealing with hard water buildup, ocean salt, and sun damage. The 3-step process explained by a licensed esthetician.',
+      'How Keravive scalp treatment works for San Diego clients dealing with hard water buildup, ocean salt, and sun damage. Request an appointment.',
     standfirst:
       'Keravive is a clinical scalp treatment designed to remove years of product buildup, hard water minerals, and oil congestion that shampoo can\'t reach. For San Diego residents dealing with ocean humidity, hard water, and year-round sun exposure, it addresses the root causes of flaking, tightness, and hair thinning.',
     readingTime: '8 min read',
@@ -1125,7 +1125,7 @@ export const articles: Article[] = [
         p: 'The series format exists because scalp dysfunction rarely resolves in one session. The first treatment clears accumulated buildup; the second and third treatments address new buildup while continuing to support scalp health. By the third session, the scalp is clear and the maintenance interval is established.',
       },
       {
-        p: '<a href="/treatments/keravive-scalp/">Book a Keravive consultation at KIAMO Skin in Mission Hills.</a> The studio serves Pacific Beach, La Jolla, Del Mar, Encinitas, Carlsbad, Mission Valley, and North Park.',
+        p: '<a href="/treatments/keravive-scalp/">Book a Keravive consultation at KIAMO Skin in Mission Hills.</a> KIAMO Skin serves Pacific Beach, La Jolla, Del Mar, Encinitas, Carlsbad, Mission Valley, and North Park.',
       },
     ],
     faqs: [
@@ -1160,9 +1160,9 @@ export const articles: Article[] = [
   {
     slug: 'hyperpigmentation-treatment-guide',
     headline: 'Hyperpigmentation Treatment Guide: What Actually Works for Dark Spots, Melasma & PIH',
-    title: 'Hyperpigmentation Treatment: What Works for Dark Spots | KIAMO Skin',
+    title: 'Hyperpigmentation Treatment: What Works | KIAMO Skin',
     description:
-      'Evidence-based guide to treating hyperpigmentation, melasma and PIH. Learn which ingredients work, safe treatments for darker skin, and realistic timelines.',
+      'Evidence-based guide to treating hyperpigmentation, melasma and PIH. Learn which ingredients work and which treatments are safe for darker skin.',
     standfirst:
       'If you have struggled with stubborn dark spots, melasma, or uneven skin tone in San Diego, the right combination of professional treatments and medical-grade home care can produce dramatic improvement—but only if the approach is calibrated for your skin tone and pigmentation type.',
     readingTime: '18 min read',
@@ -1368,7 +1368,7 @@ export const articles: Article[] = [
         p: 'Living in San Diego creates unique challenges. While other regions experience seasonal UV variation, San Diego maintains a UV index of 5-7 even in December and January—requiring year-round vigilance that many patients underestimate.',
       },
       {
-        p: 'San Diego clients face unique challenges: even running errands means UV exposure during drives, walking across parking lots, sitting near restaurant windows. One client\'s melasma consistently worsened each summer despite religious evening skincare—until we identified the culprit: her daily beach walks at 4pm. She thought late afternoon was safe, but San Diego\'s UV index stays at 6-8 until sunset during summer. After shifting walks to before 9am and adding a wide-brimmed hat, her pigmentation finally started improving.',
+        p: 'San Diego clients face unique challenges: even running errands means UV exposure during drives, walking across parking lots, sitting near restaurant windows. One client\'s melasma consistently worsened each summer despite religious evening skincare—until we identified the culprit: daily beach walks at 4pm. Late afternoon seemed safe, but San Diego\'s UV index stays at 6-8 until sunset during summer. After shifting walks to before 9am and adding a wide-brimmed hat, the pigmentation finally started improving.',
       },
       {
         p: '<strong>San Diego sunscreen protocol:</strong> Mineral sunscreen SPF 50+ with zinc oxide or titanium dioxide; must contain iron oxides (look for tinted formulations); apply generously morning and reapply every 2 hours during outdoor activities; apply sunscreen even if staying home—UVA penetrates windows.',
@@ -1403,7 +1403,7 @@ export const articles: Article[] = [
         p: 'Professional maintenance involves quarterly chemical peels (every 12-16 weeks) rather than monthly treatments, with Procell Microchanneling sessions 2-3 times yearly to sustain collagen production and prevent regression. The clients who maintain their results long-term are the ones who accept that pigmentation management is ongoing—not a 3-month sprint followed by abandoning all protocols.',
       },
       {
-        p: 'Many cycle prescription hydroquinone (3 months on, 3 months off) rather than using it continuously, replacing it during off months with alternatives like tranexamic acid or cysteamine. The maintenance phase costs significantly less than active treatment ($400-600 quarterly versus $1,200-1,800 during intensive phases) while preventing the frustrating cycle of improvement followed by complete relapse.',
+        p: 'Many cycle prescription hydroquinone (3 months on, 3 months off) rather than using it continuously, replacing it during off months with alternatives like tranexamic acid or cysteamine. The maintenance phase costs significantly less than active treatment, a fraction of what an intensive phase runs, while preventing the frustrating cycle of improvement followed by complete relapse.',
       },
 
       { h2: 'What about chemical peels versus laser treatments?' },
@@ -1460,7 +1460,7 @@ export const articles: Article[] = [
     slug: 'chemical-peel-cost-san-diego',
     headline: 'How much does a chemical peel cost in San Diego?',
     title: 'Chemical Peel Cost in San Diego | KIAMO Skin',
-    description: 'Chemical peels in San Diego cost $150–$350 at an esthetician studio. KIAMO Skin charges $199 for the Lira Gentle Renewal Peel and $299 for the Advanced Peel. What drives the price, and which peel is safe on melanin-rich skin.',
+    description: 'Chemical peels in San Diego: KIAMO Skin charges $199 for the Lira Gentle Renewal Peel and $299 for the Advanced. Which peel is safe on melanin-rich skin.',
     standfirst: 'The price of a chemical peel in San Diego varies by depth, formulation, and whether it is part of a treatment series — but the more important question is which one your skin actually needs.',
     readingTime: '8 min read',
     datePublished: '2026-09-02',
@@ -1470,33 +1470,33 @@ export const articles: Article[] = [
     faqHeading: 'Chemical peel cost questions',
     body: [
       {
-        p: 'You\'ve been Googling it for a week. Every result gives a range so wide it\'s useless—$75 to $3,000 is a real number you\'ll find online—and none of them answer what you\'re actually asking: is it safe on your skin, and will it do anything? If you\'re in San Diego and considering a <a href="/treatments/lira-peels/">chemical peel in San Diego</a>, this article gives you the real local numbers, not national averages, and addresses the safety question most articles skip entirely.',
+        p: 'You\'ve been Googling it for a week. Every result gives a range so wide it\'s useless—from a cheap coupon special to several thousand for surgical-grade peels—and none of them answer what you\'re actually asking: is it safe on your skin, and will it do anything? If you\'re in San Diego and considering a <a href="/treatments/lira-peels/">chemical peel in San Diego</a>, this article gives you the real local numbers, not national averages, and addresses the safety question most articles skip entirely.',
       },
       { h2: 'How much does a chemical peel cost in San Diego?' },
       {
         answer:
-          'A chemical peel in San Diego costs between $150 and $350 at an esthetician studio, $300 to $800 at a medspa or dermatology clinic, and $1,000 to $3,000 for deep phenol peels performed by a plastic surgeon. The range exists because light, medium, and deep peels are completely different procedures with different risk profiles and results.',
+          'A chemical peel in San Diego costs a few hundred dollars at an esthetician studio, more at a medspa or dermatology clinic, and several thousand for deep phenol peels performed by a plastic surgeon. The range exists because light, medium, and deep peels are completely different procedures with different risk profiles and results.',
       },
       {
         table: {
           caption: 'Chemical peel pricing in San Diego by provider type',
-          head: ['Provider Type', 'Peel Depth', 'Price Range', 'Example'],
+          head: ['Provider Type', 'Peel Depth', 'Typical Cost', 'Example'],
           rows: [
-            ['Esthetician studio', 'Light (superficial)', '$150–$350', 'KIAMO Skin: $199 (Gentle Renewal), $299 (Advanced)'],
-            ['Medspa / Dermatology', 'Medium (TCA 10-25%)', '$300–$800', 'Typical San Diego medspa pricing'],
-            ['Plastic surgeon', 'Deep (phenol)', '$1,000–$3,000', 'Hospital or surgical center setting'],
+            ['Esthetician studio', 'Light (superficial)', 'Low hundreds', 'KIAMO Skin: $199 (Gentle Renewal), $299 (Advanced)'],
+            ['Medspa / Dermatology', 'Medium (TCA 10-25%)', 'Mid hundreds', 'Typical San Diego medspa pricing'],
+            ['Plastic surgeon', 'Deep (phenol)', 'Several thousand', 'Hospital or surgical center setting'],
           ],
         },
       },
       {
-        p: 'At KIAMO Skin, the <strong>Lira Gentle Renewal Peel is $199</strong> and the <strong>Advanced Peel is $299</strong>. Both are formulated for melanin-rich skin and designed to be done in a series rather than as one aggressive session. <a href="https://rewindmd.com/chemical-peel-cost-dermatologist/" rel="noopener" target="_blank">Chemical peels are normally listed at $300 in San Diego</a> according to RewindMD, with light peels ranging from $150 to $400. <a href="https://www.belladerma.com/facials-chemical-peels-san-diego-ca/" rel="noopener" target="_blank">Belladerma lists their average starting cost at $150</a> for basic facials with light exfoliation.',
+        p: 'At KIAMO Skin, the <strong>Lira Gentle Renewal Peel is $199</strong> and the <strong>Advanced Peel is $299</strong>. Both are formulated for melanin-rich skin and designed to be done in a series rather than as one aggressive session. <a href="https://rewindmd.com/chemical-peel-cost-dermatologist/" rel="noopener" target="_blank">Chemical peels are normally listed in the mid hundreds in San Diego</a> according to RewindMD, with light peels at the lower end. <a href="https://www.belladerma.com/facials-chemical-peels-san-diego-ca/" rel="noopener" target="_blank">Belladerma lists their average starting cost in the low hundreds</a> for basic facials with light exfoliation.',
       },
       {
-        p: 'The national average for a chemical peel procedure is $519 according to the American Society of Plastic Surgeons, but that figure includes deep peels performed by surgeons, which are a completely different category of service. For the light to medium peels most people get at an esthetician or medspa, San Diego pricing sits in the middle of the national range.',
+        p: 'The national average for a chemical peel procedure runs to several hundred dollars according to the American Society of Plastic Surgeons, but that figure includes deep peels performed by surgeons, which are a completely different category of service. For the light to medium peels most people get at an esthetician or medspa, San Diego pricing sits below the national range.',
       },
       { h2: 'What makes one peel cost more than another?' },
       {
-        p: 'The price difference comes down to three factors: the acid type and concentration, the depth of penetration, and the practitioner\'s training in peel selection. A $150 Groupon peel and a $299 professional peel are not the same product, even if both use glycolic acid.',
+        p: 'The price difference comes down to three factors: the acid type and concentration, the depth of penetration, and the practitioner\'s training in peel selection. A discount-groupon peel and a $299 professional peel are not the same product, even if both use glycolic acid.',
       },
       {
         p: 'Higher concentrations require more skill to apply safely, especially on melanin-rich skin where the risk of post-inflammatory hyperpigmentation increases with aggressive treatments. You\'re not paying for the liquid itself—you\'re paying for training in peel selection, assessment of your skin\'s readiness, and the ability to catch a reaction before it becomes a problem.',
@@ -1535,7 +1535,7 @@ export const articles: Article[] = [
         p: 'One peel refreshes. A series corrects. If you\'re dealing with pigmentation, texture, or melasma, plan for 4-6 sessions spaced 3-4 weeks apart. Single-session pigmentation promises are a red flag—melanin-rich skin does not respond well to aggressive one-and-done treatments.',
       },
       {
-        p: 'A series is more cost-effective with a membership. KIAMO Skin\'s <a href="/membership/">monthly facial membership</a> is $199 per month and includes one Lira peel or corrective facial per month. If you\'re doing a 6-session series, membership pricing saves you $600 compared to paying $299 per session.',
+        p: 'A series is more cost-effective with a membership. KIAMO Skin\'s <a href="/membership/">monthly facial membership</a> is $199 per month and includes one Lira peel or corrective facial per month. If you\'re doing a 6-session series, membership pricing saves you substantially compared to paying $299 per session.',
       },
       { h2: 'What should you ask before booking a chemical peel?' },
       {
@@ -1552,13 +1552,13 @@ export const articles: Article[] = [
       },
       { h2: 'Final takeaway' },
       {
-        p: 'Chemical peels in San Diego cost $150 to $350 at an esthetician studio, with the real price driver being the practitioner\'s training and the peel\'s formulation for your skin tone. On melanin-rich skin, the provider matters more than the acid. If you\'re dealing with pigmentation and want to understand which peel makes sense for your concern, <a href="https://www.vagaro.com/kiamoskin" rel="noopener" target="_blank">request a consultation</a> at KIAMO Skin.',
+        p: 'Chemical peels in San Diego vary widely in price at an esthetician studio, with the real price driver being the practitioner\'s training and the peel\'s formulation for your skin tone. On melanin-rich skin, the provider matters more than the acid. If you\'re dealing with pigmentation and want to understand which peel makes sense for your concern, <a href="https://www.vagaro.com/kiamoskin" rel="noopener" target="_blank">request a consultation</a> at KIAMO Skin.',
       },
     ],
     faqs: [
       {
         question: 'How much does a chemical peel cost in San Diego?',
-        answer: 'A chemical peel in San Diego costs between $150 and $350 at an esthetician studio. At KIAMO Skin, the Lira Gentle Renewal Peel is $199 and the Advanced Peel is $299. Medspa and dermatology clinics charge $300 to $800 for medium-depth peels.',
+        answer: 'A chemical peel in San Diego costs considerably less at a licensed esthetician than at a medspa or dermatology clinic, and the price driver is the practitioner\'s training and the peel\'s formulation. At KIAMO Skin, the Lira Gentle Renewal Peel is $199 and the Advanced Peel is $299.',
       },
       {
         question: 'Are chemical peels safe for Black and brown skin?',
@@ -1584,7 +1584,7 @@ export const articles: Article[] = [
     headline: 'Best chemical peel for melasma, and what the answer actually depends on',
     title: 'Best Chemical Peel for Melasma in San Diego | KIAMO Skin',
     description:
-      'Glycolic, mandelic, Cosmelan, Jessner — which chemical peel works for melasma on melanin-rich skin, and why the answer depends more on protocol than acid name.',
+      'Glycolic, mandelic, Cosmelan, Jessner — which chemical peel works for melasma on melanin-rich skin, and why protocol matters more than the acid name.',
     standfirst:
       '"Best peel for melasma" is a search query, not a clinical answer. The right peel is the one your Fitzpatrick type can tolerate every four to six weeks, repeated across a series, with melanin production quieted between sessions.',
     readingTime: '10 min read',
@@ -1746,9 +1746,9 @@ export const articles: Article[] = [
   {
     slug: 'acne-scars-san-diego',
     headline: 'Acne scars in San Diego: which ones a facial can fix and which need microneedling',
-    title: 'Acne Scars in San Diego: Facial vs Microneedling for Each Type | KIAMO Skin',
+    title: 'Acne Scars in San Diego: Facial vs Microneedling | KIAMO',
     description:
-      'Acne scars fall into categories that respond to different treatments. A practical San Diego guide to which scars a facial improves, which need Procell microchanneling, and why depth matters for melanin-rich skin.',
+      'Acne scars fall into categories that respond to different treatments. A San Diego guide to which scars a facial improves and which need Procell.',
     standfirst:
       'Most of the time when a facial "didn\'t work" for acne scarring, the scar type was never the issue. The treatment was.',
     readingTime: '9 min read',

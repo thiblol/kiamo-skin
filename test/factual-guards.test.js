@@ -8,7 +8,7 @@
 
 import { test, describe, before } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadPages, forEachPage, getPage, VERIFIED, FORBIDDEN } from './test-utils.js';
+import { loadPages, forEachPage, getPage, VERIFIED, FORBIDDEN, PRICE_PATTERN } from './test-utils.js';
 
 describe('Factual Guards', () => {
   before(async () => {
@@ -17,9 +17,13 @@ describe('Factual Guards', () => {
 
   describe('Location & Contact', () => {
     test('the closed Del Mar location appears nowhere', () => {
-      forEachPage(({ text, file }) => {
+      // Checked against the page COPY, not the raw HTML: the area schema
+      // carries a "Del Mar" Place name next to an "address" key, which is
+      // structured data for a service area and not a claim that the studio
+      // is there. The rule is about what a reader is told.
+      forEachPage(({ copy, file }) => {
         assert.doesNotMatch(
-          text,
+          copy,
           FORBIDDEN.closedLocation,
           `${file}: mentions closed Del Mar location`
         );
@@ -37,7 +41,7 @@ describe('Factual Guards', () => {
   describe('Pricing', () => {
     test('only verified prices appear', () => {
       forEachPage(({ text, file }) => {
-        const pricesFound = text.match(/\$\d[\d,]*/g) ?? [];
+        const pricesFound = text.match(PRICE_PATTERN) ?? [];
         for (const price of pricesFound) {
           assert.ok(
             VERIFIED.prices.has(price),
@@ -64,11 +68,36 @@ describe('Factual Guards', () => {
 
   describe('Reviews & Ratings', () => {
     test('no rating, review count or aggregate is displayed or marked up', () => {
-      forEachPage(({ html, file }) => {
+      forEachPage(({ html, text, file }) => {
         assert.doesNotMatch(html, FORBIDDEN.ratings.schema, `${file}: has aggregateRating schema`);
         assert.doesNotMatch(html, FORBIDDEN.ratings.values, `${file}: displays rating values`);
         assert.doesNotMatch(html, FORBIDDEN.ratings.stars, `${file}: contains star symbols`);
-        assert.doesNotMatch(html, FORBIDDEN.ratings.text, `${file}: displays rating text`);
+
+        // Checked against the visible text, not the raw markup: a Tailwind
+        // class like `aspect-[4/5]` matched the old HTML-level pattern and
+        // failed pages that display no rating at all.
+        //
+        // The one rating the site may show is the studio-verified GBP figure
+        // — a 5.0 rating and a 40-review count, both carried by
+        // TrustBadge.astro on the homepage and both linked to the GBP so a
+        // reader can check them. site-brief.md §5.2 permits exactly this and
+        // nothing more, so the guard permits that phrasing and blocks
+        // everything else.
+        const permitted = new RegExp(
+          [
+            `Rated ${VERIFIED.reviewRating}(?:\\.0)? out of 5 stars?`,
+            `${VERIFIED.reviewRating}\\.0`,
+            `${VERIFIED.reviewCount} five-star Google reviews`,
+          ].join('|'),
+          'g'
+        );
+        const withoutPermitted = text.replace(permitted, ' ');
+
+        assert.doesNotMatch(
+          withoutPermitted,
+          FORBIDDEN.ratings.text,
+          `${file}: displays rating text`
+        );
       });
     });
   });

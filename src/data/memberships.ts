@@ -77,17 +77,17 @@ export const tiers: Tier[] = [
       {
         label: 'Dermaplaning add-on',
         href: '/treatments/dermaplaning/',
-        price: '$50',
+        price: 'Included',
       },
       {
         label: 'LED therapy add-on',
         href: '#',
-        price: '$40',
+        price: 'Included',
       },
       {
         label: 'Corrective booster add-on',
         href: '#',
-        price: '$45',
+        price: 'Included',
       },
     ],
     recommended: true,

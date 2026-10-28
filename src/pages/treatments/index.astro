@@ -8,12 +8,21 @@ import FaqLocation from '../../components/sections/FaqLocation.astro';
 import CollectionSchema from '../../components/schema/CollectionSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import { treatments } from '../../data/treatments';
+import { treatmentTrust, studioProof } from '../../data/treatment-trust';
+import { business } from '../../config/business';
+import { CTA_LABEL } from '../../config/nav';
+import Button from '../../components/Button.astro';
+import TrustBar from '../../components/TrustBar.astro';
+import ProofQuote from '../../components/ProofQuote.astro';
+import QuickAnswer from '../../components/QuickAnswer.astro';
+import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 ---
 
 <BaseLayout
-  title="Skin & Scalp Treatments in San Diego | KIAMO Skin"
-  description="Corrective facials, scalp therapy, and advanced treatments in Mission Hills. HydraFacial, chemical peels, microchanneling, DMK enzyme therapy, and Keravive scalp treatment—safe for all skin tones."
+  title="Corrective Skin Treatments in San Diego | KIAMO Skin"
+  description="Corrective facials, scalp therapy, and advanced treatments in Mission Hills. HydraFacial, peels, microchanneling, enzyme therapy. Licensed esthetician."
 >
+  <SpeakableSchema slot="head" url={Astro.site ? new URL(Astro.site).origin + Astro.url.pathname : Astro.url.pathname} />
   <CollectionSchema
     slot="head"
     name="Skin & Scalp Treatments in San Diego"
@@ -25,41 +34,73 @@ import { treatments } from '../../data/treatments';
   />
   <BreadcrumbSchema slot="head" trail={[{ name: 'Treatments', path: '/treatments' }]} />
   <header class="bg-blush">
-    <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+    <div class="wrap pt-[calc(60px+40px)] pb-16 md:pt-[calc(60px+64px)] md:pb-24">
       <p class="t-eyebrow text-ink-soft">Treatments</p>
-      <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">
-        Every step has a purpose.
+      <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.25rem] md:text-[3.5rem]">
+        Corrective Skin &amp; Scalp Treatments in San Diego — For Pigmentation, Acne, and Scalp
       </h1>
+      {/* The deck line. It leads with what the menu contains — the thing
+          that is different about this studio — and closes with the
+          credential, so the H1 can carry service, city, and benefit without
+          the hero repeating itself. */}
       <p class="t-body mt-7 max-w-[62ch]">
-        At KIAMO Skin, we don’t believe the most aggressive treatment is always the best treatment.
-        Healthy skin is built through consistency, not constantly switching modalities — which is
-        why most plans here run on a <a
-          href="/membership/"
-          class="border-b border-ink pb-0.5 hover:border-rose hover:text-rose"
-          >monthly facial membership in San Diego</a
-        > rather than one appointment at a time.
+        HydraFacial, peels, microchanneling, enzyme therapy, and scalp work — each one selected
+        for the skin in front of you rather than for the treatment that is trending. Performed by
+        Kiki, a California licensed esthetician with {business.experience} in corrective skin.
       </p>
-      <p class="t-body mt-5 max-w-[62ch]">
-        HydraFacial serves as the foundation of many of our treatment plans, helping restore and
-        maintain healthy skin over time. As your skin changes, advanced corrective treatments such
-        as Procell Microchanneling, DMK Enzyme Therapy, chemical peels, or Keravive may be
-        introduced when they’re appropriate — not simply because they’re available.
-      </p>
-      <p class="t-body mt-5 max-w-[62ch]">
-        Every recommendation is based on what your skin needs today, while keeping your long-term
-        goals in mind. Protocols are selected to support all skin tones. Kiki's advanced training
-        in treating pigmentation in deeper skin means clients with any skin tone receive the
-        safest, most effective care—whether you're addressing <a
+      <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+        <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+        <a
+          href={business.phone.href}
+          class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+        >
+          {business.phone.display}
+        </a>
+      </div>
+    </div>
+  </header>
+
+    {/* The trust band. It sits directly below the hero as its own strip
+        rather than inside it - the hero is the offer, and the claims are
+        the reason to believe it. Keeping them apart is also what lets the
+        hero fit the fold. */}
+    <section class="bg-porcelain py-12 md:py-14">
+      <div class="wrap">
+        <TrustBar items={treatmentTrust['corrective-skin-treatments'].claims} heading="Why this studio" />
+        {/* A client's words, directly under the studio's own claims. The
+            claims are the studio asserting things about itself; this is
+            somebody else saying it, and it belongs high on the page. */}
+        <div class="mt-10 border-t border-line pt-9 md:mt-12 md:pt-10">
+          <ProofQuote testimonial={studioProof} />
+        </div>
+      </div>
+    </section>
+
+  <section class="bg-porcelain">
+    <div class="wrap section-y">
+      {/* The longer explanation of how the menu works. It sits above the
+          menu rather than in the hero, so the hero stays the offer, the
+          subhead, and the CTA — and the whole thing fits the fold. */}
+      <p class="t-body mb-14 max-w-[62ch]">
+        HydraFacial serves as the foundation of many plans. As your skin changes, advanced
+        corrective treatments such as Procell Microchanneling, DMK Enzyme Therapy, chemical peels,
+        or Keravive may be introduced when they are appropriate — not simply because they are
+        available. Protocols are selected to support all skin tones, and Kiki's training in
+        treating pigmentation in deeper skin means clients with any skin tone receive the safest,
+        most effective care—whether you're addressing <a
           href="/treatments/melasma/"
           class="border-b border-ink/40 hover:border-rose hover:text-rose"
           >melasma, post-inflammatory hyperpigmentation</a
         >, or uneven texture.
       </p>
-    </div>
-  </header>
 
-  <section class="bg-porcelain">
-    <div class="wrap section-y">
+      {/* The quick answer an AI engine lifts. It sits above the menu because
+          it is the capsule version of the page: what this studio does, where,
+          and the fact that decides the treatment. */}
+      <QuickAnswer
+        content={treatmentTrust['corrective-skin-treatments'].quickAnswer}
+        class="mb-14 max-w-[68ch]"
+      />
       <ul class="m-0 grid list-none gap-x-8 gap-y-14 p-0 md:grid-cols-3">
         {
           treatments.map((treatment, i) => (

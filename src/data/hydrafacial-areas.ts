@@ -48,8 +48,8 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'downtown-san-diego',
     name: 'Downtown San Diego',
-    title: 'HydraFacial in Downtown San Diego - Same-Day Appointments | KIAMO Skin',
-    description: 'Professional HydraFacial treatments serving Downtown San Diego. 5 minutes from Gaslamp Quarter and Convention Center. Safe for all skin types (Fitzpatrick I-VI). Book today.',
+    title: 'HydraFacial in Downtown San Diego | KIAMO Skin',
+    description: 'HydraFacial for Downtown San Diego clients, 5 minutes from KIAMO Skin in Mission Hills. Safe for all skin types, Fitzpatrick I-VI. Request an appointment.',
     h1: 'HydraFacial in Downtown San Diego',
     intro: `KIAMO Skin provides professional HydraFacial treatments to clients throughout Downtown San Diego and the surrounding urban core. Located in nearby Mission Hills at 3067 Reynard Way (just off Washington Street), we're easily accessible from the I-5 and I-8 interchange, less than 5 minutes from Horton Plaza and the Gaslamp Quarter. Our clinic specializes in HydraFacial treatments safe for all skin types (Fitzpatrick I-VI), with protocols calibrated to each client's tone, concerns, and goals.`,
     authority: {
@@ -145,8 +145,8 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'bankers-hill',
     name: `Banker's Hill`,
-    title: `HydraFacial in Banker's Hill San Diego - Licensed Esthetician | KIAMO Skin`,
-    description: `HydraFacial treatments for Banker's Hill clients. 5 minutes from KIAMO Skin in Mission Hills. Safe for all skin types (Fitzpatrick I-VI). Licensed esthetician.`,
+    title: `HydraFacial in Banker's Hill, San Diego | KIAMO Skin`,
+    description: `HydraFacial for Banker's Hill clients, 5 minutes from KIAMO Skin in Mission Hills. Safe for all skin types, Fitzpatrick I-VI. Request an appointment.`,
     h1: `HydraFacial in Banker's Hill, San Diego`,
     intro: `Banker's Hill residents trust KIAMO Skin for HydraFacial treatments that respect their skin's integrity. Located less than 5 minutes away in Mission Hills at 3067 Reynard Way, our studio provides treatments safe for all skin types (Fitzpatrick types I-VI). Every HydraFacial is performed by Kiki, a California licensed esthetician with 7+ years of experience, in a private one-room studio with consistent, personalized care.`,
     authority: {
@@ -240,8 +240,8 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'little-italy',
     name: 'Little Italy',
-    title: 'HydraFacial in Little Italy San Diego - 3 Minutes Away | KIAMO Skin',
-    description: `HydraFacial treatments for Little Italy clients at KIAMO Skin, 3 minutes away in Mission Hills. Waterfront exposure, salt air, urban pollution. Safe for all skin types (Fitzpatrick I-VI). Licensed esthetician.`,
+    title: 'HydraFacial in Little Italy, San Diego | KIAMO Skin',
+    description: 'HydraFacial for Little Italy clients, 3 minutes from KIAMO Skin in Mission Hills. Salt air and urban pollution skin. Request an appointment.',
     h1: 'HydraFacial in Little Italy, San Diego',
     intro: `KIAMO Skin provides HydraFacial treatments to Little Italy clients dealing with waterfront salt air and urban environmental exposure. Located 3 minutes away in Mission Hills at 3067 Reynard Way, our studio specializes in treatments that address barrier damage from coastal humidity and pollution. Every HydraFacial is performed by Kiki, a licensed esthetician with 7+ years of experience, safe for all skin types (Fitzpatrick I-VI).`,
     authority: {
@@ -335,8 +335,8 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'harbor-island',
     name: 'Harbor Island',
-    title: 'HydraFacial in Harbor Island San Diego - Airport Area Skin Clinic | KIAMO Skin',
-    description: `Professional HydraFacial treatments serving Harbor Island and airport area. 10 minutes from KIAMO Skin. Coastal salt air specialists, safe for all skin types (Fitzpatrick I-VI). Book your appointment.`,
+    title: 'HydraFacial in Harbor Island, San Diego | KIAMO Skin',
+    description: 'HydraFacial for Harbor Island clients, 10 minutes from KIAMO Skin in Mission Hills. Coastal salt air specialists. Request an appointment.',
     h1: 'HydraFacial in Harbor Island, San Diego',
     intro: `Harbor Island and the surrounding airport area present unique skincare challenges from coastal salt air and constant sun exposure. KIAMO Skin provides specialized HydraFacial treatments designed for clients living or working in maritime environments, addressing dehydration, barrier damage, and windburn from waterfront conditions. Located 10 minutes away in Mission Hills at 3067 Reynard Way, our studio provides treatments safe for all skin types (Fitzpatrick I-VI).`,
     authority: {
@@ -429,8 +429,8 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'point-loma',
     name: 'Point Loma',
-    title: 'HydraFacial Point Loma - Coastal Skin Specialists | KIAMO Skin',
-    description: `HydraFacial treatments for Point Loma residents. 10 minutes from Liberty Station via Rosecrans. Coastal climate specialists addressing salt air, sun damage, windburn. Safe for all skin types (Fitzpatrick I-VI).`,
+    title: 'HydraFacial in Point Loma, San Diego | KIAMO Skin',
+    description: 'HydraFacial for Point Loma residents, 10 minutes from KIAMO Skin in Mission Hills. Salt air, sun damage, windburn. Request an appointment.',
     h1: 'HydraFacial in Point Loma, San Diego',
     intro: `Point Loma residents face unique skincare challenges from coastal salt air, intense sun exposure, and windburn from beach and water activities. KIAMO Skin provides specialized HydraFacial treatments customized for clients living in maritime climates. Located just 10 minutes from Liberty Station via Rosecrans Street at 3067 Reynard Way in Mission Hills, we provide treatments safe for all skin types (Fitzpatrick I-VI), with protocols calibrated to each client's tone and barrier condition.`,
     authority: {
@@ -523,8 +523,8 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'midway-district',
     name: 'Midway District',
-    title: 'HydraFacial Midway District San Diego - Near Sports Arena | KIAMO Skin',
-    description: `HydraFacial treatments serving Midway District and Sports Arena area. 8 minutes from KIAMO Skin in Mission Hills. Safe for all skin tones, same-day appointments available.`,
+    title: 'HydraFacial in Midway District, San Diego | KIAMO Skin',
+    description: 'HydraFacial for Midway District clients, 8 minutes from KIAMO Skin in Mission Hills. Safe for all skin tones. Request an appointment.',
     h1: 'HydraFacial in Midway District, San Diego',
     intro: `KIAMO Skin provides professional HydraFacial treatments to clients throughout the Midway District and Sports Arena area. Located just 8 minutes away in Mission Hills at 3067 Reynard Way, we're easily accessible via Rosecrans Street or Sports Arena Boulevard. Our clinic specializes in HydraFacial treatments safe for all skin types (Fitzpatrick I-VI), with protocols calibrated to each client's tone and concerns. Every treatment is performed by Kiki, a California licensed esthetician with 7+ years of experience.`,
     authority: {
@@ -616,8 +616,8 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'hillcrest',
     name: 'Hillcrest',
-    title: 'HydraFacial in Hillcrest San Diego - 5 Minutes Away | KIAMO Skin',
-    description: `HydraFacial treatments for Hillcrest clients at KIAMO Skin, 5 minutes away in Mission Hills. Safe for all skin types (Fitzpatrick I-VI), LGBTQ+ welcoming, licensed esthetician. Book your appointment.`,
+    title: 'HydraFacial in Hillcrest, San Diego | KIAMO Skin',
+    description: 'HydraFacial for Hillcrest clients, 5 minutes from KIAMO Skin in Mission Hills. LGBTQ+ welcoming. Request an appointment.',
     h1: 'HydraFacial in Hillcrest, San Diego',
     intro: `KIAMO Skin provides professional HydraFacial treatments to Hillcrest residents and the surrounding urban village community. Located just 5 minutes away in Mission Hills at 3067 Reynard Way, we're easily accessible via University Avenue or Washington Street. Our clinic provides HydraFacial treatments safe for all skin types (Fitzpatrick I-VI), with protocols calibrated to each client's tone and concerns. Every treatment is performed by Kiki, a California licensed esthetician with 7+ years of experience, in an LGBTQ+ welcoming environment.`,
     authority: {
@@ -710,8 +710,8 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'gaslamp-quarter',
     name: 'Gaslamp Quarter',
-    title: 'HydraFacial in Gaslamp Quarter San Diego - Pre-Event Glow | KIAMO Skin',
-    description: `HydraFacial treatments for Gaslamp Quarter clients. Pre-event glow for San Diego nightlife, 7 minutes from KIAMO Skin. Safe for all skin types (Fitzpatrick I-VI), same-day appointments.`,
+    title: 'HydraFacial in Gaslamp Quarter, San Diego | KIAMO Skin',
+    description: 'HydraFacial for Gaslamp Quarter clients, 7 minutes from KIAMO Skin. Pre-event glow for San Diego nightlife. Request an appointment.',
     h1: 'HydraFacial in Gaslamp Quarter, San Diego',
     intro: `KIAMO Skin provides professional HydraFacial treatments to Gaslamp Quarter clients preparing for events, nightlife, and social occasions. Located just 7 minutes away in Mission Hills at 3067 Reynard Way, we're easily accessible from Fifth Avenue and the historic entertainment district. Our clinic specializes in pre-event HydraFacial treatments that deliver instant glow, safe for all skin types (Fitzpatrick I-VI). Every treatment is performed by Kiki, a California licensed esthetician with 7+ years of experience.`,
     authority: {
@@ -804,8 +804,8 @@ export const hydrafacialAreas: HydrafacialArea[] = [
   {
     slug: 'pacific-beach',
     name: 'Pacific Beach',
-    title: 'HydraFacial in Pacific Beach San Diego - Coastal Skin Specialists | KIAMO Skin',
-    description: 'Professional HydraFacial treatments serving Pacific Beach. 15 minutes from KIAMO Skin in Mission Hills. Salt air, UV, and beach-lifestyle skin specialists. Safe for all skin types (Fitzpatrick I-VI). Book today.',
+    title: 'HydraFacial in Pacific Beach, San Diego | KIAMO Skin',
+    description: 'HydraFacial for Pacific Beach clients, 15 minutes from KIAMO Skin in Mission Hills. Salt air and UV specialists. Request an appointment.',
     h1: 'HydraFacial in Pacific Beach, San Diego',
     intro: `KIAMO Skin provides HydraFacial treatments to Pacific Beach clients living the coastal lifestyle between Crystal Pier and Tourmaline Surfing Park. Located about 15 minutes away in Mission Hills at 3067 Reynard Way, our studio addresses the specific skin challenges that come with daily beach exposure - salt air, UV reflection off the water, sunscreen buildup, and the dehydration that ocean wind creates. Every HydraFacial is performed by Kiki, a California licensed esthetician with 7+ years of experience, safe for all skin types (Fitzpatrick I-VI).`,
     authority: {

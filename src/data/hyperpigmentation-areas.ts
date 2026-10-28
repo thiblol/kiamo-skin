@@ -49,8 +49,8 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
   {
     slug: 'mission-hills',
     name: 'Mission Hills',
-    title: 'Hyperpigmentation Treatment Mission Hills San Diego | Melasma & Dark Spots',
-    description: 'Professional hyperpigmentation treatment in Mission Hills. Correcting melasma, dark spots, PIH for all skin types. Licensed esthetician, safe protocols. Book consultation today.',
+    title: 'Hyperpigmentation Treatment Mission Hills | KIAMO Skin',
+    description: 'Hyperpigmentation correction in Mission Hills from KIAMO Skin. Melasma, dark spots, PIH for all skin types. Licensed esthetician. Request an appointment.',
     h1: 'Hyperpigmentation Treatment in Mission Hills',
     intro: `KIAMO Skin specializes in hyperpigmentation correction for Mission Hills residents dealing with melasma, post-inflammatory hyperpigmentation, sun damage, and uneven skin tone. Located at 3067 Reynard Way, just off Washington Street near the Mission Hills Nursery and Presidio Park, our clinic uses corrective treatment protocols safe for all skin types (Fitzpatrick I-VI). Kiki is a California licensed esthetician with 7+ years of experience treating hyperpigmentation across all skin tones, using calibrated protocols that prevent complications.`,
     authority: {
@@ -142,8 +142,8 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
   {
     slug: 'hillcrest',
     name: 'Hillcrest',
-    title: 'Hyperpigmentation Treatment Hillcrest San Diego | Dark Spot Correction',
-    description: 'Expert hyperpigmentation treatment serving Hillcrest. Melasma, PIH, and dark spot correction for all skin types. LGBTQ+ welcoming, safe protocols. 5 minutes from University Avenue.',
+    title: 'Hyperpigmentation Treatment Hillcrest | KIAMO Skin',
+    description: 'Hyperpigmentation correction in Hillcrest from KIAMO Skin. Melasma, PIH, dark spots for all skin types. Request an appointment.',
     h1: 'Hyperpigmentation Treatment in Hillcrest',
     intro: `KIAMO Skin provides advanced hyperpigmentation correction for Hillcrest residents at our Mission Hills studio, just 5 minutes from University Avenue. We specialize in treating melasma, post-inflammatory hyperpigmentation, and uneven skin tone in all skin types (Fitzpatrick I-VI), using protocols calibrated to prevent complications. Located at 3067 Reynard Way near the Hillcrest/Mission Hills border, our LGBTQ+ welcoming clinic uses medical-grade treatments. Kiki is a California licensed esthetician with 7+ years of experience correcting hyperpigmentation safely across all skin tones.`,
     authority: {
@@ -235,8 +235,8 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
   {
     slug: 'university-heights',
     name: 'University Heights',
-    title: 'Hyperpigmentation Treatment University Heights | Melasma & Dark Spots',
-    description: 'Professional hyperpigmentation correction for University Heights. Treating melasma, PIH, sun damage for all skin types. Safe protocols, licensed esthetician. 8 minutes from Park Boulevard.',
+    title: 'Hyperpigmentation Treatment University Heights | KIAMO',
+    description: 'Hyperpigmentation correction in University Heights from KIAMO Skin. Melasma, PIH, sun damage for all skin types. Request an appointment.',
     h1: 'Hyperpigmentation Treatment in University Heights',
     intro: `KIAMO Skin provides specialized hyperpigmentation correction for University Heights residents at our Mission Hills location, 8 minutes from Park Boulevard via Washington Street. We treat melasma, post-inflammatory hyperpigmentation, and uneven skin tone using protocols calibrated for all skin types (Fitzpatrick I-VI). Located at 3067 Reynard Way, our clinic uses medical-grade treatments that prevent complications. Kiki is a California licensed esthetician with 7+ years of experience treating hyperpigmentation across all skin tones.`,
     authority: {
@@ -328,8 +328,8 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
   {
     slug: 'downtown-san-diego',
     name: 'Downtown San Diego',
-    title: 'Hyperpigmentation Treatment Downtown San Diego | Melasma Specialists',
-    description: 'Advanced hyperpigmentation correction for Downtown San Diego professionals. Melasma, dark spots, PIH treatment for all skin types. 10 minutes from Convention Center.',
+    title: 'Hyperpigmentation Treatment Downtown | KIAMO Skin',
+    description: 'Hyperpigmentation correction in Downtown San Diego from KIAMO Skin. Melasma, dark spots, PIH for all skin types. Request an appointment.',
     h1: 'Hyperpigmentation Treatment in Downtown San Diego',
     intro: `KIAMO Skin provides professional hyperpigmentation correction for Downtown San Diego clients at our Mission Hills studio, 10 minutes from the Gaslamp Quarter and Convention Center via Washington Street. We specialize in treating melasma, post-inflammatory hyperpigmentation, and uneven skin tone using protocols calibrated for all skin types (Fitzpatrick I-VI). Located at 3067 Reynard Way, our clinic uses medical-grade treatments. Kiki is a California licensed esthetician with 7+ years of experience correcting stubborn hyperpigmentation.`,
     authority: {
@@ -423,8 +423,8 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
   {
     slug: 'little-italy',
     name: 'Little Italy',
-    title: 'Hyperpigmentation Treatment Little Italy San Diego | Melasma Correction',
-    description: 'Professional hyperpigmentation treatment for Little Italy. Melasma, PIH, dark spots for all skin types. Licensed esthetician, safe protocols. 7 minutes from India Street.',
+    title: 'Hyperpigmentation Treatment Little Italy | KIAMO Skin',
+    description: 'Hyperpigmentation correction in Little Italy from KIAMO Skin. Melasma, PIH, dark spots for all skin types. Request an appointment.',
     h1: 'Hyperpigmentation Treatment in Little Italy',
     intro: `KIAMO Skin provides hyperpigmentation correction for Little Italy residents at our Mission Hills studio, 7 minutes via India Street to Washington Street. We treat melasma, post-inflammatory hyperpigmentation, and uneven skin tone using protocols calibrated for all skin types (Fitzpatrick I-VI). Located at 3067 Reynard Way, our clinic uses medical-grade treatments that prevent complications. Kiki is a California licensed esthetician with 7+ years of experience treating hyperpigmentation across all skin tones.`,
     authority: {
@@ -515,8 +515,8 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
   {
     slug: 'north-park',
     name: 'North Park',
-    title: 'Hyperpigmentation Treatment North Park San Diego | Dark Spot Removal',
-    description: 'Advanced hyperpigmentation correction for North Park. Treating melasma, PIH, uneven tone for all skin types. Licensed esthetician. 8 minutes from University Avenue.',
+    title: 'Hyperpigmentation Treatment North Park | KIAMO Skin',
+    description: 'Hyperpigmentation correction in North Park from KIAMO Skin. Melasma, PIH, uneven tone for all skin types. Request an appointment.',
     h1: 'Hyperpigmentation Treatment in North Park',
     intro: `KIAMO Skin provides hyperpigmentation correction for North Park residents at our Mission Hills location, 8 minutes from University Avenue via 30th Street. We treat melasma, post-inflammatory hyperpigmentation, and uneven skin tone using protocols calibrated for all skin types (Fitzpatrick I-VI). Located at 3067 Reynard Way, our clinic uses medical-grade treatments. Kiki is a California licensed esthetician with 7+ years of experience correcting hyperpigmentation.`,
     authority: {
@@ -607,8 +607,8 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
   {
     slug: 'balboa-park',
     name: 'Balboa Park',
-    title: 'Hyperpigmentation Treatment Balboa Park San Diego | Melasma Specialists',
-    description: 'Professional hyperpigmentation correction near Balboa Park. Melasma, dark spots, PIH for all skin types. Licensed esthetician. 10 minutes from park entrance.',
+    title: 'Hyperpigmentation Treatment Balboa Park | KIAMO Skin',
+    description: 'Hyperpigmentation correction near Balboa Park from KIAMO Skin. Melasma, dark spots, PIH for all skin types. Request an appointment.',
     h1: 'Hyperpigmentation Treatment near Balboa Park',
     intro: `KIAMO Skin provides hyperpigmentation correction for Balboa Park area residents at our Mission Hills studio, 10 minutes from the park's west entrance. We treat melasma, post-inflammatory hyperpigmentation, and uneven skin tone using protocols calibrated for all skin types (Fitzpatrick I-VI). Located at 3067 Reynard Way, our clinic uses medical-grade treatments. Kiki is a California licensed esthetician with 7+ years of experience treating hyperpigmentation.`,
     authority: {

@@ -57,9 +57,9 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'mission-hills',
     name: 'Mission Hills',
-    title: 'Facial in Mission Hills, San Diego — The Studio Location | KIAMO Skin',
+    title: 'Facial in Mission Hills, San Diego | KIAMO Skin',
     description:
-      'Facial treatments at KIAMO Skin in Mission Hills — the studio itself at 3067 Reynard Way. Five-minute walk for most Mission Hills residents, five minutes from Hillcrest, Bankers Hill, and Little Italy. HydraFacial, peels, dermaplaning, enzyme therapy. Safe for every Fitzpatrick type I-VI.',
+      'Facials in Mission Hills, San Diego from KIAMO Skin. HydraFacial, peels, dermaplaning, enzyme therapy for every Fitzpatrick type. Request an appointment.',
     h1: 'Facial in Mission Hills, San Diego',
     intro: `KIAMO Skin is the studio — a single treatment room at 3067 Reynard Way in Mission Hills, San Diego. Mission Hills residents walk to the studio; Hillcrest, Bankers Hill, and Little Italy residents are five minutes away via Washington Street. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, in a private one-room studio with free on-site parking. Treatments are calibrated for every Fitzpatrick type I-VI, including melanin-rich skin where standard peels trigger post-inflammatory hyperpigmentation.`,
     authority: {
@@ -163,9 +163,9 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'la-jolla',
     name: 'La Jolla',
-    title: 'Facial in La Jolla, San Diego — All Skin Types | KIAMO Skin',
+    title: 'Facial in La Jolla, San Diego | KIAMO Skin',
     description:
-      'Facial treatments serving La Jolla from KIAMO Skin Mission Hills. HydraFacial, chemical peels, dermaplaning, enzyme therapy. Safe for every Fitzpatrick I-VI skin tone. Licensed esthetician.',
+      'Facials in La Jolla from KIAMO Skin in Mission Hills. HydraFacial, peels, dermaplaning, enzyme therapy. Licensed esthetician. Request an appointment.',
     h1: 'Facial in La Jolla, San Diego',
     intro: `KIAMO Skin provides facial treatments to La Jolla residents and the surrounding coastal communities. Located in Mission Hills at 3067 Reynard Way, our studio is reachable from La Jolla Village Drive via I-5 south to Washington Street. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, in a private one-room studio. Treatments are calibrated for every Fitzpatrick type I-VI — including melanin-rich skin where aggressive exfoliation risks post-inflammatory hyperpigmentation.`,
     authority: {
@@ -270,11 +270,11 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'del-mar',
     name: 'Del Mar',
-    title: 'Facial in Del Mar, San Diego — Licensed Esthetician | KIAMO Skin',
+    title: 'Facial in Del Mar, San Diego | KIAMO Skin',
     description:
-      'Facial treatments for Del Mar residents from KIAMO Skin Mission Hills. 20 minutes via I-5. HydraFacial, peels, dermaplaning, enzyme therapy. Safe for every Fitzpatrick type I-VI.',
+      'Facials in Del Mar from KIAMO Skin in Mission Hills. HydraFacial, peels, dermaplaning, enzyme therapy for every Fitzpatrick type. Request an appointment.',
     h1: 'Facial in Del Mar, San Diego',
-    intro: `KIAMO Skin provides facial treatments to Del Mar residents seeking protocols calibrated for every Fitzpatrick type I-VI. Located in Mission Hills at 3067 Reynard Way, the studio is reachable via I-5 south to Washington Street — about 20 minutes from most Del Mar addresses. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, in a private one-room studio. Del Mar clients choose KIAMO Skin for fair-season UV recovery, pre-event preparation, and corrective plans that respect the skin.`,
+    intro: `KIAMO Skin provides facial treatments to Del Mar residents seeking protocols calibrated for every Fitzpatrick type I-VI. Located in Mission Hills at 3067 Reynard Way, the studio is reachable via I-5 south to Washington Street — about 20 minutes from most Del Mar addresses. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, in a private one-room treatment room. Del Mar clients choose KIAMO Skin for fair-season UV recovery, pre-event preparation, and corrective plans that respect the skin.`,
     authority: {
       heading: 'Facials that match Del Mar skin and the fair-season calendar',
       body: `Del Mar's coastal climate, horse-racing social calendar, and fair-season UV produce a specific skin rhythm — increased UV exposure between mid-July and Labor Day, indoor events the rest of the year, and constant coastal humidity. KIAMO Skin offers the full facial menu (HydraFacial Syndeo, Lira chemical peels, dermaplaning, DMK enzyme therapy) with protocols calibrated to your Fitzpatrick type. Kiki has 7+ years treating the full spectrum of skin tones, including melanin-rich skin where standard peels trigger post-inflammatory hyperpigmentation. The single-practitioner studio means continuity across every visit — the same person assessing your skin and treating it.`,
@@ -376,9 +376,9 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'encinitas',
     name: 'Encinitas',
-    title: 'Facial in Encinitas, San Diego — Coastal Skin Specialists | KIAMO Skin',
+    title: 'Facial in Encinitas, San Diego | KIAMO Skin',
     description:
-      'Facial treatments serving Encinitas from KIAMO Skin Mission Hills. 25 minutes via I-5. Salt air, surfer barrier repair, UV recovery. Safe for every Fitzpatrick type I-VI.',
+      'Facials in Encinitas from KIAMO Skin in Mission Hills. HydraFacial, peels, DMK, enzyme therapy for surf barrier repair. Request an appointment.',
     h1: 'Facial in Encinitas, San Diego',
     intro: `KIAMO Skin provides facial treatments to Encinitas residents facing daily coastal exposure from Moonlight Beach, Swami's, and the Cardiff border. Located in Mission Hills at 3067 Reynard Way, the studio is about 25 minutes south via I-5. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, calibrated for every Fitzpatrick type I-VI. Encinitas clients choose KIAMO Skin for surfer barrier repair, UV-driven pigmentation support, and pre-event facials that respect the skin.`,
     authority: {
@@ -482,9 +482,9 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'carlsbad',
     name: 'Carlsbad',
-    title: 'Facial in Carlsbad, San Diego — Coastal Skin Specialists | KIAMO Skin',
+    title: 'Facial in Carlsbad, San Diego | KIAMO Skin',
     description:
-      'Facial treatments serving Carlsbad from KIAMO Skin Mission Hills. 30 minutes via I-5. Salt air, family-friendly beach lifestyle. Safe for every Fitzpatrick type I-VI.',
+      'Facials in Carlsbad from KIAMO Skin in Mission Hills. HydraFacial, peels, dermaplaning, enzyme therapy for every skin type. Request an appointment.',
     h1: 'Facial in Carlsbad, San Diego',
     intro: `KIAMO Skin provides facial treatments to Carlsbad residents — a coastal community with active outdoor lifestyle between the flower fields and the Pacific. Located in Mission Hills at 3067 Reynard Way, the studio is reachable via I-5 south to Washington Street, about 30 minutes from most Carlsbad addresses. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, in a private one-room studio. Treatments are calibrated for every Fitzpatrick type I-VI.`,
     authority: {
@@ -588,9 +588,9 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'pacific-beach',
     name: 'Pacific Beach',
-    title: 'Facial in Pacific Beach, San Diego — Beach-Lifestyle Specialists | KIAMO Skin',
+    title: 'Facial in Pacific Beach, San Diego | KIAMO Skin',
     description:
-      'Facial treatments serving Pacific Beach from KIAMO Skin Mission Hills. 15 minutes via I-8. Salt air, UV, beach-lifestyle skin. Safe for every Fitzpatrick type I-VI.',
+      'Facials in Pacific Beach from KIAMO Skin in Mission Hills. HydraFacial, peels, DMK for salt air and UV damage. Request an appointment.',
     h1: 'Facial in Pacific Beach, San Diego',
     intro: `KIAMO Skin provides facial treatments to Pacific Beach residents living the beach-lifestyle between Crystal Pier and Tourmaline Surfing Park. Located about 15 minutes away in Mission Hills at 3067 Reynard Way, our studio addresses the specific skin challenges that come with daily beach exposure — salt air, UV reflection off the water, mineral SPF buildup, and the dehydration that ocean wind creates. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, calibrated for every Fitzpatrick type I-VI.`,
     authority: {
@@ -694,9 +694,9 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'point-loma',
     name: 'Point Loma',
-    title: 'Facial in Point Loma, San Diego — Maritime Skin Specialists | KIAMO Skin',
+    title: 'Facial in Point Loma, San Diego | KIAMO Skin',
     description:
-      'Facial treatments serving Point Loma from KIAMO Skin Mission Hills. 10 minutes via Rosecrans. Salt air, UV reflection, coastal skin. Safe for every Fitzpatrick type I-VI.',
+      'Facials in Point Loma from KIAMO Skin in Mission Hills. HydraFacial, peels, enzyme therapy for maritime skin. Request an appointment.',
     h1: 'Facial in Point Loma, San Diego',
     intro: `KIAMO Skin provides facial treatments to Point Loma residents facing peninsula-level exposure to salt air from both the Pacific Ocean and San Diego Bay. Located about 10 minutes away in Mission Hills at 3067 Reynard Way, our studio addresses the barrier damage, dehydration, and accelerated photoaging that maritime living produces. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, calibrated for every Fitzpatrick type I-VI.`,
     authority: {
@@ -800,9 +800,9 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'coronado',
     name: 'Coronado',
-    title: 'Facial in Coronado, San Diego — Coastal Skin Specialists | KIAMO Skin',
+    title: 'Facial in Coronado, San Diego | KIAMO Skin',
     description:
-      'Facial treatments serving Coronado from KIAMO Skin Mission Hills. 15 minutes via the Coronado Bridge. Salt air, UV reflection, island skin. Safe for every Fitzpatrick type I-VI.',
+      'Facials in Coronado from KIAMO Skin in Mission Hills. HydraFacial, peels, dermaplaning for coastal skin. Request an appointment.',
     h1: 'Facial in Coronado, San Diego',
     intro: `KIAMO Skin provides facial treatments to Coronado residents and the surrounding Silver Strand, living with constant Pacific Ocean exposure and the salt air that comes with island living. Located about 15 minutes away in Mission Hills at 3067 Reynard Way, the studio is reachable via the Coronado Bridge and I-5. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, calibrated for every Fitzpatrick type I-VI.`,
     authority: {
@@ -906,9 +906,9 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'north-park',
     name: 'North Park',
-    title: 'Facial in North Park, San Diego — Urban Village Specialists | KIAMO Skin',
+    title: 'Facial in North Park, San Diego | KIAMO Skin',
     description:
-      'Facial treatments serving North Park from KIAMO Skin Mission Hills. 10 minutes via 30th Street. Brewery patios, walkable urban skin. Safe for every Fitzpatrick type I-VI.',
+      'Facials in North Park from KIAMO Skin in Mission Hills. HydraFacial, peels, dermaplaning for pigmentation and acne scarring. Request an appointment.',
     h1: 'Facial in North Park, San Diego',
     intro: `KIAMO Skin provides facial treatments to North Park residents — San Diego's most walkable urban village, with brewery patios, restaurant culture, and year-round outdoor exposure from University Avenue and 30th Street. Located about 10 minutes away in Mission Hills at 3067 Reynard Way, our studio addresses the skin concerns that come with urban-village lifestyle. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, calibrated for every Fitzpatrick type I-VI.`,
     authority: {
@@ -1012,9 +1012,9 @@ export const facialAreas: FacialArea[] = [
   {
     slug: 'hillcrest',
     name: 'Hillcrest',
-    title: 'Facial in Hillcrest, San Diego — LGBTQ+ Welcoming | KIAMO Skin',
+    title: 'Facial in Hillcrest, San Diego | KIAMO Skin',
     description:
-      'Facial treatments serving Hillcrest from KIAMO Skin Mission Hills. 5 minutes via University Avenue. LGBTQ+ welcoming, urban village. Safe for every Fitzpatrick type I-VI.',
+      'Facials in Hillcrest from KIAMO Skin in Mission Hills. HydraFacial, peels, dermaplaning, enzyme therapy. Request an appointment.',
     h1: 'Facial in Hillcrest, San Diego',
     intro: `KIAMO Skin provides facial treatments to Hillcrest residents — San Diego's iconic LGBTQ+ urban village, anchored by University Avenue and adjacent to Balboa Park. Located just 5 minutes away in Mission Hills at 3067 Reynard Way, our studio is easily reachable via University Avenue or Washington Street. Every facial is performed by Kiki, a California licensed esthetician with 7+ years of experience, in an LGBTQ+ welcoming environment. Treatments are calibrated for every Fitzpatrick type I-VI.`,
     authority: {

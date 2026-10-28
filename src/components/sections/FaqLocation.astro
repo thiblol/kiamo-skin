@@ -2,10 +2,12 @@
 import NapBlock from '../NapBlock.astro';
 import LocationMap from '../LocationMap.astro';
 import Button from '../Button.astro';
+import ProofQuote from '../ProofQuote.astro';
 import FaqSchema from '../schema/FaqSchema.astro';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import { gbpDirectionsUrl, gbpReviewsUrl } from '../../config/urls';
+import { studioProof } from '../../data/treatment-trust';
 import type { Faq } from '../../data/faqs';
 
 /**
@@ -142,6 +144,14 @@ const reviewsUrl = gbpReviewsUrl(business.gbpPlaceId);
         >
           Call {business.phone.display}
         </a>
+      </div>
+
+      {/* Trust repeats. The band under the hero carries one quote; this is the
+          second one, next to the booking form, so a reader who scrolls
+          straight to the CTA still meets a client before they meet the
+          button. */}
+      <div class="mt-10 border-t border-line pt-9">
+        <ProofQuote testimonial={studioProof} />
       </div>
 
       {/* Risk reversal. The audit found no answer to "what if it doesn't work"

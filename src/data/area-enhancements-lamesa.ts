@@ -178,7 +178,7 @@ export const laMesaEnhanced: AreaEnhancement = {
       },
       {
         title: "Transparent pricing, no surprise costs",
-        body: "All treatment costs published on this website and confirmed in writing before booking. Series pricing disclosed at consultation: Lira 4-peel series $749, DMK 6-session course $1,499, HydraFacial $259 per session. No hidden fees, no mandatory product purchases beyond post-treatment healing essentials (mineral SPF, tyrosinase inhibitor serum). If a treatment won't work for your Fitzpatrick type or will trigger PIH, we tell you at consultation before you pay, not after you've started the series.",
+        body: "All treatment costs published on this website and confirmed in writing before booking. Series pricing disclosed at consultation: DMK 6-session course $1,499, HydraFacial $259 per session, and a Lira peel series priced on consultation. No hidden fees, no mandatory product purchases beyond post-treatment healing essentials (mineral SPF, tyrosinase inhibitor serum). If a treatment won't work for your Fitzpatrick type or will trigger PIH, we tell you at consultation before you pay, not after you've started the series.",
       },
     ],
   },
@@ -199,7 +199,7 @@ export const laMesaEnhanced: AreaEnhancement = {
     {
       question: "How much does a Lira peel series cost for La Mesa clients with melasma from inland sun exposure?",
       answer:
-        "Lira Clinical Peels at KIAMO Skin start at $199 for Gentle Renewal (entry-level lactic/mandelic blend) and $299 for Advanced formulations (higher concentration with additional brightening agents). Most La Mesa clients with melasma or sun-induced pigmentation from cumulative inland UV exposure need a series of 4-6 peels to see meaningful lightening, which is why we offer series pricing: $749 for a 4-peel series (saves $97 vs. individual pricing) or $1,399 for 6 peels (saves $195). The first visit includes Fitzpatrick type classification, pigmentation pattern mapping, and realistic timeline discussion — melasma from years of valley heat and clear days doesn't resolve in one peel. Series pricing is confirmed at consultation before you commit. Each peel session takes 45-60 minutes with 3-5 days of mild flaking and strict 7-day sun avoidance. Chemical peels on melanin-rich skin should be scheduled for fall, winter, or early spring to minimize UV exposure during inland valley heat — not June-August when La Mesa reaches 85-95°F daily.",
+        "Lira Clinical Peels at KIAMO Skin start at $199 for Gentle Renewal (entry-level lactic/mandelic blend) and $299 for Advanced formulations (higher concentration with additional brightening agents). Most La Mesa clients with melasma or sun-induced pigmentation from cumulative inland UV exposure need a series of 4-6 peels to see meaningful lightening, which is why a peel series is priced at consultation, with the full series cost confirmed before you commit. The first visit includes Fitzpatrick type classification, pigmentation pattern mapping, and realistic timeline discussion — melasma from years of valley heat and clear days doesn't resolve in one peel. Series pricing is confirmed at consultation before you commit. Each peel session takes 45-60 minutes with 3-5 days of mild flaking and strict 7-day sun avoidance. Chemical peels on melanin-rich skin should be scheduled for fall, winter, or early spring to minimize UV exposure during inland valley heat — not June-August when La Mesa reaches 85-95°F daily.",
       entityCount: 12,
     },
     {
