@@ -81,6 +81,16 @@ const outcome = trust?.outcomeConcern
         commitments={trust.guarantee.commitments}
         class={className}
       />
+
+      {/* The words clients wrote. One of them appears higher on the page;
+          this is where a reader who wants more than one of them goes. */}
+      <p class="t-body mt-10 text-[0.9375rem] text-ink-soft">
+        Every Google review of the studio is published in full, named and dated, at{' '}
+        <a href="/reviews/" class="border-b border-ink/40 pb-0.5 hover:border-rose hover:text-rose">
+          the reviews page
+        </a>
+        .
+      </p>
     </>
   )
 }

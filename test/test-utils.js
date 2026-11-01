@@ -49,7 +49,40 @@ async function walk(dir) {
         .replace(/<style[\s\S]*?<\/style>/gi, ' ')
         .replace(/<[^>]+>/g, ' ')
         .replace(/\s+/g, ' ');
-      pages.push({ route, file: rel, html, text, copy });
+      /**
+       * The page's own copy, with quoted third-party material removed.
+       *
+       * A few copy rules — no gendered pronouns, no claim that the studio
+       * sits in Del Mar, no display of a rating — are about what the STUDIO
+       * tells a reader. They do not describe a review somebody else wrote and
+       * the studio merely reproduces.
+       *
+       * Twenty-six of the forty-one Google reviews on the listing contain a
+       * gendered pronoun, nearly all of them referring to Kiki. Copying those
+       * reviews verbatim therefore trips the pronoun rule on its face, and
+       * the alternative — editing a reviewer's words to remove a pronoun —
+       * would misquote them, which is a worse problem than the rule it
+       * avoids.
+       *
+       * So the rules that describe the studio's own claims are checked
+       * against `quotedCopy`, which drops any region marked
+       * `data-quoted` before the copy is read. The studio's own sentences
+       * still have to pass, unchanged, on every page.
+       *
+       * The marker is a <blockquote> carrying `data-quoted`. Blockquotes do
+       * not nest in this site's markup, so the non-greedy match below cannot
+       * stop early on an inner tag. The structural rules — no
+       * `aggregateRating` in the schema, no `ratingValue` or `reviewCount`
+       * anywhere in the HTML, no star glyphs — still run against the raw
+       * HTML and are not exempted by this.
+       */
+      const quotedCopy = html
+        .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+        .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+        .replace(/<blockquote[^>]*data-quoted[^>]*>[\s\S]*?<\/blockquote>/gi, ' ')
+        .replace(/<[^>]+>/g, ' ')
+        .replace(/\s+/g, ' ');
+      pages.push({ route, file: rel, html, text, copy, quotedCopy });
     }
   }
 }
@@ -149,20 +182,25 @@ export const VERIFIED = {
   phone: '(310) 595-0872',
   email: 'hello@kiamoskin.com',
   /**
-   * The one rating the site is allowed to display, and the one review count.
+   * The one rating the site is allowed to display.
    *
    * site-brief.md §5.2: "only display if a real, earned GBP rating exists.
    * Check the live Google Business Profile before publishing any rating or
-   * review count." The GBP carries a 5.0 rating, and the studio confirmed 40
-   * five-star Google reviews on 2026-10-03 (src/data/review-stats.ts).
+   * review count." The GBP carries a 5.0 rating.
    *
-   * `TrustBadge.astro` renders these on the homepage as visible HTML and
-   * links out to the GBP, so a reader can verify the figure. No
+   * The review COUNT is deliberately not a constant here. It changes every
+   * time a client leaves a review, so it is derived from the same Business
+   * Profile pull that produces the review list on /reviews
+   * (src/data/review-stats.ts). Nothing in the guard suite hardcodes a
+   * number that will go stale — the count is checked against the reviews
+   * actually on the page instead.
+   *
+   * `TrustBadge.astro` renders the rating on the homepage as visible HTML
+   * and links out to the GBP, so a reader can verify the figure. No
    * `aggregateRating` node is emitted anywhere — schema-claimed review
    * counts are a separate, still-forbidden thing.
    */
   reviewRating: 5,
-  reviewCount: 40,
   prices: new Set([
     '$199',
     '$249',

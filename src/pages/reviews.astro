@@ -1,0 +1,525 @@
+---
+/**
+ * Reviews
+ * -------
+ * Every review published on the KIAMO Skin Google Business Profile,
+ * reproduced word for word with the reviewer's name, profile photo and date.
+ *
+ * Why the reviews are quoted rather than retyped
+ * ------------------------------------------------
+ * The listing is read through the studio's own Business Profile API
+ * (scripts/fetch-gbp-reviews.mjs → src/data/reviews.ts), so the wording,
+ * the names and the dates on this page are Google's own record of what was
+ * written. Nothing has been edited for tone, trimmed for length, or
+ * selected for effect — which means a reader who opens the listing sees the
+ * same thing.
+ *
+ * Why there is no Review or aggregateRating schema
+ * -------------------------------------------------
+ * Google's Review snippet guidance treats reviews a business republishes on
+ * its own site as self-serving reviews, and the site's guard suite forbids
+ * an `aggregateRating` node outright. So no schema here asserts a rating.
+ * What the schema does carry is each review as a schema.org `Quotation` —
+ * a set of words attributed to a named person on a given date — which is
+ * what it actually is, and which lets AI agents and search engines read the
+ * page as the dated, attributed testimony it is.
+ *
+ * Why the reviews are exempt from the copy guards
+ * ------------------------------------------------
+ * The pronoun rule, the closed-location rule and the rating-text rule all
+ * describe what the STUDIO tells a reader. Twenty-six of these reviews use
+ * a gendered pronoun for Kiki, in the reviewer's own words; the alternative
+ * — editing a reviewer's prose to remove a pronoun — would misquote them.
+ * The reviews are therefore marked `data-quoted`, and the guard suite reads
+ * them separately from the studio's own copy. See test/test-utils.js.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Reveal from '../components/Reveal.astro';
+import Button from '../components/Button.astro';
+import NapBlock from '../components/NapBlock.astro';
+import LocationMap from '../components/LocationMap.astro';
+import TrustBadge from '../components/sections/TrustBadge.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import SpeakableSchema from '../components/schema/SpeakableSchema.astro';
+import FaqSchema from '../components/schema/FaqSchema.astro';
+import PersonSchema from '../components/schema/PersonSchema.astro';
+import { googleReviews } from '../data/reviews';
+import { reviewFaqs } from '../data/reviews-faqs';
+import { business } from '../config/business';
+import { CTA_LABEL } from '../config/nav';
+import { absolute, businessId, websiteId, gbpReviewsUrl } from '../config/urls';
+
+const site = Astro.site;
+const url = absolute('/reviews', site);
+
+/* The listing. Google holds the original of every review on this page. */
+const googleUrl = gbpReviewsUrl(business.gbpPlaceId);
+
+/* Google is the only place a review on this listing can be written. */
+const writeReviewUrl = `https://search.google.com/local/writereview?placeid=${business.gbpPlaceId}`;
+
+/**
+ * One anchor per review, so a quotation in the schema has a target on the
+ * page and a reader can link to a single review rather than the wall.
+ */
+const anchored = googleReviews.map((review, index) => ({
+  ...review,
+  anchor: `review-${index + 1}`,
+}));
+
+/**
+ * The review carried into the hero, the way the gallery carries its first
+ * case into its hero.
+ *
+ * Arica Ladner's, for what it establishes at a glance: four or five years of
+ * monthly HydraFacial and dermaplaning, and a client who would not go
+ * anywhere else. It names two services, so the hero does proof and menu at
+ * once.
+ *
+ * It is set in the display face, not shown as a picture, and deliberately so:
+ * Google's profile photos come through the API at 120 pixels, which is the
+ * right size for the 48-pixel avatar on a card and far too small for a hero
+ * portrait. The type carries the moment instead.
+ */
+const HERO_REVIEW_ID =
+  'AbFvOqloOSYxOx308XfLYdkrUzTVkElsVKMVx2bpCmERmiG8ol3RCI204fitrvT2Qy-A6FXkZGBcVg';
+const heroReview = googleReviews.find((review) => review.id === HERO_REVIEW_ID) ?? googleReviews[0];
+
+const collectionSchema = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'CollectionPage',
+      '@id': `${url}#reviews`,
+      url,
+      name: 'Reviews | KIAMO Skin San Diego',
+      description:
+        'Every review published on the KIAMO Skin Google Business Profile, reproduced word for word with the reviewer name and date. Mission Hills, San Diego.',
+      inLanguage: 'en-US',
+      isPartOf: { '@id': websiteId(site) },
+      about: { '@id': businessId(site) },
+      provider: { '@id': businessId(site) },
+      mainEntity: { '@id': `${url}#review-list` },
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.quick-answer', '.faq-section', 'h1'],
+      },
+    },
+    {
+      '@type': 'ItemList',
+      '@id': `${url}#review-list`,
+      name: 'Google Business Profile reviews for KIAMO Skin',
+      description:
+        'Google reviews for KIAMO Skin, in the order Google returns them — most recent first.',
+      numberOfItems: anchored.length,
+      itemListOrder: 'https://schema.org/ItemListUnordered',
+      itemListElement: anchored.map((review, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'Quotation',
+          '@id': `${url}#${review.anchor}`,
+          url: `${url}#${review.anchor}`,
+          text: review.text,
+          dateCreated: review.date,
+          author: review.author,
+        },
+      })),
+    },
+  ],
+};
+
+const title = 'Reviews | KIAMO Skin San Diego';
+const description =
+  'Every Google review of KIAMO Skin, word for word, with names and dates. Corrective facials and scalp therapy in Mission Hills, San Diego.';
+---
+
+<BaseLayout {title} {description}>
+  <script
+    type="application/ld+json"
+    is:inline
+    set:html={JSON.stringify(collectionSchema)}
+    slot="head"
+  />
+  <BreadcrumbSchema slot="head" trail={[{ name: 'Reviews', path: '/reviews' }]} />
+  <SpeakableSchema slot="head" url={url} />
+  <FaqSchema slot="head" faqs={reviewFaqs} />
+  <PersonSchema slot="head" />
+
+  <article>
+    {/* HERO — the thesis, and one review that states it before the wall does */}
+    <header class="bg-blush">
+      <div
+        class="wrap grid items-center gap-12 pt-[calc(60px+72px)] pb-20 md:grid-cols-[1fr_0.95fr] md:gap-16 md:pt-[calc(60px+112px)] md:pb-28"
+      >
+        <div>
+          <p class="t-eyebrow text-ink-soft">Reviews · Mission Hills studio</p>
+          <h1 class="t-h2 mt-6 max-w-[20ch] text-[2.5rem] md:text-[3.5rem]">
+            What clients wrote, in their own words.
+          </h1>
+          <p class="t-body mt-7 max-w-[52ch] text-[1.125rem]">
+            Every review below was published on the KIAMO Skin Google Business Profile. They are
+            reproduced here word for word — same sentences, same names, same months — because a
+            review you cannot check is not worth reading.
+          </p>
+          <p class="t-body mt-5 max-w-[52ch]">
+            One of them is a first facial. Another belongs to someone who has been coming for
+            four years. Nothing has been edited, shortened or selected for tone, and the listing
+            itself is one click away on every card.
+          </p>
+
+          <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <Button href={googleUrl} external trackEvent="reviews_google">
+              Read the reviews on Google
+            </Button>
+            <a
+              href={business.phone.href}
+              class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+            >
+              {business.phone.display}
+            </a>
+          </div>
+        </div>
+
+        <figure class="m-0 border-l-2 border-rose pl-7 md:pl-9">
+          <p class="t-eyebrow text-ink-soft">From the Google listing</p>
+          {/* Quoted third-party material, so the copy guards read it apart
+              from the studio's own sentences. */}
+          <blockquote data-quoted="google-review" class="m-0 mt-6">
+            <p class="font-display text-[1.375rem] leading-[1.35] md:text-[1.625rem]">
+              {heroReview.text}
+            </p>
+          </blockquote>
+          <figcaption class="mt-8">
+            <div class="flex items-center gap-4">
+              <img
+                src={heroReview.avatar}
+                alt=""
+                width="44"
+                height="44"
+                loading="eager"
+                decoding="async"
+                class="size-11 shrink-0 rounded-full object-cover"
+              />
+              <div>
+                <p class="t-body text-[0.9375rem] leading-tight font-medium">
+                  {heroReview.author}
+                </p>
+                <p class="t-meta mt-1">{heroReview.dateLabel}</p>
+              </div>
+            </div>
+            <a
+              href={googleUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="t-meta mt-4 inline-flex min-h-[44px] items-center gap-2 hover:text-rose"
+            >
+              View on Google
+              <span aria-hidden="true">↗</span>
+            </a>
+          </figcaption>
+        </figure>
+      </div>
+    </header>
+
+    {/* THE COUNT */}
+    <TrustBadge />
+
+    {/* THE REVIEWS */}
+    <section class="bg-ivory">
+      <div class="wrap py-20 md:py-28">
+        <div class="flex flex-col gap-4 border-b border-line pb-8 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p class="t-eyebrow text-ink-soft">The listing, in full</p>
+            <h2 class="t-h2 mt-5 max-w-[22ch]">
+              Every review the Google profile holds.
+            </h2>
+          </div>
+          <p class="t-meta text-ink-soft md:text-right">Newest first</p>
+        </div>
+
+        <ul class="m-0 mt-12 list-none p-0 md:columns-2 md:gap-8">
+          {
+            anchored.map((review, index) => (
+              <li id={review.anchor} class="mb-8 break-inside-avoid scroll-mt-24" data-review>
+                <article class="flex flex-col border border-line bg-porcelain p-7 md:p-8">
+                  <header class="flex items-center gap-4">
+                    <img
+                      src={review.avatar}
+                      alt=""
+                      width="52"
+                      height="52"
+                      loading={index < 4 ? 'eager' : 'lazy'}
+                      decoding="async"
+                      class="size-13 shrink-0 rounded-full object-cover"
+                    />
+                    <div class="min-w-0">
+                      <p class="t-body text-[1.0625rem] leading-tight font-medium">
+                        {review.author}
+                      </p>
+                      <p class="t-meta mt-2">{review.dateLabel}</p>
+                    </div>
+                  </header>
+
+                  <div class="mt-5 flex items-center gap-1 text-rose">
+                    <div class="flex gap-0.5" aria-hidden="true">
+                      {Array.from({ length: review.rating }).map(() => (
+                        <svg width="15" height="15" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.3 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <span class="sr-only">Rated {review.rating} out of 5 stars.</span>
+                  </div>
+
+                  {/* The reviewer's own words. `data-quoted` marks this as
+                      quoted third-party material, which the copy guards read
+                      separately from the studio's own sentences. */}
+                  <blockquote data-quoted="google-review" class="m-0 mt-5 border-l-2 border-rose pl-5">
+                    {review.paragraphs.map((paragraph) => (
+                      <p class="t-body text-[0.9375rem]">{paragraph}</p>
+                    ))}
+                  </blockquote>
+
+                  {review.photos.length > 0 && (
+                    <div class="mt-6 grid grid-cols-2 gap-2">
+                      {review.photos.map((photo) => (
+                        <img
+                          src={photo}
+                          alt={`Photo attached by ${review.author} to their Google review`}
+                          width="384"
+                          height="512"
+                          loading="lazy"
+                          decoding="async"
+                          class="aspect-[3/4] w-full object-cover"
+                        />
+                      ))}
+                    </div>
+                  )}
+
+                  {/* `py-4 -my-4` gives the link a 44px tap target without
+                      moving anything: the padding grows the hit area and the
+                      negative margin takes the same space back. */}
+                  <footer class="mt-7 border-t border-line pt-5">
+                    <a
+                        href={googleUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="t-meta -my-4 inline-flex items-center gap-2 py-4 hover:text-rose"
+                      >
+                        View on Google
+                        <span aria-hidden="true">↗</span>
+                      </a>
+                  </footer>
+                </article>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
+    {/* HOW THE REVIEWS ARE PUBLISHED */}
+    <section class="bg-porcelain">
+      <div class="wrap py-20 md:py-28 grid items-start gap-12 md:grid-cols-[0.9fr_1.1fr] md:gap-20">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">How this page is built</p>
+          <h2 class="t-h2 mt-5 max-w-[20ch]">The rules under which a review appears here.</h2>
+          <p class="t-body mt-7 max-w-[58ch]">
+            A page of praise is easy to fake. These are the rules that make this one harder to
+            fake, and every one of them can be checked by opening the listing.
+          </p>
+          <p class="t-body mt-5 max-w-[58ch]">
+            The other half of the record is the cases themselves — sessions, timeframe,
+            Fitzpatrick band and the written consent — on
+            {' '}<a
+              href="/gallery/"
+              class="border-b border-ink/40 pb-0.5 hover:border-rose hover:text-rose"
+              >the published before-and-after cases</a
+            >.
+          </p>
+        </Reveal>
+
+        <div class="space-y-8">
+          <Reveal>
+            <h3 class="t-eyebrow mt-0 text-rose">01 — Word for word</h3>
+            <p class="t-body mt-3 text-[0.9375rem]">
+              Reviews appear exactly as written on the Google profile. Nothing is edited,
+              shortened, paraphrased or tidied. A sentence that runs on runs on here too, because
+              the alternative is a page of quotes the studio wrote for itself.
+            </p>
+          </Reveal>
+
+          <Reveal>
+            <h3 class="t-eyebrow mt-0 text-rose">02 — Named and dated</h3>
+            <p class="t-body mt-3 text-[0.9375rem]">
+              Every review carries the name Google holds and the month it was posted, with the
+              reviewer's own profile photo. Real reviews take real time, and a wall of undated
+              praise reads like advertising rather than testimony.
+            </p>
+          </Reveal>
+
+          <Reveal>
+            <h3 class="t-eyebrow mt-0 text-rose">03 — The listing is the original</h3>
+            <p class="t-body mt-3 text-[0.9375rem]">
+              Google holds the record. Every card links to the listing, and this page is
+              regenerated from the profile itself, so it carries what the profile holds — not a
+              snapshot the studio liked better.
+            </p>
+          </Reveal>
+
+          <Reveal>
+            <h3 class="t-eyebrow mt-0 text-rose">04 — Photographs belong to the reviewer</h3>
+            <p class="t-body mt-3 text-[0.9375rem]">
+              Where a reviewer attached a photograph to a review, it appears alongside it. The
+              photos are the reviewer's own and travel with their words.
+            </p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+
+    {/* THE STUDIO THE REVIEWS DESCRIBE */}
+    <section class="bg-ivory">
+      <div class="wrap py-20 md:py-28 grid items-start gap-12 md:grid-cols-[1.1fr_0.9fr] md:gap-20">
+        <Reveal>
+          <LocationMap aspect="aspect-4/3" />
+          <p class="t-meta mt-5 text-ink-soft">
+            {business.address.full} · Free parking on site
+          </p>
+        </Reveal>
+
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">The studio</p>
+          <h2 class="t-h2 mt-5 max-w-[20ch]">The room every one of these reviews describes.</h2>
+          <p class="t-body mt-7 max-w-[58ch]">
+            One private treatment room in {business.address.neighborhood}. The reviews talk about
+            the space, the pacing and the home-care plan that comes home with you — those are the
+            same room, the same practitioner and the same follow-up every time.
+          </p>
+          <p class="t-body mt-5 max-w-[58ch]">
+            Who does the work is on
+            {' '}<a
+              href="/about/"
+              class="border-b border-ink/40 pb-0.5 hover:border-rose hover:text-rose"
+              >the about page</a
+            >, what each session costs is on
+            {' '}<a
+              href="/treatments/"
+              class="border-b border-ink/40 pb-0.5 hover:border-rose hover:text-rose"
+              >the treatment menu</a
+            >, and the reviews come from across
+            {' '}<a
+              href="/service-areas/"
+              class="border-b border-ink/40 pb-0.5 hover:border-rose hover:text-rose"
+              >San Diego County</a
+            >.
+          </p>
+          <div class="mt-8">
+            <NapBlock tone="light" />
+          </div>
+          <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+            <Button href={business.bookingUrl} external trackEvent="booking_click">
+              {CTA_LABEL}
+            </Button>
+            <a
+              href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(business.address.full)}&destination_place_id=${business.gbpPlaceId}`}
+              class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+            >
+              Directions
+            </a>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+
+    {/* FAQ */}
+    <section class="bg-porcelain faq-section">
+      <div class="wrap py-20 md:py-28">
+        <p class="t-eyebrow text-ink-soft">Before you read them</p>
+        <h2 class="t-h2 mt-5 max-w-[24ch]">Questions a page of reviews raises.</h2>
+
+        <div class="mt-12 max-w-[68ch]">
+          {
+            reviewFaqs.map((faq) => (
+              <details class="group border-b border-line">
+                <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
+                  <span>{faq.question}</span>
+                  <span
+                    aria-hidden="true"
+                    class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+                  >
+                    +
+                  </span>
+                </summary>
+                <div class="t-body pb-6 text-[0.9375rem]">
+                  {faq.answer}
+                </div>
+              </details>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    {/* CTA */}
+    <section class="bg-espresso text-porcelain">
+      <div class="wrap py-20 md:py-28 grid gap-12 md:grid-cols-[1.2fr_1fr] md:gap-20">
+        <div>
+          <Reveal>
+            <p class="t-eyebrow text-porcelain/60">The next step</p>
+            <h2 class="t-h2 mt-5 max-w-[24ch]">Add yours to the list.</h2>
+            <p class="t-body mt-7 max-w-[58ch] text-porcelain/85">
+              These reviews came from Google, so a new one belongs on Google too. If the studio
+              has helped your skin, a short review there is worth more than anything the studio
+              could write on its own page.
+            </p>
+            <p class="t-body mt-5 max-w-[58ch] text-porcelain/85">
+              If you have not been before, the
+              {' '}<a
+                href="/membership/"
+                class="border-b border-porcelain/40 hover:border-blush hover:text-blush"
+                >monthly membership</a
+              > is the recurring version of a facial, and
+              {' '}<a
+                href="/book/"
+                class="border-b border-porcelain/40 hover:border-blush hover:text-blush"
+                >what the first visit involves</a
+              > is written out before you request anything.
+            </p>
+
+            <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+              <Button href={writeReviewUrl} external trackEvent="reviews_write">
+                Write a review
+              </Button>
+              <Button href={business.bookingUrl} external trackEvent="booking_click">
+                {CTA_LABEL}
+              </Button>
+            </div>
+          </Reveal>
+        </div>
+
+        <aside>
+          <div class="border border-porcelain/20 p-8">
+            <p class="t-eyebrow text-porcelain/60">Studio visit</p>
+            <div class="mt-7 space-y-4 text-[0.9375rem]">
+              <p>{business.address.full}</p>
+              <p>Free parking on site</p>
+              <p class="text-porcelain/70">{business.cancellation}</p>
+              <p class="text-porcelain/70">
+                First-time visit package{' '}
+                <span class="t-tier-price text-[2rem] text-porcelain">$249</span>
+              </p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

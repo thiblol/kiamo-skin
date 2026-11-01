@@ -120,11 +120,18 @@ const row2 = homepageReviews.slice(4);
   </div>
 
   <div class="wrap reviews-cta-wrap">
+    {/* The studio's own reviews page carries every Google review in full —
+        named, dated and in the client's own words — where the marquee above
+        shows edited one-liners. It sits first because it is the version that
+        can actually be read. */}
+    <a href="/reviews/" class="reviews-cta">
+      Read every review in full ↗
+    </a>
     <a
       href={gbpReviewsUrl(business.gbpPlaceId)}
       target="_blank"
       rel="noopener"
-      class="reviews-cta"
+      class="reviews-cta mt-6 block"
     >
       Read our Google reviews ↗
     </a>

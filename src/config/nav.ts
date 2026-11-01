@@ -12,6 +12,7 @@ export const treatmentLinks = [
 export const primaryNav = [
   { label: 'Treatments', href: '/treatments/' },
   { label: 'Results', href: '/gallery/' },
+  { label: 'Reviews', href: '/reviews/' },
   { label: 'Membership', href: '/membership/' },
   { label: 'Service Areas', href: '/service-areas/' },
   { label: 'Melanin-Rich Skin', href: '/melanin-rich-skin/' },

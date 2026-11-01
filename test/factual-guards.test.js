@@ -21,9 +21,13 @@ describe('Factual Guards', () => {
       // carries a "Del Mar" Place name next to an "address" key, which is
       // structured data for a service area and not a claim that the studio
       // is there. The rule is about what a reader is told.
-      forEachPage(({ copy, file }) => {
+      //
+      // `quotedCopy` drops quoted third-party material, so a client who
+      // happens to mention the area in a Google review does not read as the
+      // studio claiming a location there.
+      forEachPage(({ quotedCopy, file }) => {
         assert.doesNotMatch(
-          copy,
+          quotedCopy,
           FORBIDDEN.closedLocation,
           `${file}: mentions closed Del Mar location`
         );
@@ -67,8 +71,30 @@ describe('Factual Guards', () => {
   });
 
   describe('Reviews & Ratings', () => {
+    test('the published review count matches the reviews on the page', () => {
+      // The count on /reviews and the number of reviews actually listed come
+      // from the same Business Profile pull, so they cannot disagree — but
+      // only if nothing re-introduces a hardcoded figure. This test compares
+      // the two as rendered, so it stays true as the count grows.
+      //
+      // Counted by the `data-review` marker on each listing entry, not by the
+      // quoted blocks: the hero carries one of the same reviews, the way the
+      // gallery's hero carries its first case, so a block count would be one
+      // too many.
+      const page = getPage('/reviews');
+      const cards = (page.html.match(/<li [^>]*data-review[ >]/g) ?? []).length;
+      const stated = page.text.match(/(\d+) five-star Google reviews/)?.[1];
+
+      assert.ok(stated, '/reviews states no review count');
+      assert.equal(
+        Number(stated),
+        cards,
+        `/reviews states ${stated} reviews but lists ${cards}`
+      );
+    });
+
     test('no rating, review count or aggregate is displayed or marked up', () => {
-      forEachPage(({ html, text, file }) => {
+      forEachPage(({ html, quotedCopy, file }) => {
         assert.doesNotMatch(html, FORBIDDEN.ratings.schema, `${file}: has aggregateRating schema`);
         assert.doesNotMatch(html, FORBIDDEN.ratings.values, `${file}: displays rating values`);
         assert.doesNotMatch(html, FORBIDDEN.ratings.stars, `${file}: contains star symbols`);
@@ -78,20 +104,27 @@ describe('Factual Guards', () => {
         // failed pages that display no rating at all.
         //
         // The one rating the site may show is the studio-verified GBP figure
-        // — a 5.0 rating and a 40-review count, both carried by
-        // TrustBadge.astro on the homepage and both linked to the GBP so a
-        // reader can check them. site-brief.md §5.2 permits exactly this and
-        // nothing more, so the guard permits that phrasing and blocks
-        // everything else.
+        // — a 5.0 rating and the review count, both carried by
+        // TrustBadge.astro on the homepage and on /reviews, and both linked
+        // to the GBP so a reader can check them. site-brief.md §5.2 permits
+        // exactly this and nothing more, so the guard permits that phrasing
+        // and blocks everything else.
+        //
+        // The count is matched as a number rather than a fixed value, so the
+        // phrase stays permitted as the listing grows.
+        //
+        // Read from `quotedCopy`, so a reviewer's own words are not counted
+        // as the studio publishing a rating. The structural rules above
+        // still run against the raw HTML.
         const permitted = new RegExp(
           [
             `Rated ${VERIFIED.reviewRating}(?:\\.0)? out of 5 stars?`,
             `${VERIFIED.reviewRating}\\.0`,
-            `${VERIFIED.reviewCount} five-star Google reviews`,
+            `\\d+ five-star Google reviews`,
           ].join('|'),
           'g'
         );
-        const withoutPermitted = text.replace(permitted, ' ');
+        const withoutPermitted = quotedCopy.replace(permitted, ' ');
 
         assert.doesNotMatch(
           withoutPermitted,
@@ -113,8 +146,13 @@ describe('Factual Guards', () => {
 
   describe('Privacy & Pronouns', () => {
     test('copy is pronoun-free — Kiki has never published pronouns', () => {
-      forEachPage(({ text, file }) => {
-        const match = text.match(FORBIDDEN.pronouns);
+      // `quotedCopy` excludes quoted third-party material. The Google
+      // reviews on /reviews are reproduced as written, and many of them use
+      // a gendered pronoun for Kiki — which is the reviewer's word, not the
+      // studio's. The studio's own sentences still have to pass here,
+      // unchanged, on every page.
+      forEachPage(({ quotedCopy, file }) => {
+        const match = quotedCopy.match(FORBIDDEN.pronouns);
         assert.ok(
           !match,
           `${file}: pronoun "${match?.[0]}" in copy`

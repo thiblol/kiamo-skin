@@ -19,6 +19,7 @@ import FaqLocation from '../components/sections/FaqLocation.astro';
 import ProofQuote from '../components/ProofQuote.astro';
 import { faqs as homepageFaqs } from '../data/faqs';
 import { testimonials } from '../data/testimonials';
+import { reviewStats } from '../data/review-stats';
 import PersonSchema from '../components/schema/PersonSchema.astro';
 import SpeakableSchema from '../components/schema/SpeakableSchema.astro';
 
@@ -61,7 +62,7 @@ const webPageSchema = {
   url: homepageUrl,
   name: 'Facial & Scalp Studio, Mission Hills, San Diego | KIAMO Skin',
   description:
-    'Licensed esthetician in Mission Hills, San Diego. Facials, pigmentation, acne, and scalp therapy — safe for every skin type. 40 five-star Google reviews. Request an appointment.',
+    `Licensed esthetician in Mission Hills, San Diego. Facials, pigmentation, acne, and scalp therapy — safe for every skin type. ${reviewStats.count} five-star Google reviews. Request an appointment.`,
   isPartOf: { '@id': websiteId },
   inLanguage: 'en-US',
   datePublished: homepagePublished,
@@ -71,7 +72,7 @@ const webPageSchema = {
 
 <BaseLayout
   title="Facial & Scalp Studio in San Diego | KIAMO Skin"
-  description="Licensed esthetician in Mission Hills, San Diego. Facials, pigmentation, acne, scalp therapy. 40 five-star Google reviews. Request an appointment."
+  description={`Licensed esthetician in Mission Hills, San Diego. Facials, pigmentation, acne, scalp therapy. ${reviewStats.count} five-star Google reviews. Request an appointment.`}
 >
   <PersonSchema slot="head" />
   <SpeakableSchema slot="head" url={homepageUrl} />
