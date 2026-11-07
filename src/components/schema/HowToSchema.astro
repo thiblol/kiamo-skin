@@ -1,0 +1,41 @@
+---
+/**
+ * HowTo markup for articles that teach a procedure rather than explain a topic.
+ *
+ * The steps come from `article.howTo.steps`, which is the same array the
+ * article body renders as its visible numbered list — one source of truth, so
+ * the structured data can never drift from what a reader sees.
+ */
+import { absolute } from '../../config/urls';
+import type { Article } from '../../data/articles';
+
+interface Props {
+  article: Article;
+}
+
+const { article } = Astro.props;
+const site = Astro.site;
+const howTo = article.howTo;
+
+if (!howTo) {
+  throw new Error(`HowToSchema requires howTo on article "${article.slug}"`);
+}
+
+const url = absolute(`/journal/${article.slug}`, site);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  '@id': `${url}#howto`,
+  name: howTo.name,
+  description: howTo.description,
+  step: howTo.steps.map((text, i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    text,
+  })),
+};
+
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

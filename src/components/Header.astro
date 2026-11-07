@@ -22,12 +22,10 @@ import { CTA_LABEL } from '../config/nav';
   whose intent is "call someone" should not have to hunt for it.
 
   Contrast: the header is transparent over the hero photograph, and on mobile
-  the top of that crop is a dark brown wall. Ink on that wall measures 2.7:1,
-  and the softer ink used for the phone number measured 1.1:1 — unreadable.
-  Two fixes, both driven by the header's existing scrolled state: the logo
-  takes a porcelain halo while it is over the photograph, and the phone sits
-  on a porcelain chip so it carries its own background. Once the header turns
-  porcelain on scroll, both revert to their plain ink.
+  the top of that crop is a dark brown wall. The phone sits on a rose chip
+  that carries its own background, so it never depends on what is behind the
+  transparent header and never blends into the bar. Once the header turns
+  porcelain on scroll, the chip keeps its fill and still reads as a control.
 */}
 <header
   id="site-header"
@@ -44,13 +42,21 @@ import { CTA_LABEL } from '../config/nav';
     </a>
 
     <div class="flex items-center gap-3 sm:gap-4">
-      {/* Visible at every width. Below `sm` this is the only conversion path
-          in the header, so it needs to be readable, not an icon. The chip
-          gives it a background of its own, so it never depends on what
-          happens to be behind the transparent header. */}
+      {/* Visible at every width, and it carries the same rose fill as the
+          Request Appointment button so the two conversion paths read as a
+          pair rather than one button with an unstyled number floating
+          beside it. Previously this chip was porcelain on mobile and fully
+          transparent above `sm`, which left it sitting on the header with
+          no background at all — the number disappeared into the bar.
+
+          A rose pill also solves the contrast problem the porcelain chip
+          was solving: the header is transparent over the hero photograph
+          and the top of that crop is a dark brown wall. A self-coloured
+          fill means the chip never depends on what is behind it, in
+          either the scrolled or the unscrolled state. */}
       <a
         href={business.phone.href}
-        class="t-body rounded-full bg-porcelain/90 px-3 py-1.5 text-[0.875rem] leading-none whitespace-nowrap text-ink shadow-[0_1px_3px_rgba(43,43,41,0.12)] transition-colors hover:text-rose sm:bg-transparent sm:px-0 sm:py-0 sm:text-[0.9375rem] sm:text-ink-soft sm:shadow-none"
+        class="t-body inline-flex h-[42px] items-center rounded-full bg-rose px-4 text-[0.875rem] leading-none whitespace-nowrap text-porcelain transition-colors hover:bg-rose-deep sm:text-[0.9375rem]"
         onclick="if(typeof gtag !== 'undefined') gtag('event', 'phone_click', {event_category: 'engagement', event_label: 'header', transport_type: 'beacon'});"
       >
         <span class="sr-only">Call the studio at </span>{business.phone.display}

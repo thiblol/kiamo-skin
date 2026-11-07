@@ -9,6 +9,7 @@ import ArticleSchema from '../../components/schema/ArticleSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
+import HowToSchema from '../../components/schema/HowToSchema.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 
 export function getStaticPaths() {
@@ -22,11 +23,27 @@ const { article } = Astro.props;
 const others = articles.filter((a) => a.slug !== article.slug);
 const faqs = article.faqs ?? [];
 const articleUrl = `${Astro.site ?? 'https://kiamoskin.com'}journal/${article.slug}/`;
+
+/**
+ * Dates render as "Month D, YYYY" without the Date constructor, so the server
+ * and the client produce identical text. The byline sits above the article:
+ * an author with credentials and a visible last-updated date are the two
+ * E-E-A-T signals readers and AI systems look for on a piece like this.
+ */
+const formatDate = (iso: string): string => {
+  const [year, month, day] = iso.split('-');
+  const months = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
+  ];
+  return `${months[Number(month) - 1] ?? month} ${Number(day)}, ${year}`;
+};
 ---
 
 <BaseLayout title={article.title} description={article.description} ogType="article">
   <ArticleSchema slot="head" article={article} />
   {faqs.length > 0 && <FaqSchema slot="head" faqs={faqs} />}
+  {article.howTo && <HowToSchema slot="head" article={article} />}
   <SpeakableSchema slot="head" url={articleUrl} />
   <BreadcrumbSchema
     slot="head"
@@ -60,6 +77,22 @@ const articleUrl = `${Astro.site ?? 'https://kiamoskin.com'}journal/${article.sl
               {article.quickAnswer}
             </p>
           )}
+          {/* Byline block. Carries the author with credentials, the publish
+              date and the last-updated date, so a reader (and an AI system
+              reading the markup) can see who wrote it and how current it is. */}
+          <div class="mt-8 border-t border-line pt-6">
+            <p class="t-meta">
+              By <a
+                href="/about/"
+                class="border-b border-ink/40 hover:border-rose hover:text-rose">{business.ownerName}</a
+              >, {business.ownerCredential}
+            </p>
+            <p class="t-meta mt-2">
+              Published <time datetime={article.datePublished}>{formatDate(article.datePublished)}</time>
+              <span aria-hidden="true"> · </span>
+              Last updated <time datetime={article.dateModified}>{formatDate(article.dateModified)}</time>
+            </p>
+          </div>
         </div>
 
         <Image
@@ -179,7 +212,13 @@ const articleUrl = `${Astro.site ?? 'https://kiamoskin.com'}journal/${article.sl
                         +
                       </span>
                     </summary>
-                    <div class="t-body pb-6 text-[0.9375rem]">{faq.answer}</div>
+                    {/* set:html, because a FAQ answer may carry a citation
+                        link. Without it the anchor renders as literal
+                        "<a href=...>" text in the accordion. */}
+                    <div
+                      class="t-body pb-6 text-[0.9375rem]"
+                      set:html={faq.answer}
+                    />
                   </details>
                 </div>
               ))}

@@ -10,6 +10,7 @@ import keravive from '../assets/keravive-scalp-hydrafacial-treatment-san-diego.j
 import hyperpigmentationHero from '../assets/hyperpigmentation-melasma-treatment-san-diego.jpg';
 import liraPeel from '../assets/lira-peel-chemical-peel-hyperpigmentation-san-diego.jpg';
 import acneScars from '../assets/acne-scar-revision-procell-microchanneling-melanin-rich-skin-san-diego.jpg';
+import sunscreen from '../assets/sunscreen-for-pigmentation-melanin-rich-skin-san-diego.jpg';
 
 export interface Article {
   slug: string;
@@ -60,6 +61,16 @@ export interface Article {
    * it, but articles targeting featured-snippet queries should set one.
    */
   quickAnswer?: string;
+  /**
+   * Optional step-by-step procedure. When set, the page also emits HowTo
+   * schema. The steps are the same array the body renders as its visible
+   * numbered list, so the markup and the page can never disagree.
+   */
+  howTo?: {
+    name: string;
+    description: string;
+    steps: string[];
+  };
   /** Internal link out at the end of the piece. */
   cta: { label: string; href: string };
 }
@@ -2015,5 +2026,221 @@ export const articles: Article[] = [
       },
     ],
     cta: { label: 'See dermaplaning in San Diego', href: '/treatments/dermaplaning/' },
+  },
+  {
+    slug: 'best-sunscreen-for-dark-spots',
+    headline:
+      'Best sunscreen for dark spots in San Diego: what to look for on the label',
+    title: 'Best Sunscreen for Dark Spots (2026) | KIAMO Skin San Diego',
+    description:
+      'Best sunscreen for dark spots and melasma in San Diego, ranked by what each one protects against. How to read a label for iron oxide and white cast.',
+    standfirst:
+      'Most sunscreen in San Diego is bought on brand and worn on habit. For a mark that keeps coming back, the label matters more than the name on the front.',
+    readingTime: '9 min read',
+    datePublished: '2026-11-07',
+    dateModified: '2026-11-07',
+    image: sunscreen,
+    imageAlt:
+      'Woman with deep brown skin in soft window light, face bare and unmade-up with natural skin texture',
+    quickAnswer:
+      'The best sunscreen for dark spots is a broad-spectrum SPF 30 or higher that also contains iron oxides for visible light, not a higher number on the front of the bottle. Which one you need depends on whether the mark is still darkening or already fading, and on what the UV index is doing that month.',
+    howTo: {
+      name: 'How to apply sunscreen so it actually protects your skin',
+      description:
+        'How much sunscreen to use, when to put it on, and when to reapply it in San Diego, for anyone treating dark spots or melasma.',
+      steps: [
+        'Use roughly two finger-lengths for the face and neck. One line along the face, one along the neck.',
+        'Apply every morning, in every season. San Diego sits in the very high UV band for most of the year, so this is a daily habit and not a beach-day one.',
+        'Reapply every two hours outdoors, and after swimming or sweating, even when the bottle says water resistant.',
+        'Treat the drive as time outside. Glass filters UVB well and UVA poorly, so a commute is meaningful one-sided exposure on the driving side of the face.',
+        'If the SPF comes as a stick or a spray, the two-hour clock does not change. The format changes whether the reapplication happens.',
+      ],
+    },
+    body: [
+      {
+        p: 'Looking for the best sunscreen for dark spots? There is no single best bottle, because dark spots form through three different mechanisms and each one needs a different part of the spectrum covered. The right choice in San Diego also moves with the UV index, which is why the label matters more here than the brand.',
+      },
+      { h2: 'The best sunscreen for dark spots, ranked by what each one protects against' },
+      {
+        answer:
+          'The best sunscreen for dark spots is a broad-spectrum SPF 30 or higher that also contains iron oxides, because visible light and not only UV is what keeps melasma and post-inflammatory marks active. Everything else on the label is a refinement of that decision.',
+      },
+      {
+        table: {
+          caption: 'Six sunscreen types, ranked by what each one protects against',
+          head: ['Type', 'Protects against', 'Best for'],
+          rows: [
+            [
+              '1. Tinted mineral SPF 50+',
+              'UVA, UVB and visible light',
+              'Melasma, and marks that keep coming back',
+            ],
+            [
+              '2. Tinted chemical SPF 50+',
+              'UVA, UVB and visible light, no white cast',
+              'Darker skin tones wanting invisible protection',
+            ],
+            [
+              '3. Mineral SPF 30+, fragrance free',
+              'UVA and UVB',
+              'Reactive or eczema-prone skin, and skin recovering from a procedure',
+            ],
+            [
+              '4. Chemical SPF 50+',
+              'UVA and UVB, no white cast',
+              'Deeper skin tones, and anyone who cannot tolerate mineral',
+            ],
+            [
+              '5. Broad-spectrum SPF 30+',
+              'UVA and UVB',
+              'Everyday prevention once marks have faded',
+            ],
+            [
+              '6. Stick or spray SPF 50+',
+              'UVA and UVB, built for reapplication',
+              'People who skip reapplying because the bottle is awkward',
+            ],
+          ],
+        },
+      },
+      {
+        h3: 'Why the tinted formulas rank above the untinted ones',
+      },
+      {
+        p: 'Rows one and two carry most of the weight, and they are the two most often skipped. Tinted mineral SPF 50+ is the most protective option on this list: the mineral filter reflects and scatters UVA and UVB, and the iron oxides in the tint block visible light on top of that. In <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC12475913/" rel="noopener" target="_blank">a randomised, investigator-blinded trial of 42 women with melasma</a>, applying sunscreen twice daily across five months of summer, both a tinted iron-oxide formula and an untinted one with matched UV protection prevented sun-induced darkening, but only the tinted group significantly reduced the colour difference between the melasma patches and the surrounding skin. The <a href="https://www.aad.org/public/everyday-care/skin-care-secrets/routine/fade-dark-spots" rel="noopener" target="_blank">American Academy of Dermatology gives the same advice in plainer terms</a>: use a tinted sunscreen with iron oxide, because the iron oxide is what protects against visible light.',
+      },
+      {
+        h3: 'The difference between mineral and chemical, and where the white cast comes from',
+      },
+      {
+        p: 'The difference between row one and row two is the white cast and the finish. Zinc oxide and titanium dioxide reflect light as well as UV, which is what leaves a pale cast on deeper skin, and it is the reason many people decide mineral is not for them and settle for a clear formula that does nothing about visible light. A tinted chemical filter absorbs UVA and UVB instead of reflecting it, so it leaves no cast, and it usually sits better on skin that reacts to mineral. <a href="/journal/three-kinds-of-dark-mark/">Which of the two suits the mark on your face</a> comes down to whether that mark is still darkening or already fading.',
+      },
+      { h2: 'Why the SPF number on the front is only half the answer' },
+      {
+        answer:
+          'SPF measures UVB only. UVA and visible light are not counted anywhere on the front of the bottle, and in melanin-rich skin both are what keep pigment moving, which is why a high SPF with no tint still lets melasma and dark marks hold.',
+      },
+      {
+        p: 'Visible light is the part that gets left off the label, and it is the part that matters most for anyone treating marks. <a href="https://www.ncbi.nlm.nih.gov/books/NBK459271/" rel="noopener" target="_blank">StatPearls describes melasma as a chronic, relapsing pigmentary disorder</a> — disease control rather than cure — and notes that visible light, particularly short-wavelength blue light, has emerged as a clinically significant contributor, especially in individuals with darker skin phototypes, and that the pigmentation it induces may be more intense and longer-lasting than UV-induced pigmentation. A clear sunscreen, however high the SPF, does very little about it. That is the whole argument for a tint.',
+      },
+      {
+        p: 'There is a second reason the SPF number misleads. It measures how much UVB a filter blocks, so SPF 50 blocks roughly 98% of UVB and SPF 30 blocks about 97%. The gap between them is far narrower than the gap between a formula with iron oxides and one without, which is why <a href="/journal/hyperpigmentation-treatment-guide/">the pigment protocol here</a> treats the tint as the deciding variable and the SPF as the starting point.',
+      },
+      { h2: 'How much to use, and when to reapply' },
+      {
+        answer:
+          'About two finger-lengths for the face and neck, every morning, and reapplication every two hours outdoors. Most people apply roughly a third of what they need, which is why a correct SPF still fails.',
+      },
+      {
+        ul: [
+          'Two finger-lengths for the face and neck. One line along the face, one along the neck.',
+          'Every morning, in every season. San Diego sits in the very high band for most of the year, so this is a daily habit and not a beach-day one.',
+          'Reapply every two hours outdoors, and after swimming or sweating, even when the bottle says water resistant.',
+          'Treat the drive as time outside. Glass filters UVB well and UVA poorly, so a commute is meaningful one-sided exposure on the driving side of the face.',
+          'If the SPF comes as a stick or a spray, the two-hour clock does not change. The format changes whether the reapplication happens.',
+        ],
+      },
+      { h2: 'The UV index through the year, and what each band changes' },
+      {
+        answer:
+          'San Diego reads 8 to 10 on the UV index through April and October, which is the very high to extreme band, and it rarely drops below 3 the rest of the year. The band tells you how much protection that particular day actually requires.',
+      },
+      {
+        table: {
+          caption: 'EPA UV index bands and what each one means for daily sunscreen',
+          head: ['UV index and EPA band', 'When San Diego reads this', 'What it changes'],
+          rows: [
+            [
+              '1-2 Low',
+              'Rare here, on the mildest winter mornings',
+              'Minimal protection is fine. If you are treating marks, keep the SPF up anyway, because a window of low UV is not a reason to stop.',
+            ],
+            [
+              '3-5 Moderate to High',
+              'November through March',
+              'Protection needed. Broad-spectrum SPF on exposed skin, and shade between late morning and mid-afternoon.',
+            ],
+            [
+              '6-7 Moderate to High',
+              'March into April, and again in October',
+              'The same protection, and the window in which a peel series is hardest to run, because UV is climbing but has not peaked.',
+            ],
+            [
+              '8-10 Very High to Extreme',
+              'April through October, peaking mid-summer',
+              'Extra protection. This is the range where UV-driven pigment forms fastest, so tint for visible light and do not skip the reapplication.',
+            ],
+            [
+              '11+ Very High to Extreme',
+              'Occasional, on the hottest inland afternoons',
+              'The same as above, and worth treating direct midday sun as something to avoid rather than endure.',
+            ],
+          ],
+        },
+      },
+      {
+        h3: 'The shadow rule, which beats any forecast',
+      },
+      {
+        p: 'The <a href="https://www.epa.gov/sunsafety/uv-index-scale-0" rel="noopener" target="_blank">EPA UV Index Scale</a> carries one practical rule that cuts through the number entirely: if the shadow is shorter than you are around midday, UV exposure is higher, and if the shadow is taller than you are in the early morning and late afternoon, exposure is likely to be lower. That is a reading of the actual light where you are standing, and it is more useful than a forecast on a phone.',
+      },
+      {
+        h3: 'Why the coast and the inland corridor differ',
+      },
+      {
+        p: 'The marine layer does not change the UV question. Up to 80% of the sun\'s UV rays can still reach skin on an overcast day, and the light that judges risk is not the light that drives pigment, which is why <a href="/journal/june-gloom-is-not-sun-protection/">May and June are the months San Diego clients lose ground</a>. Inland from the coast the effect is smaller: <a href="/service-areas/chula-vista/">Chula Vista</a> and <a href="/service-areas/la-mesa/">La Mesa</a> sit past the marine layer and take more direct sun for more of the year, which is why melasma is the most common concern from those areas.',
+      },
+      { h2: 'When sunscreen is not enough on its own' },
+      {
+        answer:
+          'Sunscreen prevents new pigment. It does not remove pigment that has already formed, and it cannot fade a mark that is already there. Clearing an existing mark takes a treatment plan, and the daily SPF is what stops that plan from being undone.',
+      },
+      {
+        p: 'That is the honest limit of any sunscreen, and it is worth stating plainly before buying anything. A mark that formed from sun damage, from a breakout, or from hormones has pigment sitting in the skin, and light protection stops more from forming while leaving what is there untouched. <a href="/journal/three-kinds-of-dark-mark/">Telling the three kinds of dark mark apart</a> decides what comes next, because each one responds to a different plan, and <a href="/journal/hyperpigmentation-treatment-guide/">the hyperpigmentation guide</a> sets out what those plans do.',
+      },
+      {
+        p: 'In practice the two halves run together. <a href="/treatments/hyperpigmentation/">Post-inflammatory hyperpigmentation treatment</a> removes what has formed, and <a href="/treatments/melasma/">melasma treatment</a> is managed rather than cured, which means daily protection is a condition of the plan and not an optional extra. Where the marks are sun damage rather than a live inflammation, <a href="/facial/facial-after-sun-exposure-san-diego/">timing a facial after sun exposure</a> and <a href="/journal/melasma-chemical-peel-san-diego/">running a peel series against the season</a> both come into it.',
+      },
+      { h2: 'Pricing for treating dark spots in San Diego' },
+      {
+        answer:
+          'A first visit is $249 and includes the consultation, skin analysis and a full treatment plan. After that a HydraFacial is $259, a dermaplane facial is $199, and where the marks need clearing rather than maintaining, the Lira chemical peel series runs from $199 to $299 and Procell microchanneling is $475 a session.',
+      },
+      {
+        p: 'Prices are published because comparing studios in San Diego is close to impossible when nobody lists them. The <a href="/treatments/">full treatment menu</a> carries every price, and the <a href="/membership/">membership plans</a> exist because these treatments run across weeks and months rather than a single appointment. <a href="/journal/chemical-peel-cost-san-diego/">What a chemical peel costs here</a> goes into the numbers behind the series.',
+      },
+      {
+        p: 'The honest answer to which sunscreen to buy is that it is the one on row one or row two, matched to the kind of mark you have, applied every morning at the amount most people skip. Everything else on the label is refinement.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'Can sunscreen fade hyperpigmentation?',
+        answer:
+          'No, not on its own. Sunscreen prevents new pigment from forming and, more usefully for a mark that already exists, it stops the light that would otherwise keep that mark active. Fading a mark that is already there takes a treatment plan, such as a prepared series of peels or microchanneling for the pigment, plus daily SPF so the result holds. Without the daily step, the treatment is working against a moving target.',
+      },
+      {
+        question: 'What is the best sunscreen for hyperpigmentation?',
+        answer:
+          'A broad-spectrum SPF 30 or higher that contains iron oxides, because the tint is what blocks visible light and visible light is a proven trigger for melasma and post-inflammatory marks. If you are treating melasma specifically, SPF 50 and above is worth the difference, since San Diego sits at 8 to 10 on the UV index from April through October. A clear formula is fine for maintenance. A tinted one is what treats pigment.',
+      },
+      {
+        question: 'Should black people use SPF 30 or 50?',
+        answer:
+          'SPF 50 and above, and tinted, if you are treating dark spots. Greater melanin absorbs more UV, which is protective against burning, but it does not protect against the visible light that drives pigmentation in deeper skin tones, so a clear SPF 30 leaves a gap. The two questions are separate: what protects skin from burning and what protects it from pigment are not answered by the same number on the bottle.',
+      },
+      {
+        question: 'Is tinted sunscreen better?',
+        answer:
+          'Yes, for pigmentation, and for two reasons. The iron oxides in the tint block visible light, which ordinary sunscreen does not address, and the tint evens out tone while it does so, so a separate correcting product on top is unnecessary. For skin that is not pigmenting, a clear broad-spectrum SPF 30 and above does the same job and is easier to wear every day.',
+      },
+      {
+        question: 'How do I find my skin tone for tinted sunscreen?',
+        answer:
+          'Start from the jawline rather than the cheek, and check the tint in daylight instead of under bathroom lighting, where warm bulbs make every shade look darker than it is. Most brands run a light and a deep tint, and the deep one is the one photographed least. If a tint still reads as a layer sitting on the neck rather than disappearing into it, it is the wrong depth, and a wrong depth is worth returning, because a tint nobody likes is a tint nobody reapplies.',
+      },
+    ],
+    faqHeading: 'Sunscreen and dark spot questions',
+    cta: { label: 'See pigmentation treatment', href: '/treatments/hyperpigmentation/' },
   },
 ];
