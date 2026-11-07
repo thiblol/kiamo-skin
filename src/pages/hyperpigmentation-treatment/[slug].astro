@@ -11,6 +11,7 @@ import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import HyperpigmentationAreaSchema from '../../components/schema/HyperpigmentationAreaSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import pigmentation from '../../assets/hyperpigmentation-treatment-melanin-rich-skin-san-diego.jpg';
 
 export function getStaticPaths() {
@@ -61,9 +62,13 @@ const imageAlt = `Clear, even-toned skin after corrective hyperpigmentation trea
   <article>
     <header class="bg-blush">
       <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-        <p class="t-eyebrow text-ink-soft">
-          <a href="/treatments/hyperpigmentation/" class="hover:text-rose">Hyperpigmentation Treatment</a> · {area.name}
-        </p>
+        <Breadcrumbs
+          ancestors={[
+            { name: 'Treatments', path: '/treatments/' },
+            { name: 'Hyperpigmentation Treatment in San Diego', path: '/hyperpigmentation-treatment/' },
+          ]}
+          current={area.name}
+        />
         <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">{area.h1}</h1>
         <div class="t-body mt-7 max-w-[62ch] text-[1.0625rem] leading-relaxed">
           <p class="font-medium">{area.intro.split('.')[0]}.</p>

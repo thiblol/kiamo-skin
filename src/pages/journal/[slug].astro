@@ -7,6 +7,7 @@ import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import ArticleSchema from '../../components/schema/ArticleSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 
@@ -43,9 +44,15 @@ const articleUrl = `${Astro.site ?? 'https://kiamoskin.com'}journal/${article.sl
         class="wrap section-y grid items-center gap-12 pt-[calc(60px+72px)] md:grid-cols-[1fr_0.85fr] md:gap-14 md:pt-[calc(60px+112px)]"
       >
         <div>
-          <p class="t-eyebrow text-ink-soft">
-            <a href="/journal/" class="hover:text-rose">Journal</a> · {article.readingTime}
-          </p>
+          {/* The article's own headline is a sentence, and it is the H1
+              directly below — repeating it in the crumb would say the same
+              thing twice. So the crumb stops at the section and carries the
+              reading time, which is a fact about the article rather than
+              its place in the tree. */}
+          <Breadcrumbs
+            ancestors={[{ name: 'Journal', path: '/journal/' }]}
+            meta={article.readingTime}
+          />
           <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[3.5rem]">{article.headline}</h1>
           <p class="t-body mt-7 text-[1.125rem]">{article.standfirst}</p>
           {article.quickAnswer && (

@@ -24,6 +24,7 @@ import { facialAreas } from '../../data/facial-areas';
 import FacialHubSchema from '../../components/schema/FacialHubSchema.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import heroImage from '../../assets/hydrafacial-treatment-san-diego.jpg';
 
 const title = 'Facial in San Diego | All Skin Types | KIAMO Skin';
@@ -103,7 +104,7 @@ const heroAlt =
   <article>
     <header class="bg-blush">
       <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-        <p class="t-eyebrow text-ink-soft">KIAMO Skin · Mission Hills</p>
+                    <Breadcrumbs current="Facial in San Diego" meta="Mission Hills" />
         <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">Facial in San Diego</h1>
 
         {/* AI Overview quick-answer block — extracted first by ChatGPT/Perplexity/AIO. */}

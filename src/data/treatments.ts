@@ -128,7 +128,7 @@ export const treatments: Treatment[] = [
     serviceType: 'Scalp treatment',
     category: 'Scalp therapy',
     areas: ['pacific-beach', 'la-jolla', 'encinitas', 'del-mar', 'carlsbad'],
-    title: 'Keravive Scalp Treatment San Diego | Mission Hills Studio',
+    title: 'Keravive Scalp Treatment San Diego | KIAMO Skin',
     description:
       'Keravive scalp treatment in San Diego for dandruff, flaking, hair thinning and hard water buildup. Mission Hills studio. $599. Request an appointment.',
     headline: 'Keravive Scalp Therapy in San Diego — Clear Flaking, Buildup, and Irritation',

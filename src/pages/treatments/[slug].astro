@@ -13,6 +13,8 @@ import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import ServiceSchema from '../../components/schema/ServiceSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PriceAnchor from '../../components/PriceAnchor.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
 import TreatmentAreaSchema from '../../components/schema/TreatmentAreaSchema.astro';
 import PersonSchema from '../../components/schema/PersonSchema.astro';
@@ -32,6 +34,23 @@ export function getStaticPaths() {
 const { treatment } = Astro.props;
 const others = treatments.filter((t) => t.slug !== treatment.slug);
 const faqs = treatmentFaqs[treatment.slug] ?? [];
+
+/**
+ * The price of the entry option, stated in the hero.
+ *
+ * The first pricing row is the entry step for every treatment, and the arrays
+ * are ordered as the protocol runs: a `hydrafacial` starts with the
+ * first-visit treatment and lists the return visit after it; `acne` starts
+ * with the HydraFacial that clears active breakouts, then the barrier work,
+ * then the peel and the microchanneling for what they leave behind; `lira`
+ * starts with the gentle peel and lists the advanced one after it. So the
+ * first row is the figure a new client is actually quoted, not an arbitrary
+ * pick from the menu.
+ *
+ * `corrective-skin-treatments` prices by consultation and says so — the
+ * anchor carries that string rather than a figure.
+ */
+const entryPricing = treatment.pricing[0];
 const localAreas = treatment.areas
   .map((slug) => areas.find((a) => a.slug === slug))
   .filter((a) => a !== undefined);
@@ -68,9 +87,14 @@ const localGuides = getGeoArticlesByService(treatment.slug);
       <div class="wrap pt-[calc(60px+40px)] pb-14 md:pt-[calc(60px+64px)] md:pb-20">
         <div class="grid items-center gap-10 md:grid-cols-2 md:gap-14 lg:gap-20">
           <div>
-            <p class="t-eyebrow text-ink-soft">
-              <a href="/treatments/" class="hover:text-rose">Treatments</a> · {treatment.name}
-            </p>
+            {/* The trail, in the slot the hero eyebrow used to hold. It was
+                already a two-level trail — "Treatments · Lira Chemical Peels"
+                — so this is that same line, extended to the full path and
+                marked up as navigation rather than as a label. */}
+            <Breadcrumbs
+              ancestors={[{ name: 'Treatments', path: '/treatments/' }]}
+              current={treatment.name}
+            />
             <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.25rem] md:text-[3.5rem]">{treatment.headline}</h1>
             {/* One subhead, three lines. The scenario-page rule: the hero
                 states the offer and gives the reason to act, and stops. The
@@ -78,6 +102,18 @@ const localGuides = getGeoArticlesByService(treatment.slug);
                 has decided to keep reading will find it — and where it does
                 not push the CTA off the fold. */}
             <p class="t-body mt-6 max-w-[56ch] text-[1.125rem]" set:html={treatment.opener} />
+            {/* The price, in the hero. It used to sit in the aside at the
+                foot of a long two-column grid — about 5,000px down the page
+                on a phone, after two thousand words of clinical copy. Every
+                competitor in this market hides its prices; ours are the
+                differentiator, and they only work if the reader finds them
+                before they leave. */}
+            <PriceAnchor
+              label={entryPricing.label}
+              price={entryPricing.price}
+              href="#pricing"
+              class="mt-8"
+            />
             <div class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
               <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
               {/* The phone is the secondary path for a high-intent visitor who
@@ -389,7 +425,10 @@ const localGuides = getGeoArticlesByService(treatment.slug);
         </div>
 
         <aside>
-          <div class="border border-line bg-ivory p-8">
+          {/* `id="pricing"` is the target of the hero's "Full pricing" link.
+              The anchor jumps to the full table, so the price in the hero is
+              a way in rather than a dead end. */}
+          <div id="pricing" class="scroll-mt-24 border border-line bg-ivory p-8">
             <h2 class="t-eyebrow text-ink-soft">Pricing in San Diego</h2>
             <dl class="mt-7 m-0 space-y-6">
               {

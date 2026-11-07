@@ -1,0 +1,124 @@
+---
+/**
+ * Breadcrumbs
+ * ----------
+ * The visible counterpart to BreadcrumbSchema.astro.
+ *
+ * Every page already declares a trail and emits it as `BreadcrumbList`
+ * JSON-LD — but the schema was the only representation of it. A reader could
+ * not see where they were, and a crawler could only follow the trail by
+ * parsing the source. This renders that trail as visible navigation.
+ *
+ * The trail is passed in, not derived, so the schema and the visible nav are
+ * two views of one list. If they ever disagree, it is because a page passed
+ * two different arrays — which is a bug a reader can see.
+ *
+ * Design:
+ *
+ * The reference site renders breadcrumbs in a monospace face at 0.7rem, in the
+ * faintest grey in its palette, separated by forward slashes. That suits a
+ * utilitarian lead-gen template where the crumb is a machine-readable path
+ * dressed as one.
+ *
+ * This site is editorial — porcelain, hairline rules, a light Cormorant
+ * display face, a Jost body, and all the signalling done by the eyebrow
+ * scale: 11px uppercase at 0.22em. The crumb is built from that same
+ * vocabulary rather than a borrowed one, so it reads as part of the page
+ * instead of a widget dropped onto it:
+ *
+ *   - Set in the eyebrow scale, so it sits at the same altitude as the other
+ *     micro-labels above each H1 rather than competing with them.
+ *   - Separators are a hairline, matching the rules that already divide the
+ *     price rows, the process steps and the footer columns. A slash would
+ *     read as a URL fragment; a rule reads as editorial.
+ *   - The current page is not a link and carries no hover state. It is where
+ *     the reader already is.
+ *
+ * Home is always present. A crumb that starts one level in tells a reader
+ * nothing about the top of the tree, and "Home" is the one ancestor that is
+ * always true.
+ *
+ * Placement: this sits in the hero, in the slot the hero eyebrow already
+ * occupies. Most page templates already carry a two-level trail there — "Treatments
+ * · Lira Chemical Peels", "Facial · La Jolla" — which is nearly a breadcrumb
+ * but stops one level short and has no Home. Upgrading that in place costs no
+ * vertical space, which matters on a phone where the booking CTA is already
+ * close to the fold.
+ *
+ * On the article-shaped pages — the journal and the geo articles — the
+ * current page's own title is a sentence rather than a name, and repeating a
+ * sentence above the sentence that is already the H1 is noise. Those pages
+ * pass their ancestors only, plus `meta` for the reading time, and the H1
+ * below does the naming. The JSON-LD trail on those pages still carries the
+ * full path.
+ */
+interface Crumb {
+  name: string;
+  path: string;
+}
+
+interface Props {
+  /** Ancestors, outermost first. Home is prepended here. */
+  ancestors: Crumb[];
+  /** The current page's name. Rendered as aria-current, never a link. */
+  current?: string;
+  /** A trailing fact about this page, set after the trail. */
+  meta?: string;
+  /** Extra classes for the wrapper. */
+  class?: string;
+}
+
+const { ancestors = [], current, meta, class: className = '' } = Astro.props;
+
+/**
+ * Astro renders with `trailingSlash: 'always'` and Cloudflare 308s the
+ * unslashed form to the slashed one. The schema side normalises through
+ * `absolute()`; the visible hrefs are normalised here, so a page can pass
+ * either form and still get a link that does not bounce off a redirect.
+ */
+const href = (path: string) => (path === '/' ? path : `${path.replace(/\/$/, '')}/`);
+
+const items = [
+  { name: 'Home', path: '/' },
+  ...ancestors,
+  ...(current ? [{ name: current, path: null }] : []),
+];
+---
+
+<nav aria-label="Breadcrumb" class={className}>
+  <ol class="m-0 flex list-none flex-wrap items-center gap-x-2 gap-y-1 p-0">
+    {
+      items.map((item, i) => (
+        <li class="flex items-center gap-x-2">
+          {item.path ? (
+            <a
+              href={href(item.path)}
+              class="t-eyebrow text-ink-soft transition-colors duration-300 hover:text-rose"
+            >
+              {item.name}
+            </a>
+          ) : (
+            <span aria-current="page" class="t-eyebrow text-ink">
+              {item.name}
+            </span>
+          )}
+          {i < items.length - 1 && (
+            <span aria-hidden="true" class="text-[0.75rem] leading-none text-line">
+              /
+            </span>
+          )}
+        </li>
+      ))
+    }
+    {
+      meta && (
+        <li class="flex items-center gap-x-2">
+          <span aria-hidden="true" class="text-[0.75rem] leading-none text-line">
+            /
+          </span>
+          <span class="t-eyebrow text-ink-soft">{meta}</span>
+        </li>
+      )
+    }
+  </ol>
+</nav>

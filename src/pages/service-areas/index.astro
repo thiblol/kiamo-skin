@@ -8,6 +8,7 @@ import LocationMap from '../../components/LocationMap.astro';
 import WhyTravelMissionHills from '../../components/sections/WhyTravelMissionHills.astro';
 import ClientVolumeStats from '../../components/sections/ClientVolumeStats.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
 import { areas } from '../../data/areas';
 import { business, verifiedPrices } from '../../config/business';
@@ -162,7 +163,7 @@ const areaGroups = [
 ---
 
 <BaseLayout
-  title="Corrective Facials San Diego | KIAMO Skin Serves 9 Areas"
+  title="Corrective Facials San Diego | KIAMO Skin"
   description="Corrective facials serving 9 San Diego areas from the Mission Hills studio. HydraFacial, Procell, DMK, Lira peels. Request an appointment."
 >
   <script type="application/ld+json" is:inline set:html={JSON.stringify(serviceSchema)} slot="head" />
@@ -174,7 +175,7 @@ const areaGroups = [
     <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
       <div class="grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-20 items-center">
         <div>
-          <p class="t-eyebrow text-ink-soft">Service areas — San Diego County</p>
+                      <Breadcrumbs current="Areas We Serve" meta="San Diego County" />
           <h1 class="t-h2 mt-6 max-w-[26ch] text-[2.5rem] md:text-[4rem]">
             KIAMO Skin — Corrective Facials Across 9 San Diego Areas
           </h1>

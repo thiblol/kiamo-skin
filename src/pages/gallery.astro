@@ -33,6 +33,7 @@ import Reveal from '../components/Reveal.astro';
 import Button from '../components/Button.astro';
 import BeforeAfter from '../components/BeforeAfter.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import SpeakableSchema from '../components/schema/SpeakableSchema.astro';
 import FaqSchema from '../components/schema/FaqSchema.astro';
 import PersonSchema from '../components/schema/PersonSchema.astro';
@@ -367,7 +368,7 @@ const description =
         </Reveal>
 
         <div class="md:order-1">
-          <p class="t-eyebrow text-ink-soft">Results gallery · Mission Hills studio</p>
+                      <Breadcrumbs current="Gallery" meta="Mission Hills studio" />
           <h1 class="t-h2 mt-6 max-w-[18ch] text-[2.5rem] md:text-[3.5rem]">
             Before and after, named honestly.
           </h1>

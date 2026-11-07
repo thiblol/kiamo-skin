@@ -235,7 +235,7 @@ export const hyperpigmentationAreas: HyperpigmentationArea[] = [
   {
     slug: 'university-heights',
     name: 'University Heights',
-    title: 'Hyperpigmentation Treatment University Heights | KIAMO',
+    title: 'Hyperpigmentation Treatment University Heights | KIAMO Skin',
     description: 'Hyperpigmentation correction in University Heights from KIAMO Skin. Melasma, PIH, sun damage for all skin types. Request an appointment.',
     h1: 'Hyperpigmentation Treatment in University Heights',
     intro: `KIAMO Skin provides specialized hyperpigmentation correction for University Heights residents at our Mission Hills location, 8 minutes from Park Boulevard via Washington Street. We treat melasma, post-inflammatory hyperpigmentation, and uneven skin tone using protocols calibrated for all skin types (Fitzpatrick I-VI). Located at 3067 Reynard Way, our clinic uses medical-grade treatments that prevent complications. Kiki is a California licensed esthetician with 7+ years of experience treating hyperpigmentation across all skin tones.`,

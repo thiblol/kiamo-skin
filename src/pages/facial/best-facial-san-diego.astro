@@ -17,6 +17,7 @@ import { CTA_LABEL } from '../../config/nav';
 import FacialHubSchema from '../../components/schema/FacialHubSchema.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
 const title = 'Best Facial in San Diego: How to Choose | KIAMO Skin';
 const description =
@@ -104,7 +105,10 @@ const heroAlt =
   <article>
     <header class="bg-blush">
       <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-        <p class="t-eyebrow text-ink-soft">Facial guide · 2026</p>
+        <Breadcrumbs
+          ancestors={[{ name: 'Facial in San Diego', path: '/facial/' }]}
+          current="Best Facial in San Diego"
+        />
         <h1 class="t-h2 mt-6 max-w-[30ch] text-[2.5rem] md:text-[4rem]">Best Facial in San Diego: How to Choose the Right One for Your Skin</h1>
 
         {/* AI Overview quick-answer block. */}

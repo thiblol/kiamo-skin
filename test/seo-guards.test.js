@@ -28,6 +28,37 @@ describe('SEO Guards', () => {
       });
     });
 
+    /**
+     * The brand name is "KIAMO Skin" — never "KIAMO" on its own.
+     *
+     * Seven titles had drifted: three truncated the brand to "| KIAMO",
+     * three dropped it entirely, and one swapped it for a location
+     * phrase. The suffix is what makes a truncated SERP title read as
+     * this studio's page rather than a generic one, so it is worth a
+     * guard rather than a memory.
+     *
+     * A title qualifies if it carries the brand anywhere — a leading
+     * "About KIAMO Skin — …" is fine, so the rule is containment, not
+     * a fixed suffix position.
+     */
+    test('every title carries the full brand name', () => {
+      forEachPage(({ html, file }) => {
+        const titles = [...html.matchAll(/<title>([^<]+)<\/title>/g)];
+        const text = titles[0][1];
+
+        assert.ok(
+          text.includes('KIAMO Skin'),
+          `${file}: title is missing "KIAMO Skin" — "${text}"`
+        );
+
+        // "KIAMO Skin" must never be truncated to "KIAMO" at the end.
+        assert.ok(
+          !/\|\s*KIAMO\s*$/.test(text),
+          `${file}: title truncates the brand to "KIAMO" — "${text}"`
+        );
+      });
+    });
+
     test('every meta description is 155 characters or fewer', () => {
       forEachPage(({ html, file }) => {
         const match = html.match(/<meta name="description" content="([^"]+)"/);

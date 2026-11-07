@@ -68,7 +68,7 @@ export const articles: Article[] = [
   {
     slug: 'three-kinds-of-dark-mark',
     headline: 'Three kinds of dark mark, and why one facial cannot fix all three',
-    title: 'Facials for Hyperpigmentation: Which Kind Do You Have?',
+    title: 'Facials for Hyperpigmentation in San Diego | KIAMO Skin',
     description:
       'Post-inflammatory marks, melasma and sun damage look alike and respond differently. How to tell them apart, and what a facial can honestly do.',
     standfirst:
@@ -390,7 +390,7 @@ export const articles: Article[] = [
   {
     slug: 'microneedling-on-dark-skin-san-diego',
     headline: 'Microneedling on dark skin, and why depth decides the outcome',
-    title: 'Microneedling on Dark Skin in San Diego: Is It Safe?',
+    title: 'Microneedling on Dark Skin in San Diego | KIAMO Skin',
     description:
       'What the evidence says about needling melanin-rich skin, why depth decides the outcome, and the microchanneling offered instead in Mission Hills.',
     standfirst:
@@ -1746,7 +1746,7 @@ export const articles: Article[] = [
   {
     slug: 'acne-scars-san-diego',
     headline: 'Acne scars in San Diego: which ones a facial can fix and which need microneedling',
-    title: 'Acne Scars in San Diego: Facial vs Microneedling | KIAMO',
+    title: 'Acne Scars San Diego: Facial vs Microneedling | KIAMO Skin',
     description:
       'Acne scars fall into categories that respond to different treatments. A San Diego guide to which scars a facial improves and which need Procell.',
     standfirst:

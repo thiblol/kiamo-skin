@@ -5,6 +5,7 @@ import Button from '../../../components/Button.astro';
 import NapBlock from '../../../components/NapBlock.astro';
 import GeoArticleSchema from '../../../components/schema/GeoArticleSchema.astro';
 import BreadcrumbSchema from '../../../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import FaqSchema from '../../../components/schema/FaqSchema.astro';
 import { geoArticles, getGeoArticle } from '../../../data/geo-articles';
 import { getArea } from '../../../data/areas';
@@ -46,11 +47,13 @@ const breadcrumbs = [
       <div class="wrap pb-16 pt-12 md:pb-20 md:pt-16">
         <div class="mx-auto max-w-[46rem]">
           <Reveal>
-            <nav class="t-body mb-8 text-[0.875rem] text-ink-soft">
-              <a href="/service-areas/" class="hover:text-rose">Service Areas</a>
-              <span class="mx-2">/</span>
-              <a href={`/service-areas/${area.slug}/`} class="hover:text-rose">{area.name}</a>
-            </nav>
+            <Breadcrumbs
+              ancestors={[
+                { name: 'Areas We Serve', path: '/service-areas/' },
+                { name: area.name, path: `/service-areas/${area.slug}/` },
+              ]}
+              class="mb-8"
+            />
           </Reveal>
 
           <Reveal delay={100}>

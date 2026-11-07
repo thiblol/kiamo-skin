@@ -84,5 +84,20 @@ const year = 2026;
     <p class="t-meta text-porcelain/50">
       © {year} {business.name} · Black-owned, {business.address.neighborhood}, San Diego
     </p>
+    {/* The legal row. The reference site ends its footer the same way — a
+        disclosure block, then privacy, terms and a sitemap link. Ours carries
+        the studio's scope of practice rather than a referral disclaimer,
+        because the thing a reader actually needs to know before booking is
+        that this is an esthetician studio and not a medical practice. */}
+    <p class="t-body mt-5 max-w-[64ch] text-[0.9375rem] text-porcelain/70">
+      KIAMO Skin is an esthetician studio, not a medical practice. Every treatment is
+      performed by {business.ownerName}, a California licensed esthetician. Booking is a
+      request — appointments are confirmed by the studio rather than held automatically.
+    </p>
+    <p class="t-meta mt-5 text-porcelain/50">
+      <a href="/privacy/" class="transition-colors hover:text-porcelain">Privacy</a>
+      <span aria-hidden="true" class="mx-2">·</span>
+      <a href="/terms/" class="transition-colors hover:text-porcelain">Terms</a>
+    </p>
   </div>
 </footer>

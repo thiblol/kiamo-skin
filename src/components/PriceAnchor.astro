@@ -1,0 +1,98 @@
+---
+/**
+ * PriceAnchor
+ * -----------
+ * The cost of the entry option, stated in the hero.
+ *
+ * Why this exists:
+ *
+ * On a treatment page, the published price used to sit in an aside at the
+ * bottom of a long two-column grid. On a phone that put the first dollar
+ * figure roughly 5,000px down a 17,000px document — a mobile reader had to
+ * read two thousand words of clinical copy before learning what a treatment
+ * cost. Every other competitor in this market hides its prices entirely, so
+ * the number is a differentiator; buried at the bottom, it does no work.
+ *
+ * This is the studio's own published price, moved up to where the reader is
+ * still deciding. Nothing is invented: the label and the figure both come
+ * from the treatment's `pricing` array, the same array the full price table
+ * at the foot of the page renders from.
+ *
+ * Design:
+ *
+ * The reference site never prints a price. It names the variables that move
+ * one — access, time of day, parts — because it routes calls to independent
+ * contractors whose rates it does not know. Publishing a figure is something
+ * this studio can do and the reference cannot, so it should not borrow the
+ * reference's treatment of cost.
+ *
+ * What it borrows is the *placement*: the cost lives in the upper third of
+ * the page, not in a section the reader may never reach.
+ *
+ * The visual treatment follows the site's existing price idiom rather than
+ * introducing one:
+ *
+ *   - The label is set in the eyebrow scale — the same micro-label register
+ *     used above each H1 — because it names an option, it does not compete
+ *     with the headline.
+ *   - The figure uses `.t-price`, the site's price token, at a size a shade
+ *     larger than the menu rows it shares a class with. A price row is a
+ *     fact on a ruled line, not a badge.
+ *   - The figure is rose. The melasma page already sets its price cards in
+ *     rose, so this is a colour the site uses for money rather than a new
+ *     signal.
+ *   - A hairline above the row separates it from the opener paragraph. The
+ *     site divides its price rows, its process steps and its footer columns
+ *     with the same rule.
+ *
+ * `href` points at the full price table further down the page, so the anchor
+ * is a way in rather than a dead end. The link is omitted when there is
+ * nothing to link to — a treatment with a single price has no table worth
+ * scrolling to.
+ */
+interface Props {
+  /** The option's name, e.g. "First-Time Client Treatment". */
+  label: string;
+  /** The figure. May be the consultation string rather than a number. */
+  price: string;
+  /** Anchor to the full price table, when the page has one. */
+  href?: string;
+}
+
+const { label, price, href } = Astro.props;
+
+/**
+ * "Pricing at consultation." is not a figure, and it should not be set as one.
+ * The consultation string is prose, so it takes the body's size instead.
+ */
+const isFigure = /^\$/.test(price);
+---
+
+<div class="mt-7 border-t border-line pt-5">
+  <div class="flex items-baseline justify-between gap-x-6 gap-y-2">
+    <p class="t-eyebrow text-ink-soft">{label}</p>
+    {
+      isFigure ? (
+        <p class="t-price shrink-0 text-[1.25rem] text-rose">{price}</p>
+      ) : (
+        <p class="t-body shrink-0 text-[0.9375rem] text-ink-soft">{price}</p>
+      )
+    }
+  </div>
+  {
+    href && (
+      <a
+        href={href}
+        class="t-body mt-3 inline-flex items-center gap-x-2 text-[0.875rem] text-ink-soft transition-colors hover:text-rose"
+      >
+        Full pricing
+        {/* The down arrow, because this link jumps to the price table further
+            down the same page rather than to another page. The site's own
+            arrow for "go to a page" is a right arrow, which would point the
+            wrong way here. */}
+        <span aria-hidden="true">↓</span>
+        <span class="sr-only"> for every option</span>
+      </a>
+    )
+  }
+</div>

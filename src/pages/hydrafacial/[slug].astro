@@ -11,6 +11,7 @@ import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import HydrafacialAreaSchema from '../../components/schema/HydrafacialAreaSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import studioInterior from '../../assets/kiamo-skin-studio-mission-hills-san-diego.jpg';
 import hydrafacialDowntown from '../../assets/hydrafacial-downtown-san-diego-mission-hills.jpg';
 import hydrafacialBankersHill from '../../assets/hydrafacial-bankers-hill-san-diego.jpg';
@@ -87,9 +88,13 @@ const imageAlt = `HydraFacial treatment in progress at KIAMO Skin Mission Hills 
   <article>
     <header class="bg-blush">
       <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-        <p class="t-eyebrow text-ink-soft">
-          <a href="/treatments/hydrafacial/" class="hover:text-rose">HydraFacial</a> · {area.name}
-        </p>
+        <Breadcrumbs
+          ancestors={[
+            { name: 'Treatments', path: '/treatments/' },
+            { name: 'HydraFacial in San Diego', path: '/hydrafacial/' },
+          ]}
+          current={area.name}
+        />
         <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">{area.h1}</h1>
         <div class="t-body mt-7 max-w-[62ch] text-[1.0625rem] leading-relaxed">
           <p class="font-medium">{area.intro.split('.')[0]}.</p>

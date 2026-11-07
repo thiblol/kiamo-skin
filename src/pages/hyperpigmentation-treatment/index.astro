@@ -24,6 +24,7 @@ import { hyperpigmentationAreas } from '../../data/hyperpigmentation-areas';
 import HyperpigmentationHubSchema from '../../components/schema/HyperpigmentationHubSchema.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import heroHyperpigmentation from '../../assets/hyperpigmentation-treatment-serum-application-san-diego.jpg';
 
 const title = 'Hyperpigmentation Treatment in San Diego | KIAMO Skin';
@@ -116,7 +117,7 @@ const heroAlt =
   <article>
     <header class="bg-blush">
       <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-        <p class="t-eyebrow text-ink-soft">KIAMO Skin · Mission Hills</p>
+                    <Breadcrumbs current="Hyperpigmentation Treatment in San Diego" meta="Mission Hills" />
         <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">Hyperpigmentation Treatment in San Diego</h1>
 
         {/* AI Overview quick-answer block. */}

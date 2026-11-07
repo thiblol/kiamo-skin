@@ -11,6 +11,7 @@ import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import FacialAreaSchema from '../../components/schema/FacialAreaSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import heroImage from '../../assets/dermaplaning-facial-treatment-san-diego.jpg';
 
 export function getStaticPaths() {
@@ -61,9 +62,10 @@ const imageAlt = `Dermaplaning facial treatment at KIAMO Skin Mission Hills serv
   <article>
     <header class="bg-blush">
       <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-        <p class="t-eyebrow text-ink-soft">
-          <a href="/facial/" class="hover:text-rose">Facial</a> · {area.name}
-        </p>
+        <Breadcrumbs
+          ancestors={[{ name: 'Facial in San Diego', path: '/facial/' }]}
+          current={area.name}
+        />
         <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">{area.h1}</h1>
         <div class="t-body mt-7 max-w-[62ch] text-[1.0625rem] leading-relaxed">
           <p class="font-medium">{area.intro.split('.')[0]}.</p>

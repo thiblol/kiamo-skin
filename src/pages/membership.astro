@@ -34,6 +34,7 @@ import WhyLux from '../components/sections/WhyLux.astro';
 import WhyMembersStay from '../components/sections/WhyMembersStay.astro';
 import MembershipSchema from '../components/schema/MembershipSchema.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import FaqSchema from '../components/schema/FaqSchema.astro';
 import { tiers, memberBenefits, flexibility, ledger, firstMonths, terms } from '../data/memberships';
 import { membershipFaqs } from '../data/membership-faqs';
@@ -62,7 +63,7 @@ const description = `Monthly facial memberships in San Diego from KIAMO Skin. LU
         class="wrap section-y grid items-center gap-12 pt-[calc(60px+72px)] md:grid-cols-[1fr_0.85fr] md:gap-14 md:pt-[calc(60px+112px)]"
       >
         <div>
-          <p class="t-eyebrow text-ink-soft">Monthly membership</p>
+                      <Breadcrumbs current="Membership" meta="Monthly plan" />
           <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[3.5rem]">
             LUX: Two treatments in one visit - the plan 70% of corrective clients choose
           </h1>

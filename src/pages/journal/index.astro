@@ -3,6 +3,8 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Reveal from '../../components/Reveal.astro';
 import PanelWipe from '../../components/PanelWipe.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { articles } from '../../data/articles';
 ---
 
@@ -10,9 +12,10 @@ import { articles } from '../../data/articles';
   title="Journal — Skin & Scalp Notes | KIAMO Skin San Diego"
   description="Notes on treating skin and scalp in San Diego — the marine layer, hard water, and what the local climate does to a routine."
 >
+  <BreadcrumbSchema slot="head" trail={[{ name: 'Journal', path: '/journal' }]} />
   <header class="bg-blush">
     <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-      <p class="t-eyebrow text-ink-soft">Journal</p>
+      <Breadcrumbs current="Journal" />
       <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">
         Notes from the treatment room.
       </h1>

@@ -1,0 +1,157 @@
+---
+/**
+ * Privacy Policy
+ *
+ * Written from what this site actually does, not from a template. The site
+ * collects almost nothing on its own: there is no account system, no
+ * newsletter, and no form anywhere on the site. Everything that follows is
+ * checkable against the code — GA4 and a Google Maps embed are the only two
+ * third parties that run scripts here, and booking happens on Vagaro, off
+ * this domain.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Reveal from '../components/Reveal.astro';
+import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { business } from '../config/business';
+
+const updated = 'November 7, 2026';
+---
+
+<BaseLayout
+  title="Privacy Policy | KIAMO Skin"
+  description="What KIAMO Skin collects, who it goes to, and how to ask for it to be deleted. Written in plain language, updated November 2026."
+>
+  <BreadcrumbSchema slot="head" trail={[{ name: 'Privacy Policy', path: '/privacy' }]} />
+
+  <header class="bg-blush">
+    <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+      <Breadcrumbs current="Privacy Policy" />
+      <h1 class="t-h2 mt-6 max-w-[20ch] text-[2.5rem] md:text-[4rem]">Privacy Policy</h1>
+      <p class="t-body mt-7 max-w-[58ch] text-[1.125rem]">
+        The short version: this site has no accounts, no newsletter, and no forms. If you
+        email or call, what you tell us is used to treat your skin and nothing else.
+      </p>
+      <p class="t-meta mt-7">Last updated {updated}</p>
+    </div>
+  </header>
+
+  <div class="bg-porcelain">
+    <div class="wrap section-y">
+      <div class="prose mx-auto max-w-[68ch]">
+        <h2 class="t-h3">What we collect when you contact us</h2>
+        <p class="t-body mt-5">
+          If you call or email the studio, we will ask for your name, a way to reach you back,
+          what you want treated, and enough about your skin to plan a protocol — your skin type,
+          what you are using, what you have tried, and what has or has not worked. Some of that
+          is sensitive health information, and it is treated as such.
+        </p>
+        <p class="t-body mt-5">
+          If you book an appointment, your treatment record, consent notes and aftercare
+          instructions are kept in the studio's booking system for as long as the record is
+          clinically useful. Clinical records are retained because a treatment plan depends on
+          what the skin did last time; that is the whole reason a single practitioner works here
+          rather than a rotating team.
+        </p>
+
+        <h2 class="t-h3 mt-16">What this website collects on its own</h2>
+        <p class="t-body mt-5">
+          Two things, and only two:
+        </p>
+        <ul class="mt-6 m-0 list-none space-y-4 p-0">
+          <li class="t-body flex gap-4">
+            <span aria-hidden="true" class="text-rose">—</span>
+            <span>
+              <strong class="font-medium">Google Analytics.</strong> Page views, where you
+              arrived from, and rough device and city information. Google sets cookies for this;
+              it is used to see which pages are read, not to build a profile of you. You can
+              opt out with the Google Analytics Opt-out Browser Add-on.
+            </span>
+          </li>
+          <li class="t-body flex gap-4">
+            <span aria-hidden="true" class="text-rose">—</span>
+            <span>
+              <strong class="font-medium">A Google Maps embed</strong> on the pages that show
+              how to reach the studio. Google may set cookies in that frame.
+            </span>
+          </li>
+        </ul>
+        <p class="t-body mt-6">
+          We set no cookies of our own. There is no tracking pixel, no retargeting, no ad
+          platform and no session recording on this site.
+        </p>
+
+        <p class="t-body mt-6">
+          There is no account to create, no newsletter to subscribe to, and no form on any page
+          of this site. The booking form you use lives on Vagaro, a third-party booking system
+          that handles your appointment details and your payment. Their privacy policy governs
+          what happens there.
+        </p>
+
+        <h2 class="t-h3 mt-16">Who your information goes to</h2>
+        <ul class="mt-6 m-0 list-none space-y-4 p-0">
+          <li class="t-body flex gap-4">
+            <span aria-hidden="true" class="text-rose">—</span>
+            <span>
+              <strong class="font-medium">Vagaro</strong>, for appointments and payment. If you
+              book, they receive your contact and payment details.
+            </span>
+          </li>
+          <li class="t-body flex gap-4">
+            <span aria-hidden="true" class="text-rose">—</span>
+            <span>
+              <strong class="font-medium">Google</strong>, through Analytics and the Maps embed
+              described above.
+            </span>
+          </li>
+        </ul>
+        <p class="t-body mt-6">
+          We do not sell your information, rent it, or share it for anyone else's marketing.
+          We do not add you to a mailing list you did not ask for, because there isn't one.
+        </p>
+
+        <h2 class="t-h3 mt-16">Reviews and photographs</h2>
+        <p class="t-body mt-5">
+          Client reviews on the <a href="/reviews/">reviews page</a> and the
+          <a href="/gallery/">results gallery</a> are published as they were written on the
+          studio's Google Business Profile — the same wording, the same reviewer names, the same
+          dates. We have not edited them, shortened them, or selected them for tone.
+        </p>
+        <p class="t-body mt-5">
+          Reviewer photographs and profile pictures are reproduced from Google with the review
+          they belong to. Before-and-after images of treatment work are published because
+          showing the work honestly is the point of the gallery. Your likeness is not used in
+          studio marketing without asking first.
+        </p>
+
+        <h2 class="t-h3 mt-16">How long we keep it</h2>
+        <p class="t-body mt-5">
+          Clinical records are kept as long as they remain relevant to your skin, and longer
+          where the law requires it. Contact records — an email, a voicemail, a booking
+          enquiry — are kept for as long as they are useful to you, and no longer.
+        </p>
+
+        <h2 class="t-h3 mt-16">Your choices</h2>
+        <p class="t-body mt-5">
+          You can ask what we hold about you, ask for a copy of it, ask for it to be corrected,
+          or ask for it to be deleted. Some clinical records have to be kept — a treatment
+          record that has been deleted is a treatment record that cannot protect you at the
+          next appointment — and where that applies we will tell you plainly rather than
+          quietly decline.
+        </p>
+        <p class="t-body mt-5">
+          To ask for anything on this list, email
+          <a href={`mailto:${business.email}`}>{business.email}</a> or call
+          <a href={business.phone.href}>{business.phone.display}</a>. It is a one-room studio
+          and a person answers.
+        </p>
+
+        <h2 class="t-h3 mt-16">Changes to this policy</h2>
+        <p class="t-body mt-5">
+          If this policy changes, the date at the top changes with it. Nothing on this page is
+          a promise about the future; it is a description of what the site does now.
+        </p>
+      </div>
+    </div>
+  </div>
+</BaseLayout>

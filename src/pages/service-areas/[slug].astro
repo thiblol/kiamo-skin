@@ -8,6 +8,7 @@ import LocationMap from '../../components/LocationMap.astro';
 import CertificateModal from '../../components/CertificateModal.astro';
 import AreaServiceSchema from '../../components/schema/AreaServiceSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 import PersonSchema from '../../components/schema/PersonSchema.astro';
@@ -127,9 +128,10 @@ const canonicalUrl = `${business.url}/service-areas/${area.slug}/`;
         <div class="grid gap-12 md:grid-cols-[1.2fr_1fr] md:gap-16 lg:gap-20">
           <!-- Left: Copy + CTA -->
           <div class="flex flex-col justify-center">
-            <p class="t-eyebrow text-ink-soft">
-              <a href="/service-areas/" class="hover:text-rose">Areas we serve</a> · {area.name}
-            </p>
+            <Breadcrumbs
+              ancestors={[{ name: 'Areas We Serve', path: '/service-areas/' }]}
+              current={area.name}
+            />
             <h1 class="t-h2 mt-4 max-w-[20ch] text-[2.25rem] leading-[1.1] md:text-[3.5rem]">{area.h1}</h1>
             <p class="t-body mt-6 max-w-[52ch] text-[1.0625rem] leading-relaxed">{area.intro}</p>
 
@@ -510,12 +512,18 @@ const canonicalUrl = `${business.url}/service-areas/${area.slug}/`;
       </div>
     </section>
 
-    <!-- ALSO SERVING: Compact grid -->
+    <!-- ALSO SERVING: every other area we serve.
+         All eight, not six. The area grid is the crawl path into the
+         location cluster — the reference template calls this block
+         "your crawl path into the whole location silo. Do not skip it."
+         The footer already links all nine, so a cap here made these
+         pages inconsistent with the rest of the site and left two
+         areas with no inbound link from any area page. -->
     <section class="bg-ivory border-t border-line">
       <div class="wrap py-12">
         <h2 class="t-h4 mb-8 text-[1.25rem]">Also serving</h2>
         <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-          {others.slice(0, 6).map((other) => (
+          {others.map((other) => (
             <a
               href={`/service-areas/${other.slug}/`}
               class="group block rounded-lg border border-line bg-porcelain p-4 transition-all hover:border-rose hover:shadow-md"

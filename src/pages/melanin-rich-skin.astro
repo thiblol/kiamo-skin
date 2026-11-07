@@ -23,6 +23,7 @@ import NapBlock from '../components/NapBlock.astro';
 import PanelWipe from '../components/PanelWipe.astro';
 import FaqSchema from '../components/schema/FaqSchema.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { melaninFaqs } from '../data/melanin-faqs';
 import { treatments } from '../data/treatments';
 import { areas } from '../data/areas';
@@ -70,7 +71,7 @@ const catchments = ['chula-vista', 'north-park', 'la-mesa', 'mission-hills']
   .map((slug) => areas.find((a) => a.slug === slug))
   .filter((a) => a !== undefined);
 
-const title = 'Hyperpigmentation for Melanin-Rich Skin, San Diego | KIAMO';
+const title = 'Hyperpigmentation for Melanin-Rich Skin | KIAMO Skin';
 const description =
   'Black-owned skin studio in San Diego specializing in pigmentation treatment for melanin-rich skin. Melasma, dark spots, and PIH. Request an appointment.';
 
@@ -117,7 +118,7 @@ const service = {
   <article>
     <header class="bg-blush">
       <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-        <p class="t-eyebrow text-ink-soft">The specialism</p>
+                    <Breadcrumbs current="Melanin-Rich Skin" meta="The specialism" />
         <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.5rem] md:text-[4rem]">
           Expert Pigmentation Treatment for Melanin-Rich Skin in San Diego
         </h1>

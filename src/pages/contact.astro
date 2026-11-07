@@ -3,6 +3,7 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactSchema from '../components/schema/ContactSchema.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import Button from '../components/Button.astro';
 import NapBlock from '../components/NapBlock.astro';
 import LocationMap from '../components/LocationMap.astro';
@@ -23,7 +24,7 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
   <BreadcrumbSchema slot="head" trail={[{ name: 'Contact', path: '/contact' }]} />
   <header class="bg-blush">
     <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-      <p class="t-eyebrow text-ink-soft">Contact</p>
+                  <Breadcrumbs current="Contact" />
       <h1 class="t-h2 mt-6 max-w-[20ch] text-[2.5rem] md:text-[4rem]">Come and see us.</h1>
       <p class="t-body mt-7 max-w-[62ch]">
         The studio is in {business.address.neighborhood}, minutes from Hillcrest, Bankers Hill and

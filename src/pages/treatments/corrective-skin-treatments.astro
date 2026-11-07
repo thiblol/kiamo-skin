@@ -14,6 +14,7 @@ import Reveal from '../../components/Reveal.astro';
 import ServiceMenu from '../../components/sections/ServiceMenu.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 import TreatmentProof from '../../components/TreatmentProof.astro';
 import TrustBar from '../../components/TrustBar.astro';
@@ -188,7 +189,10 @@ const service = {
       <div class="wrap pt-[calc(60px+40px)] pb-14 md:pt-[calc(60px+64px)] md:pb-20">
         <div class="grid items-center gap-10 md:grid-cols-2 md:gap-14 lg:gap-20">
           <div>
-            <p class="t-eyebrow text-ink-soft">Corrective Skincare</p>
+            <Breadcrumbs
+              ancestors={[{ name: 'Treatments', path: '/treatments/' }]}
+              current="Corrective Skin Treatments"
+            />
             <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.25rem] md:text-[3.5rem]">
               Corrective Skin Treatments in San Diego — Built Around Your Skin
             </h1>

@@ -7,6 +7,7 @@ import PanelWipe from '../../components/PanelWipe.astro';
 import FaqLocation from '../../components/sections/FaqLocation.astro';
 import CollectionSchema from '../../components/schema/CollectionSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { treatments } from '../../data/treatments';
 import { treatmentTrust, studioProof } from '../../data/treatment-trust';
 import { business } from '../../config/business';
@@ -35,7 +36,7 @@ import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
   <BreadcrumbSchema slot="head" trail={[{ name: 'Treatments', path: '/treatments' }]} />
   <header class="bg-blush">
     <div class="wrap pt-[calc(60px+40px)] pb-16 md:pt-[calc(60px+64px)] md:pb-24">
-      <p class="t-eyebrow text-ink-soft">Treatments</p>
+                  <Breadcrumbs current="Treatments" />
       <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.25rem] md:text-[3.5rem]">
         Corrective Skin &amp; Scalp Treatments in San Diego — For Pigmentation, Acne, and Scalp
       </h1>

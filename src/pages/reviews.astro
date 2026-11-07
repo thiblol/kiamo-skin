@@ -40,6 +40,7 @@ import NapBlock from '../components/NapBlock.astro';
 import LocationMap from '../components/LocationMap.astro';
 import TrustBadge from '../components/sections/TrustBadge.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import SpeakableSchema from '../components/schema/SpeakableSchema.astro';
 import FaqSchema from '../components/schema/FaqSchema.astro';
 import PersonSchema from '../components/schema/PersonSchema.astro';
@@ -153,7 +154,7 @@ const description =
         class="wrap grid items-center gap-12 pt-[calc(60px+72px)] pb-20 md:grid-cols-[1fr_0.95fr] md:gap-16 md:pt-[calc(60px+112px)] md:pb-28"
       >
         <div>
-          <p class="t-eyebrow text-ink-soft">Reviews · Mission Hills studio</p>
+                      <Breadcrumbs current="Reviews" meta="Mission Hills studio" />
           <h1 class="t-h2 mt-6 max-w-[20ch] text-[2.5rem] md:text-[3.5rem]">
             What clients wrote, in their own words.
           </h1>
