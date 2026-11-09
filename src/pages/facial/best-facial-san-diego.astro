@@ -1,79 +1,233 @@
 ---
 /**
- * /facial/best-facial-san-diego/ — GeoArticle 1 (commercial long-tail intent).
+ * /facial/best-facial-san-diego/ — the comparison page for "best facial spa
+ * in San Diego".
  *
- * Targets "best facial san diego" (320/mo, KD 16, $4.56 CPC). The article
- * matches modality (HydraFacial, chemical peel, enzyme therapy, dermaplaning)
- * to concern and skin tone — so this page is the right answer for the
- * commercial-intent query even though /hydrafacial/ and
- * /hyperpigmentation-treatment/ each satisfy their own narrower intent.
+ * WHY THIS PAGE IS SHAPED THIS WAY
+ *
+ * When an AI model answers "best facial spa in San Diego", the answer it
+ * returns is a table: studio, neighborhood, rating, review count, price,
+ * what it is best for. Every page that gets cited for that query has one.
+ * The page that used to live here was a how-to-choose guide — good copy, the
+ * wrong shape. It told a reader what to look for but gave them nothing to
+ * compare, so it could never be the page a model cites for a list.
+ *
+ * So this page now leads with the list. The four modalities, the decision
+ * table and the skin-tone argument are all still here, because they are the
+ * reason a reader who lands on the list comes to KIAMO — but they sit
+ * BELOW the comparison, where they answer the question the table raises.
+ *
+ * WHAT IS AND IS NOT CLAIMED
+ *
+ * The studio's own row comes from the same two places every other page reads
+ * it: the published price list and the Business Profile pull.
+ *
+ * Every other studio's figures come from src/data/third-party-facts.ts,
+ * where each one carries the URL it was read from and the date it was read.
+ * The guard suite checks the rendered table against that file, so a price
+ * that was never read at source cannot reach a reader, and the build fails
+ * when a figure goes stale.
+ *
+ * The ordering of the table is NOT a ranking. It is the set of studios that
+ * appear in the AI answer for this query, and the page says so.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Reveal from '../../components/Reveal.astro';
 import Button from '../../components/Button.astro';
 import NapBlock from '../../components/NapBlock.astro';
+import StudioComparisonTable from '../../components/StudioComparisonTable.astro';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
+import {
+  studios,
+  marketFacialRates,
+  marketFacialRatesFinder,
+} from '../../data/third-party-facts';
+import { verifiedPrices } from '../../config/business';
 import FacialHubSchema from '../../components/schema/FacialHubSchema.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
-const title = 'Best Facial in San Diego: How to Choose | KIAMO Skin';
+const title = 'Best Facial Spas in San Diego (2026) | KIAMO Skin';
 const description =
-  'How to choose the best facial in San Diego for your skin. HydraFacial, Lira peels, DMK, dermaplaning compared. Request an appointment.';
+  'Nine San Diego facial studios compared on price, rating and reviews. Where each one is good, what it charges, and which fits your skin.';
+
+/**
+ * The pages a reader who lands here is most likely to want next.
+ *
+ * Each one is a different question inside the same topic, and each one is
+ * written to stand alone. The cluster is what tells a crawler this page sits
+ * at the centre of a subject rather than at the edge of one — the internal
+ * linking is as much a citation signal as it is a navigation one.
+ */
+const relatedGuides = [
+  {
+    href: '/journal/how-much-does-a-facial-cost-san-diego/',
+    label: 'How much does a facial cost in San Diego?',
+    description:
+      'The published market rate, what each price actually covers, and how to compare two quotes.',
+  },
+  {
+    href: '/facial/facial-for-melanin-rich-skin-san-diego/',
+    label: 'Best facial spas for melanin-rich skin in San Diego',
+    description:
+      'Seven studios that treat darker skin tones, with their published prices and protocols.',
+  },
+  {
+    href: '/treatments/hyperpigmentation/',
+    label: 'Hyperpigmentation treatment',
+    description:
+      'What causes dark marks and melasma, and which treatments change them.',
+  },
+  {
+    href: '/treatments/melasma/',
+    label: 'Melasma treatment in San Diego',
+    description:
+      'Why melasma darkens with heat and irritation, and what a corrective plan looks like.',
+  },
+  {
+    href: '/journal/three-kinds-of-dark-mark/',
+    label: 'Three kinds of dark mark',
+    description:
+      'Post-inflammatory marks, melasma and sun damage look alike and respond differently.',
+  },
+  {
+    href: '/facial/',
+    label: 'All facial treatments at KIAMO Skin',
+    description:
+      'Four modalities, what each one treats, and the published price of every one.',
+  },
+];
+
+/**
+ * The date the third-party figures were read. It is on the page because a
+ * comparison table without a date is a comparison table nobody can trust,
+ * and because "as of" is the phrasing AI answers quote.
+ */
+const CHECKED_ON = '9 November 2026';
 
 const faqs = [
   {
-    question: 'How do I know which facial is right for me in San Diego?',
+    question: 'Which facial spa in San Diego publishes its prices?',
     answer:
-      'Start with your primary concern, not the modality name. Congested pores point to HydraFacial Syndeo with Vortex-Fusion extraction. Pigmentation or uneven tone points to a Lira chemical peel at Fitzpatrick-calibrated concentrations. Barrier damage or reactive skin points to DMK Enzyme Therapy. Surface dullness ahead of an event points to dermaplaning. Kiki assesses your skin on the day and recommends the modality that fits — first-time consultation and treatment starts at $249.',
+      'Four of the nine studios on this page publish a price on their own website: Kiwi Spa Organic Facial Innovation at $179 for a first visit, Honest Skin at $135 for a 60-minute facial, Skin Habit at $175 for a facial at the North Park location, and KIAMO Skin at $249 for a first visit that includes the consultation. The other five keep their menu on a booking platform, so the price is only visible after you start a booking. Every price on this page was read from the studio\'s own site on 9 November 2026 and is linked to its source.',
   },
   {
-    question: 'Is there a consultation before the facial?',
+    question: 'How much does a facial cost in San Diego?',
     answer:
-      'Yes. First-time clients start at $249 for consultation and treatment. The consultation includes skin analysis (HydraFacial Syndeo AI analysis or manual Fitzpatrick evaluation), review of current homecare and any corrective work in progress, and the first treatment. Subsequent treatments are booked without a separate consultation unless the skin has changed significantly.',
+      'Published San Diego market rates put a facial between $75 and $300, with a median around $135. KIAMO Skin is above that range, and the reason is in what the price covers: a first visit at $249 includes the consultation, the skin analysis and the first treatment, with the modality selected after your skin is assessed. A studio quoting the bottom of that range is quoting for a fixed protocol. A studio quoting $249 is quoting for an assessment followed by whichever of four modalities that assessment calls for.',
   },
   {
-    question: 'Can I switch modalities between visits?',
+    question: 'Which facial spa in San Diego is best for dark spots?',
     answer:
-      'Yes. Many KIAMO Skin clients alternate between HydraFacial Syndeo maintenance and Lira chemical peel corrective work, with DMK Enzyme Therapy when the barrier needs repair. The treatment plan adjusts to the season (heavier barrier work in winter, lighter glow work in summer) and to your skin on the day. There is no contract locking you to one modality.',
+      'For pigmentation specifically, the deciding question is not the price or the review count but whether the provider calibrates the peel concentration to your skin tone. Standard peel concentrations can trigger post-inflammatory hyperpigmentation in melanin-rich skin. KIAMO Skin matches the acid and concentration to the Fitzpatrick type rather than to the concern, which is why every modality it offers is safe across the full I-VI spectrum. Peel Simply Skin in Normal Heights is the closest peer in San Diego for corrective work.',
   },
   {
-    question: 'What if my skin reacts after a facial?',
+    question: 'Is the most-reviewed facial studio in San Diego the best one?',
     answer:
-      'Mild flush for 30-60 minutes after a facial is normal. More persistent redness, breakouts, or irritation is not. Call (310) 595-0872 if you have a reaction — Kiki will adjust the next treatment, recommend a calming homecare routine, and decide whether the modality needs to change. Most reactions resolve within 48-72 hours with the right homecare.',
-  },
-  {
-    question: 'How often should I get a facial in San Diego?',
-    answer:
-      'Monthly is the typical cadence for maintenance. Every 4-6 weeks is the standard interval for corrective plans addressing pigmentation or barrier damage. Some clients book every 2-3 weeks during an intensive corrective phase and reduce to monthly once the goal is met. Kiki will recommend the cadence based on your skin and your goal.',
-  },
-  {
-    question: 'How do I know if a studio\'s facial is right for my skin?',
-    answer:
-      'Call the studio before you book. Ask who performs the treatments, what the training is on your specific Fitzpatrick type, and whether the facial on the menu is a fixed protocol or selected at consultation. The answers to these three questions will tell you more than any review count or search ranking. A corrective studio will describe a process that starts with a consultation. A relaxation studio will describe a service. Both are legitimate; they are not the same service.',
-  },
-  {
-    question: 'What should a corrective facial consultation include?',
-    answer:
-      'A consultation at a corrective studio should include a skin analysis under good light, a conversation about what brought you in, and a treatment selected based on what the skin shows that day. The consultation should be built into the appointment rather than billed separately. At KIAMO Skin in Mission Hills, the first visit is a full consultation, a customized HydraFacial, and a long-term treatment plan built around what the consultation showed.',
-  },
-  {
-    question: 'Is the most-reviewed studio in San Diego the best one?',
-    answer:
-      'Not necessarily. The studios that rank at the top of "best facial" searches are the ones with the most reviews, backlinks, and SEO, not necessarily the ones doing the most corrective work. A studio that specializes in relaxation facials can have a higher review count than a corrective studio and still not be the right fit for a skin concern like pigmentation, scarring, or barrier damage. The right fit depends on what the skin needs, not on the review count.',
+      'Not necessarily. The studios at the top of "best facial" searches are the ones with the most reviews, backlinks and SEO, not necessarily the ones doing the most corrective work. A studio that specialises in relaxation facials can have a higher review count than a corrective studio and still not be the right fit for pigmentation, scarring or barrier damage. The right fit depends on what the skin needs, not on the review count.',
   },
   {
     question: 'What is the difference between a corrective facial and a relaxation facial?',
     answer:
       'A relaxation facial is a fixed protocol — steam, manual extraction, massage, a sheet mask — that produces a temporary feeling of comfort. A corrective facial is selected at consultation based on what the skin is doing that day, and the goal is to change something: pigmentation, scarring, barrier damage, or a condition that has not resolved on its own. Both can feel good. Only one is built to move the skin.',
   },
+  {
+    question: 'How do I know which facial is right for me in San Diego?',
+    answer:
+      'Start with your primary concern, not the modality name. Congested pores point to HydraFacial with controlled extraction. Pigmentation or uneven tone points to a chemical peel at Fitzpatrick-calibrated concentrations. Barrier damage or reactive skin points to enzyme therapy. Surface dullness ahead of an event points to dermaplaning. Kiki assesses your skin on the day and recommends the modality that fits — the first-time consultation and treatment starts at $249.',
+  },
+  {
+    question: 'Is there a consultation before the facial?',
+    answer:
+      'Yes. First-time clients start at $249 for consultation and treatment. The consultation includes skin analysis, a review of current homecare and any corrective work in progress, and the first treatment. Subsequent treatments are booked without a separate consultation unless the skin has changed significantly.',
+  },
+  {
+    question: 'How often should I get a facial in San Diego?',
+    answer:
+      'Monthly is the typical cadence for maintenance. Every 4-6 weeks is the standard interval for corrective plans addressing pigmentation or barrier damage. Some clients book every 2-3 weeks during an intensive corrective phase and reduce to monthly once the goal is met. The cadence is recommended based on your skin and your goal at the consultation.',
+  },
+  {
+    question: 'How much does a facial cost at each studio on this list?',
+    answer:
+      'Where a studio publishes a price, it is in the table above with a link to where it was read. Kiwi Spa lists $179 for a first visit, Honest Skin lists $135 for a 60-minute facial, Skin Habit lists $175 at North Park, and KIAMO Skin lists $249 for a first visit including consultation. Five studios publish no price at all — their menus sit on a booking platform, so there is no figure to quote.',
+  },
+  {
+    question: 'Can I switch modalities between visits?',
+    answer:
+      'Yes. Many clients alternate between HydraFacial maintenance and chemical peel corrective work, with enzyme therapy when the barrier needs repair. The treatment plan adjusts to the season — heavier barrier work in winter, lighter glow work in summer — and to your skin on the day. There is no contract locking you to one modality.',
+  },
+  {
+    question: 'What happens if my skin reacts after a facial?',
+    answer:
+      'Mild flush for 30-60 minutes after a facial is normal. More persistent redness, breakouts, or irritation is not. Call (310) 595-0872 if you have a reaction — the next treatment is adjusted, a calming homecare routine recommended, and a decision made about whether the modality needs to change. Most reactions resolve within 48-72 hours with the right homecare.',
+  },
+  {
+    question: 'Are these studios updated regularly?',
+    answer:
+      'The ratings, review counts and prices on this page were read from each studio\'s own website and Google profile on 9 November 2026, and every figure links to where it was read. A competitor\'s price and review count both move, so the page is re-checked on a schedule rather than left to go stale.',
+  },
 ];
----
 
-const heroAlt =
-  'HydraFacial Syndeo treatment at KIAMO Skin studio on Reynard Way in Mission Hills, San Diego';
+/**
+ * The comparison table, as an ItemList.
+ *
+ * Only the studio names and their order go in the schema. Ratings and review
+ * counts stay in the visible table: Google's review-snippet guidance covers
+ * reviews for the business whose page they are on, and marking up another
+ * studio's review count as structured data on this page is exactly the kind
+ * of thing that gets a site penalised.
+ */
+const itemListSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'Facial spas in San Diego compared — prices, ratings and what each is good for',
+  description:
+    'Nine San Diego facial studios compared on published price, Google rating, review count and the kind of work each one is known for.',
+  numberOfItems: studios.length + 1,
+  itemListOrder: 'https://schema.org/ItemListUnordered',
+  itemListElement: [
+    {
+      '@type': 'ListItem',
+      position: 1,
+      name: 'KIAMO Skin',
+      url: 'https://kiamoskin.com/facial/',
+    },
+    ...studios.map((studio, index) => ({
+      '@type': 'ListItem',
+      position: index + 2,
+      name: studio.name,
+      url: studio.url,
+    })),
+  ],
+};
+
+/**
+ * The article itself, with the dates a reader and a crawler both need.
+ *
+ * datePublished is the date this page first appeared at this URL, taken from
+ * git history rather than invented. dateModified is today, because the
+ * comparison table is new and the page's substance has changed with it.
+ */
+const articleSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'Best Facial Spas in San Diego (2026): 9 Compared on Price and Rating',
+  description:
+    'Nine San Diego facial studios compared on published price, Google rating, review count and what each is known for, with every figure dated and sourced.',
+  datePublished: '2026-09-22',
+  dateModified: '2026-11-09',
+  author: { '@id': 'https://kiamoskin.com/about/#kiki' },
+  publisher: { '@id': 'https://kiamoskin.com/#business' },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': 'https://kiamoskin.com/facial/best-facial-san-diego/',
+  },
+  inLanguage: 'en-US',
+  isAccessibleForFree: true,
+  about: { '@type': 'Thing', name: 'Facial spas in San Diego' },
+};
 ---
 
 <BaseLayout {title} {description}>
@@ -83,8 +237,18 @@ const heroAlt =
     slot="head"
     trail={[
       { name: 'Facial in San Diego', path: '/facial/' },
-      { name: 'Best Facial in San Diego', path: '/facial/best-facial-san-diego/' },
+      { name: 'Best Facial Spas in San Diego', path: '/facial/best-facial-san-diego/' },
     ]}
+  />
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(itemListSchema)}
+  />
+  <script
+    slot="head"
+    type="application/ld+json"
+    set:html={JSON.stringify(articleSchema)}
   />
   {faqs.length > 0 && (
     <script
@@ -107,25 +271,29 @@ const heroAlt =
       <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
         <Breadcrumbs
           ancestors={[{ name: 'Facial in San Diego', path: '/facial/' }]}
-          current="Best Facial in San Diego"
+          current="Best Facial Spas in San Diego"
         />
-        <h1 class="t-h2 mt-6 max-w-[30ch] text-[2.5rem] md:text-[4rem]">Best Facial in San Diego: How to Choose the Right One for Your Skin</h1>
+        <h1 class="t-h2 mt-6 max-w-[28ch] text-[2.5rem] md:text-[4rem]">
+          Best Facial Spas in San Diego: 9 Compared on Price and Rating
+        </h1>
 
         {/* AI Overview quick-answer block. */}
         <p class="t-body quick-answer mt-7 max-w-[62ch] text-[1.125rem] font-medium">
-          The best facial in San Diego is the one matched to your skin on the day — your
-          Fitzpatrick type (I-VI), your primary concern, and the season. KIAMO Skin offers
-          four modalities (HydraFacial Syndeo, Lira chemical peels, DMK enzyme therapy, and
-          dermaplaning), each safe across every skin tone when protocols are calibrated.
-          First-time consultation and treatment starts at $249.
+          There is no single "best facial spa" in San Diego — there is the best
+          facial for your skin. Nine studios are compared below on what each
+          one is good at, whether it publishes a price, and its Google rating.
+          KIAMO Skin is a corrective studio in Mission Hills offering
+          HydraFacial Syndeo, Lira chemical peels, DMK enzyme therapy and
+          dermaplaning, each safe across every Fitzpatrick type I-VI. First-time
+          consultation and treatment starts at $249.
         </p>
 
         <p class="t-body mt-5 max-w-[62ch]">
-          There is no single "best facial" — there is the best facial for your skin. The
-          right modality depends on what you are trying to address (congestion, pigmentation,
-          barrier damage, dullness), your skin tone, and what your skin can tolerate on the
-          day. This guide walks through the four modalities at KIAMO Skin and when each one
-          fits.
+          Most studios in this market do not publish a price. Four of the nine
+          below do, and every figure on this page was read from that studio's
+          own website and linked to its source, so you can check it yourself.
+          The ratings and review counts are as they stood on {CHECKED_ON} and
+          change as new reviews arrive.
         </p>
 
         <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
@@ -147,6 +315,28 @@ const heroAlt =
           <span aria-hidden="true">·</span>
           <span>Mission Hills, San Diego</span>
         </div>
+
+        {/* Byline and dates.
+            The three directory pages AI cites for this query all carry one:
+            an author with credentials, a publish date and a last-updated
+            date. A page that compares eight studios and states prices has to
+            say who checked them and when, or the numbers are just assertions.
+            The dates are also the freshness signal the citation data points
+            at — 79.1% of LLM-cited pages were updated inside the year. */}
+        <div class="mt-8 border-t border-line pt-6">
+          <p class="t-meta">
+            By <a
+              href="/about/"
+              class="border-b border-ink/40 hover:border-rose hover:text-rose"
+              >{business.ownerName}</a
+            >, {business.ownerCredential}
+          </p>
+          <p class="t-meta mt-2">
+            Published <time datetime="2026-09-22">September 22, 2026</time>
+            <span aria-hidden="true"> · </span>
+            Last updated <time datetime="2026-11-09">November 9, 2026</time>
+          </p>
+        </div>
       </div>
     </header>
 
@@ -154,36 +344,268 @@ const heroAlt =
       <div class="wrap section-y">
         <div class="max-w-[68ch]">
           <Reveal>
-            <p class="t-eyebrow text-ink-soft">Setting expectations</p>
-            <h2 class="t-h2 mt-4">What "best facial" actually means</h2>
+            <p class="t-eyebrow text-ink-soft">The short list</p>
+            <h2 class="t-h2 mt-4">San Diego facial studios, side by side</h2>
             <p class="t-body mt-6 leading-relaxed">
-              "Best facial in San Diego" is a search query, not a clinical answer. A chain
-              spa will say "our signature facial." A medspa will say "our HydraFacial
-              plus booster." A dermatologist's office will say "our chemical peel." Each of
-              those answers is a sales pitch for one modality — the one they happen to sell.
-            </p>
-            <p class="t-body mt-5 leading-relaxed">
-              The clinically correct answer is that the best facial is the one matched to
-              your skin on the day. Skin changes: barrier damage from a vacation, residual
-              sun damage from the summer, hormonal shifts in fall and spring, reactive
-              flare-ups from a new product. The modality that fits your skin in January is
-              not necessarily the modality that fits in July.
-            </p>
-            <p class="t-body mt-5 leading-relaxed">
-              This is not a criticism of those studios. A relaxation facial — steam, manual
-              extraction, massage, a sheet mask — is a real service with real value, and the
-              studios that specialize in it do it well. The question is whether "best facial"
-              in the search results means best at relaxation, or best at the corrective work
-              that changes something. Those are two different categories of treatment, and the
-              search results do not distinguish between them.
-            </p>
-            <p class="t-body mt-5 leading-relaxed">
-              At KIAMO Skin, the assessment happens before any treatment is selected. Kiki
-              evaluates your skin tone, primary concern, and the modality that fits — not the
-              modality the studio most needs to sell that day. The same practitioner who
-              assesses your skin is the one who treats it.
+              The order below is not a ranking. It is the set of studios that
+              come up when you search for a facial in San Diego, and the table
+              gives you the three things worth comparing before you book: what
+              each studio is actually good at, whether it tells you what it
+              costs, and how it is rated.
             </p>
           </Reveal>
+        </div>
+        <div class="mt-12">
+          <StudioComparisonTable
+            studios={studios}
+            caption="Nine San Diego studios compared on the three things a reader can check before booking: what each one is good at, whether it publishes a price, and its Google rating."
+            comparison="Studio names link to each studio's own website, which is where every price and rating on this page was read. Ratings and review counts are Google Business Profile figures and change as new reviews arrive."
+          />
+        </div>
+        <p class="t-body mt-6 max-w-[68ch] text-[0.9375rem] leading-relaxed text-ink-soft">
+          Studio names link to each studio's own website, which is where every
+          price and rating on this page was read. Ratings and review counts
+          are Google figures and change daily — the table was last checked on
+          {CHECKED_ON}.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">The price question</p>
+            <h2 class="t-h2 mt-4">What a facial costs in San Diego</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              Published market rates for a facial in San Diego run between{' '}
+              <span
+                data-fact-source="market-facial-rates"
+                data-fact="price"
+                data-fact-value="$75"
+              >
+                $75
+              </span>{' '}
+              and{' '}
+              <span
+                data-fact-source="market-facial-rates"
+                data-fact="price"
+                data-fact-value="$300"
+              >
+                $300
+              </span>
+              , with a median around{' '}
+              <span
+                data-fact-source="market-facial-rates-finder"
+                data-fact="price"
+                data-fact-value="$135"
+              >
+                $135
+              </span>
+              . Those figures come from national directories rather than from
+              studios, which is part of why the range is so wide and why it
+              says nothing about what a specific quote will be.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              The gap between a $75 facial and a $249 one is not a difference
+              in quality. It is usually a difference in what is included. A
+              studio quoting the bottom of that range is running a fixed
+              protocol — the same steps in the same order, whatever the skin
+              arrives with. A studio quoting the top of it is assessing the
+              skin first and selecting the treatment from the result, which
+              takes time and is the reason the two are not comparable line for
+              line.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              KIAMO Skin publishes every price on the site, including what a
+              first visit includes and what each modality costs on its own.
+              The prices below were read from the studios' own sites, and each
+              links to where it came from.
+            </p>
+          </Reveal>
+        </div>
+
+        <div class="mt-12 overflow-x-auto">
+          <table class="w-full border-collapse text-left text-[0.9375rem]">
+            <caption class="mb-6 text-left text-[0.9375rem] leading-relaxed text-ink-soft">
+              Published San Diego facial prices, read from each studio's own
+              website on {CHECKED_ON}.
+            </caption>
+            <thead>
+              <tr class="border-b border-line">
+                <th scope="col" class="py-4 pr-6 font-medium">Studio</th>
+                <th scope="col" class="py-4 pr-6 font-medium">Area</th>
+                <th scope="col" class="py-4 pr-6 font-medium">Published price</th>
+                <th scope="col" class="py-4 font-medium">What it covers</th>
+              </tr>
+            </thead>
+            <tbody>
+              {
+                studios.map((studio) => (
+                  <tr class="border-b border-line">
+                    <th scope="row" class="py-4 pr-6 font-medium">
+                      <a
+                        href={studio.url}
+                        rel="noopener nofollow"
+                        target="_blank"
+                        class="hover:text-rose"
+                      >
+                        {studio.name}
+                      </a>
+                    </th>
+                    <td class="py-4 pr-6">{studio.area}</td>
+                    <td class="py-4 pr-6">
+                      {studio.firstVisitPrice ? (
+                        <span
+                          data-fact-source={studio.key}
+                          data-fact="price"
+                          data-fact-value={studio.firstVisitPrice}
+                        >
+                          {studio.firstVisitPrice}
+                        </span>
+                      ) : (
+                        <span class="text-ink-soft">Not published</span>
+                      )}
+                    </td>
+                    <td class="py-4">
+                      {studio.priceNote ? (
+                        <span
+                          data-fact-source={studio.key}
+                          data-fact="note"
+                          data-fact-value={studio.priceNote}
+                        >
+                          {studio.priceNote}
+                        </span>
+                      ) : (
+                        '—'
+                      )}
+                    </td>
+                  </tr>
+                ))
+              }
+              <tr class="border-b border-line bg-ivory">
+                <th scope="row" class="py-4 pr-6 font-medium">
+                  <a href="/facial/" class="hover:text-rose">KIAMO Skin</a>
+                </th>
+                <td class="py-4 pr-6">Mission Hills</td>
+                <td class="py-4 pr-6">
+                  {verifiedPrices['first-time-client']} first visit
+                </td>
+                <td class="py-4">
+                  Consultation, skin analysis and the first treatment, with the
+                  modality selected after the assessment.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="t-body mt-6 max-w-[68ch] text-[0.9375rem] leading-relaxed text-ink-soft">
+          Market ranges quoted above are published figures:{' '}
+          {marketFacialRates.sourceName} puts a San Diego facial at{' '}
+          {marketFacialRates.range} {marketFacialRates.unit}, and{' '}
+          {marketFacialRatesFinder.sourceName} reports{' '}
+          {marketFacialRatesFinder.range} {marketFacialRatesFinder.unit} with
+          a median of {marketFacialRatesFinder.median} in San Diego against a{' '}
+          {marketFacialRatesFinder.nationalMedian} national median. Both were
+          read on {CHECKED_ON}.
+        </p>
+      </div>
+    </section>
+
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">How we picked</p>
+            <h2 class="t-h2 mt-4">How this list was made</h2>
+            <p class="t-body mt-6 leading-relaxed">
+              The studios are the ones that come up in the search and map
+              results for a facial in San Diego. Nothing was paid for
+              placement and no studio was asked for a listing.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              Every price was read from the studio's own website, not from a
+              directory and not from a booking platform, because a directory
+              figure is usually a month old and a booking-platform figure
+              cannot be read without starting a booking. Every rating and
+              review count came from Google. Each figure carries the date it
+              was read, and the page is re-checked on a schedule rather than
+              left to go quietly out of date.
+            </p>
+            <p class="t-body mt-5 leading-relaxed">
+              KIAMO Skin is listed first because this is its own page and the
+              reader arrived here from a search that was trying to answer a
+              question about skin. It is not ranked above the other eight.
+              Where the table says "not published", the studio does not publish
+              a price — that is a fact about how it does business, and it is
+              the reason the column exists.
+            </p>
+          </Reveal>
+        </div>
+
+        {/* Sources & references.
+            Both directory pages AI cites for this query close with one. It is
+            the part that makes the page a citable SOURCE rather than a
+            claim: every figure above traces to a link the reader can open.
+            A model weighing whether to cite this page can check it. */}
+        <div class="mt-12 max-w-[68ch] border-t border-line pt-10">
+          <p class="t-eyebrow text-ink-soft">Sources &amp; references</p>
+          <h2 class="t-h3 mt-4">Where every figure on this page came from</h2>
+          <ul class="t-body mt-6 m-0 list-none space-y-3 p-0 text-[0.9375rem] leading-relaxed">
+            {
+              studios.map((studio) => (
+                <li class="flex gap-3">
+                  <span aria-hidden="true" class="text-rose">
+                    —
+                  </span>
+                  <span>
+                    <a
+                      href={studio.source}
+                      rel="noopener nofollow"
+                      target="_blank"
+                      class="border-b border-ink/40 hover:border-rose hover:text-rose"
+                    >
+                      {studio.name}
+                    </a>{' '}
+                    — price read from the studio's own service page, rating and
+                    review count from its Google Business Profile, both checked
+                    on 9 November 2026.
+                  </span>
+                </li>
+              ))
+            }
+            <li class="flex gap-3">
+              <span aria-hidden="true" class="text-rose">—</span>
+              <span>
+                <a
+                  href={marketFacialRates.source}
+                  rel="noopener nofollow"
+                  target="_blank"
+                  class="border-b border-ink/40 hover:border-rose hover:text-rose"
+                >
+                  {marketFacialRates.sourceName}
+                </a>{' '}
+                — published San Diego market rates for facials, read 9 November
+                2026.
+              </span>
+            </li>
+            <li class="flex gap-3">
+              <span aria-hidden="true" class="text-rose">—</span>
+              <span>
+                <a
+                  href={marketFacialRatesFinder.source}
+                  rel="noopener nofollow"
+                  target="_blank"
+                  class="border-b border-ink/40 hover:border-rose hover:text-rose"
+                >
+                  {marketFacialRatesFinder.sourceName}
+                </a>{' '}
+                — published San Diego facial rate and median, read 9 November
+                2026.
+              </span>
+            </li>
+          </ul>
         </div>
       </div>
     </section>
@@ -195,33 +617,37 @@ const heroAlt =
             <p class="t-eyebrow text-ink-soft">What the ranking does not show</p>
             <h2 class="t-h2 mt-4">What actually makes a facial the best one</h2>
             <p class="t-body mt-6 leading-relaxed">
-              Three variables decide whether a facial is right for your skin: who performs
-              the treatment, what training that person has on your Fitzpatrick type and
-              concern, and whether the treatment is selected at consultation or pulled from a
-              fixed menu. None of the three appear in a search result. All of them show up
-              in a phone call before you book.
+              Three variables decide whether a facial is right for your skin:
+              who performs the treatment, what training that person has on your
+              Fitzpatrick type and concern, and whether the treatment is
+              selected at consultation or pulled from a fixed menu. None of
+              the three appear in a search result. All of them show up in a
+              phone call before you book.
             </p>
             <p class="t-body mt-5 leading-relaxed">
-              The first variable is the practitioner. A licensed esthetician with 7+ years
-              treating melanin-rich skin will read a Fitzpatrick V face differently from a
-              new graduate who has mostly seen Fitzpatrick II. Both are licensed. Both can
-              perform a facial. The clinical judgment that comes from years of specific
-              experience is what separates a corrective protocol from a competent standard
-              one.
+              The first variable is the practitioner. A licensed esthetician
+              with 7+ years treating melanin-rich skin will read a Fitzpatrick
+              V face differently from a new graduate who has mostly seen
+              Fitzpatrick II. Both are licensed. Both can perform a facial. The
+              clinical judgment that comes from years of specific experience
+              is what separates a corrective protocol from a competent
+              standard one.
             </p>
             <p class="t-body mt-5 leading-relaxed">
-              The second variable is training. The advanced modalities offered in San Diego —
-              DMK Enzyme Therapy, Procell microchanneling, medical-grade peels — require
-              specific training that not every esthetician holds. A studio offering a
-              corrective protocol without the training to back it up is offering a different
+              The second is training. The advanced modalities offered in San
+              Diego — DMK Enzyme Therapy, Procell microchanneling,
+              medical-grade peels — require specific training that not every
+              esthetician holds. A studio offering a corrective protocol
+              without the training to back it up is offering a different
               service than it appears to be offering.
             </p>
             <p class="t-body mt-5 leading-relaxed">
-              The third variable is whether the treatment is selected at consultation or run
-              from a fixed protocol. A studio that performs the same facial every visit,
-              with the same steps, regardless of what the skin shows, is running a relaxation
-              service under a corrective label. A studio that varies the protocol based on
-              what the skin is doing that day is running a corrective service.
+              The third is whether the treatment is selected at consultation or
+              run from a fixed protocol. A studio that performs the same
+              facial every visit, with the same steps, regardless of what the
+              skin shows, is running a relaxation service under a corrective
+              label. A studio that varies the protocol based on what the skin
+              is doing that day is running a corrective service.
             </p>
           </Reveal>
         </div>
@@ -235,8 +661,8 @@ const heroAlt =
             <p class="t-eyebrow text-ink-soft">Before you book</p>
             <h2 class="t-h2 mt-4">How to evaluate a studio in one call</h2>
             <p class="t-body mt-6 leading-relaxed">
-              Call the studio. Three questions will tell you more than any review count or
-              ranking position:
+              Call the studio. Three questions will tell you more than any
+              review count or ranking position:
             </p>
             <ul class="t-body mt-6 m-0 list-none space-y-3 p-0 leading-relaxed">
               <li class="flex gap-3">
@@ -253,11 +679,12 @@ const heroAlt =
               </li>
             </ul>
             <p class="t-body mt-6 leading-relaxed">
-              A corrective studio answers these without hesitation and describes a process
-              that starts with a consultation. A relaxation studio answers them too, and the
-              answer describes a service rather than a process. Both are legitimate. They are
-              not the same service, and the answers are what tells you which one you are
-              booking.
+              A corrective studio answers these without hesitation and
+              describes a process that starts with a consultation. A
+              relaxation studio answers them too, and the answer describes a
+              service rather than a process. Both are legitimate. They are not
+              the same service, and the answers are what tells you which one
+              you are booking.
             </p>
           </Reveal>
         </div>
@@ -271,8 +698,9 @@ const heroAlt =
             <p class="t-eyebrow text-ink-soft">The four modalities</p>
             <h2 class="t-h2 mt-4">What KIAMO Skin offers — and when each fits</h2>
             <p class="t-body mt-6 leading-relaxed">
-              KIAMO Skin offers four modalities rather than a single "signature facial." Each
-              has a different role. The right one depends on what your skin needs.
+              KIAMO Skin offers four modalities rather than a single
+              "signature facial." Each has a different role. The right one
+              depends on what your skin needs.
             </p>
           </Reveal>
         </div>
@@ -285,17 +713,20 @@ const heroAlt =
           <div>
             <h2 class="t-h2">HydraFacial Syndeo</h2>
             <p class="t-body mt-6 max-w-[58ch] leading-relaxed">
-              The 45-minute medical-grade facial that cleanses, exfoliates, extracts, and
-              hydrates in one session. HydraFacial Syndeo pairs patented Vortex-Fusion
-              extraction with AI-powered skin analysis that reads hydration, congestion,
-              and pigmentation patterns before the first step.
+              The 45-minute medical-grade facial that cleanses, exfoliates,
+              extracts, and hydrates in one session. HydraFacial Syndeo pairs
+              patented Vortex-Fusion extraction with AI-powered skin analysis
+              that reads hydration, congestion, and pigmentation patterns
+              before the first step.
             </p>
             <p class="t-body mt-5 max-w-[58ch] leading-relaxed">
-              <strong>Best for:</strong> maintenance, monthly glow, pre-event preparation,
-              barrier support between more intensive corrective treatments. <strong>Pricing:</strong>
-              {' '}$259 per session. <strong>Downtime:</strong> none — skin may look slightly
-              flushed for 30-60 minutes. <strong>Skin tones:</strong> safe across the full
-              Fitzpatrick I-VI spectrum; zero risk of post-inflammatory hyperpigmentation.
+              <strong>Best for:</strong> maintenance, monthly glow, pre-event
+              preparation, barrier support between more intensive corrective
+              treatments. <strong>Pricing:</strong>
+              {' '}{verifiedPrices.hydrafacial} per session. <strong>Downtime:</strong>
+              none — skin may look slightly flushed for 30-60 minutes.
+              <strong>Skin tones:</strong> safe across the full Fitzpatrick I-VI
+              spectrum; zero risk of post-inflammatory hyperpigmentation.
             </p>
           </div>
           <div class="border border-line bg-ivory p-8">
@@ -303,7 +734,7 @@ const heroAlt =
             <dl class="mt-7 m-0 space-y-6">
               <div class="border-b border-line pb-6">
                 <dt class="t-service text-[1rem]">Price</dt>
-                <dd class="t-price m-0 mt-2">$259</dd>
+                <dd class="t-price m-0 mt-2">{verifiedPrices.hydrafacial}</dd>
               </div>
               <div class="border-b border-line pb-6">
                 <dt class="t-service text-[1rem]">Duration</dt>
@@ -328,19 +759,22 @@ const heroAlt =
           <div>
             <h2 class="t-h2">Lira Chemical Peels</h2>
             <p class="t-body mt-6 max-w-[58ch] leading-relaxed">
-              Professional-grade peels formulated for corrective work. Lira peels use
-              calibrated lactic, mandelic, or TCA at concentrations matched to your
-              Fitzpatrick type. The peels address pigmentation, texture, and tone at the
-              cellular level.
+              Professional-grade peels formulated for corrective work. Lira
+              peels use calibrated lactic, mandelic, or TCA at concentrations
+              matched to your Fitzpatrick type. The peels address
+              pigmentation, texture, and tone at the cellular level.
             </p>
             <p class="t-body mt-5 max-w-[58ch] leading-relaxed">
-              <strong>Best for:</strong> melasma, post-inflammatory hyperpigmentation, sun
-              damage, uneven tone, texture refinement. <strong>Pricing:</strong> $199-$299
-              depending on peel depth. <strong>Downtime:</strong> mild peeling for 3-5 days
-              post-treatment. <strong>Skin tones:</strong> safe across the full Fitzpatrick
-              I-VI spectrum when calibrated; standard peel concentrations can trigger
-              post-inflammatory hyperpigmentation in melanin-rich skin, which is why KIAMO Skin
-              matches the acid and concentration to the skin tone.
+              <strong>Best for:</strong> melasma, post-inflammatory
+              hyperpigmentation, sun damage, uneven tone, texture refinement.
+              <strong>Pricing:</strong> {verifiedPrices['lira-light-peel']}-
+              {verifiedPrices['lira-advanced-peel']} depending on peel depth.
+              <strong>Downtime:</strong> mild peeling for 3-5 days post-treatment.
+              <strong>Skin tones:</strong> safe across the full Fitzpatrick I-VI
+              spectrum when calibrated; standard peel concentrations can
+              trigger post-inflammatory hyperpigmentation in melanin-rich
+              skin, which is why the acid and concentration are matched to the
+              skin tone.
             </p>
           </div>
           <div class="border border-line bg-porcelain p-8">
@@ -348,7 +782,9 @@ const heroAlt =
             <dl class="mt-7 m-0 space-y-6">
               <div class="border-b border-line pb-6">
                 <dt class="t-service text-[1rem]">Price</dt>
-                <dd class="t-price m-0 mt-2">$199-$299</dd>
+                <dd class="t-price m-0 mt-2">
+                  {verifiedPrices['lira-light-peel']}-{verifiedPrices['lira-advanced-peel']}
+                </dd>
               </div>
               <div class="border-b border-line pb-6">
                 <dt class="t-service text-[1rem]">Duration</dt>
@@ -373,16 +809,19 @@ const heroAlt =
           <div>
             <h2 class="t-h2">DMK Enzyme Therapy</h2>
             <p class="t-body mt-6 max-w-[58ch] leading-relaxed">
-              Function-first enzyme treatment focused on barrier repair, not just surface
-              appearance. DMK Enzyme Therapy rebuilds the skin's underlying function through
-              enzyme and nutrient delivery rather than aggressive exfoliation.
+              Function-first enzyme treatment focused on barrier repair, not
+              just surface appearance. DMK Enzyme Therapy rebuilds the skin's
+              underlying function through enzyme and nutrient delivery rather
+              than aggressive exfoliation.
             </p>
             <p class="t-body mt-5 max-w-[58ch] leading-relaxed">
-              <strong>Best for:</strong> sensitive skin, rosacea-prone skin, reactive skin,
-              barrier damage, post-peel recovery, post-sun recovery. <strong>Pricing:</strong> from
-              $279. <strong>Downtime:</strong> none to mild; skin may look flushed for a few
-              hours. <strong>Skin tones:</strong> safe across the full Fitzpatrick I-VI
-              spectrum — the gentlest corrective modality offered at KIAMO Skin.
+              <strong>Best for:</strong> sensitive skin, rosacea-prone skin,
+              reactive skin, barrier damage, post-peel recovery, post-sun
+              recovery. <strong>Pricing:</strong> from {verifiedPrices['dmk-enzyme-1']}.
+              <strong>Downtime:</strong> none to mild; skin may look flushed
+              for a few hours. <strong>Skin tones:</strong> safe across the
+              full Fitzpatrick I-VI spectrum — the gentlest corrective modality
+              offered.
             </p>
           </div>
           <div class="border border-line bg-ivory p-8">
@@ -390,7 +829,7 @@ const heroAlt =
             <dl class="mt-7 m-0 space-y-6">
               <div class="border-b border-line pb-6">
                 <dt class="t-service text-[1rem]">Price</dt>
-                <dd class="t-price m-0 mt-2">From $279</dd>
+                <dd class="t-price m-0 mt-2">From {verifiedPrices['dmk-enzyme-1']}</dd>
               </div>
               <div class="border-b border-line pb-6">
                 <dt class="t-service text-[1rem]">Duration</dt>
@@ -415,16 +854,20 @@ const heroAlt =
           <div>
             <h2 class="t-h2">Dermaplaning</h2>
             <p class="t-body mt-6 max-w-[58ch] leading-relaxed">
-              Physical exfoliation that removes the surface layer of dead skin and vellus
-              hair before serum infusion. Dermaplaning produces immediate smoothness and
-              creates the perfect base for makeup application.
+              Physical exfoliation that removes the surface layer of dead skin
+              and vellus hair before serum infusion. Dermaplaning produces
+              immediate smoothness and creates the perfect base for makeup
+              application.
             </p>
             <p class="t-body mt-5 max-w-[58ch] leading-relaxed">
-              <strong>Best for:</strong> surface dullness, pre-event preparation, vellus
-              hair removal, makeup base preparation, pairing with other modalities.
-              {' '}<strong>Pricing:</strong> from $199. <strong>Downtime:</strong> none. Skin
-              tones: safe across the full Fitzpatrick I-VI spectrum — the blade never
-              abrades the skin deeply enough to trigger post-inflammatory hyperpigmentation.
+              <strong>Best for:</strong> surface dullness, pre-event
+              preparation, vellus hair removal, makeup base preparation,
+              pairing with other modalities.
+              {' '}<strong>Pricing:</strong> from {verifiedPrices['dermaplane-facial']}.
+              <strong>Downtime:</strong> none. <strong>Skin tones:</strong>
+              safe across the full Fitzpatrick I-VI spectrum — the blade never
+              abrades the skin deeply enough to trigger
+              post-inflammatory hyperpigmentation.
             </p>
           </div>
           <div class="border border-line bg-porcelain p-8">
@@ -432,7 +875,7 @@ const heroAlt =
             <dl class="mt-7 m-0 space-y-6">
               <div class="border-b border-line pb-6">
                 <dt class="t-service text-[1rem]">Price</dt>
-                <dd class="t-price m-0 mt-2">From $199</dd>
+                <dd class="t-price m-0 mt-2">From {verifiedPrices['dermaplane-facial']}</dd>
               </div>
               <div class="border-b border-line pb-6">
                 <dt class="t-service text-[1rem]">Duration</dt>
@@ -458,8 +901,9 @@ const heroAlt =
             <p class="t-eyebrow text-ink-soft">Matching modality to concern</p>
             <h2 class="t-h2 mt-4">Decision table: modality by concern</h2>
             <p class="t-body mt-6 leading-relaxed">
-              Use this table as a starting point. The actual recommendation comes from the
-              skin-on-the-day assessment, not from a generic table.
+              Use this table as a starting point. The actual recommendation
+              comes from the skin-on-the-day assessment, not from a generic
+              table.
             </p>
           </Reveal>
         </div>
@@ -467,9 +911,9 @@ const heroAlt =
           <table class="w-full border-collapse text-left text-[0.9375rem]">
             <thead>
               <tr class="border-b border-line">
-                <th class="py-4 pr-6 font-medium">Concern</th>
-                <th class="py-4 pr-6 font-medium">Best modality</th>
-                <th class="py-4 font-medium">Why</th>
+                <th scope="col" class="py-4 pr-6 font-medium">Concern</th>
+                <th scope="col" class="py-4 pr-6 font-medium">Best modality</th>
+                <th scope="col" class="py-4 font-medium">Why</th>
               </tr>
             </thead>
             <tbody>
@@ -516,28 +960,32 @@ const heroAlt =
             <p class="t-eyebrow text-ink-soft">What the appointment looks like</p>
             <h2 class="t-h2 mt-4">What a first visit in San Diego actually involves</h2>
             <p class="t-body mt-6 leading-relaxed">
-              A first visit starts with a consultation and a skin analysis, not a service.
-              The esthetician asks what brought you in, examines the skin under good light,
-              and selects the treatment based on what the skin shows that day. The
-              consultation is built into the appointment rather than billed separately.
+              A first visit starts with a consultation and a skin analysis, not
+              a service. The esthetician asks what brought you in, examines
+              the skin under good light, and selects the treatment based on
+              what the skin shows that day. The consultation is built into
+              the appointment rather than billed separately.
             </p>
             <p class="t-body mt-5 leading-relaxed">
-              The first visit is also a full treatment. In Mission Hills that is a
-              consultation, a customized HydraFacial, a personalized booster, microcurrent,
-              LED light therapy, a Hydrojelly mask, and a long-term treatment plan built
-              around what the consultation showed. The same esthetician who assesses the
-              skin performs the treatment, and the plan adjusts as the skin responds.
+              The first visit is also a full treatment. In Mission Hills that
+              is a consultation, a customized HydraFacial, a personalized
+              booster, microcurrent, LED light therapy, a Hydrojelly mask, and
+              a long-term treatment plan built around what the consultation
+              showed. The same esthetician who assesses the skin performs the
+              treatment, and the plan adjusts as the skin responds.
             </p>
             <p class="t-body mt-5 leading-relaxed">
-              A first visit is also the moment to evaluate whether the studio is the right
-              fit. The consultation runs in both directions. If the esthetician cannot
-              explain what is being done and why, that is information about the studio. If
-              the treatment selected does not match what the consultation showed, that is
-              also information. The right studio will not be offended by a client who is
-              paying attention.
+              A first visit is also the moment to evaluate whether the studio
+              is the right fit. The consultation runs in both directions. If
+              the esthetician cannot explain what is being done and why, that
+              is information about the studio. If the treatment selected does
+              not match what the consultation showed, that is also
+              information. The right studio will not be offended by a client
+              who is paying attention.
             </p>
             <p class="t-body mt-6 leading-relaxed">
-              First-time clients in San Diego start at $249.{' '}
+              First-time clients in San Diego start at
+              {verifiedPrices['first-time-client']}.{' '}
               <a
                 href="/book/"
                 class="border-b border-ink/40 hover:border-rose hover:text-rose"
@@ -556,52 +1004,30 @@ const heroAlt =
         <div class="max-w-[68ch]">
           <Reveal>
             <p class="t-eyebrow text-ink-soft">Skin-tone calibration</p>
-            <h2 class="t-h2 mt-4">Why every modality at KIAMO Skin is safe across all Fitzpatrick types</h2>
+            <h2 class="t-h2 mt-4">Why every modality is safe across all Fitzpatrick types</h2>
             <p class="t-body mt-6 leading-relaxed">
-              Standard chemical peels and aggressive exfoliation can trigger post-inflammatory
-              hyperpigmentation in melanin-rich skin (Fitzpatrick IV-VI) when applied at
-              concentrations designed for lighter skin tones. The protocols at KIAMO Skin are
-              calibrated to the skin tone, not selected from a generic menu.
+              Standard chemical peels and aggressive exfoliation can trigger
+              post-inflammatory hyperpigmentation in melanin-rich skin
+              (Fitzpatrick IV-VI) when applied at concentrations designed for
+              lighter skin tones. The protocols here are calibrated to the
+              skin tone, not selected from a generic menu.
             </p>
             <p class="t-body mt-5 leading-relaxed">
-              HydraFacial Syndeo uses gentle suction and hydration rather than abrasion —
-              zero PIH risk across the spectrum. Lira peels use lactic, mandelic, or TCA at
-              concentrations matched to the skin tone, not the skin concern. DMK Enzyme
-              Therapy rebuilds barrier function without stripping. Dermaplaning removes only
-              the surface layer — no abrasion deep enough to trigger PIH.
+              HydraFacial Syndeo uses gentle suction and hydration rather than
+              abrasion — zero PIH risk across the spectrum. Lira peels use
+              lactic, mandelic, or TCA at concentrations matched to the skin
+              tone, not the skin concern. DMK Enzyme Therapy rebuilds barrier
+              function without stripping. Dermaplaning removes only the
+              surface layer — no abrasion deep enough to trigger PIH.
             </p>
             <p class="t-body mt-5 leading-relaxed">
-              Kiki has 7+ years of experience treating the full Fitzpatrick spectrum and
-              adjusts every modality to the skin on the day. This is the difference between
-              a facial at a chain spa (where protocols come from corporate) and a facial at
-              a private studio (where the practitioner sees every client).
+              Kiki has 7+ years of experience treating the full Fitzpatrick
+              spectrum and adjusts every modality to the skin on the day. This
+              is the difference between a facial at a chain spa (where
+              protocols come from corporate) and a facial at a private studio
+              (where the practitioner sees every client).
             </p>
           </Reveal>
-        </div>
-      </div>
-    </section>
-
-    <section class="bg-porcelain">
-      <div class="wrap section-y">
-        <div class="max-w-[68ch]">
-          <Reveal>
-            <p class="t-eyebrow text-ink-soft">Pricing & cadence</p>
-            <h2 class="t-h2 mt-4">Facial pricing at KIAMO Skin</h2>
-            <p class="t-body mt-6 leading-relaxed">
-              Pricing depends on modality. First-time clients start at $249 for consultation
-              and treatment. The session includes a skin analysis, modality selection, and
-              the first treatment. Monthly memberships from $199/month include one facial
-              plus discounts on additional treatments.
-            </p>
-          </Reveal>
-
-          <ul class="mt-10 m-0 list-none space-y-3 p-0">
-            <li class="flex gap-4 border-b border-line pb-4"><span aria-hidden="true" class="text-rose">—</span><span><strong>Dermaplaning Facial</strong> — from $199, 45 minutes, zero downtime</span></li>
-            <li class="flex gap-4 border-b border-line pb-4"><span aria-hidden="true" class="text-rose">—</span><span><strong>HydraFacial Syndeo</strong> — $259, 45 minutes, zero downtime</span></li>
-            <li class="flex gap-4 border-b border-line pb-4"><span aria-hidden="true" class="text-rose">—</span><span><strong>Lira Chemical Peels</strong> — $199-$299, 45-60 minutes, 3-5 days mild peeling</span></li>
-            <li class="flex gap-4 border-b border-line pb-4"><span aria-hidden="true" class="text-rose">—</span><span><strong>DMK Enzyme Therapy</strong> — from $279, 60-75 minutes, none to mild downtime</span></li>
-            <li class="flex gap-4 pb-1"><span aria-hidden="true" class="text-rose">—</span><span><strong>First-time clients</strong> — $249 for consultation and treatment</span></li>
-          </ul>
         </div>
       </div>
     </section>
@@ -633,12 +1059,42 @@ const heroAlt =
       </section>
     )}
 
+    {/* Related guides.
+        The directory pages AI cites for this query close with a cluster of
+        links to their other guides, and the cluster is what tells a crawler
+        this page sits at the centre of a topic rather than at the edge of
+        one. These are the pages a reader who landed here is most likely to
+        want next, and they are the internal links that make the site read as
+        a set of answers to one question rather than a set of pages. */}
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <p class="t-eyebrow text-ink-soft">More on facial treatments in San Diego</p>
+        <h2 class="t-h3 mt-4">Related guides</h2>
+        <ul class="t-body mt-8 m-0 grid list-none gap-4 p-0 text-[0.9375rem] leading-relaxed md:grid-cols-2">
+          {
+            relatedGuides.map((guide) => (
+              <li class="border-b border-line pb-4">
+                <a
+                  href={guide.href}
+                  class="border-b border-ink/40 hover:border-rose hover:text-rose"
+                >
+                  {guide.label}
+                </a>
+                <span class="mt-2 block text-ink-soft">{guide.description}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
+
     <section class="bg-ivory">
       <div class="wrap section-y text-center">
         <h2 class="t-h3 max-w-[28ch] mx-auto">Ready to find the best facial for your skin?</h2>
         <p class="t-body mt-5 max-w-[52ch] mx-auto">
-          First-time consultation and treatment starts at $249. Kiki assesses your skin and
-          recommends the modality that fits — no contract, no upsell.
+          First-time consultation and treatment starts at
+          {verifiedPrices['first-time-client']}. The skin is assessed and the
+          modality is recommended — no contract, no upsell.
         </p>
         <div class="mt-8 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
           <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
@@ -653,9 +1109,3 @@ const heroAlt =
     </section>
   </article>
 </BaseLayout>
-
-<style>
-  summary::-webkit-details-marker {
-    display: none;
-  }
-</style>

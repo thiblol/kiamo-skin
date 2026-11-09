@@ -1,0 +1,151 @@
+---
+/**
+ * StudioComparisonTable
+ * ---------------------
+ * The short list of San Diego facial studios, with the facts a reader is
+ * actually choosing on: what each one is good at, what it charges, and how
+ * it is rated.
+ *
+ * WHY THIS TABLE EXISTS
+ *
+ * When an AI model answers "best facial spa in San Diego", it returns a
+ * table: studio, neighborhood, rating, review count, price, what it is best
+ * for. Every page that gets cited for that query has one. This is that
+ * table — built from `src/data/third-party-facts.ts`, which carries a source
+ * URL and a read-date for every figure in it.
+ *
+ * It is also the page's real differentiator. Almost every studio in this
+ * market hides its prices. The column labelled "Published price" is the
+ * honest answer to a question most competitors have not answered, and the
+ * gap between "not published" and a figure is the whole editorial point of
+ * the page.
+ *
+ * TWO TABLES, NOT ONE
+ *
+ * The market list and the melanin-rich-skin list are built from DIFFERENT
+ * studios, because AI answers the two questions with two different sets.
+ * Asking about a facial for dark skin in San Diego returns Onyeka Tefari and
+ * The Formula Skin Lab; asking about the best facial in San Diego returns
+ * Kiwi Spa and Spa Kingston. Using one list for both would make each table
+ * wrong for half its readers.
+ *
+ * THE MARKUP CONTRACT
+ *
+ * Every third-party figure is rendered inside an element carrying
+ * `data-fact-source`, `data-fact` and `data-fact-value`. The guard suite
+ * reads those attributes and checks each figure against the data file, so a
+ * price that was never read at source cannot reach a reader. The visible
+ * text and the attribute are always the same string.
+ */
+import type { Studio } from '../data/third-party-facts';
+import { verifiedPrices } from '../config/business';
+import { reviewStats } from '../data/review-stats';
+
+interface Props {
+  /** The studios to list, in display order. */
+  studios: Studio[];
+  /** Caption under the table. Explains what the columns mean. */
+  caption: string;
+  /** What the table is comparing, for the caption. */
+  comparison: string;
+}
+
+const { studios, caption, comparison } = Astro.props;
+
+/**
+ * KIAMO's own figures come from the same two places every other page reads
+ * them: the published price list and the Business Profile pull. So the row
+ * cannot drift from the rest of the site.
+ */
+const selfPrice = verifiedPrices['first-time-client'];
+const selfRating = reviewStats.rating.toFixed(1);
+const selfReviews = String(reviewStats.count);
+---
+
+<div class="overflow-x-auto">
+  <table class="w-full border-collapse text-left text-[0.9375rem]">
+    <caption class="mb-6 text-left text-[0.9375rem] leading-relaxed text-ink-soft">
+      {caption}
+    </caption>
+    <thead>
+      <tr class="border-b border-line">
+        <th scope="col" class="py-4 pr-6 font-medium">Studio</th>
+        <th scope="col" class="py-4 pr-6 font-medium">Area</th>
+        <th scope="col" class="py-4 pr-6 font-medium">Good for</th>
+        <th scope="col" class="py-4 pr-6 font-medium">Published price</th>
+        <th scope="col" class="py-4 pr-6 font-medium">Google rating</th>
+        <th scope="col" class="py-4 font-medium">Reviews</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="border-b border-line bg-ivory">
+        <th scope="row" class="py-4 pr-6 font-medium">
+          <a href="/facial/" class="hover:text-rose">KIAMO Skin</a>
+        </th>
+        <td class="py-4 pr-6">Mission Hills</td>
+        <td class="py-4 pr-6">
+          Corrective work — pigmentation, melasma, acne scarring, barrier repair
+          — with protocols calibrated to your Fitzpatrick type rather than run
+          from a fixed menu.
+        </td>
+        <td class="py-4 pr-6">{selfPrice} first visit</td>
+        <td class="py-4 pr-6">{selfRating}</td>
+        <td class="py-4">{selfReviews}</td>
+      </tr>
+      {
+        studios.map((studio) => (
+          <tr class="border-b border-line">
+            <th scope="row" class="py-4 pr-6 font-medium">
+              <a
+                href={studio.url}
+                rel="noopener nofollow"
+                target="_blank"
+                class="hover:text-rose"
+              >
+                {studio.name}
+              </a>
+            </th>
+            <td class="py-4 pr-6">{studio.area}</td>
+            <td class="py-4 pr-6">{studio.fitFor}</td>
+            <td class="py-4 pr-6">
+              {studio.firstVisitPrice ? (
+                <span
+                  data-fact-source={studio.key}
+                  data-fact="price"
+                  data-fact-value={studio.firstVisitPrice}
+                >
+                  {studio.firstVisitPrice}
+                </span>
+              ) : (
+                <span class="text-ink-soft">Not published</span>
+              )}
+            </td>
+            <td class="py-4 pr-6">
+              {studio.rating && (
+                <span
+                  data-fact-source={studio.key}
+                  data-fact="rating"
+                  data-fact-value={studio.rating}
+                >
+                  {studio.rating}
+                </span>
+              )}
+            </td>
+            <td class="py-4">
+              {studio.reviewCount && (
+                <span
+                  data-fact-source={studio.key}
+                  data-fact="count"
+                  data-fact-value={studio.reviewCount}
+                >
+                  {studio.reviewCount}
+                </span>
+              )}
+            </td>
+          </tr>
+        ))
+      }
+    </tbody>
+  </table>
+  <p class="mt-4 text-[0.875rem] leading-relaxed text-ink-soft">{comparison}</p>
+</div>

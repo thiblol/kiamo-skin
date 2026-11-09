@@ -8,7 +8,15 @@
 
 import { test, describe, before } from 'node:test';
 import assert from 'node:assert/strict';
-import { loadPages, forEachPage, getPage, VERIFIED, FORBIDDEN, PRICE_PATTERN } from './test-utils.js';
+import {
+  loadPages,
+  forEachPage,
+  getPage,
+  VERIFIED,
+  FORBIDDEN,
+  PRICE_PATTERN,
+  allPrices,
+} from './test-utils.js';
 
 describe('Factual Guards', () => {
   before(async () => {
@@ -44,11 +52,22 @@ describe('Factual Guards', () => {
 
   describe('Pricing', () => {
     test('only verified prices appear', () => {
+      // Two kinds of price may be printed.
+      //
+      // The studio's OWN prices — `VERIFIED.prices` — each one checked
+      // against the client spec.
+      //
+      // A THIRD PARTY's price, on the comparison pages: another studio's
+      // published first-visit rate. Those come from
+      // src/data/third-party-facts.ts, where each one has the URL it was
+      // read from and the date it was read. The third-party guard suite
+      // checks those against the data file; this check makes sure no price
+      // slips through that is in NEITHER set.
       forEachPage(({ text, file }) => {
         const pricesFound = text.match(PRICE_PATTERN) ?? [];
         for (const price of pricesFound) {
           assert.ok(
-            VERIFIED.prices.has(price),
+            allPrices.has(price),
             `${file}: unverified price ${price}`
           );
         }
@@ -94,7 +113,11 @@ describe('Factual Guards', () => {
     });
 
     test('no rating, review count or aggregate is displayed or marked up', () => {
-      forEachPage(({ html, quotedCopy, file }) => {
+      forEachPage(({ html, ownCopy, file }) => {
+        // The structural rules run against the raw HTML and are not exempted
+        // for anybody: no aggregateRating node, no ratingValue or
+        // reviewCount key, no star glyphs. A comparison table is not a
+        // licence to mark up somebody else's reviews.
         assert.doesNotMatch(html, FORBIDDEN.ratings.schema, `${file}: has aggregateRating schema`);
         assert.doesNotMatch(html, FORBIDDEN.ratings.values, `${file}: displays rating values`);
         assert.doesNotMatch(html, FORBIDDEN.ratings.stars, `${file}: contains star symbols`);
@@ -113,9 +136,12 @@ describe('Factual Guards', () => {
         // The count is matched as a number rather than a fixed value, so the
         // phrase stays permitted as the listing grows.
         //
-        // Read from `quotedCopy`, so a reviewer's own words are not counted
-        // as the studio publishing a rating. The structural rules above
-        // still run against the raw HTML.
+        // Read from `ownCopy`, which drops quoted third-party material AND
+        // the marked cells holding another studio's rating and review count.
+        // Those figures are facts about a different business, read from that
+        // business's own site and Google profile — the third-party guard
+        // suite checks them against the data file, and this rule is about
+        // what the STUDIO says about its own rating.
         const permitted = new RegExp(
           [
             `Rated ${VERIFIED.reviewRating}(?:\\.0)? out of 5 stars?`,
@@ -124,7 +150,7 @@ describe('Factual Guards', () => {
           ].join('|'),
           'g'
         );
-        const withoutPermitted = quotedCopy.replace(permitted, ' ');
+        const withoutPermitted = ownCopy.replace(permitted, ' ');
 
         assert.doesNotMatch(
           withoutPermitted,

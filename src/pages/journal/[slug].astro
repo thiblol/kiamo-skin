@@ -146,11 +146,21 @@ const formatDate = (iso: string): string => {
                                 scope="row"
                                 class="t-body border-b border-line py-4 pr-6 align-top text-[0.9375rem] font-normal text-ink-soft"
                               >
-                                {cell}
+                                {typeof cell === 'string' ? cell : cell.text}
                               </th>
                             ) : (
                               <td class="t-body border-b border-line py-4 pr-6 align-top text-[0.9375rem] last:pr-0">
-                                {cell}
+                                {typeof cell === 'string' ? (
+                                  cell
+                                ) : (
+                                  <span
+                                    data-fact-source={cell.source}
+                                    data-fact={cell.fact}
+                                    data-fact-value={cell.text}
+                                  >
+                                    {cell.text}
+                                  </span>
+                                )}
                               </td>
                             ),
                           )}

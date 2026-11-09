@@ -7,6 +7,14 @@
 
 import { readdir, readFile } from 'node:fs/promises';
 import { join, relative, sep } from 'node:path';
+import {
+  studios,
+  darkSkinStudios,
+  thirdPartyFacts,
+  thirdPartyPrices,
+  thirdPartyRatings,
+  MAX_AGE_DAYS,
+} from '../src/data/third-party-facts.ts';
 
 export const DIST = new URL('../dist/', import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1');
 
@@ -82,7 +90,29 @@ async function walk(dir) {
         .replace(/<blockquote[^>]*data-quoted[^>]*>[\s\S]*?<\/blockquote>/gi, ' ')
         .replace(/<[^>]+>/g, ' ')
         .replace(/\s+/g, ' ');
-      pages.push({ route, file: rel, html, text, copy, quotedCopy });
+      /**
+       * The studio's own copy, with quoted material AND third-party facts
+       * removed.
+       *
+       * The comparison pages carry another studio's rating and review count
+       * in table cells. Those are facts about somebody else's business, read
+       * from their own site and their Google profile, and the studio has no
+       * control over them — so the rule that governs how the STUDIO talks
+       * about its own rating does not apply to them.
+       *
+       * The cells are marked with `data-fact-source`, and the third-party
+       * guard suite checks those separately and strictly: the figure must
+       * match the data file, and it may only be printed inside a marked
+       * element that names its source.
+       */
+      const ownCopy = html
+        .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+        .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+        .replace(/<blockquote[^>]*data-quoted[^>]*>[\s\S]*?<\/blockquote>/gi, ' ')
+        .replace(/<(td|span)\b[^>]*data-fact-source="[^"]*"[^>]*>[^<]*</gi, ' ')
+        .replace(/<[^>]+>/g, ' ')
+        .replace(/\s+/g, ' ');
+      pages.push({ route, file: rel, html, text, copy, quotedCopy, ownCopy });
     }
   }
 }
@@ -216,6 +246,40 @@ export const VERIFIED = {
     '$1,499',
   ]),
 };
+
+/**
+ * Third-party facts the site is allowed to publish.
+ *
+ * Re-exported from the site data file so the guard suite and the pages read
+ * the same list. The file carries the source URL and the date each figure was
+ * read; `MAX_AGE_DAYS` turns that date into a check, so a comparison table
+ * cannot keep publishing a price that was true eight months ago.
+ */
+export { studios, darkSkinStudios, thirdPartyFacts, thirdPartyPrices, thirdPartyRatings, MAX_AGE_DAYS };
+
+/**
+ * Prices the site may print for a third party.
+ *
+ * A competitor price is a fact about somebody else's business, so it cannot
+ * come from `VERIFIED.prices` — that set is the studio's own prices, each
+ * one checked against the client spec. These come from
+ * `src/data/third-party-facts.ts` instead, where each figure has a source
+ * URL and a date it was read.
+ *
+ * Both sets are allowed in a page's text. Which one applies depends on
+ * whether the page is about the studio or about the market, which is why the
+ * price guard checks the union and the third-party guard checks the
+ * third-party subset separately.
+ */
+export const allPrices = new Set([...VERIFIED.prices, ...thirdPartyPrices]);
+
+/**
+ * Ratings and review counts the site may print for a third party.
+ *
+ * `VERIFIED.reviewRating` is the studio's own rating, which the site may
+ * display. A competitor's rating is a third-party fact and lives here.
+ */
+export const allRatings = new Set([...thirdPartyRatings, String(VERIFIED.reviewRating)]);
 
 /**
  * Forbidden patterns that indicate legal/factual violations

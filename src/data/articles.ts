@@ -11,6 +11,29 @@ import hyperpigmentationHero from '../assets/hyperpigmentation-melasma-treatment
 import liraPeel from '../assets/lira-peel-chemical-peel-hyperpigmentation-san-diego.jpg';
 import acneScars from '../assets/acne-scar-revision-procell-microchanneling-melanin-rich-skin-san-diego.jpg';
 import sunscreen from '../assets/sunscreen-for-pigmentation-melanin-rich-skin-san-diego.jpg';
+import { facialCostArticle } from './facial-cost-article';
+
+/**
+ * A table cell.
+ *
+ * A plain string is ordinary copy. An object with a `source` is a fact about
+ * another business — a competitor's published price, a market rate read from
+ * a directory — and it renders wrapped in the attribution attributes the
+ * guard suite checks it against.
+ *
+ * The object form exists because these figures are the citation payload for
+ * price queries, and a price that cannot be traced back to where it was read
+ * is not a fact anyone can check.
+ */
+export type Cell =
+  | string
+  | {
+      text: string;
+      /** Key into src/data/third-party-facts.ts. */
+      source: string;
+      /** Which kind of figure this is. */
+      fact: 'price' | 'rating' | 'count' | 'note';
+    };
 
 export interface Article {
   slug: string;
@@ -43,7 +66,7 @@ export interface Article {
     | { p: string }
     | { ul: string[] }
     | { answer: string }
-    | { table: { caption: string; head: string[]; rows: string[][] } }
+    | { table: { caption: string; head: string[]; rows: Cell[][] } }
   )[];
   /** Questions come from live People Also Ask data, never invented. */
   faqs?: Faq[];
@@ -2243,4 +2266,10 @@ export const articles: Article[] = [
     faqHeading: 'Sunscreen and dark spot questions',
     cta: { label: 'See pigmentation treatment', href: '/treatments/hyperpigmentation/' },
   },
+  /**
+   * The price article. It lives in its own file because it is the one piece
+   * that carries third-party figures — competitor prices and published market
+   * rates — and those need attribution markup the other articles do not.
+   */
+  facialCostArticle,
 ];
