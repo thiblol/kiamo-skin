@@ -229,7 +229,7 @@ export const facialCostArticle: Article = {
     },
     {
       ul: [
-        'The full San Diego facial market — nine studios, day spas and corrective studios alike — is compared on the main San Diego facial guide.',
+        'The full San Diego facial market — nine studios, day spas and corrective facial spas alike — is compared on the main San Diego facial guide.',
         'The studios that treat melanin-rich skin are compared separately, with their own published prices and their own protocols.',
       ],
     },
@@ -301,5 +301,5 @@ export const facialCostArticle: Article = {
         'Because the price covers a consultation and a skin analysis as well as the treatment, and because the treatment is selected from that assessment rather than run from a fixed menu. The rate is published, the modalities are listed with their own prices, and there is no contract and no upsell at the end of the appointment.',
     },
   ],
-  cta: { label: 'Compare San Diego facial studios', href: '/facial/best-facial-san-diego/' },
+  cta: { label: 'Compare San Diego facial spas', href: '/facial/best-facial-san-diego/' },
 };

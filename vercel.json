@@ -3,12 +3,641 @@
     {
       "source": "/sitemap.xml",
       "destination": "/sitemap-index.xml",
-      "permanent": true
+      "statusCode": 301
     },
     {
       "source": "/journal/best-facial-san-diego/",
       "destination": "/facial/best-facial-san-diego/",
-      "permanent": true,
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments",
+      "destination": "/services/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/hydrafacial/",
+      "destination": "/services/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/hydrafacial",
+      "destination": "/services/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/lira-peels/",
+      "destination": "/services/chemical-peel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/lira-peels",
+      "destination": "/services/chemical-peel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/procell-microchanneling/",
+      "destination": "/services/microneedling/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/procell-microchanneling",
+      "destination": "/services/microneedling/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/dermaplaning/",
+      "destination": "/services/dermaplaning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/dermaplaning",
+      "destination": "/services/dermaplaning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/keravive-scalp/",
+      "destination": "/services/scalp-therapy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/keravive-scalp",
+      "destination": "/services/scalp-therapy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/dmk-enzyme-therapy/",
+      "destination": "/services/dmk-enzyme-therapy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/dmk-enzyme-therapy",
+      "destination": "/services/dmk-enzyme-therapy/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/acne/",
+      "destination": "/services/acne-treatment/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/acne",
+      "destination": "/services/acne-treatment/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/hyperpigmentation/",
+      "destination": "/services/hyperpigmentation-treatment/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/hyperpigmentation",
+      "destination": "/services/hyperpigmentation-treatment/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/melasma/",
+      "destination": "/services/melasma-treatment/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/melasma",
+      "destination": "/services/melasma-treatment/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/corrective-skin-treatments/",
+      "destination": "/services/corrective-skin-treatments/",
+      "statusCode": 301
+    },
+    {
+      "source": "/treatments/corrective-skin-treatments",
+      "destination": "/services/corrective-skin-treatments/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/",
+      "destination": "/services/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial",
+      "destination": "/services/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/",
+      "destination": "/services/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial",
+      "destination": "/services/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/",
+      "destination": "/services/hyperpigmentation-treatment/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment",
+      "destination": "/services/hyperpigmentation-treatment/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/la-jolla/",
+      "destination": "/service-areas/la-jolla/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/la-jolla",
+      "destination": "/service-areas/la-jolla/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/la-jolla/",
+      "destination": "/service-areas/la-jolla/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/la-jolla",
+      "destination": "/service-areas/la-jolla/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/la-jolla/",
+      "destination": "/service-areas/la-jolla/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/la-jolla",
+      "destination": "/service-areas/la-jolla/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/encinitas/",
+      "destination": "/service-areas/encinitas/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/encinitas",
+      "destination": "/service-areas/encinitas/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/encinitas/",
+      "destination": "/service-areas/encinitas/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/encinitas",
+      "destination": "/service-areas/encinitas/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/encinitas/",
+      "destination": "/service-areas/encinitas/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/encinitas",
+      "destination": "/service-areas/encinitas/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/carlsbad/",
+      "destination": "/service-areas/carlsbad/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/carlsbad",
+      "destination": "/service-areas/carlsbad/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/carlsbad/",
+      "destination": "/service-areas/carlsbad/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/carlsbad",
+      "destination": "/service-areas/carlsbad/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/carlsbad/",
+      "destination": "/service-areas/carlsbad/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/carlsbad",
+      "destination": "/service-areas/carlsbad/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/chula-vista/",
+      "destination": "/service-areas/chula-vista/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/chula-vista",
+      "destination": "/service-areas/chula-vista/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/chula-vista/",
+      "destination": "/service-areas/chula-vista/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/chula-vista",
+      "destination": "/service-areas/chula-vista/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/chula-vista/",
+      "destination": "/service-areas/chula-vista/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/chula-vista",
+      "destination": "/service-areas/chula-vista/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/del-mar/",
+      "destination": "/service-areas/del-mar/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/del-mar",
+      "destination": "/service-areas/del-mar/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/del-mar/",
+      "destination": "/service-areas/del-mar/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/del-mar",
+      "destination": "/service-areas/del-mar/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/del-mar/",
+      "destination": "/service-areas/del-mar/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/del-mar",
+      "destination": "/service-areas/del-mar/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/la-mesa/",
+      "destination": "/service-areas/la-mesa/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/la-mesa",
+      "destination": "/service-areas/la-mesa/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/la-mesa/",
+      "destination": "/service-areas/la-mesa/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/la-mesa",
+      "destination": "/service-areas/la-mesa/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/la-mesa/",
+      "destination": "/service-areas/la-mesa/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/la-mesa",
+      "destination": "/service-areas/la-mesa/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/north-park/",
+      "destination": "/service-areas/north-park/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/north-park",
+      "destination": "/service-areas/north-park/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/north-park/",
+      "destination": "/service-areas/north-park/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/north-park",
+      "destination": "/service-areas/north-park/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/north-park/",
+      "destination": "/service-areas/north-park/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/north-park",
+      "destination": "/service-areas/north-park/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/pacific-beach/",
+      "destination": "/service-areas/pacific-beach/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/pacific-beach",
+      "destination": "/service-areas/pacific-beach/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/pacific-beach/",
+      "destination": "/service-areas/pacific-beach/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/pacific-beach",
+      "destination": "/service-areas/pacific-beach/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/pacific-beach/",
+      "destination": "/service-areas/pacific-beach/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/pacific-beach",
+      "destination": "/service-areas/pacific-beach/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/point-loma/",
+      "destination": "/service-areas/point-loma/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/point-loma",
+      "destination": "/service-areas/point-loma/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/point-loma/",
+      "destination": "/service-areas/point-loma/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/point-loma",
+      "destination": "/service-areas/point-loma/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/point-loma/",
+      "destination": "/service-areas/point-loma/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/point-loma",
+      "destination": "/service-areas/point-loma/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/hillcrest/",
+      "destination": "/service-areas/hillcrest/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/hillcrest",
+      "destination": "/service-areas/hillcrest/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/hillcrest/",
+      "destination": "/service-areas/hillcrest/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/hillcrest",
+      "destination": "/service-areas/hillcrest/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/hillcrest/",
+      "destination": "/service-areas/hillcrest/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/hillcrest",
+      "destination": "/service-areas/hillcrest/facial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service-areas/mission-hills/",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service-areas/mission-hills",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service-areas/la-jolla/hydrafacial-ocean-swimmers/",
+      "destination": "/service-areas/la-jolla/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service-areas/la-jolla/hydrafacial-ocean-swimmers",
+      "destination": "/service-areas/la-jolla/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service-areas/pacific-beach/hydrafacial-pacific-beach-sun-damage/",
+      "destination": "/service-areas/pacific-beach/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service-areas/pacific-beach/hydrafacial-pacific-beach-sun-damage",
+      "destination": "/service-areas/pacific-beach/hydrafacial/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service-areas/la-mesa/lira-peel-la-mesa-melasma/",
+      "destination": "/service-areas/la-mesa/chemical-peel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service-areas/la-mesa/lira-peel-la-mesa-melasma",
+      "destination": "/service-areas/la-mesa/chemical-peel/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service-areas/north-park/procell-microchanneling-north-park-acne-scars/",
+      "destination": "/service-areas/north-park/microneedling/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service-areas/north-park/procell-microchanneling-north-park-acne-scars",
+      "destination": "/service-areas/north-park/microneedling/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service-areas/la-jolla/dermaplaning-la-jolla-sun-damaged-skin/",
+      "destination": "/service-areas/la-jolla/dermaplaning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/service-areas/la-jolla/dermaplaning-la-jolla-sun-damaged-skin",
+      "destination": "/service-areas/la-jolla/dermaplaning/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/coronado/",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/coronado",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/mission-hills/",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/facial/mission-hills",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/bankers-hill/",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/bankers-hill",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/downtown-san-diego/",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/downtown-san-diego",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/gaslamp-quarter/",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/gaslamp-quarter",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/harbor-island/",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/harbor-island",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/little-italy/",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/little-italy",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/midway-district/",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hydrafacial/midway-district",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/balboa-park/",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/balboa-park",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/downtown-san-diego/",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/downtown-san-diego",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/little-italy/",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/little-italy",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/mission-hills/",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/mission-hills",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/university-heights/",
+      "destination": "/service-areas/",
+      "statusCode": 301
+    },
+    {
+      "source": "/hyperpigmentation-treatment/university-heights",
+      "destination": "/service-areas/",
       "statusCode": 301
     }
   ]

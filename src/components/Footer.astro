@@ -2,7 +2,7 @@
 import Button from './Button.astro';
 import NapBlock from './NapBlock.astro';
 import { business } from '../config/business';
-import { treatmentLinks, primaryNav, areaLinks, CTA_LABEL } from '../config/nav';
+import { serviceLinks, primaryNav, areaLinks, CTA_LABEL } from '../config/nav';
 
 const year = 2026;
 ---
@@ -25,7 +25,7 @@ const year = 2026;
       <p class="t-eyebrow text-porcelain/60">Treatments</p>
       <ul class="m-0 mt-5 list-none p-0">
         {
-          treatmentLinks.map((t) => (
+          serviceLinks.map((t) => (
             <li>
               <a href={t.href} class="t-body block py-1 hover:text-blush">
                 {t.label}
@@ -88,9 +88,9 @@ const year = 2026;
         disclosure block, then privacy, terms and a sitemap link. Ours carries
         the studio's scope of practice rather than a referral disclaimer,
         because the thing a reader actually needs to know before booking is
-        that this is an esthetician studio and not a medical practice. */}
+        that this is a facial spa and not a medical practice. */}
     <p class="t-body mt-5 max-w-[64ch] text-[0.9375rem] text-porcelain/70">
-      KIAMO Skin is an esthetician studio, not a medical practice. Every treatment is
+      KIAMO Skin is a facial spa, not a medical practice. Every treatment is
       performed by {business.ownerName}, a California licensed esthetician. Booking is a
       request — appointments are confirmed by the studio rather than held automatically.
     </p>

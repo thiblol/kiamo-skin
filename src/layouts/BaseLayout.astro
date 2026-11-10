@@ -12,6 +12,16 @@ interface Props {
   ogImage?: string;
   noindex?: boolean;
   ogType?: 'website' | 'article';
+  /**
+   * The header's colour scheme over the hero.
+   *
+   * The header is transparent over the hero photograph, and the heroes
+   * differ: the homepage's is a warm, light interior, while the service
+   * heroes are dark full-bleed photographs under a scrim. `dark` switches
+   * the logo and menu button to porcelain for as long as the header is
+   * unscrolled.
+   */
+  headerTheme?: 'light' | 'dark';
 }
 
 const props = Astro.props;
@@ -29,7 +39,7 @@ const props = Astro.props;
     {/* Page-scoped JSON-LD: Service, BreadcrumbList, FAQPage, Person. */}
     <slot name="head" />
   </head>
-  <body class="bg-porcelain text-ink">
+  <body class="bg-porcelain text-ink" data-header-theme={props.headerTheme ?? 'light'}>
     <a
       href="#main"
       class="t-button sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:bg-porcelain focus:px-4 focus:py-3"

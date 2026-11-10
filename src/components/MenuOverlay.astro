@@ -1,6 +1,6 @@
 ---
 import Button from './Button.astro';
-import { primaryNav, treatmentLinks, CTA_LABEL } from '../config/nav';
+import { primaryNav, serviceLinks, CTA_LABEL } from '../config/nav';
 import { business } from '../config/business';
 ---
 
@@ -31,7 +31,7 @@ import { business } from '../config/business';
     <p class="t-eyebrow mt-12 text-ink-soft">Treatments</p>
     <ul class="m-0 mt-4 list-none p-0">
       {
-        treatmentLinks.map((item, i) => (
+        serviceLinks.map((item, i) => (
           <li class="stagger" style={`--i:${i + primaryNav.length}`}>
             <a href={item.href} class="t-body block py-2 hover:text-rose">
               {item.label}

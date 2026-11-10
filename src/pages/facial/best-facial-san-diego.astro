@@ -44,14 +44,14 @@ import {
   marketFacialRatesFinder,
 } from '../../data/third-party-facts';
 import { verifiedPrices } from '../../config/business';
-import FacialHubSchema from '../../components/schema/FacialHubSchema.astro';
+import FacialClusterSchema from '../../components/schema/FacialClusterSchema.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 
 const title = 'Best Facial Spas in San Diego (2026) | KIAMO Skin';
 const description =
-  'Nine San Diego facial studios compared on price, rating and reviews. Where each one is good, what it charges, and which fits your skin.';
+  'Nine San Diego facial spas compared on price, rating and reviews. Where each one is good, what it charges, and which fits your skin.';
 
 /**
  * The pages a reader who lands here is most likely to want next.
@@ -75,13 +75,13 @@ const relatedGuides = [
       'Seven studios that treat darker skin tones, with their published prices and protocols.',
   },
   {
-    href: '/treatments/hyperpigmentation/',
+    href: '/services/hyperpigmentation-treatment/',
     label: 'Hyperpigmentation treatment',
     description:
       'What causes dark marks and melasma, and which treatments change them.',
   },
   {
-    href: '/treatments/melasma/',
+    href: '/services/melasma-treatment/',
     label: 'Melasma treatment in San Diego',
     description:
       'Why melasma darkens with heat and irritation, and what a corrective plan looks like.',
@@ -93,7 +93,7 @@ const relatedGuides = [
       'Post-inflammatory marks, melasma and sun damage look alike and respond differently.',
   },
   {
-    href: '/facial/',
+    href: '/services/facial/',
     label: 'All facial treatments at KIAMO Skin',
     description:
       'Four modalities, what each one treats, and the published price of every one.',
@@ -124,9 +124,9 @@ const faqs = [
       'For pigmentation specifically, the deciding question is not the price or the review count but whether the provider calibrates the peel concentration to your skin tone. Standard peel concentrations can trigger post-inflammatory hyperpigmentation in melanin-rich skin. KIAMO Skin matches the acid and concentration to the Fitzpatrick type rather than to the concern, which is why every modality it offers is safe across the full I-VI spectrum. Peel Simply Skin in Normal Heights is the closest peer in San Diego for corrective work.',
   },
   {
-    question: 'Is the most-reviewed facial studio in San Diego the best one?',
+    question: 'Is the most-reviewed facial spa in San Diego the best one?',
     answer:
-      'Not necessarily. The studios at the top of "best facial" searches are the ones with the most reviews, backlinks and SEO, not necessarily the ones doing the most corrective work. A studio that specialises in relaxation facials can have a higher review count than a corrective studio and still not be the right fit for pigmentation, scarring or barrier damage. The right fit depends on what the skin needs, not on the review count.',
+      'Not necessarily. The studios at the top of "best facial" searches are the ones with the most reviews, backlinks and SEO, not necessarily the ones doing the most corrective work. A studio that specialises in relaxation facials can have a higher review count than a corrective facial spa and still not be the right fit for pigmentation, scarring or barrier damage. The right fit depends on what the skin needs, not on the review count.',
   },
   {
     question: 'What is the difference between a corrective facial and a relaxation facial?',
@@ -184,7 +184,7 @@ const itemListSchema = {
   '@type': 'ItemList',
   name: 'Facial spas in San Diego compared — prices, ratings and what each is good for',
   description:
-    'Nine San Diego facial studios compared on published price, Google rating, review count and the kind of work each one is known for.',
+    'Nine San Diego facial spas compared on published price, Google rating, review count and the kind of work each one is known for.',
   numberOfItems: studios.length + 1,
   itemListOrder: 'https://schema.org/ItemListUnordered',
   itemListElement: [
@@ -215,7 +215,7 @@ const articleSchema = {
   '@type': 'Article',
   headline: 'Best Facial Spas in San Diego (2026): 9 Compared on Price and Rating',
   description:
-    'Nine San Diego facial studios compared on published price, Google rating, review count and what each is known for, with every figure dated and sourced.',
+    'Nine San Diego facial spas compared on published price, Google rating, review count and what each is known for, with every figure dated and sourced.',
   datePublished: '2026-09-22',
   dateModified: '2026-11-09',
   author: { '@id': 'https://kiamoskin.com/about/#kiki' },
@@ -231,12 +231,12 @@ const articleSchema = {
 ---
 
 <BaseLayout {title} {description}>
-  <FacialHubSchema slot="head" />
+  <FacialClusterSchema slot="head" />
   <SpeakableSchema slot="head" url="https://kiamoskin.com/facial/best-facial-san-diego/" />
   <BreadcrumbSchema
     slot="head"
     trail={[
-      { name: 'Facial in San Diego', path: '/facial/' },
+      { name: 'Facial in San Diego', path: '/services/facial/' },
       { name: 'Best Facial Spas in San Diego', path: '/facial/best-facial-san-diego/' },
     ]}
   />
@@ -270,7 +270,7 @@ const articleSchema = {
     <header class="bg-blush">
       <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
         <Breadcrumbs
-          ancestors={[{ name: 'Facial in San Diego', path: '/facial/' }]}
+          ancestors={[{ name: 'Facial in San Diego', path: '/services/facial/' }]}
           current="Best Facial Spas in San Diego"
         />
         <h1 class="t-h2 mt-6 max-w-[28ch] text-[2.5rem] md:text-[4rem]">
@@ -282,7 +282,7 @@ const articleSchema = {
           There is no single "best facial spa" in San Diego — there is the best
           facial for your skin. Nine studios are compared below on what each
           one is good at, whether it publishes a price, and its Google rating.
-          KIAMO Skin is a corrective studio in Mission Hills offering
+          KIAMO Skin is a corrective facial spa in Mission Hills offering
           HydraFacial Syndeo, Lira chemical peels, DMK enzyme therapy and
           dermaplaning, each safe across every Fitzpatrick type I-VI. First-time
           consultation and treatment starts at $249.
@@ -345,7 +345,7 @@ const articleSchema = {
         <div class="max-w-[68ch]">
           <Reveal>
             <p class="t-eyebrow text-ink-soft">The short list</p>
-            <h2 class="t-h2 mt-4">San Diego facial studios, side by side</h2>
+            <h2 class="t-h2 mt-4">San Diego facial spas, side by side</h2>
             <p class="t-body mt-6 leading-relaxed">
               The order below is not a ranking. It is the set of studios that
               come up when you search for a facial in San Diego, and the table
@@ -485,7 +485,7 @@ const articleSchema = {
               }
               <tr class="border-b border-line bg-ivory">
                 <th scope="row" class="py-4 pr-6 font-medium">
-                  <a href="/facial/" class="hover:text-rose">KIAMO Skin</a>
+                  <a href="/services/facial/" class="hover:text-rose">KIAMO Skin</a>
                 </th>
                 <td class="py-4 pr-6">Mission Hills</td>
                 <td class="py-4 pr-6">
@@ -679,7 +679,7 @@ const articleSchema = {
               </li>
             </ul>
             <p class="t-body mt-6 leading-relaxed">
-              A corrective studio answers these without hesitation and
+              A corrective facial spa answers these without hesitation and
               describes a process that starts with a consultation. A
               relaxation studio answers them too, and the answer describes a
               service rather than a process. Both are legitimate. They are not
@@ -746,7 +746,7 @@ const articleSchema = {
               </div>
             </dl>
             <div class="mt-8">
-              <Button href="/hydrafacial/" external class="w-full">Learn more</Button>
+              <Button href="/services/hydrafacial/" external class="w-full">Learn more</Button>
             </div>
           </div>
         </div>
@@ -796,7 +796,7 @@ const articleSchema = {
               </div>
             </dl>
             <div class="mt-8">
-              <Button href="/treatments/lira-peels/" external class="w-full">Learn more</Button>
+              <Button href="/services/chemical-peel/" external class="w-full">Learn more</Button>
             </div>
           </div>
         </div>
@@ -841,7 +841,7 @@ const articleSchema = {
               </div>
             </dl>
             <div class="mt-8">
-              <Button href="/treatments/dmk-enzyme-therapy/" external class="w-full">Learn more</Button>
+              <Button href="/services/dmk-enzyme-therapy/" external class="w-full">Learn more</Button>
             </div>
           </div>
         </div>
@@ -887,7 +887,7 @@ const articleSchema = {
               </div>
             </dl>
             <div class="mt-8">
-              <Button href="/treatments/dermaplaning/" external class="w-full">Learn more</Button>
+              <Button href="/services/dermaplaning/" external class="w-full">Learn more</Button>
             </div>
           </div>
         </div>

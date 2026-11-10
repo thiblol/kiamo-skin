@@ -1,0 +1,519 @@
+---
+/**
+ * The shared body of the two service page types.
+ *
+ *   mode="service" → /services/{service}/            "HydraFacial"
+ *   mode="area"    → /service-areas/{area}/{service}/ "HydraFacial in Carlsbad"
+ *
+ * Why one component: the two pages answer the same question at different
+ * resolutions. A service page says what the treatment is and whether it is
+ * right for you; a service-and-city page says what it is, why the drive is
+ * worth it, and what the local skin concern is. Nearly every section is the
+ * same section at a different resolution, and splitting them was how the four
+ * old geo clusters ended up as four near-duplicate templates.
+ *
+ * The section order follows the reference site's anatomy — offer, proof,
+ * what it addresses, what happens in the room, what it costs, questions,
+ * action — with the city detail folded into each step rather than bolted on
+ * as a separate block.
+ */
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import Reveal from './Reveal.astro';
+import Button from './Button.astro';
+import NapBlock from './NapBlock.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import ServiceHero from './ServiceHero.astro';
+import QuickAnswer from './QuickAnswer.astro';
+import PriceAnchor from './PriceAnchor.astro';
+import TrustBar from './TrustBar.astro';
+import ProofQuote from './ProofQuote.astro';
+import TreatmentProof from './TreatmentProof.astro';
+import LocationMap from './LocationMap.astro';
+import { business } from '../config/business';
+import { CTA_LABEL } from '../config/nav';
+import { treatmentTrust, studioProof } from '../data/treatment-trust';
+
+interface Crumb {
+  name: string;
+  path: string;
+}
+
+interface Props {
+  mode: 'service' | 'area';
+  title: string;
+  description: string;
+  h1: string;
+  /** The deck under the H1. */
+  opener: string;
+  /** The short AI-liftable answer. */
+  quickAnswer?: string;
+  image?: ImageMetadata;
+  imageAlt?: string;
+  resultImage?: ImageMetadata;
+  resultImageAlt?: string;
+  resultCaption?: string;
+  /** What the service addresses. */
+  concerns?: string[];
+  /** The plan's steps. */
+  steps?: { step: string; description: string }[];
+  /** The pricing table. */
+  pricing?: { label: string; price: string; description?: string }[];
+  /** The lead price, stated in the hero. */
+  entryPricing?: { label: string; price: string };
+  /** The city-specific blocks. */
+  authority?: { heading: string; body: string };
+  uniqueness?: { heading: string; body: string; bullets: string[] };
+  depth?: { heading: string; body: string };
+  intent?: { heading: string; body: string };
+  localConcern?: { heading: string; body: string };
+  gettingHere?: string;
+  /** The long-form body. */
+  body?: string;
+  faqs: { question: string; answer: string }[];
+  /** The trust data key — a service slug. */
+  trustSlug: string;
+  /** Breadcrumb trail, outermost first. */
+  ancestors: Crumb[];
+  current: string;
+  /** The city name, for the "in {city}" headings on a service-and-city page. */
+  cityName?: string;
+  /** The sibling service pages in the same city. */
+  siblingServices?: { name: string; href: string; note: string }[];
+  /** The hero block, assembled by the page that renders this component. */
+  hero: {
+    eyebrow: string;
+    serviceName: string;
+    cityName?: string;
+    claim: string;
+    paragraph: string;
+    image?: ImageMetadata;
+    imageAlt?: string;
+    price?: { label: string; price: string };
+    trust: { label: string; detail?: string }[];
+  };
+  /** The same service in the other cities that offer it. */
+  siblingCities?: { name: string; href: string; note: string }[];
+}
+
+const {
+  mode,
+  title,
+  description,
+  h1,
+  opener,
+  quickAnswer,
+  image,
+  imageAlt,
+  resultImage,
+  resultImageAlt,
+  resultCaption,
+  concerns,
+  steps,
+  pricing,
+  entryPricing,
+  authority,
+  uniqueness,
+  depth,
+  intent,
+  localConcern,
+  gettingHere,
+  body,
+  faqs,
+  trustSlug,
+  ancestors,
+  current,
+  cityName,
+  siblingServices,
+  siblingCities,
+  hero,
+} = Astro.props;
+
+const isArea = mode === 'area';
+
+/**
+ * The trust claims for this service. Every service has an entry — a missed
+ * one would render an empty band, which is why the guard suite checks the
+ * key set against the service registry.
+ */
+const trust = treatmentTrust[trustSlug];
+---
+
+<article>
+  <ServiceHero
+    eyebrow={hero.eyebrow}
+    serviceName={hero.serviceName}
+    cityName={hero.cityName}
+    claim={hero.claim}
+    paragraph={hero.paragraph}
+    image={hero.image}
+    imageAlt={hero.imageAlt}
+    price={hero.price}
+    trust={hero.trust}
+  />
+
+  {/* The trust band, directly under the hero. The hero is the offer; this is
+      the reason to believe it. Keeping them apart is also what lets the hero
+      fit the fold. */}
+  <section class="bg-porcelain py-12 md:py-14">
+    <div class="wrap">
+      {trust && <TrustBar items={trust.claims} heading="Why this studio" />}
+      <div class="mt-10 border-t border-line pt-9 md:mt-12 md:pt-10">
+        <ProofQuote testimonial={studioProof} />
+      </div>
+    </div>
+  </section>
+
+  {quickAnswer && (
+    <section class="bg-porcelain pb-16 md:pb-20">
+      <div class="wrap">
+        <div class="max-w-[68ch]">
+          <QuickAnswer content={quickAnswer} />
+        </div>
+      </div>
+    </section>
+  )}
+
+  {authority && (
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">The approach</p>
+            <h2 class="t-h2 mt-4">{authority.heading}</h2>
+            <p class="t-body mt-6 leading-relaxed">{authority.body}</p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {localConcern && (
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap grid items-center gap-12 md:grid-cols-[1fr_0.85fr] md:gap-20">
+        <div>
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">The local concern</p>
+            <h2 class="t-h2 mt-4">{localConcern.heading}</h2>
+            <p class="t-body mt-6 leading-relaxed">{localConcern.body}</p>
+          </Reveal>
+        </div>
+        {
+          resultImage && (
+            <Reveal>
+              <Image
+                src={resultImage}
+                alt={resultImageAlt ?? ''}
+                widths={[400, 800, 1200]}
+                sizes="(min-width: 840px) 40vw, 90vw"
+                loading="lazy"
+                class="aspect-[0.92] w-full rounded-lg object-cover"
+              />
+              {resultCaption && <p class="t-meta mt-4">{resultCaption}</p>}
+            </Reveal>
+          )
+        }
+      </div>
+    </section>
+  )}
+
+  {uniqueness && (
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">What sets it apart</p>
+            <h2 class="t-h2 mt-4">{uniqueness.heading}</h2>
+            <p class="t-body mt-6 leading-relaxed">{uniqueness.body}</p>
+          </Reveal>
+          <ul class="t-body mt-9 m-0 list-none space-y-3 p-0">
+            {
+              uniqueness.bullets.map((bullet) => (
+                <li class="flex gap-4">
+                  <span aria-hidden="true" class="text-rose">
+                    —
+                  </span>
+                  <span>{bullet}</span>
+                </li>
+              ))
+            }
+          </ul>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {depth && steps && steps.length > 0 && (
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">The process</p>
+            <h2 class="t-h2 mt-4">{depth.heading}</h2>
+            <p class="t-body mt-6 leading-relaxed">{depth.body}</p>
+          </Reveal>
+          <ol class="mt-12 m-0 list-none space-y-9 p-0">
+            {
+              steps.map((step, i) => (
+                <Reveal>
+                  <li class="border-t border-line pt-7">
+                    <p class="t-meta text-rose">{String(i + 1).padStart(2, '0')}</p>
+                    <h3 class="t-service mt-3 text-[1.125rem] md:text-[1.3125rem]">{step.step}</h3>
+                    <p class="t-body mt-3 text-[0.9375rem]">{step.description}</p>
+                  </li>
+                </Reveal>
+              ))
+            }
+          </ol>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {concerns && concerns.length > 0 && (
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">What it addresses</p>
+            <h2 class="t-h2 mt-4">
+              {isArea && cityName
+                ? `What clients book ${current.toLowerCase()} for in ${cityName}`
+                : 'What clients book this for'}
+            </h2>
+            <ul class="t-body mt-7 m-0 list-none space-y-3 p-0">
+              {
+                concerns.map((concern) => (
+                  <li class="flex gap-4">
+                    <span aria-hidden="true" class="text-rose">
+                      —
+                    </span>
+                    <span>{concern}</span>
+                  </li>
+                ))
+              }
+            </ul>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {/* The long-form body. Five of the pages carry one — the geo articles the
+      old cluster published, now folded into the page they belong to rather
+      than sitting on a URL of their own. */}
+  {body && (
+    <section class="bg-porcelain py-16 md:py-20">
+      <div class="wrap">
+        <div class="mx-auto max-w-[46rem]">
+          <div class="article-content" set:html={body} />
+        </div>
+      </div>
+    </section>
+  )}
+
+  {intent && (
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Who books this</p>
+            <h2 class="t-h2 mt-4">{intent.heading}</h2>
+            <p class="t-body mt-6 leading-relaxed">{intent.body}</p>
+          </Reveal>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {pricing && pricing.length > 0 && (
+    <section class="bg-porcelain py-20 md:py-28">
+      <div class="wrap grid gap-12 md:grid-cols-[1fr_0.8fr] md:gap-16">
+        <div>
+          <h2 class="t-h2" id="pricing">
+            Pricing in San Diego
+          </h2>
+          <p class="t-body mt-6 max-w-[58ch] leading-relaxed">
+            Every price below is published before you book. Nothing is quoted at the door, and the
+            first visit includes the consultation that decides the plan.
+          </p>
+        </div>
+        <div class="border border-line bg-ivory p-8">
+          <dl class="mt-0 m-0 space-y-6">
+            {
+              pricing.map((row) => (
+                <div class="border-b border-line pb-6 last:border-0 last:pb-0">
+                  <dt class="t-service text-[1rem]">{row.label}</dt>
+                  <dd class="t-price m-0 mt-2">{row.price}</dd>
+                  {row.description && (
+                    <dd class="t-body m-0 mt-3 text-[0.875rem] text-ink-soft">{row.description}</dd>
+                  )}
+                </div>
+              ))
+            }
+          </dl>
+          <div class="mt-8">
+            <Button href={business.bookingUrl} external class="w-full">
+              {CTA_LABEL}
+            </Button>
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {gettingHere && (
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap grid items-center gap-12 md:grid-cols-[1fr_0.9fr] md:gap-16">
+        <div>
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Getting here</p>
+            <h2 class="t-h2 mt-4">How to reach us from {current}</h2>
+            <p class="t-body mt-6 leading-relaxed">{gettingHere}</p>
+          </Reveal>
+        </div>
+        <Reveal>
+          <div id="location-map">
+            <LocationMap origin={current} />
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  )}
+
+  {/* The proof. Quick answer, published case, client quote and the risk
+      reversal together, so a reader has met the studio before the questions
+      and the booking form. */}
+  <section class="bg-porcelain py-20 md:py-28">
+    <div class="wrap">
+      <div class="mx-auto max-w-[68ch]">
+        <TreatmentProof slug={trustSlug} />
+      </div>
+    </div>
+  </section>
+
+  {faqs.length > 0 && (
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Before you book</p>
+            <h2 class="t-h2 mt-5">
+              {isArea && cityName
+                ? `${current} questions, answered`
+                : 'Questions, answered'}
+            </h2>
+          </Reveal>
+          {/* Visible text, not accordions. These are the pages AI engines
+              cite, and a collapsed answer earns fewer organic sessions than
+              the same copy shown outright. */}
+          <div class="faq-section mt-12">
+            {
+              faqs.map((faq) => (
+                <div class="border-b border-line py-7 first:pt-0">
+                  <h3 class="t-service text-[1.0625rem] md:text-[1.1875rem]">{faq.question}</h3>
+                  <p class="t-body mt-3 text-[0.9375rem]">{faq.answer}</p>
+                </div>
+              ))
+            }
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {/* The internal-link mesh.
+      On a service-and-city page: the other services in this city, and the
+      same service in the other cities that offer it. Between them every
+      service×city page is reachable from its area hub, from its service
+      page, and from its siblings — no page in the cluster is an orphan. */}
+  {(siblingServices?.length || siblingCities?.length) && (
+    <section class="bg-porcelain py-16 md:py-20">
+      <div class="wrap section-y">
+        {siblingServices && siblingServices.length > 0 && (
+          <>
+            <Reveal>
+              <p class="t-eyebrow text-ink-soft">
+                {isArea && cityName ? `Other treatments in ${cityName}` : 'Also available'}
+              </p>
+              <h2 class="t-h2 mt-4">
+                {isArea && cityName
+                  ? `Every treatment available in ${cityName}`
+                  : 'Other treatments'}
+              </h2>
+            </Reveal>
+            <ul class="m-0 mt-10 grid list-none gap-x-8 gap-y-0 p-0 md:grid-cols-2">
+              {siblingServices.map((link) => (
+                <li class="border-b border-line">
+                  <a href={link.href} class="group block py-7">
+                    <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                      {link.name}
+                    </h3>
+                    <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{link.note}</p>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+
+        {siblingCities && siblingCities.length > 0 && (
+          <>
+            <Reveal class="mt-16 block">
+              <p class="t-eyebrow text-ink-soft">Across San Diego</p>
+              <h2 class="t-h2 mt-4">
+                {isArea && cityName
+                  ? `${current} in the other cities we serve`
+                  : 'Where this treatment is available'}
+              </h2>
+            </Reveal>
+            <ul class="m-0 mt-10 grid list-none gap-x-8 gap-y-0 p-0 md:grid-cols-2 lg:grid-cols-3">
+              {siblingCities.map((link) => (
+                <li class="border-b border-line">
+                  <a href={link.href} class="group block py-7">
+                    <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                      {link.name}
+                    </h3>
+                    <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{link.note}</p>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </div>
+    </section>
+  )}
+
+  <section class="bg-ivory py-16 md:py-20">
+    <div class="wrap">
+      <NapBlock />
+    </div>
+  </section>
+</article>
+
+<style>
+  .article-content {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .article-content h2 {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .article-content p {
+    margin-bottom: 1rem;
+  }
+
+  .article-content a {
+    transition: all 0.2s ease;
+  }
+
+  @media (min-width: 768px) {
+    .article-content {
+      font-size: 1.0625rem;
+    }
+  }
+</style>

@@ -1,0 +1,102 @@
+---
+/**
+ * /services/{service}/ — the national, location-neutral service page.
+ *
+ * "HydraFacial". The page that answers "what is this treatment, and is it
+ * right for me" without a city in the query. It is the parent of every
+ * service-and-city page for that treatment, which is what makes the cluster
+ * a tree rather than a set of pages competing with each other.
+ *
+ * The AI-citation weight sits here. The measured AI search volume for a
+ * treatment in this market is at the city-and-concern level ("dark spot
+ * removal" 12,980/mo, "how much does a facial cost" 6,385/mo), not the
+ * neighbourhood level, so the national page carries the full offer and the
+ * city pages hang beneath it.
+ */
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import ServicePage from '../../../components/ServicePage.astro';
+import ServiceHubSchema from '../../../components/schema/ServiceHubSchema.astro';
+import BreadcrumbSchema from '../../../components/schema/BreadcrumbSchema.astro';
+import FaqSchema from '../../../components/schema/FaqSchema.astro';
+import SpeakableSchema from '../../../components/schema/SpeakableSchema.astro';
+import PersonSchema from '../../../components/schema/PersonSchema.astro';
+import { services } from '../../../data/services';
+import { treatmentFaqs } from '../../../data/treatment-faqs';
+import { treatmentTrust } from '../../../data/treatment-trust';
+import { getServiceAreasForService } from '../../../data/service-areas-index';
+import { servicePath, areaServicePath } from '../../../config/urls';
+
+export function getStaticPaths() {
+  return services.map((service) => ({
+    params: { service: service.slug },
+    props: { service },
+  }));
+}
+
+const { service } = Astro.props;
+
+const faqs = treatmentFaqs[service.slug] ?? [];
+const trust = treatmentTrust[service.slug];
+
+/**
+ * The cities this treatment has a page for.
+ *
+ * These are the lateral edges that turn the cluster into a graph: every
+ * national service page links down to every city offering it, and every
+ * city page links back up to it.
+ */
+const cityLinks = getServiceAreasForService(service.slug).map((record) => ({
+  name: `${service.name} in ${record.name}`,
+  href: areaServicePath(record.area, service.slug),
+  note: record.proximity,
+}));
+---
+
+<BaseLayout title={service.title} description={service.description} headerTheme="dark">
+  <ServiceHubSchema slot="head" service={service} />
+  <BreadcrumbSchema
+    slot="head"
+    trail={[
+      { name: 'Services', path: '/services/' },
+      { name: service.name, path: servicePath(service.slug) },
+    ]}
+  />
+  {faqs.length > 0 && <FaqSchema slot="head" faqs={faqs} />}
+  <SpeakableSchema slot="head" />
+  <PersonSchema slot="head" />
+
+  <ServicePage
+    mode="service"
+    title={service.title}
+    description={service.description}
+    h1={service.headline}
+    opener={service.opener}
+    quickAnswer={trust?.quickAnswer}
+    image={service.image}
+    imageAlt={service.imageAlt}
+    resultImage={service.resultImage}
+    resultImageAlt={service.resultImageAlt}
+    resultCaption={service.resultCaption}
+    concerns={service.goodFor ?? service.concerns}
+    steps={service.steps}
+    pricing={service.pricing}
+    entryPricing={service.pricing?.[0]}
+    faqs={faqs}
+    trustSlug={service.slug}
+    ancestors={[{ name: 'Services', path: '/services/' }]}
+    current={service.name}
+    siblingCities={cityLinks}
+    hero={{
+      eyebrow: service.hero.eyebrow,
+      serviceName: service.name,
+      claim: service.hero.claim,
+      paragraph: service.hero.paragraph,
+      image: service.image,
+      imageAlt: service.imageAlt,
+      price: service.pricing?.[0]
+        ? { label: service.pricing[0].label, price: service.pricing[0].price }
+        : undefined,
+      trust: service.hero.trust,
+    }}
+  />
+</BaseLayout>

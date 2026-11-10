@@ -1,0 +1,137 @@
+---
+/**
+ * /service-areas/{area}/{service}/ — the service-and-city page.
+ *
+ * "HydraFacial in Carlsbad". The page's whole claim is that the studio is
+ * somewhere else and the drive is worth it, so the city's geography — the
+ * drive time, the landmarks, the local skin concern — is merged into the
+ * page rather than bolted on.
+ *
+ * The URL hangs under the AREA, not under the service. That is the model the
+ * reference project uses, and it is the right one: a reader's intent is "a
+ * treatment, where I live", and the URL should read that way round. It also
+ * makes the area hub the natural parent of every service page for that city.
+ */
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import ServicePage from '../../../../components/ServicePage.astro';
+import ServiceAreaSchema from '../../../../components/schema/ServiceAreaSchema.astro';
+import BreadcrumbSchema from '../../../../components/schema/BreadcrumbSchema.astro';
+import FaqSchema from '../../../../components/schema/FaqSchema.astro';
+import SpeakableSchema from '../../../../components/schema/SpeakableSchema.astro';
+import PersonSchema from '../../../../components/schema/PersonSchema.astro';
+import { services } from '../../../../data/services';
+import {
+  serviceAreas,
+  getServiceAreasForService,
+  getServiceAreasForArea,
+} from '../../../../data/service-areas-index';
+import { servicePath, areaPath, areaServicePath } from '../../../../config/urls';
+import { areaImages, areaImageAlts } from '../../../../data/area-images';
+
+export function getStaticPaths() {
+  return serviceAreas.map((record) => ({
+    params: { area: record.area, service: record.service },
+    props: { record },
+  }));
+}
+
+const { record } = Astro.props;
+
+const service = services.find((s) => s.slug === record.service);
+
+/** The display name of a service, for the sibling link labels. */
+const serviceName = (slug: string) => services.find((s) => s.slug === slug)?.name ?? slug;
+
+/**
+ * The two sibling sets.
+ *
+ * The other services in this city, and the same service in the other cities
+ * that offer it. Between them every service×city page is reachable from its
+ * area hub, from its national service page, and from its siblings — no page
+ * in the cluster is an orphan.
+ */
+const siblingServices = getServiceAreasForArea(record.area)
+  .filter((r) => r.service !== record.service)
+  .map((r) => ({
+    name: serviceName(r.service),
+    href: areaServicePath(r.area, r.service),
+    note: r.crossLinkLabel,
+  }));
+
+/**
+ * The hero paragraph for a service-and-city page.
+ *
+ * The treatment comes first and the city follows, because the city is the
+ * reason THIS treatment matters here — the salt air in Encinitas, the inland
+ * UV in Chula Vista. The full local context is further down the page, where
+ * it is the reason to trust the drive rather than the reason to book.
+ */
+const heroParagraph = service
+  ? `${service.hero.paragraph} ${record.heroCityLine ?? ''}`.trim()
+  : record.opener;
+
+const siblingCities = getServiceAreasForService(record.service)
+  .filter((r) => r.area !== record.area)
+  .map((r) => ({
+    name: `${serviceName(record.service)} in ${r.name}`,
+    href: areaServicePath(r.area, record.service),
+    note: r.proximity,
+  }));
+---
+
+<BaseLayout title={record.title} description={record.description} headerTheme="dark">
+  <ServiceAreaSchema slot="head" record={record} service={service} />
+  <BreadcrumbSchema
+    slot="head"
+    trail={[
+      { name: 'Service Areas', path: '/service-areas/' },
+      { name: record.name, path: areaPath(record.area) },
+      { name: service?.name ?? record.service, path: areaServicePath(record.area, record.service) },
+    ]}
+  />
+  {record.faqs.length > 0 && <FaqSchema slot="head" faqs={record.faqs} />}
+  <SpeakableSchema slot="head" />
+  <PersonSchema slot="head" />
+
+  <ServicePage
+    mode="area"
+    title={record.title}
+    description={record.description}
+    h1={record.h1}
+    opener={record.opener}
+    quickAnswer={record.quickAnswer}
+    authority={record.authority}
+    uniqueness={record.uniqueness}
+    depth={record.depth}
+    intent={record.intent}
+    localConcern={record.localConcern}
+    gettingHere={record.gettingHere}
+    steps={record.depth.process}
+    body={record.body}
+    faqs={record.faqs}
+    trustSlug={record.service}
+    ancestors={[
+      { name: 'Service Areas', path: '/service-areas/' },
+      { name: record.name, path: areaPath(record.area) },
+    ]}
+    current={record.name}
+    cityName={record.name}
+    siblingServices={siblingServices}
+    siblingCities={siblingCities}
+    hero={{
+      eyebrow: service?.hero.eyebrow ?? record.title,
+      serviceName: service?.name ?? record.service,
+      cityName: record.name,
+      claim: service?.hero.claim ?? record.opener,
+      paragraph: heroParagraph,
+      image: areaImages[record.area],
+      imageAlt: areaImageAlts[record.area],
+      price: record.pricing?.[0]
+        ? { label: record.pricing[0].label, price: record.pricing[0].price }
+        : service?.pricing?.[0]
+          ? { label: service.pricing[0].label, price: service.pricing[0].price }
+          : undefined,
+      trust: service?.hero.trust ?? [],
+    }}
+  />
+</BaseLayout>

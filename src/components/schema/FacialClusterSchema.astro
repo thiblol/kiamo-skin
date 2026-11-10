@@ -1,0 +1,61 @@
+---
+/**
+ * The facial cluster, for the three `/facial/` landing pages.
+ *
+ * Those pages keep their original URLs because they are the site's strongest
+ * AI-citation asset — they rank for "best facial spa in San Diego" and
+ * "best facial spa for dark skin in san diego". They are comparison and
+ * concern pages, not area pages, and they sit outside the service cluster.
+ *
+ * What changed underneath them is that the ten facial area pages moved to
+ * `/services/facial/{area}/`. This node points at the new URLs so the
+ * cluster relationship still reads the same way to a crawler, and so the
+ * landing pages remain a hub for the pages that now live elsewhere.
+ *
+ * Deliberately NOT a LocalBusiness — one studio, one business entity, mounted
+ * once through BaseLayout. See ServiceAreaSchema.astro for the same rule.
+ */
+import { absolute, businessId, servicePath, areaServicePath } from '../../config/urls';
+import { services } from '../../data/services';
+import { getServiceAreasForService } from '../../data/service-areas-index';
+
+const site = Astro.site;
+const url = absolute(Astro.url.pathname, site);
+
+const facial = services.find((s) => s.slug === 'facial');
+const subCities = facial ? getServiceAreasForService(facial.slug) : [];
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${url}#service`,
+  name: 'Facial treatments in San Diego',
+  serviceType: 'Facial treatment',
+  description:
+    'Corrective facials in San Diego — HydraFacial, chemical peels, dermaplaning, and enzyme therapy, calibrated for every Fitzpatrick type.',
+  url,
+  provider: { '@id': businessId(site) },
+  ...(facial && {
+    mainEntity: {
+      '@id': absolute(servicePath('facial'), site),
+    },
+  }),
+  ...(subCities.length > 0 && {
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Facials across San Diego',
+      itemListElement: subCities.map((record) => ({
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: `Facial in ${record.name}`,
+          url: absolute(areaServicePath(record.area, 'facial'), site),
+          provider: { '@id': businessId(site) },
+        },
+      })),
+    },
+  }),
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

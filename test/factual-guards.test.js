@@ -76,7 +76,7 @@ describe('Factual Guards', () => {
 
     test('unpriced services say exactly "Pricing at consultation."', () => {
       const home = getPage('/');
-      const dmkPage = getPage('/treatments/dmk-enzyme-therapy');
+      const dmkPage = getPage('/services/dmk-enzyme-therapy');
 
       assert.ok(
         home.text.includes('Pricing at consultation'),

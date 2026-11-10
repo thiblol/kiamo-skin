@@ -44,7 +44,7 @@ export const faqs: Faq[] = [
   {
     question: 'Is KIAMO Skin a facial spa or a skin care clinic?',
     answer:
-      'Neither description fits on its own. This is a single-treatment-room studio in Mission Hills, run by a licensed esthetician — more clinical than a day spa, and not a medical practice. The distinction that matters is the work: treatment is corrective and planned across a series, not a one-off relaxing facial. Nothing here is medical, and anything outside an esthetician’s scope is referred on.',
+      'It is a facial spa — and it is a corrective one. The work is clinical rather than a one-off relaxing facial: treatment is planned across a series and paced to what your skin can tolerate. But nothing here is medical. There are no lasers, no prescriptions, and no injectables, and anything outside an esthetician’s scope is referred on.',
   },
   {
     question: 'Do I need an appointment?',
@@ -73,7 +73,7 @@ export const faqs: Faq[] = [
   {
     question: 'Do I tip for a facial?',
     answer:
-      'Tipping is customary at skin studios in San Diego, and somewhere around fifteen to twenty per cent is the usual range. It is genuinely never expected here, and it changes nothing about the treatment or the plan.',
+      'Tipping is customary at facial spas in San Diego, and somewhere around fifteen to twenty per cent is the usual range. It is genuinely never expected here, and it changes nothing about the treatment or the plan.',
   },
   {
     question: 'Is there parking?',

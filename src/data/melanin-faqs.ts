@@ -47,9 +47,9 @@ export const melaninFaqs: Faq[] = [
       'Clients regularly travel from Chula Vista, La Jolla, North Park, La Mesa, Oceanside, and throughout San Diego County to KIAMO Skin in Mission Hills. The studio is centrally located minutes from Hillcrest, Bankers Hill, and Little Italy with free on-site parking. Many clients choose to make the drive because finding a practitioner with advanced training in treating pigmentation on Black and brown skin safely is rare, and the risk of worsening hyperpigmentation with the wrong treatment is too high to leave to chance.',
   },
   {
-    question: 'Is there a Black-owned skincare studio in Mission Hills?',
+    question: 'Is there a Black-owned facial spa in Mission Hills?',
     answer:
-      'Yes — KIAMO Skin is a Black-owned corrective skin studio at 3067 Reynard Way in Mission Hills, San Diego. The studio specializes in pigmentation treatment, acne scarring, and barrier repair for melanin-rich skin. Every appointment is one-to-one with Kiki, a licensed esthetician whose expertise was built treating the most complex pigmentation cases in Black and brown skin. The studio serves Mission Hills, Hillcrest, Bankers Hill, Little Italy, and clients throughout San Diego County.',
+      'Yes — KIAMO Skin is a Black-owned corrective facial spa at 3067 Reynard Way in Mission Hills, San Diego. The studio specializes in pigmentation treatment, acne scarring, and barrier repair for melanin-rich skin. Every appointment is one-to-one with Kiki, a licensed esthetician whose expertise was built treating the most complex pigmentation cases in Black and brown skin. The studio serves Mission Hills, Hillcrest, Bankers Hill, Little Italy, and clients throughout San Diego County.',
   },
   {
     question: 'Why is San Diego sun exposure especially risky for melasma and dark spots?',

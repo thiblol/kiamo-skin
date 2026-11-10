@@ -1,14 +1,47 @@
 ---
+/**
+ * ServiceMenu
+ * -----------
+ * The homepage's price list — every treatment, its published price, and the
+ * filter tabs that narrow it by category.
+ *
+ * Why the homepage carries this rather than sending the reader to the
+ * services index: a visitor who arrives on "facial san diego" is deciding
+ * whether to book, and the price is the thing they need to see before
+ * anything else. The full menu lives at /services/; this is the short form.
+ *
+ * The tabs work without JavaScript — every row renders and every filter
+ * button exists in the HTML, and the script only ever hides rows. A reader
+ * with JS blocked sees the whole menu.
+ */
 import { services, categories } from '../../data/services';
+import { servicePath } from '../../config/urls';
 import { business } from '../../config/business';
+
+interface Props {
+  class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+
+/**
+ * The price shown on each row.
+ *
+ * A service with several options shows its entry price — the figure a
+ * first-time client is actually quoted. A service priced at consultation
+ * shows that string rather than a number, because it is not a number and
+ * setting it as one would be a claim the studio does not make.
+ */
+const rowPrice = (pricing?: { price: string }[]) => {
+  if (!pricing || pricing.length === 0) return '';
+  return pricing[0].price;
+};
 ---
 
-<section class="bg-ivory">
+<section class={`bg-ivory ${className}`}>
   <div class="wrap section-y">
     <p class="t-eyebrow text-ink-soft">The menu</p>
-    <h2 class="t-h2 mt-5 max-w-[20ch]">
-      Corrective treatments in {business.address.neighborhood}, San Diego
-    </h2>
+    <h2 class="t-h2 mt-5 max-w-[20ch]">Corrective treatments in San Diego</h2>
 
     <div
       role="tablist"
@@ -43,38 +76,35 @@ import { business } from '../../config/business';
         works with JS disabled. The tabs only ever hide rows. */}
     <ul id="service-rows" class="m-0 list-none p-0">
       {
-        services.map((s) => (
-          <li data-category={s.category} class="border-b border-line">
-            <div class="group grid grid-cols-1 items-baseline gap-y-3 py-7 transition-colors duration-[280ms] ease-out hover:bg-porcelain md:grid-cols-[minmax(0,1fr)_auto] md:gap-x-10">
-              <div class="min-w-0">
-                <h3 class="t-service text-[1.0625rem] md:text-[1.3125rem]">
-                  {s.href ? (
-                    <a href={s.href} class="hover:text-rose">
+        services.map((s) => {
+          const price = rowPrice(s.pricing);
+          return (
+            <li data-category={s.category} class="border-b border-line">
+              <div class="group grid grid-cols-1 items-baseline gap-y-3 py-7 transition-colors duration-[280ms] ease-out hover:bg-porcelain md:grid-cols-[minmax(0,1fr)_auto] md:gap-x-10">
+                <div class="min-w-0">
+                  <h3 class="t-service text-[1.0625rem] md:text-[1.3125rem]">
+                    <a href={servicePath(s.slug)} class="hover:text-rose">
                       {s.name}
                     </a>
-                  ) : (
-                    s.name
-                  )}
-                </h3>
-                <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{s.description}</p>
-              </div>
+                  </h3>
+                  <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{s.opener}</p>
+                </div>
 
-              <div class="flex items-center gap-6 md:justify-end">
-                <p class="t-price whitespace-nowrap transition-colors duration-[280ms] group-hover:text-rose">
-                  {s.price}
-                </p>
-                <a
-                  href={business.bookingUrl}
-                  target="_blank"
-                  rel="noopener"
-                  class="t-button shrink-0 border-b border-ink pb-1 hover:border-rose hover:text-rose"
-                >
-                  Book<span class="sr-only"> {s.name}</span>
-                </a>
+                <div class="flex items-center gap-6 md:justify-end">
+                  {price && <p class="t-price whitespace-nowrap transition-colors duration-[280ms] group-hover:text-rose">{price}</p>}
+                  <a
+                    href={business.bookingUrl}
+                    target="_blank"
+                    rel="noopener"
+                    class="t-button shrink-0 border-b border-ink pb-1 hover:border-rose hover:text-rose"
+                  >
+                    Book<span class="sr-only"> {s.name}</span>
+                  </a>
+                </div>
               </div>
-            </div>
-          </li>
-        ))
+            </li>
+          );
+        })
       }
     </ul>
   </div>

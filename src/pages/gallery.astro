@@ -47,7 +47,7 @@ import {
 } from '../data/gallery';
 import { business } from '../config/business';
 import { CTA_LABEL } from '../config/nav';
-import { absolute, businessId, websiteId, gbpListingUrl } from '../config/urls';
+import { absolute, businessId, websiteId, gbpListingUrl, servicePath } from '../config/urls';
 
 const site = Astro.site;
 const url = absolute('/gallery', site);
@@ -104,7 +104,7 @@ const medicalConditionSchemas = galleryConditions.map((c) => ({
     .map((c2) => ({
       '@type': 'MedicalTherapy',
       name: c2.treatmentName,
-      url: absolute(`/treatments/${c2.treatmentSlug}/`, site),
+      url: absolute(servicePath(c2.treatmentSlug), site),
       provider: { '@id': businessId(site) },
     })),
 }));
@@ -138,7 +138,7 @@ const caseSchemas = caseGraph.map((g) => ({
     copyrightNotice: `© ${business.name}. Published with client consent.`,
     contentLocation: {
       '@type': 'Place',
-      name: 'KIAMO Skin studio, Mission Hills',
+      name: 'KIAMO Facial spa, Mission Hills',
       address: {
         '@type': 'PostalAddress',
         streetAddress: business.address.street,
@@ -173,7 +173,7 @@ const caseSchemas = caseGraph.map((g) => ({
     ],
     spatialCoverage: {
       '@type': 'Place',
-      name: 'KIAMO Skin studio, Mission Hills, San Diego',
+      name: 'KIAMO Facial spa, Mission Hills, San Diego',
       address: {
         '@type': 'PostalAddress',
         streetAddress: business.address.street,
@@ -474,7 +474,7 @@ const description =
                   <div class="mt-7 flex flex-1 flex-col">
                     <p class="t-eyebrow text-rose">{c.eyebrow}</p>
                     <h2 class="t-h3 mt-3 text-[1.25rem] leading-[1.3]">
-                      <a href={`/treatments/${c.treatmentSlug}/`} class="hover:text-rose">
+                      <a href={servicePath(c.treatmentSlug)} class="hover:text-rose">
                         {c.title}
                       </a>
                     </h2>
@@ -492,7 +492,7 @@ const description =
                         <dt class="t-meta">Treatment</dt>
                         <dd class="t-body mt-1 m-0 text-ink">
                           <a
-                            href={`/treatments/${c.treatmentSlug}/`}
+                            href={servicePath(c.treatmentSlug)}
                             class="border-b border-ink/30 hover:border-rose hover:text-rose"
                           >
                             {c.treatmentName}

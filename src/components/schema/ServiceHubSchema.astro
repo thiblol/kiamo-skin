@@ -1,0 +1,104 @@
+---
+/**
+ * Page-level Service node for a service hub.
+ *
+ * `/services/{service}/` — "HydraFacial in San Diego". This is the page that
+ * carries the service's own search intent, and the node describes the
+ * treatment itself rather than the page it sits on.
+ *
+ * The sub-city pages are enumerated in `hasOfferCatalog` as referenced child
+ * Services, so an AI system can extract the hub-and-spoke relationship and
+ * cite the hub as the umbrella answer — the same shape the old facial hub
+ * used for its cluster, pointed at the new URLs.
+ *
+ * Deliberately NOT a LocalBusiness. The studio is one business; a second
+ * business node per page would create one entity per service, which is the
+ * shape Google treats as location spam. See AreaServiceSchema.astro, which
+ * documents the same rule.
+ */
+import { absolute, businessId, servicePath, areaServicePath } from '../../config/urls';
+import { business } from '../../config/business';
+import type { Service } from '../../data/services';
+import { getServiceAreasForService } from '../../data/service-areas-index';
+
+interface Props {
+  service: Service;
+}
+
+const { service } = Astro.props;
+const site = Astro.site;
+const url = absolute(servicePath(service.slug), site);
+
+const numeric = (service.pricing ?? [])
+  .map((row) => ({ label: row.label, value: Number(row.price.replace(/[$,]/g, '')) }))
+  .filter((row) => Number.isFinite(row.value) && row.value > 0);
+
+const offers =
+  numeric.length > 1
+    ? {
+        '@type': 'AggregateOffer',
+        priceCurrency: 'USD',
+        lowPrice: String(Math.min(...numeric.map((n) => n.value))),
+        highPrice: String(Math.max(...numeric.map((n) => n.value))),
+        offerCount: numeric.length,
+        availability: 'https://schema.org/InStock',
+        url: business.bookingUrl,
+        offers: numeric.map((row) => ({
+          '@type': 'Offer',
+          name: row.label,
+          price: String(row.value),
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+          url: business.bookingUrl,
+        })),
+      }
+    : numeric.length === 1
+      ? {
+          '@type': 'Offer',
+          name: numeric[0].label,
+          price: String(numeric[0].value),
+          priceCurrency: 'USD',
+          availability: 'https://schema.org/InStock',
+          url: business.bookingUrl,
+        }
+      : undefined;
+
+/** The sub-city pages under this service. */
+const subCities = getServiceAreasForService(service.slug);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'MedicalProcedure',
+  '@id': `${url}#service`,
+  name: service.name,
+  procedureType: 'https://schema.org/NoninvasiveProcedure',
+  medicineSystem: 'https://schema.org/WesternConventional',
+  ...(service.alternateName && { alternateName: service.alternateName }),
+  description: service.description,
+  url,
+  howPerformed: 'Performed in a private treatment room by a licensed esthetician',
+  preparation: 'Consultation and skin analysis performed before first treatment',
+  followup: service.membershipNote || service.note || 'Treatment plan customized at consultation',
+  bodyLocation: service.slug === 'scalp-therapy' ? 'Scalp' : 'Face',
+  provider: { '@id': businessId(site) },
+  areaServed: business.schemaAreaServed.map((name) => ({ '@type': 'Place', name })),
+  ...(offers && { offers }),
+  ...(subCities.length > 0 && {
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: `${service.name} across San Diego`,
+      itemListElement: subCities.map((record) => ({
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: `${service.name} in ${record.name}`,
+          url: absolute(areaServicePath(record.area, service.slug), site),
+          provider: { '@id': businessId(site) },
+        },
+      })),
+    },
+  }),
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

@@ -14,7 +14,7 @@ import Button from '../../components/Button.astro';
 import NapBlock from '../../components/NapBlock.astro';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
-import FacialHubSchema from '../../components/schema/FacialHubSchema.astro';
+import FacialClusterSchema from '../../components/schema/FacialClusterSchema.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
@@ -53,12 +53,12 @@ const faqs = [
 ---
 
 <BaseLayout {title} {description}>
-  <FacialHubSchema slot="head" />
+  <FacialClusterSchema slot="head" />
   <SpeakableSchema slot="head" url="https://kiamoskin.com/facial/facial-after-sun-exposure-san-diego/" />
   <BreadcrumbSchema
     slot="head"
     trail={[
-      { name: 'Facial in San Diego', path: '/facial/' },
+      { name: 'Facial in San Diego', path: '/services/facial/' },
       { name: 'Facial After Sun Exposure', path: '/facial/facial-after-sun-exposure-san-diego/' },
     ]}
   />
@@ -82,7 +82,7 @@ const faqs = [
     <header class="bg-blush">
       <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
         <Breadcrumbs
-          ancestors={[{ name: 'Facial in San Diego', path: '/facial/' }]}
+          ancestors={[{ name: 'Facial in San Diego', path: '/services/facial/' }]}
           current="Facial After Sun Exposure"
         />
         <h1 class="t-h2 mt-6 max-w-[30ch] text-[2.5rem] md:text-[4rem]">Facial After Sun Exposure in San Diego</h1>

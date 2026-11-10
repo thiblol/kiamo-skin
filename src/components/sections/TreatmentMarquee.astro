@@ -1,5 +1,5 @@
 ---
-import { treatmentLinks } from '../../config/nav';
+import { serviceLinks } from '../../config/nav';
 ---
 
 {/*
@@ -11,7 +11,7 @@ import { treatmentLinks } from '../../config/nav';
 <div class="overflow-hidden border-y border-line bg-porcelain py-4" aria-hidden="true">
   <div class="marquee-track flex gap-12 whitespace-nowrap">
     <ul class="marquee-list flex shrink-0 list-none gap-12 p-0">
-      {treatmentLinks.map((t) => (
+      {serviceLinks.map((t) => (
         <li class="t-eyebrow text-ink-soft">{t.label}</li>
       ))}
       <li class="t-eyebrow text-rose">·</li>
@@ -20,7 +20,7 @@ import { treatmentLinks } from '../../config/nav';
       <li class="t-eyebrow text-ink-soft">San Diego</li>
     </ul>
     <ul class="marquee-list flex shrink-0 list-none gap-12 p-0" aria-hidden="true">
-      {treatmentLinks.map((t) => (
+      {serviceLinks.map((t) => (
         <li class="t-eyebrow text-ink-soft">{t.label}</li>
       ))}
       <li class="t-eyebrow text-rose">·</li>

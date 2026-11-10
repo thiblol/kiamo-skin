@@ -1,0 +1,175 @@
+---
+/**
+ * /services/ — the services index.
+ *
+ * The menu of every treatment the studio performs, with the published price
+ * on each row. This is the page that answers "what can I book, and what does
+ * it cost" before any single service page does.
+ *
+ * The old /treatments/ index did this job but was built around treatment
+ * records that included the two concern pages whose live copy sat in
+ * hand-written .astro files instead — so the menu and the pages it linked to
+ * disagreed. One registry now backs both.
+ */
+import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Reveal from '../../components/Reveal.astro';
+import Button from '../../components/Button.astro';
+import NapBlock from '../../components/NapBlock.astro';
+import CollectionSchema from '../../components/schema/CollectionSchema.astro';
+import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import FaqSchema from '../../components/schema/FaqSchema.astro';
+import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
+import { services } from '../../data/services';
+import { servicePath } from '../../config/urls';
+import { business } from '../../config/business';
+import { CTA_LABEL } from '../../config/nav';
+
+const faqs = [
+  {
+    question: 'How much does a facial treatment cost in San Diego?',
+    answer:
+      'Prices depend on the modality: dermaplaning starts at $199, a HydraFacial is $259, LIRA chemical peels run $199 to $299, DMK Enzyme Therapy starts at $279, and Keravive scalp therapy is $599. A first-time client treatment is $249 and includes the consultation that decides the plan. Every price is published on this site and confirmed at booking — nothing is quoted at the door.',
+  },
+  {
+    question: 'Which treatment should I book first?',
+    answer:
+      'That is what the consultation is for. The first visit is a full assessment — skin tone, primary concern, and the condition of the barrier — and the modality is selected from what the skin is doing that day. DMK enzyme therapy often comes first for a compromised barrier, a HydraFacial for maintenance, and peels or microchanneling for pigment and scarring.',
+  },
+  {
+    question: 'Do you treat all skin types?',
+    answer:
+      'Yes — Fitzpatrick I through VI. Kiki has 7+ years treating the full spectrum, and the pigment protocols are written for melanin-rich skin rather than adjusted for it. That matters because melanin-rich skin responds to trauma by producing more pigment, so strength is escalated only as the barrier allows.',
+  },
+  {
+    question: 'Which treatments are best for dark spots and melasma?',
+    answer:
+      'LIRA chemical peels are the backbone of a melasma plan, with Procell microchanneling added where texture or scarring is part of the picture and a HydraFacial with a brightening booster holding the result between sessions. Pigmentation is treated as a series, with strength escalating across the course rather than in one visit.',
+  },
+  {
+    question: 'How often should I come in?',
+    answer:
+      'Monthly for maintenance, and every four to six weeks for a corrective plan. The monthly facial membership at $199 includes one HydraFacial monthly plus discounts on additional treatments, which is usually the cheaper way to stay consistent across a series.',
+  },
+  {
+    question: 'Do I need to travel far for treatment?',
+    answer:
+      'The studio is in San Diego and clients travel from across the county — North Park and Hillcrest are five to ten minutes, La Jolla and Pacific Beach around fifteen to twenty, and Encinitas and Carlsbad about thirty-five to forty. Each service page lists the areas it covers and the honest drive time.',
+  },
+];
+
+const groups = [
+  { key: 'Facials', note: 'The foundation — cleansing, extraction, resurfacing and maintenance.' },
+  { key: 'Peels', note: 'Pigment and texture correction, paced across a series.' },
+  { key: 'Scalp', note: 'Clinical scalp therapy for buildup, flaking and irritation.' },
+  { key: 'Advanced', note: 'Depth-controlled resurfacing and barrier repair.' },
+  { key: 'Corrective', note: 'Plans assembled from several modalities, for a specific concern.' },
+];
+---
+
+<BaseLayout
+  title="Treatments & Prices in San Diego | KIAMO Skin"
+  description="Every treatment at KIAMO Skin in San Diego, with published prices. HydraFacial, peels, dermaplaning, enzyme therapy, scalp. From $199."
+>
+  <CollectionSchema
+    slot="head"
+    name="Treatments and prices in San Diego"
+    description="Every corrective skin and scalp treatment available at KIAMO Skin in San Diego, with published prices."
+    items={services.map((s) => ({ name: s.name, path: servicePath(s.slug) }))}
+  />
+  <BreadcrumbSchema slot="head" trail={[{ name: 'Services', path: '/services/' }]} />
+  <FaqSchema slot="head" faqs={faqs} />
+  <SpeakableSchema slot="head" />
+
+  <article>
+    <header class="bg-blush">
+      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+        <Breadcrumbs current="Services" meta="San Diego" />
+        <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.5rem] md:text-[4rem]">
+          Corrective skin &amp; scalp treatments in San Diego
+        </h1>
+        <p class="t-body mt-7 max-w-[62ch] text-[1.125rem]">
+          Every treatment below is performed by Kiki, a California licensed esthetician with {business.experience}
+          in corrective skin, in one private treatment room. Prices are published here and confirmed at booking.
+        </p>
+        <p class="t-body mt-5 max-w-[62ch]">
+          The right treatment depends on your skin tone, your concern, and the condition of your barrier — not on
+          what is trending. The first visit includes the assessment that decides it.
+        </p>
+        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+          <a
+            href={business.phone.href}
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            {business.phone.display}
+          </a>
+        </div>
+      </div>
+    </header>
+
+    {
+      groups.map((group) => {
+        const rows = services.filter((s) => s.category === group.key);
+        if (rows.length === 0) return null;
+        return (
+          <section class="bg-porcelain py-14 md:py-20">
+            <div class="wrap">
+              <Reveal>
+                <p class="t-eyebrow text-ink-soft">{group.key}</p>
+                <h2 class="t-h3 mt-3 max-w-[40ch]">{group.note}</h2>
+              </Reveal>
+              <ul class="m-0 mt-10 grid list-none gap-x-12 gap-y-0 p-0 md:grid-cols-2">
+                {rows.map((service) => (
+                  <li class="border-b border-line">
+                    <a href={servicePath(service.slug)} class="group block py-7">
+                      <div class="flex items-baseline justify-between gap-x-6 gap-y-2">
+                        <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                          {service.name}
+                        </h3>
+                        {service.pricing?.[0] && (
+                          <p class="t-price shrink-0 text-[1.0625rem] text-rose">
+                            {service.pricing[0].price}
+                          </p>
+                        )}
+                      </div>
+                      <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">
+                        {service.pricing?.[0]?.description ?? service.opener}
+                      </p>
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
+        );
+      })
+    }
+
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Before you book</p>
+            <h2 class="t-h2 mt-5">Questions, answered</h2>
+          </Reveal>
+          <div class="faq-section mt-12">
+            {faqs.map((faq) => (
+              <div class="border-b border-line py-7 first:pt-0">
+                <h3 class="t-service text-[1.0625rem] md:text-[1.1875rem]">{faq.question}</h3>
+                <p class="t-body mt-3 text-[0.9375rem]">{faq.answer}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-porcelain py-16 md:py-20">
+      <div class="wrap">
+        <NapBlock />
+      </div>
+    </section>
+  </article>
+</BaseLayout>

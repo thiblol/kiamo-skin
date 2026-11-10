@@ -1,388 +1,332 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
+/**
+ * /service-areas/ — the areas hub.
+ *
+ * A separate top-level page from /services/, and linked from the homepage
+ * alongside it. This is the directory of WHERE: every area the studio
+ * serves, and every service available to clients travelling from it. The
+ * services pages answer what; these answer from where.
+ *
+ * It replaced the nine standalone /service-areas/{area}/ pages, which were
+ * each a general area page with no service attached. Under the new
+ * architecture the service is the entry point — /service-areas/la-jolla/facial/ —
+ * and this page is the mesh that makes every one of them reachable.
+ *
+ * It is also where the ten zero-demand area pages land after their 301,
+ * so it lists every served area rather than only the ones with a page.
+ */
 import { Image } from 'astro:assets';
+import BaseLayout from '../../layouts/BaseLayout.astro';
 import Reveal from '../../components/Reveal.astro';
 import Button from '../../components/Button.astro';
 import NapBlock from '../../components/NapBlock.astro';
-import LocationMap from '../../components/LocationMap.astro';
-import WhyTravelMissionHills from '../../components/sections/WhyTravelMissionHills.astro';
-import ClientVolumeStats from '../../components/sections/ClientVolumeStats.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
-import { areas } from '../../data/areas';
-import { business, verifiedPrices } from '../../config/business';
-import { absolute, businessId, gbpDirectionsUrl } from '../../config/urls';
+import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
+import { areaShells } from '../../data/area-shells';
+import { services } from '../../data/services';
+import { getServiceAreasForArea } from '../../data/service-areas-index';
+import { areaServicePath, areaPath } from '../../config/urls';
+import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
-import studioImage from '../../assets/kiamo-skin-studio-mission-hills-san-diego.jpg';
 import heroServiceAreasHub from '../../assets/hero-service-areas-hub-san-diego-coverage-map-kiamo.jpg';
 
-const site = Astro.site;
-const pageUrl = absolute('/service-areas', site);
-const directionsUrl = gbpDirectionsUrl(business.gbpPlaceId, business.address.full);
-
-const hubFaqs = [
-  {
-    question: 'How far do clients travel to reach the Mission Hills studio?',
-    answer: `Most clients drive between ten and forty-five minutes. North Park and Hillcrest are under ten minutes with no freeway. Pacific Beach, La Mesa and La Jolla are fifteen to twenty minutes. Chula Vista and Del Mar run twenty to twenty-five minutes. Encinitas and Carlsbad are the farthest — roughly thirty to forty minutes on I-5, depending on traffic.`,
-  },
-  {
-    question: 'Is there parking at the studio?',
-    answer: `Free parking is available on site at 3067 Reynard Way, Mission Hills. You do not need to find street parking or pay for a garage. The studio is by appointment only, so a space is always available when you arrive.`,
-  },
-  {
-    question: 'Can I combine treatments to make one trip from far away worth it?',
-    answer: `Yes — combining is discussed at the first consultation when it makes clinical sense. A HydraFacial and dermaplaning can share a single appointment. Procell Microchanneling and a Lira peel cannot be layered in one visit. The plan accounts for where you are coming from and how often a round trip is realistic.`,
-  },
-  {
-    question: 'Do I need to live nearby to get consistent results?',
-    answer: `No. Clients from Carlsbad, Encinitas and Del Mar complete full corrective courses regularly. The key is scheduling the series as a block at the start rather than booking visit by visit. A three-session Procell series placed at four-to-six-week intervals fits into a calendar whether you are ten minutes away or forty.`,
-  },
-  {
-    question: 'What is the first appointment like for someone coming from outside San Diego city?',
-    answer: `The first visit is a full consultation, skin analysis, and a first treatment — the ${verifiedPrices['first-time-client']} new-client visit. It takes longer than a follow-up, so it is worth leaving travel margin. After that appointment you will have a clear treatment plan and a sense of how often you need to come in, which makes the drive easier to plan.`,
-  },
-  {
-    question: 'Which areas have the most clients travelling to the studio?',
-    answer: `North Park, Pacific Beach and La Jolla send the most clients, followed by Chula Vista and La Mesa. North Park is the closest — three and a half miles with no freeway. Chula Vista sends the most pigmentation and melasma clients, which reflects the inland UV load and skin demographics in that part of the county.`,
-  },
-  {
-    question: 'What is the difference between KIAMO Skin and day spas in San Diego?',
-    answer: `Day spas across San Diego (North Park, La Jolla, Pacific Beach, Downtown) offer relaxation facials with steam, massage, and extractions. KIAMO Skin uses clinical-grade equipment: HydraFacial Syndeo (FDA-cleared medical device, not consumer tools), Procell MD microchanneling, and medical-grade LED panels delivering therapeutic wavelengths (blue 415nm for acne bacteria, red 633nm for collagen stimulation). The approach is corrective, not maintenance - designed for acne, melasma, post-inflammatory hyperpigmentation, and barrier damage. Day spas use rotating staff. KIAMO Skin is one esthetician (Kiki, 7+ years, California licensed) who knows your skin and adjusts protocols based on your skin type and monthly progress.`,
-  },
-  {
-    question: 'Why travel to Mission Hills for a facial instead of going local?',
-    answer: `68% of KIAMO Skin clients travel 20+ minutes for every visit because corrective facial specialization is rare in San Diego. Most local spas follow general protocols not customized for specific skin concerns like post-inflammatory hyperpigmentation, melasma, or barrier damage. KIAMO Skin is the only Mission Hills studio specializing in corrective treatment for all skin types using clinical equipment (HydraFacial Syndeo, Procell MD, DMK Enzyme Therapy) and barrier-safe protocols. Clients from La Jolla (18 minutes via I-5), Chula Vista (25 minutes), Encinitas (35 minutes), and Carlsbad (40 minutes) choose clinical correction over local convenience. Day spas are everywhere. Clinical-grade corrective expertise is not.`,
-  },
-  {
-    question: 'Do you offer mobile facial services in San Diego?',
-    answer: `No. Mobile services cannot deliver clinical-grade corrective treatment. HydraFacial Syndeo requires a dedicated water line and electrical setup. Procell Microchanneling requires a sterile environment for post-treatment protocol. DMK Enzyme Therapy requires temperature control and a stable surface. Medical-grade LED therapy requires professional panels (not handheld consumer devices). Mobile facials offer convenience but compromise equipment quality, sterile conditions, and corrective capability. KIAMO Skin is appointment-only at one treatment room (3067 Reynard Way, Mission Hills) to maintain clinical standards across every visit. If you need corrective results, the equipment cannot come to you.`,
-  },
-  {
-    question: 'What makes KIAMO Skin different from HydraFacial franchises in San Diego?',
-    answer: `HydraFacial franchises use consumer-grade machines and standardized protocols delivered by rotating staff following franchise training. KIAMO Skin uses the HydraFacial Syndeo platform (the clinical-tier system, not consumer models) with customized serum selection based on your skin type, barrier function, and concern (acne, melasma, hyperpigmentation). Franchises run high volume with back-to-back appointments. KIAMO Skin is one client at a time with one esthetician (7+ years) who tracks your progress month-to-month. Franchises offer single-session treatments. KIAMO Skin designs corrective series where each visit builds on the last. Franchises are convenient and consistent. KIAMO Skin is clinical and specialized.`,
-  },
-];
-
-const serviceSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'Service',
-  '@id': `${pageUrl}#service`,
-  name: 'Corrective Facials Across San Diego County',
-  serviceType: 'Corrective Facial Treatment',
-  description:
-    'Corrective facials, chemical peels, Procell Microchanneling, HydraFacial and Keravive scalp therapy at the KIAMO Skin studio in Mission Hills, San Diego. Serving clients from North Park, La Jolla, Pacific Beach, La Mesa, Chula Vista, Del Mar, Encinitas, Carlsbad and the surrounding county.',
-  url: pageUrl,
-  provider: { '@id': businessId(site) },
-  areaServed: business.areaServed.map((name) => ({ '@type': 'Place', name })),
-  offers: {
-    '@type': 'AggregateOffer',
-    priceCurrency: 'USD',
-    lowPrice: '199',
-    highPrice: '599',
-    offerCount: 9,
-    availability: 'https://schema.org/InStock',
-    url: business.bookingUrl,
-  },
-};
-
-const areaGroups = [
+/**
+ * The areas, grouped by the climate that shapes their skin concern.
+ *
+ * The grouping is the useful part: a client reading "coastal" learns
+ * something a client reading a flat list of nine names does not — that the
+ * barrier damage in Encinitas and the pigmentation in Chula Vista come from
+ * the same distance from the marine layer, in opposite directions.
+ */
+const groups = [
   {
     type: 'Coastal & Beach',
-    description: 'Salt water, marine layer UV and year-round outdoor exposure drive the skin concerns here.',
-    areas: [
-      {
-        name: 'La Jolla',
-        slug: 'la-jolla',
-        concern: 'Barrier damage & scalp buildup',
-        why: 'Year-round ocean swimming at the Cove and Windansea strips the skin barrier with every session. Keravive scalp therapy and HydraFacial are the most booked treatments.',
-      },
-      {
-        name: 'Pacific Beach',
-        slug: 'pacific-beach',
-        concern: 'Uneven tone from May Gray UV',
-        why: 'The marine layer clears by early afternoon, but UVA accumulates through the gray all morning. Pigmentation and barrier damage build without a visible burn.',
-      },
-      {
-        name: 'Encinitas',
-        slug: 'encinitas',
-        concern: 'Reactive skin from surfing',
-        why: "Swami's and Moonlight Beach surf year-round. Salt, wind and daily rinsing leave skin tight, reactive and sensitive. Barrier repair is the primary concern.",
-      },
-      {
-        name: 'Del Mar',
-        slug: 'del-mar',
-        concern: 'Texture from Fairgrounds-season sun',
-        why: 'The race meet and county fair mean weeks of afternoon sun on open, unshaded grounds. Texture and uneven tone build across a full season.',
-      },
-    ],
+    description:
+      'Salt water, marine layer UV and year-round outdoor exposure drive the skin concerns here.',
+    slugs: ['la-jolla', 'encinitas', 'pacific-beach', 'del-mar'],
   },
   {
     type: 'Inland & East County',
-    description: 'Past the marine layer, UV load is higher and cumulative sun damage is the dominant concern.',
-    areas: [
-      {
-        name: 'Chula Vista',
-        slug: 'chula-vista',
-        concern: 'Melasma & pigmentation',
-        why: "The county's largest melanin-rich population sits inland, past the marine layer. Summer UV inland runs 8–15°F hotter. Melasma is the most common reason Chula Vista clients book.",
-      },
-      {
-        name: 'La Mesa',
-        slug: 'la-mesa',
-        concern: 'Cumulative sun damage',
-        why: 'Ten miles inland means more clear days per year than the coast. Lira peel series for sun-driven pigmentation is what La Mesa clients book most.',
-      },
-      {
-        name: 'Carlsbad',
-        slug: 'carlsbad',
-        concern: 'Series-based corrective work',
-        why: 'The drive (35–40 minutes) shapes the plan. Carlsbad clients schedule Procell and Keravive series as a block so the distance stops being a reason to stop.',
-      },
-    ],
+    description:
+      'Past the marine layer, UV load is higher and cumulative sun damage is the dominant concern.',
+    slugs: ['chula-vista', 'la-mesa', 'carlsbad'],
   },
   {
     type: 'Urban & Central San Diego',
     description: 'Close to the studio — ten to twenty minutes, no freeway required for most.',
-    areas: [
-      {
-        name: 'North Park',
-        slug: 'north-park',
-        concern: 'Peel series & acne scarring',
-        why: 'Three and a half miles, no freeway. The proximity makes a six-week peel series realistic in a way it is not from thirty miles out. Dermaplaning pairs cleanly with peels.',
-      },
-      {
-        name: 'Mission Hills',
-        slug: 'mission-hills',
-        concern: 'Corrective facials on your doorstep',
-        why: 'The studio is here — off Washington Street, minutes from Hillcrest, Bankers Hill and Little Italy. Every treatment from HydraFacial to DMK Enzyme Therapy.',
-      },
-    ],
+    slugs: ['north-park', 'point-loma', 'hillcrest'],
   },
 ];
+
+const faqs = [
+  {
+    question: 'How far do clients travel to reach the studio?',
+    answer:
+      'Most clients drive between five and forty-five minutes. North Park and Hillcrest are under ten minutes with no freeway. Pacific Beach, La Mesa and La Jolla are fifteen to twenty minutes. Chula Vista and Del Mar run twenty to twenty-five minutes. Encinitas and Carlsbad are the farthest — roughly thirty to forty minutes on I-5, depending on traffic.',
+  },
+  {
+    question: 'Is there parking at the studio?',
+    answer:
+      'Free parking is available on site. You do not need to find street parking or pay for a garage. The studio is by appointment only, so a space is always available when you arrive.',
+  },
+  {
+    question: 'Can I combine treatments to make one trip from far away worth it?',
+    answer:
+      'Yes — combining is discussed at the first consultation when it makes clinical sense. A HydraFacial and dermaplaning can share a single appointment. Procell Microchanneling and a Lira peel cannot be layered in one visit. The plan accounts for where you are coming from and how often a round trip is realistic.',
+  },
+  {
+    question: 'Do I need to live nearby to get consistent results?',
+    answer:
+      'No. Clients from Carlsbad, Encinitas and Del Mar complete full corrective courses regularly. The key is scheduling the series as a block at the start rather than booking visit by visit. A three-session microchanneling series placed at four-to-six-week intervals fits into a calendar whether you are ten minutes away or forty.',
+  },
+  {
+    question: 'What is the first appointment like for someone coming from outside San Diego city?',
+    answer:
+      'The first visit is a full consultation, skin analysis, and a first treatment — the $249 new-client visit. It takes longer than a follow-up, so it is worth leaving travel margin. After that appointment you will have a clear treatment plan and a sense of how often you need to come in, which makes the drive easier to plan.',
+  },
+  {
+    question: 'Which areas have the most clients travelling to the studio?',
+    answer:
+      'North Park, Pacific Beach and La Jolla send the most clients, followed by Chula Vista and La Mesa. North Park is the closest — three and a half miles with no freeway. Chula Vista sends the most pigmentation and melasma clients, which reflects the inland UV load and skin demographics in that part of the county.',
+  },
+  {
+    question: 'Which treatment is right for my area?',
+    answer:
+      'Each area below lists the treatments with a page for it, and each page opens with what that treatment actually addresses for that area — the barrier damage salt air causes, the inland UV load, the congestion a coastal climate produces. The consultation still decides the modality, but the pages tell you which ones are worth the drive.',
+  },
+  {
+    question: 'Do you offer mobile facial services in San Diego?',
+    answer:
+      'No. Mobile services cannot deliver clinical-grade corrective treatment. HydraFacial Syndeo requires a dedicated water line and electrical setup. Procell Microchanneling requires a sterile environment for post-treatment protocol. DMK Enzyme Therapy requires temperature control and a stable surface. Medical-grade LED therapy requires professional panels, not handheld consumer devices. Mobile facials offer convenience but compromise equipment quality, sterile conditions, and corrective capability.',
+  },
+];
+
+/**
+ * The matrix.
+ *
+ * Each area, and under it every service with a page for it. This is the crawl
+ * path into the cluster — every one of the twenty-five service-and-city
+ * pages is one link from here, and every one is also reachable from its
+ * service hub and its sibling pages.
+ */
+const matrix = areaShells.map((shell) => ({
+  shell,
+  rows: getServiceAreasForArea(shell.slug).map((record) => ({
+    record,
+    service: services.find((s) => s.slug === record.service),
+  })),
+}));
+
+/** The areas that have at least one service page. */
+const covered = matrix.filter((m) => m.rows.length > 0);
 ---
 
 <BaseLayout
-  title="Corrective Facials San Diego | KIAMO Skin"
-  description="Corrective facials serving 9 San Diego areas from the Mission Hills studio. HydraFacial, Procell, DMK, Lira peels. Request an appointment."
+  title="Areas We Serve in San Diego | KIAMO Skin"
+  description="KIAMO Skin serves clients from 10 San Diego areas. HydraFacial, peels, dermaplaning, microchanneling and scalp therapy. Find your area."
 >
-  <script type="application/ld+json" is:inline set:html={JSON.stringify(serviceSchema)} slot="head" />
-  <FaqSchema slot="head" faqs={hubFaqs} />
-  <BreadcrumbSchema slot="head" trail={[{ name: 'Areas We Serve', path: '/service-areas' }]} />
+  <BreadcrumbSchema slot="head" trail={[{ name: 'Areas We Serve', path: '/service-areas/' }]} />
+  <FaqSchema slot="head" faqs={faqs} />
+  <SpeakableSchema slot="head" />
 
-  <!-- HEADER -->
-  <header class="bg-blush">
-    <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-      <div class="grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-20 items-center">
-        <div>
-                      <Breadcrumbs current="Areas We Serve" meta="San Diego County" />
-          <h1 class="t-h2 mt-6 max-w-[26ch] text-[2.5rem] md:text-[4rem]">
-            KIAMO Skin — Corrective Facials Across 9 San Diego Areas
-          </h1>
-          <p class="t-body mt-7 text-[1.125rem] max-w-[62ch]">
-            Clinical corrective facials at our Mission Hills studio near Hillcrest
-            Medical Center and Balboa Park. HydraFacial Syndeo, Procell Microchanneling, DMK Enzyme Therapy,
-            and Lira Clinical peels - performed by a California-licensed esthetician specializing in acne,
-            melasma, and post-inflammatory hyperpigmentation treatment for all skin types.
-          </p>
-          <p class="t-body mt-5 max-w-[62ch]">
-            One treatment room at 3067 Reynard Way in Mission Hills - clients travel from North Park (8 minutes),
-            La Jolla (18 minutes), Chula Vista (25 minutes), Downtown San Diego, Pacific Beach, Encinitas,
-            Carlsbad, Del Mar, and La Mesa. Every area page below covers the primary skin concern from that
-            neighborhood, honest drive time via I-5 or SR-163, and landmark-based directions.
-          </p>
+  <article>
+    <header class="bg-blush">
+      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+        <div class="grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-20 items-center">
+          <div>
+            <Breadcrumbs current="Areas We Serve" meta="San Diego County" />
+            <h1 class="t-h2 mt-6 max-w-[26ch] text-[2.5rem] md:text-[4rem]">
+              Where clients travel from, and what the drive is worth
+            </h1>
+            <p class="t-body mt-7 text-[1.125rem] max-w-[62ch]">
+              One treatment room in San Diego. Clients travel from {areaShells.length} areas across the
+              county — from five minutes away to forty — for corrective skin and scalp work performed by
+              a California licensed esthetician.
+            </p>
+            <p class="t-body mt-5 max-w-[62ch]">
+              Every area below lists the treatments with a page for it. Each page opens with what that
+              treatment actually addresses for that area, so you can tell whether the drive is worth it
+              before you book.
+            </p>
 
-          {/* Trust strip */}
-          <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-soft">
-            <span>450+ clients across 9 areas</span>
-            <span class="text-rose">·</span>
-            <span>Licensed Esthetician</span>
-            <span class="text-rose">·</span>
-            <span>7+ years in San Diego</span>
-            <span class="text-rose">·</span>
-            <span>HydraFacial Syndeo Certified</span>
-            <span class="text-rose">·</span>
-            <span>All skin types</span>
+            <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-soft">
+              <span>{areaShells.length} areas served</span>
+              <span class="text-rose">·</span>
+              <span>Licensed Esthetician</span>
+              <span class="text-rose">·</span>
+              <span>{business.experience} in San Diego</span>
+              <span class="text-rose">·</span>
+              <span>All skin types</span>
+            </div>
+
+            <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+              <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+              <a
+                href={business.phone.href}
+                class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+              >
+                {business.phone.display}
+              </a>
+            </div>
           </div>
 
-          <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
-            <a href={business.phone.href} class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose">
-              {business.phone.display}
-            </a>
+          <div class="order-first md:order-last">
+            <Image
+              src={heroServiceAreasHub}
+              alt="San Diego service area coverage map showing KIAMO Skin corrective facial services across the neighborhoods served"
+              class="w-full h-auto rounded-sm shadow-lg"
+              widths={[400, 600, 800]}
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
           </div>
-        </div>
-
-        <div class="order-first md:order-last">
-          <Image
-            src={heroServiceAreasHub}
-            alt="San Diego service area coverage map showing KIAMO Skin corrective facial services across 9 neighborhoods"
-            class="w-full h-auto rounded-sm shadow-lg"
-            widths={[400, 600, 800]}
-            sizes="(max-width: 768px) 100vw, 50vw"
-          />
         </div>
       </div>
+    </header>
+
+    {/* The matrix. The directory of where and what. */}
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <p class="t-eyebrow text-ink-soft">Where you live shapes your skin</p>
+        <h2 class="t-h2 mt-5 max-w-[28ch]">
+          The skin concern that brings clients from each part of San Diego County
+        </h2>
+        <p class="t-body mt-6 max-w-[62ch]">
+          San Diego is not one climate. Coastal neighborhoods deal with barrier damage and marine-layer
+          UV. Inland areas accumulate more UV hours per year and see more melasma. Central San Diego
+          clients are close enough to complete a peel series.
+        </p>
+
+        {
+          groups.map((group) => {
+            const areas = matrix.filter((m) => group.slugs.includes(m.shell.slug));
+            if (areas.length === 0) return null;
+            return (
+              <Reveal class="mt-16">
+                <h3 class="t-service text-[1.0625rem] text-rose md:text-[1.1875rem]">{group.type}</h3>
+                <p class="t-body mt-2 max-w-[56ch] text-ink-soft">{group.description}</p>
+                <ul class="mt-8 grid list-none gap-6 p-0 md:grid-cols-2 lg:grid-cols-3">
+                  {areas.map(({ shell, rows }) => (
+                    <li class="border border-line bg-porcelain p-7">
+                      <p class="t-service text-[1rem]">{shell.name}</p>
+                      <p class="t-body mt-2 text-[0.875rem] text-ink-soft">{shell.proximity}</p>
+
+                      <ul class="m-0 mt-5 list-none border-t border-line p-0">
+                        {rows.map(({ record, service }) => (
+                          <li class="border-b border-line last:border-0">
+                            <a
+                              href={areaServicePath(record.area, record.service)}
+                              class="t-body group flex items-baseline justify-between gap-x-4 py-3 transition-colors duration-300 hover:text-rose"
+                            >
+                              <span>{service?.name ?? record.service}</span>
+                              <span aria-hidden="true" class="text-rose">
+                                →
+                              </span>
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
+            );
+          })
+        }
+      </div>
+    </section>
+
+    {/* The trust strip. */}
+    <div class="border-y border-line bg-porcelain">
+      <div class="wrap py-10 md:py-12">
+        <ul class="grid list-none grid-cols-2 gap-x-6 gap-y-7 p-0 md:grid-cols-4 md:gap-x-10">
+          <li>
+            <p class="t-service text-[0.9375rem] md:text-[1rem]">{areaShells.length} areas served</p>
+            <p class="t-body mt-1 text-[0.875rem] text-ink-soft">Across San Diego County</p>
+          </li>
+          <li>
+            <p class="t-service text-[0.9375rem] md:text-[1rem]">{business.experience} in practice</p>
+            <p class="t-body mt-1 text-[0.875rem] text-ink-soft">Corrective skin care</p>
+          </li>
+          <li>
+            <p class="t-service text-[0.9375rem] md:text-[1rem]">Licensed esthetician</p>
+            <p class="t-body mt-1 text-[0.875rem] text-ink-soft">CA Board of Barbering &amp; Cosmetology</p>
+          </li>
+          <li>
+            <p class="t-service text-[0.9375rem] md:text-[1rem]">All skin types</p>
+            <p class="t-body mt-1 text-[0.875rem] text-ink-soft">
+              Fitzpatrick I-VI, protocols per skin tone
+            </p>
+          </li>
+        </ul>
+      </div>
     </div>
-  </header>
 
-  {/* NEW: Why Travel to Mission Hills? - Comparison section */}
-  <WhyTravelMissionHills />
-
-  <!-- SKIN CONCERNS BY AREA -->
-  <section class="bg-ivory">
-    <div class="wrap section-y">
-      <p class="t-eyebrow text-ink-soft">Where you live shapes your skin</p>
-      <h2 class="t-h2 mt-5 max-w-[28ch]">The skin concern that brings clients from each part of San Diego County</h2>
-      <p class="t-body mt-6 max-w-[62ch]">
-        San Diego is not one climate. Coastal neighborhoods deal with barrier damage and marine-layer UV.
-        Inland areas accumulate more UV hours per year and see more melasma. Central San Diego clients
-        are close enough to complete a peel series. The area pages below each cover the specific concern
-        and the route to the studio.
-      </p>
-
-      {areaGroups.map((group) => (
-        <Reveal class="mt-16">
-          <h3 class="t-service text-[1.0625rem] text-rose md:text-[1.1875rem]">{group.type}</h3>
-          <p class="t-body mt-2 max-w-[56ch] text-ink-soft">{group.description}</p>
-          <ul class="mt-8 grid list-none gap-6 p-0 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {group.areas.map((area) => (
-              <li class="border border-line bg-porcelain p-7">
-                <a href={`/service-areas/${area.slug}/`} class="group block h-full">
-                  <p class="t-service text-[1rem] transition-colors duration-300 group-hover:text-rose">{area.name}</p>
-                  <p class="t-body mt-2 text-[0.875rem] font-medium text-ink">{area.concern}</p>
-                  <p class="t-body mt-3 text-[0.875rem] text-ink-soft">{area.why}</p>
-                  <p class="t-button mt-5 text-[0.6875rem] border-b border-ink pb-1 inline-block transition-colors duration-300 group-hover:border-rose group-hover:text-rose">
-                    {area.name} area page →
-                  </p>
-                </a>
+    {/* Every service-and-city page, listed flat. One link from here to each of
+        the twenty-five, and each is also reachable from its service hub and
+        its sibling pages. */}
+    <section class="bg-porcelain">
+      <div class="wrap section-y">
+        <p class="t-eyebrow text-ink-soft">Every treatment and area</p>
+        <h2 class="t-h2 mt-5 max-w-[26ch]">
+          All {covered.reduce((n, m) => n + m.rows.length, 0)} service-and-area pages
+        </h2>
+        <p class="t-body mt-6 max-w-[62ch]">
+          Each page covers what that treatment addresses for that area, the honest drive time, and the
+          local skin concern. Click through to find yours.
+        </p>
+        <ul class="m-0 mt-12 grid list-none gap-x-10 gap-y-0 p-0 md:grid-cols-2 lg:grid-cols-3">
+          {
+            covered.map(({ shell, rows }) => (
+              <li class="border-b border-line">
+                <p class="t-service pt-7 text-[1.0625rem]">{shell.name}</p>
+                <ul class="m-0 list-none p-0">
+                  {rows.map(({ record, service }) => (
+                    <li>
+                      <a
+                        href={areaServicePath(record.area, record.service)}
+                        class="t-body group flex items-baseline justify-between gap-x-4 py-3 transition-colors duration-300 hover:text-rose"
+                      >
+                        <span>{service?.name ?? record.service}</span>
+                        <span aria-hidden="true" class="text-rose">
+                          →
+                        </span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
               </li>
-            ))}
-          </ul>
-        </Reveal>
-      ))}
-    </div>
-  </section>
+            ))
+          }
+        </ul>
+      </div>
+    </section>
 
-  {/* NEW: Client Volume Stats - Geographic distribution */}
-  <ClientVolumeStats />
-
-  <!-- TRUST STRIP -->
-  <div class="border-y border-line bg-porcelain">
-    <div class="wrap py-10 md:py-12">
-      <ul class="grid list-none grid-cols-2 gap-x-6 gap-y-7 p-0 md:grid-cols-4 md:gap-x-10">
-        <li>
-          <p class="t-service text-[0.9375rem] md:text-[1rem]">9 areas served</p>
-          <p class="t-body mt-1 text-[0.875rem] text-ink-soft">Across San Diego County</p>
-        </li>
-        <li>
-          <p class="t-service text-[0.9375rem] md:text-[1rem]">{business.experience} in practice</p>
-          <p class="t-body mt-1 text-[0.875rem] text-ink-soft">Corrective skin care</p>
-        </li>
-        <li>
-          <p class="t-service text-[0.9375rem] md:text-[1rem]">Licensed esthetician</p>
-          <p class="t-body mt-1 text-[0.875rem] text-ink-soft">CA Board of Barbering & Cosmetology</p>
-        </li>
-        <li>
-          <p class="t-service text-[0.9375rem] md:text-[1rem]">All skin types</p>
-          <p class="t-body mt-1 text-[0.875rem] text-ink-soft">Fitzpatrick I-VI, protocols per skin tone</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- ALL AREAS LIST -->
-  <section class="bg-porcelain">
-    <div class="wrap section-y">
-      <p class="t-eyebrow text-ink-soft">Every area page</p>
-      <h2 class="t-h2 mt-5 max-w-[24ch]">Corrective facial treatments near me — all San Diego County areas</h2>
-      <p class="t-body mt-6 max-w-[62ch]">
-        Each page below covers the skin concern most common from that area, the drive to the studio, and
-        named neighbourhoods served. Click through to find yours.
-      </p>
-      <ul class="m-0 mt-12 grid list-none gap-x-10 gap-y-0 p-0 md:grid-cols-2">
-        {areas.map((area) => (
-          <Reveal as="li" class="border-b border-line">
-            <a href={`/service-areas/${area.slug}/`} class="group block py-8">
-              <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
-                {area.crossLinkLabel}
-              </h3>
-              <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{area.proximity}</p>
-            </a>
+    {/* The FAQ. */}
+    <section class="bg-ivory">
+      <div class="wrap section-y">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Common questions</p>
+            <h2 class="t-h2 mt-5">Travelling for a facial in San Diego</h2>
           </Reveal>
-        ))}
-      </ul>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="bg-ivory">
-    <div class="wrap section-y">
-      <p class="t-eyebrow text-ink-soft">Before you book</p>
-      <h2 class="t-h2 mt-5 max-w-[22ch]">Common questions about travelling for a facial in San Diego</h2>
-      <p class="t-body mt-6 max-w-[62ch]">
-        Questions about drive times, parking, treatment planning across a distance, and what to expect
-        at a first visit — answered for clients travelling from across the county.
-      </p>
-      <div class="mt-12 max-w-[780px]">
-        {hubFaqs.map((faq) => (
-          <div class="border-b border-line">
-            <details class="group">
-              <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
-                <span>{faq.question}</span>
-                <span aria-hidden="true" class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45">+</span>
-              </summary>
-              <div class="t-body pb-6 text-[0.9375rem]">{faq.answer}</div>
-            </details>
+          <div class="faq-section mt-12">
+            {faqs.map((faq) => (
+              <div class="border-b border-line py-7 first:pt-0">
+                <h3 class="t-service text-[1.0625rem] md:text-[1.1875rem]">{faq.question}</h3>
+                <p class="t-body mt-3 text-[0.9375rem]">{faq.answer}</p>
+              </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
-      <div class="mt-12">
-        <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- STUDIO + MAP -->
-  <section class="bg-porcelain">
-    <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.8fr] md:gap-20">
-      <div>
-        <p class="t-eyebrow text-ink-soft">The studio</p>
-        <h2 class="t-h2 mt-5 text-[2rem] md:text-[2.5rem]">Mission Hills, San Diego — one room, one esthetician</h2>
-        <p class="t-body mt-7 max-w-[62ch]">
-          Everything happens in one treatment room on Reynard Way in Mission Hills. There is no second
-          location and no mobile service — which is why the treatment plan stays consistent from one
-          visit to the next. Free parking on site. By appointment only.
-        </p>
-        <p class="t-body mt-5 max-w-[62ch]">
-          Washington Street connects the studio to Hillcrest, Bankers Hill, Old Town and I-5 — which
-          is why clients from La Jolla, Pacific Beach, North Park and Chula Vista all use the same
-          westbound I-5 or I-8 corridor to get here.
-        </p>
-        <div class="mt-8">
-          <a
-            href="#location-map"
-            class="t-button border-b border-ink pb-1 hover:border-rose hover:text-rose"
-          >
-            View map below
-          </a>
-        </div>
-        <p class="t-body mt-7 text-[0.9375rem]">
-          <a href="/treatments/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">
-            See all corrective treatments in San Diego
-          </a>
-        </p>
+    <section class="bg-porcelain py-16 md:py-20">
+      <div class="wrap">
+        <NapBlock />
       </div>
-      <div>
-        <LocationMap aspect="aspect-4/3" />
-        <div class="mt-8">
-          <NapBlock tone="light" showCancellation />
-        </div>
-        <div class="mt-9">
-          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
-        </div>
-      </div>
-    </div>
-  </section>
-
+    </section>
+  </article>
 </BaseLayout>

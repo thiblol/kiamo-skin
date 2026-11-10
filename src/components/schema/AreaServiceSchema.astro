@@ -1,47 +1,70 @@
 ---
 /**
- * Service node for an area page.
+ * Page-level Service node for an area hub.
  *
- * Deliberately NOT a LocalBusiness. Emitting a second business node per area
- * would create nine entities where one exists — the exact shape Google treats
- * as location spam. One studio, nine areas served.
+ * `/service-areas/{area}/` — "Facials in Carlsbad".
+ *
+ * Deliberately NOT a LocalBusiness. One studio, one business entity, mounted
+ * once through BaseLayout. A second business node per area would create one
+ * entity per area, which is the shape Google treats as location spam — the
+ * exact reason the old cluster's area schemas were deleted.
+ *
+ * The node is a Service scoped to the city it targets, with an offer
+ * catalogue enumerating the treatments available there. That is what lets a
+ * crawler read the page as "this treatment, for this place, from this studio".
  */
-import { absolute, businessId } from '../../config/urls';
-import { treatments } from '../../data/treatments';
-import type { Area } from '../../data/areas';
+import { absolute, businessId, areaPath, areaServicePath } from '../../config/urls';
+import { business } from '../../config/business';
+import type { AreaShell } from '../../data/service-area-types';
+import { getServiceAreasForArea } from '../../data/service-areas-index';
+import { services } from '../../data/services';
 
 interface Props {
-  area: Area;
+  shell: AreaShell;
 }
 
-const { area } = Astro.props;
+const { shell } = Astro.props;
 const site = Astro.site;
-const url = absolute(`/service-areas/${area.slug}`, site);
+const url = absolute(areaPath(shell.slug), site);
+
+const rows = getServiceAreasForArea(shell.slug);
 
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'Service',
   '@id': `${url}#service`,
-  name: `Facials in ${area.name}`,
-  serviceType: 'Facial treatment',
+  name: `Corrective facials in ${shell.name}`,
+  serviceType: 'Corrective facial treatment',
   category: 'Corrective skin and scalp treatment',
-  description: area.schemaDescription,
+  description: shell.schemaDescription,
   url,
   provider: { '@id': businessId(site) },
-  areaServed: { '@type': 'Place', name: `${area.name}, San Diego County, CA` },
-  hasOfferCatalog: {
-    '@type': 'OfferCatalog',
-    name: `Treatments available to ${area.name} clients`,
-    itemListElement: treatments.map((treatment) => ({
-      '@type': 'Offer',
-      itemOffered: {
-        '@type': 'Service',
-        name: treatment.name,
-        url: absolute(`/treatments/${treatment.slug}`, site),
-        provider: { '@id': businessId(site) },
-      },
-    })),
-  },
+  areaServed: { '@type': 'Place', name: `${shell.name}, San Diego County, CA` },
+  ...(rows.length > 0 && {
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: `Treatments available to ${shell.name} clients`,
+      itemListElement: rows.map((record) => {
+        const service = services.find((s) => s.slug === record.service);
+        const price = record.pricing?.[0];
+        return {
+          '@type': 'Offer',
+          ...(price && Number(price.price.replace(/[$,]/g, '')) > 0
+            ? {
+                price: price.price.replace(/[$,]/g, ''),
+                priceCurrency: 'USD',
+              }
+            : {}),
+          itemOffered: {
+            '@type': 'Service',
+            name: `${service?.name ?? record.service} in ${shell.name}`,
+            url: absolute(areaServicePath(record.area, record.service), site),
+            provider: { '@id': businessId(site) },
+          },
+        };
+      }),
+    },
+  }),
 };
 ---
 

@@ -118,7 +118,7 @@ export const articles: Article[] = [
         p: 'Almost everyone who books here for pigmentation arrives with a product that did not work. Usually a brightening serum, sometimes a hydroquinone cream bought without guidance, occasionally the aftermath of a peel somewhere else that left the marks darker than before. The product is rarely the problem. The problem is that three different conditions produce brown patches on a face, they look similar enough to confuse, and the treatment that clears one can visibly worsen another.',
       },
       {
-        p: 'So before choosing a treatment, it is worth working out which one you actually have. KIAMO Skin offers <a href="/hyperpigmentation-treatment/">hyperpigmentation treatment across San Diego neighborhoods</a> from the Mission Hills studio, with protocols calibrated for each presentation.',
+        p: 'So before choosing a treatment, it is worth working out which one you actually have. KIAMO Skin offers <a href="/services/hyperpigmentation-treatment/">hyperpigmentation treatment across San Diego neighborhoods</a> from the Mission Hills studio, with protocols calibrated for each presentation.',
       },
 
       { h2: 'What are the three kinds of hyperpigmentation?' },
@@ -210,7 +210,7 @@ export const articles: Article[] = [
         p: 'That finding is worth sitting with, because it cuts against how pigmentation is usually sold. It does not mean peels have no place. It means the sequence matters: the review lists risk mitigation as "pre- or posttreatment regimens, starting with lower concentrations, and emphasizing sun protection" — which is a description of a prepared, escalating series rather than one strong session.',
       },
       {
-        p: 'It is also why <a href="/treatments/lira-peels/">peels here are run as a series with home prep between visits</a>, why strength escalates across the series rather than within a single appointment, and why the first appointment is often spent on preparation rather than on acid.',
+        p: 'It is also why <a href="/services/chemical-peel/">peels here are run as a series with home prep between visits</a>, why strength escalates across the series rather than within a single appointment, and why the first appointment is often spent on preparation rather than on acid.',
       },
 
       { h2: 'What does a facial for hyperpigmentation actually do?' },
@@ -226,15 +226,15 @@ export const articles: Article[] = [
       },
       {
         ul: [
-          '<a href="/treatments/dmk-enzyme-therapy/">Enzyme therapy</a> works on barrier function and circulation. Most useful where inflammation and congestion are still generating new marks.',
-          '<a href="/treatments/hydrafacial/">HydraFacial</a> cleanses, exfoliates and hydrates in one pass. Good maintenance and good preparation; not a corrective pigment treatment on its own.',
-          '<a href="/treatments/lira-peels/">Lira peels</a> are the corrective option for pigmentation, run as a prepared series at escalating strength rather than as a single strong session.',
-          '<a href="/treatments/dermaplaning/">Dermaplaning</a> clears the surface layer between peel appointments, improving serum absorption without chemical exposure — useful when the marks are fading and the skin needs maintenance.',
-          '<a href="/treatments/procell-microchanneling/">Procell microchanneling</a> works without heat or light, which matters here because heat is itself a pigment trigger in melanin-rich skin. <a href="/journal/microneedling-on-dark-skin-san-diego/">Better suited to texture and scarring than to melasma</a>.',
+          '<a href="/services/dmk-enzyme-therapy/">Enzyme therapy</a> works on barrier function and circulation. Most useful where inflammation and congestion are still generating new marks.',
+          '<a href="/services/hydrafacial/">HydraFacial</a> cleanses, exfoliates and hydrates in one pass. Good maintenance and good preparation; not a corrective pigment treatment on its own.',
+          '<a href="/services/chemical-peel/">Lira peels</a> are the corrective option for pigmentation, run as a prepared series at escalating strength rather than as a single strong session.',
+          '<a href="/services/dermaplaning/">Dermaplaning</a> clears the surface layer between peel appointments, improving serum absorption without chemical exposure — useful when the marks are fading and the skin needs maintenance.',
+          '<a href="/services/microneedling/">Procell microchanneling</a> works without heat or light, which matters here because heat is itself a pigment trigger in melanin-rich skin. <a href="/journal/microneedling-on-dark-skin-san-diego/">Better suited to texture and scarring than to melasma</a>.',
         ],
       },
       {
-        p: 'Notice what is absent. No lasers, no IPL, no prescriptions — this is an esthetician studio, not a medical practice. For dermal melasma or anything needing prescription-strength intervention, a dermatologist is the right referral, and saying so is more useful than selling a series that will not reach the depth involved.',
+        p: 'Notice what is absent. No lasers, no IPL, no prescriptions — this is a facial spa, not a medical practice. For dermal melasma or anything needing prescription-strength intervention, a dermatologist is the right referral, and saying so is more useful than selling a series that will not reach the depth involved.',
       },
 
       { h2: 'Does San Diego make pigmentation harder to treat?' },
@@ -246,10 +246,10 @@ export const articles: Article[] = [
         p: 'McGill University\'s Office for Science and Society notes that on an overcast day <a href="https://www.mcgill.ca/oss/article/medical-student-contributors/cloudy-chance-sunburn" rel="noopener" target="_blank">up to 80% of the sun\'s UV rays can still reach your skin</a>, and that people "mistakenly associate UV exposure with temperature and cloud cover" — which produces more sunburn on cool, grey days, not fewer. UVA in particular accounts for 90–99% of the UV reaching the ground and is the fraction least affected by cloud.',
       },
       {
-        p: 'May Gray and June Gloom therefore arrive as a pigmentation problem dressed as weather. The sky goes white, the sunscreen comes off the counter, and six weeks of careful correction quietly reverses. Add the visible-light component that drives melasma and a bright overcast morning supplies almost everything pigment cells respond to, while feeling like none of it. The pattern is especially common along the boardwalk — <a href="/service-areas/pacific-beach/" class="border-b border-ink/40 hover:border-rose hover:text-rose">facials for Pacific Beach clients</a> are built around exactly this mechanism.',
+        p: 'May Gray and June Gloom therefore arrive as a pigmentation problem dressed as weather. The sky goes white, the sunscreen comes off the counter, and six weeks of careful correction quietly reverses. Add the visible-light component that drives melasma and a bright overcast morning supplies almost everything pigment cells respond to, while feeling like none of it. The pattern is especially common along the boardwalk — <a href="/service-areas/pacific-beach/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">facials for Pacific Beach clients</a> are built around exactly this mechanism.',
       },
       {
-        p: 'Car windows are the other local blind spot. Glass filters UVB well and UVA poorly, so a daily commute is meaningful exposure on the driving side of the face. If your pigmentation is noticeably worse on one side, that is usually the explanation. Inland commuters <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">from across the county</a> face higher cumulative UV year-round—<a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista</a> and <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a> sit past the marine layer that keeps coastal areas gray through May and June, which is why melasma is the most common concern from those inland areas.',
+        p: 'Car windows are the other local blind spot. Glass filters UVB well and UVA poorly, so a daily commute is meaningful exposure on the driving side of the face. If your pigmentation is noticeably worse on one side, that is usually the explanation. Inland commuters <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">from across the county</a> face higher cumulative UV year-round—<a href="/service-areas/chula-vista/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista</a> and <a href="/service-areas/la-mesa/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a> sit past the marine layer that keeps coastal areas gray through May and June, which is why melasma is the most common concern from those inland areas.',
       },
       {
         p: 'The <a href="/journal/june-gloom-is-not-sun-protection/">longer piece on the marine layer</a> covers this in more detail.',
@@ -304,7 +304,7 @@ export const articles: Article[] = [
           'Consistent daily sun protection does more than any single treatment, because it stops new pigment forming while existing pigment fades. Professional treatment accelerates the fading of pigment that has already formed, so the fastest realistic route is a prepared series combined with daily broad-spectrum SPF, tinted with iron oxides if the pattern is melasma.',
       },
     ],
-    cta: { label: 'See peels for pigmentation', href: '/treatments/lira-peels/' },
+    cta: { label: 'See peels for pigmentation', href: '/services/chemical-peel/' },
   },
   {
     slug: 'june-gloom-is-not-sun-protection',
@@ -321,7 +321,7 @@ export const articles: Article[] = [
     imageAlt: 'Overcast San Diego coastline under a bright marine layer',
     body: [
       {
-        p: 'Every May and June, the same conversation happens in the treatment room. Someone has been diligent all winter, their pigmentation has visibly lifted, and then it comes back over a few grey weeks. The assumption is that something in the routine stopped working. Almost always, what actually happened is that the sunscreen came off the counter because the sky went white. This pattern is especially common in <a href="/service-areas/pacific-beach/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Pacific Beach</a> and other coastal neighborhoods where the marine layer sits heaviest.',
+        p: 'Every May and June, the same conversation happens in the treatment room. Someone has been diligent all winter, their pigmentation has visibly lifted, and then it comes back over a few grey weeks. The assumption is that something in the routine stopped working. Almost always, what actually happened is that the sunscreen came off the counter because the sky went white. This pattern is especially common in <a href="/service-areas/pacific-beach/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Pacific Beach</a> and other coastal neighborhoods where the marine layer sits heaviest.',
       },
       { h2: 'What the marine layer actually does' },
       {
@@ -372,7 +372,7 @@ export const articles: Article[] = [
           'June Gloom creates the conditions for pigmentation damage while removing the sensory cues that normally signal UV risk. There is no warmth, no bright glare, and the sky looks pale — but UVA passes through thin marine layer with very little loss, and in melanin-rich skin that is enough to trigger new pigment production. Any corrective work done in the treatment room during that window is competing against unprotected daily exposure.',
       },
     ],
-    cta: { label: 'See peels for pigmentation', href: '/treatments/lira-peels/' },
+    cta: { label: 'See peels for pigmentation', href: '/services/chemical-peel/' },
   },
   {
     slug: 'san-diego-hard-water-and-your-scalp',
@@ -416,10 +416,10 @@ export const articles: Article[] = [
         ],
       },
       {
-        p: 'That last point is what HydraFacial Keravive is for: it cleanses, exfoliates and hydrates the scalp itself, section by section, then sends you home with the spray that keeps the result. In a city with water this hard, scalp care is not a luxury add-on. It is maintenance. Year-round ocean swimmers and surfers <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">from La Jolla to Encinitas</a> add salt residue on top of mineral buildup—which is why <a href="/service-areas/la-jolla/" class="border-b border-ink/40 hover:border-rose hover:text-rose">scalp therapy for La Jolla swimmers</a> and <a href="/service-areas/encinitas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">barrier repair facials in Encinitas</a> are the most common bookings from those coastal areas.',
+        p: 'That last point is what HydraFacial Keravive is for: it cleanses, exfoliates and hydrates the scalp itself, section by section, then sends you home with the spray that keeps the result. In a city with water this hard, scalp care is not a luxury add-on. It is maintenance. Year-round ocean swimmers and surfers <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">from La Jolla to Encinitas</a> add salt residue on top of mineral buildup—which is why <a href="/service-areas/la-jolla/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">scalp therapy for La Jolla swimmers</a> and <a href="/service-areas/encinitas/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">barrier repair facials in Encinitas</a> are the most common bookings from those coastal areas.',
       },
     ],
-    cta: { label: 'See Keravive scalp therapy', href: '/treatments/keravive-scalp/' },
+    cta: { label: 'See Keravive scalp therapy', href: '/services/scalp-therapy/' },
   },
   {
     slug: 'microneedling-on-dark-skin-san-diego',
@@ -504,7 +504,7 @@ export const articles: Article[] = [
           'Anyone with active acne, an inflamed or compromised barrier, an active skin infection, or a history of keloid scarring should have that addressed before needling is considered at all. On melanin-rich skin the more common question is not who, but when.',
       },
       {
-        p: 'Treating over inflammation is how marks get worse instead of better. If the barrier is reactive — stinging, flushing, tight after cleansing — that gets rebuilt first, which is what <a href="/treatments/dmk-enzyme-therapy/">enzyme therapy</a> is for. Corrective work on top of an unstable barrier is the most reliable way to produce the pigmentation it was meant to clear.',
+        p: 'Treating over inflammation is how marks get worse instead of better. If the barrier is reactive — stinging, flushing, tight after cleansing — that gets rebuilt first, which is what <a href="/services/dmk-enzyme-therapy/">enzyme therapy</a> is for. Corrective work on top of an unstable barrier is the most reliable way to produce the pigmentation it was meant to clear.',
       },
       {
         p: 'Active acne is the other sequencing problem. Every new spot deposits a new mark, so clearing the acne comes before treating what it left behind.',
@@ -516,7 +516,7 @@ export const articles: Article[] = [
           'Microchanneling creates controlled microchannels and delivers a growth factor serum through them, without heat and without light. A needle pen relies on adjustable needle depth to create the injury, and that depth is the variable most associated with pigment change on deeper skin tones.',
       },
       {
-        p: 'KIAMO Skin does not perform needle-pen microneedling. The treatment offered here is <a href="/treatments/procell-microchanneling/">Procell microchanneling</a>, and that distinction is worth stating rather than blurring, because people arrive asking for one and are offered the other. Anyone who wants a needle pen specifically is better served booking somewhere that performs one.',
+        p: 'KIAMO Skin does not perform needle-pen microneedling. The treatment offered here is <a href="/services/microneedling/">Procell microchanneling</a>, and that distinction is worth stating rather than blurring, because people arrive asking for one and are offered the other. Anyone who wants a needle pen specifically is better served booking somewhere that performs one.',
       },
       {
         p: 'Microchanneling works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger. Depth is still adjusted across the face — deeper where correction is needed, lighter where skin is naturally thinner — and a growth factor serum is applied throughout rather than afterwards.',
@@ -534,7 +534,7 @@ export const articles: Article[] = [
         p: 'A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11680975/" rel="noopener" target="_blank">review of microneedling applications in melasma</a> drawing on 64 clinical studies is positive overall, calling the technique "an essential advancement in melasma treatment" with "an excellent safety and tolerability profile". The same paper reports hyperpigmentation across its included studies at rates ranging from 5% to 40%, and notes the research is "hampered by small sample sizes". Both halves of that are true simultaneously, and only quoting the first half would be selling rather than informing.',
       },
       {
-        p: 'Which mark you have decides the tool. <a href="/journal/three-kinds-of-dark-mark/">Post-inflammatory marks, melasma and sun damage look alike and behave differently</a>, and for pigment specifically the corrective route here is <a href="/treatments/lira-peels/">a prepared series of peels</a> rather than needling. For surface texture and scarring, <a href="/journal/dermaplaning-safe-dark-skin-san-diego/">dermaplaning is the no-heat, no-chemical alternative</a> worth reading about if microchanneling is not the right fit.',
+        p: 'Which mark you have decides the tool. <a href="/journal/three-kinds-of-dark-mark/">Post-inflammatory marks, melasma and sun damage look alike and behave differently</a>, and for pigment specifically the corrective route here is <a href="/services/chemical-peel/">a prepared series of peels</a> rather than needling. For surface texture and scarring, <a href="/journal/dermaplaning-safe-dark-skin-san-diego/">dermaplaning is the no-heat, no-chemical alternative</a> worth reading about if microchanneling is not the right fit.',
       },
 
       { h2: 'How much does microneedling cost in San Diego?' },
@@ -558,7 +558,7 @@ export const articles: Article[] = [
         p: 'Vague answers on either point are the signal worth acting on. Depth is the variable the literature keeps returning to, so a provider who has not thought about it for your skin specifically has not thought about your skin specifically.',
       },
       {
-        p: 'KIAMO Skin is a private, single-practitioner studio in Mission Hills, San Diego, where <a href="/melanin-rich-skin/">melanin-rich skin is the whole practice rather than a service line</a>. Treatment is one-to-one with a licensed esthetician, in one room, with free parking on site. Clients travel in <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">from across San Diego County</a>, including <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista</a> and <a href="/service-areas/la-mesa/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a>—inland areas where more clear days mean more cumulative UV year after year—for exactly this reason.',
+        p: 'KIAMO Skin is a private, single-practitioner studio in Mission Hills, San Diego, where <a href="/melanin-rich-skin/">melanin-rich skin is the whole practice rather than a service line</a>. Treatment is one-to-one with a licensed esthetician, in one room, with free parking on site. Clients travel in <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">from across San Diego County</a>, including <a href="/service-areas/chula-vista/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista</a> and <a href="/service-areas/la-mesa/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a>—inland areas where more clear days mean more cumulative UV year after year—for exactly this reason.',
       },
     ],
     faqHeading: 'Microneedling questions',
@@ -591,10 +591,10 @@ export const articles: Article[] = [
       {
         question: 'What is the best facial treatment for Black skin?',
         answer:
-          'There is no single answer, because it depends on what the skin is doing. Congestion and dullness are usually addressed with a <a href="/hydrafacial/">HydraFacial</a> from KIAMO Skin in Mission Hills, a reactive barrier with enzyme therapy, pigmentation with a prepared series of peels, and scarring or texture with microchanneling. The first appointment is an assessment rather than a fixed protocol.',
+          'There is no single answer, because it depends on what the skin is doing. Congestion and dullness are usually addressed with a <a href="/services/hydrafacial/">HydraFacial</a> from KIAMO Skin in Mission Hills, a reactive barrier with enzyme therapy, pigmentation with a prepared series of peels, and scarring or texture with microchanneling. The first appointment is an assessment rather than a fixed protocol.',
       },
     ],
-    cta: { label: 'See Procell microchanneling', href: '/treatments/procell-microchanneling/' },
+    cta: { label: 'See Procell microchanneling', href: '/services/microneedling/' },
   },
   {
     slug: 'dermaplaning-safe-dark-skin-san-diego',
@@ -624,7 +624,7 @@ export const articles: Article[] = [
         p: 'The safety distinction matters because melanin-rich skin responds to injury differently. When melanocytes are triggered by inflammation, they overproduce pigment — a well-documented mechanism covered in the <a href="https://jcadonline.com/postinflammatory-hyperpigmentation-a-review-of-the-epidemiology-clinical-features-and-treatment-options-in-skin-of-color/" rel="noopener" target="_blank">Journal of Clinical and Aesthetic Dermatology review of PIH in skin of color</a>. Dermaplaning carries no heat and no chemical load, which removes the two most common triggers for that response.',
       },
       {
-        p: 'The <a href="/treatments/dermaplaning/">dermaplane facial at KIAMO Skin</a> is performed by a licensed esthetician on a dry surface, section by section, with active or inflamed areas worked around rather than over.',
+        p: 'The <a href="/services/dermaplaning/">dermaplane facial at KIAMO Skin</a> is performed by a licensed esthetician on a dry surface, section by section, with active or inflamed areas worked around rather than over.',
       },
       { h2: 'What makes dermaplaning risky, and what removes that risk?' },
       {
@@ -660,7 +660,7 @@ export const articles: Article[] = [
         p: 'If you have active acne or inflamed breakouts, dermaplaning is worked around those areas or the appointment rescheduled. Passing a blade over an active pustule creates the inflammation that produces a mark. The treatment is not the problem — applying it over the wrong skin at the wrong time is.',
       },
       {
-        p: 'If you have existing post-inflammatory marks or melasma, dermaplaning does not address those directly. A prepared <a href="/treatments/lira-peels/">Lira peel series</a> works at the cellular level to clear pigmentation. Dermaplaning maintains the surface between peel appointments and improves serum absorption, but it does not clear existing marks on its own.',
+        p: 'If you have existing post-inflammatory marks or melasma, dermaplaning does not address those directly. A prepared <a href="/services/chemical-peel/">Lira peel series</a> works at the cellular level to clear pigmentation. Dermaplaning maintains the surface between peel appointments and improves serum absorption, but it does not clear existing marks on its own.',
       },
       { h2: 'Dermaplaning or a chemical peel — which one is right for dark skin?' },
       {
@@ -682,7 +682,7 @@ export const articles: Article[] = [
         },
       },
       {
-        p: 'If your goal is smoother texture, better absorption, or skin that looks clearer before an event, dermaplaning is the right starting point. If your goal is clearing post-inflammatory marks or managing melasma, that is done with a <a href="/treatments/lira-peels/">prepared peel series</a> over multiple visits with home prep in between.',
+        p: 'If your goal is smoother texture, better absorption, or skin that looks clearer before an event, dermaplaning is the right starting point. If your goal is clearing post-inflammatory marks or managing melasma, that is done with a <a href="/services/chemical-peel/">prepared peel series</a> over multiple visits with home prep in between.',
       },
       {
         p: '<a href="/journal/three-kinds-of-dark-mark/">Understanding which kind of pigmentation you have</a> is the step that decides which treatment comes first. A dermaplaning session is often used between peel appointments to maintain the cleared surface and improve topical absorption.',
@@ -704,7 +704,7 @@ export const articles: Article[] = [
           'Active acne, a broken barrier, active rosacea, open skin, and isotretinoin use are all contraindications. Those areas are skipped or the appointment rescheduled.',
       },
       {
-        p: 'On melanin-rich skin, timing matters as much as candidacy. A reactive barrier — stinging after cleansing, flushing easily, tight without moisturiser — is not ready for a surface treatment. That condition is rebuilt first. <a href="/treatments/dmk-enzyme-therapy/">DMK Enzyme Therapy</a> is the protocol for compromised barrier work at this studio. Dermaplaning follows once the skin is stable, not before.',
+        p: 'On melanin-rich skin, timing matters as much as candidacy. A reactive barrier — stinging after cleansing, flushing easily, tight without moisturiser — is not ready for a surface treatment. That condition is rebuilt first. <a href="/services/dmk-enzyme-therapy/">DMK Enzyme Therapy</a> is the protocol for compromised barrier work at this studio. Dermaplaning follows once the skin is stable, not before.',
       },
       {
         p: 'If you are in an active breakout phase, treating the acne comes first. Every active spot passed over with a blade is a potential PIH site.',
@@ -718,7 +718,7 @@ export const articles: Article[] = [
         p: 'Dermaplaning in San Diego ranges widely in price depending on provider type and what is included. At KIAMO Skin the $199 treatment is a full facial — cleanse, dermaplane, treatment serums while absorption is at its highest, and SPF to close. Published prices are unusual in this market. What is listed here is verified, not approximate.',
       },
       {
-        p: 'The studio is in Mission Hills, five minutes from Hillcrest, Bankers Hill and Little Italy, with free parking. Clients travel <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">from across San Diego County</a>—<a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park clients</a> are ten minutes away with no freeway, while coastal areas like Pacific Beach and La Jolla are fifteen to twenty minutes. That proximity makes regular dermaplaning between peel appointments realistic rather than aspirational. Appointments are request-based. San Diego\'s UV index runs 8 to 10 from April through October—freshly dermaplaned skin has a temporarily reduced surface barrier, and applying SPF before you leave is part of the service. The <a href="/journal/june-gloom-is-not-sun-protection/">June Gloom piece</a> covers why that applies even on overcast San Diego mornings.',
+        p: 'The studio is in Mission Hills, five minutes from Hillcrest, Bankers Hill and Little Italy, with free parking. Clients travel <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">from across San Diego County</a>—<a href="/service-areas/north-park/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park clients</a> are ten minutes away with no freeway, while coastal areas like Pacific Beach and La Jolla are fifteen to twenty minutes. That proximity makes regular dermaplaning between peel appointments realistic rather than aspirational. Appointments are request-based. San Diego\'s UV index runs 8 to 10 from April through October—freshly dermaplaned skin has a temporarily reduced surface barrier, and applying SPF before you leave is part of the service. The <a href="/journal/june-gloom-is-not-sun-protection/">June Gloom piece</a> covers why that applies even on overcast San Diego mornings.',
       },
     ],
     faqHeading: 'Dermaplaning questions',
@@ -759,7 +759,7 @@ export const articles: Article[] = [
           'The most common issue is PIH from technique error — too much pressure, incorrect blade angle, or treatment applied over active or inflamed skin. Temporary redness that resolves within hours is normal and distinct from PIH. Choosing a licensed provider with specific experience on melanin-rich skin removes most of the documented risk.',
       },
     ],
-    cta: { label: 'See the dermaplane facial', href: '/treatments/dermaplaning/' },
+    cta: { label: 'See the dermaplane facial', href: '/services/dermaplaning/' },
   },
   {
     slug: 'dandruff-treatment-san-diego',
@@ -879,7 +879,7 @@ export const articles: Article[] = [
           'If you\'re washing daily and still see flakes, you\'re either not using a medicated shampoo, not leaving it on long enough, or dealing with a condition that mimics dandruff like seborrheic dermatitis or psoriasis. <a href="/journal/san-diego-hard-water-and-your-scalp/">San Diego\'s hard water can also leave mineral deposits that look like flakes</a> even when dandruff is controlled.',
       },
       {
-        p: 'At KIAMO Skin in Mission Hills, we see this constantly--clients come in after trying every shampoo at CVS, only to discover their scalp was covered in hard water buildup, not dandruff. When we perform the <a href="/treatments/keravive-scalp/">Keravive scalp treatment</a>, the vacuum extraction pulls out white and yellow residue that\'s been sitting there for months. That buildup prevents medicated shampoo from reaching your actual scalp, which is why the flakes never fully go away.',
+        p: 'At KIAMO Skin in Mission Hills, we see this constantly--clients come in after trying every shampoo at CVS, only to discover their scalp was covered in hard water buildup, not dandruff. When we perform the <a href="/services/scalp-therapy/">Keravive scalp treatment</a>, the vacuum extraction pulls out white and yellow residue that\'s been sitting there for months. That buildup prevents medicated shampoo from reaching your actual scalp, which is why the flakes never fully go away.',
       },
       { p: 'Other reasons shampoo stops working:' },
       {
@@ -933,12 +933,12 @@ export const articles: Article[] = [
         ],
       },
       {
-        p: 'The <a href="/treatments/keravive-scalp/">Keravive scalp treatment</a> at KIAMO Skin removes years of product, oil, and mineral buildup in a single session--something no at-home shampoo can do. Clients from La Jolla to Carlsbad come in after their dermatologist prescribed medicated shampoo that didn\'t solve the underlying scalp congestion. Once the buildup is cleared, medicated shampoo actually works again.',
+        p: 'The <a href="/services/scalp-therapy/">Keravive scalp treatment</a> at KIAMO Skin removes years of product, oil, and mineral buildup in a single session--something no at-home shampoo can do. Clients from La Jolla to Carlsbad come in after their dermatologist prescribed medicated shampoo that didn\'t solve the underlying scalp congestion. Once the buildup is cleared, medicated shampoo actually works again.',
       },
       { h2: 'What is professional scalp treatment for dandruff?' },
       {
         answer:
-          'Professional scalp therapy uses clinical-grade exfoliation and hydration to address the root cause--clogged follicles, oil imbalance, and chronic inflammation--rather than just treating surface flakes. <a href="/treatments/keravive-scalp/">HydraFacial Keravive</a> is a 3-step process that cleanses, exfoliates, and infuses peptides into the scalp, similar to how a HydraFacial works on facial skin.',
+          'Professional scalp therapy uses clinical-grade exfoliation and hydration to address the root cause--clogged follicles, oil imbalance, and chronic inflammation--rather than just treating surface flakes. <a href="/services/scalp-therapy/">HydraFacial Keravive</a> is a 3-step process that cleanses, exfoliates, and infuses peptides into the scalp, similar to how a HydraFacial works on facial skin.',
       },
       { h3: 'Step 1: Cleanse' },
       {
@@ -981,7 +981,7 @@ export const articles: Article[] = [
         p: 'Bree A., from Carlsbad, added: <em>"Coming from Carlsbad I blocked off the whole morning. We did Procell and Keravive back-to-back and it made every long drive worthwhile."</em>',
       },
       {
-        p: 'Keravive isn\'t a luxury scalp spa treatment--it\'s corrective therapy for a scalp that standard products can\'t fix. <a href="/treatments/keravive-scalp/">Book a Keravive consultation at KIAMO Skin in Mission Hills.</a>',
+        p: 'Keravive isn\'t a luxury scalp spa treatment--it\'s corrective therapy for a scalp that standard products can\'t fix. <a href="/services/scalp-therapy/">Book a Keravive consultation at KIAMO Skin in Mission Hills.</a>',
       },
       { h2: 'What happens if dandruff is left untreated?' },
       {
@@ -1024,7 +1024,7 @@ export const articles: Article[] = [
           'Yes. San Diego has some of the hardest water in California, and <a href="/journal/san-diego-hard-water-and-your-scalp/">mineral deposits (calcium, magnesium) can build up on the scalp</a>, causing irritation and flaking that mimics or worsens dandruff. Hard water also raises scalp pH, creating a more favorable environment for <em>Malassezia</em> to thrive.',
       },
     ],
-    cta: { label: 'See Keravive scalp treatment', href: '/treatments/keravive-scalp/' },
+    cta: { label: 'See Keravive scalp treatment', href: '/services/scalp-therapy/' },
   },
   {
     slug: 'san-diego-scalp-treatments-how-keravive-works',
@@ -1100,9 +1100,9 @@ export const articles: Article[] = [
       {
         ul: [
           '<strong>Hard water buildup.</strong> San Diego water contains 12-17 grains per gallon of hardness—among California\'s highest. Calcium and magnesium deposit on your scalp, clogging follicles and creating a barrier that prevents moisture absorption.',
-          '<strong>Ocean and coastal exposure.</strong> For Pacific Beach, La Jolla, and <a href="/service-areas/del-mar/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a> residents, salt spray reaches inland blocks even when you\'re not swimming. Salt accelerates dehydration and follicle congestion.',
+          '<strong>Ocean and coastal exposure.</strong> For Pacific Beach, La Jolla, and <a href="/service-areas/del-mar/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Del Mar</a> residents, salt spray reaches inland blocks even when you\'re not swimming. Salt accelerates dehydration and follicle congestion.',
           '<strong>Year-round sun exposure.</strong> San Diego averages 266 sunny days per year. The part line and hairline receive direct UV without protection, triggering scalp inflammation and accelerating cell turnover.',
-          '<strong>Dry inland climate.</strong> Areas like Mission Valley, North Park, and <a href="/service-areas/carlsbad/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Carlsbad</a> experience low humidity, leading to chronic scalp dryness that\'s often mistaken for dandruff.',
+          '<strong>Dry inland climate.</strong> Areas like Mission Valley, North Park, and <a href="/service-areas/carlsbad/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Carlsbad</a> experience low humidity, leading to chronic scalp dryness that\'s often mistaken for dandruff.',
         ],
       },
       {
@@ -1159,7 +1159,7 @@ export const articles: Article[] = [
         p: 'The series format exists because scalp dysfunction rarely resolves in one session. The first treatment clears accumulated buildup; the second and third treatments address new buildup while continuing to support scalp health. By the third session, the scalp is clear and the maintenance interval is established.',
       },
       {
-        p: '<a href="/treatments/keravive-scalp/">Book a Keravive consultation at KIAMO Skin in Mission Hills.</a> KIAMO Skin serves Pacific Beach, La Jolla, Del Mar, Encinitas, Carlsbad, Mission Valley, and North Park.',
+        p: '<a href="/services/scalp-therapy/">Book a Keravive consultation at KIAMO Skin in Mission Hills.</a> KIAMO Skin serves Pacific Beach, La Jolla, Del Mar, Encinitas, Carlsbad, Mission Valley, and North Park.',
       },
     ],
     faqs: [
@@ -1189,7 +1189,7 @@ export const articles: Article[] = [
           'Wait at least twenty-four hours before swimming in the ocean or pool. Salt water and chlorine can irritate the freshly treated scalp and interfere with peptide absorption. After twenty-four hours, normal beach and pool activities are fine.',
       },
     ],
-    cta: { label: 'See Keravive scalp treatment', href: '/treatments/keravive-scalp/' },
+    cta: { label: 'See Keravive scalp treatment', href: '/services/scalp-therapy/' },
   },
   {
     slug: 'hyperpigmentation-treatment-guide',
@@ -1209,7 +1209,7 @@ export const articles: Article[] = [
         p: 'Hyperpigmentation occurs when melanocytes produce excess melanin in response to inflammation, hormones, or UV exposure, creating darker patches on the skin. While any skin tone can develop pigmentation concerns, <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC9709857/" rel="noopener" target="_blank">melanin-rich skin has more reactive melanocytes</a> that make post-inflammatory hyperpigmentation significantly more likely.',
       },
       {
-        p: 'Whether dealing with <a href="/treatments/melasma/">melasma</a>, post-acne marks, or sun damage, understanding the science behind your specific condition is essential. This guide synthesizes the latest dermatological research from 2022-2025, including breakthrough studies on tranexamic acid, picosecond laser safety for darker skin tones, and evidence-based combination protocols.',
+        p: 'Whether dealing with <a href="/services/melasma-treatment/">melasma</a>, post-acne marks, or sun damage, understanding the science behind your specific condition is essential. This guide synthesizes the latest dermatological research from 2022-2025, including breakthrough studies on tranexamic acid, picosecond laser safety for darker skin tones, and evidence-based combination protocols.',
       },
 
       { h2: 'What is hyperpigmentation and why does it happen?' },
@@ -1221,7 +1221,7 @@ export const articles: Article[] = [
         p: 'The process begins when triggers activate tyrosinase, the enzyme responsible for melanin synthesis. In melanin-rich skin (Fitzpatrick types IV-VI), melanocytes are inherently more reactive—a protective adaptation against UV damage that unfortunately makes these skin tones more susceptible to hyperpigmentation following inflammation or injury.',
       },
       {
-        p: 'Understanding your specific trigger determines the most effective treatment approach. UV exposure from San Diego\'s intense sunlight (averaging 266 sunny days per year) can trigger melanin production even during brief outdoor exposure, making photoprotection essential year-round. This is especially true in <a href="/service-areas/chula-vista/" class="border-b border-ink/40 hover:border-rose hover:text-rose">inland areas like Chula Vista</a> where the marine layer doesn\'t provide the same UV diffusion as coastal neighborhoods, and where melanin-rich skin demographics make melasma one of the most common reasons clients seek treatment.',
+        p: 'Understanding your specific trigger determines the most effective treatment approach. UV exposure from San Diego\'s intense sunlight (averaging 266 sunny days per year) can trigger melanin production even during brief outdoor exposure, making photoprotection essential year-round. This is especially true in <a href="/service-areas/chula-vista/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">inland areas like Chula Vista</a> where the marine layer doesn\'t provide the same UV diffusion as coastal neighborhoods, and where melanin-rich skin demographics make melasma one of the most common reasons clients seek treatment.',
       },
 
       { h2: 'Melasma, PIH, and sun spots: What is the difference?' },
@@ -1251,7 +1251,7 @@ export const articles: Article[] = [
         p: 'The timeline depends on whether your pigmentation is epidermal (top layer) or dermal (deeper). <a href="https://www.ncbi.nlm.nih.gov/books/NBK559150/" rel="noopener" target="_blank">Epidermal pigmentation appears brown under Wood\'s lamp</a> and responds well to topical treatments. Expect measurable improvement in 8-12 weeks with consistent treatment and strict sun protection.',
       },
       {
-        p: 'Dermal pigmentation appears blue-gray under Wood\'s lamp and sits too deep for topical ingredients to reach effectively. This type requires professional treatments like <a href="/treatments/lira-peels/">chemical peels</a> that can reach the dermal layer. Even with professional intervention, expect 6-12 months for significant improvement.',
+        p: 'Dermal pigmentation appears blue-gray under Wood\'s lamp and sits too deep for topical ingredients to reach effectively. This type requires professional treatments like <a href="/services/chemical-peel/">chemical peels</a> that can reach the dermal layer. Even with professional intervention, expect 6-12 months for significant improvement.',
       },
       {
         p: 'At KIAMO Skin, we have seen remarkable transformations in patients who commit to comprehensive pigmentation protocols. One San Diego patient achieved dramatic improvement in stubborn melasma and post-inflammatory hyperpigmentation over several months using a multi-modal approach: prescription-strength topicals, professional treatments, and strict photoprotection. The before photos showed significant dark patches across the cheeks and forehead. After consistent treatment with medical-grade lightening agents, a series of targeted chemical peels, and unwavering commitment to mineral sunscreen with iron oxides, the improvement was striking: visibly clearer, more even-toned skin with the majority of the hyperpigmentation faded.',
@@ -1352,10 +1352,10 @@ export const articles: Article[] = [
         p: 'KIAMO Skin\'s chemical peel protocols prioritize safety for all skin tones. The Lira Gentle Renewal Peel ($199) uses lactic acid, mandelic acid, and kojic acid—larger-molecule acids that penetrate more slowly and carry lower PIH risk for melanin-rich skin. For more advanced concerns, the Lira Advanced Peel ($299) layers multiple mechanisms while maintaining controlled depth. Every peel includes mandatory pre-treatment: clients use tyrosinase inhibitors for 2-4 weeks before their first peel. Treatments are spaced 6-8 weeks apart rather than the typical 4 weeks. Results appear gradually: most clients see measurable improvement after 3-4 treatments in a series.',
       },
       {
-        p: 'KIAMO Skin\'s <a href="/treatments/procell-microchanneling/">Procell Microchanneling</a> ($475 per session, or $1,199 for a series of 3) combines controlled micro-injury with targeted serum infusion. The treatment creates precise microchannels in the skin, triggering collagen production while allowing up to 1000x better penetration of corrective serums. During treatment, growth factor serums and skin brightening actives are applied directly into these channels—ingredients like tranexamic acid, vitamin C, and peptides reach depths that topical application alone cannot achieve. The procedure is safe for all skin tones and generates minimal heat. Downtime is minimal: redness for 24-48 hours. Most clients achieve optimal results with 3-6 sessions spaced 4-6 weeks apart.',
+        p: 'KIAMO Skin\'s <a href="/services/microneedling/">Procell Microchanneling</a> ($475 per session, or $1,199 for a series of 3) combines controlled micro-injury with targeted serum infusion. The treatment creates precise microchannels in the skin, triggering collagen production while allowing up to 1000x better penetration of corrective serums. During treatment, growth factor serums and skin brightening actives are applied directly into these channels—ingredients like tranexamic acid, vitamin C, and peptides reach depths that topical application alone cannot achieve. The procedure is safe for all skin tones and generates minimal heat. Downtime is minimal: redness for 24-48 hours. Most clients achieve optimal results with 3-6 sessions spaced 4-6 weeks apart.',
       },
       {
-        p: 'KIAMO Skin does not currently offer laser treatments—and that is intentional. The studio specializes in non-laser modalities that carry significantly lower risk for melanin-rich skin: chemical peels formulated for deeper skin tones, <a href="/treatments/procell-microchanneling/">Procell Microchanneling</a>, and medical-grade topical protocols. This approach eliminates the post-inflammatory hyperpigmentation risk that even newer picosecond lasers can trigger in reactive melanocytes.',
+        p: 'KIAMO Skin does not currently offer laser treatments—and that is intentional. The studio specializes in non-laser modalities that carry significantly lower risk for melanin-rich skin: chemical peels formulated for deeper skin tones, <a href="/services/microneedling/">Procell Microchanneling</a>, and medical-grade topical protocols. This approach eliminates the post-inflammatory hyperpigmentation risk that even newer picosecond lasers can trigger in reactive melanocytes.',
       },
 
       { h3: 'Understanding laser technology for pigmentation' },
@@ -1504,19 +1504,19 @@ export const articles: Article[] = [
     faqHeading: 'Chemical peel cost questions',
     body: [
       {
-        p: 'You\'ve been Googling it for a week. Every result gives a range so wide it\'s useless—from a cheap coupon special to several thousand for surgical-grade peels—and none of them answer what you\'re actually asking: is it safe on your skin, and will it do anything? If you\'re in San Diego and considering a <a href="/treatments/lira-peels/">chemical peel in San Diego</a>, this article gives you the real local numbers, not national averages, and addresses the safety question most articles skip entirely.',
+        p: 'You\'ve been Googling it for a week. Every result gives a range so wide it\'s useless—from a cheap coupon special to several thousand for surgical-grade peels—and none of them answer what you\'re actually asking: is it safe on your skin, and will it do anything? If you\'re in San Diego and considering a <a href="/services/chemical-peel/">chemical peel in San Diego</a>, this article gives you the real local numbers, not national averages, and addresses the safety question most articles skip entirely.',
       },
       { h2: 'How much does a chemical peel cost in San Diego?' },
       {
         answer:
-          'A chemical peel in San Diego costs a few hundred dollars at an esthetician studio, more at a medspa or dermatology clinic, and several thousand for deep phenol peels performed by a plastic surgeon. The range exists because light, medium, and deep peels are completely different procedures with different risk profiles and results.',
+          'A chemical peel in San Diego costs a few hundred dollars at a facial spa, more at a medspa or dermatology clinic, and several thousand for deep phenol peels performed by a plastic surgeon. The range exists because light, medium, and deep peels are completely different procedures with different risk profiles and results.',
       },
       {
         table: {
           caption: 'Chemical peel pricing in San Diego by provider type',
           head: ['Provider Type', 'Peel Depth', 'Typical Cost', 'Example'],
           rows: [
-            ['Esthetician studio', 'Light (superficial)', 'Low hundreds', 'KIAMO Skin: $199 (Gentle Renewal), $299 (Advanced)'],
+            ['Facial spa', 'Light (superficial)', 'Low hundreds', 'KIAMO Skin: $199 (Gentle Renewal), $299 (Advanced)'],
             ['Medspa / Dermatology', 'Medium (TCA 10-25%)', 'Mid hundreds', 'Typical San Diego medspa pricing'],
             ['Plastic surgeon', 'Deep (phenol)', 'Several thousand', 'Hospital or surgical center setting'],
           ],
@@ -1556,7 +1556,7 @@ export const articles: Article[] = [
       },
       { h2: 'Which peel is right for your skin concern?' },
       {
-        p: 'For <strong>pigmentation and melasma</strong>, the Lira Advanced Peel is the better choice. It contains kojic acid and mandelic acid, both tyrosinase inhibitors that slow melanin production while exfoliating existing pigment. You\'ll need a series of 4-6 treatments to see significant fading. The <a href="/treatments/melasma/">hyperpigmentation treatment</a> protocol at KIAMO Skin pairs the peel with home care that includes vitamin C, niacinamide, and strict sunscreen use.',
+        p: 'For <strong>pigmentation and melasma</strong>, the Lira Advanced Peel is the better choice. It contains kojic acid and mandelic acid, both tyrosinase inhibitors that slow melanin production while exfoliating existing pigment. You\'ll need a series of 4-6 treatments to see significant fading. The <a href="/services/melasma-treatment/">hyperpigmentation treatment</a> protocol at KIAMO Skin pairs the peel with home care that includes vitamin C, niacinamide, and strict sunscreen use.',
       },
       {
         p: 'For <strong>post-acne marks and texture</strong>, the Gentle Renewal Peel is a good starting point. It\'s gentle enough to use during active breakouts and helps fade dark spots left behind by inflammation. If you have deeper textural scarring, you\'ll likely graduate to the Advanced Peel after 2-3 sessions.',
@@ -1586,7 +1586,7 @@ export const articles: Article[] = [
       },
       { h2: 'Final takeaway' },
       {
-        p: 'Chemical peels in San Diego vary widely in price at an esthetician studio, with the real price driver being the practitioner\'s training and the peel\'s formulation for your skin tone. On melanin-rich skin, the provider matters more than the acid. If you\'re dealing with pigmentation and want to understand which peel makes sense for your concern, <a href="https://www.vagaro.com/kiamoskin" rel="noopener" target="_blank">request a consultation</a> at KIAMO Skin.',
+        p: 'Chemical peels in San Diego vary widely in price at a facial spa, with the real price driver being the practitioner\'s training and the peel\'s formulation for your skin tone. On melanin-rich skin, the provider matters more than the acid. If you\'re dealing with pigmentation and want to understand which peel makes sense for your concern, <a href="https://www.vagaro.com/kiamoskin" rel="noopener" target="_blank">request a consultation</a> at KIAMO Skin.',
       },
     ],
     faqs: [
@@ -1634,7 +1634,7 @@ export const articles: Article[] = [
         p: '"Best chemical peel for melasma" is the kind of search that ends in a list of acids and a "consult your provider" footnote. The clinically useful answer is more specific and harder to find: the right peel is the one your skin tone can tolerate every four to six weeks, repeated across a series, with melanin production quieted between sessions. Everything else is packaging.',
       },
       {
-        p: 'This article walks through the four peel families that show up for melasma searches (Cosmelan, glycolic, mandelic, Jessner), what the evidence says about each, and why the safe-on-melanin-rich-skin choice is narrower than the popular list suggests. KIAMO Skin offers <a href="/hyperpigmentation-treatment/">melasma and hyperpigmentation treatment across San Diego neighborhoods</a> from the Mission Hills studio, with the Lira Clinical peels designed around that constraint.',
+        p: 'This article walks through the four peel families that show up for melasma searches (Cosmelan, glycolic, mandelic, Jessner), what the evidence says about each, and why the safe-on-melanin-rich-skin choice is narrower than the popular list suggests. KIAMO Skin offers <a href="/services/hyperpigmentation-treatment/">melasma and hyperpigmentation treatment across San Diego neighborhoods</a> from the Mission Hills studio, with the Lira Clinical peels designed around that constraint.',
       },
 
       { h2: 'What kinds of peels are used for melasma?' },
@@ -1693,7 +1693,7 @@ export const articles: Article[] = [
         p: 'Lira Clinical formulations handle this in two ways. The acids selected — lactic and mandelic at the Gentle Renewal Peel concentrations — penetrate slowly enough that the skin can buffer the response. The protocol layers melanin-suppression work before each peel and SPF that blocks visible light (not just UV) after. The "avoid deep peels" safety stance the published guidance keeps returning to is built into the protocol, not added as a footnote.',
       },
       {
-        p: 'For deeper melasma that requires medium-depth work, <a href="/treatments/lira-peels/">the Lira Advanced Peel</a> escalates strength across a series — never within a single appointment — and is paired with home prep between visits. Each peel in the series is light. The cumulative effect is what addresses pigment at the cellular level.',
+        p: 'For deeper melasma that requires medium-depth work, <a href="/services/chemical-peel/">the Lira Advanced Peel</a> escalates strength across a series — never within a single appointment — and is paired with home prep between visits. Each peel in the series is light. The cumulative effect is what addresses pigment at the cellular level.',
       },
 
       { h2: 'What does a Lira melasma peel actually do?' },
@@ -1717,7 +1717,7 @@ export const articles: Article[] = [
         p: 'San Diego\'s UV index sits at 8 to 10 from April through October — the highest band on the index. Visible light adds a second pigment trigger that pure SPF does not address, which is why tinted sunscreen with iron oxides is non-negotiable for melasma, not optional. <a href="/journal/june-gloom-is-not-sun-protection/">June Gloom is not sun protection</a>; the overcast mornings in May and June still deliver meaningful UV. Car windows filter UVB but not UVA, so daily commuters get cumulative one-sided exposure on the driving-side cheek.',
       },
       {
-        p: 'For inland neighborhoods — <a href="/service-areas/chula-vista/">Chula Vista</a>, <a href="/service-areas/la-mesa/">La Mesa</a>, El Cajon — — cumulative UV runs higher year-round than along the coastal strip. The marine layer that softens May and June along the boardwalk does not reach the inland corridor with the same effect. Melasma in those areas reflects that, and the peel protocol is timed accordingly. The closer to the coast, the more year-round humidity; the further inland, the more year-round direct sun.',
+        p: 'For inland neighborhoods — <a href="/service-areas/chula-vista/facial/">Chula Vista</a>, <a href="/service-areas/la-mesa/facial/">La Mesa</a>, El Cajon — — cumulative UV runs higher year-round than along the coastal strip. The marine layer that softens May and June along the boardwalk does not reach the inland corridor with the same effect. Melasma in those areas reflects that, and the peel protocol is timed accordingly. The closer to the coast, the more year-round humidity; the further inland, the more year-round direct sun.',
       },
 
       { h2: 'What does realistic fading look like?' },
@@ -1744,7 +1744,7 @@ export const articles: Article[] = [
         p: 'The deeper consideration is whether a peel is the right tool at all. Melasma that sits too deep for surface treatment, or that is being driven by hormonal medication the patient is still taking, may need prescription-strength intervention or a dermatology referral first. A good peel protocol is part of a broader plan, not the whole plan. <a href="/melanin-rich-skin/">KIAMO Skin\'s practice</a> is built around that framing — melanin-rich skin as the whole discipline rather than a service line — so the answer that gets given at consultation is the one that fits the patient in front of the practitioner.',
       },
       {
-        p: '<a href="/treatments/lira-peels/">Lira peels at KIAMO Skin</a> are run as part of a pigment workup at consultation, not sold as a standalone fix. The First-Time Client Treatment ($249) is a diagnostic session that ends with a phased plan: home prep, the peel series at the right concentration for your skin, and the maintenance routine that protects the result. The studio is in Mission Hills at 3067 Reynard Way, five minutes from Hillcrest, Bankers Hill, and Little Italy, with free parking.',
+        p: '<a href="/services/chemical-peel/">Lira peels at KIAMO Skin</a> are run as part of a pigment workup at consultation, not sold as a standalone fix. The First-Time Client Treatment ($249) is a diagnostic session that ends with a phased plan: home prep, the peel series at the right concentration for your skin, and the maintenance routine that protects the result. The studio is in Mission Hills at 3067 Reynard Way, five minutes from Hillcrest, Bankers Hill, and Little Italy, with free parking.',
       },
     ],
     faqHeading: 'Melasma peel questions',
@@ -1775,7 +1775,7 @@ export const articles: Article[] = [
           'Avoid unprotected sun for at least two weeks after the peel, since freshly exfoliated skin is more reactive to UV and visible light. Avoid retinoids, vitamin A derivatives, and irritating actives for five to seven days. Avoid heat exposure (saunas, hot yoga, prolonged cooking) for 48 to 72 hours, because heat is itself a pigment driver in melasma. And apply tinted SPF 50+ with iron oxides every morning, regardless of the weather.',
       },
     ],
-    cta: { label: 'See peels for melasma', href: '/treatments/lira-peels/' },
+    cta: { label: 'See peels for melasma', href: '/services/chemical-peel/' },
   },
   {
     slug: 'acne-scars-san-diego',
@@ -1790,7 +1790,7 @@ export const articles: Article[] = [
     dateModified: '2026-10-07',
     image: acneScars,
     imageAlt:
-      'Procell microchanneling device in use at KIAMO Skin studio, depth-adjusted for acne scar revision on melanin-rich skin',
+      'Procell microchanneling device in use at KIAMO Facial spa, depth-adjusted for acne scar revision on melanin-rich skin',
     quickAnswer:
       'Acne scars in San Diego fall into three categories: post-inflammatory hyperpigmentation (PIH), which fades with time and peels; atrophic or pitted scars (icepick, boxcar, rolling), which need microneedling at controlled depth; and hypertrophic scars, which need a different protocol entirely. Choosing between facial and microchanneling depends on the scar type, not on the brand or the price.',
     body: [
@@ -1813,21 +1813,21 @@ export const articles: Article[] = [
           'PIH is a pigmentation response to inflammation. It sits in the epidermal layer, fades on its own over weeks to months, and responds to pigment-calming peels and serums. A true acne scar is a structural change in the skin — a depression or a raised area — and requires depth-controlled work to remodel. The two are often present on the same face, and the protocol needs to address each one separately.',
       },
       {
-        p: 'For melanin-rich skin specifically, PIH is the more common concern, and the protocol that addresses it is the one most studios skip. A <a href="/treatments/lira-peels/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Lira peel</a> series with a pigment-calming home-care protocol often resolves PIH in two to three sessions. The studio at <a href="/service-areas/north-park/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park</a> sees the pattern repeatedly: the client came in for "acne scars," the consultation identified PIH, and the peel protocol produced visible change within the first two sessions.',
+        p: 'For melanin-rich skin specifically, PIH is the more common concern, and the protocol that addresses it is the one most studios skip. A <a href="/services/chemical-peel/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Lira peel</a> series with a pigment-calming home-care protocol often resolves PIH in two to three sessions. The studio at <a href="/service-areas/north-park/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park</a> sees the pattern repeatedly: the client came in for "acne scars," the consultation identified PIH, and the peel protocol produced visible change within the first two sessions.',
       },
       { h2: 'Why depth matters more than the device name' },
       {
         p: 'The marketing around microchanneling devices focuses on brand names — Procell, SkinPen, Vivace, Dermapen — as if the device were the treatment. The device is the tool. The treatment is the depth, and the depth is set per session based on the scar type and the Fitzpatrick type. A studio that uses the most expensive device at a default depth that does not match the scar is performing a different service than a studio that uses a less expensive device at a calibrated depth.',
       },
       {
-        p: 'For atrophic scars specifically, <a href="/treatments/procell-microchanneling/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Procell microchanneling</a> is calibrated at consultation based on the scar type. Icepick scars need a deeper setting to reach the base of the scar. Boxcar scars need a shallower setting to reach the floor. Rolling scars need a depth that breaks the underlying fibrous bands. The same face often needs multiple depths in the same session, and the studio records the depth per area so the next session can be calibrated against the response.',
+        p: 'For atrophic scars specifically, <a href="/services/microneedling/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Procell microchanneling</a> is calibrated at consultation based on the scar type. Icepick scars need a deeper setting to reach the base of the scar. Boxcar scars need a shallower setting to reach the floor. Rolling scars need a depth that breaks the underlying fibrous bands. The same face often needs multiple depths in the same session, and the studio records the depth per area so the next session can be calibrated against the response.',
       },
       { h2: 'What melanin-rich skin requires from the protocol' },
       {
         p: 'The default depth on most microchanneling devices is set for Fitzpatrick I-III skin. Applying that default to Fitzpatrick IV-VI skin produces inconsistent results — sometimes visible improvement, sometimes rebound hyperpigmentation that is worse than the original concern. The protocol for melanin-rich skin stays within a narrower depth window and adjusts per session based on how the first session responded. <a href="/journal/microneedling-on-dark-skin-san-diego/">Microneedling on dark skin</a> is safe when the depth is calibrated, and unsafe when it is not.',
       },
       {
-        p: 'Barrier integrity is a separate variable that affects how the protocol works. Microchanneling on a compromised barrier — skin that is reactive, stinging under moisturizer, or flaking despite hydration — produces unpredictable results. The protocol at KIAMO Skin starts with <a href="/treatments/dmk-enzyme-therapy/" class="border-b border-ink/40 hover:border-rose hover:text-rose">DMK Enzyme Therapy</a> when the barrier is compromised, and the microchanneling begins once the barrier stabilizes. The sequence is the protocol.',
+        p: 'Barrier integrity is a separate variable that affects how the protocol works. Microchanneling on a compromised barrier — skin that is reactive, stinging under moisturizer, or flaking despite hydration — produces unpredictable results. The protocol at KIAMO Skin starts with <a href="/services/dmk-enzyme-therapy/" class="border-b border-ink/40 hover:border-rose hover:text-rose">DMK Enzyme Therapy</a> when the barrier is compromised, and the microchanneling begins once the barrier stabilizes. The sequence is the protocol.',
       },
       { h2: 'The realistic timeline for visible change' },
       {
@@ -1870,7 +1870,7 @@ export const articles: Article[] = [
           'No. Microchanneling over active breakouts spreads inflammation and risks driving bacteria deeper. The protocol requires that active acne be controlled before the series begins, which often means a separate HydraFacial series or peel protocol to clear the active state. The studio sequences the protocols based on what the skin shows at consultation.',
       },
     ],
-    cta: { label: 'See Procell microchanneling', href: '/treatments/procell-microchanneling/' },
+    cta: { label: 'See Procell microchanneling', href: '/services/microneedling/' },
   },
   {
     slug: 'dermaplaning-vs-chemical-peel-san-diego',
@@ -1885,7 +1885,7 @@ export const articles: Article[] = [
     dateModified: '2026-10-26',
     image: dermaplaningTreatment,
     imageAlt:
-      'Dermaplaning treatment in progress at the KIAMO Skin studio in Mission Hills, with the blade held at a fixed angle against dry skin',
+      'Dermaplaning treatment in progress at the KIAMO Facial spa in Mission Hills, with the blade held at a fixed angle against dry skin',
     quickAnswer:
       'Dermaplaning and a chemical peel work on different layers. Dermaplaning uses a sterile blade to remove dead surface cells and vellus hair — no heat, no acid, no downtime — which makes it the right choice for texture, peach fuzz and product absorption. A chemical peel puts acid on the skin so that the upper layers resurface over the following days, which makes it the right choice for brown patches and post-inflammatory marks. On melanin-rich skin the peel carries the higher risk of making pigment worse, so it is run as a prepared, escalating series. At KIAMO Skin in Mission Hills, dermaplaning is $199 and Lira peels are $199 for Gentle Renewal and $299 for Advanced.',
     body: [
@@ -1906,7 +1906,7 @@ export const articles: Article[] = [
           'Dermaplaning takes the dead surface layer and the fine vellus hair sitting on top of it off the skin. That is the entire treatment. It does not dissolve pigment, does not stimulate collagen, and does not reach below the stratum corneum.',
       },
       {
-        p: 'The practical consequence is a face that takes product better. With the debris removed, serums land on live tissue rather than on a layer of dead cells, and makeup stops catching on hair and texture. The <a href="/treatments/dermaplaning/">dermaplane facial at KIAMO Skin</a> is a cleanse, a blade pass over dry skin, treatment serums while absorption is highest, and SPF to close.',
+        p: 'The practical consequence is a face that takes product better. With the debris removed, serums land on live tissue rather than on a layer of dead cells, and makeup stops catching on hair and texture. The <a href="/services/dermaplaning/">dermaplane facial at KIAMO Skin</a> is a cleanse, a blade pass over dry skin, treatment serums while absorption is highest, and SPF to close.',
       },
       {
         ul: [
@@ -1925,7 +1925,7 @@ export const articles: Article[] = [
         p: 'This is where the risk sits, particularly for deeper skin tones. A <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11514325/" rel="noopener" target="_blank">systematic review of PIH treatment in skin of colour</a> found that chemical peels accounted for 20% of trauma-induced post-inflammatory hyperpigmentation cases in its dataset, and that after two weeks of salicylic acid peels, 40% of patients showed new hyperpigmentation. The same review concluded that peels should not be used routinely as a first-line treatment in that population, but may have merit in refractory cases.',
       },
       {
-        p: 'That is why peels here run as a <a href="/treatments/lira-peels/">prepared Lira peel series</a> rather than a single strong appointment: lower strength first, escalation every four to six weeks, and daily sun protection as a condition of the plan. <a href="https://www.derrowdermatology.com/are-chemical-peels-safe-for-darker-skin-tones/" rel="noopener" target="_blank">Safe chemical peel practice begins with professional evaluation</a> and matching the peel to the skin in front of you.',
+        p: 'That is why peels here run as a <a href="/services/chemical-peel/">prepared Lira peel series</a> rather than a single strong appointment: lower strength first, escalation every four to six weeks, and daily sun protection as a condition of the plan. <a href="https://www.derrowdermatology.com/are-chemical-peels-safe-for-darker-skin-tones/" rel="noopener" target="_blank">Safe chemical peel practice begins with professional evaluation</a> and matching the peel to the skin in front of you.',
       },
       { h2: 'Which one for which concern' },
       {
@@ -1993,7 +1993,7 @@ export const articles: Article[] = [
           'When the concern sits deeper than either treatment reaches. Deep dermal pigment, melasma that has not responded to a prepared series, and scarring that has changed the texture of the skin all need a dermatologist rather than an esthetician.',
       },
       {
-        p: 'This is an esthetician studio. There is no laser here and no prescription-strength medication, and any client whose concern sits below what a surface treatment and a controlled peel can address is better served by a dermatologist. Saying so is more useful than selling a series that will not reach the depth involved. The <a href="/journal/three-kinds-of-dark-mark/">three kinds of dark mark</a> journal piece is a good first step for working out which category a concern falls into before booking either treatment.',
+        p: 'This is a facial spa. There is no laser here and no prescription-strength medication, and any client whose concern sits below what a surface treatment and a controlled peel can address is better served by a dermatologist. Saying so is more useful than selling a series that will not reach the depth involved. The <a href="/journal/three-kinds-of-dark-mark/">three kinds of dark mark</a> journal piece is a good first step for working out which category a concern falls into before booking either treatment.',
       },
       { h2: 'Why asking a studio that does both is the honest way to decide' },
       {
@@ -2048,7 +2048,7 @@ export const articles: Article[] = [
           'Control. A home exfoliant works over weeks at a strength chosen by feel, and the irritation it causes strips the barrier that coastal wind and salt have already worked on. A studio dermaplane is one dose at a fixed blade angle on completely dry skin, with the plan and the aftercare decided in advance. If home exfoliation has already left the skin reactive, the studio will usually start with barrier work instead — the DMK Enzyme Therapy protocol — rather than adding a blade to compromised skin.',
       },
     ],
-    cta: { label: 'See dermaplaning in San Diego', href: '/treatments/dermaplaning/' },
+    cta: { label: 'See dermaplaning in San Diego', href: '/services/dermaplaning/' },
   },
   {
     slug: 'best-sunscreen-for-dark-spots',
@@ -2211,7 +2211,7 @@ export const articles: Article[] = [
         h3: 'Why the coast and the inland corridor differ',
       },
       {
-        p: 'The marine layer does not change the UV question. Up to 80% of the sun\'s UV rays can still reach skin on an overcast day, and the light that judges risk is not the light that drives pigment, which is why <a href="/journal/june-gloom-is-not-sun-protection/">May and June are the months San Diego clients lose ground</a>. Inland from the coast the effect is smaller: <a href="/service-areas/chula-vista/">Chula Vista</a> and <a href="/service-areas/la-mesa/">La Mesa</a> sit past the marine layer and take more direct sun for more of the year, which is why melasma is the most common concern from those areas.',
+        p: 'The marine layer does not change the UV question. Up to 80% of the sun\'s UV rays can still reach skin on an overcast day, and the light that judges risk is not the light that drives pigment, which is why <a href="/journal/june-gloom-is-not-sun-protection/">May and June are the months San Diego clients lose ground</a>. Inland from the coast the effect is smaller: <a href="/service-areas/chula-vista/facial/">Chula Vista</a> and <a href="/service-areas/la-mesa/facial/">La Mesa</a> sit past the marine layer and take more direct sun for more of the year, which is why melasma is the most common concern from those areas.',
       },
       { h2: 'When sunscreen is not enough on its own' },
       {
@@ -2222,7 +2222,7 @@ export const articles: Article[] = [
         p: 'That is the honest limit of any sunscreen, and it is worth stating plainly before buying anything. A mark that formed from sun damage, from a breakout, or from hormones has pigment sitting in the skin, and light protection stops more from forming while leaving what is there untouched. <a href="/journal/three-kinds-of-dark-mark/">Telling the three kinds of dark mark apart</a> decides what comes next, because each one responds to a different plan, and <a href="/journal/hyperpigmentation-treatment-guide/">the hyperpigmentation guide</a> sets out what those plans do.',
       },
       {
-        p: 'In practice the two halves run together. <a href="/treatments/hyperpigmentation/">Post-inflammatory hyperpigmentation treatment</a> removes what has formed, and <a href="/treatments/melasma/">melasma treatment</a> is managed rather than cured, which means daily protection is a condition of the plan and not an optional extra. Where the marks are sun damage rather than a live inflammation, <a href="/facial/facial-after-sun-exposure-san-diego/">timing a facial after sun exposure</a> and <a href="/journal/melasma-chemical-peel-san-diego/">running a peel series against the season</a> both come into it.',
+        p: 'In practice the two halves run together. <a href="/services/hyperpigmentation-treatment/">Post-inflammatory hyperpigmentation treatment</a> removes what has formed, and <a href="/services/melasma-treatment/">melasma treatment</a> is managed rather than cured, which means daily protection is a condition of the plan and not an optional extra. Where the marks are sun damage rather than a live inflammation, <a href="/facial/facial-after-sun-exposure-san-diego/">timing a facial after sun exposure</a> and <a href="/journal/melasma-chemical-peel-san-diego/">running a peel series against the season</a> both come into it.',
       },
       { h2: 'Pricing for treating dark spots in San Diego' },
       {
@@ -2230,7 +2230,7 @@ export const articles: Article[] = [
           'A first visit is $249 and includes the consultation, skin analysis and a full treatment plan. After that a HydraFacial is $259, a dermaplane facial is $199, and where the marks need clearing rather than maintaining, the Lira chemical peel series runs from $199 to $299 and Procell microchanneling is $475 a session.',
       },
       {
-        p: 'Prices are published because comparing studios in San Diego is close to impossible when nobody lists them. The <a href="/treatments/">full treatment menu</a> carries every price, and the <a href="/membership/">membership plans</a> exist because these treatments run across weeks and months rather than a single appointment. <a href="/journal/chemical-peel-cost-san-diego/">What a chemical peel costs here</a> goes into the numbers behind the series.',
+        p: 'Prices are published because comparing studios in San Diego is close to impossible when nobody lists them. The <a href="/services/">full treatment menu</a> carries every price, and the <a href="/membership/">membership plans</a> exist because these treatments run across weeks and months rather than a single appointment. <a href="/journal/chemical-peel-cost-san-diego/">What a chemical peel costs here</a> goes into the numbers behind the series.',
       },
       {
         p: 'The honest answer to which sunscreen to buy is that it is the one on row one or row two, matched to the kind of mark you have, applied every morning at the amount most people skip. Everything else on the label is refinement.',
@@ -2264,7 +2264,7 @@ export const articles: Article[] = [
       },
     ],
     faqHeading: 'Sunscreen and dark spot questions',
-    cta: { label: 'See pigmentation treatment', href: '/treatments/hyperpigmentation/' },
+    cta: { label: 'See pigmentation treatment', href: '/services/hyperpigmentation-treatment/' },
   },
   /**
    * The price article. It lives in its own file because it is the one piece

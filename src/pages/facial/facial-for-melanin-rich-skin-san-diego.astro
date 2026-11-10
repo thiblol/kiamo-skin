@@ -18,7 +18,7 @@ import Button from '../../components/Button.astro';
 import NapBlock from '../../components/NapBlock.astro';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
-import FacialHubSchema from '../../components/schema/FacialHubSchema.astro';
+import FacialClusterSchema from '../../components/schema/FacialClusterSchema.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
@@ -59,12 +59,12 @@ const faqs = [
 ---
 
 <BaseLayout {title} {description}>
-  <FacialHubSchema slot="head" />
+  <FacialClusterSchema slot="head" />
   <SpeakableSchema slot="head" url="https://kiamoskin.com/facial/facial-for-melanin-rich-skin-san-diego/" />
   <BreadcrumbSchema
     slot="head"
     trail={[
-      { name: 'Facial in San Diego', path: '/facial/' },
+      { name: 'Facial in San Diego', path: '/services/facial/' },
       { name: 'Facial for Melanin-Rich Skin', path: '/facial/facial-for-melanin-rich-skin-san-diego/' },
     ]}
   />
@@ -88,7 +88,7 @@ const faqs = [
     <header class="bg-blush">
       <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
         <Breadcrumbs
-          ancestors={[{ name: 'Facial in San Diego', path: '/facial/' }]}
+          ancestors={[{ name: 'Facial in San Diego', path: '/services/facial/' }]}
           current="Facial for Melanin-Rich Skin"
         />
         <h1 class="t-h2 mt-6 max-w-[30ch] text-[2.5rem] md:text-[4rem]">
@@ -102,7 +102,7 @@ const faqs = [
           pigment correction, one in facial massage, one as a full wellness spa, and one
           runs a homecare programme rather than a single appointment. Every figure below
           was read from the studio's own website and its Google Business Profile on
-          9 November 2026. KIAMO Skin is a corrective studio in Mission Hills offering
+          9 November 2026. KIAMO Skin is a corrective facial spa in Mission Hills offering
           HydraFacial Syndeo, Lira chemical peels, DMK enzyme therapy and dermaplaning,
           each calibrated to the skin tone — first visit $249 including the consultation.
         </p>
@@ -407,7 +407,7 @@ const faqs = [
                   Pairs with this facial guide for clients whose primary concern is
                   pigmentation.
                 </p>
-                <a href="/hyperpigmentation-treatment/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
+                <a href="/services/hyperpigmentation-treatment/" class="t-button mt-5 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose">
                   Read more
                 </a>
               </div>

@@ -1,0 +1,201 @@
+---
+/**
+ * ServiceHero
+ * -----------
+ * The hero on a service page and on a service-and-city page.
+ *
+ * The structure follows the reference sites rather than the site's previous
+ * split-panel hero, and the difference is not decoration. The old hero led
+ * with a paragraph of local data — landmarks, drive time, the neighbourhood's
+ * climate — before it had said what the treatment was. A reader who came for
+ * a HydraFacial had to read a paragraph about coastal humidity to find out.
+ *
+ * What changed:
+ *
+ *   - The H1 names the SERVICE first and the city second, with the city in
+ *     the accent colour. "HydraFacial in Carlsbad" — the reader's own
+ *     words, in their order.
+ *   - The paragraph above the fold is about the treatment: what it does, what
+ *     it costs, who it is for. The local context moves down the page, where
+ *     it belongs, because it is the reason to trust the drive rather than
+ *     the reason to book.
+ *   - A trust row of tick-marked facts sits directly under the paragraph, so
+ *     the credibility is on screen with the offer rather than two scrolls
+ *     down.
+ *   - A conversion rail on the right carries the price, the action and the
+ *     phone. A form goes here when there is one; until then the rail holds
+ *     the same three things a reader needs to decide.
+ *
+ * The rail is sticky on desktop, so the price and the button stay with the
+ * reader as they read.
+ */
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import Button from './Button.astro';
+import { business } from '../config/business';
+import { CTA_LABEL } from '../config/nav';
+
+interface Props {
+  /** The eyebrow above the H1 — three short attributes of the service. */
+  eyebrow: string;
+  /** The service name, set in the accent colour. */
+  serviceName: string;
+  /** The city, set in the accent colour. */
+  cityName?: string;
+  /** The claim that follows the service name. */
+  claim: string;
+  /** The paragraph. About the treatment, not the neighbourhood. */
+  paragraph: string;
+  image?: ImageMetadata;
+  imageAlt?: string;
+  /** The lead price. */
+  price?: { label: string; price: string };
+  /** The tick-marked trust facts. */
+  trust?: { label: string; detail?: string }[];
+  /** The breadcrumb slot, rendered above the eyebrow. */
+  breadcrumbs?: string;
+}
+
+const { eyebrow, serviceName, cityName, claim, paragraph, image, imageAlt, price, trust, breadcrumbs } =
+  Astro.props;
+---
+
+<section class="relative isolate overflow-hidden bg-espresso">
+  {
+    image && (
+      <picture class="absolute inset-0 -z-10 block">
+        <Image
+          src={image}
+          alt={imageAlt ?? ''}
+          widths={[640, 1024, 1600, 2400]}
+          sizes="100vw"
+          loading="eager"
+          class="size-full scale-105 object-cover object-center"
+        />
+      </picture>
+    )
+  }
+
+  {/* The scrim. Two layers: a wash that guarantees contrast whatever the
+      photograph does, and a gradient that keeps the left column legible
+      while letting the right side of the image stay visible.
+
+      The wash is lighter than it looks like it should be — the gradient
+      carries most of the contrast, and a heavy flat wash kills the
+      photograph, which is the whole point of a full-bleed hero. */}
+  <div class="absolute inset-0 -z-10 bg-espresso/45" aria-hidden="true"></div>
+  <div
+    class="absolute inset-0 -z-10 bg-gradient-to-r from-espresso via-espresso/75 to-espresso/25"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="wrap pt-[calc(60px+48px)] pb-16 md:pt-[calc(60px+72px)] md:pb-24">
+    <div class="grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+      {/* ---- the offer ---- */}
+      <div>
+        {
+          breadcrumbs && (
+            <div class="mb-8 [&_nav]:[&_a]:text-porcelain/70 [&_a]:hover:text-porcelain">
+              <Fragment set:html={breadcrumbs} />
+            </div>
+          )
+        }
+
+        {/* The eyebrow. Three specific attributes, not a category label —
+            "old fields · fence rows · ready to reseed" tells a reader more
+            than "land clearing services" does. */}
+        <p class="t-eyebrow text-blush">{eyebrow}</p>
+
+        {/* The H1. The service leads and the city follows, because that is
+            the order a reader holds the two facts in. The city takes the
+            accent colour so the eye lands on it second, not first. */}
+        <h1 class="t-hero mt-5 max-w-[15ch] text-porcelain">
+          {serviceName}
+          {cityName && <span class="text-blush"> in {cityName}</span>}
+          <span class="mt-4 block max-w-[26ch] text-[0.52em] text-porcelain/85">{claim}</span>
+        </h1>
+
+        {/* The paragraph. Two or three lines on the treatment itself. The
+            local context has its own section further down. */}
+        <p class="t-body mt-7 max-w-[56ch] text-[1.0625rem] text-porcelain/85">
+          {paragraph}
+        </p>
+
+        {/* The trust row. Tick marks, not adjectives — each one is a fact
+            with a number or a name in it, so a reader can check it. */}
+        {
+          trust && trust.length > 0 && (
+            <ul class="m-0 mt-9 grid list-none gap-x-8 gap-y-4 p-0 sm:grid-cols-2">
+              {trust.map((item) => (
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-blush/40 text-blush"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M4.5 10.5l3.5 3.5 7.5-8" />
+                    </svg>
+                  </span>
+                  <span class="t-body text-[0.9375rem] leading-snug text-porcelain/90">
+                    {item.label}
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )
+        }
+      </div>
+
+      {/* ---- the conversion rail ---- */}
+      <div class="lg:sticky lg:top-24">
+        <div class="border border-porcelain/20 bg-porcelain/[0.06] p-8 backdrop-blur-sm md:p-10">
+          {
+            price && (
+              <div class="border-b border-porcelain/20 pb-6">
+                <p class="t-eyebrow text-porcelain/60">{price.label}</p>
+                <p class="t-price mt-3 text-[1.5rem] text-blush">{price.price}</p>
+              </div>
+            )
+          }
+
+          <div class="mt-8">
+            <Button href={business.bookingUrl} external class="w-full">
+              {CTA_LABEL}
+            </Button>
+            <a
+              href={business.phone.href}
+              class="t-body mt-5 block text-[0.9375rem] text-porcelain/85 transition-colors hover:text-blush"
+            >
+              or call {business.phone.display}
+            </a>
+          </div>
+
+          {/* The reassurance. What a reader needs to know before they commit
+              to a drive: whether it is worth the trip, and whether there is
+              anywhere to park. */}
+          <ul class="m-0 mt-8 list-none border-t border-porcelain/20 pt-6">
+            <li class="t-body text-[0.875rem] text-porcelain/70">
+              {business.visit.appointmentOnly}
+            </li>
+            <li class="t-body mt-2 text-[0.875rem] text-porcelain/70">
+              {business.visit.parking}
+            </li>
+            <li class="t-body mt-2 text-[0.875rem] text-porcelain/70">
+              Consultations included — the plan is set before you book
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

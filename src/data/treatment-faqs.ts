@@ -15,6 +15,132 @@
 import type { Faq } from './faqs';
 
 export const treatmentFaqs: Record<string, Faq[]> = {
+  facial: [
+    {
+      question: 'What is the best facial treatment in San Diego for my skin type?',
+      answer:
+        'There is no single best facial — the right one depends on your skin tone (Fitzpatrick I-VI), primary concern, and schedule. At KIAMO Skin, Kiki matches the modality to the skin on the day: HydraFacial Syndeo with AI skin analysis for maintenance and glow, Lira chemical peels at Fitzpatrick-calibrated concentrations for pigmentation and texture, DMK enzyme therapy for barrier repair, and dermaplaning for surface refinement. First-time clients start at $249 for consultation and treatment, which includes a skin analysis and recommendation.',
+    },
+    {
+      question: 'How much does a facial cost in San Diego at KIAMO Skin?',
+      answer:
+        'Pricing depends on modality. Dermaplaning facials start at $199. Lira Chemical Peels range from $199-$299. DMK Enzyme Therapy starts at $279. HydraFacial is $259. First-time clients start at $249 for consultation and treatment. Monthly memberships from $199/month include one facial plus discounts on additional treatments. There are no hidden fees — pricing is published and confirmed at booking.',
+    },
+    {
+      question: 'How long does a facial take, and how often should I get one?',
+      answer:
+        'Sessions at KIAMO Skin run 45-75 minutes depending on modality. HydraFacial Syndeo takes 45 minutes. Dermaplaning takes 45 minutes. DMK Enzyme Therapy takes 60-75 minutes. Lira Chemical Peels take 45-60 minutes. Most clients book monthly for maintenance; every 4-6 weeks is the typical cadence. For corrective plans addressing pigmentation or barrier damage, Kiki may recommend a series of treatments spaced 4-6 weeks apart.',
+    },
+    {
+      question: 'Is facial treatment safe for darker skin tones (Fitzpatrick IV-VI)?',
+      answer:
+        'Yes, when protocols are calibrated to the skin. Standard chemical peels and aggressive exfoliation can trigger post-inflammatory hyperpigmentation in melanin-rich skin if applied at concentrations designed for lighter skin tones. KIAMO Skin uses treatments calibrated to every Fitzpatrick type I-VI, with special attention to preventing complications in darker skin. Kiki has 7+ years of experience treating the full spectrum of skin tones.',
+    },
+    {
+      question: 'What is the difference between HydraFacial, a chemical peel, and dermaplaning?',
+      answer:
+        'HydraFacial Syndeo is a 45-minute medical-grade facial that cleanses, exfoliates, extracts, and hydrates in one session — gentlest of the three, zero downtime, safe for every skin tone. Lira Chemical Peels use calibrated acids (lactic, mandelic, TCA) to address pigmentation, texture, and tone — visible peeling for 3-5 days after treatment. Dermaplaning is physical exfoliation that removes the surface layer of dead skin and vellus hair — immediate smoothness, no downtime. Kiki recommends the modality that fits your concern, not a generic menu.',
+    },
+    {
+      question: 'Can I get a facial if I have sensitive skin or rosacea?',
+      answer:
+        'Yes, with the right modality. DMK Enzyme Therapy is the gentlest corrective option for sensitive, reactive, or barrier-compromised skin — it rebuilds barrier function rather than stripping the skin. HydraFacial Syndeo also works for sensitive skin because the AI analysis calibrates pressure and serum selection. Kiki assesses your skin on the day and adjusts the treatment to avoid irritation.',
+    },
+    {
+      question: 'What should I avoid after a facial in San Diego?',
+      answer:
+        'Avoid direct sun exposure for 24-48 hours after a chemical peel or DMK Enzyme Therapy — wear broad-spectrum SPF 50+ on top of any treatment-applied SPF. Avoid retinoids, vitamin A derivatives, and strong exfoliants for 3-5 days after a peel. Avoid heat exposure (saunas, hot yoga, prolonged cooking) for 48 hours after melasma-focused treatments. HydraFacial Syndeo has no downtime — you can return to normal activity immediately.',
+    },
+    {
+      question: 'Where is KIAMO Skin located for facials near me?',
+      answer:
+        'KIAMO Skin is at 3067 Reynard Way in San Diego. The studio is minutes from Hillcrest and Bankers Hill via Washington Street, 10 minutes from Downtown San Diego, North Park, and Point Loma, and reachable from every San Diego neighborhood via I-5, I-8, or Highway 163. Free parking is on site. By appointment only.',
+    },
+  ],
+  'corrective-skin-treatments': [
+    {
+      question: 'What are corrective skin treatments?',
+      answer:
+        'Professional treatments selected to address a specific concern — pigmentation, acne, uneven texture, congestion, dehydration, or barrier health. The difference from a routine facial is not that one is better, but that the objective is different: a facial refreshes, a corrective plan targets. Which one a given skin needs is decided by assessment, not by the menu.',
+    },
+    {
+      question: 'Should I start with a facial, a peel, or microchanneling?',
+      answer:
+        'Start with the barrier, not the treatment. If the skin is reactive or compromised — over-exfoliated, recently sunburnt, or stripped by treatment done elsewhere — DMK enzyme therapy comes first, because microchanneling on a compromised barrier produces unpredictable results, and a peel on an unstable one can trigger the darkening it was meant to clear. Once the barrier is stable, the choice follows the concern: a facial for maintenance, a peel for pigment and texture, microchanneling for scarring. The order is set at consultation and changes as the skin responds.',
+    },
+    {
+      question: 'Can corrective treatments be combined?',
+      answer:
+        'Different treatments may be incorporated into a broader strategy when appropriate. But treatments should not be combined simply because more procedures seem better. The sequence and frequency have to make sense for the individual skin and goals, and a corrective plan often means fewer treatments, spaced further apart, than a client expected.',
+    },
+    {
+      question: 'How do I know which corrective treatment I need?',
+      answer:
+        'Start by identifying your primary concern and the current condition of your skin, and an appropriate treatment follows from that. The consultation is where this happens, and it is worth having before booking a procedure — the most common reason a plan fails is that the first treatment was chosen before the assessment.',
+    },
+    {
+      question: 'Are corrective skin treatments suitable for melanin-rich skin?',
+      answer:
+        'Yes, and the treatment selection has to take the characteristics and current condition of melanin-rich skin into account. Melanin-rich skin produces pigment more readily in response to trauma, heat, and inflammation, so an unremarkable treatment on lighter skin can cause post-inflammatory hyperpigmentation on deeper skin. Kiki brings training from exactly those cases, and protocols are selected to suit the tone in front of you.',
+    },
+    {
+      question: 'How does a corrective plan compare with a regular facial?',
+      answer:
+        'A facial can be the right choice when the goal is relaxation, cleansing, hydration, or routine maintenance. A corrective plan is the right choice when the goal is a specific concern — pigmentation, acne, texture, or barrier health. Neither is universally better; the objective decides which one you need, and KIAMO Skin can help work out which that is before anything is booked.',
+    },
+  ],
+  'melasma-treatment': [
+    {
+      question: 'Can melasma be permanently cured?',
+      answer:
+        'No, and any studio that says otherwise is selling something. Melasma is driven by hormones and by UV exposure, both of which keep happening. What it can be is managed — faded significantly, held with daily SPF, and kept from returning as fast. That is a permanent working routine, not a one-time fix, and it is the honest version.',
+    },
+    {
+      question: 'How many treatments does it take to see results?',
+      answer:
+        'Most clients see visible change after three to four sessions, with the full result across six to eight sessions spaced four to six weeks apart. Melasma is cumulative — the pigment lifts gradually rather than in one dramatic shift, which is exactly why the pacing matters. A treatment plan is set at consultation once the skin has been assessed.',
+    },
+    {
+      question: 'What melasma treatments are safe for melanin-rich skin?',
+      answer:
+        'Chemical peels selected for deeper skin tones, microchanneling — which works with no heat at all — and customized HydraFacials. The rule is that nothing is escalated until the barrier tolerates the last step. Aggressive treatments can trigger post-inflammatory hyperpigmentation in melanin-rich skin, leaving more dark marks than the ones that brought you in.',
+    },
+    {
+      question: 'How much does melasma treatment cost?',
+      answer:
+        'LIRA chemical peels run $199 to $299 per session. Procell microchanneling is $475 per session, or $1,199 for a series of three. A HydraFacial with a brightening booster is $259. Because melasma needs a series rather than a single session, many clients use the monthly facial membership at $199 to make staying consistent affordable.',
+    },
+    {
+      question: 'Do you treat melasma on all skin tones?',
+      answer:
+        'Yes — Fitzpatrick I through VI. Melasma is most common in deeper skin tones, and treating it safely there requires training in exactly the cases where the margin for error is smallest. Kiki built that training treating pigmentation in Black and brown skin, where a wrong move can cause more damage than it repairs, and that training is what makes the treatment safe for every tone.',
+    },
+    {
+      question: 'Why is melasma harder to treat in San Diego?',
+      answer:
+        'Because the primary trigger never stops. San Diego has year-round sun exposure and high UV even on overcast mornings, when the marine layer is present. That is why strict daily sunscreen compliance — not just in summer — is the part of the plan that decides whether pigment stays faded or comes back.',
+    },
+    {
+      question: 'Should I see an esthetician or a dermatologist for melasma?',
+      answer:
+        'For most people, both, at different stages. A dermatologist prescribes the topical medications that work at the cellular level. A licensed esthetician performs the in-office correction — peels, microchanneling, enzyme therapy — and builds the home routine and maintenance plan that decides whether melasma fades or returns. For stubborn melasma, the two together produce better results than either alone.',
+    },
+    {
+      question: 'What home routine do I need after a treatment to hold the results?',
+      answer:
+        'Three parts. Broad-spectrum SPF with iron oxides every morning, because visible light is a trigger and iron oxides are the only filters that block it. A gentle cleanser and a barrier-supporting moisturiser, nothing that strips. And no retinoids or acids while the skin is recovering. Once the correction has landed, a prescription retinoid a few nights a week and a vitamin C or niacinamide serum each morning keep the turnover moving.',
+    },
+    {
+      question: 'Can pregnancy melasma be treated in San Diego?',
+      answer:
+        'It can, but timing matters. Chemical peels and microchanneling are usually deferred until after pregnancy and breastfeeding, because hormones are still fluctuating and melasma is more reactive then. A gentle routine with daily mineral SPF can start immediately to prevent it worsening. Consultations are available throughout, to assess the skin and build the plan for when treatment begins.',
+    },
+    {
+      question: 'Where can I get melasma treatment in San Diego?',
+      answer:
+        'KIAMO Skin is at 3067 Reynard Way in San Diego, minutes from Hillcrest, Bankers Hill, and Little Italy, with free on-site parking. Clients travel from across the county — Chula Vista, La Jolla, Encinitas, Carlsbad, North Park, and La Mesa — because melasma on melanin-rich skin requires specialized training most estheticians do not have.',
+    },
+  ],
   hydrafacial: [
     {
       question: 'How much does a HydraFacial cost in San Diego?',
@@ -63,7 +189,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     },
   ],
 
-  'procell-microchanneling': [
+  'microneedling': [
     {
       question: 'How much does microchanneling cost in San Diego?',
       answer:
@@ -106,7 +232,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     },
   ],
 
-  'keravive-scalp': [
+  'scalp-therapy': [
     {
       question: 'How much does a Keravive scalp treatment cost in San Diego?',
       answer:
@@ -115,12 +241,12 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'Where can I get Keravive scalp treatment in San Diego?',
       answer:
-        'KIAMO Skin offers Keravive scalp treatment at the Mission Hills studio, centrally located and easy to reach from Pacific Beach, La Jolla, Del Mar, Encinitas, Carlsbad, North Park, Hillcrest, and Mission Valley. The studio is fifteen minutes from Pacific Beach, twenty minutes from La Jolla, and thirty minutes from Encinitas. Parking is available near the studio.',
+        'KIAMO Skin offers Keravive scalp treatment at its San Diego studio, centrally located and easy to reach from Pacific Beach, La Jolla, Del Mar, Encinitas, Carlsbad, North Park, Hillcrest, and Mission Valley. The studio is fifteen minutes from Pacific Beach, twenty minutes from La Jolla, and thirty minutes from Encinitas. Parking is available near the studio.',
     },
     {
       question: 'How long does Keravive take if coming from Pacific Beach?',
       answer:
-        'Keravive takes forty-five minutes for the treatment itself. If driving from Pacific Beach, the studio in Mission Hills is fifteen minutes away, so plan for ninety minutes total including travel. Clients from La Jolla, Del Mar, and Encinitas typically block off two hours to account for the drive and treatment time.',
+        'Keravive takes forty-five minutes for the treatment itself. If driving from Pacific Beach, the studio is fifteen minutes away, so plan for ninety minutes total including travel. Clients from La Jolla, Del Mar, and Encinitas typically block off two hours to account for the drive and treatment time.',
     },
     {
       question: 'What is the best treatment for a flaking, itchy scalp?',
@@ -154,7 +280,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     },
   ],
 
-  'lira-peels': [
+  'chemical-peel': [
     {
       question: 'What should I do before a chemical peel?',
       answer:
@@ -245,7 +371,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'Who is the best dermaplaning provider in San Diego?',
       answer:
-        'The safest dermaplaning in San Diego depends on blade technique and post-care, not the brand of the studio. KIAMO Skin performs dermaplaning in a private treatment room at 3067 Reynard Way in Mission Hills by Kiki, a California licensed esthetician with 7+ years on the Fitzpatrick I–VI spectrum, sterile single-use blades, and the right pre/post routine for melanin-rich skin. The Dermaplane Facial is $199.',
+        'The safest dermaplaning in San Diego depends on blade technique and post-care, not the brand of the studio. KIAMO Skin performs dermaplaning in a private treatment room in San Diego by Kiki, a California licensed esthetician with 7+ years on the Fitzpatrick I–VI spectrum, sterile single-use blades, and the right pre/post routine for melanin-rich skin. The Dermaplane Facial is $199.',
     },
     {
       question: 'What should you avoid after dermaplaning?',
@@ -258,7 +384,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     {
       question: 'What is DMK enzyme therapy?',
       answer:
-        'DMK enzyme therapy is a corrective skin treatment that works with the skin\'s own biological processes — circulation, lymphatic activity and cellular function — rather than stripping the surface the way an acid peel does. Level 1 at KIAMO Skin in Mission Hills, San Diego is $279 and is how every DMK plan starts, regardless of what the skin\'s longer-term goals are.',
+        'DMK enzyme therapy is a corrective skin treatment that works with the skin\'s own biological processes — circulation, lymphatic activity and cellular function — rather than stripping the surface the way an acid peel does. Level 1 at KIAMO Skin in San Diego is $279 and is how every DMK plan starts, regardless of what the skin\'s longer-term goals are.',
     },
     {
       question: 'How much does DMK enzyme therapy cost in San Diego?',
@@ -302,7 +428,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     },
   ],
 
-  acne: [
+  'acne-treatment': [
     {
       question: 'Does HydraFacial help with acne?',
       answer:
@@ -335,7 +461,7 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     },
   ],
 
-  hyperpigmentation: [
+  'hyperpigmentation-treatment': [
     {
       question: 'What is post-inflammatory hyperpigmentation (PIH) and how does it form?',
       answer:

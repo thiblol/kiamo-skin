@@ -1,0 +1,79 @@
+---
+/**
+ * Page-level Service node for a service-and-city page.
+ *
+ * `/services/{service}/{area}/` — "HydraFacial in Encinitas".
+ *
+ * Deliberately NOT a LocalBusiness. Emitting a second business node per
+ * area would create one entity per page, which is the shape Google treats as
+ * location spam. One studio, one business entity — see LocalBusinessSchema,
+ * which is mounted once through BaseLayout.
+ *
+ * The node is a Service scoped to the area it targets: `areaServed` names
+ * that one place, and the offer catalog enumerates the other services
+ * available to clients travelling from it. That is what lets an AI system
+ * read the page as "this treatment, for this place, from this studio".
+ */
+import { absolute, businessId, areaServicePath } from '../../config/urls';
+import { business } from '../../config/business';
+import type { Service } from '../../data/services';
+import type { ServiceAreaRecord } from '../../data/service-area-types';
+import { getServiceAreasForArea } from '../../data/service-areas-index';
+
+interface Props {
+  record: ServiceAreaRecord;
+  service?: Service;
+}
+
+const { record, service } = Astro.props;
+const site = Astro.site;
+const url = absolute(areaServicePath(record.area, record.service), site);
+
+/** The other services available to clients from this area. */
+const siblings = getServiceAreasForArea(record.area).filter((r) => r.service !== record.service);
+
+const numeric = (service?.pricing ?? [])
+  .map((row) => ({ label: row.label, value: Number(row.price.replace(/[$,]/g, '')) }))
+  .filter((row) => Number.isFinite(row.value) && row.value > 0);
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  '@id': `${url}#service`,
+  name: `${service?.name ?? record.service} in ${record.name}`,
+  serviceType: service?.serviceType ?? 'Corrective skin treatment',
+  category: service?.category ?? 'Corrective skin treatment',
+  ...(service?.alternateName && { alternateName: service.alternateName }),
+  description: record.description,
+  url,
+  provider: { '@id': businessId(site) },
+  areaServed: { '@type': 'Place', name: `${record.name}, San Diego County, CA` },
+  ...(numeric.length === 1 && {
+    offers: {
+      '@type': 'Offer',
+      name: numeric[0].label,
+      price: String(numeric[0].value),
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      url: business.bookingUrl,
+    },
+  }),
+  ...(siblings.length > 0 && {
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: `Other treatments available to ${record.name} clients`,
+      itemListElement: siblings.map((sibling) => ({
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: `${sibling.service} in ${record.name}`,
+          url: absolute(areaServicePath(sibling.area, sibling.service), site),
+          provider: { '@id': businessId(site) },
+        },
+      })),
+    },
+  }),
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

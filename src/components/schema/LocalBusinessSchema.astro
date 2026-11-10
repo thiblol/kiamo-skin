@@ -1,38 +1,70 @@
 ---
 import { business, verifiedPrices } from '../../config/business';
-import { absolute, businessId, websiteId, gbpListingUrl } from '../../config/urls';
+import { absolute, businessId, websiteId, gbpListingUrl, servicePath } from '../../config/urls';
+import { services } from '../../data/services';
 import ogImage from '../../assets/kiamo-skin-studio-mission-hills-san-diego.jpg';
 
 const site = Astro.site;
 const entityId = businessId(site);
 const home = absolute('/', site);
 
-/** Every service carries a price except DMK Level 2 & 3, which is prescribed at
-    consultation. It is still listed so the catalogue is complete. */
-const services = [
-  { name: 'First-Time Client Treatment', url: 'treatments/hydrafacial', priced: 'first-time-client' },
-  { name: 'HydraFacial Treatment', url: 'treatments/hydrafacial', priced: 'hydrafacial' },
-  { name: 'Dermaplane Facial', url: 'treatments/dermaplaning', priced: 'dermaplane-facial' },
-  { name: 'DMK Level 1 Enzyme Treatment', url: 'treatments/dmk-enzyme-therapy', priced: 'dmk-enzyme-1' },
-  { name: 'LIRA Gentle Renewal Peel', url: 'treatments/lira-peels', priced: 'lira-light-peel' },
-  { name: 'Keravive Scalp Treatment', url: 'treatments/keravive-scalp', priced: 'keravive-scalp' },
-  { name: 'Procell Microchanneling', url: 'treatments/procell-microchanneling', priced: 'procell' },
-  { name: 'LIRA Advanced Peel', url: 'treatments/lira-peels', priced: 'lira-advanced-peel' },
-  { name: 'DMK Level 2 & 3 Enzyme Treatment', url: 'treatments/dmk-enzyme-therapy', priced: null },
+/**
+ * Every service carries a price except DMK Level 2 & 3, which is prescribed at
+ * consultation. It is still listed so the catalogue is complete.
+ *
+ * The prices come from `verifiedPrices` and the URLs from the service
+ * registry, so the catalogue cannot drift from the pages it describes.
+ */
+const catalogue = [
+  { name: 'First-Time Client Treatment', service: 'hydrafacial', priced: 'first-time-client' },
+  { name: 'HydraFacial Treatment', service: 'hydrafacial', priced: 'hydrafacial' },
+  { name: 'Dermaplane Facial', service: 'dermaplaning', priced: 'dermaplane-facial' },
+  { name: 'DMK Level 1 Enzyme Treatment', service: 'dmk-enzyme-therapy', priced: 'dmk-enzyme-1' },
+  { name: 'LIRA Gentle Renewal Peel', service: 'chemical-peel', priced: 'lira-light-peel' },
+  { name: 'Keravive Scalp Treatment', service: 'scalp-therapy', priced: 'keravive-scalp' },
+  { name: 'Procell Microchanneling', service: 'microneedling', priced: 'procell' },
+  { name: 'LIRA Advanced Peel', service: 'chemical-peel', priced: 'lira-advanced-peel' },
+  { name: 'DMK Level 2 & 3 Enzyme Treatment', service: 'dmk-enzyme-therapy', priced: null },
   /** Package totals for the series of three, not per-session rates. */
-  { name: 'Procell Microchanneling — Series of Three', url: 'treatments/procell-microchanneling', priced: 'procell-series' },
-  { name: 'Keravive Scalp Treatment — Series of Three', url: 'treatments/keravive-scalp', priced: 'keravive-scalp-series' },
+  { name: 'Procell Microchanneling — Series of Three', service: 'microneedling', priced: 'procell-series' },
+  { name: 'Keravive Scalp Treatment — Series of Three', service: 'scalp-therapy', priced: 'keravive-scalp-series' },
 ] as const;
+
+/**
+ * The service → body-location map.
+ *
+ * A HydraFacial for the scalp is a different treatment from one for the face,
+ * and the schema says so. Everything else is a facial.
+ */
+const bodyLocation: Record<string, string> = {
+  'scalp-therapy': 'Scalp',
+};
+
+const serviceUrl = (slug: string) => absolute(servicePath(slug), site);
 
 const schema = {
   '@context': 'https://schema.org',
-  '@type': ['MedicalBusiness', 'LocalBusiness', 'HealthAndBeautyBusiness', 'DaySpa'],
+  /**
+   * HealthAndBeautyBusiness + DaySpa — the brief's central entity type.
+   *
+   * There is deliberately no `MedicalBusiness` here, and no
+   * `medicalSpecialty`. The site brief rules both out by name, because the
+   * studio holds no medical status: it is an esthetician studio, and its own
+   * footer says so in as many words. Claiming `medicalSpecialty: Dermatology`
+   * on a node whose visible copy says "not a medical practice" is the
+   * structured-data/visible-content mismatch the LRA spec warns against, and
+   * it is the same "med spa" framing the keyword strategy deliberately left
+   * alone.
+   *
+   * `LocalBusiness` is kept alongside the two subtypes because it is their
+   * common parent and the guard suite looks for it.
+   */
+  '@type': ['LocalBusiness', 'HealthAndBeautyBusiness', 'DaySpa'],
   '@id': entityId,
   name: business.name,
   additionalType: 'https://en.wikipedia.org/wiki/Day_spa',
-  medicalSpecialty: ['Dermatology', 'Cosmetic Dermatology'],
   description:
-    'Expert facials and corrective skin treatments in San Diego. Specializing in hyperpigmentation, melasma, acne scarring, and scalp therapy—safe for all skin tones, including melanin-rich skin, services include HydraFacial,DMK Enzyme Therapy, Keravive, Chemical peels and more.',
+    'Corrective facial spa in San Diego — expert facials, chemical peels, microchanneling, enzyme therapy and scalp treatments for pigmentation, melasma, acne scarring and barrier damage, safe for all skin tones including melanin-rich skin.',
   url: home,
   image: new URL(ogImage.src, site).href,
   telephone: business.phone.display,
@@ -153,85 +185,29 @@ const schema = {
     { '@type': 'LocationFeatureSpecification', name: 'By appointment only', value: true },
     { '@type': 'LocationFeatureSpecification', name: 'Private studio', value: true },
   ],
-  availableService: [
-    {
-      '@type': 'MedicalProcedure',
-      name: 'HydraFacial',
-      url: absolute('treatments/hydrafacial', site),
-      procedureType: 'https://schema.org/NoninvasiveProcedure',
-      medicineSystem: 'https://schema.org/WesternConventional',
-      bodyLocation: 'Face',
-      followup: 'Monthly treatments recommended for optimal skin health',
-    },
-    {
-      '@type': 'MedicalProcedure',
-      name: 'HydraFacial Keravive',
-      url: absolute('treatments/keravive-scalp', site),
-      procedureType: 'https://schema.org/NoninvasiveProcedure',
-      medicineSystem: 'https://schema.org/WesternConventional',
-      bodyLocation: 'Scalp',
-      followup: 'Series of three treatments recommended',
-    },
-    {
-      '@type': 'MedicalProcedure',
-      name: 'DMK Enzyme Therapy',
-      url: absolute('treatments/dmk-enzyme-therapy', site),
-      procedureType: 'https://schema.org/NoninvasiveProcedure',
-      medicineSystem: 'https://schema.org/WesternConventional',
-      bodyLocation: 'Face',
-      followup: 'Level 1 treatment required before advancing to deeper protocols',
-    },
-    {
-      '@type': 'MedicalProcedure',
-      name: 'Procell Microchanneling',
-      url: absolute('treatments/procell-microchanneling', site),
-      procedureType: 'https://schema.org/NoninvasiveProcedure',
-      medicineSystem: 'https://schema.org/WesternConventional',
-      bodyLocation: 'Face',
-      followup: 'Three treatment series spaced 4-6 weeks apart',
-    },
-    {
-      '@type': 'MedicalProcedure',
-      name: 'Lira Chemical Peels',
-      url: absolute('treatments/lira-peels', site),
-      procedureType: 'https://schema.org/NoninvasiveProcedure',
-      medicineSystem: 'https://schema.org/WesternConventional',
-      bodyLocation: 'Face',
-      followup: 'Series of treatments with home care between sessions',
-    },
-    {
-      '@type': 'MedicalProcedure',
-      name: 'Dermaplaning',
-      url: absolute('treatments/dermaplaning', site),
-      procedureType: 'https://schema.org/NoninvasiveProcedure',
-      medicineSystem: 'https://schema.org/WesternConventional',
-      bodyLocation: 'Face',
-      followup: 'Can be paired with chemical peels for enhanced results',
-    },
-    {
-      '@type': 'MedicalProcedure',
-      name: 'Acne Treatment',
-      url: absolute('treatments/acne', site),
-      procedureType: 'https://schema.org/NoninvasiveProcedure',
-      medicineSystem: 'https://schema.org/WesternConventional',
-      bodyLocation: 'Face',
-      followup: 'Treatment protocol depends on acne phase and severity',
-    },
-  ],
+  availableService: services.map((service) => ({
+    '@type': 'MedicalProcedure',
+    name: service.name,
+    url: serviceUrl(service.slug),
+    procedureType: 'https://schema.org/NoninvasiveProcedure',
+    medicineSystem: 'https://schema.org/WesternConventional',
+    bodyLocation: bodyLocation[service.slug] ?? 'Face',
+    followup: service.note ?? 'Treatment plan customized at consultation',
+  })),
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Treatments',
-    itemListElement: services.map((s) => {
+    itemListElement: catalogue.map((entry) => {
       const itemOffered = {
         '@type': 'Service',
-        name: s.name,
-        url: absolute(s.url, site),
+        name: entry.name,
+        url: serviceUrl(entry.service),
         provider: { '@id': entityId },
       };
-      if (!s.priced) return { '@type': 'Offer', itemOffered };
+      if (!entry.priced) return { '@type': 'Offer', itemOffered };
       return {
         '@type': 'Offer',
-        price: verifiedPrices[s.priced].replace('$', ''),
+        price: verifiedPrices[entry.priced].replace('$', ''),
         priceCurrency: 'USD',
         itemOffered,
       };
@@ -241,11 +217,10 @@ const schema = {
     {
       '@type': 'Offer',
       itemOffered: {
-        '@type': 'MedicalTherapy',
+        '@type': 'Service',
         name: 'Hyperpigmentation Treatment',
         description:
           'Professional treatment for melasma, dark spots, and post-inflammatory hyperpigmentation using chemical peels, microchanneling, and corrective facials.',
-        relevantSpecialty: 'Dermatology',
         areaServed: business.schemaAreaServed.map((name) => ({ '@type': 'City', name })),
         provider: { '@id': entityId },
       },
@@ -254,11 +229,10 @@ const schema = {
     {
       '@type': 'Offer',
       itemOffered: {
-        '@type': 'MedicalTherapy',
+        '@type': 'Service',
         name: 'Melasma Treatment',
         description:
           'Advanced melasma treatment safe for all skin tones, including melanin-rich skin. Specialized protocols for Fitzpatrick Types IV-VI.',
-        relevantSpecialty: 'Dermatology',
         areaServed: business.schemaAreaServed.map((name) => ({ '@type': 'City', name })),
         provider: { '@id': entityId },
       },
@@ -267,11 +241,10 @@ const schema = {
     {
       '@type': 'Offer',
       itemOffered: {
-        '@type': 'MedicalTherapy',
+        '@type': 'Service',
         name: 'Corrective Scalp Treatment',
         description:
-          'Medical-grade scalp therapy for dryness, irritation, and scalp health using Keravive technology. Addresses hard water buildup common in San Diego.',
-        relevantSpecialty: 'Dermatology',
+          'Clinical scalp therapy for dryness, irritation, and scalp health using Keravive technology. Addresses hard water buildup common in San Diego.',
         areaServed: business.schemaAreaServed.map((name) => ({ '@type': 'City', name })),
         provider: { '@id': entityId },
       },
@@ -280,11 +253,10 @@ const schema = {
     {
       '@type': 'Offer',
       itemOffered: {
-        '@type': 'MedicalTherapy',
+        '@type': 'Service',
         name: 'Acne Scarring Treatment',
         description:
           'Procell microchanneling and chemical peels for acne scar correction and texture improvement. Safe protocols for melanin-rich skin.',
-        relevantSpecialty: 'Dermatology',
         areaServed: business.schemaAreaServed.map((name) => ({ '@type': 'City', name })),
         provider: { '@id': entityId },
       },

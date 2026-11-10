@@ -1,4 +1,20 @@
 ---
+/**
+ * The homepage hero.
+ *
+ * Built on the same pattern as the service heroes: a full-bleed photograph
+ * under a scrim, an eyebrow of three specific attributes, an H1 that names
+ * the service and the city, a short paragraph about the work, the trust
+ * facts as tick marks, and a conversion rail on the right.
+ *
+ * What it replaced: a two-column split where the copy sat on a warm panel
+ * and the photograph was boxed into the right half. That put the treatment
+ * in a light panel with a local-data paragraph, and made the first screen
+ * read as a page about a place rather than a page about a treatment.
+ *
+ * The art direction note that follows is the reason the composition works
+ * and is worth keeping if the hero is ever rebuilt.
+ */
 import { getImage } from 'astro:assets';
 import Button from '../Button.astro';
 import heroTall from '../../assets/licensed-esthetician-melanin-rich-skin-san-diego.jpg';
@@ -6,9 +22,26 @@ import heroWide from '../../assets/kiamo-skin-esthetician-mission-hills-san-dieg
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import { gbpReviewsUrl } from '../../config/urls';
+import { reviewStats } from '../../data/review-stats';
+import { verifiedPrices } from '../../config/business';
 
-// Astro's built-in <Picture> only switches format and size, not the source image,
-// so art direction needs a hand-built <picture> fed by getImage().
+/**
+ * Two crops, not one composition squeezed.
+ *
+ * Desktop (≥640px): the wide frame, with the copy over the empty wall on
+ * the left. The scrim sits over that side, so the photograph stays visible
+ * on the right where the reader's eye travels next.
+ *
+ * Mobile (<640px): the tall crop, where the wall is at the top and the
+ * subject is across the bottom. Overlaying it would mean either unreadable
+ * text or a scrim that washes out the photograph. The crop sits under the
+ * copy instead, which gives the image a clean, uncovered frame.
+ *
+ * The mobile photo is 40svh, not 56. At 56 the image alone pushed the H1
+ * below the fold and the CTA to 1047px on a 390×844 screen. 40 keeps the
+ * subject's face and the wall above it, and lands the primary CTA inside
+ * the first viewport.
+ */
 const tallAvif = await getImage({
   src: heroTall,
   format: 'avif',
@@ -24,101 +57,150 @@ const wideAvif = await getImage({
 const fallback = await getImage({ src: heroWide, format: 'jpeg', width: 1920, quality: 72 });
 
 const reviewsUrl = gbpReviewsUrl(business.gbpPlaceId);
+
+/**
+ * The three layers above the fold, each doing a different job.
+ *
+ * The eyebrow names the concerns in the reader's words — the same shape as
+ * the reference site's "old fields · fence rows · ready to reseed": three
+ * concrete states of the world, not a list of service categories.
+ *
+ * The H1 says what and where. The claim says how the work is done, which is
+ * the part that separates this studio from a day spa and the part no keyword
+ * covers. Neither repeats the other.
+ */
+const eyebrow = 'Melasma · Post-acne marks · Compromised barriers';
+const claim = 'Skin and scalp treatment planned as a series, not a one-off.';
+const paragraph =
+  'A licensed esthetician treats what your skin is actually doing — melasma and post-acne marks, acne and scarring, a barrier that has stopped holding water, a scalp carrying hard water buildup. One treatment room, one practitioner, and a plan mapped before you book. Dermaplaning from $199, HydraFacial $259, first visit $249.';
+
+const trust = [
+  { label: 'Safe for every Fitzpatrick type, I–VI' },
+  { label: `${reviewStats.count} five-star Google reviews` },
+  { label: 'Licensed esthetician, 7+ years' },
+  { label: 'Prices published before you book' },
+];
 ---
 
-{/*
-  Two compositions, not one composition squeezed.
+<section class="relative isolate overflow-hidden bg-espresso">
+  {
+    <picture class="absolute inset-0 -z-10 block">
+      <source media="(max-width: 639px)" srcset={tallAvif.srcSet.attribute} type="image/avif" />
+      <source media="(min-width: 640px)" srcset={wideAvif.srcSet.attribute} type="image/avif" />
+      <img
+        src={fallback.src}
+        width={1920}
+        height={1080}
+        alt="A client resting on the treatment bed at the KIAMO Skin studio in San Diego"
+        fetchpriority="high"
+        decoding="async"
+        class="size-full scale-105 object-cover object-center"
+      />
+    </picture>
+  }
 
-  Desktop (≥640px): copy overlays the wide frame, which has empty wall on the left
-  exactly where the text sits. Overlay opacity stays 0 per spec §4.1.
-
-  Mobile (<640px): the tall crop puts its wall at the TOP and the subject across the
-  bottom — the copy's only landing zone. Overlaying it meant either unreadable text
-  or a scrim that washed out the photograph. Splitting instead gives the image a
-  clean, uncovered frame and the copy full contrast on porcelain. No scrim, no
-  compromise on either half.
-
-  The mobile photo is 40svh, not 56. At 56 the image alone pushed the H1 below the
-  fold and the CTA to 1047px on a 390×844 screen. 40 keeps the subject's face and
-  the wall above it, and lands the primary CTA inside the first viewport.
-*/}
-<section class="relative isolate overflow-hidden">
-  <picture class="block h-[40svh] w-full sm:absolute sm:inset-0 sm:h-full">
-    <source media="(max-width: 639px)" srcset={tallAvif.srcSet.attribute} type="image/avif" />
-    <source media="(min-width: 640px)" srcset={wideAvif.srcSet.attribute} type="image/avif" />
-    <img
-      src={fallback.src}
-      width={1920}
-      height={1080}
-      alt="A client resting on the treatment bed at the KIAMO Skin studio in Mission Hills, San Diego"
-      fetchpriority="high"
-      decoding="async"
-      class="ken-burns size-full object-cover object-[78%_42%] sm:object-[65%_50%] lg:object-center"
-    />
-  </picture>
-
+  {/* The scrim. A flat wash guarantees contrast whatever the photograph
+      does; the gradient carries most of it, so the right side of the image
+      stays visible. */}
+  <div class="absolute inset-0 -z-10 bg-espresso/45" aria-hidden="true"></div>
   <div
-    class="wrap relative flex flex-col justify-end pt-10 pb-12 sm:min-h-[92svh] sm:pt-[60px] sm:pb-20 md:min-h-[88svh] md:pb-28"
+    class="absolute inset-0 -z-10 bg-gradient-to-r from-espresso via-espresso/78 to-espresso/25"
+    aria-hidden="true"
   >
-    {/* The brand line moves to the kicker so the H1 can carry the geo claim.
-        This is one of the two pages where a geo H1 is correct — strategy §1.13:
-        the homepage and the category mirrors state the geography, every
-        treatment H1 stays bare. */}
-    <p class="t-eyebrow text-ink-soft sm:text-ink">Corrective skin studio · Mission Hills, San Diego</p>
-    <h1 class="t-hero mt-3 max-w-[16ch] sm:mt-5 sm:max-w-[18ch]">
-      Corrective skin &amp; scalp treatments in San Diego—for pigmentation, acne, and scalp health.
-    </h1>
-    {/* Two lines, two different dimensions: what the studio is, then who it
-        suits. The old single 56-word paragraph buried the CTA under a wall of
-        proper nouns — treatments, modalities, Fitzpatrick types, landmarks.
-        The modality names live in the menu below; the landmarks live in the
-        location section. Neither needs to be in the first paragraph. */}
-    <p class="t-body mt-4 max-w-[52ch] sm:mt-6">
-      A licensed corrective skin and scalp studio in {business.address.neighborhood}, San Diego.
-      Pigmentation, acne scarring, barrier damage and scalp health, treated for every skin type.
-    </p>
-    <div class="mt-6 flex flex-wrap items-center gap-x-4 gap-y-3 sm:mt-8">
-      <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
-      {/* Rule 6: a visible number next to the CTA. A high-intent local visitor
-          who will not fill in a form can tap this instead. */}
-      <a
-        href={business.phone.href}
-        class="t-button border-b border-ink pb-1 hover:border-rose hover:text-rose"
-        onclick="if(typeof gtag !== 'undefined') gtag('event', 'phone_click', {event_category: 'engagement', event_label: 'hero', transport_type: 'beacon'});"
-      >
-        Call {business.phone.display}
-      </a>
+  </div>
+
+  <div class="wrap pt-[calc(60px+44px)] pb-16 md:pt-[calc(60px+72px)] md:pb-24">
+    <div class="grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+      {/* ---- the offer ---- */}
+      <div>
+        <p class="t-eyebrow text-blush">{eyebrow}</p>
+
+        {/* The H1. The service leads and the city follows — the order a
+            reader holds the two facts in. */}
+        <h1 class="t-hero mt-5 max-w-[17ch] text-porcelain">
+          Corrective facials
+          <span class="text-blush"> in San Diego</span>
+          <span class="mt-4 block max-w-[30ch] text-[0.52em] text-porcelain/85">{claim}</span>
+        </h1>
+
+        {/* The paragraph. What the work is, what it costs, who it is for. */}
+        <p class="t-body mt-7 max-w-[56ch] text-[1.0625rem] text-porcelain/85">{paragraph}</p>
+
+        {/* The trust row. Tick marks, not adjectives — each one is a fact
+            with a number or a name in it, so a reader can check it. */}
+        <ul class="m-0 mt-9 grid list-none gap-x-8 gap-y-4 p-0 sm:grid-cols-2">
+          {
+            trust.map((item) => (
+              <li class="flex items-start gap-3">
+                <span
+                  class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-blush/40 text-blush"
+                  aria-hidden="true"
+                >
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 20 20"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path d="M4.5 10.5l3.5 3.5 7.5-8" />
+                  </svg>
+                </span>
+                <span class="t-body text-[0.9375rem] leading-snug text-porcelain/90">{item.label}</span>
+              </li>
+            ))
+          }
+        </ul>
+
+        <p class="t-body mt-7 text-[0.9375rem] text-porcelain/75">
+          <a
+            href={reviewsUrl}
+            target="_blank"
+            rel="noopener"
+            class="border-b border-porcelain/40 transition-colors hover:border-blush hover:text-blush"
+          >
+            Read reviews on Google
+          </a>
+        </p>
+      </div>
+
+      {/* ---- the conversion rail ---- */}
+      <div class="lg:sticky lg:top-24">
+        <div class="border border-porcelain/20 bg-porcelain/[0.06] p-8 backdrop-blur-sm md:p-10">
+          <div class="border-b border-porcelain/20 pb-6">
+            <p class="t-eyebrow text-porcelain/60">First-time client treatment</p>
+            <p class="t-price mt-3 text-[1.5rem] text-blush">{verifiedPrices['first-time-client']}</p>
+            <p class="t-body mt-3 text-[0.875rem] text-porcelain/70">
+              Consultation, skin analysis and first treatment
+            </p>
+          </div>
+
+          <div class="mt-8">
+            <Button href={business.bookingUrl} external class="w-full">
+              {CTA_LABEL}
+            </Button>
+            <a
+              href={business.phone.href}
+              class="t-body mt-5 block text-[0.9375rem] text-porcelain/85 transition-colors hover:text-blush"
+            >
+              or call {business.phone.display}
+            </a>
+          </div>
+
+          {/* The reassurance. What a reader needs before they commit: whether
+              there is anywhere to park, and whether they need to book. */}
+          <ul class="m-0 mt-8 list-none border-t border-porcelain/20 pt-6">
+            <li class="t-body text-[0.875rem] text-porcelain/70">{business.visit.appointmentOnly}</li>
+            <li class="t-body mt-2 text-[0.875rem] text-porcelain/70">{business.visit.parking}</li>
+            <li class="t-body mt-2 text-[0.875rem] text-porcelain/70">
+              Free cancellation up to 48 hours before
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <p class="t-body mt-5 text-[0.875rem] text-ink-soft">
-      <a
-        href={reviewsUrl}
-        target="_blank"
-        rel="noopener"
-        class="border-b border-ink/40 hover:border-rose hover:text-rose"
-      >Read reviews on Google</a>
-    </p>
   </div>
 </section>
-
-<style>
-  /* Spec §9: ken-burns scale 1 → 1.06 over 20s. */
-  .ken-burns {
-    animation: ken-burns 20s ease-out forwards;
-    transform-origin: 60% 50%;
-  }
-
-  @keyframes ken-burns {
-    from {
-      transform: scale(1);
-    }
-    to {
-      transform: scale(1.06);
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .ken-burns {
-      animation: none;
-    }
-  }
-</style>

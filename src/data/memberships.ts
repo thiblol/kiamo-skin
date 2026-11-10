@@ -48,7 +48,7 @@ export const tiers: Tier[] = [
     compare: [
       {
         label: 'HydraFacial Treatment',
-        href: '/treatments/hydrafacial/',
+        href: '/services/hydrafacial/',
         price: verifiedPrices.hydrafacial,
       },
     ],
@@ -71,12 +71,12 @@ export const tiers: Tier[] = [
     compare: [
       {
         label: 'HydraFacial Treatment',
-        href: '/treatments/hydrafacial/',
+        href: '/services/hydrafacial/',
         price: verifiedPrices.hydrafacial,
       },
       {
         label: 'Dermaplaning add-on',
-        href: '/treatments/dermaplaning/',
+        href: '/services/dermaplaning/',
         price: 'Included',
       },
       {
