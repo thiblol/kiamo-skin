@@ -210,7 +210,9 @@ const covered = matrix.filter((m) => m.rows.length > 0);
                 <ul class="mt-8 grid list-none gap-6 p-0 md:grid-cols-2 lg:grid-cols-3">
                   {areas.map(({ shell, rows }) => (
                     <li class="border border-line bg-porcelain p-7">
-                      <p class="t-service text-[1rem]">{shell.name}</p>
+                      <p class="t-service text-[1rem]">
+                        <a href={areaPath(shell.slug)} class="hover:text-rose">{shell.name}</a>
+                      </p>
                       <p class="t-body mt-2 text-[0.875rem] text-ink-soft">{shell.proximity}</p>
 
                       <ul class="m-0 mt-5 list-none border-t border-line p-0">
@@ -281,7 +283,9 @@ const covered = matrix.filter((m) => m.rows.length > 0);
           {
             covered.map(({ shell, rows }) => (
               <li class="border-b border-line">
-                <p class="t-service pt-7 text-[1.0625rem]">{shell.name}</p>
+                <p class="t-service pt-7 text-[1.0625rem]">
+                  <a href={areaPath(shell.slug)} class="hover:text-rose">{shell.name}</a>
+                </p>
                 <ul class="m-0 list-none p-0">
                   {rows.map(({ record, service }) => (
                     <li>
