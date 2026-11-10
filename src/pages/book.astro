@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Reveal from '../components/Reveal.astro';
 import Button from '../components/Button.astro';
 import NapBlock from '../components/NapBlock.astro';
+import FaqList from '../components/FaqList.astro';
 import FaqSchema from '../components/schema/FaqSchema.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
@@ -60,7 +61,7 @@ const faqs = [
 
 <BaseLayout
   title="Request an Appointment | KIAMO Skin San Diego"
-  description="Request an appointment at KIAMO Skin in Mission Hills, San Diego. Appointment-only studio for corrective facials, peels and scalp therapy."
+  description="Request an appointment at KIAMO Skin in San Diego. Appointment-only studio for corrective facials, peels and scalp therapy."
 >
   <FaqSchema slot="head" faqs={faqs} />
   <BreadcrumbSchema slot="head" trail={[{ name: 'Book', path: '/book' }]} />
@@ -146,25 +147,8 @@ const faqs = [
         <h2 class="t-h3">Questions to ask before booking</h2>
       </Reveal>
 
-      <div class="faq-section mt-12 max-w-[72ch]">
-        {
-          faqs.map((faq) => (
-            <div class="border-b border-line">
-              <details class="group">
-                <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
-                  <span>{faq.question}</span>
-                  <span
-                    aria-hidden="true"
-                    class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
-                  >
-                    +
-                  </span>
-                </summary>
-                <div class="t-body pb-6 text-[0.9375rem] leading-relaxed">{faq.answer}</div>
-              </details>
-            </div>
-          ))
-        }
+      <div class="mt-12 max-w-[72ch]">
+        <FaqList faqs={faqs} />
       </div>
     </div>
   </section>

@@ -76,7 +76,7 @@ export const business = {
     /** Renders in NapBlock, so it ships on every page. Names the neighbourhoods
         within a five-minute drive; the street is the one Reynard Way meets. */
     orientation:
-      'Mission Hills, off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.',
+      'Off Washington Street — minutes from Hillcrest, Bankers Hill and Little Italy.',
   },
 
   cancellation:
@@ -94,7 +94,6 @@ export const business = {
    * its address must still appear nowhere; see test/guards.test.js.
    */
   areaServed: [
-    'Mission Hills',
     'North Park',
     'Pacific Beach',
     'La Jolla',
@@ -122,7 +121,6 @@ export const business = {
    * somewhere a client can read it.
    */
   schemaAreaServed: [
-    'Mission Hills',
     'North Park',
     'Pacific Beach',
     'La Jolla',

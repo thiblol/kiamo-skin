@@ -53,7 +53,7 @@ export const reels: Reel[] = [
     // The handpiece is not identifiable from the footage, so the copy stays with
     // what is visible — the room and the treatment — and names no device.
     slug: 'reel-studio',
-    title: 'Inside the Mission Hills studio',
+    title: 'Inside the San Diego studio',
     body: 'A corrective facial in progress, in the treatment room off Washington Street.',
     alt: 'A facial in progress in the KIAMO Skin treatment room, client reclined under an eye mask',
     duration: 14.27,

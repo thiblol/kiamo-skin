@@ -25,6 +25,7 @@ import NapBlock from './NapBlock.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import ServiceHero from './ServiceHero.astro';
 import QuickAnswer from './QuickAnswer.astro';
+import FaqList from './FaqList.astro';
 import PriceAnchor from './PriceAnchor.astro';
 import TrustBar from './TrustBar.astro';
 import ProofQuote from './ProofQuote.astro';
@@ -373,9 +374,7 @@ const trust = treatmentTrust[trustSlug];
           </Reveal>
         </div>
         <Reveal>
-          <div id="location-map">
-            <LocationMap origin={current} />
-          </div>
+          <LocationMap origin={current} id="route-map" />
         </Reveal>
       </div>
     </section>
@@ -404,18 +403,11 @@ const trust = treatmentTrust[trustSlug];
                 : 'Questions, answered'}
             </h2>
           </Reveal>
-          {/* Visible text, not accordions. These are the pages AI engines
-              cite, and a collapsed answer earns fewer organic sessions than
-              the same copy shown outright. */}
-          <div class="faq-section mt-12">
-            {
-              faqs.map((faq) => (
-                <div class="border-b border-line py-7 first:pt-0">
-                  <h3 class="t-service text-[1.0625rem] md:text-[1.1875rem]">{faq.question}</h3>
-                  <p class="t-body mt-3 text-[0.9375rem]">{faq.answer}</p>
-                </div>
-              ))
-            }
+          {/* The questions. Every answer opens on click — the answer text is
+              still in the HTML and still in the schema, so nothing is lost
+              to crawlers. */}
+          <div class="mt-12">
+            <FaqList faqs={faqs} />
           </div>
         </div>
       </div>

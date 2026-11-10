@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import Reveal from '../Reveal.astro';
 import PanelWipe from '../PanelWipe.astro';
+import ServiceMenu from './ServiceMenu.astro';
 import pigmentation from '../../assets/lira-chemical-peel-treatment-mission-hills-san-diego.jpg';
 import acne from '../../assets/procell-microchanneling-san-diego.jpg';
 import barrier from '../../assets/dmk-enzyme-therapy-san-diego.jpg';
@@ -39,10 +40,10 @@ const tiles = [
 ];
 ---
 
-<section class="bg-porcelain">
+<section class="bg-ivory">
   <div class="wrap section-y">
-    <p class="t-eyebrow text-ink-soft">Where to start</p>
-    <h2 class="t-h2 mt-5 max-w-[28ch]">Pigmentation, acne, barrier, and scalp treatments in San Diego.</h2>
+    <p class="t-eyebrow text-ink-soft">The treatments</p>
+    <h2 class="t-h2 mt-5 max-w-[28ch]">Pigmentation, acne, barrier and scalp treatments in San Diego.</h2>
 
     <ul class="mt-14 grid list-none grid-cols-2 gap-x-5 gap-y-10 p-0 md:grid-cols-4 md:gap-x-8">
       {
@@ -67,5 +68,11 @@ const tiles = [
         ))
       }
     </ul>
+
+    {/* The prices. The tiles and the price list are one topic — what is
+        treated and what it costs — so they share a section and a heading. */}
+    <div class="mt-20 border-t border-line pt-14">
+      <ServiceMenu />
+    </div>
   </div>
 </section>

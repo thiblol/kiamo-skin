@@ -118,7 +118,7 @@ export const articles: Article[] = [
         p: 'Almost everyone who books here for pigmentation arrives with a product that did not work. Usually a brightening serum, sometimes a hydroquinone cream bought without guidance, occasionally the aftermath of a peel somewhere else that left the marks darker than before. The product is rarely the problem. The problem is that three different conditions produce brown patches on a face, they look similar enough to confuse, and the treatment that clears one can visibly worsen another.',
       },
       {
-        p: 'So before choosing a treatment, it is worth working out which one you actually have. KIAMO Skin offers <a href="/services/hyperpigmentation-treatment/">hyperpigmentation treatment across San Diego neighborhoods</a> from the Mission Hills studio, with protocols calibrated for each presentation.',
+        p: 'So before choosing a treatment, it is worth working out which one you actually have. KIAMO Skin offers <a href="/services/hyperpigmentation-treatment/">hyperpigmentation treatment across San Diego neighborhoods</a> from the San Diego studio, with protocols calibrated for each presentation.',
       },
 
       { h2: 'What are the three kinds of hyperpigmentation?' },
@@ -426,7 +426,7 @@ export const articles: Article[] = [
     headline: 'Microneedling on dark skin, and why depth decides the outcome',
     title: 'Microneedling on Dark Skin in San Diego | KIAMO Skin',
     description:
-      'What the evidence says about needling melanin-rich skin, why depth decides the outcome, and the microchanneling offered instead in Mission Hills.',
+      'What the evidence says about needling melanin-rich skin, why depth decides the outcome, and the microchanneling offered instead in San Diego.',
     standfirst:
       'The question is not really whether needling works on melanin-rich skin. It is whether the person holding the device has set the depth correctly for the skin in front of the device.',
     readingTime: '9 min read',
@@ -440,7 +440,7 @@ export const articles: Article[] = [
         p: 'Anyone researching microneedling on dark skin has usually been told two contradictory things: that it is the safest resurfacing option for melanin-rich skin, and that it will leave the marks darker than before. Both claims come from somewhere real. The published evidence does favour needling over heat-based resurfacing on deeper skin tones, and the darkening people describe afterwards is documented, common, and usually temporary. What separates those two outcomes is mostly depth, and who is deciding it.',
       },
       {
-        p: 'This is written for people considering corrective work in San Diego. It also states plainly, early, why the treatment offered at this studio in Mission Hills is not a needle pen.',
+        p: 'This is written for people considering corrective work in San Diego. It also states plainly, early, why the treatment offered at this studio in San Diego is not a needle pen.',
       },
 
       { h2: 'Is microneedling safe on dark skin?' },
@@ -558,7 +558,7 @@ export const articles: Article[] = [
         p: 'Vague answers on either point are the signal worth acting on. Depth is the variable the literature keeps returning to, so a provider who has not thought about it for your skin specifically has not thought about your skin specifically.',
       },
       {
-        p: 'KIAMO Skin is a private, single-practitioner studio in Mission Hills, San Diego, where <a href="/melanin-rich-skin/">melanin-rich skin is the whole practice rather than a service line</a>. Treatment is one-to-one with a licensed esthetician, in one room, with free parking on site. Clients travel in <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">from across San Diego County</a>, including <a href="/service-areas/chula-vista/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista</a> and <a href="/service-areas/la-mesa/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a>—inland areas where more clear days mean more cumulative UV year after year—for exactly this reason.',
+        p: 'KIAMO Skin is a private, single-practitioner studio in San Diego, where <a href="/melanin-rich-skin/">melanin-rich skin is the whole practice rather than a service line</a>. Treatment is one-to-one with a licensed esthetician, in one room, with free parking on site. Clients travel in <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">from across San Diego County</a>, including <a href="/service-areas/chula-vista/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Chula Vista</a> and <a href="/service-areas/la-mesa/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">La Mesa</a>—inland areas where more clear days mean more cumulative UV year after year—for exactly this reason.',
       },
     ],
     faqHeading: 'Microneedling questions',
@@ -591,7 +591,7 @@ export const articles: Article[] = [
       {
         question: 'What is the best facial treatment for Black skin?',
         answer:
-          'There is no single answer, because it depends on what the skin is doing. Congestion and dullness are usually addressed with a <a href="/services/hydrafacial/">HydraFacial</a> from KIAMO Skin in Mission Hills, a reactive barrier with enzyme therapy, pigmentation with a prepared series of peels, and scarring or texture with microchanneling. The first appointment is an assessment rather than a fixed protocol.',
+          'There is no single answer, because it depends on what the skin is doing. Congestion and dullness are usually addressed with a <a href="/services/hydrafacial/">HydraFacial</a> from KIAMO Skin in San Diego, a reactive barrier with enzyme therapy, pigmentation with a prepared series of peels, and scarring or texture with microchanneling. The first appointment is an assessment rather than a fixed protocol.',
       },
     ],
     cta: { label: 'See Procell microchanneling', href: '/services/microneedling/' },
@@ -610,7 +610,7 @@ export const articles: Article[] = [
     image: dermaplaning,
     imageAlt: 'Dermaplaning blade held at 45 degrees above deep brown skin, with angle annotation',
     quickAnswer:
-      'Dermaplaning is safe for Black skin when the blade angle and pressure match the skin in front of it. The treatment uses no heat and no acid - the two inputs most associated with post-inflammatory hyperpigmentation in deeper skin tones - so the risk comes from technique, not the blade itself. At 45 degrees with light, even strokes, dermaplaning for Black skin removes dead cells without reaching living tissue; a shallower angle or heavier pressure creates the micro-injury that triggers pigment production in melanin-rich melanocytes. At KIAMO Skin in Mission Hills, dermaplaning is performed by a California licensed esthetician with 7+ years treating Fitzpatrick I-VI, and is followed by broad-spectrum SPF 30+ with iron oxides because freshly exfoliated skin is more vulnerable to UV and visible light.',
+      'Dermaplaning is safe for Black skin when the blade angle and pressure match the skin in front of it. The treatment uses no heat and no acid - the two inputs most associated with post-inflammatory hyperpigmentation in deeper skin tones - so the risk comes from technique, not the blade itself. At 45 degrees with light, even strokes, dermaplaning for Black skin removes dead cells without reaching living tissue; a shallower angle or heavier pressure creates the micro-injury that triggers pigment production in melanin-rich melanocytes. At KIAMO Skin in San Diego, dermaplaning is performed by a California licensed esthetician with 7+ years treating Fitzpatrick I-VI, and is followed by broad-spectrum SPF 30+ with iron oxides because freshly exfoliated skin is more vulnerable to UV and visible light.',
     body: [
       {
         p: 'Most people searching for dermaplaning in San Diego have the same question underneath it: is this safe for my skin? The answer depends less on the treatment than on the provider. Dermaplaning removes dead surface cells and fine vellus hair using a sterile surgical blade. On melanin-rich skin, the version of that sentence that matters is this: the blade does not decide the outcome. The technique does.',
@@ -646,7 +646,7 @@ export const articles: Article[] = [
         p: 'This matters practically, not just legally. A licence requires training on contraindications, blade handling, and skin response. At-home tools and unlicensed providers operate without that structure — the blade angle is uncontrolled, the skin is not assessed beforehand, and there is no professional judgment about whether the treatment is appropriate that day. The <a href="http://www.barbercosmo.ca.gov/forms_pubs/publications/dermaplaning.pdf" rel="noopener" target="_blank">California Board industry bulletin</a> is the authoritative source on this.',
       },
       {
-        p: '<a href="/about/">Kiki holds a California Board of Barbering and Cosmetology licence</a> with five years of practice in corrective skin work. Appointments are one-to-one, by request, in a single private studio in Mission Hills. The first visit includes a skin assessment before any treatment is applied.',
+        p: '<a href="/about/">Kiki holds a California Board of Barbering and Cosmetology licence</a> with five years of practice in corrective skin work. Appointments are one-to-one, by request, in a single private studio in San Diego. The first visit includes a skin assessment before any treatment is applied.',
       },
       { h2: 'Can dermaplaning cause hyperpigmentation on dark skin?' },
       {
@@ -712,13 +712,13 @@ export const articles: Article[] = [
       { h2: 'How much does dermaplaning cost in San Diego?' },
       {
         answer:
-          'The Dermaplane Facial at KIAMO Skin is $199, performed by a licensed esthetician in Mission Hills, San Diego.',
+          'The Dermaplane Facial at KIAMO Skin is $199, performed by a licensed esthetician in San Diego.',
       },
       {
         p: 'Dermaplaning in San Diego ranges widely in price depending on provider type and what is included. At KIAMO Skin the $199 treatment is a full facial — cleanse, dermaplane, treatment serums while absorption is at its highest, and SPF to close. Published prices are unusual in this market. What is listed here is verified, not approximate.',
       },
       {
-        p: 'The studio is in Mission Hills, five minutes from Hillcrest, Bankers Hill and Little Italy, with free parking. Clients travel <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">from across San Diego County</a>—<a href="/service-areas/north-park/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park clients</a> are ten minutes away with no freeway, while coastal areas like Pacific Beach and La Jolla are fifteen to twenty minutes. That proximity makes regular dermaplaning between peel appointments realistic rather than aspirational. Appointments are request-based. San Diego\'s UV index runs 8 to 10 from April through October—freshly dermaplaned skin has a temporarily reduced surface barrier, and applying SPF before you leave is part of the service. The <a href="/journal/june-gloom-is-not-sun-protection/">June Gloom piece</a> covers why that applies even on overcast San Diego mornings.',
+        p: 'The studio is in San Diego, five minutes from Hillcrest, Bankers Hill and Little Italy, with free parking. Clients travel <a href="/service-areas/" class="border-b border-ink/40 hover:border-rose hover:text-rose">from across San Diego County</a>—<a href="/service-areas/north-park/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">North Park clients</a> are ten minutes away with no freeway, while coastal areas like Pacific Beach and La Jolla are fifteen to twenty minutes. That proximity makes regular dermaplaning between peel appointments realistic rather than aspirational. Appointments are request-based. San Diego\'s UV index runs 8 to 10 from April through October—freshly dermaplaned skin has a temporarily reduced surface barrier, and applying SPF before you leave is part of the service. The <a href="/journal/june-gloom-is-not-sun-protection/">June Gloom piece</a> covers why that applies even on overcast San Diego mornings.',
       },
     ],
     faqHeading: 'Dermaplaning questions',
@@ -766,7 +766,7 @@ export const articles: Article[] = [
     headline: 'Professional Scalp Treatment San Diego: Keravive for Dandruff, Flaking & Hair Health',
     title: 'Professional Scalp Treatment San Diego | KIAMO Skin',
     description:
-      'Expert scalp treatment in Mission Hills, San Diego. Keravive therapy for dandruff, flaking and hair thinning. Request an appointment.',
+      'Expert scalp treatment in San Diego. Keravive therapy for dandruff, flaking and hair thinning. Request an appointment.',
     standfirst:
       'Looking for professional scalp treatment in San Diego? KIAMO Skin offers Keravive therapy for dandruff, seborrheic dermatitis, dry scalp, and hair thinning. While over-the-counter shampoos treat surface symptoms, Keravive addresses the root cause.',
     readingTime: '12 min read',
@@ -790,7 +790,7 @@ export const articles: Article[] = [
         ul: [
           '<strong>Some of California\'s hardest water.</strong> <a href="/journal/san-diego-hard-water-and-your-scalp/">San Diego\'s tap water contains high levels of calcium and magnesium</a> that deposit on your scalp with every shower, creating a layer of mineral buildup that traps oils, clogs follicles, and mimics dandruff. Medicated shampoos can\'t dissolve these deposits.',
           '<strong>Year-round UV exposure.</strong> San Diego averages 266 sunny days per year. Chronic sun exposure on your scalp triggers inflammation and accelerates cell turnover, leading to increased flaking and sensitivity.',
-          '<strong>Ocean and beach lifestyle.</strong> Salt spray from the coast (even inland areas like Mission Hills), chlorine from pools, and sand particles all contribute to scalp congestion. For residents in Pacific Beach, La Jolla, and Del Mar, this is a daily reality.',
+          '<strong>Ocean and beach lifestyle.</strong> Salt spray from the coast (even inland areas like North Park), chlorine from pools, and sand particles all contribute to scalp congestion. For residents in Pacific Beach, La Jolla, and Del Mar, this is a daily reality.',
           '<strong>Dry inland climate.</strong> Areas like Mission Valley, North Park, and Carlsbad experience low humidity, which causes scalp dryness that\'s often mistaken for dandruff. Moisturizing shampoos provide temporary relief but don\'t restore the scalp barrier.',
         ],
       },
@@ -812,7 +812,7 @@ export const articles: Article[] = [
         p: 'Hormones, stress, cold weather, and immune system changes all influence how much your scalp reacts to <em>Malassezia</em>. That\'s why dandruff often gets worse in winter or during periods of high stress--your scalp\'s inflammatory response intensifies, and cell turnover speeds up even more.',
       },
       {
-        p: 'San Diego\'s climate adds another layer. The city\'s hard water--among the hardest in California--leaves calcium and magnesium deposits on your scalp every time you wash your hair. Over time, that mineral buildup creates a layer of residue that traps oil, dead skin, and styling products, making it harder for medicated shampoos to work. At KIAMO Skin in Mission Hills, we see this constantly: clients come in after trying every shampoo at CVS, only to discover their scalp was covered in hard water buildup, not dandruff.',
+        p: 'San Diego\'s climate adds another layer. The city\'s hard water--among the hardest in California--leaves calcium and magnesium deposits on your scalp every time you wash your hair. Over time, that mineral buildup creates a layer of residue that traps oil, dead skin, and styling products, making it harder for medicated shampoos to work. At KIAMO Skin in San Diego, we see this constantly: clients come in after trying every shampoo at CVS, only to discover their scalp was covered in hard water buildup, not dandruff.',
       },
       { h2: 'How do I know if my dandruff is fungal or dry scalp?' },
       {
@@ -879,7 +879,7 @@ export const articles: Article[] = [
           'If you\'re washing daily and still see flakes, you\'re either not using a medicated shampoo, not leaving it on long enough, or dealing with a condition that mimics dandruff like seborrheic dermatitis or psoriasis. <a href="/journal/san-diego-hard-water-and-your-scalp/">San Diego\'s hard water can also leave mineral deposits that look like flakes</a> even when dandruff is controlled.',
       },
       {
-        p: 'At KIAMO Skin in Mission Hills, we see this constantly--clients come in after trying every shampoo at CVS, only to discover their scalp was covered in hard water buildup, not dandruff. When we perform the <a href="/services/scalp-therapy/">Keravive scalp treatment</a>, the vacuum extraction pulls out white and yellow residue that\'s been sitting there for months. That buildup prevents medicated shampoo from reaching your actual scalp, which is why the flakes never fully go away.',
+        p: 'At KIAMO Skin in San Diego, we see this constantly--clients come in after trying every shampoo at CVS, only to discover their scalp was covered in hard water buildup, not dandruff. When we perform the <a href="/services/scalp-therapy/">Keravive scalp treatment</a>, the vacuum extraction pulls out white and yellow residue that\'s been sitting there for months. That buildup prevents medicated shampoo from reaching your actual scalp, which is why the flakes never fully go away.',
       },
       { p: 'Other reasons shampoo stops working:' },
       {
@@ -981,7 +981,7 @@ export const articles: Article[] = [
         p: 'Bree A., from Carlsbad, added: <em>"Coming from Carlsbad I blocked off the whole morning. We did Procell and Keravive back-to-back and it made every long drive worthwhile."</em>',
       },
       {
-        p: 'Keravive isn\'t a luxury scalp spa treatment--it\'s corrective therapy for a scalp that standard products can\'t fix. <a href="/services/scalp-therapy/">Book a Keravive consultation at KIAMO Skin in Mission Hills.</a>',
+        p: 'Keravive isn\'t a luxury scalp spa treatment--it\'s corrective therapy for a scalp that standard products can\'t fix. <a href="/services/scalp-therapy/">Book a Keravive consultation at KIAMO Skin in San Diego.</a>',
       },
       { h2: 'What happens if dandruff is left untreated?' },
       {
@@ -1055,7 +1055,7 @@ export const articles: Article[] = [
         p: 'The treatment addresses what at-home products can\'t: deep-seated congestion below the scalp surface. While medicated shampoos treat symptoms on the surface, Keravive targets the root cause—follicle congestion, mineral deposits, and inflammation that prevent your scalp from functioning properly.',
       },
       {
-        p: 'Keravive is performed at KIAMO Skin in Mission Hills, serving clients from Pacific Beach, La Jolla, Del Mar, Encinitas, and Carlsbad. Every treatment is one-to-one with Kiki, a licensed esthetician.',
+        p: 'Keravive is performed at KIAMO Skin in San Diego, serving clients from Pacific Beach, La Jolla, Del Mar, Encinitas, and Carlsbad. Every treatment is one-to-one with Kiki, a licensed esthetician.',
       },
       { h2: 'How does Keravive work?' },
       {
@@ -1159,7 +1159,7 @@ export const articles: Article[] = [
         p: 'The series format exists because scalp dysfunction rarely resolves in one session. The first treatment clears accumulated buildup; the second and third treatments address new buildup while continuing to support scalp health. By the third session, the scalp is clear and the maintenance interval is established.',
       },
       {
-        p: '<a href="/services/scalp-therapy/">Book a Keravive consultation at KIAMO Skin in Mission Hills.</a> KIAMO Skin serves Pacific Beach, La Jolla, Del Mar, Encinitas, Carlsbad, Mission Valley, and North Park.',
+        p: '<a href="/services/scalp-therapy/">Book a Keravive consultation at KIAMO Skin in San Diego.</a> KIAMO Skin serves Pacific Beach, La Jolla, Del Mar, Encinitas, Carlsbad, Mission Valley, and North Park.',
       },
     ],
     faqs: [
@@ -1463,7 +1463,7 @@ export const articles: Article[] = [
           'See a dermatology or aesthetic provider if over-the-counter products have not improved your pigmentation after 12 weeks, if you need prescription-strength treatments, or if you are unsure whether your pigmentation is melasma, PIH, or another condition. Professional evaluation is especially important for melanin-rich skin.',
       },
       {
-        p: 'KIAMO Skin\'s consultation process begins with understanding what you have already tried and why it did not work. The First-Time Client Treatment ($249) is a full corrective facial that also functions as a diagnostic session: skin is analyzed under magnification to assess pigmentation depth (epidermal vs dermal), identify contributing factors, and determine your Fitzpatrick type to ensure safe treatment protocols. This is not a relaxation facial—it is a strategic session where you learn exactly what is causing your pigmentation, which treatments are safe for your skin tone, and what realistic timelines look like. You leave with a phased treatment plan, home care recommendations, and realistic expectations. The studio is located in Mission Hills at 3067 Reynard Way, five minutes from Hillcrest, Bankers Hill, and Little Italy, with free parking. <a href="https://www.vagaro.com/kiamoskin" rel="noopener" target="_blank">Request appointments through Vagaro</a> or call <a href="tel:+13105950872">(310) 595-0872</a>.',
+        p: 'KIAMO Skin\'s consultation process begins with understanding what you have already tried and why it did not work. The First-Time Client Treatment ($249) is a full corrective facial that also functions as a diagnostic session: skin is analyzed under magnification to assess pigmentation depth (epidermal vs dermal), identify contributing factors, and determine your Fitzpatrick type to ensure safe treatment protocols. This is not a relaxation facial—it is a strategic session where you learn exactly what is causing your pigmentation, which treatments are safe for your skin tone, and what realistic timelines look like. You leave with a phased treatment plan, home care recommendations, and realistic expectations. The studio is located in San Diego at 3067 Reynard Way, five minutes from Hillcrest, Bankers Hill, and Little Italy, with free parking. <a href="https://www.vagaro.com/kiamoskin" rel="noopener" target="_blank">Request appointments through Vagaro</a> or call <a href="tel:+13105950872">(310) 595-0872</a>.',
       },
     ],
     faqs: [
@@ -1582,7 +1582,7 @@ export const articles: Article[] = [
         p: 'At KIAMO Skin, the intake process includes a skin history review, a magnified skin analysis to assess pigmentation depth, and a discussion of what you\'ve tried before and why it didn\'t work. The First-Time Client Treatment ($249) functions as both a diagnostic session and a corrective facial—you leave with a phased treatment plan and realistic timelines, not a sales pitch.',
       },
       {
-        p: 'The studio is located in Mission Hills at 3067 Reynard Way, five minutes from Hillcrest, Bankers Hill, and Little Italy, with free parking. <a href="https://www.vagaro.com/kiamoskin" rel="noopener" target="_blank">Request appointments through Vagaro</a> or call <a href="tel:+13105950872">(310) 595-0872</a>.',
+        p: 'The studio is located in San Diego at 3067 Reynard Way, five minutes from Hillcrest, Bankers Hill, and Little Italy, with free parking. <a href="https://www.vagaro.com/kiamoskin" rel="noopener" target="_blank">Request appointments through Vagaro</a> or call <a href="tel:+13105950872">(310) 595-0872</a>.',
       },
       { h2: 'Final takeaway' },
       {
@@ -1628,13 +1628,13 @@ export const articles: Article[] = [
     imageAlt:
       'Melasma patches on the cheek and forehead of a woman with melanin-rich skin, lit by natural window light',
     quickAnswer:
-      'For melasma on melanin-rich skin (Fitzpatrick IV–VI), a superficial-to-medium peel with mandelic or lactic acid at concentrations matched to your skin type is the safe choice, run as a series rather than one strong session. At KIAMO Skin in Mission Hills, the Lira Gentle Renewal Peel ($199) and Lira Advanced Peel ($299) use mandelic and lactic acids calibrated per skin tone, with tyrosinase-inhibitor prep between sessions and broad-spectrum SPF 50+ with iron oxides daily.',
+      'For melasma on melanin-rich skin (Fitzpatrick IV–VI), a superficial-to-medium peel with mandelic or lactic acid at concentrations matched to your skin type is the safe choice, run as a series rather than one strong session. At KIAMO Skin in San Diego, the Lira Gentle Renewal Peel ($199) and Lira Advanced Peel ($299) use mandelic and lactic acids calibrated per skin tone, with tyrosinase-inhibitor prep between sessions and broad-spectrum SPF 50+ with iron oxides daily.',
     body: [
       {
         p: '"Best chemical peel for melasma" is the kind of search that ends in a list of acids and a "consult your provider" footnote. The clinically useful answer is more specific and harder to find: the right peel is the one your skin tone can tolerate every four to six weeks, repeated across a series, with melanin production quieted between sessions. Everything else is packaging.',
       },
       {
-        p: 'This article walks through the four peel families that show up for melasma searches (Cosmelan, glycolic, mandelic, Jessner), what the evidence says about each, and why the safe-on-melanin-rich-skin choice is narrower than the popular list suggests. KIAMO Skin offers <a href="/services/hyperpigmentation-treatment/">melasma and hyperpigmentation treatment across San Diego neighborhoods</a> from the Mission Hills studio, with the Lira Clinical peels designed around that constraint.',
+        p: 'This article walks through the four peel families that show up for melasma searches (Cosmelan, glycolic, mandelic, Jessner), what the evidence says about each, and why the safe-on-melanin-rich-skin choice is narrower than the popular list suggests. KIAMO Skin offers <a href="/services/hyperpigmentation-treatment/">melasma and hyperpigmentation treatment across San Diego neighborhoods</a> from the San Diego studio, with the Lira Clinical peels designed around that constraint.',
       },
 
       { h2: 'What kinds of peels are used for melasma?' },
@@ -1744,7 +1744,7 @@ export const articles: Article[] = [
         p: 'The deeper consideration is whether a peel is the right tool at all. Melasma that sits too deep for surface treatment, or that is being driven by hormonal medication the patient is still taking, may need prescription-strength intervention or a dermatology referral first. A good peel protocol is part of a broader plan, not the whole plan. <a href="/melanin-rich-skin/">KIAMO Skin\'s practice</a> is built around that framing — melanin-rich skin as the whole discipline rather than a service line — so the answer that gets given at consultation is the one that fits the patient in front of the practitioner.',
       },
       {
-        p: '<a href="/services/chemical-peel/">Lira peels at KIAMO Skin</a> are run as part of a pigment workup at consultation, not sold as a standalone fix. The First-Time Client Treatment ($249) is a diagnostic session that ends with a phased plan: home prep, the peel series at the right concentration for your skin, and the maintenance routine that protects the result. The studio is in Mission Hills at 3067 Reynard Way, five minutes from Hillcrest, Bankers Hill, and Little Italy, with free parking.',
+        p: '<a href="/services/chemical-peel/">Lira peels at KIAMO Skin</a> are run as part of a pigment workup at consultation, not sold as a standalone fix. The First-Time Client Treatment ($249) is a diagnostic session that ends with a phased plan: home prep, the peel series at the right concentration for your skin, and the maintenance routine that protects the result. The studio is in San Diego at 3067 Reynard Way, five minutes from Hillcrest, Bankers Hill, and Little Italy, with free parking.',
       },
     ],
     faqHeading: 'Melasma peel questions',
@@ -1885,9 +1885,9 @@ export const articles: Article[] = [
     dateModified: '2026-10-26',
     image: dermaplaningTreatment,
     imageAlt:
-      'Dermaplaning treatment in progress at the KIAMO Facial spa in Mission Hills, with the blade held at a fixed angle against dry skin',
+      'Dermaplaning treatment in progress at the KIAMO Facial spa in San Diego, with the blade held at a fixed angle against dry skin',
     quickAnswer:
-      'Dermaplaning and a chemical peel work on different layers. Dermaplaning uses a sterile blade to remove dead surface cells and vellus hair — no heat, no acid, no downtime — which makes it the right choice for texture, peach fuzz and product absorption. A chemical peel puts acid on the skin so that the upper layers resurface over the following days, which makes it the right choice for brown patches and post-inflammatory marks. On melanin-rich skin the peel carries the higher risk of making pigment worse, so it is run as a prepared, escalating series. At KIAMO Skin in Mission Hills, dermaplaning is $199 and Lira peels are $199 for Gentle Renewal and $299 for Advanced.',
+      'Dermaplaning and a chemical peel work on different layers. Dermaplaning uses a sterile blade to remove dead surface cells and vellus hair — no heat, no acid, no downtime — which makes it the right choice for texture, peach fuzz and product absorption. A chemical peel puts acid on the skin so that the upper layers resurface over the following days, which makes it the right choice for brown patches and post-inflammatory marks. On melanin-rich skin the peel carries the higher risk of making pigment worse, so it is run as a prepared, escalating series. At KIAMO Skin in San Diego, dermaplaning is $199 and Lira peels are $199 for Gentle Renewal and $299 for Advanced.',
     body: [
       {
         p: 'Two treatments get booked under the same expectation: smoother, brighter skin by the end of the month. The two do not deliver the same thing. One is a controlled removal of the surface layer. The other is a chemical process that changes what happens in the upper layers of skin over the days that follow. Clients who pick the wrong one for the concern usually end up disappointed for reasons that have nothing to do with the quality of the treatment.',

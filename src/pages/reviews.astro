@@ -37,6 +37,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Reveal from '../components/Reveal.astro';
 import Button from '../components/Button.astro';
 import NapBlock from '../components/NapBlock.astro';
+import FaqList from '../components/FaqList.astro';
 import LocationMap from '../components/LocationMap.astro';
 import TrustBadge from '../components/sections/TrustBadge.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
@@ -95,7 +96,7 @@ const collectionSchema = {
       url,
       name: 'Reviews | KIAMO Skin San Diego',
       description:
-        'Every review published on the KIAMO Skin Google Business Profile, reproduced word for word with the reviewer name and date. Mission Hills, San Diego.',
+        'Every review published on the KIAMO Skin Google Business Profile, reproduced word for word with the reviewer name and date. San Diego.',
       inLanguage: 'en-US',
       isPartOf: { '@id': websiteId(site) },
       about: { '@id': businessId(site) },
@@ -132,7 +133,7 @@ const collectionSchema = {
 
 const title = 'Reviews | KIAMO Skin San Diego';
 const description =
-  'Every Google review of KIAMO Skin, word for word, with names and dates. Corrective facials and scalp therapy in Mission Hills, San Diego.';
+  'Every Google review of KIAMO Skin, word for word, with names and dates. Corrective facials and scalp therapy in San Diego.';
 ---
 
 <BaseLayout {title} {description}>
@@ -154,7 +155,7 @@ const description =
         class="wrap grid items-center gap-12 pt-[calc(60px+72px)] pb-20 md:grid-cols-[1fr_0.95fr] md:gap-16 md:pt-[calc(60px+112px)] md:pb-28"
       >
         <div>
-                      <Breadcrumbs current="Reviews" meta="Mission Hills studio" />
+                      <Breadcrumbs current="Reviews" meta="San Diego studio" />
           <h1 class="t-h2 mt-6 max-w-[20ch] text-[2.5rem] md:text-[3.5rem]">
             What clients wrote, in their own words.
           </h1>
@@ -224,7 +225,11 @@ const description =
     </header>
 
     {/* THE COUNT */}
-    <TrustBadge />
+    <section aria-label="Google reviews" class="bg-porcelain">
+      <div class="wrap pb-12 md:pb-16">
+        <TrustBadge />
+      </div>
+    </section>
 
     {/* THE REVIEWS */}
     <section class="bg-ivory">
@@ -384,7 +389,7 @@ const description =
     <section class="bg-ivory">
       <div class="wrap py-20 md:py-28 grid items-start gap-12 md:grid-cols-[1.1fr_0.9fr] md:gap-20">
         <Reveal>
-          <LocationMap aspect="aspect-4/3" />
+          <LocationMap id="studio-map" aspect="aspect-4/3" />
           <p class="t-meta mt-5 text-ink-soft">
             {business.address.full} · Free parking on site
           </p>
@@ -394,7 +399,7 @@ const description =
           <p class="t-eyebrow text-ink-soft">The studio</p>
           <h2 class="t-h2 mt-5 max-w-[20ch]">The room every one of these reviews describes.</h2>
           <p class="t-body mt-7 max-w-[58ch]">
-            One private treatment room in {business.address.neighborhood}. The reviews talk about
+            One private treatment room in San Diego. The reviews talk about
             the space, the pacing and the home-care plan that comes home with you — those are the
             same room, the same practitioner and the same follow-up every time.
           </p>
@@ -435,30 +440,13 @@ const description =
     </section>
 
     {/* FAQ */}
-    <section class="bg-porcelain faq-section">
+    <section class="bg-porcelain">
       <div class="wrap py-20 md:py-28">
         <p class="t-eyebrow text-ink-soft">Before you read them</p>
         <h2 class="t-h2 mt-5 max-w-[24ch]">Questions a page of reviews raises.</h2>
 
         <div class="mt-12 max-w-[68ch]">
-          {
-            reviewFaqs.map((faq) => (
-              <details class="group border-b border-line">
-                <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
-                  <span>{faq.question}</span>
-                  <span
-                    aria-hidden="true"
-                    class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
-                  >
-                    +
-                  </span>
-                </summary>
-                <div class="t-body pb-6 text-[0.9375rem]">
-                  {faq.answer}
-                </div>
-              </details>
-            ))
-          }
+          <FaqList faqs={reviewFaqs} />
         </div>
       </div>
     </section>

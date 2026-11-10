@@ -20,6 +20,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Reveal from '../components/Reveal.astro';
 import Button from '../components/Button.astro';
 import NapBlock from '../components/NapBlock.astro';
+import FaqList from '../components/FaqList.astro';
 import PanelWipe from '../components/PanelWipe.astro';
 import FaqSchema from '../components/schema/FaqSchema.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
@@ -95,7 +96,7 @@ const service = {
   serviceType: 'Pigmentation treatment for melanin-rich skin',
   category: 'Dermatology',
   description:
-    'Expert hyperpigmentation treatment for Black and brown skin in San Diego. Safe, effective care for melasma, post-inflammatory hyperpigmentation, and dark spots at a Black-owned studio in Mission Hills.',
+    'Expert hyperpigmentation treatment for Black and brown skin in San Diego. Safe, effective care for melasma, post-inflammatory hyperpigmentation, and dark spots at a Black-owned studio in San Diego.',
   url,
   provider: { '@id': businessId(site) },
   areaServed: business.areaServed.map((name) => ({ '@type': 'Place', name })),
@@ -318,24 +319,7 @@ const service = {
         <p class="t-eyebrow text-ink-soft">Before you book</p>
         <h2 class="t-h2 mt-5">Questions</h2>
         <div class="mt-12 max-w-[74ch]">
-          {
-            melaninFaqs.map((faq) => (
-              <div class="border-b border-line">
-                <details class="group">
-                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
-                    <span>{faq.question}</span>
-                    <span
-                      aria-hidden="true"
-                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
-                    >
-                      +
-                    </span>
-                  </summary>
-                  <div class="t-body pb-6 text-[0.9375rem]">{faq.answer}</div>
-                </details>
-              </div>
-            ))
-          }
+          <FaqList faqs={melaninFaqs} />
         </div>
       </div>
     </section>
@@ -344,7 +328,7 @@ const service = {
       <div class="wrap section-y">
         <h2 class="t-h3">Travelling in across San Diego County</h2>
         <p class="t-body mt-7 max-w-[62ch]">
-          The studio is in Mission Hills, and clients come in from across the county for this work.
+          The studio is in San Diego, and clients come in from across the county for this work.
         </p>
         <ul class="mt-10 m-0 grid list-none gap-x-10 gap-y-0 p-0 md:grid-cols-2">
           {

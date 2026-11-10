@@ -43,7 +43,7 @@ export const facialCostArticle: Article = {
   dateModified: '2026-11-09',
   image: consultation,
   imageAlt:
-    'Licensed esthetician conducting a skin consultation with a client in the Mission Hills treatment room',
+    'Licensed esthetician conducting a skin consultation with a client in the San Diego treatment room',
   faqHeading: 'Facial cost questions',
   body: [
     {

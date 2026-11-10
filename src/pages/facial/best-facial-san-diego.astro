@@ -35,6 +35,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Reveal from '../../components/Reveal.astro';
 import Button from '../../components/Button.astro';
 import NapBlock from '../../components/NapBlock.astro';
+import FaqList from '../../components/FaqList.astro';
 import StudioComparisonTable from '../../components/StudioComparisonTable.astro';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
@@ -282,7 +283,7 @@ const articleSchema = {
           There is no single "best facial spa" in San Diego — there is the best
           facial for your skin. Nine studios are compared below on what each
           one is good at, whether it publishes a price, and its Google rating.
-          KIAMO Skin is a corrective facial spa in Mission Hills offering
+          KIAMO Skin is a corrective facial spa in San Diego offering
           HydraFacial Syndeo, Lira chemical peels, DMK enzyme therapy and
           dermaplaning, each safe across every Fitzpatrick type I-VI. First-time
           consultation and treatment starts at $249.
@@ -313,7 +314,7 @@ const articleSchema = {
           <span aria-hidden="true">·</span>
           <span>Licensed Esthetician</span>
           <span aria-hidden="true">·</span>
-          <span>Mission Hills, San Diego</span>
+          <span>San Diego</span>
         </div>
 
         {/* Byline and dates.
@@ -487,7 +488,7 @@ const articleSchema = {
                 <th scope="row" class="py-4 pr-6 font-medium">
                   <a href="/services/facial/" class="hover:text-rose">KIAMO Skin</a>
                 </th>
-                <td class="py-4 pr-6">Mission Hills</td>
+                <td class="py-4 pr-6">San Diego</td>
                 <td class="py-4 pr-6">
                   {verifiedPrices['first-time-client']} first visit
                 </td>
@@ -967,7 +968,7 @@ const articleSchema = {
               the appointment rather than billed separately.
             </p>
             <p class="t-body mt-5 leading-relaxed">
-              The first visit is also a full treatment. In Mission Hills that
+              The first visit is also a full treatment. In San Diego that
               is a consultation, a customized HydraFacial, a personalized
               booster, microcurrent, LED light therapy, a Hydrojelly mask, and
               a long-term treatment plan built around what the consultation
@@ -1037,23 +1038,8 @@ const articleSchema = {
         <div class="wrap section-y">
           <p class="t-eyebrow text-ink-soft">Before you book</p>
           <h2 class="t-h2 mt-5">Frequently asked questions</h2>
-          <div class="faq-section mt-12 max-w-[68ch]">
-            {faqs.map((faq) => (
-              <div class="border-b border-line">
-                <details class="group">
-                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
-                    <span>{faq.question}</span>
-                    <span
-                      aria-hidden="true"
-                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
-                    >
-                      +
-                    </span>
-                  </summary>
-                  <div class="t-body pb-6 text-[0.9375rem] leading-relaxed">{faq.answer}</div>
-                </details>
-              </div>
-            ))}
+          <div class="mt-12 max-w-[68ch]">
+            <FaqList faqs={faqs} />
           </div>
         </div>
       </section>

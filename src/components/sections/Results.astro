@@ -15,7 +15,7 @@ import scalpAfter from '../../assets/keravive-scalp-treatment-after-results-san-
  * set-piece quote, once scrolling past in the marquee. The marquee is the
  * long tail; the standalone quotes are the moments a reader actually stops on.
  */
-const scattered = new Set(['Brian A.', 'Morg A.', 'Arica L.', 'David B.']);
+const scattered = new Set(['Brian A.', 'Arica L.']);
 
 const homepageReviews = testimonials.filter((t) => !t.area && !scattered.has(t.attribution));
 const row1 = homepageReviews.slice(0, 4);
@@ -23,7 +23,7 @@ const row2 = homepageReviews.slice(4);
 ---
 
 <section class="bg-porcelain">
-  <div class="wrap section-y">
+  <div class="wrap pt-[88px] pb-16 md:pt-[112px]">
     <Reveal>
       <p class="t-eyebrow text-ink-soft">Real results, real reviews</p>
       <h2 class="t-h2 mt-5 max-w-[30ch]">Corrective skin work in San Diego — proof and client experiences.</h2>
@@ -64,6 +64,10 @@ const row2 = homepageReviews.slice(4);
       client outcome.
     </p>
   </div>
+
+  {/* The treatment-room clips. They are proof, so they live inside the proof
+      section rather than claiming a heading of their own. */}
+  <slot name="media" />
 </section>
 
 <section class="reviews-section" aria-label="Client reviews">

@@ -510,7 +510,7 @@ export const services: Service[] = [
     category: 'Scalp',
     title: 'Scalp Treatment in San Diego | KIAMO Skin',
     description:
-      'Keravive scalp treatment in San Diego for dandruff, flaking, hair thinning and hard water buildup. Mission Hills studio. $599. Request an appointment.',
+      'Keravive scalp treatment in San Diego for dandruff, flaking, hair thinning and hard water buildup. $599. Request an appointment.',
     headline: 'Keravive Scalp Therapy in San Diego — Clear Flaking, Buildup, and Irritation',
     opener:
       'Clinical scalp therapy for buildup, flaking, and the hard water residue San Diego scalps collect. Performed by Kiki, a California licensed esthetician.',

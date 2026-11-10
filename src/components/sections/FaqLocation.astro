@@ -3,6 +3,7 @@ import NapBlock from '../NapBlock.astro';
 import LocationMap from '../LocationMap.astro';
 import Button from '../Button.astro';
 import ProofQuote from '../ProofQuote.astro';
+import FaqList from '../FaqList.astro';
 import FaqSchema from '../schema/FaqSchema.astro';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
@@ -34,7 +35,7 @@ const bookingFaqs: Faq[] = [
   },
   {
     question: "Where is KIAMO Skin located and is parking available?",
-    answer: "KIAMO Skin is located at 3067 Reynard Way in Mission Hills, San Diego—minutes from Hillcrest Medical Center, Little Italy, and Balboa Park. Free street parking is available on Reynard Way and surrounding streets. The studio is easily accessible from Downtown San Diego (10 minutes), North Park (8 minutes), and the I-5/I-8 interchange. Appointments are by appointment only—no walk-ins."
+    answer: "KIAMO Skin is located at 3067 Reynard Way in San Diego—minutes from Hillcrest Medical Center, Little Italy, and Balboa Park. Free street parking is available on Reynard Way and surrounding streets. The studio is easily accessible from Downtown San Diego (10 minutes), North Park (8 minutes), and the I-5/I-8 interchange. Appointments are by appointment only—no walk-ins."
   },
   {
     question: "How long does it take to see results?",
@@ -53,22 +54,18 @@ const bookingFaqs: Faq[] = [
 const { faqs = bookingFaqs } = Astro.props as { faqs?: Faq[] };
 
 /**
- * How many answers lead as full-size visible entries.
+ * One list, one behaviour.
  *
- * The conversion audit found every question on this page hidden behind a
- * `<details>` — and this is an SEO page, where collapsed answers earn
- * measurably fewer organic sessions than the same copy shown as text.
+ * The answers used to run as two tiers — four at full size, the rest as a
+ * quieter reference block. Both tiers are now behind a click, rendered
+ * through FaqList, so the section reads as seven questions rather than
+ * seven paragraphs of copy the reader has to scroll past to reach the
+ * booking button.
  *
- * Every answer is now visible. The hierarchy is carried by type size instead
- * of by a click: the first four lead at full size because they are the ones
- * that block a booking outright — what it costs, what happens at the first
- * visit, how many sessions it takes, and whether this is the right kind of
- * studio. The rest run beneath as a quieter reference tier, smaller and
- * tighter, because they are worth having but not worth leading with.
+ * The answers are unchanged. They are still in the HTML, still in the
+ * schema, and still spoken by the speakable schema — the reader just
+ * opens them when they want them.
  */
-const leadCount = 4;
-const leadFaqs = faqs.slice(0, leadCount);
-const referenceFaqs = faqs.slice(leadCount);
 
 const schemaFaqs = faqs.map(faq => ({
   question: faq.question,
@@ -85,48 +82,25 @@ const reviewsUrl = gbpReviewsUrl(business.gbpPlaceId);
   <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_0.8fr] md:gap-20">
     <div>
       <p class="t-eyebrow text-ink-soft">Before you book</p>
-      <h2 class="t-h2 mt-5 max-w-[20ch]">Facial questions answered — Mission Hills, San Diego</h2>
+      <h2 class="t-h2 mt-5 max-w-[20ch]">Facial questions answered — San Diego</h2>
 
-      {/* The booking-blocking answers, at full size, in the HTML. */}
+      {/* The questions. Every answer opens on click. */}
       <div class="mt-12">
-        {
-          leadFaqs.map((faq) => (
-            <div class="border-b border-line py-7 first:pt-0">
-              <h3 class="t-service text-[1.0625rem] md:text-[1.1875rem]">{faq.question}</h3>
-              <p class="t-body mt-3 text-[0.9375rem]">{faq.answer}</p>
-            </div>
-          ))
-        }
-      </div>
-
-      {/* The reference tier. Still fully visible — smaller, so it reads as
-          supplementary rather than as another wall of copy. */}
-      <div class="mt-12">
-        <p class="t-eyebrow text-ink-soft">Also asked</p>
-        <dl class="mt-6">
-          {
-            referenceFaqs.map((faq) => (
-              <div class="border-b border-line py-5 last:border-b-0">
-                <dt class="t-service text-[0.9375rem]">{faq.question}</dt>
-                <dd class="t-body mt-2 text-[0.9375rem] text-ink-soft">{faq.answer}</dd>
-              </div>
-            ))
-          }
-        </dl>
+        <FaqList faqs={faqs} />
       </div>
     </div>
 
     <div>
       <p class="t-eyebrow text-ink-soft">The studio</p>
       <h2 class="t-h2 mt-5 text-[2rem] md:text-[2.5rem]">
-        Visit us in {business.address.neighborhood}
+        Visit us in San Diego
       </h2>
 
       {/* A live map, not a photo linking to one. Scorpio embeds the map on the
           homepage (§1.10) and it is the one conversion element that also
           reinforces the pin the local pack ranks. */}
       <div class="mt-8">
-        <LocationMap />
+        <LocationMap id="faq-map" />
       </div>
 
       <div class="mt-8">
@@ -217,10 +191,3 @@ const reviewsUrl = gbpReviewsUrl(business.gbpPlaceId);
     </div>
   </div>
 </section>
-
-<style>
-  /* Safari still needs this to drop the disclosure triangle. */
-  summary::-webkit-details-marker {
-    display: none;
-  }
-</style>

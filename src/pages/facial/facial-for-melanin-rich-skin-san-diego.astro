@@ -16,6 +16,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Reveal from '../../components/Reveal.astro';
 import Button from '../../components/Button.astro';
 import NapBlock from '../../components/NapBlock.astro';
+import FaqList from '../../components/FaqList.astro';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import FacialClusterSchema from '../../components/schema/FacialClusterSchema.astro';
@@ -102,7 +103,7 @@ const faqs = [
           pigment correction, one in facial massage, one as a full wellness spa, and one
           runs a homecare programme rather than a single appointment. Every figure below
           was read from the studio's own website and its Google Business Profile on
-          9 November 2026. KIAMO Skin is a corrective facial spa in Mission Hills offering
+          9 November 2026. KIAMO Skin is a corrective facial spa in San Diego offering
           HydraFacial Syndeo, Lira chemical peels, DMK enzyme therapy and dermaplaning,
           each calibrated to the skin tone — first visit $249 including the consultation.
         </p>
@@ -134,7 +135,7 @@ const faqs = [
           <span aria-hidden="true">·</span>
           <span>Licensed Esthetician</span>
           <span aria-hidden="true">·</span>
-          <span>Mission Hills, San Diego</span>
+          <span>San Diego</span>
         </div>
 
         {/* Byline and dates. The comparison below quotes other businesses'
@@ -422,23 +423,8 @@ const faqs = [
         <div class="wrap section-y">
           <p class="t-eyebrow text-ink-soft">Before you book</p>
           <h2 class="t-h2 mt-5">Frequently asked questions</h2>
-          <div class="faq-section mt-12 max-w-[68ch]">
-            {faqs.map((faq) => (
-              <div class="border-b border-line">
-                <details class="group">
-                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
-                    <span>{faq.question}</span>
-                    <span
-                      aria-hidden="true"
-                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
-                    >
-                      +
-                    </span>
-                  </summary>
-                  <div class="t-body pb-6 text-[0.9375rem] leading-relaxed">{faq.answer}</div>
-                </details>
-              </div>
-            ))}
+          <div class="mt-12 max-w-[68ch]">
+            <FaqList faqs={faqs} />
           </div>
         </div>
       </section>

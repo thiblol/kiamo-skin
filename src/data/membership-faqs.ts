@@ -21,7 +21,7 @@ export const membershipFaqs: Faq[] = [
   {
     question: 'Why is LUX the most popular membership at KIAMO Skin?',
     answer:
-      'LUX is the corrective sweet spot - more intensive than maintenance (GLOW), more practical than luxury transformation (OPULENCE). 70% of corrective clients at our Mission Hills studio choose LUX because it delivers two treatments in one 75-minute visit: HydraFacial Syndeo deep cleanse + dermaplaning exfoliation + medical-grade LED therapy + rotating corrective boosters tailored to your skin concern (acne, melasma, post-inflammatory hyperpigmentation, barrier repair). A la carte, the same treatments cost more than the membership rate. With LUX membership, all treatments are $299/month - delivered in one visit at our studio near Hillcrest Medical Center, customized monthly based on what your skin needs that cycle.',
+      'LUX is the corrective sweet spot - more intensive than maintenance (GLOW), more practical than luxury transformation (OPULENCE). 70% of corrective clients at our San Diego studio choose LUX because it delivers two treatments in one 75-minute visit: HydraFacial Syndeo deep cleanse + dermaplaning exfoliation + medical-grade LED therapy + rotating corrective boosters tailored to your skin concern (acne, melasma, post-inflammatory hyperpigmentation, barrier repair). A la carte, the same treatments cost more than the membership rate. With LUX membership, all treatments are $299/month - delivered in one visit at our studio near Hillcrest Medical Center, customized monthly based on what your skin needs that cycle.',
   },
   {
     question: 'What exactly is included in the LUX $299/month membership?',
@@ -35,7 +35,7 @@ export const membershipFaqs: Faq[] = [
   {
     question: 'How does LUX compare to spa facial memberships in San Diego?',
     answer:
-      'Most day spa memberships in San Diego (Hillcrest, Little Italy, North Park, Downtown) offer relaxation facials - steam, massage, extractions - with no clinical equipment or corrective protocols. LUX uses clinical-grade technology at our Mission Hills location: HydraFacial Syndeo (medical device cleared by FDA), professional dermaplaning tools, medical LED panels (not consumer devices), and corrective-grade serums targeting specific skin concerns. The difference: spa facials maintain skin; corrective memberships like LUX improve skin. At KIAMO Skin, every treatment is customized by a California-licensed esthetician based on your barrier function, Fitzpatrick skin type (I-VI), and active concerns - not a pre-set menu. Treatments rotate monthly as your skin progresses, adapting to what you need each visit rather than repeating the same protocol.',
+      'Most day spa memberships in San Diego (Hillcrest, Little Italy, North Park, Downtown) offer relaxation facials - steam, massage, extractions - with no clinical equipment or corrective protocols. LUX uses clinical-grade technology at our San Diego location: HydraFacial Syndeo (medical device cleared by FDA), professional dermaplaning tools, medical LED panels (not consumer devices), and corrective-grade serums targeting specific skin concerns. The difference: spa facials maintain skin; corrective memberships like LUX improve skin. At KIAMO Skin, every treatment is customized by a California-licensed esthetician based on your barrier function, Fitzpatrick skin type (I-VI), and active concerns - not a pre-set menu. Treatments rotate monthly as your skin progresses, adapting to what you need each visit rather than repeating the same protocol.',
   },
   {
     question: 'Is LUX membership worth it for acne, pigmentation, or melasma specifically?',
@@ -84,7 +84,7 @@ export const membershipFaqs: Faq[] = [
   {
     question: 'Where is the studio, and is a monthly membership realistic if I do not live nearby?',
     answer:
-      'The studio is at 3067 Reynard Way in Mission Hills, San Diego — minutes from Hillcrest, Bankers Hill and Little Italy, with free parking on site. There is one location and no mobile service. Clients travel in monthly from North Park, Chula Vista, La Jolla, Pacific Beach and further up the coast, and the honest test is whether the drive is one you will still make in month five. If it is not, a treatment series booked at longer intervals is the better purchase, and that is a reasonable thing to say at the consultation.',
+      'The studio is at 3067 Reynard Way in San Diego — minutes from Hillcrest, Bankers Hill and Little Italy, with free parking on site. There is one location and no mobile service. Clients travel in monthly from North Park, Chula Vista, La Jolla, Pacific Beach and further up the coast, and the honest test is whether the drive is one you will still make in month five. If it is not, a treatment series booked at longer intervals is the better purchase, and that is a reasonable thing to say at the consultation.',
   },
   {
     question: 'What is a skincare membership?',
@@ -92,7 +92,7 @@ export const membershipFaqs: Faq[] = [
   },
   {
     question: 'Do you offer a facial subscription service?',
-    answer: `Yes. A facial subscription is another term for our monthly membership plans. Each plan includes one personalized treatment per month at the Mission Hills studio, with the flexibility to upgrade to advanced services by paying the difference. Facial subscriptions start at ${verifiedPrices['membership-glow']}/month with a six-month commitment, then continue month to month with 30 days notice to cancel.`,
+    answer: `Yes. A facial subscription is another term for our monthly membership plans. Each plan includes one personalized treatment per month at the studio, with the flexibility to upgrade to advanced services by paying the difference. Facial subscriptions start at ${verifiedPrices['membership-glow']}/month with a six-month commitment, then continue month to month with 30 days notice to cancel.`,
   },
   {
     question: 'What\'s included in a HydraFacial membership?',

@@ -2,6 +2,7 @@
 import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Button from '../../components/Button.astro';
+import FaqList from '../../components/FaqList.astro';
 import { articles } from '../../data/articles';
 import { business } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
@@ -192,7 +193,7 @@ const formatDate = (iso: string): string => {
               Written by <a href="/about/" class="underline hover:text-rose">{business.ownerName}</a>{
                 ', '
               }{business.ownerCredential}, with {business.experience} treating melanin-rich skin at
-              KIAMO Skin in {business.address.neighborhood}, San Diego.
+              KIAMO Skin in San Diego.
             </p>
             <div class="mt-7 flex flex-wrap gap-3">
               <Button href={article.cta.href} variant="ghost">{article.cta.label}</Button>
@@ -209,29 +210,10 @@ const formatDate = (iso: string): string => {
           <div class="wrap section-y">
             <p class="t-eyebrow text-ink-soft">Common questions</p>
             <h2 class="t-h2 mt-5">{article.faqHeading ?? 'Hyperpigmentation questions'}</h2>
-            <div class="faq-section mt-12 max-w-[68ch]">
-              {faqs.map((faq) => (
-                <div class="border-b border-line">
-                  <details class="group">
-                    <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
-                      <span>{faq.question}</span>
-                      <span
-                        aria-hidden="true"
-                        class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
-                      >
-                        +
-                      </span>
-                    </summary>
-                    {/* set:html, because a FAQ answer may carry a citation
-                        link. Without it the anchor renders as literal
-                        "<a href=...>" text in the accordion. */}
-                    <div
-                      class="t-body pb-6 text-[0.9375rem]"
-                      set:html={faq.answer}
-                    />
-                  </details>
-                </div>
-              ))}
+            <div class="mt-12 max-w-[68ch]">
+              {/* The answer may carry a citation link, so it is rendered as
+                  HTML rather than as text. */}
+              <FaqList faqs={faqs} html />
             </div>
           </div>
         </div>

@@ -23,6 +23,7 @@ import NapBlock from '../../components/NapBlock.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
+import FaqList from '../../components/FaqList.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 import { areaShells } from '../../data/area-shells';
 import { services } from '../../data/services';
@@ -311,13 +312,8 @@ const covered = matrix.filter((m) => m.rows.length > 0);
             <p class="t-eyebrow text-ink-soft">Common questions</p>
             <h2 class="t-h2 mt-5">Travelling for a facial in San Diego</h2>
           </Reveal>
-          <div class="faq-section mt-12">
-            {faqs.map((faq) => (
-              <div class="border-b border-line py-7 first:pt-0">
-                <h3 class="t-service text-[1.0625rem] md:text-[1.1875rem]">{faq.question}</h3>
-                <p class="t-body mt-3 text-[0.9375rem]">{faq.answer}</p>
-              </div>
-            ))}
+          <div class="mt-12">
+            <FaqList faqs={faqs} />
           </div>
         </div>
       </div>

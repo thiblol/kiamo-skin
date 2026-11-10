@@ -173,10 +173,10 @@ export const galleryCases: GalleryCase[] = [
     timeframe: 'Over 4 months',
     composite: baMelasmaChemical,
     compositeAlt:
-      'Before and after melasma treatment at KIAMO Skin in Mission Hills - four Lira Chemical Peel sessions across four months.',
+      'Before and after melasma treatment at KIAMO Skin in San Diego - four Lira Chemical Peel sessions across four months.',
     after: baMelasmaChemical,
     afterAlt:
-      'Before and after melasma treatment at KIAMO Skin in Mission Hills - four Lira Chemical Peel sessions across four months.',
+      'Before and after melasma treatment at KIAMO Skin in San Diego - four Lira Chemical Peel sessions across four months.',
   },
   {
     id: 'pih-lira-series-paired',
@@ -198,9 +198,9 @@ export const galleryCases: GalleryCase[] = [
     before: hyperpigmentationBefore,
     after: hyperpigmentationAfter,
     beforeAlt:
-      'Before Lira Chemical Peel treatment at KIAMO Skin in Mission Hills - post-inflammatory hyperpigmentation on melanin-rich skin.',
+      'Before Lira Chemical Peel treatment at KIAMO Skin in San Diego - post-inflammatory hyperpigmentation on melanin-rich skin.',
     afterAlt:
-      'After four Lira Chemical Peel sessions at KIAMO Skin in Mission Hills - dark marks from acne and shaving cleared over a five-month series.',
+      'After four Lira Chemical Peel sessions at KIAMO Skin in San Diego - dark marks from acne and shaving cleared over a five-month series.',
   },
   {
     id: 'back-congestion-procell-composite',
@@ -221,10 +221,10 @@ export const galleryCases: GalleryCase[] = [
     timeframe: 'Over 4 months',
     composite: baBackCongestion,
     compositeAlt:
-      'Before and after Procell Microchanneling at KIAMO Skin in Mission Hills - back congestion and pigmentation cleared across three sessions.',
+      'Before and after Procell Microchanneling at KIAMO Skin in San Diego - back congestion and pigmentation cleared across three sessions.',
     after: baBackCongestion,
     afterAlt:
-      'Before and after Procell Microchanneling at KIAMO Skin in Mission Hills - back congestion and pigmentation cleared across three sessions.',
+      'Before and after Procell Microchanneling at KIAMO Skin in San Diego - back congestion and pigmentation cleared across three sessions.',
   },
   {
     id: 'acne-scarring-composite',
@@ -245,10 +245,10 @@ export const galleryCases: GalleryCase[] = [
     timeframe: 'Over 4 months',
     composite: baAcneScarring,
     compositeAlt:
-      'Before and after Procell Microchanneling at KIAMO Skin in Mission Hills - acne scarring softened over three sessions.',
+      'Before and after Procell Microchanneling at KIAMO Skin in San Diego - acne scarring softened over three sessions.',
     after: baAcneScarring,
     afterAlt:
-      'Before and after Procell Microchanneling at KIAMO Skin in Mission Hills - acne scarring softened over three sessions.',
+      'Before and after Procell Microchanneling at KIAMO Skin in San Diego - acne scarring softened over three sessions.',
   },
   {
     id: 'acne-skin-health-composite',
@@ -269,10 +269,10 @@ export const galleryCases: GalleryCase[] = [
     timeframe: 'Over 5 months',
     composite: baAcneHealth,
     compositeAlt:
-      'Before and after acne treatment at KIAMO Skin in Mission Hills - active cystic acne cleared over six corrective sessions.',
+      'Before and after acne treatment at KIAMO Skin in San Diego - active cystic acne cleared over six corrective sessions.',
     after: baAcneHealth,
     afterAlt:
-      'Before and after acne treatment at KIAMO Skin in Mission Hills - active cystic acne cleared over six corrective sessions.',
+      'Before and after acne treatment at KIAMO Skin in San Diego - active cystic acne cleared over six corrective sessions.',
   },
   {
     id: 'barrier-damage-composite',
@@ -293,10 +293,10 @@ export const galleryCases: GalleryCase[] = [
     timeframe: 'Over 3 months',
     composite: baBarrierDamage,
     compositeAlt:
-      'Before and after DMK Enzyme Therapy at KIAMO Skin in Mission Hills - barrier repair after active product overuse over four sessions.',
+      'Before and after DMK Enzyme Therapy at KIAMO Skin in San Diego - barrier repair after active product overuse over four sessions.',
     after: baBarrierDamage,
     afterAlt:
-      'Before and after DMK Enzyme Therapy at KIAMO Skin in Mission Hills - barrier repair after active product overuse over four sessions.',
+      'Before and after DMK Enzyme Therapy at KIAMO Skin in San Diego - barrier repair after active product overuse over four sessions.',
   },
   {
     id: 'keravive-scalp-paired',
@@ -318,9 +318,9 @@ export const galleryCases: GalleryCase[] = [
     before: keraviveBefore,
     after: keraviveAfter,
     beforeAlt:
-      'Before Keravive scalp therapy at KIAMO Skin in Mission Hills - hard water mineral buildup and flaking.',
+      'Before Keravive scalp therapy at KIAMO Skin in San Diego - hard water mineral buildup and flaking.',
     afterAlt:
-      'After three Keravive scalp therapy sessions at KIAMO Skin in Mission Hills - cleaner scalp with reduced flaking.',
+      'After three Keravive scalp therapy sessions at KIAMO Skin in San Diego - cleaner scalp with reduced flaking.',
   },
   {
     id: 'keravive-hair-support-after',
@@ -341,7 +341,7 @@ export const galleryCases: GalleryCase[] = [
     timeframe: 'Over 6 months',
     after: keraviveHair,
     afterAlt:
-      'Keravive scalp therapy at KIAMO Skin in Mission Hills - hair-thinning support at the end of a six-month protocol.',
+      'Keravive scalp therapy at KIAMO Skin in San Diego - hair-thinning support at the end of a six-month protocol.',
   },
 ];
 
@@ -360,15 +360,15 @@ export const galleryFilters: ReadonlyArray<{
 export const gallerySupport = {
   kikiPortrait: {
     src: kikiPortrait,
-    alt: 'Kiki, the licensed esthetician behind KIAMO Skin, photographed at the front desk in the Mission Hills studio.',
+    alt: 'Kiki, the licensed esthetician behind KIAMO Skin, photographed at the front desk in the San Diego studio.',
   },
   kikiTreatment: {
     src: kikiTreatment,
-    alt: 'Kiki performing a HydraFacial Keravive vortex extraction on a client at KIAMO Skin in Mission Hills.',
+    alt: 'Kiki performing a HydraFacial Keravive vortex extraction on a client at KIAMO Skin in San Diego.',
   },
   hydrafacialInProgress: {
     src: hydrafacialInProgress,
-    alt: 'HydraFacial treatment in progress at KIAMO Skin in Mission Hills - licensed esthetician performing HydraFacial on a client.',
+    alt: 'HydraFacial treatment in progress at KIAMO Skin in San Diego - licensed esthetician performing HydraFacial on a client.',
   },
 };
 

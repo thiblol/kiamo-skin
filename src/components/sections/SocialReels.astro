@@ -26,12 +26,19 @@ import { business } from '../../config/business';
 
 <VideoSchema />
 
-<section class="bg-porcelain">
-  <div class="wrap section-y">
+{/*
+  A block, not a section. The clips are proof, so they sit inside the proof
+  section of the homepage under its heading rather than claiming a heading of
+  their own. The rail still runs full-bleed because it carries its own wrap.
+*/}
+<div>
+  <div class="wrap pb-16 md:pb-20">
     <div class="flex items-end justify-between gap-6">
       <div>
         <p class="t-eyebrow text-ink-soft">From the treatment room</p>
-        <h2 class="t-h2 mt-5 max-w-[22ch]">What corrective facial work in San Diego actually looks like.</h2>
+        <h3 class="t-h3 mt-4 max-w-[24ch] text-[1.375rem] md:text-[1.625rem]">
+          What corrective facial work in San Diego actually looks like.
+        </h3>
       </div>
 
       {/* Desktop-only: the rail is swipeable everywhere, so on touch these would
@@ -53,7 +60,7 @@ import { business } from '../../config/business';
     </div>
 
     <Reveal>
-      <ul class="reel-rail mt-14 flex list-none gap-5 p-0 md:gap-8" data-reels>
+      <ul class="reel-rail mt-12 flex list-none gap-5 p-0 md:gap-8" data-reels>
         {
           reels.map((reel) => (
             <li class="reel-item shrink-0">
@@ -131,7 +138,7 @@ import { business } from '../../config/business';
         Instagram {business.instagram.handle}</a>.
     </p>
   </div>
-</section>
+</div>
 
 <style>
   /* Peek layout: the rail bleeds out through `.wrap`'s padding so the next clip

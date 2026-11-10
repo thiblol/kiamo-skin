@@ -4,6 +4,26 @@ import Reveal from '../Reveal.astro';
 import uv from '../../assets/san-diego-uv-exposure-skin-damage-protection.jpg';
 import water from '../../assets/san-diego-hard-water-skin-barrier-damage.jpg';
 import barrier from '../../assets/skin-barrier-repair-treatment-san-diego.jpg';
+import { articles } from '../../data/articles';
+
+/**
+ * The three most recent articles, newest first. The sort reads the ISO date
+ * string directly rather than using the Date constructor, so the server and
+ * the client render the same order.
+ */
+const recent = [...articles]
+  .sort((a, b) => (a.datePublished < b.datePublished ? 1 : -1))
+  .slice(0, 3);
+
+const formatDate = (iso: string): string => {
+  const [year, month, day] = iso.split('-');
+  const months = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
+  ];
+  const monthName = months[Number(month) - 1] ?? month;
+  return `${monthName} ${Number(day)}, ${year}`;
+};
 
 /**
  * Spec §8 asks for three local-context columns each linking onward. The journal
@@ -70,5 +90,34 @@ const columns = [
         ))
       }
     </ul>
+
+    {/* The journal. A compact list rather than a card grid: the homepage
+        carries three recent articles, and the point of the block is that the
+        writing is one click away, not that it fills the screen. */}
+    <div class="mt-16 border-t border-porcelain/20 pt-10">
+      <p class="t-eyebrow text-porcelain/60">More from the journal</p>
+      <ul class="m-0 mt-6 list-none p-0">
+        {
+          recent.map((article) => (
+            <li class="border-b border-porcelain/15 last:border-b-0">
+              <a href={`/journal/${article.slug}/`} class="group block py-5">
+                <p class="t-body text-[1rem] text-porcelain/90 transition-colors group-hover:text-blush">
+                  {article.headline}
+                </p>
+                <p class="t-meta mt-2 text-porcelain/50">
+                  <time datetime={article.datePublished}>{formatDate(article.datePublished)}</time>
+                </p>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <a
+        href="/journal/"
+        class="t-button mt-8 inline-block border-b border-porcelain/40 pb-1 hover:border-porcelain"
+      >
+        All journal articles
+      </a>
+    </div>
   </div>
 </section>

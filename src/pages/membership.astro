@@ -20,7 +20,7 @@
  * Entity strategy (GMB Crush):
  * - 12+ entities per 500 words for AI visibility
  * - Landmark coverage: Hillcrest Medical Center, Balboa Park, Little Italy
- * - Neighborhood breadth: Mission Hills, Hillcrest, North Park, Bankers Hill
+ * - Neighborhood breadth: San Diego, Hillcrest, North Park, Bankers Hill
  * - Clinical equipment: HydraFacial Syndeo, Procell MD, medical-grade LED
  * - Comparison frameworks for ChatGPT/Perplexity citations
  * - Fitzpatrick scale for dermatology entity graph connection
@@ -30,6 +30,7 @@ import { Image } from 'astro:assets';
 import Reveal from '../components/Reveal.astro';
 import Button from '../components/Button.astro';
 import NapBlock from '../components/NapBlock.astro';
+import FaqList from '../components/FaqList.astro';
 import WhyLux from '../components/sections/WhyLux.astro';
 import WhyMembersStay from '../components/sections/WhyMembersStay.astro';
 import MembershipSchema from '../components/schema/MembershipSchema.astro';
@@ -68,7 +69,7 @@ const description = `Monthly facial memberships in San Diego from KIAMO Skin. LU
             LUX: Two treatments in one visit - the plan 70% of corrective clients choose
           </h1>
           <p class="t-body mt-7 text-[1.125rem]">
-            Monthly corrective facial membership at our Mission Hills studio - minutes from Hillcrest
+            Monthly corrective facial membership at our San Diego studio - minutes from Hillcrest
             Medical Center, Little Italy, and Balboa Park. LUX delivers HydraFacial Syndeo deep
             cleanse + dermaplaning + medical-grade LED therapy + rotating corrective boosters in
             one 75-minute visit for {verifiedPrices['membership-lux']}/month. A la carte, the same
@@ -110,7 +111,7 @@ const description = `Monthly facial memberships in San Diego from KIAMO Skin. LU
 
         <Image
           src={treatmentPhoto}
-          alt="Monthly HydraFacial membership treatment at KIAMO Facial spa in Mission Hills, San Diego"
+          alt="Monthly HydraFacial membership treatment at KIAMO Facial spa in San Diego"
           widths={[500, 800, 1200]}
           sizes="(min-width: 52.5rem) 45vw, 100vw"
           loading="eager"
@@ -142,7 +143,7 @@ const description = `Monthly facial memberships in San Diego from KIAMO Skin. LU
               A facial membership—sometimes called a skincare membership or facial subscription—is a monthly plan that provides regular corrective treatments at a fixed rate. Unlike buying facials one at a time, a monthly facial membership ensures consistency, which is how skin correction actually works.
             </p>
             <p class="t-body mt-6">
-              At KIAMO Skin, facial memberships start at {verifiedPrices['membership-glow']} per month for a monthly HydraFacial in Mission Hills, San Diego—against {verifiedPrices.hydrafacial} for the same treatment booked individually. The value is in the rhythm, not just the discount.
+              At KIAMO Skin, facial memberships start at {verifiedPrices['membership-glow']} per month for a monthly HydraFacial in San Diego—against {verifiedPrices.hydrafacial} for the same treatment booked individually. The value is in the rhythm, not just the discount.
             </p>
           </Reveal>
         </div>
@@ -220,10 +221,10 @@ const description = `Monthly facial memberships in San Diego from KIAMO Skin. LU
     <section id="plans" class="scroll-mt-[72px] bg-ivory md:scroll-mt-[112px]">
       <div class="wrap section-y">
         <p class="t-eyebrow text-ink-soft">The memberships</p>
-          <h2 class="t-h2 mt-5 max-w-[24ch]">Three plans, one studio in Mission Hills</h2>
+          <h2 class="t-h2 mt-5 max-w-[24ch]">Three plans, one studio in San Diego</h2>
           <p class="t-body mt-7 max-w-[62ch]">
             Every plan includes one personalized treatment each month at the studio on Reynard Way
-            in Mission Hills — {business.visit.orientation.replace(/^Mission Hills, /, '')} Plans
+            in San Diego — {business.visit.orientation}. Plans
             differ by how much is done in that visit, and which one is right depends on whether
             your skin is being maintained or actively corrected.
           </p>
@@ -332,7 +333,7 @@ const description = `Monthly facial memberships in San Diego from KIAMO Skin. LU
           {' '}<a
             href="/book/"
             class="border-b border-ink/40 hover:border-rose hover:text-rose"
-            >first-time consultation in Mission Hills</a
+            >first-time consultation in San Diego</a
           >{' '}
           assesses your skin first and the plan follows from it.
         </p>
@@ -493,7 +494,7 @@ const description = `Monthly facial memberships in San Diego from KIAMO Skin. LU
           <Reveal>
             <Image
               src={studioPhoto}
-              alt="Kiki, licensed esthetician, at the front desk of the KIAMO Facial spa in Mission Hills"
+              alt="Kiki, licensed esthetician, at the front desk of the KIAMO Facial spa in San Diego"
               widths={[600, 900, 1300]}
               sizes="(min-width: 52.5rem) 54vw, 100vw"
               loading="lazy"
@@ -530,7 +531,7 @@ const description = `Monthly facial memberships in San Diego from KIAMO Skin. LU
               {' '}<a
                 href="/service-areas/"
                 class="border-b border-ink/40 hover:border-rose hover:text-rose"
-                >facials in Mission Hills</a
+                >facials in San Diego</a
               > if you are local to the studio.
             </p>
             <p class="t-body mt-6 text-[0.9375rem] text-ink-soft">
@@ -555,24 +556,7 @@ const description = `Monthly facial memberships in San Diego from KIAMO Skin. LU
         <p class="t-eyebrow text-ink-soft">Before you join</p>
         <h2 class="t-h2 mt-5">Membership questions</h2>
         <div class="mt-12 max-w-[68ch]">
-          {
-            membershipFaqs.map((faq) => (
-              <div class="border-b border-line">
-                <details class="group">
-                  <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
-                    <span>{faq.question}</span>
-                    <span
-                      aria-hidden="true"
-                      class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
-                    >
-                      +
-                    </span>
-                  </summary>
-                  <div class="t-body pb-6 text-[0.9375rem]">{faq.answer}</div>
-                </details>
-              </div>
-            ))
-          }
+          <FaqList faqs={membershipFaqs} />
         </div>
       </div>
     </section>

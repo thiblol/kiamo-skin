@@ -29,26 +29,34 @@
  * rose-tinted left border, slight weight bump, no background fill. Reusing
  * the same look keeps the site visually consistent without introducing a
  * new component class.
+ *
+ * On the homepage it also carries the review rating. The rating used to be
+ * a band of its own, which put two thin strips between the hero and the
+ * first real section. It is now the right-hand half of this one band.
  */
+import TrustBadge from './TrustBadge.astro';
+import { reviewStats } from '../../data/review-stats';
 ---
 
 <section
   aria-labelledby="quick-answer-label"
-  class="bg-porcelain border-y border-line"
+  class="bg-porcelain border-b border-line"
 >
-  <div class="wrap py-10 md:py-12">
-    <p
-      id="quick-answer-label"
-      class="t-eyebrow mb-3 text-rose"
-    >
-      Quick answer
-    </p>
-    <p
-      class="quick-answer t-body text-[1.0625rem] md:text-[1.125rem] font-medium max-w-[68ch] leading-[1.55]"
-    >
-      KIAMO Skin is a facial spa in Mission Hills, San Diego, run by a licensed esthetician
-      with 7+ years of experience. Corrective facials, pigmentation and acne treatment, and Keravive
-      scalp therapy, for every skin type, with 40 five-star Google reviews.
-    </p>
+  <div class="wrap grid items-center gap-8 py-10 md:grid-cols-[1fr_auto] md:gap-14 md:py-12">
+    <div>
+      <p id="quick-answer-label" class="t-eyebrow mb-3 text-rose">
+        Quick answer
+      </p>
+      <p
+        class="quick-answer t-body text-[1.0625rem] md:text-[1.125rem] font-medium max-w-[68ch] leading-[1.55]"
+      >
+        KIAMO Skin is a facial spa in San Diego, run by a licensed esthetician
+        with 7+ years of experience. Corrective facials, pigmentation and acne treatment, and
+        Keravive scalp therapy, for every skin type, with {reviewStats.count} five-star Google
+        reviews.
+      </p>
+    </div>
+
+    <TrustBadge class="md:w-[28rem] md:shrink-0" />
   </div>
 </section>

@@ -1,0 +1,59 @@
+---
+/**
+ * FaqList
+ * -------
+ * The site's one FAQ renderer.
+ *
+ * Every page that answers questions now renders them through this component,
+ * so a reader gets the same interaction everywhere: the question is visible,
+ * the answer opens when it is clicked.
+ *
+ * Why `<details>` rather than a JavaScript accordion: the answer stays in the
+ * DOM, so crawlers, screen readers and the speakable schema still get the
+ * text, and it works with JavaScript disabled.
+ *
+ * The `.faq-section` class is deliberate — SpeakableSchema points its
+ * `cssSelector` at it, so the wrapper must keep it.
+ */
+interface Faq {
+  question: string;
+  answer: string;
+}
+
+interface Props {
+  faqs: Faq[];
+  /** Render the answer as HTML. Journal answers carry markup. */
+  html?: boolean;
+  class?: string;
+}
+
+const { faqs, html = false, class: className = '' } = Astro.props;
+---
+
+<div class={`faq-section ${className}`}>
+  {
+    faqs.map((faq) => (
+      <details class="group border-b border-line">
+        <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
+          <span>{faq.question}</span>
+          <span
+            aria-hidden="true"
+            class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
+          >
+            +
+          </span>
+        </summary>
+        <div class="t-body pb-6 text-[0.9375rem] leading-relaxed">
+          {html ? <div set:html={faq.answer} /> : faq.answer}
+        </div>
+      </details>
+    ))
+  }
+</div>
+
+<style>
+  /* Safari still needs this to drop the disclosure triangle. */
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

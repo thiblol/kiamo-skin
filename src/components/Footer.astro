@@ -1,23 +1,48 @@
 ---
 import Button from './Button.astro';
 import NapBlock from './NapBlock.astro';
+import LocationMap from './LocationMap.astro';
 import { business } from '../config/business';
 import { serviceLinks, primaryNav, areaLinks, CTA_LABEL } from '../config/nav';
+import { gbpDirectionsUrl } from '../config/urls';
 
 const year = 2026;
+const directionsUrl = gbpDirectionsUrl(business.gbpPlaceId, business.address.full);
 ---
 
+{/*
+  The footer carries the one thing a reader who has scrolled to the bottom
+  wants: where the studio is, and how to get there. So the map is here, in
+  the first column, above the link lists.
+
+  It is quieter than the footer used to be. The cancellation policy is on the
+  booking form and the service pages, not repeated here; the areas run as a
+  wrapped line rather than a ten-item column; and the address, phone and
+  email sit under one heading instead of three.
+*/}
 <footer class="bg-espresso text-porcelain">
-  <div class="wrap grid gap-14 pt-[112px] pb-16 md:grid-cols-[1.2fr_1fr_1fr_1fr] md:pt-[176px]">
+  <div class="wrap grid gap-12 pt-[88px] pb-14 md:grid-cols-[1.3fr_1fr_1fr_1fr] md:gap-10 md:pt-[112px]">
     <div>
       <p class="font-display text-[1.5rem] uppercase tracking-[0.14em]">{business.shortName}</p>
-      <Button href={business.bookingUrl} external class="mt-9">{CTA_LABEL}</Button>
+      <Button href={business.bookingUrl} external class="mt-7">{CTA_LABEL}</Button>
+
+      <div class="mt-9">
+        <LocationMap aspect="aspect-16/10" border="border-porcelain/25" class="max-w-[20rem]" />
+      </div>
+      <a
+        href={directionsUrl}
+        target="_blank"
+        rel="noopener"
+        class="t-button mt-4 inline-block border-b border-porcelain/40 pb-1 hover:border-porcelain"
+      >
+        Get directions
+      </a>
     </div>
 
     <div>
       <p class="t-eyebrow text-porcelain/60">Visit</p>
       <div class="mt-5">
-        <NapBlock tone="dark" showCancellation />
+        <NapBlock tone="dark" />
       </div>
     </div>
 
@@ -61,22 +86,23 @@ const year = 2026;
 
     <div>
       <p class="t-eyebrow text-porcelain/60">Areas we serve</p>
-      <ul class="m-0 mt-5 list-none p-0">
-        <li>
-          <a href="/service-areas/" class="t-body block py-1 hover:text-blush font-medium">
-            All areas in San Diego County
-          </a>
-        </li>
+      <ul class="m-0 mt-5 flex list-none flex-wrap gap-x-4 gap-y-2 p-0">
         {
           areaLinks.map((a) => (
             <li>
-              <a href={a.href} class="t-body block py-1 hover:text-blush">
+              <a href={a.href} class="t-body hover:text-blush">
                 {a.label}
               </a>
             </li>
           ))
         }
       </ul>
+      <a
+        href="/service-areas/"
+        class="t-body mt-6 block border-b border-porcelain/40 pb-1 hover:border-porcelain hover:text-blush"
+      >
+        All areas in San Diego County
+      </a>
     </div>
   </div>
 

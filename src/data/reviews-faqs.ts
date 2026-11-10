@@ -22,7 +22,7 @@ export interface Faq {
 export const reviewFaqs: Faq[] = [
   {
     question: 'Where do the reviews on this page come from?',
-    answer: `They come from the KIAMO Skin Google Business Profile — the listing that appears when someone searches for a facial in ${business.address.neighborhood}. The studio's own listing is read directly through the Google Business Profile API, and every review it holds is reproduced here word for word, with the reviewer's name and the month it was posted. Nothing is edited, shortened, or picked for tone.`,
+    answer: `They come from the KIAMO Skin Google Business Profile — the listing that appears when someone searches for a facial in San Diego. The studio's own listing is read directly through the Google Business Profile API, and every review it holds is reproduced here word for word, with the reviewer's name and the month it was posted. Nothing is edited, shortened, or picked for tone.`,
   },
   {
     question: 'Are the reviews on this page edited or shortened?',

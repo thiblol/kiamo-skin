@@ -9,9 +9,22 @@ interface Props {
   origin?: string;
   aspect?: string;
   class?: string;
+  /**
+   * The element id. The footer's map is the site's canonical `#location-map`
+   * — the address in the NAP block points at it, and it is on every page.
+   */
+  id?: string;
+  /** The border colour, so the frame can sit on a dark or a light ground. */
+  border?: string;
 }
 
-const { origin, aspect = 'aspect-4/3', class: className = '' } = Astro.props;
+const {
+  origin,
+  aspect = 'aspect-4/3',
+  class: className = '',
+  id = 'location-map',
+  border = 'border-line',
+} = Astro.props;
 
 /* Lives in the tag, so the guard suite's tag-stripped text never sees it. A
    visible caption naming both an area and the studio would trip the Del Mar
@@ -22,10 +35,13 @@ const title = origin
 ---
 
 <iframe
-  id="location-map"
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.0660583279664!2d-117.17220122448629!3d32.737436573680235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc09e2032e67a3%3A0x643cf88d90708b08!2sKIAMO%20Skin%20%E2%80%93%20HydraFacial%20%26%20Scalp%20Treatments!5e0!3m2!1sen!2sin!4v1788190893814!5m2!1sen!2sin"
+  id={id}
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.066058327973!2d-117.17220122448606!3d32.73743657368005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc09e2032e67a3%3A0x643cf88d90708b08!2sKIAMO%20Skin!5e0!3m2!1sen!2sae!4v1794327212244!5m2!1sen!2sae"
   title={title}
-  loading="lazy"
+  width="600"
+  height="450"
+  style="border:0;"
   allowfullscreen=""
+  loading="lazy"
   referrerpolicy="strict-origin-when-cross-origin"
-  class={`w-full border border-line ${aspect} ${className}`}></iframe>
+  class={`w-full border ${border} ${aspect} ${className}`}></iframe>

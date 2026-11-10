@@ -32,6 +32,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Reveal from '../components/Reveal.astro';
 import Button from '../components/Button.astro';
 import BeforeAfter from '../components/BeforeAfter.astro';
+import FaqList from '../components/FaqList.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import SpeakableSchema from '../components/schema/SpeakableSchema.astro';
@@ -201,7 +202,7 @@ const itemListSchema = {
   '@id': itemListId,
   name: 'KIAMO Skin results gallery — closed cases on display',
   description:
-    'Closed, consented before-and-after cases photographed in the Mission Hills studio, sorted by concern.',
+    'Closed, consented before-and-after cases photographed in the San Diego studio, sorted by concern.',
   numberOfItems: galleryCases.length,
   itemListOrder: 'https://schema.org/ItemListUnordered',
   itemListElement: caseGraph.map((g, idx) => ({
@@ -224,7 +225,7 @@ const galleryPageSchema = {
       url,
       name: 'Before & After Gallery | Real Results from KIAMO Skin San Diego',
       description:
-        'Consented before-and-after photographs from KIAMO Skin in Mission Hills. Lira Chemical Peels, Procell Microchanneling, Keravive Scalp Therapy, DMK Enzyme Therapy. No retouching, no stock imagery, no curation for marketing. Results vary.',
+        'Consented before-and-after photographs from KIAMO Skin in San Diego. Lira Chemical Peels, Procell Microchanneling, Keravive Scalp Therapy, DMK Enzyme Therapy. No retouching, no stock imagery, no curation for marketing. Results vary.',
       inLanguage: 'en-US',
       isPartOf: { '@id': websiteId(site) },
       about: { '@id': businessId(site) },
@@ -285,7 +286,7 @@ const faqSchema = {
 /* ---------------------------------------------------------------- */
 const title = 'Before & After Gallery | KIAMO Skin San Diego';
 const description =
-  'Consented before-and-after photos from KIAMO Skin in Mission Hills. Lira peels, Procell, Keravive scalp therapy. No retouching. Request an appointment.';
+  'Consented before-and-after photos from KIAMO Skin in San Diego. Lira peels, Procell, Keravive scalp therapy. No retouching. Request an appointment.';
 ---
 <BaseLayout {title} {description}>
   {/* 1. CollectionPage + ImageGallery wrapper */}
@@ -368,12 +369,12 @@ const description =
         </Reveal>
 
         <div class="md:order-1">
-                      <Breadcrumbs current="Gallery" meta="Mission Hills studio" />
+                      <Breadcrumbs current="Gallery" meta="San Diego studio" />
           <h1 class="t-h2 mt-6 max-w-[18ch] text-[2.5rem] md:text-[3.5rem]">
             Before and after, named honestly.
           </h1>
           <p class="t-body mt-7 max-w-[58ch] text-[1.125rem]">
-            Every photo in this gallery was taken at the Mission Hills studio, of clients who
+            Every photo in this gallery was taken at the San Diego studio, of clients who
             consented in writing to share their results. Every caption names the treatment,
             the concern, the number of sessions, and the elapsed time.
           </p>
@@ -691,30 +692,13 @@ const description =
     </section>
 
     {/* FAQ */}
-    <section class="bg-ivory faq-section">
+    <section class="bg-ivory">
       <div class="wrap py-20 md:py-28">
         <p class="t-eyebrow text-ink-soft">Before you read the cases</p>
         <h2 class="t-h2 mt-5">Gallery questions</h2>
 
         <div class="mt-12 max-w-[68ch]">
-          {
-            galleryFaqs.map((faq) => (
-              <details class="group border-b border-line">
-                <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
-                  <span>{faq.question}</span>
-                  <span
-                    aria-hidden="true"
-                    class="shrink-0 text-rose transition-transform duration-300 group-open:rotate-45"
-                  >
-                    +
-                  </span>
-                </summary>
-                <div class="t-body pb-6 text-[0.9375rem]">
-                  {faq.answer}
-                </div>
-              </details>
-            ))
-          }
+          <FaqList faqs={galleryFaqs} />
         </div>
       </div>
     </section>

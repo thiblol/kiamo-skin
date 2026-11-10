@@ -77,7 +77,7 @@ export const faqs: Faq[] = [
   },
   {
     question: 'Is there parking?',
-    answer: `${business.visit.parking} is available at the Mission Hills studio at ${business.address.full}.`,
+    answer: `${business.visit.parking} is available at the studio on Reynard Way at ${business.address.full}.`,
   },
   {
     question: 'What is the cancellation policy?',
