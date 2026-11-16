@@ -54,10 +54,29 @@ interface Props {
   trust?: { label: string; detail?: string }[];
   /** The breadcrumb slot, rendered above the eyebrow. */
   breadcrumbs?: string;
+  /**
+   * The GA4 event label for the rail's buttons.
+   *
+   * Every booking button on the site fires `booking_click`, and the label is
+   * what says WHICH button it was. Without it the whole cluster reports one
+   * undifferentiated number and no test can be read.
+   */
+  eventLabel?: string;
 }
 
-const { eyebrow, serviceName, cityName, claim, paragraph, image, imageAlt, price, trust, breadcrumbs } =
-  Astro.props;
+const {
+  eyebrow,
+  serviceName,
+  cityName,
+  claim,
+  paragraph,
+  image,
+  imageAlt,
+  price,
+  trust,
+  breadcrumbs,
+  eventLabel = 'hero',
+} = Astro.props;
 ---
 
 <section class="relative isolate overflow-hidden bg-espresso">
@@ -90,10 +109,25 @@ const { eyebrow, serviceName, cityName, claim, paragraph, image, imageAlt, price
   >
   </div>
 
-  <div class="wrap pt-[calc(60px+48px)] pb-16 md:pt-[calc(60px+72px)] md:pb-24">
-    <div class="grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
+  <div class="wrap pt-[calc(60px+24px)] pb-16 md:pt-[calc(60px+72px)] md:pb-24">
+    {/*
+      Three children, and the order they appear in differs by breakpoint.
+
+      On desktop the copy is one column on the left and the conversion rail
+      is a sticky one on the right, with the trust row underneath the copy.
+      On mobile they stack, and the RAIL comes SECOND — after the headline
+      and the paragraph, before the trust row.
+
+      That order is the whole point. Measured on a 390×844 screen, the
+      "Request Appointment" button sat at 873px on a service page, 968px on a
+      service-and-city page and 1,058px on an area hub — all below the fold,
+      with only the tap-to-call chip in the header to convert on. Moving the
+      trust row below the rail on mobile brings the button inside the first
+      screen, and the trust facts still land immediately after it.
+    */}
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-x-16 lg:gap-y-0 lg:items-start">
       {/* ---- the offer ---- */}
-      <div>
+      <div class="lg:col-start-1 lg:row-start-1">
         {
           breadcrumbs && (
             <div class="mb-8 [&_nav]:[&_a]:text-porcelain/70 [&_a]:hover:text-porcelain">
@@ -109,24 +143,87 @@ const { eyebrow, serviceName, cityName, claim, paragraph, image, imageAlt, price
 
         {/* The H1. The service leads and the city follows, because that is
             the order a reader holds the two facts in. The city takes the
-            accent colour so the eye lands on it second, not first. */}
+            accent colour so the eye lands on it second, not first.
+
+            The claim is NOT in here. It used to be a span inside the
+            heading, which made the H1 two sentences with no space between
+            them — "HydraFacialMedical-grade extraction with a booster chosen
+            for your skin." to anything that reads the heading's text. The
+            claim is a paragraph under the heading now. */}
         <h1 class="t-hero mt-5 max-w-[15ch] text-porcelain">
           {serviceName}
           {cityName && <span class="text-blush"> in {cityName}</span>}
-          <span class="mt-4 block max-w-[26ch] text-[0.52em] text-porcelain/85">{claim}</span>
         </h1>
+
+        {/* The claim, outside the heading. */}
+        <p
+          class="mt-4 max-w-[28ch] font-display text-[1.1875rem] font-light leading-[1.25] text-porcelain/85 md:text-[1.5rem]"
+        >
+          {claim}
+        </p>
 
         {/* The paragraph. Two or three lines on the treatment itself. The
             local context has its own section further down. */}
-        <p class="t-body mt-7 max-w-[56ch] text-[1.0625rem] text-porcelain/85">
+        <p class="t-body mt-6 max-w-[56ch] text-[1.0625rem] text-porcelain/85">
           {paragraph}
         </p>
+      </div>
 
-        {/* The trust row. Tick marks, not adjectives — each one is a fact
-            with a number or a name in it, so a reader can check it. */}
-        {
-          trust && trust.length > 0 && (
-            <ul class="m-0 mt-9 grid list-none gap-x-8 gap-y-4 p-0 sm:grid-cols-2">
+      {/* ---- the conversion rail ---- */}
+      <div class="lg:sticky lg:top-24 lg:col-start-2 lg:row-start-1 lg:row-span-2">
+        <div class="border border-porcelain/20 bg-porcelain/[0.06] p-8 backdrop-blur-sm md:p-10">
+          {
+            price && (
+              <div class="border-b border-porcelain/20 pb-6">
+                <p class="t-eyebrow text-porcelain/60">{price.label}</p>
+                <p class="t-price mt-3 text-[1.5rem] text-blush">{price.price}</p>
+              </div>
+            )
+          }
+
+          <div class="mt-8">
+            <Button
+              href={business.bookingUrl}
+              external
+              class="w-full"
+              trackEvent="booking_click"
+              eventLabel={eventLabel}
+            >
+              {CTA_LABEL}
+            </Button>
+            <a
+              href={business.phone.href}
+              class="t-body mt-5 block text-[0.9375rem] text-porcelain/85 transition-colors hover:text-blush"
+              onclick={`if(typeof gtag !== 'undefined') gtag('event', 'phone_click', {event_category: 'engagement', event_label: '${eventLabel}', transport_type: 'beacon'});`}
+            >
+              or call {business.phone.display}
+            </a>
+          </div>
+
+          {/* The reassurance. What a reader needs to know before they commit
+              to a drive: whether it is worth the trip, and whether there is
+              anywhere to park. */}
+          <ul class="m-0 mt-8 list-none border-t border-porcelain/20 pt-6">
+            <li class="t-body text-[0.875rem] text-porcelain/70">
+              {business.visit.appointmentOnly}
+            </li>
+            <li class="t-body mt-2 text-[0.875rem] text-porcelain/70">
+              {business.visit.parking}
+            </li>
+            <li class="t-body mt-2 text-[0.875rem] text-porcelain/70">
+              Consultations included — the plan is set before you book
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      {/* ---- the trust row ---- */}
+      {/* Tick marks, not adjectives — each one is a fact with a number or a
+          name in it, so a reader can check it. */}
+      {
+        trust && trust.length > 0 && (
+          <div class="lg:col-start-1 lg:row-start-2 lg:mt-9">
+            <ul class="m-0 grid list-none gap-x-8 gap-y-4 p-0 sm:grid-cols-2">
               {trust.map((item) => (
                 <li class="flex items-start gap-3">
                   <span
@@ -152,50 +249,9 @@ const { eyebrow, serviceName, cityName, claim, paragraph, image, imageAlt, price
                 </li>
               ))}
             </ul>
-          )
-        }
-      </div>
-
-      {/* ---- the conversion rail ---- */}
-      <div class="lg:sticky lg:top-24">
-        <div class="border border-porcelain/20 bg-porcelain/[0.06] p-8 backdrop-blur-sm md:p-10">
-          {
-            price && (
-              <div class="border-b border-porcelain/20 pb-6">
-                <p class="t-eyebrow text-porcelain/60">{price.label}</p>
-                <p class="t-price mt-3 text-[1.5rem] text-blush">{price.price}</p>
-              </div>
-            )
-          }
-
-          <div class="mt-8">
-            <Button href={business.bookingUrl} external class="w-full">
-              {CTA_LABEL}
-            </Button>
-            <a
-              href={business.phone.href}
-              class="t-body mt-5 block text-[0.9375rem] text-porcelain/85 transition-colors hover:text-blush"
-            >
-              or call {business.phone.display}
-            </a>
           </div>
-
-          {/* The reassurance. What a reader needs to know before they commit
-              to a drive: whether it is worth the trip, and whether there is
-              anywhere to park. */}
-          <ul class="m-0 mt-8 list-none border-t border-porcelain/20 pt-6">
-            <li class="t-body text-[0.875rem] text-porcelain/70">
-              {business.visit.appointmentOnly}
-            </li>
-            <li class="t-body mt-2 text-[0.875rem] text-porcelain/70">
-              {business.visit.parking}
-            </li>
-            <li class="t-body mt-2 text-[0.875rem] text-porcelain/70">
-              Consultations included — the plan is set before you book
-            </li>
-          </ul>
-        </div>
-      </div>
+        )
+      }
     </div>
   </div>
 </section>

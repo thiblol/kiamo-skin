@@ -31,10 +31,10 @@ import TrustBar from './TrustBar.astro';
 import ProofQuote from './ProofQuote.astro';
 import TreatmentProof from './TreatmentProof.astro';
 import LocationMap from './LocationMap.astro';
-import { business } from '../config/business';
+import { business, PRICE_ON_CONSULTATION } from '../config/business';
 import { CTA_LABEL } from '../config/nav';
 import { treatmentTrust, studioProof } from '../data/treatment-trust';
-
+import RequestBand from './sections/RequestBand.astro';
 interface Crumb {
   name: string;
   path: string;
@@ -60,8 +60,17 @@ interface Props {
   steps?: { step: string; description: string }[];
   /** The pricing table. */
   pricing?: { label: string; price: string; description?: string }[];
-  /** The lead price, stated in the hero. */
-  entryPricing?: { label: string; price: string };
+  /**
+   * The plan's components, for a concern page.
+   *
+   * A concern page — melasma, hyperpigmentation — has no single price,
+   * because the plan is assembled from several modalities. It lists the
+   * modalities instead. Those members were in the data all along and were
+   * never rendered, which is why the two highest-volume pages on the site
+   * (melasma at 60,000/mo and hyperpigmentation at 165,000/mo) carried no
+   * pricing table at all.
+   */
+  planMembers?: { name: string; description: string; price?: string; href: string }[];
   /** The city-specific blocks. */
   authority?: { heading: string; body: string };
   uniqueness?: { heading: string; body: string; bullets: string[] };
@@ -112,7 +121,7 @@ const {
   concerns,
   steps,
   pricing,
-  entryPricing,
+  planMembers,
   authority,
   uniqueness,
   depth,
@@ -138,6 +147,44 @@ const isArea = mode === 'area';
  * key set against the service registry.
  */
 const trust = treatmentTrust[trustSlug];
+
+/**
+ * The price rows, from whichever source this page has.
+ *
+ * A modality page has `pricing`. A concern page has `planMembers` instead,
+ * because its plan is assembled from several modalities. Their prices may be
+ * a single figure, a range, or absent — a plan with no single price reads
+ * "Pricing at consultation.", which is what the site brief prescribes.
+ *
+ * Before this, the concern pages had a `planMembers` record and no pricing
+ * section at all: the melasma page (60,000/mo) and the hyperpigmentation
+ * page (165,000/mo) showed a reader no prices at all.
+ */
+const priceRows = pricing?.length
+  ? pricing.map((row) => ({
+      label: row.label,
+      price: row.price,
+      description: row.description,
+      href: undefined as string | undefined,
+    }))
+  : (planMembers?.map((member) => ({
+      label: member.name,
+      price: member.price ?? PRICE_ON_CONSULTATION,
+      description: member.description,
+      href: member.href,
+    })) ?? []);
+
+/**
+ * The heading on the request band.
+ *
+ * The band names what the page is about, so a reader who scrolls to the
+ * bottom of a service-and-city page knows which treatment and which city
+ * they are requesting.
+ */
+const bandHeading =
+  isArea && cityName
+    ? `${hero.serviceName} in ${cityName} — with the price before you book.`
+    : `${hero.serviceName} in San Diego — with the price before you book.`;
 ---
 
 <article>
@@ -327,7 +374,7 @@ const trust = treatmentTrust[trustSlug];
     </section>
   )}
 
-  {pricing && pricing.length > 0 && (
+  {priceRows.length > 0 && (
     <section class="bg-porcelain py-20 md:py-28">
       <div class="wrap grid gap-12 md:grid-cols-[1fr_0.8fr] md:gap-16">
         <div>
@@ -342,9 +389,21 @@ const trust = treatmentTrust[trustSlug];
         <div class="border border-line bg-ivory p-8">
           <dl class="mt-0 m-0 space-y-6">
             {
-              pricing.map((row) => (
+              priceRows.map((row) => (
                 <div class="border-b border-line pb-6 last:border-0 last:pb-0">
-                  <dt class="t-service text-[1rem]">{row.label}</dt>
+                  <dt class="t-service text-[1rem]">
+                    {row.href ? (
+                      /* A plan member links to the modality that treats it.
+                         The anchor is the bare name — geo-modified anchors
+                         belong on hub pages, and this is a link into the
+                         service tree rather than an editorial choice. */
+                      <a href={row.href} class="hover:text-rose">
+                        {row.label}
+                      </a>
+                    ) : (
+                      row.label
+                    )}
+                  </dt>
                   <dd class="t-price m-0 mt-2">{row.price}</dd>
                   {row.description && (
                     <dd class="t-body m-0 mt-3 text-[0.875rem] text-ink-soft">{row.description}</dd>
@@ -354,10 +413,28 @@ const trust = treatmentTrust[trustSlug];
             }
           </dl>
           <div class="mt-8">
-            <Button href={business.bookingUrl} external class="w-full">
+            <Button
+              href={business.bookingUrl}
+              external
+              class="w-full"
+              trackEvent="booking_click"
+              eventLabel={isArea ? 'area_pricing' : 'service_pricing'}
+            >
               {CTA_LABEL}
             </Button>
           </div>
+
+          {/* On a plan page the prices above are the prices of the
+              components the plan is built from. The plan itself — which
+              treatments, how many sessions, how far apart — is what the
+              consultation decides, and saying so keeps the page honest
+              beside a list of published figures. */}
+          {!pricing?.length && planMembers?.length && (
+            <p class="t-body mt-6 text-[0.875rem] text-ink-soft">
+              Each price above is for one treatment. The plan itself — which treatments, how many
+              sessions, and how far apart — is set at consultation.
+            </p>
+          )}
         </div>
       </div>
     </section>
@@ -403,11 +480,14 @@ const trust = treatmentTrust[trustSlug];
                 : 'Questions, answered'}
             </h2>
           </Reveal>
-          {/* The questions. Every answer opens on click — the answer text is
-              still in the HTML and still in the schema, so nothing is lost
-              to crawlers. */}
+          {/* The questions. The first three answer in full on the page — what
+              it costs, what happens, how long it takes — because they are the
+              ones that stop a booking, and a reader who never clicks a
+              disclosure triangle still has to meet them. The rest open on
+              click, and every answer stays in the HTML and in the schema
+              either way, so nothing is lost to crawlers. */}
           <div class="mt-12">
-            <FaqList faqs={faqs} />
+            <FaqList faqs={faqs} openFirst={3} />
           </div>
         </div>
       </div>
@@ -482,6 +562,24 @@ const trust = treatmentTrust[trustSlug];
       <NapBlock />
     </div>
   </section>
+
+  {/* The request. The price, the membership and the enquiry form, together.
+
+      Measured on a service page, the body carried no "Request Appointment"
+      between the hero and the pricing table — the reader who was convinced
+      by the price had to keep scrolling for a button, and the only action
+      above the fold was a tap-to-call chip. The band closes that gap, and
+      it is where the membership finally gets a price and a link rather than
+      a mention inside somebody else's review. */}
+  <RequestBand
+    heading={bandHeading}
+    eventLabel={isArea ? 'area_band' : 'service_band'}
+    defaultTreatment={hero.serviceName}
+  />
+
+  <script>
+    import '../scripts/scroll-depth';
+  </script>
 </article>
 
 <style>

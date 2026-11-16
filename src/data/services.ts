@@ -98,6 +98,32 @@ export interface Service {
    * at consultation because the plan is assembled from several modalities.
    */
   pricing?: { label: string; price: string; description?: string }[];
+  /**
+   * The price the homepage menu shows for this service.
+   *
+   * Declared rather than inferred, because the menu cannot read the price off
+   * the first entry of `pricing`: several services list the first-visit
+   * treatment first, so `pricing[0].price` printed the First-Time Client
+   * Treatment's $249 against HydraFacial — a price the hero contradicted ten
+   * lines above it. Every figure here must also appear in this service's own
+   * `pricing` array; `test/factual-guards.test.js` checks the homepage menu
+   * against the service page so the two cannot drift apart again.
+   *
+   * `Pricing at consultation.` is the value for a concern page, whose plan is
+   * assembled from several modalities and has no single price.
+   */
+  menuPrice?: string;
+  /**
+   * The one-line descriptor the homepage menu shows in place of the full
+   * `opener`.
+   *
+   * The opener is the opening paragraph of the service page and carries the
+   * query and a fact only that page can carry, so it stays as it is. On the
+   * homepage it repeated eleven times — every row ended with the same
+   * sentence about Kiki being a licensed esthetician — which made the
+   * highest-intent block on the page read as a content dump.
+   */
+  menuLine?: string;
   /** Honest caveats. Rendered as a closing note, never omitted where present. */
   note?: string;
   /**
@@ -167,6 +193,9 @@ export const services: Service[] = [
     headline: 'Facial in San Diego — Calibrated to Your Skin, Not a Menu',
     opener:
       'There is no single best facial. The right one depends on your skin tone, your concern, and the condition of your skin on the day. Performed by Kiki, a California licensed esthetician.',
+    menuPrice: 'From $199',
+    menuLine:
+      'HydraFacial, peels, dermaplaning and enzyme therapy — chosen for your skin on the day.',
     intro:
       'KIAMO Skin runs the full facial menu rather than a single modality, because the treatment that suits a reactive barrier is not the treatment that suits an oily, congested one. HydraFacial Syndeo with AI skin analysis for maintenance and glow. Lira chemical peels at Fitzpatrick-calibrated concentrations for pigmentation and texture. DMK enzyme therapy for barrier repair. Dermaplaning for surface refinement. The modality is selected to match the skin in front of you, and the price is published before you book. <a href="/services/hydrafacial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">HydraFacial</a>, <a href="/services/chemical-peel/" class="border-b border-ink/40 hover:border-rose hover:text-rose">chemical peels</a>, and <a href="/services/dermaplaning/" class="border-b border-ink/40 hover:border-rose hover:text-rose">dermaplaning</a> each have their own page, and <a href="/services/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatments</a> covers how a plan is put together when more than one modality is involved.',
     image: hydrafacial,
@@ -235,6 +264,9 @@ export const services: Service[] = [
     headline: 'HydraFacial in San Diego — Medical-Grade, With a Booster for Your Skin',
     opener:
       'Medical-grade extraction and hydration on a HydraFacial Syndeo, with a booster chosen for your skin. Performed by Kiki, a California licensed esthetician.',
+    menuPrice: '$259',
+    menuLine:
+      'Medical-grade extraction and hydration on a HydraFacial Syndeo, with a booster chosen for your skin.',
     intro:
       'HydraFacial Syndeo performs three clinical actions simultaneously: enzymatic resurfacing lifts dead surface cells without abrasive scrubbing, patented vortex extraction vacuums mineral deposits and sebum from follicles at controlled pressure, and precision infusion floods skin with hydration and antioxidants while pores remain receptive. This is medical-grade extraction technology, not a spa facial with suction. <a href="/services/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Facial clients</a> across the county book it as the foundation of a maintenance schedule, and for corrective plans it sits between stronger sessions to hold the result. The extractor is calibrated to San Diego\'s own water and climate: the municipal supply runs 280-320 parts per million of dissolved calcium and magnesium, which binds with sebum into deposits ordinary cleansing cannot remove. HydraFacial is the most forgiving corrective treatment available — safe for every Fitzpatrick skin type including melanin-rich skin, with no risk of post-inflammatory hyperpigmentation.',
     image: hydrafacial,
@@ -304,6 +336,9 @@ export const services: Service[] = [
     headline: 'Chemical Peels in San Diego — Brighten Without Damaging Skin',
     opener:
       'Professional peels selected for the skin tone in front of you, with the strength raised only as the barrier allows. Performed by Kiki, a California licensed esthetician.',
+    menuPrice: '$199–$299',
+    menuLine:
+      'Professional peels selected for the skin tone in front of you, with the strength raised only as the barrier allows.',
     intro:
       'Pigmentation is the reason most people book, and it is also where the wrong treatment does lasting damage. Melanin-rich skin responds to trauma by producing more pigment, so the strength, the acid and the pacing all have to be selected deliberately. Lira\'s professional range is built for that kind of control. Clients from inland San Diego County book this treatment most often, where UV and melanin-rich skin demographics make melasma the county\'s most common pigmentation concern. Read more about <a href="/services/melasma-treatment/" class="border-b border-ink/40 hover:border-rose hover:text-rose">correcting melasma and post-inflammatory hyperpigmentation</a>, or explore KIAMO Skin\'s full approach to <a href="/services/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatments</a>.',
     image: liraPeel,
@@ -368,6 +403,8 @@ export const services: Service[] = [
     headline: 'Procell Microchanneling in San Diego — Reduce Acne Scars and Texture',
     opener:
       'Controlled microchannels and a growth factor serum, with no RF heat at all. Performed by Kiki, a California licensed esthetician.',
+    menuPrice: '$475',
+    menuLine: 'Controlled microchannels and a growth factor serum, with no RF heat at all.',
     intro:
       'Procell Therapies microchanneling is a skin resurfacing treatment that creates thousands of microscopic channels in the skin surface using a precision-engineered handpiece. Those channels trigger the skin\'s natural wound-healing response — collagen production, elastin remodeling, and controlled surface cell renewal. What separates Procell from conventional microneedling is what happens immediately after the channels are created. Procell\'s proprietary stem cytokine growth factor serums are applied directly into the open channels, communicating with skin cells to direct the repair process toward specific outcomes: collagen synthesis, pigment correction, and texture resurfacing. The result is faster recovery and more targeted correction than standard microneedling alone. Ideal candidates include those with acne scarring (ice pick, boxcar, and rolling scar types), post-inflammatory hyperpigmentation (PIH) — dark marks left after acne, injury, or trauma, uneven skin tone and diffuse sun damage, skin texture irregularities and enlarged pores, fine lines and mild skin laxity, and Fitzpatrick Type IV, V, and VI skin tones. For clients traveling from across the county, the series is planned as a block at consultation — scheduling all three sessions at once accounts for the drive and makes completion realistic.',
     image: procell,
@@ -451,6 +488,9 @@ export const services: Service[] = [
     headline: 'Dermaplaning in San Diego — Smoother Skin, No Downtime',
     opener:
       'Physical exfoliation that clears surface buildup, so everything layered after it works better. Performed by Kiki, a California licensed esthetician.',
+    menuPrice: '$199',
+    menuLine:
+      'Physical exfoliation that clears surface buildup, so everything layered after it works better.',
     intro:
       'Dermaplaning uses a sterile surgical blade to remove dead surface cells and the fine vellus hair that sits on top of them. Nothing is pulled from the follicle and nothing penetrates the skin. What changes is the surface: product reaches live tissue instead of sitting on debris, and makeup stops catching on texture. Clients book dermaplaning for events and before important occasions because there is zero downtime and the glow is immediate. Dermaplaning is one of several <a href="/services/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatments</a> that can be integrated into a broader skincare plan.',
     image: dermaplane,
@@ -514,6 +554,9 @@ export const services: Service[] = [
     headline: 'Keravive Scalp Therapy in San Diego — Clear Flaking, Buildup, and Irritation',
     opener:
       'Clinical scalp therapy for buildup, flaking, and the hard water residue San Diego scalps collect. Performed by Kiki, a California licensed esthetician.',
+    menuPrice: '$599',
+    menuLine:
+      'Clinical scalp therapy for buildup, flaking, and the hard water residue San Diego scalps collect.',
     intro:
       'HydraFacial Keravive deeply cleanses, exfoliates, and hydrates the scalp while removing buildup that contributes to dryness, flaking, and irritation. The Keravive Peptide Complex nourishes sebaceous glands and supports a healthier environment for hair growth. In San Diego, hard water — averaging 16 grains per gallon — makes scalp buildup especially common. Coastal clients dealing with daily salt water exposure and inland clients facing wind and UV damage book Keravive for hard water mineral deposits that shampoo cannot clear. Every treatment includes a take-home peptide spray to continue supporting scalp health between visits.',
     image: scalp,
@@ -575,6 +618,9 @@ export const services: Service[] = [
     headline: 'DMK Enzyme Therapy in San Diego — Restore Skin Function',
     opener:
       'Enzymatic resurfacing that rebuilds a damaged barrier instead of stripping a healthy one. Performed by Kiki, a California licensed esthetician.',
+    menuPrice: '$279',
+    menuLine:
+      'Enzymatic resurfacing that rebuilds a damaged barrier instead of stripping a healthy one.',
     intro:
       'DMK Enzyme Therapy is designed to restore healthy skin function rather than simply exfoliating the surface. By supporting the skin\'s natural processes, it helps strengthen the skin barrier while encouraging healthy circulation and lymphatic activity. It\'s especially beneficial for skin that feels over-exfoliated, sensitized, inflamed, or slow to heal—common states for coastal surfers and anyone whose barrier has been stripped by salt water, wind, or aggressive product use. This approach is part of KIAMO Skin\'s broader <a href="/services/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatment</a> philosophy, where treatment selection is based on current skin condition rather than following a fixed protocol.',
     image: enzyme,
@@ -631,6 +677,9 @@ export const services: Service[] = [
     headline: 'Acne Treatment in San Diego — Clear Breakouts, Fade the Marks',
     opener:
       'Corrective facials, peels for the marks they leave behind, and microchanneling for scarring. Performed by Kiki, a California licensed esthetician.',
+    menuPrice: 'From $199',
+    menuLine:
+      'Corrective facials, peels for the marks they leave behind, and microchanneling for scarring.',
     intro:
       'Acne treatment at KIAMO Skin addresses three phases: active breakouts, congestion (blackheads and whiteheads), and post-acne concerns like hyperpigmentation and scarring. The treatment plan depends on what stage your skin is in. HydraFacial extracts congestion without manual pressure, DMK Enzyme Therapy rebuilds a compromised barrier that is keeping breakouts active, and chemical peels or microchanneling work through the marks and texture left behind. Every protocol is designed to clear acne without triggering post-inflammatory hyperpigmentation — the dark marks that last longer than the breakout itself. This multi-phase approach is part of KIAMO Skin\'s <a href="/services/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatment</a> philosophy.',
     image: acne,
@@ -712,6 +761,9 @@ export const services: Service[] = [
     headline: 'Hyperpigmentation Treatment in San Diego — Clear Post-Acne Marks',
     opener:
       'A series of gentle LIRA peels or Procell microchanneling, paired with daily SPF. Performed by Kiki, a California licensed esthetician.',
+    menuPrice: 'Pricing at consultation.',
+    menuLine:
+      'A series of gentle LIRA peels or Procell microchanneling, paired with daily SPF.',
     intro:
       'Post-inflammatory hyperpigmentation (PIH) is the most common pigmentation concern clients bring to KIAMO Skin. It is what the skin does in response to inflammation — acne, eczema, an ingrown hair, a nick while shaving, an over-aggressive peel somewhere else. The mark is melanin produced by the injury response, sitting in the surface and mid-layers of the skin. PIH is distinct from melasma (which is hormonal and light-driven) and from sun damage (which is UV-driven and tends to cluster on the highest-exposure areas). Each of those three conditions is treated differently, and choosing the wrong approach is the most common reason treatment fails. For PIH specifically, the right plan is a series of gentle Lira Chemical Peels or Procell Microchanneling, paired with strict daily SPF — see <a href="/services/chemical-peel/" class="border-b border-ink/40 hover:border-rose hover:text-rose">chemical peels</a>, <a href="/services/microneedling/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Procell Microchanneling</a>, and <a href="/melanin-rich-skin/" class="border-b border-ink/40 hover:border-rose hover:text-rose">melanin-rich skin expertise</a> for the protocol details.',
     image: hyperpigmentationTreatment,
@@ -735,30 +787,35 @@ export const services: Service[] = [
         name: 'LIRA Chemical Peels',
         description:
           'The standard first step. Strength is escalated across a series and the peel is selected for the skin tone, which is what keeps a correction from becoming a new mark.',
+        price: '$199–$299',
         href: '/services/chemical-peel/',
       },
       {
         name: 'Procell Microchanneling',
         description:
           'For marks that sit alongside texture or scarring. Works mechanically, with no heat or light — which matters on skin that reacts to both.',
+        price: '$475',
         href: '/services/microneedling/',
       },
       {
         name: 'HydraFacial',
         description:
           'Cleansing, exfoliation, extraction, and hydration, with a brightening booster selected for the pigment. Usually the maintenance layer between corrections.',
+        price: '$259',
         href: '/services/hydrafacial/',
       },
       {
         name: 'DMK Enzyme Therapy',
         description:
           'A different approach, centred on the condition and function of the skin. Considered when the barrier is compromised and a peel would be too much.',
+        price: '$279',
         href: '/services/dmk-enzyme-therapy/',
       },
       {
         name: 'Dermaplaning',
         description:
           'Physical exfoliation that clears surface buildup and gives a smoother-feeling surface, which lets everything after it work better.',
+        price: '$199',
         href: '/services/dermaplaning/',
       },
     ],
@@ -805,6 +862,9 @@ export const services: Service[] = [
     headline: 'Melasma Treatment in San Diego — Visible Results Without Triggering More',
     opener:
       'Gentle LIRA peels spaced four to six weeks apart, and daily SPF with iron oxides to hold the result. Performed by Kiki, a California licensed esthetician.',
+    menuPrice: 'From $199',
+    menuLine:
+      'Gentle LIRA peels spaced four to six weeks apart, and daily SPF with iron oxides to hold the result.',
     intro:
       'Melasma appears as brown or grey-brown patches across the cheeks, forehead, nose bridge, and upper lip. Hormonal change triggers it, then UV and heat sustain it — which is why one strong session can make it worse. So the work is in the pacing. Gentle first, correction layered on as the skin tolerates it, and the daily SPF that decides whether pigment stays faded. <a href="/services/chemical-peel/" class="border-b border-ink/40 hover:border-rose hover:text-rose">LIRA chemical peels</a> are the backbone of the plan, <a href="/services/microneedling/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Procell microchanneling</a> is added where texture or scarring is part of the picture, and a <a href="/services/hydrafacial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">HydraFacial with a brightening booster</a> holds the result between corrective sessions.',
     image: melasmaHero,
@@ -901,6 +961,9 @@ export const services: Service[] = [
     headline: 'Corrective Skin Treatments in San Diego — Built Around Your Skin',
     opener:
       'Every treatment is selected for what your skin is doing, and paced to what it can tolerate. Performed by Kiki, a California licensed esthetician.',
+    menuPrice: 'Pricing at consultation.',
+    menuLine:
+      'Every treatment is selected for what your skin is doing, and paced to what it can tolerate.',
     intro:
       'KIAMO Skin provides corrective skin treatments designed to address specific skin concerns while considering the condition, history, and needs of your skin. Rather than treating every client or concern exactly the same way, the goal is to understand what is happening beneath the surface and select treatments that make sense for your current skin health. Corrective skincare may include treatments such as HydraFacial, DMK Enzyme Therapy, Procell Microchanneling, Lira Chemical Peels, Dermaplaning, and Keravive Scalp Therapy, depending on the concern being addressed.',
     image: correctiveHero,
@@ -1004,3 +1067,30 @@ export const services: Service[] = [
 ];
 
 export const getService = (slug: string) => services.find((s) => s.slug === slug);
+
+/**
+ * The price the hero rail shows for a service.
+ *
+ * A modality page shows its own lead price — the first entry in its price
+ * list, which is the price a first-time client is quoted.
+ *
+ * A concern page has no single price, so it shows the plan's entry price
+ * where the plan publishes one (melasma's peel series runs $199–$299), and
+ * otherwise the first visit. The first visit is $249 for every treatment,
+ * includes the consultation, and is the lowest-risk way in — so a reader on
+ * the hyperpigmentation page, which has no plan price at all, gets a real
+ * number instead of nothing.
+ */
+export const heroPriceFor = (service: Service): { label: string; price: string } => {
+  const first = service.pricing?.[0];
+  if (first && !first.price.startsWith('Pricing at')) {
+    return { label: first.label, price: first.price };
+  }
+
+  const member = service.planMembers?.find((m) => m.price);
+  if (member) {
+    return { label: member.name, price: member.price as string };
+  }
+
+  return { label: 'First-time client treatment', price: verifiedPrices['first-time-client'] };
+};

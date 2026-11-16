@@ -1,0 +1,116 @@
+---
+import Button from '../Button.astro';
+import Reveal from '../Reveal.astro';
+import RequestForm from './RequestForm.astro';
+import { business, verifiedPrices } from '../../config/business';
+import { CTA_LABEL } from '../../config/nav';
+
+/**
+ * RequestBand
+ * -----------
+ * The conversion band: the price, the membership, and the request.
+ *
+ * It started on the homepage and now runs on every service page, every
+ * service-and-city page and every area hub — because the same gap was on all
+ * of them. Measured on a service page, the body carried no "Request
+ * Appointment" between the hero and the pricing table at all, and on an area
+ * hub the only action above the fold was a tap-to-call chip.
+ *
+ *   - THE PRICE. The first visit, at $249, with the consultation included.
+ *     The studio publishes every price, so the band never has to hint at one.
+ *
+ *   - THE MEMBERSHIP. The three tiers are $199–$399 a month and are the
+ *     highest-lifetime-value thing the studio sells. On the homepage the
+ *     membership appeared exactly once, inside a client's review quote. The
+ *     copy here argues it as the answer to the question the site already
+ *     asks — "what happens after the first visit" — because the work is
+ *     corrective and corrective work runs across a series.
+ *
+ *   - THE FORM. Every conversion used to be a redirect into Vagaro's
+ *     request flow: choose a treatment, choose a date, submit, wait for a
+ *     reply. The redirect is where the intent leaks. The form takes the
+ *     enquiry on the page first, and the appointment button sits beside it
+ *     for the reader who would rather pick a slot themselves.
+ */
+interface Props {
+  /** The heading above the two columns. */
+  heading: string;
+  /** The eyebrow above the heading. */
+  eyebrow?: string;
+  /** The GA4 event label for the band's buttons. */
+  eventLabel?: string;
+  /** The treatment the form preselects, for a page about one treatment. */
+  defaultTreatment?: string;
+}
+
+const {
+  heading,
+  eyebrow = 'Start here',
+  eventLabel = 'request_band',
+  defaultTreatment,
+} = Astro.props;
+---
+
+<section class="bg-espresso text-porcelain">
+  <div class="wrap section-y">
+    <Reveal>
+      <p class="t-eyebrow text-porcelain/60">{eyebrow}</p>
+      <h2 class="t-h2 mt-5 max-w-[24ch]">{heading}</h2>
+    </Reveal>
+
+    <div class="mt-14 grid gap-16 md:grid-cols-2 md:gap-20">
+      {/* ---- the first visit ---- */}
+      <div>
+        <p class="t-eyebrow text-blush">First visit</p>
+        <p class="t-price mt-4 text-[2.25rem] text-blush md:text-[2.75rem]">
+          {verifiedPrices['first-time-client']}
+        </p>
+        <p class="t-body mt-4 text-porcelain/85">
+          A consultation, a skin analysis and the first treatment, in one visit. Nothing is
+          treated before it has been looked at, and nothing is quoted at the door.
+        </p>
+
+        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Button
+            href={business.bookingUrl}
+            external
+            trackEvent="booking_click"
+            eventLabel={eventLabel}
+          >
+            {CTA_LABEL}
+          </Button>
+          <a
+            href={business.phone.href}
+            class="t-button border-b border-porcelain/40 pb-1 hover:border-porcelain"
+            onclick={`if(typeof gtag !== 'undefined') gtag('event', 'phone_click', {event_category: 'engagement', event_label: '${eventLabel}', transport_type: 'beacon'});`}
+          >
+            Call {business.phone.display}
+          </a>
+        </div>
+
+        {/* The membership. A series is what this work is; a monthly slot is
+            what makes the series practical. The anchor is geo-modified
+            because this is a hub page and the link is an editorial choice —
+            the footer keeps its area links bare. */}
+        <div class="mt-12 border-t border-porcelain/20 pt-9">
+          <p class="t-eyebrow text-porcelain/60">Or start with the series</p>
+          <p class="t-body mt-4 text-porcelain/85">
+            Correction runs across a series, not a single visit. A monthly plan keeps the schedule
+            on track and costs less than booking the same treatments one at a time — from
+            {' '}
+            {verifiedPrices['membership-glow']} a month.
+          </p>
+          <a
+            href="/membership/"
+            class="t-button mt-6 inline-block border-b border-porcelain/40 pb-1 hover:border-porcelain"
+          >
+            Compare monthly facial memberships in San Diego
+          </a>
+        </div>
+      </div>
+
+      {/* ---- the form ---- */}
+      <RequestForm defaultTreatment={defaultTreatment} />
+    </div>
+  </div>
+</section>

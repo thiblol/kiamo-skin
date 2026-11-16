@@ -1,0 +1,257 @@
+---
+import { testimonials } from '../../data/testimonials';
+import { gbpReviewsUrl } from '../../config/urls';
+import { business } from '../../config/business';
+
+/**
+ * ClientReviews
+ * -------------
+ * The client quotes, on their own.
+ *
+ * Split out of Results.astro so the quotes can sit directly under the price
+ * menu. They used to run two thirds of the way down the page, below the
+ * credentials, the outcomes and the before-and-afters — so a reader who had
+ * just read a price and wanted to know whether other people had paid it and
+ * liked it had to scroll past three more sections to find out.
+ *
+ * The order on the homepage is now the order of a decision: what it costs,
+ * what other people said, and then the request. This block is the middle of
+ * that, and it is the strongest social proof the site has.
+ */
+
+/**
+ * The quotes used as standalone moments elsewhere on the homepage. They are
+ * excluded here so the same voice never appears twice on one page — once as a
+ * set-piece quote, once scrolling past in the marquee. The marquee is the
+ * long tail; the standalone quotes are the moments a reader actually stops on.
+ */
+const scattered = new Set(['Brian A.', 'Arica L.']);
+
+const homepageReviews = testimonials.filter((t) => !t.area && !scattered.has(t.attribution));
+const row1 = homepageReviews.slice(0, 4);
+const row2 = homepageReviews.slice(4);
+---
+
+<section class="reviews-section" aria-label="Client reviews">
+  <div class="wrap reviews-header">
+    <p class="t-eyebrow reviews-eyebrow">Client experiences</p>
+    <h2 class="t-h2 reviews-h2">What clients say after corrective treatment in San Diego.</h2>
+  </div>
+
+  {/* The marquee wrapper is NOT aria-hidden. The duplicate row inside each
+      track is what carries aria-hidden — that is the copy that exists only to
+      make the loop seamless. Hiding the wrapper as well hid all 24 quote
+      elements from screen readers and from anything parsing the DOM, so the
+      page's only client quotes were invisible to both. */}
+  <div class="reviews-marquee-wrap">
+    <!-- Row 1: scrolls left -->
+    <div class="reviews-track reviews-track--left">
+      <ul class="reviews-row">
+        {row1.map((t) => (
+          <li class="review-card">
+            <p class="review-quote">&ldquo;{t.quote}&rdquo;</p>
+            <p class="review-meta">— {t.attribution}{t.platform ? `, ${t.platform}` : ''}</p>
+          </li>
+        ))}
+      </ul>
+      <ul class="reviews-row" aria-hidden="true">
+        {row1.map((t) => (
+          <li class="review-card">
+            <p class="review-quote">&ldquo;{t.quote}&rdquo;</p>
+            <p class="review-meta">— {t.attribution}{t.platform ? `, ${t.platform}` : ''}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <!-- Row 2: scrolls right -->
+    <div class="reviews-track reviews-track--right">
+      <ul class="reviews-row">
+        {row2.map((t) => (
+          <li class="review-card">
+            <p class="review-quote">&ldquo;{t.quote}&rdquo;</p>
+            <p class="review-meta">— {t.attribution}{t.platform ? `, ${t.platform}` : ''}</p>
+          </li>
+        ))}
+      </ul>
+      <ul class="reviews-row" aria-hidden="true">
+        {row2.map((t) => (
+          <li class="review-card">
+            <p class="review-quote">&ldquo;{t.quote}&rdquo;</p>
+            <p class="review-meta">— {t.attribution}{t.platform ? `, ${t.platform}` : ''}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap reviews-cta-wrap">
+    {/* The studio's own reviews page carries every Google review in full —
+        named, dated and in the client's own words — where the marquee above
+        shows edited one-liners. It sits first because it is the version that
+        can actually be read. */}
+    <a href="/reviews/" class="reviews-cta">
+      Read every review in full ↗
+    </a>
+    <a
+      href={gbpReviewsUrl(business.gbpPlaceId)}
+      target="_blank"
+      rel="noopener"
+      class="reviews-cta mt-6 block"
+    >
+      Read our Google reviews ↗
+    </a>
+    {/* The gallery holds every consented case in full — sessions, timeframe,
+        Fitzpatrick band and the written consent. The homepage showed two
+        before/afters and linked to it nowhere in its body, so the strongest
+        proof on the site was one click and one menu away from a reader who
+        never opened the menu. */}
+    <a href="/gallery/" class="reviews-cta mt-6 block">
+      See every published result ↗
+    </a>
+  </div>
+</section>
+
+<style>
+  .reviews-section {
+    background-color: var(--color-porcelain);
+    border-top: 1px solid var(--color-line);
+    padding-block: 96px 80px;
+  }
+
+  @media (min-width: 52.5rem) {
+    .reviews-section {
+      padding-block: 128px 96px;
+    }
+  }
+
+  .reviews-header {
+    text-align: center;
+    margin-bottom: 3.5rem;
+  }
+
+  .reviews-eyebrow {
+    color: var(--color-rose);
+    margin-bottom: 1.25rem;
+  }
+
+  .reviews-h2 {
+    margin-inline: auto;
+    max-width: 28ch;
+  }
+
+  /* Marquee container — clips overflow */
+  .reviews-marquee-wrap {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  /* Each row: two identical lists side by side */
+  .reviews-track {
+    display: flex;
+    width: max-content;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .reviews-track--left {
+      animation: scroll-left 40s linear infinite;
+    }
+    .reviews-track--right {
+      animation: scroll-right 40s linear infinite;
+    }
+  }
+
+  /* Auto-scrolling content needs a way to stop it. Hover covers a pointer,
+     but a keyboard user tabbing into the quotes needs the same control —
+     otherwise the review they are reading scrolls out from under them. */
+  .reviews-track:hover,
+  .reviews-track:focus-within {
+    animation-play-state: paused;
+  }
+
+  @keyframes scroll-left {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  @keyframes scroll-right {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
+  }
+
+  .reviews-row {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 1.25rem;
+    flex-shrink: 0;
+  }
+
+  .review-card {
+    background-color: var(--color-ivory);
+    border: 1px solid var(--color-line);
+    padding: 2rem 2.25rem;
+    width: 340px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 52.5rem) {
+    .review-card {
+      width: 400px;
+      padding: 2.5rem 2.75rem;
+    }
+  }
+
+  .review-quote {
+    font-family: var(--font-display);
+    font-weight: 300;
+    font-size: 1.125rem;
+    line-height: 1.6;
+    color: var(--color-ink);
+  }
+
+  @media (min-width: 52.5rem) {
+    .review-quote {
+      font-size: 1.25rem;
+    }
+  }
+
+  .review-meta {
+    font-family: var(--font-sans);
+    font-weight: 400;
+    font-size: 0.6875rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+  }
+
+  .reviews-cta-wrap {
+    text-align: center;
+    margin-top: 3.5rem;
+  }
+
+  .reviews-cta {
+    font-family: var(--font-sans);
+    font-weight: 500;
+    font-size: 0.75rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--color-ink);
+    text-decoration: underline;
+    text-underline-offset: 0.4em;
+    text-decoration-color: var(--color-ink);
+    transition: color 200ms ease, text-decoration-color 200ms ease;
+  }
+
+  .reviews-cta:hover {
+    color: var(--color-rose);
+    text-decoration-color: var(--color-rose);
+  }
+</style>

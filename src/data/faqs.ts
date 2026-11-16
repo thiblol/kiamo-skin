@@ -15,9 +15,9 @@
  * Order matters now. The four questions at the top are the ones that block a
  * booking outright — what it costs, what happens on the first visit, how many
  * sessions it takes, and whether this is the right kind of studio. FaqLocation
- * renders those four as visible text rather than collapsed accordions, so the
- * answer is on the page for a reader who never clicks. Everything below them
- * stays collapsed: it is real, but it is not what stops someone booking.
+ * opens the first three by default, so the answer is on the page for a reader
+ * who never clicks. Everything below them stays collapsed: it is real, but it
+ * is not what stops someone booking.
  */
 import { business, verifiedPrices } from '../config/business';
 

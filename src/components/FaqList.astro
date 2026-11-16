@@ -25,15 +25,26 @@ interface Props {
   /** Render the answer as HTML. Journal answers carry markup. */
   html?: boolean;
   class?: string;
+  /**
+   * How many questions start open.
+   *
+   * The answers stay in the DOM and in the schema either way — this only
+   * changes whether a reader has to click to see them. On the homepage the
+   * first three answer the questions that stop a booking outright (what it
+   * costs, what happens on the first visit, how many sessions it takes), and
+   * burying them behind a click at the bottom of a very long page meant the
+   * objection handling was there but invisible.
+   */
+  openFirst?: number;
 }
 
-const { faqs, html = false, class: className = '' } = Astro.props;
+const { faqs, html = false, class: className = '', openFirst = 0 } = Astro.props;
 ---
 
 <div class={`faq-section ${className}`}>
   {
-    faqs.map((faq) => (
-      <details class="group border-b border-line">
+    faqs.map((faq, i) => (
+      <details class="group border-b border-line" open={i < openFirst}>
         <summary class="t-service flex cursor-pointer list-none items-center justify-between gap-6 py-6 text-[1.0625rem] hover:text-rose md:text-[1.1875rem]">
           <span>{faq.question}</span>
           <span

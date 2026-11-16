@@ -24,7 +24,15 @@ const directionsUrl = gbpDirectionsUrl(business.gbpPlaceId, business.address.ful
   <div class="wrap grid gap-12 pt-[88px] pb-14 md:grid-cols-[1.3fr_1fr_1fr_1fr] md:gap-10 md:pt-[112px]">
     <div>
       <p class="font-display text-[1.5rem] uppercase tracking-[0.14em]">{business.shortName}</p>
-      <Button href={business.bookingUrl} external class="mt-7">{CTA_LABEL}</Button>
+      <Button
+        href={business.bookingUrl}
+        external
+        class="mt-7"
+        trackEvent="booking_click"
+        eventLabel="footer"
+      >
+        {CTA_LABEL}
+      </Button>
 
       <div class="mt-9">
         <LocationMap aspect="aspect-16/10" border="border-porcelain/25" class="max-w-[20rem]" />

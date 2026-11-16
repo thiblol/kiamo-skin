@@ -24,6 +24,7 @@ import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
 import FaqList from '../../components/FaqList.astro';
+import RequestBand from '../../components/sections/RequestBand.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 import { areaShells } from '../../data/area-shells';
 import { services } from '../../data/services';
@@ -134,13 +135,35 @@ const covered = matrix.filter((m) => m.rows.length > 0);
 
   <article>
     <header class="bg-blush">
-      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
+      <div class="wrap section-y pt-[calc(60px+40px)] md:pt-[calc(60px+112px)]">
         <div class="grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-20 items-center">
           <div>
             <Breadcrumbs current="Areas We Serve" meta="San Diego County" />
             <h1 class="t-h2 mt-6 max-w-[26ch] text-[2.5rem] md:text-[4rem]">
               Where clients travel from, and what the drive is worth
             </h1>
+
+            {/* The action sits directly under the headline. Measured on a
+                390×844 screen it was at 1,240px — the furthest down of any
+                page on the site, behind two paragraphs and a stat strip. */}
+            <div class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
+              <Button
+                href={business.bookingUrl}
+                external
+                trackEvent="booking_click"
+                eventLabel="areas_hub"
+              >
+                {CTA_LABEL}
+              </Button>
+              <a
+                href={business.phone.href}
+                class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+                onclick="if(typeof gtag !== 'undefined') gtag('event', 'phone_click', {event_category: 'engagement', event_label: 'areas_hub', transport_type: 'beacon'});"
+              >
+                {business.phone.display}
+              </a>
+            </div>
+
             <p class="t-body mt-7 text-[1.125rem] max-w-[62ch]">
               One treatment room in San Diego. Clients travel from {areaShells.length} areas across the
               county — from five minutes away to forty — for corrective skin and scalp work performed by
@@ -161,19 +184,15 @@ const covered = matrix.filter((m) => m.rows.length > 0);
               <span class="text-rose">·</span>
               <span>All skin types</span>
             </div>
-
-            <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-              <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
-              <a
-                href={business.phone.href}
-                class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
-              >
-                {business.phone.display}
-              </a>
-            </div>
           </div>
 
-          <div class="order-first md:order-last">
+          {/* The map comes AFTER the copy on mobile.
+              It used to lead, and the consequence was that the "Request
+              Appointment" button sat at 1,240px on a 390×844 screen — below
+              the fold, on the one page that ranks for "areas we serve". The
+              map is a good opener on a wide screen and a poor one on a
+              phone, where it pushed the action off the screen entirely. */}
+          <div class="md:order-last">
             <Image
               src={heroServiceAreasHub}
               alt="San Diego service area coverage map showing KIAMO Skin corrective facial services across the neighborhoods served"
@@ -317,7 +336,10 @@ const covered = matrix.filter((m) => m.rows.length > 0);
             <h2 class="t-h2 mt-5">Travelling for a facial in San Diego</h2>
           </Reveal>
           <div class="mt-12">
-            <FaqList faqs={faqs} />
+            {/* The first two answer in full on the page — how far clients
+                travel, and whether parking is an issue — because they are
+                what a reader from another city is deciding about. */}
+            <FaqList faqs={faqs} openFirst={2} />
           </div>
         </div>
       </div>
@@ -328,5 +350,16 @@ const covered = matrix.filter((m) => m.rows.length > 0);
         <NapBlock />
       </div>
     </section>
+
+    {/* The request. The directory answers "where"; this answers "how do I
+        book", with the price and the button next to it. */}
+    <RequestBand
+      heading="Start in San Diego — with a price before you book."
+      eventLabel="areas_hub_band"
+    />
+
+    <script>
+      import '../../scripts/scroll-depth';
+    </script>
   </article>
 </BaseLayout>

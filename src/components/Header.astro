@@ -48,28 +48,34 @@ import { CTA_LABEL } from '../config/nav';
     </a>
 
     <div class="flex items-center gap-3 sm:gap-4">
-      {/* Visible at every width, and it carries the same rose fill as the
-          Request Appointment button so the two conversion paths read as a
-          pair rather than one button with an unstyled number floating
-          beside it. Previously this chip was porcelain on mobile and fully
-          transparent above `sm`, which left it sitting on the header with
-          no background at all — the number disappeared into the bar.
+      {/* The phone number. Visible at every width.
 
-          A rose pill also solves the contrast problem the porcelain chip
-          was solving: the header is transparent over the hero photograph
-          and the top of that crop is a dark brown wall. A self-coloured
-          fill means the chip never depends on what is behind it, in
-          either the scrolled or the unscrolled state. */}
+          HIERARCHY. On desktop this sits beside the "Request Appointment"
+          button, and both were painted the same rose — two identical pills of
+          equal weight, so nothing said which one was the point of the header.
+          From `sm` up the chip is now an outline and the appointment button
+          keeps the fill, so the primary action reads as primary.
+
+          Below `sm` the appointment button is hidden and this chip is the only
+          conversion action in the header, so it keeps the filled treatment
+          there. A visitor on a phone gets a tappable number from the first
+          screen; a visitor on a desktop gets one clear primary button.
+
+          The outline follows `currentColor`, which the header already flips
+          between ink and porcelain with the theme, so the chip never depends
+          on what is behind it in either the scrolled or unscrolled state. */}
       <a
         href={business.phone.href}
-        class="t-body inline-flex h-[42px] items-center rounded-full bg-rose px-4 text-[0.875rem] leading-none whitespace-nowrap text-porcelain transition-colors hover:bg-rose-deep sm:text-[0.9375rem]"
+        class="header-ink header-phone t-body inline-flex h-[42px] items-center rounded-full px-4 text-[0.875rem] leading-none whitespace-nowrap transition-colors max-sm:bg-rose max-sm:hover:bg-rose-deep sm:text-[0.9375rem]"
         onclick="if(typeof gtag !== 'undefined') gtag('event', 'phone_click', {event_category: 'engagement', event_label: 'header', transport_type: 'beacon'});"
       >
         <span class="sr-only">Call the studio at </span>{business.phone.display}
       </a>
 
       <div class="hidden sm:block">
-        <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+        <Button href={business.bookingUrl} external trackEvent="booking_click" eventLabel="header">
+          {CTA_LABEL}
+        </Button>
       </div>
 
       <button
@@ -117,5 +123,22 @@ import { CTA_LABEL } from '../config/nav';
   :global(body[data-header-theme='dark']) #site-header[data-scrolled='false'] .header-ink {
     color: var(--color-porcelain);
     text-shadow: 0 1px 4px rgba(34, 31, 29, 0.75);
+  }
+
+  /* The phone chip's outline, from `sm` up. Below that it is the only
+     conversion action in the header and keeps its filled treatment.
+     `currentColor` means the ring follows the theme — ink on a light hero,
+     porcelain on a dark one, and ink again once the header turns porcelain
+     on scroll — without a second rule. */
+  @media (min-width: 40rem) {
+    .header-phone {
+      border: 1px solid color-mix(in srgb, currentColor 45%, transparent);
+    }
+
+    .header-phone:hover {
+      border-color: var(--color-rose);
+      color: var(--color-rose);
+      text-shadow: none;
+    }
   }
 </style>

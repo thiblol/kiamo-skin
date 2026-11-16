@@ -7,6 +7,8 @@ import Credentials from '../components/sections/Credentials.astro';
 import ConcernTiles from '../components/sections/ConcernTiles.astro';
 import Outcomes from '../components/sections/Outcomes.astro';
 import Results from '../components/sections/Results.astro';
+import ClientReviews from '../components/sections/ClientReviews.astro';
+import RequestBand from '../components/sections/RequestBand.astro';
 import SocialReels from '../components/sections/SocialReels.astro';
 import SanDiegoContext from '../components/sections/SanDiegoContext.astro';
 import AreasNearby from '../components/sections/AreasNearby.astro';
@@ -19,8 +21,8 @@ import SpeakableSchema from '../components/schema/SpeakableSchema.astro';
 /**
  * The homepage, on the reference rhythm.
  *
- *   hero → the treatments and their prices → why-us proof → what to
- *   expect → proof → the local context → areas → questions → the studio
+ *   hero → the treatments and their prices → what clients say → start here →
+ *   why-us proof → what to expect → the local context → areas → questions
  *
  * It used to be twenty sections with thirteen headings, and the headings
  * repeated each other — a positioning statement, a credential grid and a
@@ -33,6 +35,18 @@ import SpeakableSchema from '../components/schema/SpeakableSchema.astro';
  * section, not four — the client quotes live in one marquee, and the
  * set-piece quote that used to sit between the prices and the case list is
  * in that marquee too.
+ *
+ * The order is the order of a decision. The price list is what a visitor
+ * arrives for; the client quotes are what they check it against; and the
+ * request sits immediately after both. The client quotes used to run two
+ * thirds of the way down the page, and the body carried no "Request
+ * Appointment" at all between the hero and the FAQ section — 13,577px of a
+ * 16,051px page. Both are fixed here: the quotes moved up next to the
+ * prices, and the CTA band moved up with them.
+ *
+ * Nothing about the page's SEO changed: one H1 carrying the geo phrase, the
+ * same title and meta description, the same schema, and every keyword-
+ * bearing sentence still on the page.
  */
 
 /* Anchor dates for the WebPage schema node. The values are not invented
@@ -79,15 +93,24 @@ const webPageSchema = {
   {/* The treatments, where to start with them, and what each one costs. */}
   <ConcernTiles />
 
+  {/* What other people said. Directly under the prices, because a visitor
+      who has just read "$259" wants to know whether anyone else paid it and
+      liked it before they decide. */}
+  <ClientReviews />
+
+  {/* The request. The price, the proof and the button, together — and the
+      membership, which used to appear on this page only inside a client's
+      review quote. */}
+  <RequestBand heading="Start in San Diego with a price before you book." eventLabel="start_here" />
+
   {/* Why-us proof: the positioning line, the practitioner, the credentials. */}
   <Credentials />
 
   {/* What correction actually takes, and the cases it has taken it in. */}
   <Outcomes />
 
-  {/* The proof itself: before and after, the treatment room, and what
-      clients say. The clips sit inside this section rather than claiming a
-      heading of their own. */}
+  {/* The proof itself: before and after, and the treatment room. The clips
+      sit inside this section rather than claiming a heading of their own. */}
   <Results>
     <SocialReels slot="media" />
   </Results>
@@ -100,4 +123,20 @@ const webPageSchema = {
   <AreasNearby />
 
   <FaqLocation faqs={homepageFaqs} />
+
+  <script>
+    /**
+     * Scroll depth.
+     *
+     * The page is very long — over 16,000px on desktop — and until this
+     * shipped there was no way to know where a reader stopped. Without it,
+     * "should the reviews move up" is a guess. Four thresholds, each fired
+     * once, tagged with the section the reader was in.
+     *
+     * GA4's own scroll_depth does not fire for a reader who never scrolls,
+     * and reports the percentage rather than the section, so it cannot say
+     * which block was the last one they saw.
+     */
+    import '../scripts/scroll-depth';
+  </script>
 </BaseLayout>

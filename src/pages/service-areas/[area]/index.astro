@@ -21,6 +21,7 @@ import BreadcrumbSchema from '../../../components/schema/BreadcrumbSchema.astro'
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import FaqSchema from '../../../components/schema/FaqSchema.astro';
 import FaqList from '../../../components/FaqList.astro';
+import RequestBand from '../../../components/sections/RequestBand.astro';
 import SpeakableSchema from '../../../components/schema/SpeakableSchema.astro';
 import AreaServiceSchema from '../../../components/schema/AreaServiceSchema.astro';
 import { areaShells } from '../../../data/area-shells';
@@ -123,19 +124,34 @@ const description = `Corrective facials for ${shell.name} clients in San Diego. 
             <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.25rem] md:text-[3.5rem]">
               Corrective facials in {shell.name}, San Diego
             </h1>
-            <p class="t-body mt-6 max-w-[56ch] text-[1.125rem]">{shell.localConcern.body}</p>
-            <p class="t-body mt-5 max-w-[56ch] text-[0.9375rem] text-ink-soft">
-              {shell.proximity}. Free parking on site, by appointment only.
-            </p>
-            <div class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
-              <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+
+            {/* The action sits directly under the headline.
+                Measured on a 390×844 screen, it was at 1,058px — below the
+                fold, behind a paragraph of local skin detail. A reader who
+                has just read what the studio does in their own city should
+                be able to act on it before they scroll, not after. */}
+            <div class="mt-7 flex flex-wrap items-center gap-x-8 gap-y-4">
+              <Button
+                href={business.bookingUrl}
+                external
+                trackEvent="booking_click"
+                eventLabel="area_hub"
+              >
+                {CTA_LABEL}
+              </Button>
               <a
                 href={business.phone.href}
                 class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+                onclick="if(typeof gtag !== 'undefined') gtag('event', 'phone_click', {event_category: 'engagement', event_label: 'area_hub', transport_type: 'beacon'});"
               >
                 {business.phone.display}
               </a>
             </div>
+
+            <p class="t-body mt-7 max-w-[56ch] text-[1.125rem]">{shell.localConcern.body}</p>
+            <p class="t-body mt-5 max-w-[56ch] text-[0.9375rem] text-ink-soft">
+              {shell.proximity}. Free parking on site, by appointment only.
+            </p>
           </div>
 
           <div>
@@ -180,12 +196,19 @@ const description = `Corrective facials for ${shell.name} clients in San Diego. 
                   <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
                     {svc?.name ?? record.service} in {shell.name}
                   </h3>
-                  {record.pricing?.[0] && (
-                    <p class="t-price shrink-0 text-rose">{record.pricing[0].price}</p>
+                  {/* The price, beside the treatment.
+                      This list carried no prices at all: the records have a
+                      `pricingNote` but no `pricing` array, so the template's
+                      `record.pricing?.[0]` was always undefined. On a page
+                      that ranks for "facial {city}" — a cost question — that
+                      was the most expensive thing missing. The price comes
+                      from the service's own published menu price. */}
+                  {svc?.menuPrice && (
+                    <p class="t-price shrink-0 text-rose">{svc.menuPrice}</p>
                   )}
                 </div>
                 <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">
-                  {svc?.opener ?? record.opener}
+                  {svc?.menuLine ?? svc?.opener ?? record.opener}
                 </p>
               </a>
             </li>
@@ -252,7 +275,10 @@ const description = `Corrective facials for ${shell.name} clients in San Diego. 
             <h2 class="t-h2 mt-5">Before you travel</h2>
           </Reveal>
           <div class="mt-12">
-            <FaqList faqs={faqs} />
+            {/* The first two answer in full on the page — how far it is, and
+                what is available for this city — because they are what
+                decides whether the drive is worth it. */}
+            <FaqList faqs={faqs} openFirst={2} />
           </div>
         </div>
       </div>
@@ -263,5 +289,16 @@ const description = `Corrective facials for ${shell.name} clients in San Diego. 
         <NapBlock />
       </div>
     </section>
+
+    {/* The request. An area hub ranks for a cost question, so it needs the
+        price and the button as well as the list of treatments. */}
+    <RequestBand
+      heading={`Start in ${shell.name} — with a price before you book.`}
+      eventLabel="area_hub_band"
+    />
+
+    <script>
+      import '../../../scripts/scroll-depth';
+    </script>
   </article>
 </BaseLayout>

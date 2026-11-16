@@ -29,8 +29,26 @@ const { service } = Astro.props;
 const site = Astro.site;
 const url = absolute(servicePath(service.slug), site);
 
-const numeric = (service.pricing ?? [])
-  .map((row) => ({ label: row.label, value: Number(row.price.replace(/[$,]/g, '')) }))
+/**
+ * The prices the page states, as numbers.
+ *
+ * A modality page has `pricing`. A concern page has `planMembers` — the
+ * components its plan is assembled from — and those pages now show their
+ * prices too, so their schema has to carry the same figures.
+ *
+ * A range like "$199–$299" contributes its floor: the low price of the
+ * plan, which is what a reader budgets against.
+ */
+const numeric = [
+  ...(service.pricing ?? []).map((row) => ({ label: row.label, price: row.price })),
+  ...(service.planMembers ?? [])
+    .filter((member) => member.price)
+    .map((member) => ({ label: member.name, price: member.price as string })),
+]
+  .map((row) => ({
+    label: row.label,
+    value: Number(row.price.split('–')[0].replace(/[$,]/g, '')),
+  }))
   .filter((row) => Number.isFinite(row.value) && row.value > 0);
 
 const offers =

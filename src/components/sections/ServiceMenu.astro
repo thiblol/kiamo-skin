@@ -31,11 +31,21 @@ const { class: className = '' } = Astro.props;
  * first-time client is actually quoted. A service priced at consultation
  * shows that string rather than a number, because it is not a number and
  * setting it as one would be a claim the studio does not make.
+ *
+ * The price is the service's own `menuPrice`, not the first entry of its
+ * `pricing` array. Several services list the first-visit treatment first, so
+ * reading `pricing[0]` printed the First-Time Client Treatment's $249 against
+ * HydraFacial — a figure the hero paragraph contradicted ten lines above it,
+ * and one the visitor would be quoted against on arrival.
  */
-const rowPrice = (pricing?: { price: string }[]) => {
+const rowPrice = (pricing?: { price: string }[], menuPrice?: string) => {
+  if (menuPrice) return menuPrice;
   if (!pricing || pricing.length === 0) return '';
   return pricing[0].price;
 };
+
+/** "Pricing at consultation." is a statement, not a price — it is set quieter. */
+const isConsultation = (price: string) => price.startsWith('Pricing at');
 ---
 
 {/*
@@ -45,7 +55,7 @@ const rowPrice = (pricing?: { price: string }[]) => {
   dump.
 */}
 <div class={className}>
-  <h3 class="t-h3 max-w-[26ch]">Every treatment, with its published price</h3>
+  <h3 class="t-h3 max-w-[26ch]">Every treatment, and what it costs</h3>
 
   <div
   role="tablist"
@@ -81,7 +91,7 @@ const rowPrice = (pricing?: { price: string }[]) => {
   <ul id="service-rows" class="m-0 list-none p-0">
     {
       services.map((s) => {
-        const price = rowPrice(s.pricing);
+        const price = rowPrice(s.pricing, s.menuPrice);
         return (
           <li data-category={s.category} class="border-b border-line">
             <div class="group grid grid-cols-1 items-baseline gap-y-3 py-7 transition-colors duration-[280ms] ease-out hover:bg-porcelain md:grid-cols-[minmax(0,1fr)_auto] md:gap-x-10">
@@ -91,18 +101,31 @@ const rowPrice = (pricing?: { price: string }[]) => {
                     {s.name}
                   </a>
                 </h3>
-                <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{s.opener}</p>
+                <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{s.menuLine ?? s.opener}</p>
               </div>
 
               <div class="flex items-center gap-6 md:justify-end">
-                {price && <p class="t-price whitespace-nowrap transition-colors duration-[280ms] group-hover:text-rose">{price}</p>}
+                {price && (
+                  <p
+                    class:list={[
+                      't-price whitespace-nowrap transition-colors duration-[280ms]',
+                      isConsultation(price) ? 'text-[0.8125rem] text-ink-soft' : 'group-hover:text-rose',
+                    ]}
+                  >
+                    {price}
+                  </p>
+                )}
+                {/* The label says "Request", not "Book". Booking here is a
+                    request that is confirmed back, and a link that says
+                    "Book" sets an expectation the studio does not meet. */}
                 <a
                   href={business.bookingUrl}
                   target="_blank"
                   rel="noopener"
                   class="t-button shrink-0 border-b border-ink pb-1 hover:border-rose hover:text-rose"
+                  onclick={`if(typeof gtag !== 'undefined') gtag('event', 'booking_click', {event_category: 'engagement', event_label: 'menu_${s.slug}', transport_type: 'beacon'});`}
                 >
-                  Book<span class="sr-only"> {s.name}</span>
+                  Request<span class="sr-only"> {s.name}</span>
                 </a>
               </div>
             </div>

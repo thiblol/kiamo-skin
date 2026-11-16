@@ -20,7 +20,7 @@ import BreadcrumbSchema from '../../../components/schema/BreadcrumbSchema.astro'
 import FaqSchema from '../../../components/schema/FaqSchema.astro';
 import SpeakableSchema from '../../../components/schema/SpeakableSchema.astro';
 import PersonSchema from '../../../components/schema/PersonSchema.astro';
-import { services } from '../../../data/services';
+import { services, heroPriceFor } from '../../../data/services';
 import { treatmentFaqs } from '../../../data/treatment-faqs';
 import { treatmentTrust } from '../../../data/treatment-trust';
 import { getServiceAreasForService } from '../../../data/service-areas-index';
@@ -80,7 +80,7 @@ const cityLinks = getServiceAreasForService(service.slug).map((record) => ({
     concerns={service.goodFor ?? service.concerns}
     steps={service.steps}
     pricing={service.pricing}
-    entryPricing={service.pricing?.[0]}
+    planMembers={service.planMembers}
     faqs={faqs}
     trustSlug={service.slug}
     ancestors={[{ name: 'Services', path: '/services/' }]}
@@ -93,9 +93,7 @@ const cityLinks = getServiceAreasForService(service.slug).map((record) => ({
       paragraph: service.hero.paragraph,
       image: service.image,
       imageAlt: service.imageAlt,
-      price: service.pricing?.[0]
-        ? { label: service.pricing[0].label, price: service.pricing[0].price }
-        : undefined,
+      price: heroPriceFor(service),
       trust: service.hero.trust,
     }}
   />

@@ -1,0 +1,181 @@
+---
+import { business } from '../../config/business';
+import { services } from '../../data/services';
+
+/**
+ * RequestForm
+ * -----------
+ * The first-party enquiry form.
+ *
+ * Why it is here: every conversion on this site was a redirect into Vagaro's
+ * request flow — pick a treatment, pick a date, submit, wait for a reply.
+ * That chain is long, and the redirect is where the intent leaks. A form on
+ * the page takes the enquiry first. The "Request Appointment" button sits
+ * beside it for the reader who would rather choose a slot themselves, so the
+ * form adds a path rather than replacing one.
+ *
+ * HOW IT SENDS
+ * The form posts to /api/appointment-request — a Cloudflare Pages Function in
+ * functions/api/appointment-request.js, which emails the enquiry to the
+ * studio. It needs RESEND_API_KEY set as a Pages environment variable; see
+ * that file. Without it the function refuses the enquiry rather than dropping
+ * it, and this form falls back to showing the phone number, so an enquiry is
+ * never silently lost.
+ *
+ * WITHOUT JAVASCRIPT
+ * The form carries a real action and method, so it posts normally and the
+ * function redirects to the booking page. No JavaScript means no silence.
+ *
+ * The field count is deliberate. Four fields, two of them required: a request
+ * that asks for a date, a budget, a history and a referral is a request
+ * nobody completes.
+ */
+const treatmentOptions = services.map((s) => s.name);
+
+/**
+ * The treatment the form opens with, for a page that is about one treatment.
+ * A reader on the HydraFacial page has already told us what they want; asking
+ * them to choose again is a small thing to get wrong.
+ */
+const { defaultTreatment } = Astro.props as { defaultTreatment?: string };
+const preselect = defaultTreatment
+  ? treatmentOptions.find((name) => name === defaultTreatment)
+  : undefined;
+---
+
+<div class="border border-porcelain/20 bg-porcelain/[0.04] p-8 md:p-10">
+  <h3 class="t-h3 text-[1.375rem] md:text-[1.625rem]">Ask before you decide</h3>
+  <p class="t-body mt-4 text-[0.9375rem] text-porcelain/75">
+    Not sure which treatment fits, or what it would take? Send the question. It goes straight
+    to the studio, and the reply comes from the person who would be doing the work.
+  </p>
+
+  <form
+    id="appointment-request"
+    class="mt-8"
+    action="/api/appointment-request"
+    method="post"
+  >
+    {/* Honeypot. A person never fills this in; a bot does. */}
+    <div class="sr-only" aria-hidden="true">
+      <label for="appointment-website">Website</label>
+      <input id="appointment-website" name="website" type="text" tabindex="-1" autocomplete="off" />
+    </div>
+
+    <div class="grid gap-5 sm:grid-cols-2">
+      <div>
+        <label class="t-meta block" for="appointment-name">Name</label>
+        <input
+          id="appointment-name"
+          name="name"
+          type="text"
+          required
+          autocomplete="name"
+          class="mt-2 w-full border border-porcelain/25 bg-transparent px-4 py-3 text-porcelain outline-none transition-colors placeholder:text-porcelain/40 focus:border-blush"
+        />
+      </div>
+
+      <div>
+        <label class="t-meta block" for="appointment-phone">Phone</label>
+        <input
+          id="appointment-phone"
+          name="phone"
+          type="tel"
+          required
+          autocomplete="tel"
+          class="mt-2 w-full border border-porcelain/25 bg-transparent px-4 py-3 text-porcelain outline-none transition-colors placeholder:text-porcelain/40 focus:border-blush"
+        />
+      </div>
+    </div>
+
+    <div class="mt-5">
+      <label class="t-meta block" for="appointment-treatment">Treatment</label>
+      <select
+        id="appointment-treatment"
+        name="treatment"
+        class="mt-2 w-full border border-porcelain/25 bg-transparent px-4 py-3 text-porcelain outline-none transition-colors [color-scheme:dark] focus:border-blush"
+      >
+        <option value="" selected={!preselect}>Not sure yet</option>
+        {treatmentOptions.map((name) => (
+          <option value={name} selected={name === preselect}>{name}</option>
+        ))}
+      </select>
+    </div>
+
+    <div class="mt-5">
+      <label class="t-meta block" for="appointment-message">Your question</label>
+      <textarea
+        id="appointment-message"
+        name="message"
+        rows="3"
+        class="mt-2 w-full resize-y border border-porcelain/25 bg-transparent px-4 py-3 text-porcelain outline-none transition-colors placeholder:text-porcelain/40 focus:border-blush"
+        placeholder="What is your skin doing, and what have you already tried?"></textarea>
+    </div>
+
+    <button
+      type="submit"
+      id="appointment-submit"
+      class="t-button mt-7 inline-flex h-[46px] w-full items-center justify-center rounded-full bg-rose px-6 text-porcelain transition-colors hover:bg-rose-deep disabled:opacity-60"
+    >
+      Send the request
+    </button>
+
+    <p class="t-meta mt-4 text-porcelain/50">
+      No obligation. Or call {business.phone.display} if you would rather talk it through.
+    </p>
+  </form>
+
+  {/* The two outcomes, swapped in by the script below. */}
+  <p
+    id="appointment-status"
+    class="t-body mt-6 hidden text-[0.9375rem] text-porcelain/85"
+    role="status"
+    aria-live="polite"
+  >
+  </p>
+</div>
+
+<script define:vars={{ phone: business.phone.display }}>
+  const form = document.getElementById('appointment-request');
+  const submit = document.getElementById('appointment-submit');
+  const status = document.getElementById('appointment-status');
+
+  if (form && submit && status) {
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+
+      if (!form.reportValidity()) return;
+
+      const data = Object.fromEntries(new FormData(form).entries());
+      submit.disabled = true;
+      submit.textContent = 'Sending…';
+      status.classList.remove('hidden');
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        if (!response.ok) throw new Error('request_failed');
+
+        form.classList.add('hidden');
+        status.textContent =
+          'Thank you — your request is with the studio. If you need an answer sooner, call or text ' +
+          phone +
+          '.';
+      } catch {
+        // The honest failure path. The enquiry has not been sent, so the
+        // reader is told that and given the phone number — an enquiry is
+        // never lost silently.
+        submit.disabled = false;
+        submit.textContent = 'Send the request';
+        status.textContent =
+          'That did not send — something is not working on the form right now. Please call or text ' +
+          phone +
+          ' and the studio will pick it up from there.';
+      }
+    });
+  }
+</script>

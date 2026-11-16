@@ -58,9 +58,14 @@ const { faqs = bookingFaqs } = Astro.props as { faqs?: Faq[] };
  *
  * The answers used to run as two tiers — four at full size, the rest as a
  * quieter reference block. Both tiers are now behind a click, rendered
- * through FaqList, so the section reads as seven questions rather than
- * seven paragraphs of copy the reader has to scroll past to reach the
- * booking button.
+ * through FaqList, so the section reads as a list of questions rather than a
+ * wall of copy the reader has to scroll past to reach the booking button.
+ *
+ * The first three answers are open by default. Those are the questions that
+ * stop a booking outright — what it costs, what happens on the first visit,
+ * and how many treatments it takes — and the FAQ section sits at the very
+ * bottom of a long homepage. With every answer collapsed, the objection
+ * handling was in the page but not in front of anybody.
  *
  * The answers are unchanged. They are still in the HTML, still in the
  * schema, and still spoken by the speakable schema — the reader just
@@ -86,7 +91,7 @@ const reviewsUrl = gbpReviewsUrl(business.gbpPlaceId);
 
       {/* The questions. Every answer opens on click. */}
       <div class="mt-12">
-        <FaqList faqs={faqs} />
+        <FaqList faqs={faqs} openFirst={3} />
       </div>
     </div>
 
@@ -108,7 +113,9 @@ const reviewsUrl = gbpReviewsUrl(business.gbpPlaceId);
       </div>
 
       <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-        <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
+        <Button href={business.bookingUrl} external trackEvent="booking_click" eventLabel="faq">
+          {CTA_LABEL}
+        </Button>
         {/* Dual CTA — T8. Different people convert differently, and a call is
             the lower-friction half when booking is request-based. */}
         <a

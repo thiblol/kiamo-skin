@@ -22,6 +22,7 @@ import { CTA_LABEL } from '../config/nav';
     target="_blank"
     rel="noopener"
     class="t-button flex h-[56px] flex-1 items-center justify-center bg-rose text-porcelain"
+    onclick="if(typeof gtag !== 'undefined') gtag('event', 'booking_click', {event_category: 'engagement', event_label: 'sticky_bar', transport_type: 'beacon'});"
   >
     {CTA_LABEL}
   </a>

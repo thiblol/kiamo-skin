@@ -19,7 +19,7 @@ import BreadcrumbSchema from '../../../../components/schema/BreadcrumbSchema.ast
 import FaqSchema from '../../../../components/schema/FaqSchema.astro';
 import SpeakableSchema from '../../../../components/schema/SpeakableSchema.astro';
 import PersonSchema from '../../../../components/schema/PersonSchema.astro';
-import { services } from '../../../../data/services';
+import { services, heroPriceFor } from '../../../../data/services';
 import {
   serviceAreas,
   getServiceAreasForService,
@@ -107,6 +107,8 @@ const siblingCities = getServiceAreasForService(record.service)
     localConcern={record.localConcern}
     gettingHere={record.gettingHere}
     steps={record.depth.process}
+    pricing={service?.pricing}
+    planMembers={service?.planMembers}
     body={record.body}
     faqs={record.faqs}
     trustSlug={record.service}
@@ -126,11 +128,7 @@ const siblingCities = getServiceAreasForService(record.service)
       paragraph: heroParagraph,
       image: areaImages[record.area],
       imageAlt: areaImageAlts[record.area],
-      price: record.pricing?.[0]
-        ? { label: record.pricing[0].label, price: record.pricing[0].price }
-        : service?.pricing?.[0]
-          ? { label: service.pricing[0].label, price: service.pricing[0].price }
-          : undefined,
+      price: service ? heroPriceFor(service) : undefined,
       trust: service?.hero.trust ?? [],
     }}
   />
