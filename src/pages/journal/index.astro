@@ -3,34 +3,101 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import Reveal from '../../components/Reveal.astro';
 import PanelWipe from '../../components/PanelWipe.astro';
+import Button from '../../components/Button.astro';
+import FaqList from '../../components/FaqList.astro';
+import TrustBadge from '../../components/sections/TrustBadge.astro';
+import ProofQuote from '../../components/ProofQuote.astro';
+import FaqSchema from '../../components/schema/FaqSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { articles } from '../../data/articles';
+import { journalFaqs } from '../../data/journal-faqs';
+import { testimonials } from '../../data/testimonials';
+import { business, verifiedPrices } from '../../config/business';
+import { CTA_LABEL } from '../../config/nav';
+
+/**
+ * Newest first.
+ *
+ * The array order is the order the pieces were written, which is not the order
+ * a reader should meet them in. Sorting by the last-updated date also puts a
+ * freshness signal on the index itself, which matters for a hub whose value is
+ * that it is maintained.
+ */
+const byDate = [...articles].sort((a, b) => b.dateModified.localeCompare(a.dateModified));
+
+const formatDate = (iso: string): string => {
+  const [year, month, day] = iso.split('-');
+  const months = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
+  ];
+  return `${months[Number(month) - 1] ?? month} ${Number(day)}, ${year}`;
+};
+
+/**
+ * The proof that sits under the headline.
+ *
+ * A reader arrives from a search with a question, not a trust. The count and
+ * the rating answer the first one — is there a real studio behind this — and
+ * the quote answers the second — has it worked for someone like me. Both sit
+ * in the first screen rather than at the foot of the page, because a trust
+ * signal at the bottom of a page is a trust signal nobody reaches.
+ */
+const proof = testimonials.find((t) => t.quote.includes('trust anyone else')) ?? testimonials[0];
+
+/**
+ * The second proof point, further down the page.
+ *
+ * A different client, so the two quotes say different things: the first is
+ * about staying with the studio over years, this one is about the result
+ * being visible.
+ */
+const secondProof =
+  testimonials.find((t) => t.quote.includes('Real, visible results')) ?? testimonials[1];
 ---
 
 <BaseLayout
-  title="Journal — Skin & Scalp Notes | KIAMO Skin San Diego"
-  description="Notes on treating skin and scalp in San Diego — the marine layer, hard water, and what the local climate does to a routine."
+  title="Journal: Skin & Scalp Notes in San Diego | KIAMO Skin"
+  description="Field notes on skin and scalp in San Diego — the marine layer, hard water, and what the climate does to a routine, from a licensed esthetician."
 >
+  <FaqSchema slot="head" faqs={journalFaqs} />
   <BreadcrumbSchema slot="head" trail={[{ name: 'Journal', path: '/journal' }]} />
   <header class="bg-blush">
     <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
       <Breadcrumbs current="Journal" />
-      <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">
-        Notes from the treatment room.
+      <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.5rem] md:text-[4rem]">
+        What actually works on skin and scalp in San Diego.
       </h1>
       <p class="t-body mt-7 max-w-[58ch]">
-        Written for people being treated in San Diego, where the climate is a bigger factor in how
-        skin behaves than most routines account for.
+        Field notes from the treatment room, written for people being treated in San Diego. The
+        climate is a bigger factor in how skin behaves here than most routines account for.
       </p>
+
+      {/* Trust, in the first screen.
+          The rating and the count are the studio's own verified GBP figures and
+          are rendered as visible HTML only — no schema-claimed review count,
+          which the guard suite forbids and which the site's own history
+          justifies. The quote is a real client quote, and it is the
+          long-running-client one, because a reader deciding whether these
+          notes are worth reading wants to know whether the studio holds up
+          over years rather than over weeks. */}
+      <div class="mt-12 grid gap-10 border-t border-line pt-10 md:grid-cols-[auto_1fr] md:gap-16">
+        <TrustBadge class="md:w-[22rem] md:shrink-0" />
+        <ProofQuote testimonial={proof} />
+      </div>
     </div>
   </header>
 
   <section class="bg-porcelain">
     <div class="wrap section-y">
-      <ul class="m-0 grid list-none gap-x-10 gap-y-16 p-0 md:grid-cols-2">
+      <div class="flex flex-wrap items-baseline justify-between gap-4">
+        <h2 class="t-h3">All notes</h2>
+        <p class="t-meta">{byDate.length} pieces</p>
+      </div>
+      <ul class="m-0 mt-10 grid list-none gap-x-10 gap-y-16 p-0 md:grid-cols-2">
         {
-          articles.map((article, i) => (
+          byDate.map((article, i) => (
             <Reveal as="li">
               <a href={`/journal/${article.slug}/`} class="group block">
                 <PanelWipe from={i % 2 === 0 ? 'left' : 'right'} class="aspect-4/3">
@@ -43,16 +110,88 @@ import { articles } from '../../data/articles';
                     class="size-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105"
                   />
                 </PanelWipe>
-                <p class="t-meta mt-6">{article.readingTime}</p>
-                <h2 class="t-h3 mt-3 text-[1.5rem] transition-colors duration-300 group-hover:text-rose md:text-[1.75rem]">
+                {/* The date, not just the reading time.
+                    A reader scanning a list of articles is deciding which one
+                    is current enough to be worth opening, and a reading time
+                    does not answer that. The date does, and it is the same
+                    freshness signal that governs AI citation. */}
+                <p class="t-meta mt-6">
+                  <time datetime={article.dateModified}>{formatDate(article.dateModified)}</time>
+                  <span aria-hidden="true"> · </span>
+                  {article.readingTime}
+                </p>
+                <h3 class="t-h3 mt-3 text-[1.5rem] transition-colors duration-300 group-hover:text-rose md:text-[1.75rem]">
                   {article.headline}
-                </h2>
+                </h3>
                 <p class="t-body mt-4 text-[0.9375rem] text-ink-soft">{article.standfirst}</p>
+                <span class="t-meta mt-5 inline-block border-b border-ink/40 pb-1 transition-colors duration-300 group-hover:border-rose group-hover:text-rose">
+                  Read the note
+                </span>
               </a>
             </Reveal>
           ))
         }
       </ul>
+    </div>
+  </section>
+
+  {/* The questions, answered where they are asked.
+      This is the index's own FAQ, and it answers the objections that stop a
+      booking: who wrote this, does it apply to my skin, what does it cost,
+      what happens if I book, and where to start reading. The answers are
+      visible rather than collapsed, because a collapsed answer on an SEO page
+      is an answer that does not get indexed or surfaced. */}
+  <section class="bg-ivory py-20 md:py-28">
+    <div class="wrap section-y">
+      <div class="max-w-[68ch]">
+        <p class="t-eyebrow text-ink-soft">Before you read on</p>
+        <h2 class="t-h2 mt-5">Questions about these notes</h2>
+      </div>
+      <div class="mt-12 max-w-[68ch]">
+        <FaqList faqs={journalFaqs} openFirst={5} />
+      </div>
+      {/* Trust, again, lower down.
+          The header already carries the count and a quote. This one sits next
+          to the questions, which is where a reader is actually deciding
+          whether to book — and a second proof point from a different client
+          says something the first one does not. */}
+      <div class="mt-14 grid gap-10 border-t border-line pt-10 md:grid-cols-[auto_1fr] md:gap-16">
+        <TrustBadge class="md:w-[22rem] md:shrink-0" />
+        <ProofQuote testimonial={secondProof} />
+      </div>
+    </div>
+  </section>
+
+  {/* The next step.
+      A journal index with no way to act on it is a reference shelf. This band
+      carries the two things a reader needs to take the next step — the price
+      of a first visit, and the phone number of the person who will answer. */}
+  <section class="bg-porcelain py-20 md:py-28">
+    <div class="wrap section-y">
+      <div class="max-w-[62ch]">
+        <p class="t-eyebrow text-ink-soft">Reading is free. The appointment is not.</p>
+        <h2 class="t-h2 mt-5">
+          If one of these notes described your skin, this is where it stops being notes.
+        </h2>
+        <p class="t-body mt-7">
+          A first visit is {verifiedPrices['first-time-client']} and includes the consultation and
+          skin analysis that turns any of the above into a plan for you specifically.
+        </p>
+        <p class="t-body mt-5">
+          Prices are published, the studio is appointment-only, and parking is free.
+        </p>
+        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
+          <Button href={business.bookingUrl} external trackEvent="booking_click">
+            {CTA_LABEL}
+          </Button>
+          <a
+            href={business.phone.href}
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            {business.phone.display}
+          </a>
+        </div>
+      </div>
     </div>
   </section>
 </BaseLayout>

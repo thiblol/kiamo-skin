@@ -46,6 +46,19 @@ export interface GoogleReview {
 
 export const googleReviews: GoogleReview[] = [
   {
+    "id": "AbFvOqmg7ux0enBIGkxk9ZGQKTkzYdc8NSaZiAkIj1NjxU9zlKWZal1h65I8iuRQ5f-WVsRZoANs",
+    "author": "Lauren Young",
+    "avatar": "/images/reviews/AbFvOqmg7ux0enBIGkxk9ZGQKTkzYdc8NSaZiAkIj1NjxU9zlKWZal1h65I8iuRQ5f-WVsRZoANs.jpg",
+    "rating": 5,
+    "text": "I can’t recommend Kiki enough! She is incredibly knowledgeable about all things skincare and really takes the time to understand your skin and what it needs. I love that she focuses on building and maintaining a healthy skin barrier rather than just pushing treatments or products. She’s been helping me tackle my melasma, and I’ve already seen such amazing results since going to her! You can tell she genuinely cares about her clients and is passionate about what she does. I’m so happy I found her and finally feel like my skin is in the best hands!",
+    "paragraphs": [
+      "I can’t recommend Kiki enough! She is incredibly knowledgeable about all things skincare and really takes the time to understand your skin and what it needs. I love that she focuses on building and maintaining a healthy skin barrier rather than just pushing treatments or products. She’s been helping me tackle my melasma, and I’ve already seen such amazing results since going to her! You can tell she genuinely cares about her clients and is passionate about what she does. I’m so happy I found her and finally feel like my skin is in the best hands!"
+    ],
+    "date": "2026-11-09",
+    "dateLabel": "November 2026",
+    "photos": []
+  },
+  {
     "id": "AbFvOqmqY2-aNVU-WzvHgofx0Am2PNRGWgcDe0oT2Xb-_xVOmSnCpEv1PycQXXFVkPRVl9oAQViD4g",
     "author": "Sarah Lancry",
     "avatar": "/images/reviews/AbFvOqmqY2-aNVU-WzvHgofx0Am2PNRGWgcDe0oT2Xb-_xVOmSnCpEv1PycQXXFVkPRVl9oAQViD4g.jpg",
@@ -597,7 +610,7 @@ export const googleReviews: GoogleReview[] = [
 ];
 
 /** How many reviews the listing held when this file was generated. */
-export const reviewsFetchedAt = "2026-11-01T14:24:53.901Z";
+export const reviewsFetchedAt = "2026-11-19T16:10:09.206Z";
 
 /** The count the listing reported, which the studio's own figure tracks. */
-export const reviewsListingTotal = 41;
+export const reviewsListingTotal = 42;

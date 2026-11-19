@@ -239,7 +239,7 @@ export const authored: Record<string, Partial<ServiceAreaContent>> = {
   'facial:chula-vista': {
     title: 'Facial in Chula Vista, San Diego | KIAMO Skin',
     description:
-      'Facials for Chula Vista clients at KIAMO Skin in San Diego. Melasma and pigmentation care for melanin-rich skin. From $199.',
+      'Facials for Chula Vista clients at KIAMO Skin in San Diego. Melasma and pigmentation care for melanin-rich skin. From $199. Book a visit.',
     h1: 'Facial in Chula Vista — Corrective Care for Melanin-Rich Skin',
     opener:
       'A facial that treats the melasma and uneven tone Chula Vista clients come in with, not a refresh that flattens the problem. Performed by Kiki, a California licensed esthetician.',
@@ -407,7 +407,7 @@ export const authored: Record<string, Partial<ServiceAreaContent>> = {
   'hydrafacial:la-mesa': {
     title: 'HydraFacial in La Mesa, San Diego | KIAMO Skin',
     description:
-      'HydraFacial in La Mesa from KIAMO Skin. Medical-grade extraction with a brightening booster for inland sun damage. $259.',
+      'HydraFacial in La Mesa from KIAMO Skin. Medical-grade extraction with a brightening booster for inland sun damage. $259. Book a visit.',
     h1: 'HydraFacial in La Mesa — Deep Extraction for Inland Sun Exposure',
     opener:
       'Medical-grade extraction and hydration on a HydraFacial Syndeo, with a booster chosen for the skin. Performed by Kiki, a California licensed esthetician.',
@@ -491,7 +491,7 @@ export const authored: Record<string, Partial<ServiceAreaContent>> = {
   'hydrafacial:carlsbad': {
     title: 'HydraFacial in Carlsbad, San Diego | KIAMO Skin',
     description:
-      'HydraFacial in Carlsbad from KIAMO Skin in San Diego. Medical-grade extraction for north county skin. $259. Request an appointment.',
+      'HydraFacial in Carlsbad from KIAMO Skin in San Diego. Medical-grade extraction and hydration for north county skin. $259. Request an appointment.',
     h1: 'HydraFacial in Carlsbad — North County Skin, Treated Properly',
     opener:
       'Medical-grade extraction and hydration on a HydraFacial Syndeo, with a booster chosen for your skin. Performed by Kiki, a California licensed esthetician.',
@@ -575,7 +575,7 @@ export const authored: Record<string, Partial<ServiceAreaContent>> = {
   'hydrafacial:chula-vista': {
     title: 'HydraFacial in Chula Vista, San Diego | KIAMO Skin',
     description:
-      'HydraFacial in Chula Vista from KIAMO Skin in San Diego. Medical-grade extraction with a brightening booster for melanin-rich skin. $259.',
+      'HydraFacial in Chula Vista from KIAMO Skin in San Diego. Medical-grade extraction with a brightening booster for melanin-rich skin. $259. Book a visit.',
     h1: 'HydraFacial in Chula Vista — Extraction That Respects Melanin-Rich Skin',
     opener:
       'Medical-grade extraction and hydration on a HydraFacial Syndeo, with a booster chosen for your skin. Performed by Kiki, a California licensed esthetician.',
@@ -743,7 +743,7 @@ export const authored: Record<string, Partial<ServiceAreaContent>> = {
   'chemical-peel:carlsbad': {
     title: 'Chemical Peel in Carlsbad, San Diego | KIAMO Skin',
     description:
-      'Chemical peels in Carlsbad from KIAMO Skin in San Diego. LIRA peels for sun damage and melasma, paced across a series. From $199.',
+      'Chemical peels in Carlsbad from KIAMO Skin in San Diego. LIRA peels for sun damage and melasma, paced across a series of treatments. From $199.',
     h1: 'Chemical Peel in Carlsbad — Pigmentation Correction, Paced for North County',
     opener:
       'Professional peels selected for the skin tone in front of you, with the strength raised only as the barrier allows. Performed by Kiki, a California licensed esthetician.',
@@ -827,7 +827,7 @@ export const authored: Record<string, Partial<ServiceAreaContent>> = {
   'chemical-peel:la-jolla': {
     title: 'Chemical Peel in La Jolla, San Diego | KIAMO Skin',
     description:
-      'Chemical peels in La Jolla from KIAMO Skin in San Diego. LIRA peels for sun damage and melasma in melanin-rich skin. From $199.',
+      'Chemical peels in La Jolla from KIAMO Skin in San Diego. LIRA peels for sun damage and melasma in melanin-rich skin. From $199. Book a visit.',
     h1: 'Chemical Peel in La Jolla — Correcting Coastal UV Without New Marks',
     opener:
       'Professional peels selected for the skin tone in front of you, with the strength raised only as the barrier allows. Performed by Kiki, a California licensed esthetician.',
@@ -911,7 +911,7 @@ export const authored: Record<string, Partial<ServiceAreaContent>> = {
   'microneedling:encinitas': {
     title: 'Microneedling in Encinitas, San Diego | KIAMO Skin',
     description:
-      'Microneedling in Encinitas from KIAMO Skin in San Diego. Procell microchanneling for acne scars and texture, without RF heat. $475.',
+      'Microneedling in Encinitas from KIAMO Skin in San Diego. Procell microchanneling for acne scars and texture, without RF heat. $475. Book a visit.',
     h1: 'Microneedling in Encinitas — Texture and Scarring, Without the Heat',
     opener:
       'Controlled microchannels and a growth factor serum, with no RF heat at all. Performed by Kiki, a California licensed esthetician.',
@@ -1005,7 +1005,7 @@ export const authored: Record<string, Partial<ServiceAreaContent>> = {
   'microneedling:carlsbad': {
     title: 'Microneedling in Carlsbad, San Diego | KIAMO Skin',
     description:
-      'Microneedling in Carlsbad from KIAMO Skin in San Diego. Procell microchanneling for acne scars and texture. $475. Request an appointment.',
+      'Microneedling in Carlsbad from KIAMO Skin. Procell microchanneling for acne scars and texture, without RF heat. $475. Request an appointment.',
     h1: 'Microneedling in Carlsbad — Depth-Controlled Correction for Scarring',
     opener:
       'Controlled microchannels and a growth factor serum, with no RF heat at all. Performed by Kiki, a California licensed esthetician.',
@@ -1099,7 +1099,7 @@ export const authored: Record<string, Partial<ServiceAreaContent>> = {
   'microneedling:la-jolla': {
     title: 'Microneedling in La Jolla, San Diego | KIAMO Skin',
     description:
-      'Microneedling in La Jolla from KIAMO Skin in San Diego. Procell microchanneling for acne scars and texture. $475. Request an appointment.',
+      'Microneedling in La Jolla from KIAMO Skin. Procell microchanneling for acne scars and texture, without RF heat. $475. Request an appointment.',
     h1: 'Microneedling in La Jolla — Texture Correction for Coastal Skin',
     opener:
       'Controlled microchannels and a growth factor serum, with no RF heat at all. Performed by Kiki, a California licensed esthetician.',
@@ -1193,7 +1193,7 @@ export const authored: Record<string, Partial<ServiceAreaContent>> = {
   'microneedling:chula-vista': {
     title: 'Microneedling in Chula Vista, San Diego | KIAMO Skin',
     description:
-      'Microneedling in Chula Vista from KIAMO Skin in San Diego. Procell microchanneling for acne scars and texture in melanin-rich skin. $475.',
+      'Microneedling in Chula Vista from KIAMO Skin. Procell microchanneling for acne scars and texture in melanin-rich skin. $475. Book a visit.',
     h1: 'Microneedling in Chula Vista — Scarring Correction Without New Pigment',
     opener:
       'Controlled microchannels and a growth factor serum, with no RF heat at all. Performed by Kiki, a California licensed esthetician.',

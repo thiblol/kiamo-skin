@@ -30,11 +30,42 @@ const values = [
     body: 'Skin does not change overnight. A sensible plan followed for months beats an aggressive treatment followed by nothing.',
   },
 ];
+
+/**
+ * The consultation protocol.
+ *
+ * This is the studio's actual assessment sequence, written out rather than
+ * described in the abstract. It is here for two reasons. A reader deciding
+ * whether this is the right studio for their skin needs to see that the
+ * decision is made methodically and not by a menu. And a search engine or a
+ * language model trying to establish what this business is and how it works
+ * has almost nothing else to read: this section is the page's answer to the
+ * question every entity query asks, which is who does this, how, and on what
+ * basis.
+ */
+const protocol = [
+  {
+    title: 'Skin tone and barrier, before anything else',
+    body: 'Fitzpatrick type I to VI is recorded, and the barrier is assessed on the day rather than assumed. A compromised barrier changes what can safely be applied, so this is the first thing looked at and the thing that most often means the first visit is preparation rather than treatment.',
+  },
+  {
+    title: 'The cause of the concern, not the label on it',
+    body: 'Post-inflammatory marks, melasma and sun damage look alike and respond in opposite directions, so the kind of mark is identified first. A mark left behind by acne, a symmetrical hormonal pattern and scattered sun damage each need a different plan.',
+  },
+  {
+    title: 'What has already been tried',
+    body: 'Products used without guidance, peels performed elsewhere, and anything that caused a reaction. A previous reaction to a strong peel is not a footnote — it changes the order of the plan, because skin that has darkened after acid is usually better served by starting with the treatment that carries no acid.',
+  },
+  {
+    title: 'The modality, the strength and the series',
+    body: 'Which treatment, at what strength, how many sessions, how far apart, and what to do at home in between. Strength escalates across a series rather than starting high. The home routine is prescribed rather than left to chance, because it is what maintains the result once the series ends.',
+  },
+];
 ---
 
 <BaseLayout
   title="About KIAMO Skin — Esthetician in San Diego"
-  description="KIAMO Skin is a Black-owned facial spa in San Diego, specializing in acne, scarring, and pigmentation across all skin types."
+  description="KIAMO Skin is a Black-owned facial spa in San Diego run by a licensed esthetician. Corrective facials, peels and scalp therapy for every skin type."
 >
   <AboutSchema slot="head" />
   <BreadcrumbSchema slot="head" trail={[{ name: 'About', path: '/about' }]} />
@@ -155,6 +186,48 @@ const values = [
           >knowing which kind of dark mark you have</a
         >.
       </p>
+    </div>
+  </section>
+
+  <section class="bg-porcelain">
+    <div class="wrap section-y">
+      <div class="max-w-[68ch]">
+        <p class="t-eyebrow text-ink-soft">How a plan is built</p>
+        <h2 class="t-h2 mt-5">
+          What happens at the consultation, before anything is applied.
+        </h2>
+        <p class="t-body mt-7">
+          The consultation is the treatment, in the sense that it is where the decision is made.
+          One practitioner, seven years of corrective work, and the same four steps in the same
+          order for every client. Nothing is applied to skin that has not been assessed, and no
+          treatment is selected from a menu.
+        </p>
+      </div>
+
+      <ol class="mt-14 m-0 grid list-none gap-10 p-0 md:grid-cols-2 md:gap-12">
+        {
+          protocol.map((step, i) => (
+            <li>
+              <p class="t-meta text-rose">{String(i + 1).padStart(2, '0')}</p>
+              <h3 class="t-h3 mt-4 text-[1.375rem] md:text-[1.5rem]">{step.title}</h3>
+              <p class="t-body mt-4 text-[0.9375rem] text-ink-soft">{step.body}</p>
+            </li>
+          ))
+        }
+      </ol>
+
+      <div class="mt-14 max-w-[68ch]">
+        <p class="t-body">
+          The protocol is the reason the studio treats
+          <a href="/melanin-rich-skin/" class="border-b border-ink/40 hover:border-rose hover:text-rose">melanin-rich skin</a>
+          as a specialism rather than a service category, and it is why
+          <a
+            href="/journal/chemical-peel-vs-microneedling-san-diego/"
+            class="border-b border-ink/40 hover:border-rose hover:text-rose"
+            >chemical peels and microchanneling are never offered as a straight either-or</a
+          >.
+        </p>
+      </div>
     </div>
   </section>
 

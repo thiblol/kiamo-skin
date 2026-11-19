@@ -1,0 +1,76 @@
+# Redirect map for the URLs the 2026-11-10 area-first restructure removed.
+#
+# Cloudflare Pages reads this file from the build output. Rules are evaluated
+# top to bottom and the first match wins, so the specific area+service rows
+# come before the broader ones. Every target below was verified to exist in
+# the built site at the time this file was written.
+#
+# Nothing here uses a wildcard: a wildcard under /facial/ would also catch the
+# three live pages under /facial/, so every old path is listed individually.
+/facial/ /services/facial/ 301
+/facial/carlsbad/ /service-areas/carlsbad/facial/ 301
+/facial/coronado/ /services/facial/ 301
+/facial/del-mar/ /service-areas/del-mar/facial/ 301
+/facial/encinitas/ /service-areas/encinitas/facial/ 301
+/facial/hillcrest/ /service-areas/hillcrest/facial/ 301
+/facial/la-jolla/ /service-areas/la-jolla/facial/ 301
+/facial/mission-hills/ /services/facial/ 301
+/facial/north-park/ /service-areas/north-park/facial/ 301
+/facial/pacific-beach/ /service-areas/pacific-beach/facial/ 301
+/facial/point-loma/ /service-areas/point-loma/facial/ 301
+/hydrafacial/ /services/hydrafacial/ 301
+/hydrafacial/bankers-hill/ /services/hydrafacial/ 301
+/hydrafacial/downtown-san-diego/ /services/hydrafacial/ 301
+/hydrafacial/gaslamp-quarter/ /services/hydrafacial/ 301
+/hydrafacial/harbor-island/ /services/hydrafacial/ 301
+/hydrafacial/hillcrest/ /service-areas/hillcrest/ 301
+/hydrafacial/little-italy/ /services/hydrafacial/ 301
+/hydrafacial/midway-district/ /services/hydrafacial/ 301
+/hydrafacial/pacific-beach/ /service-areas/pacific-beach/hydrafacial/ 301
+/hydrafacial/point-loma/ /service-areas/point-loma/ 301
+/hyperpigmentation-treatment/ /services/hyperpigmentation-treatment/ 301
+/hyperpigmentation-treatment/balboa-park/ /services/hyperpigmentation-treatment/ 301
+/hyperpigmentation-treatment/downtown-san-diego/ /services/hyperpigmentation-treatment/ 301
+/hyperpigmentation-treatment/hillcrest/ /service-areas/hillcrest/ 301
+/hyperpigmentation-treatment/little-italy/ /services/hyperpigmentation-treatment/ 301
+/hyperpigmentation-treatment/mission-hills/ /services/hyperpigmentation-treatment/ 301
+/hyperpigmentation-treatment/north-park/ /service-areas/north-park/ 301
+/hyperpigmentation-treatment/university-heights/ /services/hyperpigmentation-treatment/ 301
+/service-areas/chulavista/ /service-areas/chula-vista/ 301
+/service-areas/delmar/ /service-areas/del-mar/ 301
+/service-areas/la-jolla/dermaplaning-la-jolla-sun-damaged-skin/ /service-areas/la-jolla/dermaplaning/ 301
+/service-areas/la-jolla/hydrafacial-ocean-swimmers/ /service-areas/la-jolla/hydrafacial/ 301
+/service-areas/la-jolla/hydrafacial-pacific-beach-sun-damage/ /service-areas/la-jolla/hydrafacial/ 301
+/service-areas/la-jolla/lira-peel-la-mesa-melasma/ /service-areas/la-jolla/chemical-peel/ 301
+/service-areas/la-jolla/procell-microchanneling-north-park-acne-scars/ /service-areas/la-jolla/microneedling/ 301
+/service-areas/la-mesa/dermaplaning-la-jolla-sun-damaged-skin/ /service-areas/la-mesa/facial/ 301
+/service-areas/la-mesa/hydrafacial-ocean-swimmers/ /service-areas/la-mesa/hydrafacial/ 301
+/service-areas/la-mesa/hydrafacial-pacific-beach-sun-damage/ /service-areas/la-mesa/hydrafacial/ 301
+/service-areas/la-mesa/lira-peel-la-mesa-melasma/ /service-areas/la-mesa/chemical-peel/ 301
+/service-areas/la-mesa/procell-microchanneling-north-park-acne-scars/ /service-areas/la-mesa/facial/ 301
+/service-areas/lajolla/ /service-areas/la-jolla/ 301
+/service-areas/lamesa/ /service-areas/la-mesa/ 301
+/service-areas/missionhills/ /service-areas/ 301
+/service-areas/north-park/dermaplaning-la-jolla-sun-damaged-skin/ /service-areas/north-park/facial/ 301
+/service-areas/north-park/hydrafacial-ocean-swimmers/ /service-areas/north-park/facial/ 301
+/service-areas/north-park/hydrafacial-pacific-beach-sun-damage/ /service-areas/north-park/facial/ 301
+/service-areas/north-park/lira-peel-la-mesa-melasma/ /service-areas/north-park/facial/ 301
+/service-areas/north-park/procell-microchanneling-north-park-acne-scars/ /service-areas/north-park/microneedling/ 301
+/service-areas/northpark/ /service-areas/north-park/ 301
+/service-areas/pacific-beach/dermaplaning-la-jolla-sun-damaged-skin/ /service-areas/pacific-beach/facial/ 301
+/service-areas/pacific-beach/hydrafacial-ocean-swimmers/ /service-areas/pacific-beach/hydrafacial/ 301
+/service-areas/pacific-beach/hydrafacial-pacific-beach-sun-damage/ /service-areas/pacific-beach/hydrafacial/ 301
+/service-areas/pacific-beach/lira-peel-la-mesa-melasma/ /service-areas/pacific-beach/facial/ 301
+/service-areas/pacific-beach/procell-microchanneling-north-park-acne-scars/ /service-areas/pacific-beach/facial/ 301
+/service-areas/pacificbeach/ /service-areas/pacific-beach/ 301
+/treatments/ /services/ 301
+/treatments/acne/ /services/acne-treatment/ 301
+/treatments/corrective-skin-treatments/ /services/corrective-skin-treatments/ 301
+/treatments/dermaplaning/ /services/dermaplaning/ 301
+/treatments/dmk-enzyme-therapy/ /services/dmk-enzyme-therapy/ 301
+/treatments/hydrafacial/ /services/hydrafacial/ 301
+/treatments/hyperpigmentation/ /services/hyperpigmentation-treatment/ 301
+/treatments/keravive-scalp/ /services/scalp-therapy/ 301
+/treatments/lira-peels/ /services/chemical-peel/ 301
+/treatments/melasma/ /services/melasma-treatment/ 301
+/treatments/procell-microchanneling/ /services/microneedling/ 301

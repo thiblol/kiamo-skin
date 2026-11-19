@@ -4,7 +4,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
 import Button from '../../components/Button.astro';
 import FaqList from '../../components/FaqList.astro';
 import { articles } from '../../data/articles';
-import { business } from '../../config/business';
+import { business, verifiedPrices } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import ArticleSchema from '../../components/schema/ArticleSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
@@ -12,6 +12,9 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
 import HowToSchema from '../../components/schema/HowToSchema.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
+import TrustBadge from '../../components/sections/TrustBadge.astro';
+import ProofQuote from '../../components/ProofQuote.astro';
+import { testimonials } from '../../data/testimonials';
 
 export function getStaticPaths() {
   return articles.map((article) => ({
@@ -24,6 +27,29 @@ const { article } = Astro.props;
 const others = articles.filter((a) => a.slug !== article.slug);
 const faqs = article.faqs ?? [];
 const articleUrl = `${Astro.site ?? 'https://kiamoskin.com'}journal/${article.slug}/`;
+
+/**
+ * The proof that sits under the byline.
+ *
+ * The long-running-client quote is the one that carries the most weight on a
+ * reading page. A reader who has just read an article about how a plan is
+ * built is deciding whether this is a studio that keeps doing the right thing
+ * over years, and that is the question a quote from someone four years in
+ * answers better than a quote from a first visit.
+ */
+const proof =
+  testimonials.find((t) => t.quote.includes('trust anyone else')) ?? testimonials[0];
+
+/**
+ * The second proof point, lower down the page.
+ *
+ * A different client, so the two quotes say different things: the first is
+ * about staying with the studio over years, this one is about the result
+ * being visible. Together they cover both of the questions a reader has
+ * about a studio they have only read about.
+ */
+const secondProof =
+  testimonials.find((t) => t.quote.includes('Real, visible results')) ?? testimonials[1];
 
 /**
  * Dates render as "Month D, YYYY" without the Date constructor, so the server
@@ -93,6 +119,21 @@ const formatDate = (iso: string): string => {
               <span aria-hidden="true"> · </span>
               Last updated <time datetime={article.dateModified}>{formatDate(article.dateModified)}</time>
             </p>
+          </div>
+
+          {/* Proof, in the first screen.
+              The author block says who wrote it. This says whether the studio
+              behind it holds up — the rating and the count are the verified
+              GBP figures shown as visible HTML only, because schema-claimed
+              review counts are forbidden here and because a fabricated one
+              was shipped on this site before. The quote is a real client
+              quote, and it is the long-running-client one: a reader deciding
+              whether to act on what they have just read wants to know
+              whether the studio holds up over years, not over a single
+              appointment. */}
+          <div class="mt-8 grid gap-8 border-t border-line pt-8 md:grid-cols-[auto_1fr] md:gap-12">
+            <TrustBadge class="md:w-[20rem] md:shrink-0" />
+            <ProofQuote testimonial={proof} />
           </div>
         </div>
 
@@ -187,6 +228,37 @@ const formatDate = (iso: string): string => {
             )
           }
 
+          {/* The contextual CTA, placed at the natural stopping point.
+              The article answers a question; the question is what a reader
+              came with; the next step is the consultation that turns the
+              answer into a plan for their skin. Putting it here — after the
+              reader has been given something real — is the point at which it
+              is worth clicking, which is not the same as the point at which
+              it is easiest to place. */}
+          <div class="mt-16 border-y border-line py-10">
+            <div class="max-w-[58ch]">
+              <p class="t-eyebrow text-ink-soft">Where this leaves you</p>
+              <p class="t-body mt-4">
+                A first visit is {verifiedPrices['first-time-client']} and includes the consultation
+                and skin analysis that turns any of this into a plan for your skin.
+              </p>
+              <p class="t-body mt-3">
+                Prices are published, the studio is appointment-only, and parking is free.
+              </p>
+              <div class="mt-7 flex flex-wrap items-center gap-x-8 gap-y-4">
+                <Button href={business.bookingUrl} external trackEvent="booking_click">
+                  {CTA_LABEL}
+                </Button>
+                <a
+                  href={business.phone.href}
+                  class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+                >
+                  {business.phone.display}
+                </a>
+              </div>
+            </div>
+          </div>
+
           <div class="mt-16 border-t border-line pt-12">
             <p class="t-meta">About the author</p>
             <p class="t-body mt-4">
@@ -212,8 +284,24 @@ const formatDate = (iso: string): string => {
             <h2 class="t-h2 mt-5">{article.faqHeading ?? 'Hyperpigmentation questions'}</h2>
             <div class="mt-12 max-w-[68ch]">
               {/* The answer may carry a citation link, so it is rendered as
-                  HTML rather than as text. */}
-              <FaqList faqs={faqs} html />
+                  HTML rather than as text.
+
+                  The first three answers start open. These are SEO pages as
+                  well as reading pages, and a collapsed answer is an answer
+                  that is not indexed or surfaced — which is why the homepage
+                  already opens its first three for the same reason. The
+                  answers stay in the DOM and in the schema either way. */}
+              <FaqList faqs={faqs} html openFirst={3} />
+            </div>
+            {/* Trust again, near the end.
+                Trust has to repeat. A reader who scrolled the whole way down
+                to the questions is about to make a decision, and the decision
+                is whether to trust a studio they have only read about. The
+                count and the rating sitting here, next to the questions and
+                above the final CTA, are the last thing they meet. */}
+            <div class="mt-14 grid gap-8 border-t border-line pt-10 md:grid-cols-[auto_1fr] md:gap-12">
+              <TrustBadge class="md:w-[20rem] md:shrink-0" />
+              <ProofQuote testimonial={secondProof} />
             </div>
           </div>
         </div>

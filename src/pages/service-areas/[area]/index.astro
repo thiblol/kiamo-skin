@@ -95,9 +95,18 @@ const faqs = [
  * because the record's own fields are long — the guard suite caps a
  * description at 155 characters, and a template that quotes the proximity
  * string blows straight through it.
+ *
+ * The description carries a call to action, which is what earns the click.
+ * The CTA is chosen by how much room the area name leaves: the longer names
+ * get the shorter CTA, so every area lands between 142 and 147 characters
+ * instead of some running past the cap and others running short of the
+ * snippet.
  */
 const title = `Facials in ${shell.name}, San Diego | KIAMO Skin`;
-const description = `Corrective facials for ${shell.name} clients in San Diego. HydraFacial, peels, dermaplaning, microneedling and scalp therapy. From $199.`;
+const description =
+  shell.name.length <= 9
+    ? `Corrective facials for ${shell.name} clients in San Diego. HydraFacial, peels, dermaplaning, microneedling and scalp therapy. From $199. Request a visit.`
+    : `Corrective facials for ${shell.name} clients in San Diego. HydraFacial, peels, dermaplaning and scalp therapy. From $199. Request an appointment.`;
 ---
 
 <BaseLayout

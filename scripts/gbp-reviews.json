@@ -1,9 +1,23 @@
 {
   "locationId": "18292180377527356498",
   "averageRating": 5,
-  "totalReviewCount": 41,
-  "fetchedAt": "2026-11-01T20:25:47.107Z",
+  "totalReviewCount": 42,
+  "fetchedAt": "2026-11-19T16:10:09.206Z",
   "reviews": [
+    {
+      "id": "AbFvOqmg7ux0enBIGkxk9ZGQKTkzYdc8NSaZiAkIj1NjxU9zlKWZal1h65I8iuRQ5f-WVsRZoANs",
+      "author": "Lauren Young",
+      "avatar": "https://lh3.googleusercontent.com/a/ACg8ocJiN0twdqQ9hqgQKI9uMJfKdxV0xfyxBWuO4e29qj4K1zYSNA=s120-c-rp-mo-ba12-br100",
+      "isAnonymous": false,
+      "rating": 5,
+      "comment": "I can’t recommend Kiki enough! She is incredibly knowledgeable about all things skincare and really takes the time to understand your skin and what it needs. I love that she focuses on building and maintaining a healthy skin barrier rather than just pushing treatments or products. She’s been helping me tackle my melasma, and I’ve already seen such amazing results since going to her! You can tell she genuinely cares about her clients and is passionate about what she does. I’m so happy I found her and finally feel like my skin is in the best hands!",
+      "createTime": "2026-11-09T20:19:56.160948Z",
+      "updateTime": "2026-11-09T20:19:56.160948Z",
+      "ownerReply": "Thank you so much, Lauren! I'm so glad I could help you tackle your melasma and work toward a healthy skin barrier. It is always a pleasure taking care of your skin here in Mission Hills, and I look forward to seeing you again soon.",
+      "ownerReplyTime": "2026-11-10T08:05:56.835854Z",
+      "photoCount": 0,
+      "photos": []
+    },
     {
       "id": "AbFvOqmqY2-aNVU-WzvHgofx0Am2PNRGWgcDe0oT2Xb-_xVOmSnCpEv1PycQXXFVkPRVl9oAQViD4g",
       "author": "Sarah Lancry",
@@ -60,7 +74,7 @@
       "photoCount": 1,
       "photos": [
         {
-          "url": "https://lh3.googleusercontent.com/grass-cs/AABkmLcdAo5FfG0JbBQx7nnC9_UT1D8uvfY7GraLOsZ745EPYO4UH9sjfWuT6NJx48jy7ucMZtmzsLk50nD1cdLOOPLorpT8k-r4NUhAd1KRWOfPWtRiQJC8oGJx2yKrQH_CSu3MQsF_-sL_QXeX=k-no"
+          "url": "https://lh3.googleusercontent.com/grass-cs/AABkmLeGruG-2BVu16LNi0weDVXbSGNl1oFIH2lOLCqSg01w6TVUAqp1mnJDFTstbmvt9ylFN7ZOePZfP2ykXWGr6J9sHEJxBUQ2b8atffA9bgsEaMOF2NCCoc6DRoweI9q-sDkIYZ0lQ8ASxCE9=k-no"
         }
       ]
     },
@@ -120,7 +134,7 @@
       "photoCount": 1,
       "photos": [
         {
-          "url": "https://lh3.googleusercontent.com/grass-cs/AABkmLeNi1ZOTzkwVMg0CsIOVeuLZ0sFCePkM4wcXwtJVi0X07nwbjVi9m7n7_5B-09OaWUf2pC1DxM-Z8PnanNJfBMTAU4XMzg17hnkSg7rxNL99e3XCpJQhPmc-dShSv8PBTpuv7Js6CXHZqyW=k-no"
+          "url": "https://lh3.googleusercontent.com/grass-cs/AABkmLfUgmllmob3Xvx85ZHkuO2GEi7qu1ijsas3voi9UNav8CM16C_FBaB2IcKLhico_Wn_pF7TyJPjov7wF6sUNVQjICV6oxAFYlVe3lysxUe9LmLmIoZsfnwapH_tntgv_8hs29JwgMQ5D-Ua=k-no"
         }
       ]
     },
@@ -362,10 +376,10 @@
       "photoCount": 2,
       "photos": [
         {
-          "url": "https://lh3.googleusercontent.com/grass-cs/AABkmLeZ-4dN-CxFC5vPRzCwZdmasN17sJQ1bleF5IH_JV3fLGTQfoX6xgbqkcqCi8u7LgQ8Cnk1uNvLYGF4NXb_GAMilXhxGO1tRC7XNH7x3pwla1kbYSq-P8SIhnlvEwWgOpi5WrNya_pl4uE=k-no"
+          "url": "https://lh3.googleusercontent.com/grass-cs/AABkmLd27diNXUcvQPVKk6bfSIeRl3l4EN6XMa8YJSC906vmzGCvfE8HXdvhMD04lGo2_8bnsE_avE8WrbOEpWeKm0IuvdONLh8TF0vf1FLiB72rqH5_uv8oljGQzSXhirK14WeOqzY9zpJ_35o=k-no"
         },
         {
-          "url": "https://lh3.googleusercontent.com/grass-cs/AABkmLeH5UqIK3K1kswgcayOqM5sCNBVcCwtgOUJBqlq4epkVZifkMeStIn0zHgUPovcdsoGT68SjqxwzkzmGsbJm9wLOh_ji_q0WqczMW2ThrYDmHcMDKzLmEdlAUC_2ns-ZBS72AMyORUiJAPj=k-no"
+          "url": "https://lh3.googleusercontent.com/grass-cs/AABkmLfPo2PqP8Oj7Yu6cp3urYROekTxgpU9hsKd0qlJuOwt2cZopQTyYgBgHgtNtY9DHJNr1yuCy9lr0Eh4sALGXqoC7D2ZhxgqDnwEL8dGw4MZ9QV00CRX5UNaHnAiSra0cngsDfbNIJR-mmsP=k-no"
         }
       ]
     },
@@ -439,7 +453,7 @@
       "photoCount": 1,
       "photos": [
         {
-          "url": "https://lh3.googleusercontent.com/grass-cs/AABkmLcM2w8b5htwCjh3DURA77-laaZ5ZTGt9QWb5EA1olbd5LDz3XVAxJ1u5rbHDjTcSWd4_jLUCtN8ZceKcj8SBBZqstRgUmvk3HwbjbIcwXAenG_lWjKxoXQeC053ZMTT9JPfH-T4NR4c4JdY=k-no"
+          "url": "https://lh3.googleusercontent.com/grass-cs/AABkmLf_nrvlUUuxbawpXChUFGJK_57yDRo09wF8XkjxTkoVUfrPndl0rH7j1DbTuiyB1efcfgihvaUGcgKnHT9w6uXJOOZmqKodKtRI1BpR6RA1ASgy1pNtzZk8cB4zXtctNspa6n53_98owy5_=k-no"
         }
       ]
     },

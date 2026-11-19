@@ -81,6 +81,15 @@ interface Props {
   /** The long-form body. */
   body?: string;
   faqs: { question: string; answer: string }[];
+  /**
+   * The related guide for this treatment.
+   *
+   * This lived in the data file and was never rendered, so every service page
+   * carried a link to a supporting article that no visitor and no crawler
+   * could reach. Rendering it is what puts the service page and the journal
+   * into the same cluster.
+   */
+  guide?: { label: string; href: string; lead: string };
   /** The trust data key — a service slug. */
   trustSlug: string;
   /** Breadcrumb trail, outermost first. */
@@ -130,6 +139,7 @@ const {
   gettingHere,
   body,
   faqs,
+  guide,
   trustSlug,
   ancestors,
   current,
@@ -489,6 +499,32 @@ const bandHeading =
           <div class="mt-12">
             <FaqList faqs={faqs} openFirst={3} />
           </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  {/* The related guide.
+      A service page that never links out of itself is a dead end for a
+      crawler and for a reader deciding whether this is the right treatment.
+      The guide answers the question that usually comes before the booking
+      one — how to choose, what it is safe on, what it costs — so it is the
+      link a reader wants next. */}
+  {guide && (
+    <section class="bg-ivory py-16 md:py-20">
+      <div class="wrap">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Read next</p>
+            <h2 class="t-h2 mt-4">{guide.label}</h2>
+            <p class="t-body mt-4 text-ink-soft">{guide.lead}</p>
+            <a
+              href={guide.href}
+              class="t-body mt-8 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose"
+            >
+              Read the guide
+            </a>
+          </Reveal>
         </div>
       </div>
     </section>

@@ -82,6 +82,7 @@ const cityLinks = getServiceAreasForService(service.slug).map((record) => ({
     pricing={service.pricing}
     planMembers={service.planMembers}
     faqs={faqs}
+    guide={service.guide}
     trustSlug={service.slug}
     ancestors={[{ name: 'Services', path: '/services/' }]}
     current={service.name}

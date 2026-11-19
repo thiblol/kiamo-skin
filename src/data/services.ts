@@ -313,6 +313,11 @@ export const services: Service[] = [
     membershipAnchor: 'Compare the three membership tiers',
     melaninNote:
       'HydraFacial is safe for all Fitzpatrick skin types (I-VI) because it uses no heat, no lasers, and no aggressive peeling agents. The exfoliating acids are at concentrations proven safe for melanin-rich skin, and the vortex extraction method does not cause the trauma that can trigger post-inflammatory hyperpigmentation (PIH). Booster selection matters: Britenol is the brightening booster used for dark marks, melasma, and PIH on Fitzpatrick IV-VI skin, containing alpha-arbutin and bearberry extract rather than hydroquinone, which can cause rebound pigmentation in darker skin tones.',
+    guide: {
+      lead: 'Dark spots have different causes and need different treatments. The options, ranked by what each one is actually for.',
+      label: 'The best treatment for dark spots on face',
+      href: '/journal/best-treatment-for-dark-spots-on-face/',
+    },
     hero: {
       eyebrow: "Syndeo Device · Custom Booster · LED Included",
       claim: "Medical-grade extraction with a booster chosen for your skin.",
@@ -375,9 +380,9 @@ export const services: Service[] = [
     melaninNote:
       'Peels on Black and brown skin are chosen differently — the pacing is the whole point.',
     guide: {
-      lead: 'Not sure which kind of pigmentation you have?',
-      label: 'How to tell post-inflammatory marks, melasma and sun damage apart',
-      href: '/journal/three-kinds-of-dark-mark/',
+      lead: 'A peel and microchanneling work in opposite directions. Which one your dark spots need, and what it costs.',
+      label: 'Chemical peel vs microchanneling in San Diego',
+      href: '/journal/chemical-peel-vs-microneedling-san-diego/',
     },
     hero: {
       eyebrow: "Gentle Renewal $199 · Advanced $299",
@@ -461,9 +466,9 @@ export const services: Service[] = [
       'A series of three is the usual plan, and membership treatments can be applied to it by paying the difference.',
     membershipAnchor: 'Membership pricing and what each plan includes',
     guide: {
-      lead: 'Is microchanneling safe on dark skin?',
-      label: 'Microneedling on dark skin in San Diego — what matters',
-      href: '/journal/microneedling-on-dark-skin-san-diego/',
+      lead: 'Microchanneling and a chemical peel work in opposite directions. Which one your dark spots need, and what it costs.',
+      label: 'Chemical peel vs microchanneling in San Diego',
+      href: '/journal/chemical-peel-vs-microneedling-san-diego/',
     },
     hero: {
       eyebrow: "No RF Heat · Growth Factor Serum · 3-Session Series",
@@ -484,7 +489,7 @@ export const services: Service[] = [
     category: 'Facials',
     title: 'Dermaplaning in San Diego — Safe for Dark Skin | KIAMO Skin',
     description:
-      'Dermaplaning in San Diego at KIAMO Skin. Expert technique on melanin-rich and dark skin. $199 per session. By appointment.',
+      'Dermaplaning in San Diego at KIAMO Skin. Expert technique on melanin-rich and dark skin, $199 a session. By appointment only.',
     headline: 'Dermaplaning in San Diego — Smoother Skin, No Downtime',
     opener:
       'Physical exfoliation that clears surface buildup, so everything layered after it works better. Performed by Kiki, a California licensed esthetician.',
@@ -654,6 +659,11 @@ export const services: Service[] = [
     membershipNote:
       'A barrier rebuilds over months rather than visits, so this is treatment that suits a standing monthly slot.',
     membershipAnchor: 'See the monthly membership plans',
+    guide: {
+      lead: 'Melasma, post-inflammatory marks and sun damage look alike and respond differently. How to tell them apart first.',
+      label: 'How to tell the three kinds of dark mark apart',
+      href: '/journal/three-kinds-of-dark-mark/',
+    },
     hero: {
       eyebrow: "Barrier Repair · Enzyme Masque · Level 1 $279",
       claim: "Rebuilds a compromised barrier instead of stripping a healthy one.",
@@ -738,6 +748,11 @@ export const services: Service[] = [
       },
     ],
     note: 'Acne treatment is not one-size-fits-all. Active cystic acne requires a different approach than blackhead congestion, and both differ from treating post-acne hyperpigmentation. The first consultation identifies which phase the skin is in and which treatment matches that phase. For severe or persistent acne, working with a dermatologist alongside corrective facials produces the best results — estheticians and dermatologists treat acne differently, and both roles matter.',
+    guide: {
+      lead: 'Not every scar responds the same way. Which ones a facial improves, and which ones need microchanneling.',
+      label: 'Acne scars: what a facial fixes and what it does not',
+      href: '/journal/acne-scars-san-diego/',
+    },
     hero: {
       eyebrow: "Breakouts · Congestion · Scarring",
       claim: "Clear the breakouts, fade the marks, soften the scarring.",
@@ -839,6 +854,11 @@ export const services: Service[] = [
     membershipNote:
       'PIH treatment runs across a series, which makes a monthly membership the practical way to stay on schedule. Membership treatments can be applied to peels or microchanneling by paying the difference.',
     membershipAnchor: 'Monthly membership options',
+    guide: {
+      lead: 'Dark spots have different causes and need different treatments. The options, ranked by what each one is actually for.',
+      label: 'The best treatment for dark spots on face',
+      href: '/journal/best-treatment-for-dark-spots-on-face/',
+    },
     hero: {
       eyebrow: "Post-Acne Marks · Melasma · Sun Damage",
       claim: "Dark marks faded without creating new ones.",
@@ -934,9 +954,9 @@ export const services: Service[] = [
     melaninNote:
       'Melasma is most common in deeper skin tones, and treating it safely there requires training in exactly the cases where the margin for error is smallest.',
     guide: {
-      lead: 'What the difference is between melasma, PIH and sun damage',
-      label: 'How to tell post-inflammatory marks, melasma and sun damage apart',
-      href: '/journal/three-kinds-of-dark-mark/',
+      lead: 'Dark spots have different causes and need different treatments. The options, ranked by what each one is actually for.',
+      label: 'The best treatment for dark spots on face',
+      href: '/journal/best-treatment-for-dark-spots-on-face/',
     },
     hero: {
       eyebrow: "Hormonal Pigment · Peels · Daily SPF",

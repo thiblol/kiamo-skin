@@ -35,9 +35,9 @@ export const facialCostArticle: Article = {
   headline: 'How much does a facial cost in San Diego in 2026?',
   title: 'Facial Cost in San Diego (2026): Real Prices | KIAMO Skin',
   description:
-    'What a facial costs in San Diego: what each price covers, and why KIAMO Skin is $249 for a first visit with consultation.',
+    'What a facial costs in San Diego: what each published price covers, and why a KIAMO Skin first visit is $249 including the consultation.',
   standfirst:
-    'The published San Diego market rate for a facial spans a wide range, and the gap between the two ends of it is not quality — it is what the price includes. First-time clients here start at $249.',
+    'The published San Diego market rate for a facial spans a wide range. The gap between the two ends of it is not quality. It is what the price includes. First-time clients here start at $249.',
   readingTime: '9 min read',
   datePublished: '2026-11-09',
   dateModified: '2026-11-09',
