@@ -33,7 +33,12 @@ import TreatmentProof from './TreatmentProof.astro';
 import LocationMap from './LocationMap.astro';
 import { business, PRICE_ON_CONSULTATION } from '../config/business';
 import { CTA_LABEL } from '../config/nav';
-import { treatmentTrust, studioProof } from '../data/treatment-trust';
+import { treatmentTrust } from '../data/treatment-trust';
+import { getAreaTestimonials, getServiceTestimonials } from '../data/testimonials';
+import { getReadingLinks } from '../data/service-reading';
+import { CONTENT_REVISED, formatReviewDate } from '../data/page-dates';
+import VerifiedProof from './VerifiedProof.astro';
+import VerifiedRating from './VerifiedRating.astro';
 import RequestBand from './sections/RequestBand.astro';
 interface Crumb {
   name: string;
@@ -97,8 +102,20 @@ interface Props {
   current: string;
   /** The city name, for the "in {city}" headings on a service-and-city page. */
   cityName?: string;
+  /** The city's slug, so the page can pull reviews attributed to that city. */
+  areaSlug?: string;
   /** The sibling service pages in the same city. */
   siblingServices?: { name: string; href: string; note: string }[];
+  /**
+   * The clinically adjacent services, linked sideways.
+   *
+   * The lateral edge of the service tree. Before this, a service page only
+   * linked down to its own city pages — so the eleven treatments never
+   * referenced each other, and the cluster a search engine reads as
+   * "this site knows corrective skin work" was never assembled anywhere a
+   * reader could walk it.
+   */
+  relatedServices?: { name: string; href: string; note: string; price: string }[];
   /** The hero block, assembled by the page that renders this component. */
   hero: {
     eyebrow: string;
@@ -144,7 +161,9 @@ const {
   ancestors,
   current,
   cityName,
+  areaSlug,
   siblingServices,
+  relatedServices,
   siblingCities,
   hero,
 } = Astro.props;
@@ -157,6 +176,32 @@ const isArea = mode === 'area';
  * key set against the service registry.
  */
 const trust = treatmentTrust[trustSlug];
+
+/**
+ * The client voices in the trust band.
+ *
+ * A service-and-city page uses reviews attributed to that city, so a reader
+ * in Encinitas meets an Encinitas client rather than a generic one. A
+ * national service page has no city to attribute to, so it takes two general
+ * reviews chosen by the service slug — which also stops eleven service pages
+ * arguing for the studio in one identical voice.
+ */
+const proofQuotes = isArea && areaSlug ? getAreaTestimonials(areaSlug) : getServiceTestimonials(trustSlug);
+
+/**
+ * The reading this treatment raises — the comparison pieces and the notes
+ * behind them. Every article on the site appears in at least one of these
+ * lists, so nothing in the journal is left outside the cluster.
+ */
+const readingLinks = getReadingLinks(trustSlug);
+
+/**
+ * The date this page's prices and protocols were last reviewed.
+ *
+ * The same date the page's schema carries, so the visible claim and the
+ * machine-readable one cannot drift apart.
+ */
+const reviewedOn = CONTENT_REVISED;
 
 /**
  * The price rows, from whichever source this page has.
@@ -212,12 +257,21 @@ const bandHeading =
 
   {/* The trust band, directly under the hero. The hero is the offer; this is
       the reason to believe it. Keeping them apart is also what lets the hero
-      fit the fold. */}
+      fit the fold.
+
+      The claims sit on their own full-width row, because they are three
+      independent reasons and the row is what says so. The proof sits beneath
+      them: the rating card, then the clients. Before, both were the studio's
+      own voice — three claims and the same single quote on all forty-six of
+      these pages, with the rating and the review count nowhere on them. */}
   <section class="bg-porcelain py-12 md:py-14">
     <div class="wrap">
       {trust && <TrustBar items={trust.claims} heading="Why this studio" />}
       <div class="mt-10 border-t border-line pt-9 md:mt-12 md:pt-10">
-        <ProofQuote testimonial={studioProof} />
+        <div class="grid gap-10 md:grid-cols-[19rem_1fr] md:items-start md:gap-14">
+          <VerifiedRating />
+          <VerifiedProof quotes={proofQuotes} areaName={isArea ? cityName : undefined} withRating={false} />
+        </div>
       </div>
     </div>
   </section>
@@ -395,6 +449,15 @@ const bandHeading =
             Every price below is published before you book. Nothing is quoted at the door, and the
             first visit includes the consultation that decides the plan.
           </p>
+          {/* The review date.
+              A published price is only worth something if somebody checked it.
+              This is the date the prices, the protocols and the city detail on
+              this page were last reviewed — the same date the page carries in
+              its schema, so what a reader reads and what a crawler reads are
+              the same claim. */}
+          <p class="t-meta mt-5 text-ink-soft">
+            Prices and protocols last reviewed {formatReviewDate(reviewedOn)}.
+          </p>
         </div>
         <div class="border border-line bg-ivory p-8">
           <dl class="mt-0 m-0 space-y-6">
@@ -445,6 +508,56 @@ const bandHeading =
               sessions, and how far apart — is set at consultation.
             </p>
           )}
+        </div>
+      </div>
+    </section>
+  )}
+
+  {relatedServices && relatedServices.length > 0 && (
+    <section class="bg-ivory py-20 md:py-28">
+      <div class="wrap">
+        <div class="max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">Also consider</p>
+            <h2 class="t-h2 mt-4">Other treatments</h2>
+            <p class="t-body mt-5 max-w-[58ch] leading-relaxed">
+              These overlap with {hero.serviceName} often enough that a reader weighing one
+              against another should see them side by side, with the price beside each one. Which
+              one fits is decided at the consultation, not here.
+            </p>
+          </Reveal>
+        </div>
+
+        {/* A comparison table rather than a list of links. The treatment
+            cluster had no table on any of its forty-six pages, and the
+            table is the format an answer engine lifts cleanly: treatment,
+            what it is for, price. */}
+        <div class="mt-10 overflow-x-auto">
+          <table class="w-full border-collapse text-left">
+            <thead>
+              <tr class="border-b border-line">
+                <th class="t-eyebrow py-4 pr-6 align-bottom text-ink-soft">Treatment</th>
+                <th class="t-eyebrow py-4 pr-6 align-bottom text-ink-soft">What it is for</th>
+                <th class="t-eyebrow py-4 align-bottom text-ink-soft">Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              {relatedServices.map((link) => (
+                <tr class="border-b border-line align-top">
+                  <td class="py-5 pr-6">
+                    <a
+                      href={link.href}
+                      class="t-service text-[1rem] transition-colors duration-300 hover:text-rose"
+                    >
+                      {link.name}
+                    </a>
+                  </td>
+                  <td class="t-body py-5 pr-6 text-[0.9375rem] text-ink-soft">{link.note}</td>
+                  <td class="t-price py-5 whitespace-nowrap text-rose">{link.price}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
@@ -504,27 +617,54 @@ const bandHeading =
     </section>
   )}
 
-  {/* The related guide.
+  {/* The reading.
+
       A service page that never links out of itself is a dead end for a
       crawler and for a reader deciding whether this is the right treatment.
-      The guide answers the question that usually comes before the booking
-      one — how to choose, what it is safe on, what it costs — so it is the
-      link a reader wants next. */}
-  {guide && (
+      It used to carry ONE hand-picked article. That is not a topic cluster —
+      and it left the articles a reader actually opens next (the cost of a
+      peel, the difference between a peel and microchanneling, how to tell
+      one kind of dark mark from another) with nothing on the commercial half
+      of the site pointing at them.
+
+      Now it carries the reading the treatment genuinely raises: the
+      comparison pieces first, because those are the pages an AI answer
+      engine cites for a "best X" query, and then the notes behind them. */}
+  {(readingLinks.length > 0 || guide) && (
     <section class="bg-ivory py-16 md:py-20">
       <div class="wrap">
         <div class="max-w-[68ch]">
           <Reveal>
             <p class="t-eyebrow text-ink-soft">Read next</p>
-            <h2 class="t-h2 mt-4">{guide.label}</h2>
-            <p class="t-body mt-4 text-ink-soft">{guide.lead}</p>
-            <a
-              href={guide.href}
-              class="t-body mt-8 inline-block border-b border-ink pb-1 hover:border-rose hover:text-rose"
-            >
-              Read the guide
-            </a>
+            <h2 class="t-h2 mt-4">
+              {isArea && cityName
+                ? `What to read before booking ${hero.serviceName}`
+                : 'What to read before you book'}
+            </h2>
           </Reveal>
+
+          <ul class="m-0 mt-10 grid list-none gap-x-10 gap-y-0 p-0 md:grid-cols-2">
+            {readingLinks.map((link) => (
+              <li class="border-b border-line">
+                <a href={link.href} class="group block py-6">
+                  <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                    {link.label}
+                  </h3>
+                  <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{link.note}</p>
+                </a>
+              </li>
+            ))}
+            {guide && (
+              <li class="border-b border-line">
+                <a href={guide.href} class="group block py-6">
+                  <h3 class="t-service text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                    {guide.label}
+                  </h3>
+                  <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{guide.lead}</p>
+                </a>
+              </li>
+            )}
+          </ul>
         </div>
       </div>
     </section>

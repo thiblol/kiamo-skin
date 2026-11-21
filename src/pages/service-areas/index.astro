@@ -21,18 +21,20 @@ import Reveal from '../../components/Reveal.astro';
 import Button from '../../components/Button.astro';
 import NapBlock from '../../components/NapBlock.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
 import FaqList from '../../components/FaqList.astro';
 import RequestBand from '../../components/sections/RequestBand.astro';
+import PageHero from '../../components/PageHero.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 import { areaShells } from '../../data/area-shells';
 import { services } from '../../data/services';
 import { getServiceAreasForArea } from '../../data/service-areas-index';
 import { areaServicePath, areaPath } from '../../config/urls';
-import { business } from '../../config/business';
+import { business, verifiedPrices } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import heroServiceAreasHub from '../../assets/hero-service-areas-hub-san-diego-coverage-map-kiamo.jpg';
+import VerifiedProof from '../../components/VerifiedProof.astro';
+import { getServiceTestimonials } from '../../data/testimonials';
 
 /**
  * The areas, grouped by the climate that shapes their skin concern.
@@ -128,166 +130,40 @@ const covered = matrix.filter((m) => m.rows.length > 0);
 <BaseLayout
   title="Areas We Serve in San Diego | KIAMO Skin"
   description="KIAMO Skin serves clients from 10 San Diego areas. HydraFacial, peels, dermaplaning, microchanneling and scalp therapy. Find your nearest area."
+  headerTheme="dark"
 >
   <BreadcrumbSchema slot="head" trail={[{ name: 'Areas We Serve', path: '/service-areas/' }]} />
   <FaqSchema slot="head" faqs={faqs} />
   <SpeakableSchema slot="head" />
 
   <article>
-    <header class="bg-blush">
-      <div class="wrap section-y pt-[calc(60px+40px)] md:pt-[calc(60px+112px)]">
-        <div class="grid gap-12 md:grid-cols-2 md:gap-16 lg:gap-20 items-center">
-          <div>
-            <Breadcrumbs current="Areas We Serve" meta="San Diego County" />
-            <h1 class="t-h2 mt-6 max-w-[26ch] text-[2.5rem] md:text-[4rem]">
-              Where clients travel from, and what the drive is worth
-            </h1>
+    {/* The hero. The coverage map is the background, the drive is the
+        subject, and the action is in the first screen. */}
+    <PageHero
+      eyebrow="San Diego County · One studio, off Washington Street"
+      h1="Where clients travel from"
+      h1Accent="and what the drive is worth"
+      claim="There is one studio, and it is in Mission Hills. Clients drive in from across San Diego County — so here is the honest distance from each."
+      paragraph="Every treatment is performed by Kiki, a California licensed esthetician with 7+ years in corrective skin work, in one private treatment room. Parking is free on site and the studio is appointment-only."
+      image={heroServiceAreasHub}
+      imageAlt="A coverage map of San Diego County showing the areas KIAMO Skin serves from its Mission Hills studio"
+      price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
+      trust={[
+        { label: 'Free parking on site' },
+        { label: 'Ten areas across the county' },
+        { label: 'Prices published before you book' },
+        { label: 'Safe for every Fitzpatrick type, I–VI' },
+      ]}
+      reassurance={[
+        business.visit.appointmentOnly,
+        business.visit.parking,
+        'Free cancellation up to 48 hours before',
+      ]}
+      ancestors={[{ name: 'Service Areas', path: '/service-areas/' }]}
+      current="San Diego County"
+      eventLabel="areas_hero"
+    />
 
-            {/* The action sits directly under the headline. Measured on a
-                390×844 screen it was at 1,240px — the furthest down of any
-                page on the site, behind two paragraphs and a stat strip. */}
-            <div class="mt-8 flex flex-wrap items-center gap-x-8 gap-y-4">
-              <Button
-                href={business.bookingUrl}
-                external
-                trackEvent="booking_click"
-                eventLabel="areas_hub"
-              >
-                {CTA_LABEL}
-              </Button>
-              <a
-                href={business.phone.href}
-                class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
-                onclick="if(typeof gtag !== 'undefined') gtag('event', 'phone_click', {event_category: 'engagement', event_label: 'areas_hub', transport_type: 'beacon'});"
-              >
-                {business.phone.display}
-              </a>
-            </div>
-
-            <p class="t-body mt-7 text-[1.125rem] max-w-[62ch]">
-              One treatment room in San Diego. Clients travel from {areaShells.length} areas across the
-              county — from five minutes away to forty — for corrective skin and scalp work performed by
-              a California licensed esthetician.
-            </p>
-            <p class="t-body mt-5 max-w-[62ch]">
-              Every area below lists the treatments with a page for it. Each page opens with what that
-              treatment actually addresses for that area, so you can tell whether the drive is worth it
-              before you book.
-            </p>
-
-            <div class="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-soft">
-              <span>{areaShells.length} areas served</span>
-              <span class="text-rose">·</span>
-              <span>Licensed Esthetician</span>
-              <span class="text-rose">·</span>
-              <span>{business.experience} in San Diego</span>
-              <span class="text-rose">·</span>
-              <span>All skin types</span>
-            </div>
-          </div>
-
-          {/* The map comes AFTER the copy on mobile.
-              It used to lead, and the consequence was that the "Request
-              Appointment" button sat at 1,240px on a 390×844 screen — below
-              the fold, on the one page that ranks for "areas we serve". The
-              map is a good opener on a wide screen and a poor one on a
-              phone, where it pushed the action off the screen entirely. */}
-          <div class="md:order-last">
-            <Image
-              src={heroServiceAreasHub}
-              alt="San Diego service area coverage map showing KIAMO Skin corrective facial services across the neighborhoods served"
-              class="w-full h-auto rounded-sm shadow-lg"
-              widths={[400, 600, 800]}
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-        </div>
-      </div>
-    </header>
-
-    {/* The matrix. The directory of where and what. */}
-    <section class="bg-ivory">
-      <div class="wrap section-y">
-        <p class="t-eyebrow text-ink-soft">Where you live shapes your skin</p>
-        <h2 class="t-h2 mt-5 max-w-[28ch]">
-          The skin concern that brings clients from each part of San Diego County
-        </h2>
-        <p class="t-body mt-6 max-w-[62ch]">
-          San Diego is not one climate. Coastal neighborhoods deal with barrier damage and marine-layer
-          UV. Inland areas accumulate more UV hours per year and see more melasma. Central San Diego
-          clients are close enough to complete a peel series.
-        </p>
-
-        {
-          groups.map((group) => {
-            const areas = matrix.filter((m) => group.slugs.includes(m.shell.slug));
-            if (areas.length === 0) return null;
-            return (
-              <Reveal class="mt-16">
-                <h3 class="t-service text-[1.0625rem] text-rose md:text-[1.1875rem]">{group.type}</h3>
-                <p class="t-body mt-2 max-w-[56ch] text-ink-soft">{group.description}</p>
-                <ul class="mt-8 grid list-none gap-6 p-0 md:grid-cols-2 lg:grid-cols-3">
-                  {areas.map(({ shell, rows }) => (
-                    <li class="border border-line bg-porcelain p-7">
-                      <p class="t-service text-[1rem]">
-                        <a href={areaPath(shell.slug)} class="hover:text-rose">{shell.name}</a>
-                      </p>
-                      <p class="t-body mt-2 text-[0.875rem] text-ink-soft">{shell.proximity}</p>
-
-                      <ul class="m-0 mt-5 list-none border-t border-line p-0">
-                        {rows.map(({ record, service }) => (
-                          <li class="border-b border-line last:border-0">
-                            <a
-                              href={areaServicePath(record.area, record.service)}
-                              class="t-body group flex items-baseline justify-between gap-x-4 py-3 transition-colors duration-300 hover:text-rose"
-                            >
-                              <span>{service?.name ?? record.service}</span>
-                              <span aria-hidden="true" class="text-rose">
-                                →
-                              </span>
-                            </a>
-                          </li>
-                        ))}
-                      </ul>
-                    </li>
-                  ))}
-                </ul>
-              </Reveal>
-            );
-          })
-        }
-      </div>
-    </section>
-
-    {/* The trust strip. */}
-    <div class="border-y border-line bg-porcelain">
-      <div class="wrap py-10 md:py-12">
-        <ul class="grid list-none grid-cols-2 gap-x-6 gap-y-7 p-0 md:grid-cols-4 md:gap-x-10">
-          <li>
-            <p class="t-service text-[0.9375rem] md:text-[1rem]">{areaShells.length} areas served</p>
-            <p class="t-body mt-1 text-[0.875rem] text-ink-soft">Across San Diego County</p>
-          </li>
-          <li>
-            <p class="t-service text-[0.9375rem] md:text-[1rem]">{business.experience} in practice</p>
-            <p class="t-body mt-1 text-[0.875rem] text-ink-soft">Corrective skin care</p>
-          </li>
-          <li>
-            <p class="t-service text-[0.9375rem] md:text-[1rem]">Licensed esthetician</p>
-            <p class="t-body mt-1 text-[0.875rem] text-ink-soft">CA Board of Barbering &amp; Cosmetology</p>
-          </li>
-          <li>
-            <p class="t-service text-[0.9375rem] md:text-[1rem]">All skin types</p>
-            <p class="t-body mt-1 text-[0.875rem] text-ink-soft">
-              Fitzpatrick I-VI, protocols per skin tone
-            </p>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    {/* Every service-and-city page, listed flat. One link from here to each of
-        the twenty-five, and each is also reachable from its service hub and
-        its sibling pages. */}
     <section class="bg-porcelain">
       <div class="wrap section-y">
         <p class="t-eyebrow text-ink-soft">Every treatment and area</p>
@@ -328,6 +204,28 @@ const covered = matrix.filter((m) => m.rows.length > 0);
     </section>
 
     {/* The FAQ. */}
+
+  {/* The proof.
+
+      The rating and the review count appeared on exactly two pages of the
+      site — the homepage and /reviews. Every commercial page argued for the
+      studio in the studio's own voice. This band puts the objective figure
+      and two client voices on the page, which is both what a reader deciding
+      whether the drive is worth it needs, and what an answer engine weights. */}
+  <section class="bg-blush py-16 md:py-20">
+    <div class="wrap">
+      <div class="mx-auto max-w-[68ch]">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">From the treatment room</p>
+          <h2 class="t-h2 mt-4 max-w-[26ch]">What clients say once they have been in.</h2>
+        </Reveal>
+        <div class="mt-10">
+          <VerifiedProof quotes={getServiceTestimonials('areas')} />
+        </div>
+      </div>
+    </div>
+  </section>
+
     <section class="bg-ivory">
       <div class="wrap section-y">
         <div class="max-w-[68ch]">

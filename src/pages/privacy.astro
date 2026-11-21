@@ -10,6 +10,8 @@
  * this domain.
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import legalImage from '../assets/kiamo-skin-studio-mission-hills-san-diego.jpg';
 import Reveal from '../components/Reveal.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
@@ -21,20 +23,23 @@ const updated = 'November 7, 2026';
 <BaseLayout
   title="Privacy Policy | KIAMO Skin"
   description="What KIAMO Skin collects, who it goes to, and how to ask for it to be deleted. Written in plain language and updated November 2026."
+  headerTheme="dark"
 >
   <BreadcrumbSchema slot="head" trail={[{ name: 'Privacy Policy', path: '/privacy' }]} />
 
-  <header class="bg-blush">
-    <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-      <Breadcrumbs current="Privacy Policy" />
-      <h1 class="t-h2 mt-6 max-w-[20ch] text-[2.5rem] md:text-[4rem]">Privacy Policy</h1>
-      <p class="t-body mt-7 max-w-[58ch] text-[1.125rem]">
-        The short version: this site has no accounts, no newsletter, and no forms. If you
-        email or call, what you tell us is used to treat your skin and nothing else.
-      </p>
-      <p class="t-meta mt-7">Last updated {updated}</p>
-    </div>
-  </header>
+  {/* The legal pages do not need a conversion rail — there is nothing to
+      sell on a privacy policy — but they open like every other page: the
+      photograph is the background, the title sits close under the nav, and
+      the spacing is the same as the rest of the site. */}
+  <PageHero
+    eyebrow="KIAMO Skin · Mission Hills, San Diego"
+    h1="Privacy Policy"
+    claim="What KIAMO Skin collects, who it goes to, and how to ask for it to be deleted. Written in plain language and updated November 2026."
+    image={legalImage}
+    imageAlt="The KIAMO Skin studio in Mission Hills, San Diego — one private treatment room"
+    showRail={false}
+    current="Privacy Policy"
+  />
 
   <div class="bg-porcelain">
     <div class="wrap section-y">

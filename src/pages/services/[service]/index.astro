@@ -16,15 +16,16 @@
 import BaseLayout from '../../../layouts/BaseLayout.astro';
 import ServicePage from '../../../components/ServicePage.astro';
 import ServiceHubSchema from '../../../components/schema/ServiceHubSchema.astro';
+import WebPageSchema from '../../../components/schema/WebPageSchema.astro';
 import BreadcrumbSchema from '../../../components/schema/BreadcrumbSchema.astro';
 import FaqSchema from '../../../components/schema/FaqSchema.astro';
-import SpeakableSchema from '../../../components/schema/SpeakableSchema.astro';
 import PersonSchema from '../../../components/schema/PersonSchema.astro';
-import { services, heroPriceFor } from '../../../data/services';
+import { services, heroPriceFor, serviceRelations } from '../../../data/services';
 import { treatmentFaqs } from '../../../data/treatment-faqs';
 import { treatmentTrust } from '../../../data/treatment-trust';
 import { getServiceAreasForService } from '../../../data/service-areas-index';
 import { servicePath, areaServicePath } from '../../../config/urls';
+import { STUDIO_LAUNCH, CONTENT_REVISED } from '../../../data/page-dates';
 
 export function getStaticPaths() {
   return services.map((service) => ({
@@ -50,6 +51,24 @@ const cityLinks = getServiceAreasForService(service.slug).map((record) => ({
   href: areaServicePath(record.area, service.slug),
   note: record.proximity,
 }));
+
+/**
+ * The treatments this one overlaps with.
+ *
+ * The lateral edge of the service tree. A service page used to link only
+ * downward, to its own city pages, so the eleven treatments never referenced
+ * each other — the cluster a search engine reads as topical authority was
+ * never assembled where a reader could walk it.
+ */
+const relatedLinks = (serviceRelations[service.slug] ?? [])
+  .map((slug) => services.find((s) => s.slug === slug))
+  .filter((related): related is (typeof services)[number] => Boolean(related))
+  .map((related) => ({
+    name: related.name,
+    href: servicePath(related.slug),
+    note: related.menuLine ?? related.opener,
+    price: related.menuPrice ?? 'Pricing at consultation.',
+  }));
 ---
 
 <BaseLayout title={service.title} description={service.description} headerTheme="dark">
@@ -62,7 +81,14 @@ const cityLinks = getServiceAreasForService(service.slug).map((record) => ({
     ]}
   />
   {faqs.length > 0 && <FaqSchema slot="head" faqs={faqs} />}
-  <SpeakableSchema slot="head" />
+  <WebPageSchema
+    slot="head"
+    url={servicePath(service.slug)}
+    name={service.title}
+    description={service.description}
+    datePublished={STUDIO_LAUNCH}
+    dateModified={CONTENT_REVISED}
+  />
   <PersonSchema slot="head" />
 
   <ServicePage
@@ -87,6 +113,7 @@ const cityLinks = getServiceAreasForService(service.slug).map((record) => ({
     ancestors={[{ name: 'Services', path: '/services/' }]}
     current={service.name}
     siblingCities={cityLinks}
+    relatedServices={relatedLinks}
     hero={{
       eyebrow: service.hero.eyebrow,
       serviceName: service.name,

@@ -1,0 +1,75 @@
+---
+/**
+ * VerifiedProof
+ * -------------
+ * The clients: two voices, area-attributed where the city is known, and the
+ * way to read every review in full.
+ *
+ * Why this exists:
+ *   The audit found that the rating and the review count appeared on exactly
+ *   two pages of the site — the homepage and /reviews. Every other page, all
+ *   sixty-six of them, argued for the studio in the studio's own voice: three
+ *   claims the studio makes about itself, and one quote, the same quote,
+ *   repeated eleven times over.
+ *
+ *   A visitor reading "Corrective facials in Encinitas" was asked to believe
+ *   the studio without meeting a client from Encinitas, and without seeing
+ *   the one objective fact the studio can prove — that its Google Business
+ *   Profile carries a 5.0 rating across a growing number of reviews, linked
+ *   straight to the listing so it can be checked.
+ *
+ * What it deliberately does NOT do:
+ *   - It does not emit an aggregateRating JSON-LD node. Google treats a
+ *     business republishing its own reviews as self-serving, and the guard
+ *     suite forbids the node outright. The figure lives in visible HTML and
+ *     links to Google, which is the honest arrangement.
+ *   - It does not render star glyphs. The five stars are inline SVG, marked
+ *     aria-hidden, with the rating available to a screen reader as text.
+ *   - It does not invent a review. Every quote is a verified review from the
+ *     Yelp listing or the Google Business Profile, edited only to remove
+ *     gendered pronouns.
+ *
+ * The rating card is a separate component, VerifiedRating, because the two
+ * sit differently on different pages: beside the trust claims on a service
+ * page, stacked above them on a page that has no trust band.
+ */
+import type { Testimonial } from '../data/testimonials';
+import ProofQuote from './ProofQuote.astro';
+import VerifiedRating from './VerifiedRating.astro';
+
+interface Props {
+  /** Two client voices. Area-attributed where the city is known. */
+  quotes: Testimonial[];
+  /** The city, when the page is about one. Used in the attribution line. */
+  areaName?: string;
+  /** Show the rating card above the quotes. */
+  withRating?: boolean;
+  class?: string;
+}
+
+const { quotes, areaName, withRating = true, class: className = '' } = Astro.props;
+---
+
+<div class={className}>
+  {withRating && <VerifiedRating />}
+
+  {/* Two clients. Not the studio's own voice, and not the same voice twice —
+      the whole point is that a reader meets people, not a paragraph. */}
+  {
+    quotes.length > 0 && (
+      <div class={withRating ? 'mt-9 space-y-8' : 'space-y-8'}>
+        {quotes.map((testimonial) => (
+          <ProofQuote testimonial={testimonial} areaLabel={areaName} />
+        ))}
+      </div>
+    )
+  }
+
+  <p class="t-body mt-8 text-[0.9375rem]">
+    Every Google review of KIAMO Skin is published in full, named and dated, at{' '}
+    <a href="/reviews/" class="border-b border-ink/40 pb-0.5 hover:border-rose hover:text-rose">
+      the reviews page
+    </a>
+    .
+  </p>
+</div>

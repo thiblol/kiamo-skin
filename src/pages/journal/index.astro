@@ -9,8 +9,10 @@ import TrustBadge from '../../components/sections/TrustBadge.astro';
 import ProofQuote from '../../components/ProofQuote.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { articles } from '../../data/articles';
+import PageHero from '../../components/PageHero.astro';
+import journalImage from '../../assets/kiamo-skin-esthetician-mission-hills-san-diego-hero.jpg';
+import { journalComparisons } from '../../data/journal-comparisons';
 import { journalFaqs } from '../../data/journal-faqs';
 import { testimonials } from '../../data/testimonials';
 import { business, verifiedPrices } from '../../config/business';
@@ -60,34 +62,35 @@ const secondProof =
 <BaseLayout
   title="Journal: Skin & Scalp Notes in San Diego | KIAMO Skin"
   description="Field notes on skin and scalp in San Diego — the marine layer, hard water, and what the climate does to a routine, from a licensed esthetician."
+  headerTheme="dark"
 >
   <FaqSchema slot="head" faqs={journalFaqs} />
   <BreadcrumbSchema slot="head" trail={[{ name: 'Journal', path: '/journal' }]} />
-  <header class="bg-blush">
-    <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-      <Breadcrumbs current="Journal" />
-      <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.5rem] md:text-[4rem]">
-        What actually works on skin and scalp in San Diego.
-      </h1>
-      <p class="t-body mt-7 max-w-[58ch]">
-        Field notes from the treatment room, written for people being treated in San Diego. The
-        climate is a bigger factor in how skin behaves here than most routines account for.
-      </p>
-
-      {/* Trust, in the first screen.
-          The rating and the count are the studio's own verified GBP figures and
-          are rendered as visible HTML only — no schema-claimed review count,
-          which the guard suite forbids and which the site's own history
-          justifies. The quote is a real client quote, and it is the
-          long-running-client one, because a reader deciding whether these
-          notes are worth reading wants to know whether the studio holds up
-          over years rather than over weeks. */}
-      <div class="mt-12 grid gap-10 border-t border-line pt-10 md:grid-cols-[auto_1fr] md:gap-16">
-        <TrustBadge class="md:w-[22rem] md:shrink-0" />
-        <ProofQuote testimonial={proof} />
-      </div>
-    </div>
-  </header>
+  {/* The hero. The photograph is the background and the reading is the
+      first thing on the page, which is what a journal index is for. */}
+  <PageHero
+    eyebrow="Field notes from the treatment room"
+    h1="What actually works"
+    h1Accent="on skin and scalp in San Diego"
+    claim="The climate is a bigger factor in how skin behaves here than most routines account for."
+    paragraph="Notes written for people being treated in San Diego, by the licensed esthetician who does the treating. Every piece carries the date it was published and the date it was last updated."
+    image={journalImage}
+    imageAlt="A client at the KIAMO Skin studio in San Diego during a corrective facial treatment"
+    price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
+    trust={[
+      { label: 'Written by Kiki, licensed esthetician' },
+      { label: `${articles.length} pieces, each dated` },
+      { label: 'Prices published before you book' },
+      { label: 'Free parking on site' },
+    ]}
+    reassurance={[
+      business.visit.appointmentOnly,
+      business.visit.parking,
+      'Free cancellation up to 48 hours before',
+    ]}
+    current="Journal"
+    eventLabel="journal_hero"
+  />
 
   <section class="bg-porcelain">
     <div class="wrap section-y">
@@ -126,6 +129,62 @@ const secondProof =
                 <p class="t-body mt-4 text-[0.9375rem] text-ink-soft">{article.standfirst}</p>
                 <span class="t-meta mt-5 inline-block border-b border-ink/40 pb-1 transition-colors duration-300 group-hover:border-rose group-hover:text-rose">
                   Read the note
+                </span>
+              </a>
+            </Reveal>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  {/* The comparison pieces.
+
+      Three pages that answer a "which one" question rather than a "how does
+      this work" question. They sit outside the article template — their
+      figures belong to other businesses and are checked against the file they
+      were read from — and they keep their original URLs because they rank.
+
+      What they lacked was a parent. They were linked from nowhere but two
+      sentences of body copy, so a namespace nobody walked. Listing them here
+      gives them one, and gives the journal the two formats an editorial hub
+      is actually made of: notes and comparisons. */}
+  <section class="bg-ivory py-20 md:py-28">
+    <div class="wrap">
+      <div class="flex flex-wrap items-baseline justify-between gap-4">
+        <div>
+          <p class="t-eyebrow text-ink-soft">Comparisons</p>
+          <h2 class="t-h3 mt-3">Studios, side by side</h2>
+        </div>
+        <p class="t-meta">{journalComparisons.length} pieces</p>
+      </div>
+
+      <ul class="m-0 mt-10 grid list-none gap-x-10 gap-y-16 p-0 md:grid-cols-3">
+        {
+          journalComparisons.map((piece, i) => (
+            <Reveal as="li">
+              <a href={piece.href} class="group block">
+                <PanelWipe from={i % 2 === 0 ? 'left' : 'right'} class="aspect-4/3">
+                  <Image
+                    src={piece.image}
+                    alt={piece.imageAlt}
+                    widths={[400, 800, 1200]}
+                    sizes="(min-width: 840px) 30vw, 90vw"
+                    loading="lazy"
+                    class="size-full object-cover transition-transform duration-[1500ms] ease-out group-hover:scale-105"
+                  />
+                </PanelWipe>
+                <p class="t-meta mt-6">
+                  <time datetime={piece.dateModified}>{formatDate(piece.dateModified)}</time>
+                  <span aria-hidden="true"> · </span>
+                  {piece.readingTime}
+                </p>
+                <h3 class="t-h3 mt-3 text-[1.375rem] transition-colors duration-300 group-hover:text-rose md:text-[1.5rem]">
+                  {piece.headline}
+                </h3>
+                <p class="t-body mt-4 text-[0.9375rem] text-ink-soft">{piece.standfirst}</p>
+                <span class="t-meta mt-5 inline-block border-b border-ink/40 pb-1 transition-colors duration-300 group-hover:border-rose group-hover:text-rose">
+                  {piece.linkLabel}
                 </span>
               </a>
             </Reveal>

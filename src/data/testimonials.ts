@@ -158,3 +158,21 @@ export const getAreaTestimonials = (slug: string): Testimonial[] => {
   if (area.length >= 1) return area;
   return testimonials.filter((t) => !t.area).slice(0, 2);
 };
+
+/**
+ * Two general reviews for a treatment page.
+ *
+ * Every service page carries the same studio quote in its trust band, which
+ * made eleven pages argue for the studio in one voice. These pick two more
+ * voices per service, deterministically from the slug, so a reader moving
+ * between treatments meets more than one client and no two pages read
+ * identically.
+ *
+ * The picks are stable: the same service always shows the same two reviews,
+ * so the page does not change under a returning reader.
+ */
+export const getServiceTestimonials = (slug: string): Testimonial[] => {
+  const general = testimonials.filter((t) => !t.area);
+  const start = [...slug].reduce((sum, char) => sum + char.charCodeAt(0), 0) % general.length;
+  return [general[start], general[(start + 1) % general.length]];
+};

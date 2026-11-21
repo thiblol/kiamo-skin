@@ -34,7 +34,7 @@ import Button from '../components/Button.astro';
 import BeforeAfter from '../components/BeforeAfter.astro';
 import FaqList from '../components/FaqList.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PageHero from '../components/PageHero.astro';
 import SpeakableSchema from '../components/schema/SpeakableSchema.astro';
 import FaqSchema from '../components/schema/FaqSchema.astro';
 import PersonSchema from '../components/schema/PersonSchema.astro';
@@ -46,9 +46,11 @@ import {
   gallerySupport,
   galleryTreatmentOffers,
 } from '../data/gallery';
-import { business } from '../config/business';
+import { business, verifiedPrices } from '../config/business';
 import { CTA_LABEL } from '../config/nav';
 import { absolute, businessId, websiteId, gbpListingUrl, servicePath } from '../config/urls';
+import VerifiedProof from '../components/VerifiedProof.astro';
+import { getServiceTestimonials } from '../data/testimonials';
 
 const site = Astro.site;
 const url = absolute('/gallery', site);
@@ -288,7 +290,8 @@ const title = 'Before & After Gallery | KIAMO Skin San Diego';
 const description =
   'Consented before-and-after photos from KIAMO Skin in San Diego. Lira peels, Procell, Keravive scalp therapy. No retouching. Request an appointment.';
 ---
-<BaseLayout {title} {description}>
+<BaseLayout {title} {description}
+  headerTheme="dark">
   {/* 1. CollectionPage + ImageGallery wrapper */}
   <script
     type="application/ld+json"
@@ -351,58 +354,39 @@ const description =
 
   <article>
     {/* HERO */}
-    <header class="bg-blush">
-      <div class="wrap grid items-center gap-12 pt-[calc(60px+112px)] pb-24 md:grid-cols-[0.95fr_1fr] md:gap-16 md:pb-32">
-        <Reveal class="md:order-2">
-          <Image
-            src={heroGraph.sourceImage}
-            alt={heroGraph.case.compositeAlt ?? heroGraph.case.afterAlt}
-            widths={[640, 960, 1400]}
-            sizes="(min-width: 840px) 50vw, 100vw"
-            loading="eager"
-            class="aspect-[0.85] w-full object-cover"
-          />
-          <p class="t-meta mt-5 text-ink-soft">
-            {heroGraph.case.eyebrow} · {heroGraph.case.treatmentName} · {heroGraph.case.sessions}{' '}
-            sessions · {heroGraph.case.timeframe}
-          </p>
-        </Reveal>
+    {/* The hero. The first published case is the background, so the page
+        opens on the evidence rather than on a promise about it. */}
+    <PageHero
+      eyebrow="Published cases · Consent on file"
+      h1="Before and after,"
+      h1Accent="named honestly"
+      claim="Every photo was taken at the San Diego studio, of clients who consented in writing to share their results."
+      paragraph="No retouching. No filters. No stock photography. No cases staged for marketing — these are the actual sessions, in the order they happened, and every caption names the treatment, the concern, the number of sessions and the elapsed time."
+      image={heroGraph.sourceImage}
+      imageAlt={heroGraph.case.compositeAlt ?? heroGraph.case.afterAlt}
+      price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
+      trust={[
+        { label: 'Patient consent on file' },
+        { label: 'All photos taken in studio' },
+        { label: 'Results vary — every case is different' },
+        { label: 'Prices published before you book' },
+      ]}
+      reassurance={[
+        business.visit.appointmentOnly,
+        business.visit.parking,
+        'Free cancellation up to 48 hours before',
+      ]}
+      current="Results"
+      eventLabel="gallery_hero"
+    >
+      <Fragment slot="extra">
+        <p class="t-meta mt-6 text-porcelain/70">
+          {heroGraph.case.eyebrow} · {heroGraph.case.treatmentName} · {heroGraph.case.sessions}{' '}
+          sessions · {heroGraph.case.timeframe}
+        </p>
+      </Fragment>
+    </PageHero>
 
-        <div class="md:order-1">
-                      <Breadcrumbs current="Gallery" meta="San Diego studio" />
-          <h1 class="t-h2 mt-6 max-w-[18ch] text-[2.5rem] md:text-[3.5rem]">
-            Before and after, named honestly.
-          </h1>
-          <p class="t-body mt-7 max-w-[58ch] text-[1.125rem]">
-            Every photo in this gallery was taken at the San Diego studio, of clients who
-            consented in writing to share their results. Every caption names the treatment,
-            the concern, the number of sessions, and the elapsed time.
-          </p>
-          <p class="t-body mt-5 max-w-[58ch]">
-            No retouching. No filters. No stock photography. No cases staged for marketing —
-            these are the actual sessions, in the order they happened.
-          </p>
-
-          <p class="t-meta mt-8 text-ink-soft">
-            Patient consent on file · All photos taken in studio · Results vary
-          </p>
-
-          <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <Button href={business.bookingUrl} external trackEvent="booking_click">
-              {CTA_LABEL}
-            </Button>
-            <a
-              href={business.phone.href}
-              class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
-            >
-              {business.phone.display}
-            </a>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    {/* FILTER BAR */}
     <section class="border-y border-line bg-porcelain">
       <div
         class="wrap flex flex-col gap-4 py-5 md:flex-row md:items-center md:justify-between md:py-6"
@@ -692,6 +676,28 @@ const description =
     </section>
 
     {/* FAQ */}
+
+  {/* The proof.
+
+      The rating and the review count appeared on exactly two pages of the
+      site — the homepage and /reviews. Every commercial page argued for the
+      studio in the studio's own voice. This band puts the objective figure
+      and two client voices on the page, which is both what a reader deciding
+      whether the drive is worth it needs, and what an answer engine weights. */}
+  <section class="bg-porcelain py-16 md:py-20">
+    <div class="wrap">
+      <div class="mx-auto max-w-[68ch]">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">From the treatment room</p>
+          <h2 class="t-h2 mt-4 max-w-[26ch]">What clients say once they have been in.</h2>
+        </Reveal>
+        <div class="mt-10">
+          <VerifiedProof quotes={getServiceTestimonials('gallery')} />
+        </div>
+      </div>
+    </div>
+  </section>
+
     <section class="bg-ivory">
       <div class="wrap py-20 md:py-28">
         <p class="t-eyebrow text-ink-soft">Before you read the cases</p>

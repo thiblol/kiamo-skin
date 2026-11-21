@@ -3,40 +3,109 @@ import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ContactSchema from '../components/schema/ContactSchema.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PageHero from '../components/PageHero.astro';
+import FaqSchema from '../components/schema/FaqSchema.astro';
+import FaqList from '../components/FaqList.astro';
 import Button from '../components/Button.astro';
 import NapBlock from '../components/NapBlock.astro';
 import LocationMap from '../components/LocationMap.astro';
+import RequestForm from '../components/sections/RequestForm.astro';
+import VerifiedProof from '../components/VerifiedProof.astro';
 import studio from '../assets/kiamo-skin-studio-mission-hills-san-diego.jpg';
-import { business } from '../config/business';
+import treatmentRoom from '../assets/kiamo-skin-esthetician-mission-hills-san-diego-hero.jpg';
+import { business, verifiedPrices } from '../config/business';
 import { CTA_LABEL } from '../config/nav';
+import { getServiceTestimonials } from '../data/testimonials';
 
 const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
   `${business.name}, ${business.address.full}`,
 )}`;
+
+/**
+ * The questions a visitor to a studio actually asks before they drive to it.
+ *
+ * Not "what are your opening hours" — the studio has none, because it is by
+ * appointment only and no hours were ever verified. These are the questions
+ * that stop someone getting in a car: where exactly, is there parking, what
+ * do I do before I come, what if I have to cancel.
+ */
+const faqs = [
+  {
+    question: 'Where exactly is the KIAMO Skin studio?',
+    answer: `The studio is at ${business.address.full}, off Washington Street in ${business.address.neighborhood} — minutes from Hillcrest, Bankers Hill and Little Italy. Parking is free on site, so there is no garage to find and no street parking to circle for. The address, the phone number and the map are on this page and in the footer of every page on the site.`,
+  },
+  {
+    question: 'Is there parking at the studio?',
+    answer: 'Yes — free parking is on site. Because the studio is by appointment only, only one client is in the room at a time, so there is always a space when you arrive and you are never waiting in a car outside. The studio is one treatment room, which is also what makes the room private and the schedule unhurried.',
+  },
+  {
+    question: 'What should I do before my first appointment?',
+    answer: 'Arrive with clean skin if you can, and text photos of the skincare products you are currently using to the studio before you come in. Reviewing the routine beforehand means the recommendations can be specific from the first minute rather than assembled during the treatment. It is also worth noting anything that has already caused a reaction — a previous peel that darkened the skin changes the order of the plan.',
+  },
+  {
+    question: 'What happens if I need to cancel or reschedule?',
+    answer: `Please give 48 hours notice to reschedule. Cancellations inside 24 hours are charged 50% of the service, and a no-show is charged in full. The window exists because a cancelled slot cannot be filled late in the day, and a client who arrives to a full appointment waits for somebody else to leave. If you need to cancel, call ${business.phone.display} and it is handled there.`,
+  },
+  {
+    question: 'Can I talk to the esthetician before I book?',
+    answer: `Yes, and it is worth doing if you are not sure which treatment fits. Call or text ${business.phone.display}, or send the question through the form on this page — that one goes to the studio and the reply comes from the person who would be doing the work, not from a booking system. There is no obligation to book after asking.`,
+  },
+  {
+    question: 'How far is the studio from the rest of San Diego County?',
+    answer:
+      'About ten minutes from North Park and Point Loma, twenty from La Jolla, Pacific Beach and La Mesa, and thirty-five from Encinitas and Carlsbad. Clients travel from across the county, and a corrective series is scheduled as a block at the first appointment so the drive works with the course rather than against it.',
+  },
+];
 ---
 
 <BaseLayout
   title="Contact KIAMO Skin — Mission Hills, San Diego"
   description="Contact KIAMO Skin at 3067 Reynard Way, San Diego, CA 92103. Call (310) 595-0872 or request an appointment online. Appointment-only, free parking."
+  headerTheme="dark"
 >
   <ContactSchema slot="head" />
   <BreadcrumbSchema slot="head" trail={[{ name: 'Contact', path: '/contact' }]} />
-  <header class="bg-blush">
-    <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-                  <Breadcrumbs current="Contact" />
-      <h1 class="t-h2 mt-6 max-w-[20ch] text-[2.5rem] md:text-[4rem]">Come and see us.</h1>
-      <p class="t-body mt-7 max-w-[62ch]">
-        The studio is in {business.address.neighborhood}, minutes from Hillcrest, Bankers Hill and
-        Little Italy, with free parking on site.
-      </p>
-    </div>
-  </header>
+  <FaqSchema slot="head" faqs={faqs} />
 
-  <section class="bg-porcelain">
-    <div class="wrap section-y grid gap-16 md:grid-cols-[1fr_1fr] md:gap-20">
+  {/* The hero. Every page opens the same way now — the photograph is the
+      background, the copy sits over it, the price and the action are in the
+      first screen. On a page about getting in touch, calling IS the action,
+      so the phone number is the first thing in the rail. */}
+  <PageHero
+    eyebrow="Mission Hills · Free parking · By appointment only"
+    h1="Come and see us."
+    claim="One treatment room, off Washington Street, minutes from Hillcrest, Bankers Hill and Little Italy."
+    paragraph="Every treatment is performed by Kiki, a California licensed esthetician with 7+ years in corrective skin work. Parking is free on site, and the studio is appointment-only, so a space is always there when you arrive."
+    image={studio}
+    imageAlt="Inside the KIAMO Skin treatment room in Mission Hills, San Diego — a single private treatment room with the treatment bed and equipment"
+    price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
+    trust={[
+      { label: 'Free parking on site' },
+      { label: 'One private treatment room' },
+      { label: 'Kiki performs every treatment' },
+      { label: 'Prices published before you book' },
+    ]}
+    reassurance={[
+      business.visit.appointmentOnly,
+      'Free cancellation up to 48 hours before',
+      'Consultations included — the plan is set before you book',
+    ]}
+    current="Contact"
+    eventLabel="contact_hero"
+  />
+
+  {/* The ways to reach the studio, and the form. The form goes here rather
+      than further down because on a contact page the enquiry is the whole
+      point of the page. */}
+  <section class="bg-porcelain py-20 md:py-28">
+    <div class="wrap grid gap-14 md:grid-cols-[1fr_1fr] md:gap-20">
       <div>
-        <NapBlock tone="light" showCancellation />
+        <p class="t-eyebrow text-ink-soft">Reach the studio</p>
+        <h2 class="t-h2 mt-4">How to get in touch.</h2>
+
+        <div class="mt-9">
+          <NapBlock tone="light" showCancellation />
+        </div>
 
         <dl class="mt-12 m-0 space-y-8">
           <div class="border-t border-line pt-6">
@@ -61,30 +130,116 @@ const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComp
               >
             </dd>
           </div>
+          <div class="border-t border-line pt-6">
+            <dt class="t-eyebrow text-ink-soft">Online booking</dt>
+            <dd class="t-service m-0 mt-3 text-[1.125rem]">
+              <a href={business.bookingUrl} target="_blank" rel="noopener" class="hover:text-rose"
+                >Request an appointment</a
+              >
+            </dd>
+          </div>
         </dl>
+      </div>
 
-        <div class="mt-12 flex flex-wrap gap-3">
-          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
-          <Button variant="ghost" href={mapsUrl}>Get directions</Button>
+      <RequestForm tone="light" />
+    </div>
+  </section>
+
+  {/* What arriving is like. The contact page used to jump from the phone
+      number straight to a map, which left the reader guessing what they were
+      walking into. */}
+  <section class="bg-ivory py-20 md:py-28">
+    <div class="wrap grid items-center gap-12 md:grid-cols-[0.95fr_1.05fr] md:gap-20">
+      <div>
+        <p class="t-eyebrow text-ink-soft">What to expect</p>
+        <h2 class="t-h2 mt-4 max-w-[22ch]">One room, one practitioner, no rotation.</h2>
+        <p class="t-body mt-6 leading-relaxed">
+          The studio is a single treatment room in {business.address.neighborhood}. There is no
+          reception desk and no handoff between a consultation and a treatment — the person who
+          assesses your skin is the person who treats it, at every visit in the series.
+        </p>
+        <p class="t-body mt-5 leading-relaxed">
+          The consultation comes first and it is a real assessment: skin tone recorded, the barrier
+          checked on the day rather than assumed, the kind of dark mark identified before anything
+          is chosen, and everything already tried taken into account. Nothing is applied to skin
+          that has not been looked at.
+        </p>
+        <p class="t-body mt-5 leading-relaxed">
+          What leaves the room is a plan — which treatment, at what strength, how many sessions,
+          how far apart, and what to do at home in between. The home routine is prescribed rather
+          than left to chance, because it is what holds the result once the series ends.
+        </p>
+        <div class="mt-9">
+          <Button href={business.bookingUrl} external trackEvent="booking_click" eventLabel="contact_body">
+            {CTA_LABEL}
+          </Button>
         </div>
       </div>
 
       <div>
-        <a href={mapsUrl} target="_blank" rel="noopener" class="block">
-          <Image
-            src={studio}
-            alt="Inside the KIAMO Skin treatment room in Mission Hills, San Diego"
-            widths={[400, 800, 1200]}
-            sizes="(min-width: 840px) 45vw, 90vw"
-            loading="lazy"
-            class="aspect-3/4 w-full object-cover"
-          />
-        </a>
+        <Image
+          src={treatmentRoom}
+          alt="A client resting on the treatment bed at the KIAMO Skin studio in San Diego during a facial treatment"
+          widths={[400, 800, 1200]}
+          sizes="(min-width: 840px) 50vw, 90vw"
+          loading="lazy"
+          class="aspect-[4/3] w-full object-cover"
+        />
+      </div>
+    </div>
+  </section>
 
-        <LocationMap id="studio-map" class="mt-10" />
+  {/* Directions, and the areas the studio serves. */}
+  <section class="bg-porcelain py-20 md:py-28">
+    <div class="wrap grid items-center gap-12 md:grid-cols-[1fr_0.9fr] md:gap-16">
+      <div>
+        <p class="t-eyebrow text-ink-soft">Finding us</p>
+        <h2 class="t-h2 mt-4">Getting to {business.address.neighborhood}</h2>
+        <p class="t-body mt-6 leading-relaxed">
+          The studio sits on {business.address.street}, one street in from Washington Street.
+          Clients come from across the county — from North Park and Point Loma, ten minutes out;
+          La Jolla and Pacific Beach, about twenty; and Encinitas and Carlsbad, thirty-five.
+        </p>
+        <p class="t-body mt-5 leading-relaxed text-ink-soft">
+          Coastal communities bring concerns shaped by ocean exposure, while inland areas see more
+          UV-driven pigmentation. The drive is the one thing the studio cannot shorten, so the
+          first appointment is scheduled to make it worth making.
+        </p>
+        <div class="mt-8 flex flex-wrap gap-3">
+          <Button variant="ghost" href={mapsUrl}>Get directions</Button>
+          <a
+            href="/service-areas/"
+            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
+          >
+            Drive times and directions for every area
+          </a>
+        </div>
+      </div>
+      <LocationMap id="studio-map" />
+    </div>
+  </section>
 
-        <h2 class="t-eyebrow mt-10 text-ink-soft">Areas served</h2>
-        <p class="t-body mt-4 text-[0.9375rem]">{business.schemaAreaServed.join(' · ')}</p>
+  {/* The questions, in the order they actually get asked. */}
+  <section class="bg-ivory py-20 md:py-28">
+    <div class="wrap section-y">
+      <div class="max-w-[68ch]">
+        <p class="t-eyebrow text-ink-soft">Before you visit</p>
+        <h2 class="t-h2 mt-4">Questions people ask before they drive over.</h2>
+      </div>
+      <div class="mt-12 max-w-[72ch]">
+        <FaqList faqs={faqs} openFirst={2} />
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-porcelain py-20 md:py-28">
+    <div class="wrap">
+      <div class="mx-auto max-w-[68ch]">
+        <p class="t-eyebrow text-ink-soft">From the treatment room</p>
+        <h2 class="t-h2 mt-4 max-w-[26ch]">What clients say once they have been in.</h2>
+        <div class="mt-10">
+          <VerifiedProof quotes={getServiceTestimonials('contact')} />
+        </div>
       </div>
     </div>
   </section>

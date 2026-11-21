@@ -35,7 +35,7 @@ import WhyLux from '../components/sections/WhyLux.astro';
 import WhyMembersStay from '../components/sections/WhyMembersStay.astro';
 import MembershipSchema from '../components/schema/MembershipSchema.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PageHero from '../components/PageHero.astro';
 import FaqSchema from '../components/schema/FaqSchema.astro';
 import { tiers, memberBenefits, flexibility, ledger, firstMonths, terms } from '../data/memberships';
 import { membershipFaqs } from '../data/membership-faqs';
@@ -44,12 +44,15 @@ import { CTA_LABEL } from '../config/nav';
 import treatmentPhoto from '../assets/membership-facial-treatment-plan-san-diego.jpg';
 import studioPhoto from '../assets/kiamo-skin-membership-studio-mission-hills.jpg';
 import resultPhoto from '../assets/microneedling-back-treatment-results-san-diego.png';
+import VerifiedProof from '../components/VerifiedProof.astro';
+import { getServiceTestimonials } from '../data/testimonials';
 
 const title = 'Monthly Facial Membership San Diego - LUX Plan | KIAMO Skin';
 const description = `Monthly facial memberships in San Diego from KIAMO Skin. LUX pairs two corrective treatments in one visit at ${verifiedPrices['membership-lux']}/month. Request an appointment.`;
 ---
 
-<BaseLayout {title} {description}>
+<BaseLayout {title} {description}
+  headerTheme="dark">
   <MembershipSchema slot="head" />
   <BreadcrumbSchema slot="head" trail={[{ name: 'Membership', path: '/membership' }]} />
   <FaqSchema slot="head" faqs={membershipFaqs} />
@@ -59,77 +62,33 @@ const description = `Monthly facial memberships in San Diego from KIAMO Skin. LU
         sits beside the copy rather than across the page: it is evidence the
         room is real, not a banner, and at this size it never competes with
         the headline. */}
-    <header class="bg-blush">
-      <div
-        class="wrap section-y grid items-center gap-12 pt-[calc(60px+72px)] md:grid-cols-[1fr_0.85fr] md:gap-14 md:pt-[calc(60px+112px)]"
-      >
-        <div>
-                      <Breadcrumbs current="Membership" meta="Monthly plan" />
-          <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[3.5rem]">
-            LUX: Two treatments in one visit - the plan 70% of corrective clients choose
-          </h1>
-          <p class="t-body mt-7 text-[1.125rem]">
-            Monthly corrective facial membership at our San Diego studio - minutes from Hillcrest
-            Medical Center, Little Italy, and Balboa Park. LUX delivers HydraFacial Syndeo deep
-            cleanse + dermaplaning + medical-grade LED therapy + rotating corrective boosters in
-            one 75-minute visit for {verifiedPrices['membership-lux']}/month. A la carte, the same
-            treatments cost more.
-          </p>
-          <p class="t-body mt-5">
-            Serving clients across San Diego County since 2018 - from Downtown and North Park to
-            Bankers Hill and La Jolla. LUX membership is designed for active correction: acne,
-            melasma, post-inflammatory hyperpigmentation, barrier damage, and skin concerns that need
-            clinical-grade technology, not spa relaxation. Every treatment is customized by a
-            California-licensed esthetician based on your Fitzpatrick skin type, barrier function,
-            and monthly progress.
-          </p>
+    {/* The hero. The studio photograph is the background, and the plan's
+        price is in the rail — a membership is the one offer on the site
+        where the price has to be in the first screen. */}
+    <PageHero
+      eyebrow="Monthly plan · Cancellation up to 48 hours before"
+      h1="LUX: Two treatments in one visit"
+      h1Accent="— the plan 70% of corrective clients choose"
+      claim="HydraFacial Syndeo deep cleanse, dermaplaning, medical-grade LED therapy and rotating corrective boosters in one 75-minute visit."
+      paragraph="Monthly corrective facial membership at the San Diego studio, minutes from Hillcrest Medical Center and Little Italy. Built for active correction, with every treatment customised by a California-licensed esthetician."
+      image={studioPhoto}
+      imageAlt="The KIAMO Skin studio in Mission Hills, San Diego — one private treatment room"
+      price={{ label: 'LUX membership', price: verifiedPrices['membership-lux'] }}
+      trust={[
+        { label: 'Licensed esthetician, 7+ years' },
+        { label: 'HydraFacial Syndeo certified' },
+        { label: 'Two treatments in one visit' },
+        { label: 'Cheaper than the same treatments booked separately' },
+      ]}
+      reassurance={[
+        business.visit.appointmentOnly,
+        business.visit.parking,
+        'Free cancellation up to 48 hours before',
+      ]}
+      current="Membership"
+      eventLabel="membership_hero"
+    />
 
-          {/* Trust strip */}
-          <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm text-ink-soft">
-            <span>Licensed Esthetician</span>
-            <span class="text-rose">·</span>
-            <span>7+ years in San Diego</span>
-            <span class="text-rose">·</span>
-            <span>HydraFacial Syndeo Certified</span>
-            <span class="text-rose">·</span>
-            <span>Clinical-grade equipment</span>
-          </div>
-
-          {/* The hero CTA commits to the scroll rather than leaving for Vagaro.
-              Nobody buys a six-month plan before seeing the price, and sending
-              them to the booking flow here drops them out of the funnel. */}
-          <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <Button href="#plans">See LUX details</Button>
-            <a
-              href={business.phone.href}
-              class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
-            >
-              {business.phone.display}
-            </a>
-          </div>
-        </div>
-
-        <Image
-          src={treatmentPhoto}
-          alt="Monthly HydraFacial membership treatment at KIAMO Facial spa in San Diego"
-          widths={[500, 800, 1200]}
-          sizes="(min-width: 52.5rem) 45vw, 100vw"
-          loading="eager"
-          class="aspect-[0.85] w-full object-cover object-[50%_30%]"
-        />
-      </div>
-    </header>
-
-    {/* 2 — The renewal argument. Written to be lifted: claim first, source on
-        the keyword, detail after. This is the answer capsule.
-
-        The before/after sits beside it because it is the argument made
-        visually: congestion and pigmentation clearing over a course of
-        treatment, not in one visit. It carries the same "Results vary"
-        disclaimer as every other result image on the site. */}
-
-    {/* NEW SECTION — What is a facial membership? Keyword capture for
-        "skincare membership", "facial subscription", "monthly facial membership" */}
     <section class="bg-ivory">
       <div class="wrap section-y">
         <Reveal>
@@ -551,6 +510,28 @@ const description = `Monthly facial memberships in San Diego from KIAMO Skin. LU
     </section>
 
     {/* 9 — FAQ. Real PAA questions; none reused from the 49 already on the site. */}
+
+  {/* The proof.
+
+      The rating and the review count appeared on exactly two pages of the
+      site — the homepage and /reviews. Every commercial page argued for the
+      studio in the studio's own voice. This band puts the objective figure
+      and two client voices on the page, which is both what a reader deciding
+      whether the drive is worth it needs, and what an answer engine weights. */}
+  <section class="bg-ivory py-16 md:py-20">
+    <div class="wrap">
+      <div class="mx-auto max-w-[68ch]">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">From the treatment room</p>
+          <h2 class="t-h2 mt-4 max-w-[26ch]">What clients say once they have been in.</h2>
+        </Reveal>
+        <div class="mt-10">
+          <VerifiedProof quotes={getServiceTestimonials('membership')} />
+        </div>
+      </div>
+    </div>
+  </section>
+
     <section class="bg-ivory">
       <div class="wrap section-y">
         <p class="t-eyebrow text-ink-soft">Before you join</p>

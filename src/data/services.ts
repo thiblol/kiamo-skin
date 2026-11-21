@@ -1089,6 +1089,40 @@ export const services: Service[] = [
 export const getService = (slug: string) => services.find((s) => s.slug === slug);
 
 /**
+ * The services each service page links sideways to.
+ *
+ * Why this exists:
+ *   The cluster was a tree with no lateral edges. Every service page linked
+ *   DOWN to its own city pages, and every city page linked UP to its parent
+ *   service — but a service page never linked to another service page. So
+ *   eleven pages each argued for the studio in isolation, and the topical
+ *   cluster that a search engine reads as "this site knows corrective skin
+ *   work" was never actually assembled anywhere a reader could walk it.
+ *
+ *   These are the clinically adjacent services, not the whole menu: the
+ *   treatments a reader who booked one of these would actually consider
+ *   next. Every service appears in at least three lists, so no page in the
+ *   cluster is unreachable sideways.
+ *
+ * The list is explicit rather than computed. Inferring it from overlapping
+ * `goodFor` strings produced pairs nobody would book together — a scalp
+ * treatment linked to a chemical peel, because both mention "hard water".
+ */
+export const serviceRelations: Record<string, string[]> = {
+  facial: ['hydrafacial', 'dermaplaning', 'chemical-peel', 'corrective-skin-treatments'],
+  hydrafacial: ['facial', 'chemical-peel', 'scalp-therapy'],
+  'chemical-peel': ['melasma-treatment', 'hyperpigmentation-treatment', 'facial'],
+  microneedling: ['acne-treatment', 'hyperpigmentation-treatment', 'chemical-peel'],
+  dermaplaning: ['facial', 'chemical-peel', 'hyperpigmentation-treatment'],
+  'scalp-therapy': ['hydrafacial', 'corrective-skin-treatments'],
+  'dmk-enzyme-therapy': ['corrective-skin-treatments', 'hydrafacial', 'facial'],
+  'acne-treatment': ['microneedling', 'chemical-peel', 'hyperpigmentation-treatment'],
+  'hyperpigmentation-treatment': ['melasma-treatment', 'chemical-peel', 'microneedling'],
+  'melasma-treatment': ['hyperpigmentation-treatment', 'chemical-peel', 'hydrafacial'],
+  'corrective-skin-treatments': ['facial', 'chemical-peel', 'dmk-enzyme-therapy'],
+};
+
+/**
  * The price the hero rail shows for a service.
  *
  * A modality page shows its own lead price — the first entry in its price

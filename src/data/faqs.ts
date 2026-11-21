@@ -63,7 +63,7 @@ export const faqs: Faq[] = [
   {
     question: 'Do you work with melanin-rich skin?',
     answer:
-      'That is the specialism. Acne, scarring, pigmentation and barrier health in Black and brown skin need protocols chosen for how that skin actually behaves — particularly around post-inflammatory pigmentation. Every treatment and peel is selected with that in mind.',
+      'Yes — and every skin type from Fitzpatrick I to VI is treated here. Melanin-rich skin is where the training is deepest, because acne, scarring, pigmentation and barrier health in Black and brown skin need protocols chosen for how that skin actually behaves, particularly around post-inflammatory pigmentation. The depth is in the protocols, not in the door: the treatment is selected for your skin, and the pigment protocols are written for the tones they were written for rather than adjusted afterwards.',
   },
   {
     question: 'How often should you get a facial?',

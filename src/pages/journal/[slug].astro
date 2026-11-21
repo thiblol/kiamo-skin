@@ -8,13 +8,14 @@ import { business, verifiedPrices } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import ArticleSchema from '../../components/schema/ArticleSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PageHero from '../../components/PageHero.astro';
 import FaqSchema from '../../components/schema/FaqSchema.astro';
 import HowToSchema from '../../components/schema/HowToSchema.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 import TrustBadge from '../../components/sections/TrustBadge.astro';
 import ProofQuote from '../../components/ProofQuote.astro';
 import { testimonials } from '../../data/testimonials';
+import { reviewStats } from '../../data/review-stats';
 
 export function getStaticPaths() {
   return articles.map((article) => ({
@@ -67,7 +68,7 @@ const formatDate = (iso: string): string => {
 };
 ---
 
-<BaseLayout title={article.title} description={article.description} ogType="article">
+<BaseLayout title={article.title} description={article.description} ogType="article" headerTheme="dark">
   <ArticleSchema slot="head" article={article} />
   {faqs.length > 0 && <FaqSchema slot="head" faqs={faqs} />}
   {article.howTo && <HowToSchema slot="head" article={article} />}
@@ -83,71 +84,67 @@ const formatDate = (iso: string): string => {
     {/* Hero. Same shape as the membership page: copy on the left, the photograph
         beside it rather than across the page, so the image reads as evidence
         instead of as a banner and never competes with the headline. */}
-    <header class="bg-blush">
-      <div
-        class="wrap section-y grid items-center gap-12 pt-[calc(60px+72px)] md:grid-cols-[1fr_0.85fr] md:gap-14 md:pt-[calc(60px+112px)]"
-      >
-        <div>
-          {/* The article's own headline is a sentence, and it is the H1
-              directly below — repeating it in the crumb would say the same
-              thing twice. So the crumb stops at the section and carries the
-              reading time, which is a fact about the article rather than
-              its place in the tree. */}
-          <Breadcrumbs
-            ancestors={[{ name: 'Journal', path: '/journal/' }]}
-            meta={article.readingTime}
-          />
-          <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[3.5rem]">{article.headline}</h1>
-          <p class="t-body mt-7 text-[1.125rem]">{article.standfirst}</p>
-          {article.quickAnswer && (
-            <p class="quick-answer t-body mt-7 border-l-2 border-rose pl-6 text-[1.0625rem] font-medium max-w-[62ch]">
+    {/* The hero. The article's own photograph is the background, the copy
+        sits over it, and the byline, the dates and the proof are all in
+        the first screen. */}
+    <PageHero
+      eyebrow={`${article.readingTime} · Field notes from the treatment room`}
+      h1={article.headline}
+      h1Width="24ch"
+      paragraph={article.standfirst}
+      image={article.image}
+      imageAlt={article.imageAlt}
+      price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
+      trust={[
+        { label: `Written by ${business.ownerName}, licensed esthetician` },
+        { label: `Last updated ${formatDate(article.dateModified)}` },
+        { label: `${reviewStats.count} five-star Google reviews` },
+        { label: 'Prices published before you book' },
+      ]}
+      reassurance={[
+        business.visit.appointmentOnly,
+        business.visit.parking,
+        'Free cancellation up to 48 hours before',
+      ]}
+      ancestors={[{ name: 'Journal', path: '/journal/' }]}
+      current="Note"
+      eventLabel="article_hero"
+    >
+      <Fragment slot="extra">
+        {
+          article.quickAnswer && (
+            <p class="quick-answer t-body mt-6 max-w-[58ch] border-l-2 border-blush pl-6 text-[1.0625rem] font-medium text-porcelain/90">
               {article.quickAnswer}
             </p>
-          )}
-          {/* Byline block. Carries the author with credentials, the publish
-              date and the last-updated date, so a reader (and an AI system
-              reading the markup) can see who wrote it and how current it is. */}
-          <div class="mt-8 border-t border-line pt-6">
-            <p class="t-meta">
-              By <a
-                href="/about/"
-                class="border-b border-ink/40 hover:border-rose hover:text-rose">{business.ownerName}</a
-              >, {business.ownerCredential}
-            </p>
-            <p class="t-meta mt-2">
-              Published <time datetime={article.datePublished}>{formatDate(article.datePublished)}</time>
-              <span aria-hidden="true"> · </span>
-              Last updated <time datetime={article.dateModified}>{formatDate(article.dateModified)}</time>
-            </p>
-          </div>
+          )
+        }
 
-          {/* Proof, in the first screen.
-              The author block says who wrote it. This says whether the studio
-              behind it holds up — the rating and the count are the verified
-              GBP figures shown as visible HTML only, because schema-claimed
-              review counts are forbidden here and because a fabricated one
-              was shipped on this site before. The quote is a real client
-              quote, and it is the long-running-client one: a reader deciding
-              whether to act on what they have just read wants to know
-              whether the studio holds up over years, not over a single
-              appointment. */}
-          <div class="mt-8 grid gap-8 border-t border-line pt-8 md:grid-cols-[auto_1fr] md:gap-12">
-            <TrustBadge class="md:w-[20rem] md:shrink-0" />
-            <ProofQuote testimonial={proof} />
-          </div>
+        {/* The byline. The author, the credentials, the publish date and the
+            revision date — so a reader, and an AI system reading the markup,
+            can see who wrote it and how current it is. */}
+        <div class="mt-8 border-t border-porcelain/20 pt-6">
+          <p class="t-meta text-porcelain/75">
+            By <a
+              href="/about/"
+              class="border-b border-porcelain/40 transition-colors hover:border-blush hover:text-blush"
+              >{business.ownerName}</a
+            >, {business.ownerCredential}
+          </p>
+          <p class="t-meta mt-2 text-porcelain/75">
+            Published <time datetime={article.datePublished}>{formatDate(article.datePublished)}</time>
+            <span aria-hidden="true"> · </span>
+            Last updated <time datetime={article.dateModified}>{formatDate(article.dateModified)}</time>
+          </p>
         </div>
 
-        <Image
-          src={article.image}
-          alt={article.imageAlt}
-          widths={[500, 800, 1200]}
-          sizes="(min-width: 52.5rem) 45vw, 100vw"
-          loading="eager"
-          fetchpriority="high"
-          class="aspect-[0.85] w-full object-cover object-[35%_35%]"
-        />
-      </div>
-    </header>
+        {/* The rating and the count, as visible HTML only. Schema-claimed
+            review counts are forbidden on this site, and the figure links to
+            the Google listing so a reader can check it. */}
+        <div class="mt-6">
+          <TrustBadge class="border-porcelain/20 bg-porcelain/[0.06]" />
+        </div>
+      </Fragment>
+    </PageHero>
 
     <div class="bg-porcelain">
       <div class="wrap section-y">

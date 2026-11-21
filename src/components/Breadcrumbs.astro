@@ -66,9 +66,25 @@ interface Props {
   meta?: string;
   /** Extra classes for the wrapper. */
   class?: string;
+  /**
+   * The ground the crumb sits on.
+   *
+   * 'light' is the default and reads ink-on-porcelain, which is right for
+   * the pages whose hero is a flat blush band. 'dark' is for the pages
+   * whose hero is a photograph under a scrim, where ink would disappear.
+   */
+  tone?: 'light' | 'dark';
 }
 
-const { ancestors = [], current, meta, class: className = '' } = Astro.props;
+const { ancestors = [], current, meta, class: className = '', tone = 'light' } = Astro.props;
+
+const linkClass =
+  tone === 'dark'
+    ? 't-eyebrow text-porcelain/60 transition-colors duration-300 hover:text-blush'
+    : 't-eyebrow text-ink-soft transition-colors duration-300 hover:text-rose';
+const currentClass = tone === 'dark' ? 't-eyebrow text-porcelain' : 't-eyebrow text-ink';
+const metaClass = tone === 'dark' ? 't-eyebrow text-porcelain/60' : 't-eyebrow text-ink-soft';
+const ruleClass = tone === 'dark' ? 'text-porcelain/25' : 'text-line';
 
 /**
  * Astro renders with `trailingSlash: 'always'` and Cloudflare 308s the
@@ -93,17 +109,17 @@ const items = [
           {item.path ? (
             <a
               href={href(item.path)}
-              class="t-eyebrow text-ink-soft transition-colors duration-300 hover:text-rose"
+              class={linkClass}
             >
               {item.name}
             </a>
           ) : (
-            <span aria-current="page" class="t-eyebrow text-ink">
+            <span aria-current="page" class={currentClass}>
               {item.name}
             </span>
           )}
           {i < items.length - 1 && (
-            <span aria-hidden="true" class="text-[0.75rem] leading-none text-line">
+            <span aria-hidden="true" class={`text-[0.75rem] leading-none ${ruleClass}`}>
               /
             </span>
           )}
@@ -116,7 +132,7 @@ const items = [
           <span aria-hidden="true" class="text-[0.75rem] leading-none text-line">
             /
           </span>
-          <span class="t-eyebrow text-ink-soft">{meta}</span>
+          <span class={metaClass}>{meta}</span>
         </li>
       )
     }

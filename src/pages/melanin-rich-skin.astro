@@ -23,15 +23,17 @@ import NapBlock from '../components/NapBlock.astro';
 import FaqList from '../components/FaqList.astro';
 import PanelWipe from '../components/PanelWipe.astro';
 import FaqSchema from '../components/schema/FaqSchema.astro';
+import PageHero from '../components/PageHero.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { melaninFaqs } from '../data/melanin-faqs';
 import { services } from '../data/services';
 import { areaShells } from '../data/area-shells';
-import { business } from '../config/business';
+import { business, verifiedPrices } from '../config/business';
 import { absolute, businessId, websiteId } from '../config/urls';
 import { CTA_LABEL } from '../config/nav';
 import pigmentation from '../assets/hyperpigmentation-treatment-melanin-rich-skin-san-diego.jpg';
+import VerifiedProof from '../components/VerifiedProof.astro';
+import { getServiceTestimonials } from '../data/testimonials';
 
 const site = Astro.site;
 const url = absolute('/melanin-rich-skin', site);
@@ -107,7 +109,8 @@ const service = {
 };
 ---
 
-<BaseLayout {title} {description}>
+<BaseLayout {title} {description}
+  headerTheme="dark">
   <script type="application/ld+json" is:inline set:html={JSON.stringify(webpage)} slot="head" />
   <script type="application/ld+json" is:inline set:html={JSON.stringify(service)} slot="head" />
   <FaqSchema slot="head" faqs={melaninFaqs} />
@@ -117,40 +120,31 @@ const service = {
   />
 
   <article>
-    <header class="bg-blush">
-      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-                    <Breadcrumbs current="Melanin-Rich Skin" meta="The specialism" />
-        <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.5rem] md:text-[4rem]">
-          Expert Pigmentation Treatment for Melanin-Rich Skin in San Diego
-        </h1>
-        <p class="t-body mt-7 max-w-[62ch] text-[1.125rem]">
-          KIAMO Skin is San Diego's Black-owned facial spa specializing in safe, effective treatment
-          for pigmentation in melanin-rich skin. When you have <a
-            href="/services/melasma-treatment/"
-            class="border-b border-ink/40 hover:border-rose hover:text-rose"
-            >melasma, post-inflammatory hyperpigmentation, or uneven tone</a
-          >, choosing a practitioner with deep experience treating darker skin tones isn't
-          optional—it's essential.
-        </p>
-        <p class="t-body mt-5 max-w-[62ch]">
-          Treating pigmentation in deeper skin requires precision. One wrong move—too aggressive a
-          peel, incorrect settings, improper post-care—and you risk worsening hyperpigmentation
-          instead of correcting it. Kiki's expertise was built treating the most complex
-          pigmentation cases: melanin-rich skin, where the risk of post-inflammatory
-          hyperpigmentation is highest. That training makes Kiki the safest, most skilled choice for
-          any skin tone with pigmentation concerns.
-        </p>
-        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
-          <a
-            href={business.phone.href}
-            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
-          >
-            {business.phone.display}
-          </a>
-        </div>
-      </div>
-    </header>
+    {/* The hero. The photograph is the background, so the page opens on the
+        thing it is actually about. */}
+    <PageHero
+      eyebrow="Black-owned · San Diego · Every Fitzpatrick type, I–VI"
+      h1="Expert pigmentation treatment"
+      h1Accent="for melanin-rich skin in San Diego"
+      claim="Melasma, post-inflammatory hyperpigmentation and uneven tone, treated with the pigment protocols written for darker skin tones rather than adjusted for them afterwards."
+      paragraph="KIAMO Skin is San Diego's Black-owned facial spa. The depth is in the protocols: melanin-rich skin responds to trauma by producing more pigment, so strength is escalated only as the barrier allows, and every treatment and peel is selected with that in mind."
+      image={pigmentation}
+      imageAlt="A brightening treatment being applied to the cheek of a client with deep brown skin at the KIAMO Skin studio in Mission Hills, San Diego"
+      price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
+      trust={[
+        { label: 'Safe for every Fitzpatrick type, I–VI' },
+        { label: 'Pigment protocols written for deeper tones' },
+        { label: 'Kiki, licensed esthetician, 7+ years' },
+        { label: 'Prices published before you book' },
+      ]}
+      reassurance={[
+        business.visit.appointmentOnly,
+        business.visit.parking,
+        'Free cancellation up to 48 hours before',
+      ]}
+      current="Melanin-Rich Skin"
+      eventLabel="melanin_hero"
+    />
 
     <section class="bg-porcelain">
       <div class="wrap section-y grid items-center gap-12 md:grid-cols-[1fr_0.85fr] md:gap-20">
@@ -313,6 +307,28 @@ const service = {
         </aside>
       </div>
     </section>
+
+
+  {/* The proof.
+
+      The rating and the review count appeared on exactly two pages of the
+      site — the homepage and /reviews. Every commercial page argued for the
+      studio in the studio's own voice. This band puts the objective figure
+      and two client voices on the page, which is both what a reader deciding
+      whether the drive is worth it needs, and what an answer engine weights. */}
+  <section class="bg-blush py-16 md:py-20">
+    <div class="wrap">
+      <div class="mx-auto max-w-[68ch]">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">From the treatment room</p>
+          <h2 class="t-h2 mt-4 max-w-[26ch]">What clients say once they have been in.</h2>
+        </Reveal>
+        <div class="mt-10">
+          <VerifiedProof quotes={getServiceTestimonials('melanin')} />
+        </div>
+      </div>
+    </div>
+  </section>
 
     <section class="bg-porcelain">
       <div class="wrap section-y">

@@ -1,0 +1,272 @@
+---
+/**
+ * PageHero
+ * --------
+ * The site-wide hero.
+ *
+ * WHY THIS EXISTS
+ * The homepage and the service pages already ran on one pattern: a
+ * full-bleed photograph under a scrim, the copy on the left, a sticky
+ * conversion rail on the right, and a row of tick-marked facts underneath.
+ * Every other page ran on a different one — a flat blush band, the copy in a
+ * column, the photograph boxed into the right half or absent altogether, and
+ * a hundred pixels of empty space between the nav and the H1.
+ *
+ * That inconsistency cost more than it looked. The homepage's hero is the
+ * most conversion-optimised surface on the site: the price, the button, the
+ * phone number and the parking note are all above the fold, and the
+ * photograph reads as one image rather than as a picture in a box. On the
+ * pages that did not follow it — the contact page, the services index, the
+ * area hubs, the journal — a reader arrived at a band of empty colour with
+ * the H1 far below the nav, and the action was a long way down the page.
+ *
+ * So this component is the homepage hero, generalised. Every page on the
+ * site now opens the same way: the image is the background, the copy sits
+ * over it, the action is in the first screen, and the spacing under the nav
+ * is the same on every page.
+ *
+ * THE RAIL
+ * A sticky rail on desktop, and — on mobile — it stacks SECOND, after the
+ * headline and the paragraph and before the trust row. That order is the
+ * point: measured on a 390×844 screen, the "Request Appointment" button sat
+ * at 996px on the homepage and over 1,200px on the pages that did not use
+ * this pattern. Moving the trust row below the rail brings the button
+ * inside the first screen on every page.
+ *
+ * The `extra` slot exists because some pages carry hero content that is
+ * genuinely their own — an article's byline and date, a gallery case
+ * caption, the facts about a city. It renders inside the copy column so
+ * those details stay in the first screen rather than being pushed down.
+ */
+import { Image } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import Button from './Button.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import { business } from '../config/business';
+import { CTA_LABEL } from '../config/nav';
+
+interface Crumb {
+  name: string;
+  path: string;
+}
+
+interface Props {
+  /** Three short attributes above the H1. */
+  eyebrow?: string;
+  /** The H1. */
+  h1: string;
+  /** The part of the H1 that takes the accent colour — usually the city. */
+  h1Accent?: string;
+  /** The claim under the H1, set in the display face. */
+  claim?: string;
+  /** The paragraph. About the page, not the neighbourhood. */
+  paragraph?: string;
+  /** The prices, on their own line. */
+  prices?: string;
+  /** The full-bleed photograph. */
+  image?: ImageMetadata;
+  imageAlt?: string;
+  /** The lead price for the rail. */
+  price?: { label: string; price: string };
+  /** The tick-marked facts. */
+  trust?: { label: string }[];
+  /** The reassurance lines under the button. */
+  reassurance?: string[];
+  /** Breadcrumb ancestors, outermost first. Home is prepended. */
+  ancestors?: Crumb[];
+  /** The current page's name. */
+  current?: string;
+  /** A trailing fact about the page, after the trail. */
+  meta?: string;
+  /** The GA4 event label for the rail's buttons. */
+  eventLabel?: string;
+  /** Set false for a page that needs no conversion rail. */
+  showRail?: boolean;
+  /**
+   * The measure of the H1.
+   *
+   * 17ch suits a short headline — "Corrective facials in San Diego" breaks
+   * across two lines and reads as one. An article headline or a comparison
+   * title is a sentence, and at 17ch it breaks across five and pushes the
+   * rest of the hero down. Those pages pass a wider measure.
+   */
+  h1Width?: string;
+}
+
+const {
+  eyebrow,
+  h1,
+  h1Accent,
+  claim,
+  paragraph,
+  prices,
+  image,
+  imageAlt,
+  price,
+  trust,
+  reassurance,
+  ancestors,
+  current,
+  meta,
+  eventLabel = 'hero',
+  showRail = true,
+  h1Width = '17ch',
+} = Astro.props;
+---
+
+<section class="relative isolate overflow-hidden bg-espresso">
+  {
+    image && (
+      <picture class="absolute inset-0 -z-10 block">
+        <Image
+          src={image}
+          alt={imageAlt ?? ''}
+          widths={[640, 1024, 1600, 2400]}
+          sizes="100vw"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          class="size-full scale-105 object-cover object-center"
+        />
+      </picture>
+    )
+  }
+
+  {/* The scrim. Two layers: a wash that guarantees contrast whatever the
+      photograph does, and a gradient that keeps the left column legible
+      while letting the right side of the image stay visible. */}
+  <div class="absolute inset-0 -z-10 bg-espresso/45" aria-hidden="true"></div>
+  <div
+    class="absolute inset-0 -z-10 bg-gradient-to-r from-espresso via-espresso/75 to-espresso/25"
+    aria-hidden="true"
+  >
+  </div>
+
+  <div class="wrap pt-[calc(60px+24px)] pb-16 md:pt-[calc(60px+72px)] md:pb-24">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-[1.15fr_0.85fr] lg:gap-x-16 lg:gap-y-0 lg:items-start">
+      {/* ---- the offer ---- */}
+      <div class="lg:col-start-1 lg:row-start-1">
+        {
+          (ancestors?.length || current) && (
+            <div class="mb-8">
+              <Breadcrumbs
+                tone="dark"
+                ancestors={ancestors ?? []}
+                current={current}
+                meta={meta}
+              />
+            </div>
+          )
+        }
+
+        {eyebrow && <p class="t-eyebrow text-blush">{eyebrow}</p>}
+
+        <h1 class="t-hero mt-5 max-w-[{h1Width}] text-porcelain">
+          {h1}
+          {h1Accent && <span class="text-blush"> {h1Accent}</span>}
+        </h1>
+
+        {
+          claim && (
+            <p class="mt-4 max-w-[32ch] font-display text-[1.1875rem] font-light leading-[1.25] text-porcelain/85 md:text-[1.5rem]">
+              {claim}
+            </p>
+          )
+        }
+
+        {paragraph && <p class="t-body mt-6 max-w-[56ch] text-[1.0625rem] text-porcelain/85">{paragraph}</p>}
+
+        {prices && <p class="t-body mt-4 max-w-[56ch] text-[1.0625rem] text-blush">{prices}</p>}
+      </div>
+
+      {/* ---- the conversion rail ---- */}
+      {
+        showRail && (
+          <div class="lg:sticky lg:top-24 lg:col-start-2 lg:row-start-1 lg:row-span-3">
+            <div class="border border-porcelain/20 bg-porcelain/[0.06] p-8 backdrop-blur-sm md:p-10">
+              {price && (
+                <div class="border-b border-porcelain/20 pb-6">
+                  <p class="t-eyebrow text-porcelain/60">{price.label}</p>
+                  <p class="t-price mt-3 text-[1.5rem] text-blush">{price.price}</p>
+                </div>
+              )}
+
+              <div class="mt-8">
+                <Button
+                  href={business.bookingUrl}
+                  external
+                  class="w-full"
+                  trackEvent="booking_click"
+                  eventLabel={eventLabel}
+                >
+                  {CTA_LABEL}
+                </Button>
+                <a
+                  href={business.phone.href}
+                  class="t-body mt-5 block text-[0.9375rem] text-porcelain/85 transition-colors hover:text-blush"
+                  onclick={`if(typeof gtag !== 'undefined') gtag('event', 'phone_click', {event_category: 'engagement', event_label: '${eventLabel}', transport_type: 'beacon'});`}
+                >
+                  or call {business.phone.display}
+                </a>
+              </div>
+
+              {reassurance && reassurance.length > 0 && (
+                <ul class="m-0 mt-8 list-none border-t border-porcelain/20 pt-6">
+                  {reassurance.map((line) => (
+                    <li class="t-body text-[0.875rem] text-porcelain/70">{line}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </div>
+        )
+      }
+
+      {/* ---- the page's own extra content ---- */}
+      {/* It sits in its own grid row rather than inside the copy column, so
+          that on mobile it falls BELOW the rail. A long capsule — an
+          article's quick answer, a comparison's summary — pushed the
+          "Request Appointment" button to 1,239px on a 390×844 screen, which
+          is off the fold entirely. */}
+      {
+        Astro.slots.has('extra') && (
+          <div class="lg:col-start-1 lg:row-start-2 lg:mt-9">
+            <slot name="extra" />
+          </div>
+        )
+      }
+
+      {/* ---- the trust row ---- */}
+      {
+        trust && trust.length > 0 && (
+          <div class="lg:col-start-1 lg:mt-9">
+            <ul class="m-0 grid list-none gap-x-8 gap-y-4 p-0 sm:grid-cols-2">
+              {trust.map((item) => (
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-0.5 flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-blush/40 text-blush"
+                    aria-hidden="true"
+                  >
+                    <svg
+                      width="12"
+                      height="12"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    >
+                      <path d="M4.5 10.5l3.5 3.5 7.5-8" />
+                    </svg>
+                  </span>
+                  <span class="t-body text-[0.9375rem] leading-snug text-porcelain/90">{item.label}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+    </div>
+  </div>
+</section>

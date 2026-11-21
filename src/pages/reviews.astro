@@ -41,13 +41,15 @@ import FaqList from '../components/FaqList.astro';
 import LocationMap from '../components/LocationMap.astro';
 import TrustBadge from '../components/sections/TrustBadge.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PageHero from '../components/PageHero.astro';
+import reviewsImage from '../assets/kiamo-skin-studio-mission-hills-san-diego.jpg';
 import SpeakableSchema from '../components/schema/SpeakableSchema.astro';
 import FaqSchema from '../components/schema/FaqSchema.astro';
 import PersonSchema from '../components/schema/PersonSchema.astro';
 import { googleReviews } from '../data/reviews';
 import { reviewFaqs } from '../data/reviews-faqs';
-import { business } from '../config/business';
+import { business, verifiedPrices } from '../config/business';
+import { reviewStats } from "../data/review-stats";
 import { CTA_LABEL } from '../config/nav';
 import { absolute, businessId, websiteId, gbpReviewsUrl } from '../config/urls';
 
@@ -136,7 +138,8 @@ const description =
   'Every Google review of KIAMO Skin, word for word, with the name and date of each reviewer. Corrective facials and scalp therapy in San Diego.';
 ---
 
-<BaseLayout {title} {description}>
+<BaseLayout {title} {description}
+  headerTheme="dark">
   <script
     type="application/ld+json"
     is:inline
@@ -150,79 +153,46 @@ const description =
 
   <article>
     {/* HERO — the thesis, and one review that states it before the wall does */}
-    <header class="bg-blush">
-      <div
-        class="wrap grid items-center gap-12 pt-[calc(60px+72px)] pb-20 md:grid-cols-[1fr_0.95fr] md:gap-16 md:pt-[calc(60px+112px)] md:pb-28"
-      >
-        <div>
-                      <Breadcrumbs current="Reviews" meta="San Diego studio" />
-          <h1 class="t-h2 mt-6 max-w-[20ch] text-[2.5rem] md:text-[3.5rem]">
-            What clients wrote, in their own words.
-          </h1>
-          <p class="t-body mt-7 max-w-[52ch] text-[1.125rem]">
-            Every review below was published on the KIAMO Skin Google Business Profile. They are
-            reproduced here word for word — same sentences, same names, same months — because a
-            review you cannot check is not worth reading.
-          </p>
-          <p class="t-body mt-5 max-w-[52ch]">
-            One of them is a first facial. Another belongs to someone who has been coming for
-            four years. Nothing has been edited, shortened or selected for tone, and the listing
-            itself is one click away on every card.
-          </p>
-
-          <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <Button href={googleUrl} external trackEvent="reviews_google">
-              Read the reviews on Google
-            </Button>
-            <a
-              href={business.phone.href}
-              class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
-            >
-              {business.phone.display}
-            </a>
-          </div>
-        </div>
-
-        <figure class="m-0 border-l-2 border-rose pl-7 md:pl-9">
-          <p class="t-eyebrow text-ink-soft">From the Google listing</p>
+    {/* The hero. The studio photograph is the background and one review is
+        quoted in the first screen — a review page that opens with a
+        paragraph about reviews rather than a review is a page about
+        reviews. */}
+    <PageHero
+      eyebrow="Every Google review · Word for word"
+      h1="What clients wrote,"
+      h1Accent="in their own words"
+      claim="Reproduced exactly as Google holds them — same sentences, same names, same months — because a review you cannot check is not worth reading."
+      paragraph="One of them is a first facial. Another belongs to someone who has been coming for four years. Nothing has been edited, shortened or selected for tone, and the listing itself is one click away on every card."
+      image={reviewsImage}
+      imageAlt="The KIAMO Skin studio in Mission Hills, San Diego — one private treatment room"
+      price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
+      trust={[
+        { label: `${reviewStats.count} five-star Google reviews` },
+        { label: 'Every review named and dated' },
+        { label: 'Nothing edited or shortened' },
+        { label: 'Prices published before you book' },
+      ]}
+      reassurance={[
+        business.visit.appointmentOnly,
+        business.visit.parking,
+        'Free cancellation up to 48 hours before',
+      ]}
+      current="Reviews"
+      eventLabel="reviews_hero"
+    >
+      <Fragment slot="extra">
+        <figure class="m-0 mt-8 border-l-2 border-blush pl-7 md:pl-9">
+          <p class="t-eyebrow text-porcelain/60">From the Google listing</p>
           {/* Quoted third-party material, so the copy guards read it apart
               from the studio's own sentences. */}
           <blockquote data-quoted="google-review" class="m-0 mt-6">
-            <p class="font-display text-[1.375rem] leading-[1.35] md:text-[1.625rem]">
+            <p class="font-display text-[1.375rem] leading-[1.35] text-porcelain/90 md:text-[1.625rem]">
               {heroReview.text}
             </p>
           </blockquote>
-          <figcaption class="mt-8">
-            <div class="flex items-center gap-4">
-              <img
-                src={heroReview.avatar}
-                alt=""
-                width="44"
-                height="44"
-                loading="eager"
-                decoding="async"
-                class="size-11 shrink-0 rounded-full object-cover"
-              />
-              <div>
-                <p class="t-body text-[0.9375rem] leading-tight font-medium">
-                  {heroReview.author}
-                </p>
-                <p class="t-meta mt-1">{heroReview.dateLabel}</p>
-              </div>
-            </div>
-            <a
-              href={googleUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="t-meta mt-4 inline-flex min-h-[44px] items-center gap-2 hover:text-rose"
-            >
-              View on Google
-              <span aria-hidden="true">↗</span>
-            </a>
-          </figcaption>
         </figure>
-      </div>
-    </header>
+      </Fragment>
+    </PageHero>
 
     {/* THE COUNT */}
     <section aria-label="Google reviews" class="bg-porcelain">

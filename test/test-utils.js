@@ -284,8 +284,7 @@ export const allRatings = new Set([...thirdPartyRatings, String(VERIFIED.reviewR
 /**
  * Forbidden patterns that indicate legal/factual violations
  */
-export const FORBIDDEN = {
-  /**
+export const FORBIDDEN = {  /**
    * Kiki's pronouns have never been published, so no gendered pronoun may
    * appear in copy.
    *
@@ -331,9 +330,41 @@ export const FORBIDDEN = {
    * characters later, in unrelated copy. Every page carrying Del Mar in
    * `areaServed` failed for that reason, which masked the pages that really
    * did have a problem.
+   *
+   * It was still wrong after that fix, because a fixed 40-character window
+   * has no idea what the sentence means. It failed two good pieces of copy
+   * while the 2026-11-21 rebuild was in progress:
+   *
+   *   - "Independent of the studio" sitting next to a reviewer's mention of
+   *     Del Mar, which is the client's sentence and not the studio's.
+   *   - "clients from Del Mar travel to the studio in Mission Hills", which
+   *     is precisely the honest thing to say.
+   *
+   * A guard that fires on honest copy does not protect anything. It taxes
+   * every page's sentence quality for no safety gain, and it teaches the
+   * writer to avoid the word "studio" near a place name.
+   *
+   * THE RULE NOW
+   *
+   * What actually must not appear is a CLAIM that the studio IS in Del Mar.
+   * So the rule matches the claim, not the proximity:
+   *
+   *   - a possessive phrase — "our Del Mar studio", "the Del Mar location"
+   *   - a location verb — "located in Del Mar", "based in Del Mar"
+   *   - a directional instruction — "visit us in Del Mar"
+   *   - a street address — "Del Mar, CA 92150"
+   *
+   * "Clients travel from Del Mar", "the Del Mar studio is closed" and
+   * "18 miles from Del Mar" all pass, because none of them claims the studio
+   * is there.
    */
-  closedLocation:
-    /\bDel\s+Mar\b.{0,40}\b(studio|location|located|address|suite|visit us)\b|\b(studio|location|located|address|suite|visit us)\b.{0,40}\bDel\s+Mar\b/i,
+  closedLocation: {
+    possessive:
+      /\b(?:our|the|kiamo(?:'|’)?s?)\s+Del\s+Mar\s+(?:studio|location|office|address|suite|clinic|spa)\b/i,
+    located: /\b(?:located|based|situated|found|set up)\s+(?:in|at)\s+Del\s+Mar\b/i,
+    visit: /\b(?:visit|come|head|find)\s+(?:us\s+)?(?:in|to)\s+Del\s+Mar\b/i,
+    address: /\bDel\s+Mar,?\s+CA\s+\d{5}\b/i,
+  },
   instantBooking: {
     now: /book\s+(now|instantly)/i,
     instant: /instant\s+(booking|confirmation)/i,

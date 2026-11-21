@@ -1,6 +1,7 @@
 ---
 import { Font } from 'astro:assets';
 import { business } from '../config/business';
+import { aiReferrerHosts } from '../config/ai-referrers';
 
 interface Props {
   /** ≤60 characters — asserted by the guard suite. */
@@ -15,15 +16,33 @@ interface Props {
 const {
   title,
   description,
-  ogImage = '/og-default.jpg',
+  ogImage,
   noindex = false,
   ogType = 'website',
 } = Astro.props;
 
+/**
+ * The card for this page.
+ *
+ * Every page used to point at one shared `og-default.jpg`, so a share of the
+ * flagship comparison page, the gallery and the journal all previewed as the
+ * same image. Each page now has its own, rendered at build time by
+ * scripts/generate-og-images.mjs.
+ *
+ * The file name is the route with its slashes turned into hyphens, and the
+ * root is `home`. The same rule is implemented in that script — the two must
+ * agree, which is why it is written out in both places rather than shared
+ * through a module the script cannot import.
+ */
+const cardSlug = Astro.url.pathname
+  .replace(/^\/|\/$/g, '')
+  .replace(/\//g, '-');
+const card = `/og/${cardSlug === '' ? 'home' : cardSlug}.png`;
+
 // Astro.site comes from astro.config.mjs. Changing that one line moves every
 // canonical, OG url and sitemap entry.
 const canonical = new URL(Astro.url.pathname, Astro.site);
-const ogUrl = new URL(ogImage, Astro.site);
+const ogUrl = new URL(ogImage ?? card, Astro.site);
 ---
 
 <meta charset="utf-8" />
@@ -57,7 +76,7 @@ const ogUrl = new URL(ogImage, Astro.site);
 <meta property="og:image" content={ogUrl.href} />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content={`${business.name} — ${business.address.city}`} />
+<meta property="og:image:alt" content={`${business.name} — ${title.replace(/\s*\|\s*KIAMO Skin\s*$/i, '')}`} />
 
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content={title} />
@@ -75,4 +94,54 @@ const ogUrl = new URL(ogImage, Astro.site);
   gtag('js', new Date());
 
   gtag('config', 'G-BEP1Z1C8M9');
+</script>
+
+<script is:inline define:vars={{ hosts: aiReferrerHosts }}>
+  /**
+   * The AI referral signal.
+   *
+   * A session that arrives from an answer engine is the most valuable
+   * session the site gets — it is a person who asked a question and was
+   * told about this studio. GA4 records the arrival as an ordinary referral
+   * source, where it sits among a hundred others and is never looked at.
+   *
+   * So the arrival is also fired as a discrete event, once per session, with
+   * the referring host as the label. That makes the answer-engine share of
+   * the site's traffic a reportable number rather than something a reader
+   * has to notice by accident.
+   *
+   * The sessionStorage key is what keeps it to once per session: GA4 counts
+   * an event every time it fires, and a visitor who clicks through four
+   * pages from an answer engine is still one visitor.
+   */
+  (function () {
+    try {
+      if (!document.referrer) return;
+      if (sessionStorage.getItem('kiamo_ai_referral')) return;
+
+      var referrer;
+      try {
+        referrer = new URL(document.referrer);
+      } catch (error) {
+        return;
+      }
+
+      var host = referrer.hostname.replace(/^www\./, '');
+      var matched = hosts.find(function (candidate) {
+        return host === candidate || host.endsWith('.' + candidate);
+      });
+      if (!matched) return;
+
+      sessionStorage.setItem('kiamo_ai_referral', matched);
+      if (typeof gtag === 'function') {
+        gtag('event', 'ai_referral', {
+          event_category: 'ai_visibility',
+          event_label: matched,
+          ai_referrer_host: matched,
+        });
+      }
+    } catch (error) {
+      // A privacy mode that blocks sessionStorage must not break the page.
+    }
+  })();
 </script>

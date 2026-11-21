@@ -24,19 +24,36 @@ import type { Testimonial } from '../data/testimonials';
 
 interface Props {
   testimonial: Testimonial;
+  /** The city, when the reviewer is a client from that city. */
+  areaLabel?: string;
   class?: string;
 }
 
-const { testimonial, class: className = '' } = Astro.props;
+const { testimonial, areaLabel, class: className = '' } = Astro.props;
 ---
 
 <figure class={`proof-quote border-l-2 border-rose pl-6 ${className}`}>
+  {/* `data-quoted` marks this as quoted third-party material.
+
+      The guard suite reads the page's copy twice: once with quoted regions
+      removed, and once with them left in. A client's own words are the
+      client's, not the studio's — and the difference is load-bearing. A
+      reviewer who mentions Del Mar, or who writes a gendered pronoun for
+      Kiki, must not be able to fail the build for something the studio did
+      not write.
+
+      This component was missing the marker while /reviews had it, which
+      meant every quote it rendered was checked against the studio's own copy
+      rules. It passed only because the quotes in testimonials.ts had been
+      hand-edited to remove pronouns. That is a coincidence, not a rule. */}
   <blockquote
+    data-quoted="client-review"
     class="font-display text-[1.25rem] font-light leading-[1.4] text-balance text-ink md:text-[1.5rem]"
   >
     &ldquo;{testimonial.quote}&rdquo;
   </blockquote>
   <figcaption class="t-meta mt-4">
     &mdash;&nbsp;{testimonial.attribution}{testimonial.platform ? `, ${testimonial.platform}` : ''}
+    {areaLabel && <span class="text-ink-soft"> · {areaLabel}</span>}
   </figcaption>
 </figure>

@@ -1,0 +1,96 @@
+---
+import Reveal from '../Reveal.astro';
+import { articles } from '../../data/articles';
+import { journalComparisons } from '../../data/journal-comparisons';
+
+/**
+ * The reading module.
+ *
+ * Why this exists:
+ *   The homepage linked five of the sixteen journal articles and none of the
+ *   three comparison pieces, and it had no link at all to the journal index.
+ *   So the site's editorial half — nineteen pages, most of them the formats
+ *   an AI answer engine cites most — was reachable only from the footer and
+ *   from the service pages that happened to name a guide.
+ *
+ *   This module closes that. It puts the journal index itself at the top,
+ *   because that is the hub and a reader who wants "the writing" wants the
+ *   index, not a hand-picked sample. Then the three comparison pieces, which
+ *   answer the "which one" questions. Then the most recently updated notes,
+ *   which carries the freshness signal onto the homepage.
+ *
+ * The dates are shown for the same reason they are on the journal index: a
+ * reader scanning a list is deciding which piece is current enough to be
+ * worth opening, and a reading time does not answer that.
+ */
+const byDate = [...articles].sort((a, b) => b.dateModified.localeCompare(a.dateModified));
+const notes = byDate.slice(0, 6);
+
+const formatDate = (iso: string): string => {
+  const [year, month, day] = iso.split('-');
+  const months = [
+    'January', 'February', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December',
+  ];
+  return `${months[Number(month) - 1] ?? month} ${Number(day)}, ${year}`;
+};
+---
+
+<section class="bg-ivory">
+  <div class="wrap section-y">
+    <div class="flex flex-wrap items-baseline justify-between gap-6">
+      <div>
+        <p class="t-eyebrow text-ink-soft">The journal</p>
+        <h2 class="t-h2 mt-4 max-w-[26ch]">Field notes on skin and scalp in San Diego.</h2>
+      </div>
+      <a
+        href="/journal/"
+        class="t-body border-b border-ink pb-1 transition-colors duration-300 hover:border-rose hover:text-rose"
+      >
+        Every note
+      </a>
+    </div>
+
+    <p class="t-body mt-6 max-w-[62ch]">
+      Written from the treatment room, for people being treated in San Diego. The climate is a
+      bigger factor in how skin behaves here than most routines account for.
+    </p>
+
+    {/* The comparison pieces. These answer a "which one" question rather than a
+        "how does this work" question, and they are the pages an AI answer
+        engine cites for a best-of query. */}
+    <ul class="m-0 mt-12 grid list-none gap-x-10 gap-y-0 p-0 md:grid-cols-3">
+      {
+        journalComparisons.map((piece) => (
+          <Reveal as="li" class="border-b border-line">
+            <a href={piece.href} class="group block py-6">
+              <p class="t-meta text-ink-soft">Comparison</p>
+              <h3 class="t-service mt-2 text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                {piece.headline}
+              </h3>
+              <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{piece.standfirst}</p>
+            </a>
+          </Reveal>
+        ))
+      }
+    </ul>
+
+    {/* The most recently updated notes. */}
+    <ul class="m-0 mt-12 grid list-none gap-x-10 gap-y-0 p-0 md:grid-cols-2 lg:grid-cols-3">
+      {
+        notes.map((article) => (
+          <Reveal as="li" class="border-b border-line">
+            <a href={`/journal/${article.slug}/`} class="group block py-6">
+              <p class="t-meta text-ink-soft">
+                <time datetime={article.dateModified}>{formatDate(article.dateModified)}</time>
+              </p>
+              <h3 class="t-service mt-2 text-[1.0625rem] transition-colors duration-300 group-hover:text-rose md:text-[1.1875rem]">
+                {article.headline}
+              </h3>
+            </a>
+          </Reveal>
+        ))
+      }
+    </ul>
+  </div>
+</section>

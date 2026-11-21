@@ -33,12 +33,35 @@ describe('Factual Guards', () => {
       // `quotedCopy` drops quoted third-party material, so a client who
       // happens to mention the area in a Google review does not read as the
       // studio claiming a location there.
+      //
+      // The rule matches the CLAIM rather than the proximity. A fixed
+      // character window fired on "clients from Del Mar travel to the studio
+      // in Mission Hills", which is exactly the honest sentence to write —
+      // see the long note on FORBIDDEN.closedLocation in test-utils.js.
+      //
+      // And it is judged a SENTENCE at a time. "The Del Mar studio is
+      // closed" names the location, but it is a sentence about the closure,
+      // not a claim that the studio is there — so a sentence carrying a
+      // closure marker is exempt. Sentence-level is also the only level
+      // that can tell "our Del Mar studio" (a claim) from "our studio, 20
+      // miles from Del Mar" (not one).
+      const claims = Object.values(FORBIDDEN.closedLocation);
+      const closureMarker =
+        /\b(?:closed|no longer|formerly|previously|used to be|former|shut)\b/i;
+
       forEachPage(({ quotedCopy, file }) => {
-        assert.doesNotMatch(
-          quotedCopy,
-          FORBIDDEN.closedLocation,
-          `${file}: mentions closed Del Mar location`
-        );
+        for (const sentence of quotedCopy.split(/(?<=[.!?])\s+/)) {
+          if (!/\bDel\s+Mar\b/i.test(sentence)) continue;
+          if (closureMarker.test(sentence)) continue;
+
+          for (const claim of claims) {
+            assert.doesNotMatch(
+              sentence,
+              claim,
+              `${file}: claims a studio in the closed Del Mar location — "${sentence.trim().slice(0, 120)}"`
+            );
+          }
+        }
       });
     });
 

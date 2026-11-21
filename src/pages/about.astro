@@ -10,10 +10,14 @@ import PanelWipe from '../components/PanelWipe.astro';
 import Button from '../components/Button.astro';
 import NapBlock from '../components/NapBlock.astro';
 import CertificateModal from '../components/CertificateModal.astro';
+import PageHero from '../components/PageHero.astro';
+import VerifiedProof from '../components/VerifiedProof.astro';
 import portrait from '../assets/kiki-licensed-esthetician-melanin-rich-skin-specialist-san-diego.jpg';
 import studio from '../assets/kiamo-skin-studio-mission-hills-san-diego.jpg';
-import { business } from '../config/business';
+import consultation from '../assets/best-facial-san-diego-customized-consultation-mission-hills.jpg';
+import { business, verifiedPrices } from '../config/business';
 import { CTA_LABEL } from '../config/nav';
+import { getServiceTestimonials } from '../data/testimonials';
 
 /* Pronoun-free throughout — spec §2. */
 const values = [
@@ -22,8 +26,8 @@ const values = [
     body: 'You should leave knowing what was done and why, and what to do at home. A treatment you do not understand is a treatment you will not repeat correctly.',
   },
   {
-    title: 'Melanin-rich expertise',
-    body: 'Every treatment protocol is thoughtfully selected to support all skin tones, with specialized expertise in the unique needs of melanin-rich skin.',
+    title: 'Every skin tone, with depth in the hardest ones',
+    body: 'Every treatment protocol is selected for your Fitzpatrick type, from I to VI. Melanin-rich skin carries its own risks — post-inflammatory hyperpigmentation above all — and the protocols are built around avoiding them.',
   },
   {
     title: 'Consistency over intensity',
@@ -61,43 +65,75 @@ const protocol = [
     body: 'Which treatment, at what strength, how many sessions, how far apart, and what to do at home in between. Strength escalates across a series rather than starting high. The home routine is prescribed rather than left to chance, because it is what maintains the result once the series ends.',
   },
 ];
+
+/**
+ * What this studio is, and what it is not.
+ *
+ * The scope-of-practice paragraph belongs on this page rather than buried in
+ * the footer, because a reader choosing between a facial spa and a medical
+ * practice is making exactly this decision, and the answer determines whether
+ * the studio is right for them. It is also the answer a search engine needs
+ * when it is asked what this business is.
+ */
+const scope = [
+  {
+    title: 'A facial spa, not a medical practice',
+    body: 'Every treatment here is performed within an esthetician’s scope of practice. There are no lasers, no prescriptions and no injectables. If a concern needs a dermatologist, that is what is recommended, and the referral is made plainly rather than after a paid visit.',
+  },
+  {
+    title: 'One room, one practitioner, no rotation',
+    body: 'There is a single treatment room and a single practitioner. The person who assesses your skin is the person who treats it, at every visit in the series, which is what makes the plan adjustable — the same plan cannot be adjusted by whoever happens to be working that day.',
+  },
+  {
+    title: 'By appointment only',
+    body: 'The studio is open by appointment rather than on a timetable, which means no waiting, no overlapping clients in the room, and a space free in the car park when you arrive. It also means the request is reviewed before it is confirmed.',
+  },
+  {
+    title: 'Every price published before you book',
+    body: 'Nothing is quoted at the door. The treatment menu carries a price against every treatment on it, and the first visit includes the consultation that decides the plan — so the cost of a first appointment is known before it is booked, not after.',
+  },
+];
 ---
 
 <BaseLayout
   title="About KIAMO Skin — Esthetician in San Diego"
   description="KIAMO Skin is a Black-owned facial spa in San Diego run by a licensed esthetician. Corrective facials, peels and scalp therapy for every skin type."
+  headerTheme="dark"
 >
   <AboutSchema slot="head" />
   <BreadcrumbSchema slot="head" trail={[{ name: 'About', path: '/about' }]} />
   <PersonSchema slot="head" />
-  <header class="bg-blush">
-    <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-                  <Breadcrumbs current="About" />
-      <h1 class="t-h2 mt-6 max-w-[22ch] text-[2.5rem] md:text-[4rem]">
-        A studio built around correction.
-      </h1>
-      <p class="t-body mt-7 max-w-[62ch]">
-        At KIAMO Skin, we believe correction begins by understanding what’s causing the concern
-        not simply covering it up. Every treatment is designed to strengthen the skin and scalp
-        from the inside out through advanced technology, evidence based care, and personalized
-        treatment plans that evolve with you.
-      </p>
-    </div>
-  </header>
 
-  <section class="bg-porcelain">
-    <div class="wrap section-y grid items-center gap-12 md:grid-cols-[0.85fr_1fr] md:gap-20">
-      <PanelWipe class="aspect-3/4">
-        <Image
-          src={portrait}
-          alt={`${business.ownerName}, licensed esthetician and owner of KIAMO Skin`}
-          widths={[400, 800, 1600]}
-          sizes="(min-width: 840px) 40vw, 90vw"
-          loading="lazy"
-          class="size-full object-cover"
-        />
-      </PanelWipe>
+  {/* The hero. Every page on the site now opens the same way — the
+      photograph is the background, the copy sits over it, the price and the
+      action are in the first screen, and the spacing under the nav is
+      identical page to page. This one used to be a wide band of empty blush
+      with the portrait boxed into the right half. */}
+  <PageHero
+    eyebrow={`${business.ownerName} · ${business.ownerCredential}`}
+    h1="A studio built around correction."
+    claim="Correction begins by understanding what is causing the concern, not simply covering it up."
+    paragraph="Every treatment is designed to strengthen the skin and scalp from the inside out through advanced technology, evidence-based care, and a plan that evolves with you."
+    image={portrait}
+    imageAlt={`${business.ownerName}, licensed esthetician and owner of KIAMO Skin, in the treatment room`}
+    price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
+    trust={[
+      { label: `${business.experience} of corrective skin work` },
+      { label: 'One practitioner, every visit' },
+      { label: 'One private treatment room' },
+      { label: 'Prices published before you book' },
+    ]}
+    reassurance={[
+      business.visit.appointmentOnly,
+      business.visit.parking,
+      'Free cancellation up to 48 hours before',
+    ]}
+    current="About"
+    eventLabel="about_hero"
+  />
 
+  <section class="bg-porcelain py-20 md:py-28">
+    <div class="wrap grid items-center gap-12 md:grid-cols-[1fr_0.9fr] md:gap-20">
       <div>
         <p class="t-eyebrow text-ink-soft">{business.ownerName}</p>
         <h2 class="t-h2 mt-5 text-[2rem] md:text-[2.75rem]">{business.ownerCredential}</h2>
@@ -120,20 +156,45 @@ const protocol = [
               <CertificateModal
                 id="cert-hydrafacial-about"
                 image="/images/hydrafacial-certified-provider-san-diego.jpg"
+                thumb="/images/certificates/hydrafacial-certified-provider-160.webp"
+                width={160}
+                height={120}
                 alt="HydraFacial Certified Provider certificate - KIAMO Skin, San Diego California"
                 title="HydraFacial Certified Provider"
               />
               <CertificateModal
                 id="cert-dmk-about"
                 image="/images/dmk-certified-skin-therapist-kiki-kiamo.jpg"
+                thumb="/images/certificates/dmk-certified-skin-therapist-160.webp"
+                width={160}
+                height={204}
                 alt="DMK Certified Skin Therapist certificate - Kiki, KIAMO Skin San Diego"
                 title="DMK Certified Skin Therapist"
               />
             </div>
           </div>
 
+          <p class="t-body text-[0.9375rem] text-ink-soft">
+            Every treatment on the{' '}
+            <a href="/services/" class="border-b border-ink/40 hover:border-rose hover:text-rose"
+              >published menu</a
+            > carries a price, and the protocols, contraindications and pricing sit on each treatment's
+            own page rather than behind a call.
+          </p>
+
           <Button href="/services/" variant="ghost">See the treatments</Button>
         </div>
+      </div>
+
+      <div>
+        <Image
+          src={consultation}
+          alt="A skin consultation at KIAMO Skin in Mission Hills, San Diego, before a corrective treatment is chosen"
+          widths={[400, 800, 1200]}
+          sizes="(min-width: 840px) 45vw, 90vw"
+          loading="lazy"
+          class="aspect-[3/4] w-full object-cover"
+        />
       </div>
     </div>
   </section>
@@ -149,11 +210,13 @@ const protocol = [
         inclusive space where everyone feels seen, valued, and cared for.
       </p>
       <p class="t-body mt-5 max-w-[62ch] text-porcelain/75">
+        The studio works across every Fitzpatrick type, I to VI, and has particular depth in
         <a
           href="/melanin-rich-skin/"
           class="border-b border-porcelain/40 hover:border-blush hover:text-blush"
-          >Facials for melanin-rich skin in San Diego</a
-        > are the specialism the studio was built around.
+          >facials for melanin-rich skin in San Diego</a
+        > — the treatment protocols for darker skin tones, and the pigment risk that comes with
+        them, are what most of the clinical training was actually about.
       </p>
 
       <ul class="mt-16 m-0 grid list-none gap-12 p-0 md:grid-cols-3 md:gap-10">
@@ -192,16 +255,18 @@ const protocol = [
   <section class="bg-porcelain">
     <div class="wrap section-y">
       <div class="max-w-[68ch]">
-        <p class="t-eyebrow text-ink-soft">How a plan is built</p>
-        <h2 class="t-h2 mt-5">
-          What happens at the consultation, before anything is applied.
-        </h2>
-        <p class="t-body mt-7">
-          The consultation is the treatment, in the sense that it is where the decision is made.
-          One practitioner, seven years of corrective work, and the same four steps in the same
-          order for every client. Nothing is applied to skin that has not been assessed, and no
-          treatment is selected from a menu.
-        </p>
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">How a plan is built</p>
+          <h2 class="t-h2 mt-5">
+            What happens at the consultation, before anything is applied.
+          </h2>
+          <p class="t-body mt-7">
+            The consultation is the treatment, in the sense that it is where the decision is made.
+            One practitioner, seven years of corrective work, and the same four steps in the same
+            order for every client. Nothing is applied to skin that has not been assessed, and no
+            treatment is selected from a menu.
+          </p>
+        </Reveal>
       </div>
 
       <ol class="mt-14 m-0 grid list-none gap-10 p-0 md:grid-cols-2 md:gap-12">
@@ -220,7 +285,7 @@ const protocol = [
         <p class="t-body">
           The protocol is the reason the studio treats
           <a href="/melanin-rich-skin/" class="border-b border-ink/40 hover:border-rose hover:text-rose">melanin-rich skin</a>
-          as a specialism rather than a service category, and it is why
+          with particular care rather than as a service category, and it is why
           <a
             href="/journal/chemical-peel-vs-microneedling-san-diego/"
             class="border-b border-ink/40 hover:border-rose hover:text-rose"
@@ -231,18 +296,62 @@ const protocol = [
     </div>
   </section>
 
+  {/* What this studio is, and is not. A reader choosing between a facial spa
+      and a medical practice is making exactly this decision, and the answer
+      is what tells them whether they are in the right place. */}
+  <section class="bg-ivory py-20 md:py-28">
+    <div class="wrap section-y">
+      <div class="max-w-[68ch]">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">Scope of practice</p>
+          <h2 class="t-h2 mt-5 max-w-[26ch]">What this studio is, and what it is not.</h2>
+        </Reveal>
+      </div>
+
+      <ul class="mt-14 m-0 grid list-none gap-x-12 gap-y-10 p-0 md:grid-cols-2">
+        {
+          scope.map((item) => (
+            <li class="border-t border-line pt-8">
+              <h3 class="t-service text-[1.125rem] md:text-[1.3125rem]">{item.title}</h3>
+              <p class="t-body mt-4 text-[0.9375rem] text-ink-soft">{item.body}</p>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </section>
+
+  {/* The proof. The About page is the page a language model reads to decide
+      whether this business is real, and it carried no client voice on it at
+      all — only the studio describing itself. */}
+  <section class="bg-porcelain py-20 md:py-28">
+    <div class="wrap">
+      <div class="mx-auto max-w-[68ch]">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">From the treatment room</p>
+          <h2 class="t-h2 mt-4 max-w-[26ch]">What clients say once they have been in.</h2>
+        </Reveal>
+        <div class="mt-10">
+          <VerifiedProof quotes={getServiceTestimonials('about')} />
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="bg-ivory">
     <div class="wrap section-y grid gap-12 md:grid-cols-2 md:gap-20">
-      <PanelWipe class="aspect-4/3">
-        <Image
-          src={studio}
-          alt="Inside the KIAMO Skin treatment room in San Diego"
-          widths={[400, 800, 1600]}
-          sizes="(min-width: 840px) 45vw, 90vw"
-          loading="lazy"
-          class="size-full object-cover"
-        />
-      </PanelWipe>
+      <div>
+        <PanelWipe class="aspect-4/3">
+          <Image
+            src={studio}
+            alt="Inside the KIAMO Skin treatment room in San Diego"
+            widths={[400, 800, 1600]}
+            sizes="(min-width: 840px) 45vw, 90vw"
+            loading="lazy"
+            class="size-full object-cover"
+          />
+        </PanelWipe>
+      </div>
 
       <div class="self-center">
         <p class="t-eyebrow text-ink-soft">The studio</p>

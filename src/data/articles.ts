@@ -12,6 +12,7 @@ import liraPeel from '../assets/lira-peel-chemical-peel-hyperpigmentation-san-di
 import acneScars from '../assets/acne-scar-revision-procell-microchanneling-melanin-rich-skin-san-diego.jpg';
 import sunscreen from '../assets/sunscreen-for-pigmentation-melanin-rich-skin-san-diego.jpg';
 import { facialCostArticle } from './facial-cost-article';
+import { howToArticles } from './articles-howto';
 import { verifiedPrices } from '../config/business';
 
 /**
@@ -99,7 +100,7 @@ export interface Article {
   cta: { label: string; href: string };
 }
 
-export const articles: Article[] = [
+const writtenArticles: Article[] = [
   {
     slug: 'three-kinds-of-dark-mark',
     headline: 'Three kinds of dark mark, and why one facial cannot fix all three',
@@ -2833,3 +2834,18 @@ export const articles: Article[] = [
    */
   facialCostArticle,
 ];
+
+/**
+ * Every article on the site.
+ *
+ * The how-to pieces live in their own file. They are step-by-step articles
+ * carrying HowTo structured data, and they were written separately from the
+ * sixteen pieces above, so keeping them in one file of their own means a
+ * long piece of copy is edited in one place rather than inside a file that
+ * already holds sixteen others.
+ *
+ * The merged list is what every consumer reads — the journal index, the
+ * article route, the service pages' reading module, llms.txt — so a new
+ * article appears in all of them by being added in one place.
+ */
+export const articles: Article[] = [...writtenArticles, ...howToArticles];

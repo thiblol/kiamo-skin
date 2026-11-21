@@ -9,6 +9,8 @@
  * generic template.
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHero from '../components/PageHero.astro';
+import legalImage from '../assets/kiamo-skin-studio-mission-hills-san-diego.jpg';
 import Reveal from '../components/Reveal.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
@@ -21,21 +23,23 @@ const updated = 'November 7, 2026';
 <BaseLayout
   title="Terms of Service | KIAMO Skin"
   description="The terms for booking, paying for and attending treatments at KIAMO Skin in Mission Hills, San Diego. Read them in plain language. Updated November 2026."
+  headerTheme="dark"
 >
   <BreadcrumbSchema slot="head" trail={[{ name: 'Terms of Service', path: '/terms' }]} />
 
-  <header class="bg-blush">
-    <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-      <Breadcrumbs current="Terms of Service" />
-      <h1 class="t-h2 mt-6 max-w-[20ch] text-[2.5rem] md:text-[4rem]">Terms of Service</h1>
-      <p class="t-body mt-7 max-w-[58ch] text-[1.125rem]">
-        The short version: this is a facial spa, not a medical practice, and every
-        treatment is performed by one person. Read the sections below before your first
-        appointment.
-      </p>
-      <p class="t-meta mt-7">Last updated {updated}</p>
-    </div>
-  </header>
+  {/* The legal pages do not need a conversion rail — there is nothing to
+      sell on a privacy policy — but they open like every other page: the
+      photograph is the background, the title sits close under the nav, and
+      the spacing is the same as the rest of the site. */}
+  <PageHero
+    eyebrow="KIAMO Skin · Mission Hills, San Diego"
+    h1="Terms of Service"
+    claim="The terms for booking, paying for and attending treatments at KIAMO Skin in Mission Hills, San Diego. Read them in plain language. Updated November 2026."
+    image={legalImage}
+    imageAlt="The KIAMO Skin studio in Mission Hills, San Diego — one private treatment room"
+    showRail={false}
+    current="Terms of Service"
+  />
 
   <div class="bg-porcelain">
     <div class="wrap section-y">

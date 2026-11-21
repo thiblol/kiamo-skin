@@ -12,6 +12,7 @@ import RequestBand from '../components/sections/RequestBand.astro';
 import SocialReels from '../components/sections/SocialReels.astro';
 import SanDiegoContext from '../components/sections/SanDiegoContext.astro';
 import AreasNearby from '../components/sections/AreasNearby.astro';
+import ReadingModule from '../components/sections/ReadingModule.astro';
 import FaqLocation from '../components/sections/FaqLocation.astro';
 import { faqs as homepageFaqs } from '../data/faqs';
 import { reviewStats } from '../data/review-stats';
@@ -121,6 +122,12 @@ const webPageSchema = {
 
   {/* Where the clients come from. */}
   <AreasNearby />
+
+  {/* The writing. The homepage linked five of the sixteen journal articles and
+      none of the comparison pieces, so the site's editorial half — nineteen
+      pages, and the formats an AI answer engine cites most — sat outside the
+      homepage's link graph. */}
+  <ReadingModule />
 
   <FaqLocation faqs={homepageFaqs} />
 

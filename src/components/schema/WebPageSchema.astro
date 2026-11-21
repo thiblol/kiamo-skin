@@ -1,0 +1,57 @@
+---
+/**
+ * The page node for a commercial page.
+ *
+ * Why this exists:
+ *   The service pages, the service-and-city pages and the area hubs carried
+ *   a SpeakableSpecification and nothing else describing the PAGE. No
+ *   datePublished, no dateModified, no name, no description. That left the
+ *   forty-six pages a reader is most likely to land on — the ones with the
+ *   prices on them — with no freshness signal at all, while the journal
+ *   carried real dates on every piece.
+ *
+ *   Freshness is the strongest single citation signal in the reference
+ *   research, and a page that has just been revised should say so. It is
+ *   also the honest thing to do: these pages' prices, protocols and city
+ *   detail were reviewed on a known date, and a reader deciding whether to
+ *   trust a published price is entitled to know when it was last checked.
+ *
+ * The `speakable` block moves here from SpeakableSchema, which is what this
+ * node replaces on these pages — one WebPage node per page rather than two,
+ * and the second one carrying the dates.
+ */
+import { absolute, websiteId } from '../../config/urls';
+
+interface Props {
+  /** The page's own URL, with a trailing slash. */
+  url: string;
+  /** The page title. */
+  name: string;
+  /** The meta description. */
+  description: string;
+  datePublished: string;
+  dateModified: string;
+}
+
+const { url, name, description, datePublished, dateModified } = Astro.props;
+const site = Astro.site;
+
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${absolute(url, site)}#webpage`,
+  url: absolute(url, site),
+  name,
+  description,
+  isPartOf: { '@id': websiteId(site) },
+  inLanguage: 'en-US',
+  datePublished,
+  dateModified,
+  speakable: {
+    '@type': 'SpeakableSpecification',
+    cssSelector: ['.quick-answer', '.faq-section'],
+  },
+};
+---
+
+<script type="application/ld+json" is:inline set:html={JSON.stringify(schema)} />

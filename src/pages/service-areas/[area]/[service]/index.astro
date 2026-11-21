@@ -17,7 +17,7 @@ import ServicePage from '../../../../components/ServicePage.astro';
 import ServiceAreaSchema from '../../../../components/schema/ServiceAreaSchema.astro';
 import BreadcrumbSchema from '../../../../components/schema/BreadcrumbSchema.astro';
 import FaqSchema from '../../../../components/schema/FaqSchema.astro';
-import SpeakableSchema from '../../../../components/schema/SpeakableSchema.astro';
+import WebPageSchema from '../../../../components/schema/WebPageSchema.astro';
 import PersonSchema from '../../../../components/schema/PersonSchema.astro';
 import { services, heroPriceFor } from '../../../../data/services';
 import {
@@ -27,6 +27,7 @@ import {
 } from '../../../../data/service-areas-index';
 import { servicePath, areaPath, areaServicePath } from '../../../../config/urls';
 import { areaImages, areaImageAlts } from '../../../../data/area-images';
+import { AREA_CLUSTER, CONTENT_REVISED } from '../../../../data/page-dates';
 
 export function getStaticPaths() {
   return serviceAreas.map((record) => ({
@@ -90,7 +91,14 @@ const siblingCities = getServiceAreasForService(record.service)
     ]}
   />
   {record.faqs.length > 0 && <FaqSchema slot="head" faqs={record.faqs} />}
-  <SpeakableSchema slot="head" />
+  <WebPageSchema
+    slot="head"
+    url={areaServicePath(record.area, record.service)}
+    name={record.title}
+    description={record.description}
+    datePublished={record.datePublished ?? AREA_CLUSTER}
+    dateModified={record.dateModified ?? CONTENT_REVISED}
+  />
   <PersonSchema slot="head" />
 
   <ServicePage
@@ -118,6 +126,7 @@ const siblingCities = getServiceAreasForService(record.service)
     ]}
     current={record.name}
     cityName={record.name}
+    areaSlug={record.area}
     siblingServices={siblingServices}
     siblingCities={siblingCities}
     hero={{

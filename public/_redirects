@@ -74,3 +74,42 @@
 /treatments/lira-peels/ /services/chemical-peel/ 301
 /treatments/melasma/ /services/melasma-treatment/ 301
 /treatments/procell-microchanneling/ /services/microneedling/ 301
+
+# The canonical sitemap path.
+#
+# @astrojs/sitemap writes sitemap-index.xml for a site with any routes, and
+# the old /sitemap.xml path 404s. Search engines and crawlers commonly request
+# /sitemap.xml first, so that request was answering 404 for every crawler that
+# tried it. One rule fixes it without a second sitemap file.
+/sitemap.xml /sitemap-index.xml 301
+
+# The legacy paths that answer a search but no longer exist.
+#
+# Each of these is a URL somebody plausibly links to or bookmarks. None of
+# them was ever a live page on this site — the treatments, the areas and the
+# booking paths all moved in the 2026-11-10 restructure — so they are
+# answered with a redirect to the page that now owns the intent rather than
+# a 404. A redirect preserves whatever link equity pointed at them.
+#
+# Both the slashed and unslashed form are listed, because a redirect rule
+# matches the exact path it names and the site serves the slashed form.
+/booking /book/ 301
+/booking/ /book/ 301
+/pricing /services/ 301
+/pricing/ /services/ 301
+/faq /journal/ 301
+/faq/ /journal/ 301
+/blog /journal/ 301
+/blog/ /journal/ 301
+/locations /service-areas/ 301
+/locations/ /service-areas/ 301
+/location /contact/ 301
+/location/ /contact/ 301
+/facials /services/facial/ 301
+/facials/ /services/facial/ 301
+/facial-treatment /services/facial/ 301
+/facial-treatment/ /services/facial/ 301
+/san-diego /service-areas/ 301
+/san-diego/ /service-areas/ 301
+/area /service-areas/ 301
+/area/ /service-areas/ 301

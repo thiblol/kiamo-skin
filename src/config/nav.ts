@@ -38,6 +38,7 @@ export const primaryNav = [
   { label: 'Melanin-Rich Skin', href: '/melanin-rich-skin/' },
   { label: 'About', href: '/about/' },
   { label: 'Journal', href: '/journal/' },
+  { label: 'Appointments', href: '/book/' },
   { label: 'Contact', href: '/contact/' },
 ] as const;
 

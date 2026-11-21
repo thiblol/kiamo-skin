@@ -32,23 +32,35 @@
  * appear in the AI answer for this query, and the page says so.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from "../../components/PageHero.astro";
+import heroImage from "../../assets/kiamo-skin-studio-mission-hills-san-diego.jpg";
 import Reveal from '../../components/Reveal.astro';
 import Button from '../../components/Button.astro';
 import NapBlock from '../../components/NapBlock.astro';
 import FaqList from '../../components/FaqList.astro';
 import StudioComparisonTable from '../../components/StudioComparisonTable.astro';
-import { business } from '../../config/business';
+import { business, verifiedPrices } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import {
   studios,
   marketFacialRates,
   marketFacialRatesFinder,
 } from '../../data/third-party-facts';
-import { verifiedPrices } from '../../config/business';
 import FacialClusterSchema from '../../components/schema/FacialClusterSchema.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import VerifiedProof from '../../components/VerifiedProof.astro';
+import { getServiceTestimonials } from '../../data/testimonials';
+
+/**
+ * The AI-liftable capsule.
+ *
+ * It used to sit in the hero as a `.quick-answer` paragraph. The hero is
+ * now the site's shared pattern, so the capsule moves here and is
+ * rendered into the hero's extra slot — same words, same place on the
+ * page, and the Speakable schema still points at `.quick-answer`.
+ */
+const quickAnswer = 'There is no single "best facial spa" in San Diego — there is the best facial for your skin. Nine studios are compared below on what each one is good at, whether it publishes a price, and its Google rating. KIAMO Skin is a corrective facial spa in San Diego offering HydraFacial Syndeo, Lira chemical peels, DMK enzyme therapy and dermaplaning, each safe across every Fitzpatrick type I-VI. First-time consultation and treatment starts at $249.';
 
 const title = 'Best Facial Spas in San Diego (2026) | KIAMO Skin';
 const description =
@@ -231,7 +243,8 @@ const articleSchema = {
 };
 ---
 
-<BaseLayout {title} {description}>
+<BaseLayout {title} {description}
+  headerTheme="dark">
   <FacialClusterSchema slot="head" />
   <SpeakableSchema slot="head" url="https://kiamoskin.com/facial/best-facial-san-diego/" />
   <BreadcrumbSchema
@@ -268,78 +281,41 @@ const articleSchema = {
   )}
 
   <article>
-    <header class="bg-blush">
-      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-        <Breadcrumbs
-          ancestors={[{ name: 'Facial in San Diego', path: '/services/facial/' }]}
-          current="Best Facial Spas in San Diego"
-        />
-        <h1 class="t-h2 mt-6 max-w-[28ch] text-[2.5rem] md:text-[4rem]">
-          Best Facial Spas in San Diego: 9 Compared on Price and Rating
-        </h1>
-
-        {/* AI Overview quick-answer block. */}
-        <p class="t-body quick-answer mt-7 max-w-[62ch] text-[1.125rem] font-medium">
-          There is no single "best facial spa" in San Diego — there is the best
-          facial for your skin. Nine studios are compared below on what each
-          one is good at, whether it publishes a price, and its Google rating.
-          KIAMO Skin is a corrective facial spa in San Diego offering
-          HydraFacial Syndeo, Lira chemical peels, DMK enzyme therapy and
-          dermaplaning, each safe across every Fitzpatrick type I-VI. First-time
-          consultation and treatment starts at $249.
-        </p>
-
-        <p class="t-body mt-5 max-w-[62ch]">
-          Most studios in this market do not publish a price. Four of the nine
-          below do, and every figure on this page was read from that studio's
-          own website and linked to its source, so you can check it yourself.
-          The ratings and review counts are as they stood on {CHECKED_ON} and
-          change as new reviews arrive.
-        </p>
-
-        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
-          <a
-            href={business.phone.href}
-            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
-          >
-            {business.phone.display}
-          </a>
-        </div>
-
-        <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[0.875rem] text-ink-soft">
-          <span class="font-medium">{business.experience} experience</span>
-          <span aria-hidden="true">·</span>
-          <span>Safe for all skin types (Fitzpatrick I-VI)</span>
-          <span aria-hidden="true">·</span>
-          <span>Licensed Esthetician</span>
-          <span aria-hidden="true">·</span>
-          <span>San Diego</span>
-        </div>
-
-        {/* Byline and dates.
-            The three directory pages AI cites for this query all carry one:
-            an author with credentials, a publish date and a last-updated
-            date. A page that compares eight studios and states prices has to
-            say who checked them and when, or the numbers are just assertions.
-            The dates are also the freshness signal the citation data points
-            at — 79.1% of LLM-cited pages were updated inside the year. */}
-        <div class="mt-8 border-t border-line pt-6">
-          <p class="t-meta">
-            By <a
-              href="/about/"
-              class="border-b border-ink/40 hover:border-rose hover:text-rose"
-              >{business.ownerName}</a
-            >, {business.ownerCredential}
+    {/* The hero. The same pattern as every other page: the photograph is
+        the background, the copy sits over it, and the price and the action
+        are in the first screen. */}
+    <PageHero
+      eyebrow="San Diego · Nine studios compared"
+      h1Width="22ch"
+      h1="Best Facial Spas in San Diego: 9 Compared on Price and Rating"
+      claim="Nine San Diego studios compared on what each one is good at, whether it publishes a price, and its Google rating — every figure read from that studio’s own website and linked to its source."
+      paragraph="Most studios in this market do not publish a price. Four of the nine below do, and the ratings and review counts are as they stood on 9 November 2026."
+      image={heroImage}
+      imageAlt="Studio photographs from the treatment rooms of the studios compared below"
+      price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
+      trust={[
+        { label: 'Every figure linked to its source' },
+        { label: 'Ratings as they stood on the check date' },
+        { label: 'Prices published before you book' },
+        { label: 'Safe for every Fitzpatrick type, I–VI' },
+      ]}
+      reassurance={[
+        business.visit.appointmentOnly,
+        business.visit.parking,
+        'Free cancellation up to 48 hours before',
+      ]}
+      ancestors={[{ name: 'Facial in San Diego', path: '/services/facial/' }]}
+      current="Comparison"
+      eventLabel="facial_cluster"
+    >
+      <Fragment slot="extra">
+        {quickAnswer && (
+          <p class="quick-answer t-body mt-6 max-w-[58ch] border-l-2 border-blush pl-6 text-[1.0625rem] font-medium text-porcelain/90">
+            {quickAnswer}
           </p>
-          <p class="t-meta mt-2">
-            Published <time datetime="2026-09-22">September 22, 2026</time>
-            <span aria-hidden="true"> · </span>
-            Last updated <time datetime="2026-11-09">November 9, 2026</time>
-          </p>
-        </div>
-      </div>
-    </header>
+        )}
+      </Fragment>
+    </PageHero>
 
     <section class="bg-porcelain">
       <div class="wrap section-y">
@@ -1032,6 +1008,28 @@ const articleSchema = {
         </div>
       </div>
     </section>
+
+
+  {/* The proof.
+
+      The rating and the review count appeared on exactly two pages of the
+      site — the homepage and /reviews. Every commercial page argued for the
+      studio in the studio's own voice. This band puts the objective figure
+      and two client voices on the page, which is both what a reader deciding
+      whether the drive is worth it needs, and what an answer engine weights. */}
+  <section class="bg-ivory py-16 md:py-20">
+    <div class="wrap">
+      <div class="mx-auto max-w-[68ch]">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">From the treatment room</p>
+          <h2 class="t-h2 mt-4 max-w-[26ch]">What clients say once they have been in.</h2>
+        </Reveal>
+        <div class="mt-10">
+          <VerifiedProof quotes={getServiceTestimonials('facial')} />
+        </div>
+      </div>
+    </div>
+  </section>
 
     {faqs.length > 0 && (
       <section class="bg-blush">

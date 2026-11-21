@@ -8,7 +8,7 @@ import type { Faq } from './faqs';
  * place rather than repeated.
  */
 
-export interface ServiceSlug =
+export type ServiceSlug =
   | 'facial'
   | 'hydrafacial'
   | 'chemical-peel'
@@ -85,6 +85,10 @@ export interface AreaShell {
 
 /** The pair-specific half of a record. */
 export interface ServiceAreaContent {
+  /** The service slug this pair is for. */
+  service: ServiceSlug;
+  /** The area slug this pair is for. */
+  area: string;
   title: string;
   description: string;
   h1: string;

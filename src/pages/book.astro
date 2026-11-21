@@ -6,9 +6,13 @@ import NapBlock from '../components/NapBlock.astro';
 import FaqList from '../components/FaqList.astro';
 import FaqSchema from '../components/schema/FaqSchema.astro';
 import BreadcrumbSchema from '../components/schema/BreadcrumbSchema.astro';
-import Breadcrumbs from '../components/Breadcrumbs.astro';
+import PageHero from '../components/PageHero.astro';
+import studio from '../assets/kiamo-skin-studio-mission-hills-san-diego.jpg';
+import RequestForm from '../components/sections/RequestForm.astro';
+import VerifiedProof from '../components/VerifiedProof.astro';
 import { services } from '../data/services';
-import { business } from '../config/business';
+import { getServiceTestimonials } from '../data/testimonials';
+import { business, verifiedPrices } from '../config/business';
 import { CTA_LABEL } from '../config/nav';
 
 /**
@@ -57,47 +61,186 @@ const faqs = [
       'Retinoids come off before a peel, not during. Stop tretinoin, Retin-A, adapalene and retinol a few days beforehand — the protocol here is three to five days — and leave them off for five to seven days afterwards while the peel does its work, because retinoids and acids together strip the barrier faster than either would alone. Isotretinoin is a different category: peels are not performed during a course of isotretinoin or soon after one, because the skin is rebuilding from nothing while that is happening. Bring the name of what you are using to the consultation and the timing is set around it.',
   },
 ];
+
+/**
+ * The confirmation.
+ *
+ * The enquiry form posts to /api/appointment-request, and without JavaScript
+ * that function answers with a redirect to /book/?sent=1. This page was the
+ * destination — and it had no form on it, so a reader who had just sent an
+ * enquiry landed on a page that only offered a link out to Vagaro. The
+ * arrival now says what actually happened.
+ */
+const sent = Astro.url.searchParams.get('sent') === '1';
 ---
 
 <BaseLayout
   title="Request an Appointment | KIAMO Skin San Diego"
   description="Request an appointment at KIAMO Skin in San Diego. An appointment-only studio in Mission Hills for corrective facials, peels and scalp therapy."
+  headerTheme="dark"
 >
   <FaqSchema slot="head" faqs={faqs} />
   <BreadcrumbSchema slot="head" trail={[{ name: 'Book', path: '/book' }]} />
 
-  <header class="bg-blush">
-    <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-      <Breadcrumbs current="Book" />
-      <h1 class="t-h2 mt-6 max-w-[20ch] text-[2.5rem] md:text-[4rem]">
-        Request an appointment.
-      </h1>
-      <p class="t-body mt-7 max-w-[62ch]">
-        KIAMO Skin is {business.visit.appointmentOnly.toLowerCase()}. Booking runs through Vagaro
-        as a request — you choose a time, and it is confirmed back to you rather than held
-        automatically.
-      </p>
-      <div class="mt-9 flex flex-wrap gap-3">
-        <Button href={business.bookingUrl} external trackEvent="booking_click">{CTA_LABEL}</Button>
-        <Button variant="ghost" href={business.phone.href} trackEvent="phone_click">Call {business.phone.display}</Button>
-      </div>
-    </div>
-  </header>
+  {/* The hero. Same pattern as every other page: the photograph is the
+      background, and the request is in the first screen. */}
+  <PageHero
+    eyebrow="By appointment only · Free parking"
+    h1="Request an appointment."
+    claim="Booking runs through Vagaro as a request — you choose a time, and it is confirmed back to you rather than held automatically."
+    paragraph="The first visit is a full consultation and treatment together: a proper look at what your skin is doing, a plan for the next few months, and the home routine to run between visits. Nothing is treated before it has been looked at."
+    image={studio}
+    imageAlt="Inside the KIAMO Skin treatment room in Mission Hills, San Diego"
+    price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
+    trust={[
+      { label: 'Prices published before you book' },
+      { label: 'One practitioner, every visit' },
+      { label: 'Free cancellation up to 48 hours before' },
+      { label: 'Free parking on site' },
+    ]}
+    reassurance={[
+      business.visit.appointmentOnly,
+      business.visit.parking,
+      'Consultations included — the plan is set before you book',
+    ]}
+    ancestors={[{ name: 'Appointments', path: '/book/' }]}
+    current="Request"
+    eventLabel="book_hero"
+  />
 
-  <section class="bg-porcelain">
-    <div class="wrap section-y">
-      <h2 class="t-h3">How it works</h2>
-      <ol class="mt-12 m-0 grid list-none gap-12 p-0 md:grid-cols-3 md:gap-10">
-        {
-          steps.map((step, i) => (
-            <Reveal as="li" class="border-t border-line pt-8">
-              <p class="t-meta text-rose">{String(i + 1).padStart(2, '0')}</p>
-              <h3 class="t-service mt-4 text-[1.125rem] md:text-[1.3125rem]">{step.title}</h3>
-              <p class="t-body mt-4 text-[0.9375rem]">{step.body}</p>
-            </Reveal>
-          ))
-        }
-      </ol>
+  {sent && (
+    <section class="bg-espresso text-porcelain">
+      <div class="wrap py-12 md:py-14">
+        <p class="t-eyebrow text-porcelain/60">Request received</p>
+        <h2 class="t-h3 mt-4 max-w-[34ch]">Your request is with the studio.</h2>
+        <p class="t-body mt-5 max-w-[58ch] text-porcelain/75">
+          A request is confirmed by the studio rather than held automatically, so the appointment
+          is yours once you hear back. Check your email and your phone. If it is urgent, call{' '}
+          {business.phone.display}.
+        </p>
+      </div>
+    </section>
+  )}
+
+  {/* The request. The form is the primary path — it takes the enquiry first —
+      and the Vagaro link sits beside it for the reader who would rather pick
+      a slot themselves. The form adds a route rather than replacing one. */}
+  <section class="bg-porcelain py-20 md:py-28">
+    <div class="wrap grid gap-12 md:grid-cols-[1.05fr_0.95fr] md:gap-16">
+      <div>
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">How it works</p>
+          <h2 class="t-h2 mt-4 max-w-[24ch]">Three steps, and the plan is set before anything is applied.</h2>
+        </Reveal>
+        <ol class="mt-12 m-0 grid list-none gap-10 p-0 md:grid-cols-3 md:gap-8">
+          {
+            steps.map((step, i) => (
+              <Reveal as="li" class="border-t border-line pt-7">
+                <p class="t-meta text-rose">{String(i + 1).padStart(2, '0')}</p>
+                <h3 class="t-service mt-3 text-[1.125rem] md:text-[1.3125rem]">{step.title}</h3>
+                <p class="t-body mt-3 text-[0.9375rem]">{step.body}</p>
+              </Reveal>
+            ))
+          }
+        </ol>
+
+        <div class="mt-14 border-t border-line pt-9">
+          <p class="t-eyebrow text-ink-soft">Or choose a time yourself</p>
+          <p class="t-body mt-4 max-w-[54ch]">
+            The booking calendar below shows every open slot. A request made there is confirmed the
+            same way as one sent through the form.
+          </p>
+          <div class="mt-6">
+            <Button href={business.bookingUrl} external trackEvent="booking_click" eventLabel="book_calendar">
+              {CTA_LABEL}
+            </Button>
+          </div>
+        </div>
+      </div>
+
+      <RequestForm tone="light" />
+    </div>
+  </section>
+
+  {/* What the first visit actually is. A booking page that only explains the
+      form tells a reader how to book but not what they are buying, and the
+      answer to the second question is the one that stops the request being
+      made — especially for corrective work, where a series is a commitment
+      and a reader needs to know what the series is before they agree to it. */}
+  <section class="bg-porcelain py-20 md:py-28">
+    <div class="wrap">
+      <div class="max-w-[68ch]">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">Your first visit</p>
+          <h2 class="t-h2 mt-4 max-w-[26ch]">
+            The consultation is the treatment, in the sense that it is where the decision is made.
+          </h2>
+        </Reveal>
+
+        <div class="mt-12 grid gap-10 md:grid-cols-2 md:gap-12">
+          <Reveal>
+            <p class="t-meta text-rose">01</p>
+            <h3 class="t-service mt-3 text-[1.125rem] md:text-[1.3125rem]">
+              Skin tone and barrier, before anything else
+            </h3>
+            <p class="t-body mt-4 text-[0.9375rem]">
+              Fitzpatrick type is recorded, from I to VI, and the barrier is assessed on the day
+              rather than assumed. A compromised barrier changes what can safely be applied, so
+              this is the first thing looked at — and it is the thing that most often means the
+              first visit is preparation rather than treatment.
+            </p>
+          </Reveal>
+
+          <Reveal>
+            <p class="t-meta text-rose">02</p>
+            <h3 class="t-service mt-3 text-[1.125rem] md:text-[1.3125rem]">
+              The cause of the concern, not the label on it
+            </h3>
+            <p class="t-body mt-4 text-[0.9375rem]">
+              Post-inflammatory marks, melasma and sun damage look alike and respond in opposite
+              directions, so the kind of mark is identified before anything is chosen. A mark left
+              behind by acne, a symmetrical hormonal pattern and scattered sun damage each need a
+              different plan.
+            </p>
+          </Reveal>
+
+          <Reveal>
+            <p class="t-meta text-rose">03</p>
+            <h3 class="t-service mt-3 text-[1.125rem] md:text-[1.3125rem]">
+              What has already been tried
+            </h3>
+            <p class="t-body mt-4 text-[0.9375rem]">
+              Products used without guidance, peels performed elsewhere, and anything that caused
+              a reaction. A previous reaction to a strong peel is not a footnote — it changes the
+              order of the plan, because skin that has darkened after acid is usually better
+              served by starting with the treatment that carries no acid.
+            </p>
+          </Reveal>
+
+          <Reveal>
+            <p class="t-meta text-rose">04</p>
+            <h3 class="t-service mt-3 text-[1.125rem] md:text-[1.3125rem]">
+              The modality, the strength and the series
+            </h3>
+            <p class="t-body mt-4 text-[0.9375rem]">
+              Which treatment, at what strength, how many sessions, how far apart, and what to do
+              at home in between. Strength escalates across a series rather than starting high.
+              The home routine is prescribed rather than left to chance, because it is what
+              maintains the result once the series ends.
+            </p>
+          </Reveal>
+        </div>
+
+        <p class="t-body mt-12 max-w-[62ch]">
+          Corrective work is planned across a series rather than sold as a single session, and
+          the plan is mapped at the first appointment — the number of sessions, the intervals and
+          the total timeline, so nothing about the commitment is a surprise later. If you expect
+          to come back monthly, a{' '}
+          <a href="/membership/" class="border-b border-ink/40 hover:border-rose hover:text-rose">
+            monthly skin membership</a
+          > costs less than booking the same treatments one at a time.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -121,13 +264,6 @@ const faqs = [
             >skin membership</a
           > costs less than booking the same treatments individually.
         </p>
-        <p class="t-body mt-3 text-[0.875rem] text-ink-soft">
-          If you would rather read what other people wrote before you decide, every Google
-          review of the studio is published in full, named and dated, at the
-          <a href="/reviews/" class="border-b border-ink/40 hover:border-rose hover:text-rose"
-            >reviews page</a
-          >.
-        </p>
       </div>
 
       <div>
@@ -140,10 +276,26 @@ const faqs = [
     </div>
   </section>
 
-  <section class="bg-porcelain">
+  {/* The proof. The booking page was the one page a reader reached AFTER
+      deciding to enquire, and it carried no social proof of its own. */}
+  <section class="bg-porcelain py-20 md:py-28">
+    <div class="wrap">
+      <div class="mx-auto max-w-[68ch]">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">Before you request</p>
+          <h2 class="t-h2 mt-4 max-w-[26ch]">What clients say once they have been in the room.</h2>
+        </Reveal>
+        <div class="mt-10">
+          <VerifiedProof quotes={getServiceTestimonials('booking')} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-ivory">
     <div class="wrap section-y">
       <Reveal>
-        <p class="t-eyebrow text-ink-soft">Before you request</p>
+        <p class="t-eyebrow text-ink-soft">Safety</p>
         <h2 class="t-h3">Questions to ask before booking</h2>
       </Reveal>
 

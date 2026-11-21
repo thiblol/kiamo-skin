@@ -85,6 +85,69 @@ describe('Integrity Guards', () => {
     });
   });
 
+  describe('Hero', () => {
+    test('a page with a photographic hero sets the dark header theme', () => {
+      // The header is transparent over the hero and reads its colour from
+      // `data-header-theme` on the body. Over a full-bleed photograph under
+      // a scrim, the wordmark and the phone number have to be porcelain;
+      // without the attribute they render in ink and disappear.
+      //
+      // This is not hypothetical. It is exactly what happened when the
+      // 2026-11-21 rebuild put the shared PageHero on every page: the
+      // pages whose BaseLayout had no `headerTheme` lost their logo and
+      // their phone number, and nothing in the build caught it. The hero
+      // looks right in a screenshot of the page body and the navigation is
+      // gone, because the navigation is not part of the page body.
+      forEachPage(({ html, file }) => {
+        const main = html.match(/<main id="main">([\s\S]*?)<\/main>/);
+        if (!main) return;
+
+        // The hero is the first element inside main. It counts as
+        // photographic when it carries a background picture AND sits on the
+        // espresso ground — the combination that makes ink unreadable.
+        const hero = main[1].match(/^<(section|header)\b[^>]*>/);
+        if (!hero) return;
+
+        const heroTag = hero[0];
+        const isPhotographic = /bg-espresso/.test(heroTag) && /<picture\b/.test(main[1].slice(0, 4000));
+        if (!isPhotographic) return;
+
+        assert.match(
+          html,
+          /<body[^>]*data-header-theme="dark"/,
+          `${file}: a photographic hero needs headerTheme="dark" — the wordmark and the phone number render in ink over the scrim and are invisible`
+        );
+      });
+    });
+
+    test('the hero carries the conversion action above the fold', () => {
+      // The point of the shared hero is that the price, the button and the
+      // phone number are in the first screen on every page — including the
+      // pages that previously opened with a band of empty colour and the
+      // action a long way down.
+      //
+      // Measured in the browser rather than in the markup: the rail is a
+      // sticky panel on desktop, so its position depends on the layout, not
+      // on where the HTML sits.
+      forEachPage(({ html, file }) => {
+        if (file.includes('404')) return;
+        if (!/Request Appointment/.test(html)) return;
+
+        // The legal pages have no rail by design — there is nothing to sell
+        // on a privacy policy, and putting a booking button on one would be
+        // the wrong signal to both a reader and a crawler.
+        if (/(^|\/)(privacy|terms)\//.test(file)) return;
+
+        // The rail is the panel that carries the price and the button.
+        assert.match(
+          html,
+          /bg-porcelain\/\[0\.06\]/,
+          `${file}: the conversion rail is missing from the hero`
+        );
+      });
+    });
+  });
+
   describe('Build Artifacts', () => {
     test('sitemap exists and is valid', async () => {
       const files = await readdir(DIST);

@@ -29,6 +29,12 @@ import { services } from '../../data/services';
  * The field count is deliberate. Four fields, two of them required: a request
  * that asks for a date, a budget, a history and a referral is a request
  * nobody completes.
+ *
+ * THE TONE
+ * The form was written for the espresso request band and only existed there.
+ * The two pages that most need it — /book/ and /contact/ — are light pages,
+ * so the same markup takes a `tone` prop and inverts its field treatment
+ * rather than a second copy of the component drifting out of sync.
  */
 const treatmentOptions = services.map((s) => s.name);
 
@@ -37,15 +43,30 @@ const treatmentOptions = services.map((s) => s.name);
  * A reader on the HydraFacial page has already told us what they want; asking
  * them to choose again is a small thing to get wrong.
  */
-const { defaultTreatment } = Astro.props as { defaultTreatment?: string };
+const { defaultTreatment, tone = 'dark' } = Astro.props as {
+  defaultTreatment?: string;
+  tone?: 'dark' | 'light';
+};
 const preselect = defaultTreatment
   ? treatmentOptions.find((name) => name === defaultTreatment)
   : undefined;
+
+const dark = tone === 'dark';
+
+/** The field treatment, inverted for a light page. */
+const field =
+  dark
+    ? 'mt-2 w-full border border-porcelain/25 bg-transparent px-4 py-3 text-porcelain outline-none transition-colors placeholder:text-porcelain/40 focus:border-blush'
+    : 'mt-2 w-full border border-ink/20 bg-transparent px-4 py-3 text-ink outline-none transition-colors placeholder:text-ink/35 focus:border-rose';
+const label = dark ? 't-meta block text-porcelain' : 't-meta block text-ink-soft';
+const note = dark ? 'text-porcelain/75' : 'text-ink-soft';
 ---
 
-<div class="border border-porcelain/20 bg-porcelain/[0.04] p-8 md:p-10">
+<div
+  class={`border p-8 md:p-10 ${dark ? 'border-porcelain/20 bg-porcelain/[0.04]' : 'border-line bg-ivory'}`}
+>
   <h3 class="t-h3 text-[1.375rem] md:text-[1.625rem]">Ask before you decide</h3>
-  <p class="t-body mt-4 text-[0.9375rem] text-porcelain/75">
+  <p class={`t-body mt-4 text-[0.9375rem] ${note}`}>
     Not sure which treatment fits, or what it would take? Send the question. It goes straight
     to the studio, and the reply comes from the person who would be doing the work.
   </p>
@@ -64,36 +85,36 @@ const preselect = defaultTreatment
 
     <div class="grid gap-5 sm:grid-cols-2">
       <div>
-        <label class="t-meta block" for="appointment-name">Name</label>
+        <label class={label} for="appointment-name">Name</label>
         <input
           id="appointment-name"
           name="name"
           type="text"
           required
           autocomplete="name"
-          class="mt-2 w-full border border-porcelain/25 bg-transparent px-4 py-3 text-porcelain outline-none transition-colors placeholder:text-porcelain/40 focus:border-blush"
+          class={field}
         />
       </div>
 
       <div>
-        <label class="t-meta block" for="appointment-phone">Phone</label>
+        <label class={label} for="appointment-phone">Phone</label>
         <input
           id="appointment-phone"
           name="phone"
           type="tel"
           required
           autocomplete="tel"
-          class="mt-2 w-full border border-porcelain/25 bg-transparent px-4 py-3 text-porcelain outline-none transition-colors placeholder:text-porcelain/40 focus:border-blush"
+          class={field}
         />
       </div>
     </div>
 
     <div class="mt-5">
-      <label class="t-meta block" for="appointment-treatment">Treatment</label>
+      <label class={label} for="appointment-treatment">Treatment</label>
       <select
         id="appointment-treatment"
         name="treatment"
-        class="mt-2 w-full border border-porcelain/25 bg-transparent px-4 py-3 text-porcelain outline-none transition-colors [color-scheme:dark] focus:border-blush"
+        class={`${field} [color-scheme:${dark ? 'dark' : 'light'}]`}
       >
         <option value="" selected={!preselect}>Not sure yet</option>
         {treatmentOptions.map((name) => (
@@ -103,12 +124,12 @@ const preselect = defaultTreatment
     </div>
 
     <div class="mt-5">
-      <label class="t-meta block" for="appointment-message">Your question</label>
+      <label class={label} for="appointment-message">Your question</label>
       <textarea
         id="appointment-message"
         name="message"
         rows="3"
-        class="mt-2 w-full resize-y border border-porcelain/25 bg-transparent px-4 py-3 text-porcelain outline-none transition-colors placeholder:text-porcelain/40 focus:border-blush"
+        class={`${field} resize-y`}
         placeholder="What is your skin doing, and what have you already tried?"></textarea>
     </div>
 
@@ -120,7 +141,7 @@ const preselect = defaultTreatment
       Send the request
     </button>
 
-    <p class="t-meta mt-4 text-porcelain/50">
+    <p class={`t-meta mt-4 ${dark ? 'text-porcelain/50' : 'text-ink-soft'}`}>
       No obligation. Or call {business.phone.display} if you would rather talk it through.
     </p>
   </form>
@@ -128,7 +149,7 @@ const preselect = defaultTreatment
   {/* The two outcomes, swapped in by the script below. */}
   <p
     id="appointment-status"
-    class="t-body mt-6 hidden text-[0.9375rem] text-porcelain/85"
+    class={`t-body mt-6 hidden text-[0.9375rem] ${dark ? 'text-porcelain/85' : 'text-ink'}`}
     role="status"
     aria-live="polite"
   >

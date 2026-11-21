@@ -9,16 +9,29 @@
  * Pairs with the existing /journal/june-gloom-is-not-sun-protection/ post.
  */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHero from "../../components/PageHero.astro";
+import heroImage from "../../assets/kiamo-skin-studio-mission-hills-san-diego.jpg";
 import Reveal from '../../components/Reveal.astro';
 import Button from '../../components/Button.astro';
 import NapBlock from '../../components/NapBlock.astro';
 import FaqList from '../../components/FaqList.astro';
-import { business } from '../../config/business';
+import { business, verifiedPrices } from '../../config/business';
 import { CTA_LABEL } from '../../config/nav';
 import FacialClusterSchema from '../../components/schema/FacialClusterSchema.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 import BreadcrumbSchema from '../../components/schema/BreadcrumbSchema.astro';
-import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import VerifiedProof from '../../components/VerifiedProof.astro';
+import { getServiceTestimonials } from '../../data/testimonials';
+
+/**
+ * The AI-liftable capsule.
+ *
+ * It used to sit in the hero as a `.quick-answer` paragraph. The hero is
+ * now the site's shared pattern, so the capsule moves here and is
+ * rendered into the hero's extra slot — same words, same place on the
+ * page, and the Speakable schema still points at `.quick-answer`.
+ */
+const quickAnswer = 'Wait 24-48 hours after visible sun flush or burn before a HydraFacial Syndeo or DMK Enzyme Therapy. Wait 7-10 days before a Lira chemical peel. Avoid retinoids, vitamin C, and exfoliants for 5-7 days post-exposure. Apply broad-spectrum SPF 50+ the moment you step outside — UV is the single biggest trigger for pigmentation recurrence in San Diego\'s year-round sun.';
 
 const title = 'Facial After Sun Exposure in San Diego | KIAMO Skin';
 const description =
@@ -53,7 +66,8 @@ const faqs = [
 ];
 ---
 
-<BaseLayout {title} {description}>
+<BaseLayout {title} {description}
+  headerTheme="dark">
   <FacialClusterSchema slot="head" />
   <SpeakableSchema slot="head" url="https://kiamoskin.com/facial/facial-after-sun-exposure-san-diego/" />
   <BreadcrumbSchema
@@ -80,53 +94,41 @@ const faqs = [
   )}
 
   <article>
-    <header class="bg-blush">
-      <div class="wrap section-y pt-[calc(60px+72px)] md:pt-[calc(60px+112px)]">
-        <Breadcrumbs
-          ancestors={[{ name: 'Facial in San Diego', path: '/services/facial/' }]}
-          current="Facial After Sun Exposure"
-        />
-        <h1 class="t-h2 mt-6 max-w-[30ch] text-[2.5rem] md:text-[4rem]">Facial After Sun Exposure in San Diego</h1>
-
-        {/* AI Overview quick-answer block. */}
-        <p class="t-body quick-answer mt-7 max-w-[62ch] text-[1.125rem] font-medium">
-          Wait 24-48 hours after visible sun flush or burn before a HydraFacial Syndeo or
-          DMK Enzyme Therapy. Wait 7-10 days before a Lira chemical peel. Avoid retinoids,
-          vitamin C, and exfoliants for 5-7 days post-exposure. Apply broad-spectrum SPF
-          50+ the moment you step outside — UV is the single biggest trigger for
-          pigmentation recurrence in San Diego's year-round sun.
-        </p>
-
-        <p class="t-body mt-5 max-w-[62ch]">
-          San Diego averages 266 sunny days per year, and UV levels remain high even on
-          overcast mornings when the marine layer is present. UVA penetrates cloud cover
-          at near-full strength. After significant sun exposure — a beach weekend, an
-          unexpected sunburn, a vacation in higher-UV destinations — the skin needs
-          specific care for 24-72 hours before a facial, and specific timing on which
-          modality is safe when.
-        </p>
-
-        <div class="mt-9 flex flex-wrap items-center gap-x-8 gap-y-4">
-          <Button href={business.bookingUrl} external>{CTA_LABEL}</Button>
-          <a
-            href={business.phone.href}
-            class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
-          >
-            {business.phone.display}
-          </a>
-        </div>
-
-        <div class="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-[0.875rem] text-ink-soft">
-          <span class="font-medium">{business.experience} experience</span>
-          <span aria-hidden="true">·</span>
-          <span>Safe for all skin types (Fitzpatrick I-VI)</span>
-          <span aria-hidden="true">·</span>
-          <span>Licensed Esthetician</span>
-          <span aria-hidden="true">·</span>
-          <span>San Diego</span>
-        </div>
-      </div>
-    </header>
+    {/* The hero. The same pattern as every other page: the photograph is
+        the background, the copy sits over it, and the price and the action
+        are in the first screen. */}
+    <PageHero
+      eyebrow="San Diego · Nine studios compared"
+      h1Width="22ch"
+      h1="Facial After Sun Exposure in San Diego"
+      claim="San Diego averages 266 sunny days a year, and UV stays high even on the overcast mornings when the marine layer makes the day look safe."
+      paragraph="Wait 24–48 hours after visible sun flush or burn before a HydraFacial Syndeo or DMK Enzyme Therapy, and 7–10 days before a Lira chemical peel. Avoid retinoids, vitamin C and exfoliants for 5–7 days after exposure."
+      image={heroImage}
+      imageAlt="An overcast San Diego coastline under a bright marine layer"
+      price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
+      trust={[
+        { label: 'Every figure linked to its source' },
+        { label: 'Ratings as they stood on the check date' },
+        { label: 'Prices published before you book' },
+        { label: 'Safe for every Fitzpatrick type, I–VI' },
+      ]}
+      reassurance={[
+        business.visit.appointmentOnly,
+        business.visit.parking,
+        'Free cancellation up to 48 hours before',
+      ]}
+      ancestors={[{ name: 'Facial in San Diego', path: '/services/facial/' }]}
+      current="Comparison"
+      eventLabel="facial_cluster"
+    >
+      <Fragment slot="extra">
+        {quickAnswer && (
+          <p class="quick-answer t-body mt-6 max-w-[58ch] border-l-2 border-blush pl-6 text-[1.0625rem] font-medium text-porcelain/90">
+            {quickAnswer}
+          </p>
+        )}
+      </Fragment>
+    </PageHero>
 
     <section class="bg-porcelain">
       <div class="wrap section-y">
@@ -265,6 +267,28 @@ const faqs = [
         </div>
       </div>
     </section>
+
+
+  {/* The proof.
+
+      The rating and the review count appeared on exactly two pages of the
+      site — the homepage and /reviews. Every commercial page argued for the
+      studio in the studio's own voice. This band puts the objective figure
+      and two client voices on the page, which is both what a reader deciding
+      whether the drive is worth it needs, and what an answer engine weights. */}
+  <section class="bg-ivory py-16 md:py-20">
+    <div class="wrap">
+      <div class="mx-auto max-w-[68ch]">
+        <Reveal>
+          <p class="t-eyebrow text-ink-soft">From the treatment room</p>
+          <h2 class="t-h2 mt-4 max-w-[26ch]">What clients say once they have been in.</h2>
+        </Reveal>
+        <div class="mt-10">
+          <VerifiedProof quotes={getServiceTestimonials('facial')} />
+        </div>
+      </div>
+    </div>
+  </section>
 
     {faqs.length > 0 && (
       <section class="bg-blush">

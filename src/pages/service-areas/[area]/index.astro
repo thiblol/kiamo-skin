@@ -19,10 +19,15 @@ import NapBlock from '../../../components/NapBlock.astro';
 import LocationMap from '../../../components/LocationMap.astro';
 import BreadcrumbSchema from '../../../components/schema/BreadcrumbSchema.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import PageHero from '../../../components/PageHero.astro';
 import FaqSchema from '../../../components/schema/FaqSchema.astro';
 import FaqList from '../../../components/FaqList.astro';
 import RequestBand from '../../../components/sections/RequestBand.astro';
-import SpeakableSchema from '../../../components/schema/SpeakableSchema.astro';
+import VerifiedProof from '../../../components/VerifiedProof.astro';
+import WebPageSchema from '../../../components/schema/WebPageSchema.astro';
+import { getAreaTestimonials } from '../../../data/testimonials';
+import { areaImages, areaImageAlts } from '../../../data/area-images';
+import { AREA_CLUSTER, CONTENT_REVISED } from '../../../data/page-dates';
 import AreaServiceSchema from '../../../components/schema/AreaServiceSchema.astro';
 import { areaShells } from '../../../data/area-shells';
 import { services } from '../../../data/services';
@@ -31,7 +36,7 @@ import {
   getServiceAreasForArea,
 } from '../../../data/service-areas-index';
 import { areaPath, areaServicePath, servicePath } from '../../../config/urls';
-import { business } from '../../../config/business';
+import { business, verifiedPrices } from "../../../config/business";
 import { CTA_LABEL } from '../../../config/nav';
 
 export function getStaticPaths() {
@@ -47,6 +52,9 @@ export function getStaticPaths() {
 }
 
 const { shell } = Astro.props;
+
+/** The clients who made the drive from this city. */
+const areaTestimonials = getAreaTestimonials(shell.slug);
 
 /** The services available to clients from this city. */
 const rows = getServiceAreasForArea(shell.slug).map((record) => ({
@@ -112,6 +120,7 @@ const description =
 <BaseLayout
   title={title}
   description={description}
+  headerTheme="dark"
 >
   <AreaServiceSchema slot="head" shell={shell} />
   <BreadcrumbSchema
@@ -122,66 +131,73 @@ const description =
     ]}
   />
   <FaqSchema slot="head" faqs={faqs} />
-  <SpeakableSchema slot="head" />
+  <WebPageSchema
+    slot="head"
+    url={areaPath(shell.slug)}
+    name={title}
+    description={description}
+    datePublished={AREA_CLUSTER}
+    dateModified={CONTENT_REVISED}
+  />
 
   <article>
-    <header class="bg-blush">
-      <div class="wrap pt-[calc(60px+40px)] pb-14 md:pt-[calc(60px+64px)] md:pb-20">
-        <div class="grid items-center gap-10 md:grid-cols-2 md:gap-14 lg:gap-20">
-          <div>
-            <Breadcrumbs ancestors={[{ name: 'Service Areas', path: '/service-areas/' }]} current={shell.name} />
-            <h1 class="t-h2 mt-6 max-w-[24ch] text-[2.25rem] md:text-[3.5rem]">
-              Corrective facials in {shell.name}, San Diego
-            </h1>
+    {/* The hero. The city's own photograph is the background, the copy sits
+        over it, and the drive — the thing a reader from out of town is
+        actually deciding about — is in the first screen rather than a
+        section further down. */}
+    <PageHero
+      eyebrow={`San Diego County · ${shell.name}`}
+      h1="Corrective facials"
+      h1Accent={`in ${shell.name}`}
+      claim={shell.localConcern.body.split('. ')[0] + '.'}
+      paragraph={`${shell.proximity}. Free parking on site, by appointment only, and a corrective plan mapped before you book.`}
+      image={areaImages[shell.slug]}
+      imageAlt={areaImageAlts[shell.slug]}
+      price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
+      trust={[
+        { label: 'Free parking on site' },
+        { label: 'Kiki performs every treatment' },
+        { label: 'Prices published before you book' },
+        { label: 'Safe for every Fitzpatrick type, I–VI' },
+      ]}
+      reassurance={[
+        business.visit.appointmentOnly,
+        business.visit.parking,
+        'Free cancellation up to 48 hours before',
+      ]}
+      ancestors={[{ name: 'Service Areas', path: '/service-areas/' }]}
+      current={shell.name}
+      eventLabel="area_hub"
+    />
 
-            {/* The action sits directly under the headline.
-                Measured on a 390×844 screen, it was at 1,058px — below the
-                fold, behind a paragraph of local skin detail. A reader who
-                has just read what the studio does in their own city should
-                be able to act on it before they scroll, not after. */}
-            <div class="mt-7 flex flex-wrap items-center gap-x-8 gap-y-4">
-              <Button
-                href={business.bookingUrl}
-                external
-                trackEvent="booking_click"
-                eventLabel="area_hub"
-              >
-                {CTA_LABEL}
-              </Button>
-              <a
-                href={business.phone.href}
-                class="t-body border-b border-ink pb-1 hover:border-rose hover:text-rose"
-                onclick="if(typeof gtag !== 'undefined') gtag('event', 'phone_click', {event_category: 'engagement', event_label: 'area_hub', transport_type: 'beacon'});"
-              >
-                {business.phone.display}
-              </a>
-            </div>
-
-            <p class="t-body mt-7 max-w-[56ch] text-[1.125rem]">{shell.localConcern.body}</p>
-            <p class="t-body mt-5 max-w-[56ch] text-[0.9375rem] text-ink-soft">
-              {shell.proximity}. Free parking on site, by appointment only.
-            </p>
-          </div>
-
-          <div>
-            <Reveal>
-              <p class="t-eyebrow text-ink-soft">The place</p>
-              <p class="t-body mt-4 leading-relaxed">{shell.allAbout.body}</p>
-              <dl class="mt-8 m-0 space-y-4">
-                {
-                  shell.allAbout.facts.map((fact) => (
-                    <div class="border-b border-line pb-4 last:border-0">
-                      <dt class="t-meta text-ink-soft">{fact.label}</dt>
-                      <dd class="t-body m-0 mt-1 text-[0.9375rem]">{fact.value}</dd>
-                    </div>
-                  ))
-                }
-              </dl>
-            </Reveal>
-          </div>
+    {/* The place. The hero carries the offer; the geography sits here,
+        where it is the reason to trust the drive rather than the reason to
+        book. The facts are the ones a reader checks before setting off —
+        the distance, what the area is like, and what clients come for. */}
+    <section class="bg-ivory py-16 md:py-24">
+      <div class="wrap grid gap-12 md:grid-cols-[1.1fr_0.9fr] md:gap-16">
+        <div>
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">The place</p>
+            <h2 class="t-h2 mt-4 max-w-[24ch]">What {shell.name} is, and why the skin behaves this way.</h2>
+            <p class="t-body mt-6 leading-relaxed">{shell.allAbout.body}</p>
+            <p class="t-body mt-5 leading-relaxed text-ink-soft">{shell.proximity}. Free parking on site, by appointment only.</p>
+          </Reveal>
         </div>
+        <Reveal>
+          <dl class="m-0 space-y-4">
+            {
+              shell.allAbout.facts.map((fact) => (
+                <div class="border-b border-line pb-4 last:border-0">
+                  <dt class="t-meta text-ink-soft">{fact.label}</dt>
+                  <dd class="t-body m-0 mt-1 text-[0.9375rem]">{fact.value}</dd>
+                </div>
+              ))
+            }
+          </dl>
+        </Reveal>
       </div>
-    </header>
+    </section>
 
     {/* The services available in this city. This is the crawl path into the
         cluster — every service page for this city is one link from here. */}
@@ -213,7 +229,7 @@ const description =
                       was the most expensive thing missing. The price comes
                       from the service's own published menu price. */}
                   {svc?.menuPrice && (
-                    <p class="t-price shrink-0 text-rose">{svc.menuPrice}</p>
+                    <p class="t-price shrink text-rose md:shrink-0">{svc.menuPrice}</p>
                   )}
                 </div>
                 <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">
@@ -275,6 +291,23 @@ const description =
         </div>
       </section>
     )}
+
+    {/* The proof. A reader deciding whether a twenty-five minute drive is
+        worth it needs to meet somebody who made it, and to see the one
+        objective figure the studio can publish. */}
+    <section class="bg-porcelain py-16 md:py-20">
+      <div class="wrap">
+        <div class="mx-auto max-w-[68ch]">
+          <Reveal>
+            <p class="t-eyebrow text-ink-soft">From the treatment room</p>
+            <h2 class="t-h2 mt-4 max-w-[26ch]">What clients say once they have been in.</h2>
+          </Reveal>
+          <div class="mt-10">
+            <VerifiedProof quotes={areaTestimonials} areaName={shell.name} />
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section class="bg-ivory py-20 md:py-28">
       <div class="wrap section-y">
