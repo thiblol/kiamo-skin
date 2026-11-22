@@ -2,6 +2,8 @@
 import { testimonials } from '../../data/testimonials';
 import { gbpReviewsUrl } from '../../config/urls';
 import { business } from '../../config/business';
+import FeaturedQuotes from './FeaturedQuotes.astro';
+import FeaturedIn from './FeaturedIn.astro';
 
 /**
  * ClientReviews
@@ -24,8 +26,13 @@ import { business } from '../../config/business';
  * excluded here so the same voice never appears twice on one page — once as a
  * set-piece quote, once scrolling past in the marquee. The marquee is the
  * long tail; the standalone quotes are the moments a reader actually stops on.
+ *
+ * Leona and Alyssa Madriaga are here for a second reason. Their reviews are
+ * set above the marquee in FeaturedQuotes, verbatim from the Google listing,
+ * and a shortened rewrite of the same review also sitting in the marquee
+ * would put two different versions of one client's words on the same page.
  */
-const scattered = new Set(['Brian A.', 'Arica L.']);
+const scattered = new Set(['Brian A.', 'Arica L.', 'Leona', 'Alyssa M.']);
 
 const homepageReviews = testimonials.filter((t) => !t.area && !scattered.has(t.attribution));
 const row1 = homepageReviews.slice(0, 4);
@@ -38,6 +45,9 @@ const row2 = homepageReviews.slice(4);
     <h2 class="t-h2 reviews-h2">What clients say after corrective treatment in San Diego.</h2>
   </div>
 
+  {/* The three reviews that carry a claim, in the customer's own words. */}
+  <FeaturedQuotes />
+
   {/* The marquee wrapper is NOT aria-hidden. The duplicate row inside each
       track is what carries aria-hidden — that is the copy that exists only to
       make the loop seamless. Hiding the wrapper as well hid all 24 quote
@@ -49,7 +59,7 @@ const row2 = homepageReviews.slice(4);
       <ul class="reviews-row">
         {row1.map((t) => (
           <li class="review-card">
-            <p class="review-quote">&ldquo;{t.quote}&rdquo;</p>
+            <blockquote data-quoted="client-review" class="review-quote">&ldquo;{t.quote}&rdquo;</blockquote>
             <p class="review-meta">— {t.attribution}{t.platform ? `, ${t.platform}` : ''}</p>
           </li>
         ))}
@@ -57,7 +67,7 @@ const row2 = homepageReviews.slice(4);
       <ul class="reviews-row" aria-hidden="true">
         {row1.map((t) => (
           <li class="review-card">
-            <p class="review-quote">&ldquo;{t.quote}&rdquo;</p>
+            <blockquote data-quoted="client-review" class="review-quote">&ldquo;{t.quote}&rdquo;</blockquote>
             <p class="review-meta">— {t.attribution}{t.platform ? `, ${t.platform}` : ''}</p>
           </li>
         ))}
@@ -69,7 +79,7 @@ const row2 = homepageReviews.slice(4);
       <ul class="reviews-row">
         {row2.map((t) => (
           <li class="review-card">
-            <p class="review-quote">&ldquo;{t.quote}&rdquo;</p>
+            <blockquote data-quoted="client-review" class="review-quote">&ldquo;{t.quote}&rdquo;</blockquote>
             <p class="review-meta">— {t.attribution}{t.platform ? `, ${t.platform}` : ''}</p>
           </li>
         ))}
@@ -77,12 +87,19 @@ const row2 = homepageReviews.slice(4);
       <ul class="reviews-row" aria-hidden="true">
         {row2.map((t) => (
           <li class="review-card">
-            <p class="review-quote">&ldquo;{t.quote}&rdquo;</p>
+            <blockquote data-quoted="client-review" class="review-quote">&ldquo;{t.quote}&rdquo;</blockquote>
             <p class="review-meta">— {t.attribution}{t.platform ? `, ${t.platform}` : ''}</p>
           </li>
         ))}
       </ul>
     </div>
+  </div>
+
+  {/* The publications that have written about the studio. It sits here
+      because it is the same kind of thing as the quotes above it: somebody
+      else saying what the studio is. */}
+  <div class="wrap">
+    <FeaturedIn />
   </div>
 
   <div class="wrap reviews-cta-wrap">
@@ -215,6 +232,10 @@ const row2 = homepageReviews.slice(4);
     font-size: 1.125rem;
     line-height: 1.6;
     color: var(--color-ink);
+    /* The quote is a <blockquote> so it can be marked as a quotation, and
+       the browser gives a blockquote a margin of 1em 40px by default. That
+       margin is not wanted inside the marquee card. */
+    margin: 0;
   }
 
   @media (min-width: 52.5rem) {

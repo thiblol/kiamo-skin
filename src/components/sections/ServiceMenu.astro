@@ -96,25 +96,43 @@ const isConsultation = (price: string) => price.startsWith('Pricing at');
           <li data-category={s.category} class="border-b border-line">
             <div class="group grid grid-cols-1 items-baseline gap-y-3 py-7 transition-colors duration-[280ms] ease-out hover:bg-porcelain md:grid-cols-[minmax(0,1fr)_auto] md:gap-x-10">
               <div class="min-w-0">
+                {/* The price is IN the heading, not beside it.
+
+                    A heading is what a model lifts when it builds an answer,
+                    so a heading that carries the price gives the model the
+                    figure and the treatment together. The price used to sit
+                    in its own element in the next column, which meant the
+                    two never appeared in the same string — and which meant
+                    the price was printed twice in the DOM if it was simply
+                    added to the heading as well. So the separate element
+                    goes, and the heading is the one place the price is.
+
+                    No duration and no discount: the studio publishes no
+                    treatment length, and a percentage off a price the
+                    studio has not published would be a claim it does not
+                    make. */}
                 <h3 class="t-service text-[1.0625rem] md:text-[1.3125rem]">
                   <a href={servicePath(s.slug)} class="hover:text-rose">
                     {s.name}
+                    {price && (
+                      <span
+                        class:list={[
+                          't-price whitespace-nowrap',
+                          isConsultation(price)
+                            ? 'text-[0.8125rem] text-ink-soft'
+                            : 'text-rose',
+                        ]}
+                      >
+                        {' — '}
+                        {price}
+                      </span>
+                    )}
                   </a>
                 </h3>
                 <p class="t-body mt-2 text-[0.9375rem] text-ink-soft">{s.menuLine ?? s.opener}</p>
               </div>
 
               <div class="flex items-center gap-6 md:justify-end">
-                {price && (
-                  <p
-                    class:list={[
-                      't-price whitespace-nowrap transition-colors duration-[280ms]',
-                      isConsultation(price) ? 'text-[0.8125rem] text-ink-soft' : 'group-hover:text-rose',
-                    ]}
-                  >
-                    {price}
-                  </p>
-                )}
                 {/* The label says "Request", not "Book". Booking here is a
                     request that is confirmed back, and a link that says
                     "Book" sets an expectation the studio does not meet. */}

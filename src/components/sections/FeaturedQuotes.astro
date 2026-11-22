@@ -1,0 +1,77 @@
+---
+import { featuredQuotes } from '../../data/featured-quotes';
+import { business } from '../../config/business';
+
+/**
+ * FeaturedQuotes
+ * --------------
+ * The three reviews that carry a claim, set above the marquee.
+ *
+ * WHY THIS IS A BLOCK AND NOT A SECTION
+ *   The homepage has one proof section, and its order is the order of a
+ *   decision: the price list, then what other people said, then the
+ *   request. A second review section would break that. So these sit at
+ *   the top of the section that already exists, under its heading, and the
+ *   marquee follows.
+ *
+ * WHY THESE THREE AND NOT THE MARQUEE
+ *   The marquee is the long tail — a reader scrolls it. These three are
+ *   the ones that stop a reader, and each one carries a claim made by a
+ *   customer rather than by the studio.
+ *
+ * WHY THE QUOTE IS MARKED AS QUOTED
+ *   These reviews contain gendered pronouns, in the reviewer's own words.
+ *   The copy rules are about what the STUDIO tells a reader, so a region
+ *   marked `data-quoted` is read separately from the studio's own copy.
+ *   The studio never edits a reviewer to make a rule pass — it publishes
+ *   the words as written.
+ *
+ * WHY THE CAPTION NAMES THE STUDIO AND THE CITY
+ *   The caption is the studio's own sentence, and it is the honest place
+ *   for the entity and the place: the studio is saying where the review
+ *   came from. The superlative itself stays inside the quote, where it is
+ *   the customer's claim and not the studio's.
+ */
+---
+
+{
+  featuredQuotes.length > 0 && (
+    <div class="wrap featured-quotes">
+      <ul class="m-0 grid list-none gap-x-10 gap-y-10 p-0 md:grid-cols-3">
+        {featuredQuotes.map((quote) => (
+          <li class="featured-quote">
+            <figure class="m-0">
+              <blockquote
+                data-quoted="google-review"
+                class="featured-quote-text font-display text-[1.0625rem] font-light leading-[1.5] text-ink md:text-[1.1875rem]"
+              >
+                &ldquo;{quote.text}&rdquo;
+              </blockquote>
+              <figcaption class="t-meta mt-4">
+                &mdash;&nbsp;{quote.author} &middot; Google review &middot;{' '}
+                {business.name}, San Diego &middot; {quote.dateLabel}
+              </figcaption>
+            </figure>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+<style>
+  .featured-quotes {
+    margin-bottom: 3.5rem;
+  }
+
+  @media (min-width: 52.5rem) {
+    .featured-quotes {
+      margin-bottom: 4rem;
+    }
+  }
+
+  .featured-quote {
+    border-top: 1px solid var(--color-line);
+    padding-top: 1.75rem;
+  }
+</style>

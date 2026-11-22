@@ -200,7 +200,7 @@ export const services: Service[] = [
       'KIAMO Skin runs the full facial menu rather than a single modality, because the treatment that suits a reactive barrier is not the treatment that suits an oily, congested one. HydraFacial Syndeo with AI skin analysis for maintenance and glow. Lira chemical peels at Fitzpatrick-calibrated concentrations for pigmentation and texture. DMK enzyme therapy for barrier repair. Dermaplaning for surface refinement. The modality is selected to match the skin in front of you, and the price is published before you book. <a href="/services/hydrafacial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">HydraFacial</a>, <a href="/services/chemical-peel/" class="border-b border-ink/40 hover:border-rose hover:text-rose">chemical peels</a>, and <a href="/services/dermaplaning/" class="border-b border-ink/40 hover:border-rose hover:text-rose">dermaplaning</a> each have their own page, and <a href="/services/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatments</a> covers how a plan is put together when more than one modality is involved.',
     image: hydrafacial,
     imageAlt:
-      'HydraFacial Syndeo treatment in progress at KIAMO Skin San Diego — licensed esthetician performing a medical-grade facial',
+      'HydraFacial Syndeo treatment in progress at KIAMO Skin, San Diego — licensed esthetician performing a medical-grade facial',
     goodFor: [
       'Congested pores from urban pollution, sunscreen, or marine-layer humidity',
       'Dehydration from air-conditioned offices, coastal salt air, or hard water mineral deposits',
@@ -271,7 +271,7 @@ export const services: Service[] = [
       'HydraFacial Syndeo performs three clinical actions simultaneously: enzymatic resurfacing lifts dead surface cells without abrasive scrubbing, patented vortex extraction vacuums mineral deposits and sebum from follicles at controlled pressure, and precision infusion floods skin with hydration and antioxidants while pores remain receptive. This is medical-grade extraction technology, not a spa facial with suction. <a href="/services/facial/" class="border-b border-ink/40 hover:border-rose hover:text-rose">Facial clients</a> across the county book it as the foundation of a maintenance schedule, and for corrective plans it sits between stronger sessions to hold the result. The extractor is calibrated to San Diego\'s own water and climate: the municipal supply runs 280-320 parts per million of dissolved calcium and magnesium, which binds with sebum into deposits ordinary cleansing cannot remove. HydraFacial is the most forgiving corrective treatment available — safe for every Fitzpatrick skin type including melanin-rich skin, with no risk of post-inflammatory hyperpigmentation.',
     image: hydrafacial,
     imageAlt:
-      'HydraFacial treatment in progress at KIAMO Skin San Diego — licensed esthetician performing professional facial treatment',
+      'HydraFacial treatment in progress at KIAMO Skin, San Diego — licensed esthetician performing professional facial treatment',
     goodFor: [
       'Congested pores and blackheads',
       'Dull, dehydrated skin',
@@ -348,7 +348,7 @@ export const services: Service[] = [
       'Pigmentation is the reason most people book, and it is also where the wrong treatment does lasting damage. Melanin-rich skin responds to trauma by producing more pigment, so the strength, the acid and the pacing all have to be selected deliberately. Lira\'s professional range is built for that kind of control. Clients from inland San Diego County book this treatment most often, where UV and melanin-rich skin demographics make melasma the county\'s most common pigmentation concern. Read more about <a href="/services/melasma-treatment/" class="border-b border-ink/40 hover:border-rose hover:text-rose">correcting melasma and post-inflammatory hyperpigmentation</a>, or explore KIAMO Skin\'s full approach to <a href="/services/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatments</a>.',
     image: liraPeel,
     imageAlt:
-      'LIRA chemical peel application in progress at KIAMO Skin San Diego — licensed esthetician applying a professional peel for melanin-rich skin pigmentation',
+      'LIRA chemical peel application in progress at KIAMO Skin, San Diego — licensed esthetician applying a professional peel for melanin-rich skin pigmentation',
     goodFor: [
       'Melasma and hormonal pigmentation',
       'Post-inflammatory marks left behind by acne',
@@ -414,7 +414,7 @@ export const services: Service[] = [
       'Procell Therapies microchanneling is a skin resurfacing treatment that creates thousands of microscopic channels in the skin surface using a precision-engineered handpiece. Those channels trigger the skin\'s natural wound-healing response — collagen production, elastin remodeling, and controlled surface cell renewal. What separates Procell from conventional microneedling is what happens immediately after the channels are created. Procell\'s proprietary stem cytokine growth factor serums are applied directly into the open channels, communicating with skin cells to direct the repair process toward specific outcomes: collagen synthesis, pigment correction, and texture resurfacing. The result is faster recovery and more targeted correction than standard microneedling alone. Ideal candidates include those with acne scarring (ice pick, boxcar, and rolling scar types), post-inflammatory hyperpigmentation (PIH) — dark marks left after acne, injury, or trauma, uneven skin tone and diffuse sun damage, skin texture irregularities and enlarged pores, fine lines and mild skin laxity, and Fitzpatrick Type IV, V, and VI skin tones. For clients traveling from across the county, the series is planned as a block at consultation — scheduling all three sessions at once accounts for the drive and makes completion realistic.',
     image: procell,
     imageAlt:
-      'Procell microchanneling treatment in progress at KIAMO Skin San Diego — licensed esthetician performing corrective microchanneling on a client',
+      'Procell microchanneling treatment in progress at KIAMO Skin, San Diego — licensed esthetician performing corrective microchanneling on a client',
     goodFor: [
       'Acne scarring — ice pick, boxcar, and rolling scar types',
       'Post-inflammatory hyperpigmentation (PIH) — dark marks left after acne, injury, or trauma',
@@ -500,7 +500,7 @@ export const services: Service[] = [
       'Dermaplaning uses a sterile surgical blade to remove dead surface cells and the fine vellus hair that sits on top of them. Nothing is pulled from the follicle and nothing penetrates the skin. What changes is the surface: product reaches live tissue instead of sitting on debris, and makeup stops catching on texture. Clients book dermaplaning for events and before important occasions because there is zero downtime and the glow is immediate. Dermaplaning is one of several <a href="/services/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatments</a> that can be integrated into a broader skincare plan.',
     image: dermaplane,
     imageAlt:
-      'Dermaplaning treatment in progress at KIAMO Skin San Diego — licensed esthetician performing precise blade exfoliation technique',
+      'Dermaplaning treatment in progress at KIAMO Skin, San Diego — licensed esthetician performing precise blade exfoliation technique',
     goodFor: [
       'Rough or uneven surface texture',
       'Makeup that clings to fine facial hair',
@@ -566,7 +566,7 @@ export const services: Service[] = [
       'HydraFacial Keravive deeply cleanses, exfoliates, and hydrates the scalp while removing buildup that contributes to dryness, flaking, and irritation. The Keravive Peptide Complex nourishes sebaceous glands and supports a healthier environment for hair growth. In San Diego, hard water — averaging 16 grains per gallon — makes scalp buildup especially common. Coastal clients dealing with daily salt water exposure and inland clients facing wind and UV damage book Keravive for hard water mineral deposits that shampoo cannot clear. Every treatment includes a take-home peptide spray to continue supporting scalp health between visits.',
     image: scalp,
     imageAlt:
-      'Licensed esthetician performing Keravive scalp therapy on a client at KIAMO Skin San Diego — clinical scalp treatment for buildup, flaking, and hair-thinning support',
+      'Licensed esthetician performing Keravive scalp therapy on a client at KIAMO Skin, San Diego — clinical scalp treatment for buildup, flaking, and hair-thinning support',
     goodFor: [
       'Flaking, itching, or scalp tightness',
       'Product buildup and hard water mineral deposits',
@@ -630,7 +630,7 @@ export const services: Service[] = [
       'DMK Enzyme Therapy is designed to restore healthy skin function rather than simply exfoliating the surface. By supporting the skin\'s natural processes, it helps strengthen the skin barrier while encouraging healthy circulation and lymphatic activity. It\'s especially beneficial for skin that feels over-exfoliated, sensitized, inflamed, or slow to heal—common states for coastal surfers and anyone whose barrier has been stripped by salt water, wind, or aggressive product use. This approach is part of KIAMO Skin\'s broader <a href="/services/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatment</a> philosophy, where treatment selection is based on current skin condition rather than following a fixed protocol.',
     image: enzyme,
     imageAlt:
-      'DMK enzyme therapy treatment in progress at KIAMO Skin San Diego — licensed esthetician performing corrective enzyme therapy on a client',
+      'DMK enzyme therapy treatment in progress at KIAMO Skin, San Diego — licensed esthetician performing corrective enzyme therapy on a client',
     goodFor: [
       'A compromised skin barrier — stinging, redness, or tightness after products',
       'Skin recovering from over-exfoliation or aggressive at-home products',
@@ -694,7 +694,7 @@ export const services: Service[] = [
       'Acne treatment at KIAMO Skin addresses three phases: active breakouts, congestion (blackheads and whiteheads), and post-acne concerns like hyperpigmentation and scarring. The treatment plan depends on what stage your skin is in. HydraFacial extracts congestion without manual pressure, DMK Enzyme Therapy rebuilds a compromised barrier that is keeping breakouts active, and chemical peels or microchanneling work through the marks and texture left behind. Every protocol is designed to clear acne without triggering post-inflammatory hyperpigmentation — the dark marks that last longer than the breakout itself. This multi-phase approach is part of KIAMO Skin\'s <a href="/services/corrective-skin-treatments/" class="border-b border-ink/40 hover:border-rose hover:text-rose">corrective skin treatment</a> philosophy.',
     image: acne,
     imageAlt:
-      'Acne treatment in progress at KIAMO Skin San Diego — licensed esthetician performing HydraFacial extraction for congested acne-prone skin',
+      'Acne treatment in progress at KIAMO Skin, San Diego — licensed esthetician performing HydraFacial extraction for congested acne-prone skin',
     goodFor: [
       'Active hormonal acne and inflammatory breakouts',
       'Cystic acne and nodular acne lesions',
@@ -788,7 +788,7 @@ export const services: Service[] = [
     resultCaption:
       'A published case, photographed with written consent. Results vary from person to person.',
     imageAlt:
-      'Hyperpigmentation treatment in progress at KIAMO Skin San Diego — licensed esthetician applying brightening serum for melanin-rich skin pigmentation correction',
+      'Hyperpigmentation treatment in progress at KIAMO Skin, San Diego — licensed esthetician applying brightening serum for melanin-rich skin pigmentation correction',
     concerns: [
       'Dark marks left after acne clears',
       'Marks after eczema, psoriasis, or another inflammatory rash',
@@ -989,7 +989,7 @@ export const services: Service[] = [
     image: correctiveHero,
     resultImage: correctiveSkin,
     resultImageAlt:
-      'Corrective skin consultation at KIAMO Skin San Diego — licensed esthetician examining client skin before selecting a treatment',
+      'Corrective skin consultation at KIAMO Skin, San Diego — licensed esthetician examining client skin before selecting a treatment',
     imageAlt:
       'Licensed esthetician performing a corrective skin treatment on melanin-rich skin at KIAMO Skin in San Diego',
     concerns: [

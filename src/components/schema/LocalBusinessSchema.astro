@@ -2,7 +2,19 @@
 import { business, verifiedPrices } from '../../config/business';
 import { absolute, businessId, websiteId, gbpListingUrl, servicePath } from '../../config/urls';
 import { services } from '../../data/services';
+import { buildSiteInventory } from '../../data/site-inventory';
 import ogImage from '../../assets/kiamo-skin-studio-mission-hills-san-diego.jpg';
+
+interface Props {
+  /**
+   * Emit the site inventory as `hasPart` on the WebSite node.
+   *
+   * Homepage only. See the note on the node below for why.
+   */
+  inventory?: boolean;
+}
+
+const { inventory = false } = Astro.props;
 
 const site = Astro.site;
 const entityId = businessId(site);
@@ -277,9 +289,22 @@ const website = {
   '@id': websiteId(site),
   url: home,
   name: business.name,
-  description: 'Corrective facials and scalp therapy in San Diego.',
+  description: 'Corrective facial spa in San Diego. Every treatment and its published price.',
   publisher: { '@id': entityId },
   inLanguage: 'en-US',
+  /**
+   * The site inventory.
+   *
+   * A crawler landing on the homepage has to work out which of a hundred
+   * pages answers its question. `hasPart` answers that in the form a model
+   * reads: each page with a URL, a name and a line on what it is for.
+   *
+   * It is emitted on the homepage only. The list is around fifty entries,
+   * and on a hundred pages it would be a large payload that only a crawler
+   * arriving at the root benefits from — the sitemap already says what
+   * exists for every page.
+   */
+  ...(inventory ? { hasPart: buildSiteInventory(site) } : {}),
 };
 ---
 

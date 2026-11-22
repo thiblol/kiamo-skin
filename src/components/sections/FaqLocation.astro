@@ -89,9 +89,14 @@ const reviewsUrl = gbpReviewsUrl(business.gbpPlaceId);
       <p class="t-eyebrow text-ink-soft">Before you book</p>
       <h2 class="t-h2 mt-5 max-w-[20ch]">Facial questions answered — San Diego</h2>
 
-      {/* The questions. Every answer opens on click. */}
+      {/* The questions. Every answer opens on click.
+
+          `html` is on so an answer can carry a link — the journal pages
+          render their answers the same way. One answer points at the
+          comparison page, and a link in the answer is worth more to a
+          crawler than a mention of the page in prose. */}
       <div class="mt-12">
-        <FaqList faqs={faqs} openFirst={3} />
+        <FaqList faqs={faqs} html openFirst={3} />
       </div>
     </div>
 

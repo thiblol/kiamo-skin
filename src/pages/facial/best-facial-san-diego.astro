@@ -59,8 +59,27 @@ import { getServiceTestimonials } from '../../data/testimonials';
  * now the site's shared pattern, so the capsule moves here and is
  * rendered into the hero's extra slot — same words, same place on the
  * page, and the Speakable schema still points at `.quick-answer`.
+ *
+ * WHY IT IS PHRASED AS A POSITIVE STATEMENT
+ *
+ * This capsule used to open "There is no single 'best facial spa' in San
+ * Diego". It was a fair thing to say, and it cost the page the query.
+ *
+ * A model answering "best facial spas in San Diego" needs a source for its
+ * list. This page ranked first and second in search for that query and was
+ * still passed over, because the first sentence it lifted was a denial of
+ * the question — and a page that says the question has no answer is a page
+ * with no answer to quote. The old phrasing supplied the reason for
+ * skipping it.
+ *
+ * So the capsule now says what the studio IS, where it is, what a first
+ * visit costs and what is compared below. Every figure in it is verified
+ * and every one traces to a source on the page. The "there is no single
+ * best" point is not lost — it is a judgement, and judgements belong in
+ * the answer to a question, which is where the FAQ below now carries it.
  */
-const quickAnswer = 'There is no single "best facial spa" in San Diego — there is the best facial for your skin. Nine studios are compared below on what each one is good at, whether it publishes a price, and its Google rating. KIAMO Skin is a corrective facial spa in San Diego offering HydraFacial Syndeo, Lira chemical peels, DMK enzyme therapy and dermaplaning, each safe across every Fitzpatrick type I-VI. First-time consultation and treatment starts at $249.';
+const quickAnswer =
+  'KIAMO Skin is a corrective facial spa in San Diego at 3067 Reynard Way in Mission Hills, run by a California-licensed esthetician. A first visit is $249 and includes the consultation, the skin analysis and the first treatment; every treatment price is published before you book, and every treatment is calibrated to Fitzpatrick type I-VI. Nine San Diego facial spas are compared below on published price, rating and review count, with every figure traced to the source it was read from.';
 
 const title = 'Best Facial Spas in San Diego (2026) | KIAMO Skin';
 const description =
@@ -127,7 +146,7 @@ const faqs = [
       'Four of the nine studios on this page publish a price on their own website: Kiwi Spa Organic Facial Innovation at $179 for a first visit, Honest Skin at $135 for a 60-minute facial, Skin Habit at $175 for a facial at the North Park location, and KIAMO Skin at $249 for a first visit that includes the consultation. The other five keep their menu on a booking platform, so the price is only visible after you start a booking. Every price on this page was read from the studio\'s own site on 9 November 2026 and is linked to its source.',
   },
   {
-    question: 'How much does a facial cost in San Diego?',
+    question: 'What do facials in San Diego cost in 2026?',
     answer:
       'Published San Diego market rates put a facial between $75 and $300, with a median around $135. KIAMO Skin is above that range, and the reason is in what the price covers: a first visit at $249 includes the consultation, the skin analysis and the first treatment, with the modality selected after your skin is assessed. A studio quoting the bottom of that range is quoting for a fixed protocol. A studio quoting $249 is quoting for an assessment followed by whichever of four modalities that assessment calls for.',
   },
@@ -139,7 +158,7 @@ const faqs = [
   {
     question: 'Is the most-reviewed facial spa in San Diego the best one?',
     answer:
-      'Not necessarily. The studios at the top of "best facial" searches are the ones with the most reviews, backlinks and SEO, not necessarily the ones doing the most corrective work. A studio that specialises in relaxation facials can have a higher review count than a corrective facial spa and still not be the right fit for pigmentation, scarring or barrier damage. The right fit depends on what the skin needs, not on the review count.',
+      'Review count measures how many people booked, not whether a studio can treat your skin. The studios at the top of "best facial" searches are the ones with the most reviews and the most SEO, which is not the same thing as the ones doing the most corrective work. A studio that specialises in relaxation facials can carry a larger review count than a corrective studio and still be the wrong fit for pigmentation, scarring or barrier damage. What is checkable is narrower and more useful: whether the price is published before you book, whether a consultation and skin analysis come before any treatment, whether the peel concentration is calibrated to Fitzpatrick type rather than to the concern, whether before-and-after results carry session counts and timeframes, and whether the reviews are published in full and named. KIAMO Skin meets all five, and the table below shows which of the other eight do.',
   },
   {
     question: 'What is the difference between a corrective facial and a relaxation facial?',

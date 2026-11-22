@@ -56,11 +56,6 @@ export const testimonials: Testimonial[] = [
     platform: 'Google',
   },
   {
-    quote: 'The best facial in San Diego. Very attentive to what your skin needs and leaves you glowy.',
-    attribution: 'Leona',
-    platform: 'Google',
-  },
-  {
     quote: 'I\'ve been going to KIAMO Skin for over a year and can\'t recommend it enough. Real, visible results.',
     attribution: 'Brian A.',
     platform: 'Google',
@@ -68,11 +63,6 @@ export const testimonials: Testimonial[] = [
   {
     quote: 'I feel like I\'ve been aging backwards since going to KIAMO Skin. My skin is so glowy and smooth.',
     attribution: 'Morg A.',
-    platform: 'Google',
-  },
-  {
-    quote: 'Genuinely one of the best facials I\'ve ever had. Kiki is super friendly and the results speak for themselves.',
-    attribution: 'Alyssa M.',
     platform: 'Google',
   },
   {

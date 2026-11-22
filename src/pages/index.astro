@@ -17,7 +17,7 @@ import FaqLocation from '../components/sections/FaqLocation.astro';
 import { faqs as homepageFaqs } from '../data/faqs';
 import { reviewStats } from '../data/review-stats';
 import PersonSchema from '../components/schema/PersonSchema.astro';
-import SpeakableSchema from '../components/schema/SpeakableSchema.astro';
+import WebPageSchema from '../components/schema/WebPageSchema.astro';
 
 /**
  * The homepage, on the reference rhythm.
@@ -57,31 +57,33 @@ const homepagePublished = '2025-01-01';
 const homepageModified = '2026-10-03';
 
 const homepageUrl = Astro.site ? new URL('/', Astro.site).href : 'https://kiamoskin.com/';
-const websiteId = Astro.site ? new URL('/#website', Astro.site).href : 'https://kiamoskin.com/#website';
 
-const webPageSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  '@id': new URL('/#webpage', Astro.site).href,
-  url: homepageUrl,
-  name: 'Facial & Scalp Spa in San Diego | KIAMO Skin',
-  description:
-    `Licensed esthetician in San Diego. Facials, pigmentation, acne, and scalp therapy — safe for every skin type. ${reviewStats.count} five-star Google reviews. Request an appointment.`,
-  isPartOf: { '@id': websiteId },
-  inLanguage: 'en-US',
-  datePublished: homepagePublished,
-  dateModified: homepageModified,
-};
+/**
+ * The title and the description, in one place.
+ *
+ * They are declared once because the page title, the Open Graph title, the
+ * Twitter title and the WebPage node's `name` must all say the same thing —
+ * and because a title written twice is a title that drifts.
+ *
+ * The title carries the contiguous phrase "Facial Spa in San Diego", which
+ * the old one ("Facial & Scalp Spa in San Diego") split. It leads with
+ * "Corrective" because that is what the studio does and it addresses every
+ * skin type and every concern rather than one segment.
+ */
+const title = 'Corrective Facial Spa in San Diego | KIAMO Skin';
+const description = `Corrective facial spa in San Diego. First visit $249 includes the consultation. Pigmentation, acne and scalp therapy. ${reviewStats.count} five-star Google reviews.`;
 ---
 
-<BaseLayout
-  title="Facial & Scalp Spa in San Diego | KIAMO Skin"
-  description={`Licensed esthetician in San Diego. Corrective facials for pigmentation, acne and scalp therapy. ${reviewStats.count} five-star Google reviews. Request an appointment.`}
-  headerTheme="dark"
->
+<BaseLayout title={title} description={description} headerTheme="dark" siteInventory>
   <PersonSchema slot="head" />
-  <SpeakableSchema slot="head" url={homepageUrl} />
-  <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(webPageSchema)} />
+  <WebPageSchema
+    slot="head"
+    url="/"
+    name={title}
+    description={description}
+    datePublished={homepagePublished}
+    dateModified={homepageModified}
+  />
 
   <Hero />
 

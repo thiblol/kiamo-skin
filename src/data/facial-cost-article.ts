@@ -251,7 +251,11 @@ export const facialCostArticle: Article = {
   ],
   faqs: [
     {
-      question: 'How much does a facial cost in San Diego?',
+      // Year-qualified, so it does not share a string with the homepage's
+      // "How much does a facial cost in San Diego?" — the no-reuse rule in
+      // T11 holds across every question on the site. This page's headline
+      // already carries the year, and the question now matches it.
+      question: 'How much does a facial cost in San Diego in 2026?',
       answer:
         'Between <span data-fact-source="market-facial-rates" data-fact="price" data-fact-value="$75">$75</span> and <span data-fact-source="market-facial-rates" data-fact="price" data-fact-value="$300">$300</span>, with a median around <span data-fact-source="market-facial-rates-finder" data-fact="price" data-fact-value="$135">$135</span>. KIAMO Skin charges $249 for a first visit including consultation, skin analysis and the first treatment. Three other studios in San Diego publish a price: Kiwi Spa at <span data-fact-source="kiwi-spa" data-fact="price" data-fact-value="$179">$179</span>, Honest Skin at <span data-fact-source="honest-skin" data-fact="price" data-fact-value="$135">$135</span> for a 60-minute facial, and Skin Habit at <span data-fact-source="skin-habit" data-fact="price" data-fact-value="$175">$175</span>.',
     },

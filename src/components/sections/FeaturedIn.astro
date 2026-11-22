@@ -1,0 +1,107 @@
+---
+import { Image } from 'astro:assets';
+import { pressPlacements } from '../../data/press';
+
+/**
+ * FeaturedIn
+ * ----------
+ * The publications that have written about the studio.
+ *
+ * WHY IT EXISTS
+ *   A studio saying it is the best facial spa in San Diego is a claim. A
+ *   publication saying so is evidence, and evidence is what a reader — or a
+ *   model weighing the two — actually weighs.
+ *
+ * WHY IT CARRIES NO HEADING
+ *   The homepage's rule is that every heading holds one topic and carries
+ *   something a reader could quote — a price, a place, a claim, a review.
+ *   "Featured in" is a label for a row of logos, not a topic, so it is a
+ *   label rather than a heading. The section it sits in already has the
+ *   heading, and this band is part of it: what other people say about the
+ *   studio, whether they are clients or an outlet.
+ *
+ * WHY IT RENDERS NOTHING WHEN THE LIST IS EMPTY
+ *   The list is the point. A band with placeholder logos, greyed-out slots
+ *   or a "coming soon" line looks like a site asserting coverage it does
+ *   not have, which is worse than saying nothing. So the component renders
+ *   nothing until there is a real placement to show, and the data file
+ *   holds one entry per real article.
+ *
+ * WHY THE ALT TEXT DOES NOT CARRY KEYWORDS
+ *   The image is a publication's logo. Naming the publication and the studio
+ *   describes what the image is. Stamping it with "facial spa in San Diego"
+ *   would describe something the image does not show, and the alt attribute
+ *   is read by a screen reader first and a crawler second.
+ */
+---
+
+{
+  pressPlacements.length > 0 && (
+    <div class="press-band" aria-label="Press coverage">
+      <p class="t-eyebrow text-center text-ink-soft">Featured in</p>
+      <ul class="press-list">
+        {pressPlacements.map((placement) => (
+          <li class="press-item">
+            <a
+              href={placement.url}
+              target="_blank"
+              rel="noopener"
+              class="press-link"
+              title={`${placement.outlet} — ${placement.publishedLabel}`}
+            >
+              <Image
+                src={placement.logo}
+                alt={placement.alt}
+                widths={[542]}
+                sizes="(min-width: 640px) 271px, 200px"
+                loading="lazy"
+                class="press-logo"
+              />
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )
+}
+
+<style>
+  .press-band {
+    border-top: 1px solid var(--color-line);
+    margin-top: 3.5rem;
+    padding-top: 2.5rem;
+  }
+
+  .press-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    list-style: none;
+    margin: 1.75rem 0 0;
+    padding: 0;
+  }
+
+  .press-item {
+    display: flex;
+    align-items: center;
+  }
+
+  .press-link {
+    display: block;
+    opacity: 0.75;
+    transition: opacity 200ms ease;
+  }
+
+  .press-link:hover,
+  .press-link:focus-visible {
+    opacity: 1;
+  }
+
+  .press-logo {
+    height: auto;
+    width: auto;
+    max-height: 3rem;
+  }
+</style>
