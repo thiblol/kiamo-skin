@@ -99,6 +99,38 @@ export interface Service {
    */
   pricing?: { label: string; price: string; description?: string }[];
   /**
+   * The published San Diego market rate for this modality, and where this
+   * studio's own price sits against it.
+   *
+   * WHY A SERVICE PAGE NEEDS THIS
+   *   A price on its own is a transaction. A price placed against the
+   *   published rate for the same treatment in the same city is a fact, and
+   *   facts are what an answer engine cites.
+   *
+   *   The modality pages carried their own price and nothing else, so a
+   *   query like "hydrafacial cost in San Diego" had no answer on the page
+   *   that ranks for it — the market range was on a journal article under a
+   *   different heading, and the two never appeared in the same place.
+   *
+   *   The figures come from `market-facial-rates` in
+   *   src/data/third-party-facts.ts, which is the same directory figure the
+   *   price article quotes, so a reader who checks one finds the other
+   *   consistent. The rate is a range and this studio's price is a single
+   *   figure, which is the comparison a reader is actually making.
+   */
+  marketRate?: {
+    /** The modality as the source names it. */
+    label: string;
+    /** The low end of the published range. */
+    low: string;
+    /** The high end of the published range. */
+    high: string;
+    /** What the range covers — "per treatment", "per session". */
+    unit: string;
+    /** One sentence on where this studio's price sits in that range. */
+    position: string;
+  };
+  /**
    * The price the homepage menu shows for this service.
    *
    * Declared rather than inferred, because the menu cannot read the price off
@@ -305,8 +337,15 @@ export const services: Service[] = [
         price: verifiedPrices.hydrafacial,
         description:
           'A customized HydraFacial that deeply cleanses, exfoliates, extracts, and hydrates to support healthy skin and maintain your treatment results.',
-      },
-    ],
+      },    ],
+    marketRate: {
+      label: 'HydraFacial',
+      low: '$150',
+      high: '$350',
+      unit: 'per treatment',
+      position:
+        'A treatment here is $259, and a first visit is $249 with the consultation and skin analysis included.',
+    },
     note: 'San Diego\'s municipal water supply contains 280-320 parts per million (ppm) of dissolved minerals—primarily calcium and magnesium—making it among the hardest in California. These minerals bond with sebum (skin oil) and skincare products, forming calcium carbonate deposits that clog pores and create a residue standard cleansing cannot remove. For clients living two miles from the Pacific Ocean, this means dual exposure: hard water minerals indoors and salt spray plus coastal humidity outdoors. The HydraFacial Syndeo\'s patented Vortex-Fusion Technology extracts these mineral deposits directly from follicles using controlled spiral suction at 30-70 mmHg pressure—addressing what at-home cleansing misses. This is follicle-level extraction calibrated to San Diego\'s specific water and climate conditions.',
     membershipNote:
       'The HydraFacial is the treatment included in every membership tier, from $199 a month against $259 booked one visit at a time. Glow tier includes one HydraFacial monthly plus 10% off all products. Lux tier includes one HydraFacial monthly, one additional treatment annually, and 15% off products. Opulence tier includes one HydraFacial monthly, two additional treatments annually, and 20% off products. Membership clients book first and are never waitlisted.',
@@ -373,6 +412,14 @@ export const services: Service[] = [
       { label: 'LIRA Gentle Renewal Peel', price: verifiedPrices['lira-light-peel'] },
       { label: 'LIRA Advanced Peel', price: verifiedPrices['lira-advanced-peel'] },
     ],
+    marketRate: {
+      label: 'Chemical peel',
+      low: '$150',
+      high: '$800',
+      unit: 'per session',
+      position:
+        'The Gentle Renewal Peel here is $199, and the Advanced Peel, which is the one used for pigmentation and scarring, is $299.',
+    },
     note: 'Peel strength is matched to your skin at consultation. The Gentle Renewal Peel refreshes and maintains; the Advanced Peel goes deeper for pigmentation and scarring. Pigmentation is treated as a series — most plans run every 4 to 6 weeks — with home care between visits. There is no single-session version of this.',
     membershipNote:
       'Because pigmentation is only ever treated as a series, a monthly membership is usually the cheaper way to run one.',
@@ -459,6 +506,14 @@ export const services: Service[] = [
           'Recommended for acne scarring, moderate to significant PIH, and textural concerns. Sessions spaced 4–6 weeks apart. The three-session series costs less than three single sessions. Growth factor serums and LED therapy included at each session.',
       },
     ],
+    marketRate: {
+      label: 'Microneedling',
+      low: '$250',
+      high: '$700',
+      unit: 'per session',
+      position:
+        'A single Procell microchanneling session here is $475, and the three-session series used for scarring is $1,199.',
+    },
     note: 'RF microneedling devices combine needle penetration with radiofrequency heat energy delivered through the tip. In lighter skin tones, the thermal effect stimulates collagen remodeling without significant risk. In melanin-rich skin — Fitzpatrick Type IV (olive to light brown), Type V (brown), and Type VI (deep brown to dark brown) — that heat activates melanocytes near the treatment zone, which can trigger post-inflammatory hyperpigmentation as a response to thermal trauma. Procell microchanneling creates mechanical channels without any thermal component. The inflammatory trigger is controlled and predictable. Combined with protocols designed for melanin-rich skin and growth factor serums that direct repair, the treatment corrects existing pigmentation without creating new dark marks. This is not a compromised version of microneedling. It is the correct selection for the patient population KIAMO Skin serves.',
     melaninNote:
       'Microchanneling works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger. Procell uses mechanical channels only with no thermal component, making it significantly lower-risk for Fitzpatrick Types IV, V, and VI.',

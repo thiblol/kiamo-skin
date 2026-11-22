@@ -33,25 +33,38 @@ import consultation from '../assets/corrective-skin-treatment-consultation-missi
 export const facialCostArticle: Article = {
   slug: 'how-much-does-a-facial-cost-san-diego',
   headline: 'How much does a facial cost in San Diego in 2026?',
-  title: 'Facial Cost in San Diego (2026): Real Prices | KIAMO Skin',
+  title: 'How Much Does a Facial Cost in San Diego? | KIAMO Skin',
   description:
-    'What a facial costs in San Diego: what each published price covers, and why a KIAMO Skin first visit is $249 including the consultation.',
+    'A facial in San Diego costs $75-$300, median $135. What each published price covers, and the nine studios compared on what a first visit includes.',
   standfirst:
     'The published San Diego market rate for a facial spans a wide range. The gap between the two ends of it is not quality. It is what the price includes. First-time clients here start at $249.',
   readingTime: '9 min read',
   datePublished: '2026-11-09',
-  dateModified: '2026-11-09',
+  dateModified: '2026-11-22',
   image: consultation,
   imageAlt:
     'Licensed esthetician conducting a skin consultation with a client in the San Diego treatment room',
   faqHeading: 'Facial cost questions',
+  /**
+   * The liftable capsule.
+   *
+   * Every other article on the site has one and this page did not, which
+   * meant the Speakable specification on it pointed at a `.quick-answer`
+   * element that was not there — the selector resolved to half a target on
+   * the one page an answer engine was citing most.
+   *
+   * It says the market range and the studio's position in two sentences,
+   * because that is the shape of the answer this query wants. The
+   * comparison page is linked from the first paragraph of the body below,
+   * where a reader who has just been told what a facial costs can see
+   * which studio to book — the price question and the choice question are
+   * adjacent, and the answer to one should carry the other.
+   */
+  quickAnswer:
+    'A facial in San Diego costs between $75 and $300, with a median around $135, and the difference between the two ends is not quality — it is what the price includes. KIAMO Skin charges $249 for a first visit, which covers the consultation, the skin analysis and the treatment, with the modality chosen after your skin is assessed.',
   body: [
     {
-      answer:
-        'A facial in San Diego costs between $75 and $300, with a median around $135. KIAMO Skin charges $249 for a first visit, which includes the consultation, the skin analysis and the first treatment, with the modality chosen after your skin is assessed.',
-    },
-    {
-      p: 'That $135 median is worth pausing on, because it is the number most often quoted for a facial in this city and it is accurate — and it describes a different service from the one most studios at that price sell.',
+      p: 'That $135 median is worth pausing on, because it is the number most often quoted for a facial in this city and it is accurate — and it describes a different service from the one most studios at that price sell. To see how the nine studios that come up for a facial in San Diego compare on published price, rating and what a first visit includes, they are set side by side in <a href="/facial/best-facial-san-diego/">the San Diego facial spa comparison</a>.',
     },
     {
       h2: 'What the published market rates actually say',
@@ -69,12 +82,12 @@ export const facialCostArticle: Article = {
       h2: 'What each price actually buys',
     },
     {
-      p: 'This is the part the range hides. Four studios in San Diego publish a facial price on their own website. Here is what each one covers.',
+      p: 'This is the part the range hides. Four of the nine studios that come up for a facial in San Diego publish a facial price on their own website; the other five publish none. Here is all nine, and what each one charges.',
     },
     {
       table: {
         caption:
-          'Published San Diego facial prices, read from each studio\'s own website on 9 November 2026. Every figure links to where it was read.',
+          'What nine San Diego facial spas publish, read from each studio\'s own website on 9 November 2026. Every price figure links to where it was read. Ratings and review counts are on the full comparison.',
         head: ['Studio', 'Area', 'Published price', 'What it covers'],
         rows: [
           [
@@ -113,11 +126,41 @@ export const facialCostArticle: Article = {
               fact: 'note',
             },
           ],
+          [
+            'Skyn Alchemy',
+            'North Park',
+            'Not published',
+            'HydraFacial-led skincare with a Black Diamond provider credential. The menu sits on the booking platform.',
+          ],
+          [
+            'Vasseur Skin Clinic & Spa',
+            'Downtown',
+            'Not published',
+            'A boutique-spa atmosphere with HydraFacial, acne and anti-ageing services. The menu sits on the booking platform.',
+          ],
+          [
+            'Spa Kingston',
+            'Bankers Hill',
+            'Not published',
+            'A full day spa rather than a facial clinic — aromatherapy, massage and facials. The menu sits on the booking platform.',
+          ],
+          [
+            'Peel Simply Skin',
+            'North Park',
+            'Not published',
+            'Corrective facials, chemical peels and dermaplaning, plus microcurrent and LED. The closest peer to this studio in what it does. The menu sits on the booking platform.',
+          ],
+          [
+            'Rose + Honey Skincare',
+            'Solana Beach',
+            'Not published',
+            'Corrective skincare with a strong local profile. The menu sits on the booking platform.',
+          ],
         ],
       },
     },
     {
-      p: 'Five other studios in this market publish no price at all — their menus sit on a booking platform, so there is no figure to quote without starting a booking. That is not a criticism of them. It is simply why the comparison below can be checked: every number in it links to the studio that published it.',
+      p: 'The five rows that say "not published" are not a criticism of those studios. It is simply why the comparison below can be checked: every number in it links to the studio that published it, and a figure you can trace is worth more than one you cannot.',
     },
     {
       h2: 'Why a first visit here is $249',
@@ -204,10 +247,41 @@ export const facialCostArticle: Article = {
       p: 'Second, the consultation. It is included in the $249 first visit here, which is unusual in this market. At most studios the consultation is either billed separately or folded invisibly into a treatment you are not sure you need. Including it means the number you are quoted is the number you pay, and the assessment happens whether or not you go ahead with a treatment.',
     },
     {
-      h2: 'How to compare two quotes',
+      h2: 'How to choose a facial spa in San Diego',
     },
     {
-      p: 'If you have two prices in front of you — one from this studio and one from somewhere else — these are the questions that make them comparable.',
+      p: 'Price is the last thing to compare, not the first, because the cheapest figure in this market buys the least. These are the checks that narrow a shortlist down — the first three are regulatory and take about two minutes each, and they are the ones that rule a studio out before any of the softer questions matter.',
+    },
+    {
+      h3: 'Check that it is a facial spa and not a medical spa',
+    },
+    {
+      p: 'This is the distinction that comes first, and it is a legal one rather than a marketing one. In California, injectables, lasers, resurfacing and other medical procedures have to be performed by a physician, or by a registered nurse or physician assistant under physician supervision — a licensed esthetician cannot perform them at all. A studio offering facials, peels, enzyme therapy and scalp work is a facial spa. A studio offering injectables or laser alongside them is a medical practice, and the credentials of whoever performs each treatment are not the same question.',
+    },
+    {
+      p: 'The California Medical Board publishes guidance on this for consumers, and it makes the point that a medical procedure should never be sold as routine beauty work. If a studio does both, ask who performs which part and under whose supervision. The board’s own <a href="https://www.mbc.ca.gov/Resources/Medical-Resources/medical-spas.aspx" rel="noopener" target="_blank">consumer guide to medical spas</a> covers what it is asking for.',
+    },
+    {
+      p: 'KIAMO Skin is a facial spa and nothing else. There are no lasers, no prescriptions and no injectables here, and anything outside an esthetician’s scope is referred on. That is a narrower offer than a medical spa, and for pigmentation, scarring and barrier damage it is the right one — none of those conditions need a prescription.',
+    },
+    {
+      h3: 'Check the license',
+    },
+    {
+      p: 'Every esthetician in California is licensed by the California Board of Barbering and Cosmetology, and the board runs a public <a href="https://www.barbercosmo.ca.gov/forms_pubs/publications/faqs" rel="noopener" target="_blank">licence search and a set of consumer FAQs</a> that explain what an esthetician is and is not permitted to do. A studio that names its esthetician and points you at the board’s search has nothing to hide. A studio that will not say who is treating you is telling you something too.',
+    },
+    {
+      ul: [
+        'Is the person doing the treatment a California-licensed esthetician, and can you verify it on the Board of Barbering and Cosmetology licence search?',
+        'If the studio also offers lasers, injectables or resurfacing, is there a physician supervising, and are those treatments performed by someone qualified to do them?',
+        'Has the establishment itself been licensed and inspected, or is only the individual practitioner licensed?',
+      ],
+    },
+    {
+      h3: 'Then compare what the price actually covers',
+    },
+    {
+      p: 'Once two studios have both cleared the regulatory check, you are comparing two prices in front of you — one from this studio and one from somewhere else — and these are the questions that make them comparable.',
     },
     {
       ul: [
@@ -220,6 +294,9 @@ export const facialCostArticle: Article = {
     },
     {
       p: 'The last one is the giveaway. A studio that publishes its prices is telling you what it charges before you spend any time with them. A studio that does not is asking you to commit before you can compare.',
+    },
+    {
+      p: 'Two more that separate a corrective studio from a relaxation one, and that no price figure tells you: whether the before-and-after results are published with the number of sessions and the timeframe each one took, and whether the reviews are published in full, named and dated rather than curated one-liners. Both are checkable before you book, and both are on the <a href="/facial/best-facial-san-diego/">nine-studio comparison</a> so you can see which studios do them.',
     },
     {
       h2: 'Where the market rate comes from',
@@ -303,6 +380,16 @@ export const facialCostArticle: Article = {
       question: 'Why is KIAMO Skin above the market rate?',
       answer:
         'Because the price covers a consultation and a skin analysis as well as the treatment, and because the treatment is selected from that assessment rather than run from a fixed menu. The rate is published, the modalities are listed with their own prices, and there is no contract and no upsell at the end of the appointment.',
+    },
+    {
+      question: 'Which facial spa in San Diego should I choose?',
+      answer:
+        'Start by checking four things, each of which you can verify before you book rather than after. First, that the studio is a facial spa and not a medical spa — injectables, lasers and resurfacing have to be performed under physician supervision in California, and a studio offering both should tell you who does which part. Second, that the esthetician’s licence is verifiable with the California Board of Barbering and Cosmetology. Third, that the price is published and says what it covers, because a studio that will not tell you what it charges before you start a booking is asking you to commit before you can compare. Fourth, that the before-and-after results carry the number of sessions and the timeframe each one took, and that the reviews are published in full, named and dated. The nine studios that come up for a facial in San Diego are compared on those four points, with every figure dated and sourced, so you can apply them yourself rather than take a list on trust.',
+    },
+    {
+      question: 'How do I know a facial spa is any good?',
+      answer:
+        'The evidence is in what the studio publishes, not in the rating alone. A review count measures how many people booked; it does not measure whether the studio can treat your skin. What does measure it is whether there is a consultation and skin analysis before any treatment, whether the peel concentration is calibrated to your Fitzpatrick type rather than to a fixed protocol, whether before-and-after results are published with session counts and timeframes, whether the reviews are published in full and named, and whether the price is published before you book. A studio that does all five is telling you exactly what it will do and exactly what it will charge. This studio does all five, and the comparison page shows which of the other eight do.',
     },
   ],
   cta: { label: 'Compare San Diego facial spas', href: '/facial/best-facial-san-diego/' },

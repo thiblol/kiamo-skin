@@ -66,6 +66,21 @@ interface Props {
   /** The pricing table. */
   pricing?: { label: string; price: string; description?: string }[];
   /**
+   * The published San Diego market rate for this modality, and where this
+   * studio's price sits against it.
+   *
+   * A price on its own is a transaction. A price placed against the
+   * published rate for the same treatment in the same city is a fact, and
+   * facts are what an answer engine cites.
+   */
+  marketRate?: {
+    label: string;
+    low: string;
+    high: string;
+    unit: string;
+    position: string;
+  };
+  /**
    * The plan's components, for a concern page.
    *
    * A concern page — melasma, hyperpigmentation — has no single price,
@@ -147,6 +162,7 @@ const {
   concerns,
   steps,
   pricing,
+  marketRate,
   planMembers,
   authority,
   uniqueness,
@@ -449,7 +465,52 @@ const bandHeading =
             Every price below is published before you book. Nothing is quoted at the door, and the
             first visit includes the consultation that decides the plan.
           </p>
-          {/* The review date.
+          {/* The market rate.
+              A price on its own is a transaction. The same price placed
+              against the published rate for the same treatment in the same
+              city is a fact, and a fact is what an answer engine cites.
+
+              The range is a third-party figure, so it carries the same
+              attribution the guard suite checks everywhere else: the source
+              it was read from, and the date it was read. A reader who clicks
+              through lands on the directory the figure came from rather than
+              on a claim this site made about itself. */}
+          {marketRate && (
+            <div class="mt-8 border-t border-line pt-8">
+              <p class="t-service text-[1rem]">
+                {marketRate.label} cost in San Diego
+              </p>
+              <p class="t-body mt-3 text-[0.9375rem] leading-relaxed">
+                Published market rates put {marketRate.label.toLowerCase()} in San Diego at{' '}
+                <span
+                  data-fact-source="market-facial-rates"
+                  data-fact="price"
+                  data-fact-value={marketRate.low}
+                >
+                  {marketRate.low}
+                </span>
+                –<span
+                  data-fact-source="market-facial-rates"
+                  data-fact="price"
+                  data-fact-value={marketRate.high}
+                >
+                  {marketRate.high}
+                </span>{' '}
+                {marketRate.unit}. {marketRate.position}
+              </p>
+              <p class="t-meta mt-4 text-ink-soft">
+                Market rates published by No BS Med Spa Reviews, read 9 November 2026.{' '}
+                <a
+                  href="https://www.nobsmedspareviews.com/treatment/facials-in-san-diego"
+                  rel="noopener"
+                  target="_blank"
+                  class="border-b border-ink/40 transition-colors hover:border-rose hover:text-rose"
+                >
+                  See the source
+                </a>
+              </p>
+            </div>
+          )}          {/* The review date.
               A published price is only worth something if somebody checked it.
               This is the date the prices, the protocols and the city detail on
               this page were last reviewed — the same date the page carries in
