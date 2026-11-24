@@ -3,7 +3,7 @@
  * /service-areas/{area}/ — the area hub.
  *
  * "Facials in Carlsbad". The parent of every service page for that city,
- * and the page that answers "do you serve my area, and what do you do for
+ * and the page that answers "does KIAMO Skin serve my area, and what do a client does for
  * the skin people here actually have".
  *
  * It is a separate top-level section from /services/. A reader who knows
@@ -31,11 +31,12 @@ import { AREA_CLUSTER, CONTENT_REVISED } from '../../../data/page-dates';
 import AreaServiceSchema from '../../../components/schema/AreaServiceSchema.astro';
 import { areaShells } from '../../../data/area-shells';
 import { services } from '../../../data/services';
+import { areaFaqs } from '../../../data/area-faqs';
 import {
   serviceAreas,
   getServiceAreasForArea,
 } from '../../../data/service-areas-index';
-import { areaPath, areaServicePath, servicePath } from '../../../config/urls';
+import { areaPath, areaServicePath, servicePath, areaPlaceLabel, areaMapPlace } from '../../../config/urls';
 import { business, verifiedPrices } from "../../../config/business";
 import { CTA_LABEL } from '../../../config/nav';
 
@@ -73,29 +74,27 @@ const nearby = areaShells
   .map((s) => ({ shell: s, rows: getServiceAreasForArea(s.slug).length }))
   .filter((s) => s.rows > 0);
 
-const faqs = [
-  {
-    question: `How far is KIAMO Skin from ${shell.name}?`,
-    answer: `${shell.proximity}. ${shell.gettingHere}`,
-  },
-  {
-    question: `What treatments are available for ${shell.name} clients?`,
-    answer: `Every treatment on the menu is available to ${shell.name} clients — HydraFacial, chemical peels, dermaplaning, microneedling, enzyme therapy and scalp therapy. What changes with the distance is the plan: a corrective series is scheduled as a block at the first appointment, so the drive works with the course rather than against it.`,
-  },
-  {
-    question: `What skin concerns do ${shell.name} clients bring?`,
-    answer: shell.localConcern.body,
-  },
-  {
-    question: 'Is there parking at the studio?',
-    answer: `Yes. Free parking is on site, so you do not need to find street parking or pay for a garage. The studio is by appointment only, which means a space is always available when you arrive.`,
-  },
-  {
-    question: 'Do I need to be a regular client to get results?',
-    answer:
-      'Corrective work is planned across a series, and the plan is mapped at the first appointment — the number of sessions, the intervals and the total timeline. Most clients who travel from out of town stay on a monthly schedule, because a consistent routine is what makes the cumulative work pay off.',
-  },
-];
+/**
+ * The area's questions.
+ *
+ * These come from `data/area-faqs.ts` rather than from a template, because
+ * a question a client from La Jolla actually asks is not the same question a
+ * client from Chula Vista asks, and eight identical questions on ten pages is
+ * the duplication the whole cluster was measured for. Each area carries five
+ * questions written for the area it belongs to, and every answer names
+ * KIAMO Skin and says what the studio specifically does.
+ */
+const faqs = areaFaqs[shell.slug] ?? [];
+/**
+ * The place label: "La Jolla, San Diego, CA".
+ *
+ * The area pages used to name the neighbourhood and sometimes the city, and
+ * never the state. A reader types the postal form, so the label carries all
+ * three parts — and the city the studio is in overrides the default, because
+ * "San Diego, San Diego, CA" is not a place.
+ */
+const placeLabel = shell.placeLabel ?? areaPlaceLabel(shell.slug, shell.name);
+
 /**
  * The title and description.
  *
@@ -104,17 +103,14 @@ const faqs = [
  * description at 155 characters, and a template that quotes the proximity
  * string blows straight through it.
  *
- * The description carries a call to action, which is what earns the click.
- * The CTA is chosen by how much room the area name leaves: the longer names
- * get the shorter CTA, so every area lands between 142 and 147 characters
- * instead of some running past the cap and others running short of the
- * snippet.
+ * The description opens with the brand and carries a call to action, which
+ * is what earns the click. The CTA is chosen by how much room the place
+ * label leaves: the longer labels get the shorter CTA, so every area lands
+ * inside the cap instead of some running past it and others running short of
+ * the snippet.
  */
-const title = `Facials in ${shell.name}, San Diego | KIAMO Skin`;
-const description =
-  shell.name.length <= 9
-    ? `Corrective facials for ${shell.name} clients in San Diego. HydraFacial, peels, dermaplaning, microneedling and scalp therapy. From $199. Request a visit.`
-    : `Corrective facials for ${shell.name} clients in San Diego. HydraFacial, peels, dermaplaning and scalp therapy. From $199. Request an appointment.`;
+const title = `Facials in ${placeLabel} | KIAMO Skin`;
+const description = `KIAMO Skin. Corrective facials in ${placeLabel}. HydraFacial, peels, dermaplaning and scalp therapy. From $199. Request a visit.`;
 ---
 
 <BaseLayout
@@ -146,18 +142,19 @@ const description =
         actually deciding about — is in the first screen rather than a
         section further down. */}
     <PageHero
-      eyebrow={`San Diego County · ${shell.name}`}
+      eyebrow={placeLabel}
       h1="Corrective facials"
-      h1Accent={`in ${shell.name}`}
+      h1Accent={`in ${placeLabel}`}
+      h1Width="24ch"
       claim={shell.localConcern.body.split('. ')[0] + '.'}
-      paragraph={`${shell.proximity}. Free parking on site, by appointment only, and a corrective plan mapped before you book.`}
+      paragraph={`${shell.proximity}. Free parking on site, by appointment only, and a corrective plan mapped before a booking is made.`}
       image={areaImages[shell.slug]}
       imageAlt={areaImageAlts[shell.slug]}
       price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
       trust={[
         { label: 'Free parking on site' },
         { label: 'Kiki performs every treatment' },
-        { label: 'Prices published before you book' },
+        { label: 'Prices published before a booking is made' },
         { label: 'Safe for every Fitzpatrick type, I–VI' },
       ]}
       reassurance={[
@@ -183,19 +180,54 @@ const description =
             <p class="t-body mt-6 leading-relaxed">{shell.allAbout.body}</p>
             <p class="t-body mt-5 leading-relaxed text-ink-soft">{shell.proximity}. Free parking on site, by appointment only.</p>
           </Reveal>
+
+          {/* The landmarks. They are the real nouns of the neighbourhood —
+              the cove, the university, the village street — and they are
+              what makes the page read as being about a place rather than
+              about a treatment with a place stapled to it. */}
+          <Reveal>
+            <p class="t-eyebrow mt-10 text-ink-soft">
+              {shell.isStudioCity ? `Landmarks across ${shell.name}` : `Landmarks in ${shell.name}`}
+            </p>
+            <ul class="t-body m-0 mt-4 list-none space-y-2 p-0">
+              {shell.landmarks.slice(0, 8).map((landmark) => (
+                <li class="flex gap-4">
+                  <span aria-hidden="true" class="text-rose">
+                    —
+                  </span>
+                  <span>{landmark}</span>
+                </li>
+              ))}
+            </ul>
+          </Reveal>
         </div>
-        <Reveal>
-          <dl class="m-0 space-y-4">
-            {
-              shell.allAbout.facts.map((fact) => (
-                <div class="border-b border-line pb-4 last:border-0">
-                  <dt class="t-meta text-ink-soft">{fact.label}</dt>
-                  <dd class="t-body m-0 mt-1 text-[0.9375rem]">{fact.value}</dd>
-                </div>
-              ))
-            }
-          </dl>
-        </Reveal>
+        <div>
+          <Reveal>
+            <dl class="m-0 space-y-4">
+              {
+                shell.allAbout.facts.map((fact) => (
+                  <div class="border-b border-line pb-4 last:border-0">
+                    <dt class="t-meta text-ink-soft">{fact.label}</dt>
+                    <dd class="t-body m-0 mt-1 text-[0.9375rem]">{fact.value}</dd>
+                  </div>
+                ))
+              }
+            </dl>
+          </Reveal>
+          {/* The area's own map. It used to sit in a "Getting to {area}"
+              section beside a paragraph of turn-by-turn directions — a
+              section whose heading named the reader's city while its text
+              described the route to Mission Hills and its map showed the
+              studio. Three destinations in one section. The map now sits
+              with the place it maps, and the route is a link in the NAP
+              block and the footer rather than a paragraph repeated on
+              every page. */}
+          <Reveal>
+            <div class="mt-10">
+              <LocationMap place={areaMapPlace(shell.slug, placeLabel)} id="route-map" />
+            </div>
+          </Reveal>
+        </div>
       </div>
     </section>
 
@@ -208,8 +240,8 @@ const description =
           <h2 class="t-h2 mt-4 max-w-[24ch]">Treatments available in {shell.name}</h2>
           <p class="t-body mt-6 max-w-[62ch] leading-relaxed">
             Every treatment below is performed by Kiki, a California licensed esthetician, in one
-            private treatment room. Which one is right depends on your skin tone, your concern, and
-            the condition of your barrier — and that is what the first consultation establishes.
+            private treatment room. Which one is right depends on the skin tone, the concern, and
+            the condition of the barrier — and that is what the first consultation establishes.
           </p>
         </Reveal>
 
@@ -242,39 +274,27 @@ const description =
       </div>
     </section>
 
-    {/* Getting here — the drive is the thing a reader from this city is
-        actually deciding about. */}
-    <section class="bg-ivory py-20 md:py-28">
-      <div class="wrap grid items-center gap-12 md:grid-cols-[1fr_0.9fr] md:gap-16">
-        <div>
-          <Reveal>
-            <p class="t-eyebrow text-ink-soft">Getting here</p>
-            <h2 class="t-h2 mt-4">Getting to {shell.name}</h2>
-            <p class="t-body mt-6 leading-relaxed">{shell.gettingHere}</p>
-            <p class="t-body mt-5 leading-relaxed text-ink-soft">{shell.proximity}</p>
-            <ul class="t-body mt-7 m-0 list-none space-y-3 p-0">
-              {shell.landmarks.slice(0, 6).map((landmark) => (
-                <li class="flex gap-4">
-                  <span aria-hidden="true" class="text-rose">—</span>
-                  <span>{landmark}</span>
-                </li>
-              ))}
-            </ul>
-          </Reveal>
-        </div>
-        <Reveal>
-          <LocationMap origin={shell.name} id="route-map" />
-        </Reveal>
-      </div>
-    </section>
+    {/* The route prose is gone from here too. It lived in a "Getting to
+        {area}" section whose heading named the reader's own city while the
+        text beneath it described the drive to Mission Hills — and whose map
+        showed the studio. The map and the landmarks moved up into "The
+        place", where they describe the same place the copy does, and the
+        distance stays as one line of fact. The route itself is a
+        "Get directions" link in the NAP block and the footer, which is
+        where a reader who wants it will look, and which is one click
+        instead of seventy-one words repeated on every page. */}
 
     {/* The other cities — the lateral edge that makes the cluster a graph. */}
     {nearby.length > 0 && (
       <section class="bg-porcelain py-16 md:py-20">
         <div class="wrap section-y">
           <Reveal>
-            <p class="t-eyebrow text-ink-soft">Nearby</p>
-            <h2 class="t-h2 mt-4 max-w-[24ch]">Other cities we serve</h2>
+            <p class="t-eyebrow text-ink-soft">
+              {shell.slug === 'san-diego' ? 'Across the city' : 'Nearby'}
+            </p>
+            <h2 class="t-h2 mt-4 max-w-[24ch]">
+              {shell.slug === 'san-diego' ? 'Neighbourhoods we serve' : 'Other cities we serve'}
+            </h2>
           </Reveal>
           <ul class="m-0 mt-10 grid list-none gap-x-10 gap-y-0 p-0 md:grid-cols-2 lg:grid-cols-3">
             {nearby.map(({ shell: other }) => (
@@ -314,7 +334,7 @@ const description =
         <div class="max-w-[68ch]">
           <Reveal>
             <p class="t-eyebrow text-ink-soft">Common questions</p>
-            <h2 class="t-h2 mt-5">Before you travel</h2>
+            <h2 class="t-h2 mt-5">Before a client travels</h2>
           </Reveal>
           <div class="mt-12">
             {/* The first two answer in full on the page — how far it is, and
@@ -335,7 +355,7 @@ const description =
     {/* The request. An area hub ranks for a cost question, so it needs the
         price and the button as well as the list of treatments. */}
     <RequestBand
-      heading={`Start in ${shell.name} — with a price before you book.`}
+      heading={`Start in ${shell.name} — with a price before a booking is made.`}
       eventLabel="area_hub_band"
     />
 

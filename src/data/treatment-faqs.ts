@@ -18,318 +18,258 @@ export const treatmentFaqs: Record<string, Faq[]> = {
   facial: [
     {
       question: 'What is the best facial treatment in San Diego for my skin type?',
-      answer:
-        'There is no single best facial — the right one depends on your skin tone (Fitzpatrick I-VI), primary concern, and schedule. At KIAMO Skin, Kiki matches the modality to the skin on the day: HydraFacial Syndeo with AI skin analysis for maintenance and glow, Lira chemical peels at Fitzpatrick-calibrated concentrations for pigmentation and texture, DMK enzyme therapy for barrier repair, and dermaplaning for surface refinement. First-time clients start at $249 for consultation and treatment, which includes a skin analysis and recommendation.',
+      answer: 'There is no single best facial — the right one depends on the skin tone (Fitzpatrick I-VI), primary concern, and schedule. At KIAMO Skin, Kiki matches the modality to the skin on the day: HydraFacial Syndeo with AI skin analysis for maintenance and glow, Lira chemical peels at Fitzpatrick-calibrated concentrations for pigmentation and texture, DMK enzyme therapy for barrier repair, and dermaplaning for surface refinement. First-time clients start at $249 for consultation and treatment, which includes a skin analysis and recommendation.',
     },
     {
       question: 'How much does a facial cost in San Diego at KIAMO Skin?',
-      answer:
-        'Pricing depends on modality. Dermaplaning facials start at $199. Lira Chemical Peels range from $199-$299. DMK Enzyme Therapy starts at $279. HydraFacial is $259. First-time clients start at $249 for consultation and treatment. Monthly memberships from $199/month include one facial plus discounts on additional treatments. There are no hidden fees — pricing is published and confirmed at booking.',
+      answer: 'Pricing depends on modality. Dermaplaning facials start at $199. Lira Chemical Peels range from $199-$299. DMK Enzyme Therapy starts at $279. HydraFacial is $259. First-time clients start at $249 for consultation and treatment. Monthly memberships from $199/month include one facial plus discounts on additional treatments. There are no hidden fees — pricing is published and confirmed at booking. At KIAMO Skin every price is published before a booking is made — dermaplaning at $199, and the first visit with the consultation and skin analysis is $249.',
     },
     {
       question: 'How long does a facial take, and how often should I get one?',
-      answer:
-        'Sessions at KIAMO Skin run 45-75 minutes depending on modality. HydraFacial Syndeo takes 45 minutes. Dermaplaning takes 45 minutes. DMK Enzyme Therapy takes 60-75 minutes. Lira Chemical Peels take 45-60 minutes. Most clients book monthly for maintenance; every 4-6 weeks is the typical cadence. For corrective plans addressing pigmentation or barrier damage, Kiki may recommend a series of treatments spaced 4-6 weeks apart.',
+      answer: 'Sessions at KIAMO Skin run 45-75 minutes depending on modality. HydraFacial Syndeo takes 45 minutes. Dermaplaning takes 45 minutes. DMK Enzyme Therapy takes 60-75 minutes. Lira Chemical Peels take 45-60 minutes. Most clients book monthly for maintenance; every 4-6 weeks is the typical cadence. For corrective plans addressing pigmentation or barrier damage, Kiki may recommend a series of treatments spaced 4-6 weeks apart.',
     },
     {
       question: 'Is facial treatment safe for darker skin tones (Fitzpatrick IV-VI)?',
-      answer:
-        'Yes, when protocols are calibrated to the skin. Standard chemical peels and aggressive exfoliation can trigger post-inflammatory hyperpigmentation in melanin-rich skin if applied at concentrations designed for lighter skin tones. KIAMO Skin uses treatments calibrated to every Fitzpatrick type I-VI, with special attention to preventing complications in darker skin. Kiki has 7+ years of experience treating the full spectrum of skin tones.',
+      answer: 'Yes, when protocols are calibrated to the skin. Standard chemical peels and aggressive exfoliation can trigger post-inflammatory hyperpigmentation in melanin-rich skin if applied at concentrations designed for lighter skin tones. KIAMO Skin uses treatments calibrated to every Fitzpatrick type I-VI, with special attention to preventing complications in darker skin. Kiki has 7+ years of experience treating the full spectrum of skin tones.',
     },
     {
       question: 'What is the difference between HydraFacial, a chemical peel, and dermaplaning?',
-      answer:
-        'HydraFacial Syndeo is a 45-minute medical-grade facial that cleanses, exfoliates, extracts, and hydrates in one session — gentlest of the three, zero downtime, safe for every skin tone. Lira Chemical Peels use calibrated acids (lactic, mandelic, TCA) to address pigmentation, texture, and tone — visible peeling for 3-5 days after treatment. Dermaplaning is physical exfoliation that removes the surface layer of dead skin and vellus hair — immediate smoothness, no downtime. Kiki recommends the modality that fits your concern, not a generic menu.',
+      answer: 'HydraFacial Syndeo is a 45-minute medical-grade facial that cleanses, exfoliates, extracts, and hydrates in one session — gentlest of the three, zero downtime, safe for every skin tone. Lira Chemical Peels use calibrated acids (lactic, mandelic, TCA) to address pigmentation, texture, and tone — visible peeling for 3-5 days after treatment. Dermaplaning is physical exfoliation that removes the surface layer of dead skin and vellus hair — immediate smoothness, no downtime. Kiki recommends the modality that fits the concern, not a generic menu. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Can I get a facial if I have sensitive skin or rosacea?',
-      answer:
-        'Yes, with the right modality. DMK Enzyme Therapy is the gentlest corrective option for sensitive, reactive, or barrier-compromised skin — it rebuilds barrier function rather than stripping the skin. HydraFacial Syndeo also works for sensitive skin because the AI analysis calibrates pressure and serum selection. Kiki assesses your skin on the day and adjusts the treatment to avoid irritation.',
+      answer: 'Yes, with the right modality. DMK Enzyme Therapy is the gentlest corrective option for sensitive, reactive, or barrier-compromised skin — it rebuilds barrier function rather than stripping the skin. HydraFacial Syndeo also works for sensitive skin because the AI analysis calibrates pressure and serum selection. Kiki assesses the skin on the day and adjusts the treatment to avoid irritation. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'What should I avoid after a facial in San Diego?',
-      answer:
-        'Avoid direct sun exposure for 24-48 hours after a chemical peel or DMK Enzyme Therapy — wear broad-spectrum SPF 50+ on top of any treatment-applied SPF. Avoid retinoids, vitamin A derivatives, and strong exfoliants for 3-5 days after a peel. Avoid heat exposure (saunas, hot yoga, prolonged cooking) for 48 hours after melasma-focused treatments. HydraFacial Syndeo has no downtime — you can return to normal activity immediately.',
+      answer: 'Avoid direct sun exposure for 24-48 hours after a chemical peel or DMK Enzyme Therapy — wear broad-spectrum SPF 50+ on top of any treatment-applied SPF. Avoid retinoids, vitamin A derivatives, and strong exfoliants for 3-5 days after a peel. Avoid heat exposure (saunas, hot yoga, prolonged cooking) for 48 hours after melasma-focused treatments. HydraFacial Syndeo has no downtime — a client can return to normal activity immediately. KIAMO Skin adjusts the plan at the consultation rather than pushing through a treatment the assessment has already ruled out.',
     },
     {
       question: 'Where is KIAMO Skin located for facials near me?',
-      answer:
-        'KIAMO Skin is at 3067 Reynard Way in San Diego. The studio is minutes from Hillcrest and Bankers Hill via Washington Street, 10 minutes from Downtown San Diego, North Park, and Point Loma, and reachable from every San Diego neighborhood via I-5, I-8, or Highway 163. Free parking is on site. By appointment only.',
+      answer: 'KIAMO Skin is at 3067 Reynard Way in San Diego. The studio is minutes from Hillcrest and Bankers Hill via Washington Street, 10 minutes from Downtown San Diego, North Park, and Point Loma, and reachable from every San Diego neighborhood via I-5, I-8, or Highway 163. Free parking is on site. By appointment only.',
     },
   ],
   'corrective-skin-treatments': [
     {
       question: 'What are corrective skin treatments?',
-      answer:
-        'Professional treatments selected to address a specific concern — pigmentation, acne, uneven texture, congestion, dehydration, or barrier health. The difference from a routine facial is not that one is better, but that the objective is different: a facial refreshes, a corrective plan targets. Which one a given skin needs is decided by assessment, not by the menu.',
+      answer: 'Professional treatments selected to address a specific concern — pigmentation, acne, uneven texture, congestion, dehydration, or barrier health. The difference from a routine facial is not that one is better, but that the objective is different: a facial refreshes, a corrective plan targets. Which one a given skin needs is decided by assessment, not by the menu. KIAMO Skin performs every treatment in one private treatment room with one practitioner, and publishes the price and the protocol so the difference can be checked rather than taken on trust.',
     },
     {
       question: 'Should I start with a facial, a peel, or microchanneling?',
-      answer:
-        'Start with the barrier, not the treatment. If the skin is reactive or compromised — over-exfoliated, recently sunburnt, or stripped by treatment done elsewhere — DMK enzyme therapy comes first, because microchanneling on a compromised barrier produces unpredictable results, and a peel on an unstable one can trigger the darkening it was meant to clear. Once the barrier is stable, the choice follows the concern: a facial for maintenance, a peel for pigment and texture, microchanneling for scarring. The order is set at consultation and changes as the skin responds.',
+      answer: 'Start with the barrier, not the treatment. If the skin is reactive or compromised — over-exfoliated, recently sunburnt, or stripped by treatment done elsewhere — DMK enzyme therapy comes first, because microchanneling on a compromised barrier produces unpredictable results, and a peel on an unstable one can trigger the darkening it was meant to clear. Once the barrier is stable, the choice follows the concern: a facial for maintenance, a peel for pigment and texture, microchanneling for scarring. The order is set at consultation and changes as the skin responds. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Can corrective treatments be combined?',
-      answer:
-        'Different treatments may be incorporated into a broader strategy when appropriate. But treatments should not be combined simply because more procedures seem better. The sequence and frequency have to make sense for the individual skin and goals, and a corrective plan often means fewer treatments, spaced further apart, than a client expected.',
+      answer: 'Different treatments may be incorporated into a broader strategy when appropriate. But treatments should not be combined simply because more procedures seem better. The sequence and frequency have to make sense for the individual skin and goals, and a corrective plan often means fewer treatments, spaced further apart, than a client expected. KIAMO Skin decides at the consultation what can safely share an appointment, and says so plainly rather than selling a longer visit.',
     },
     {
       question: 'How do I know which corrective treatment I need?',
-      answer:
-        'Start by identifying your primary concern and the current condition of your skin, and an appropriate treatment follows from that. The consultation is where this happens, and it is worth having before booking a procedure — the most common reason a plan fails is that the first treatment was chosen before the assessment.',
+      answer: 'Start by identifying the client’s primary concern and the current condition of the skin, and an appropriate treatment follows from that. The consultation is where this happens, and it is worth having before booking a procedure — the most common reason a plan fails is that the first treatment was chosen before the assessment. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Are corrective skin treatments suitable for melanin-rich skin?',
-      answer:
-        'Yes, and the treatment selection has to take the characteristics and current condition of melanin-rich skin into account. Melanin-rich skin produces pigment more readily in response to trauma, heat, and inflammation, so an unremarkable treatment on lighter skin can cause post-inflammatory hyperpigmentation on deeper skin. Kiki brings training from exactly those cases, and protocols are selected to suit the tone in front of you.',
+      answer: 'Yes, and the treatment selection has to take the characteristics and current condition of melanin-rich skin into account. Melanin-rich skin produces pigment more readily in response to trauma, heat, and inflammation, so an unremarkable treatment on lighter skin can cause post-inflammatory hyperpigmentation on deeper skin. Kiki brings training from exactly those cases, and protocols are selected to suit the tone in front of the practitioner. KIAMO Skin runs every treatment on the tone in front of the practitioner, because heat and aggressive treatment are what deepen pigment on the skin that marks most easily.',
     },
     {
       question: 'How does a corrective plan compare with a regular facial?',
-      answer:
-        'A facial can be the right choice when the goal is relaxation, cleansing, hydration, or routine maintenance. A corrective plan is the right choice when the goal is a specific concern — pigmentation, acne, texture, or barrier health. Neither is universally better; the objective decides which one you need, and KIAMO Skin can help work out which that is before anything is booked.',
+      answer: 'A facial can be the right choice when the goal is relaxation, cleansing, hydration, or routine maintenance. A corrective plan is the right choice when the goal is a specific concern — pigmentation, acne, texture, or barrier health. Neither is universally better; the objective decides which one is needed, and KIAMO Skin can help work out which that is before anything is booked.',
     },
   ],
   'melasma-treatment': [
     {
       question: 'Can melasma be permanently cured?',
-      answer:
-        'No, and any studio that says otherwise is selling something. Melasma is driven by hormones and by UV exposure, both of which keep happening. What it can be is managed — faded significantly, held with daily SPF, and kept from returning as fast. That is a permanent working routine, not a one-time fix, and it is the honest version.',
+      answer: 'No, and any studio that says otherwise is selling something. Melasma is driven by hormones and by UV exposure, both of which keep happening. What it can be is managed — faded significantly, held with daily SPF, and kept from returning as fast. That is a permanent working routine, not a one-time fix, and it is the honest version. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'How many treatments does it take to see results?',
-      answer:
-        'Most clients see visible change after three to four sessions, with the full result across six to eight sessions spaced four to six weeks apart. Melasma is cumulative — the pigment lifts gradually rather than in one dramatic shift, which is exactly why the pacing matters. A treatment plan is set at consultation once the skin has been assessed.',
+      answer: 'Most clients see visible change after three to four sessions, with the full result across six to eight sessions spaced four to six weeks apart. Melasma is cumulative — the pigment lifts gradually rather than in one dramatic shift, which is exactly why the pacing matters. A treatment plan is set at consultation once the skin has been assessed. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'What melasma treatments are safe for melanin-rich skin?',
-      answer:
-        'Chemical peels selected for deeper skin tones, microchanneling — which works with no heat at all — and customized HydraFacials. The rule is that nothing is escalated until the barrier tolerates the last step. Aggressive treatments can trigger post-inflammatory hyperpigmentation in melanin-rich skin, leaving more dark marks than the ones that brought you in.',
+      answer: 'Chemical peels selected for deeper skin tones, microchanneling — which works with no heat at all — and customized HydraFacials. The rule is that nothing is escalated until the barrier tolerates the last step. Aggressive treatments can trigger post-inflammatory hyperpigmentation in melanin-rich skin, leaving more dark marks than the ones that brought the client in. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'How much does melasma treatment cost?',
-      answer:
-        'LIRA chemical peels run $199 to $299 per session. Procell microchanneling is $475 per session, or $1,199 for a series of three. A HydraFacial with a brightening booster is $259. Because melasma needs a series rather than a single session, many clients use the monthly facial membership at $199 to make staying consistent affordable.',
+      answer: 'LIRA chemical peels run $199 to $299 per session. Procell microchanneling is $475 per session, or $1,199 for a series of three. A HydraFacial with a brightening booster is $259. Because melasma needs a series rather than a single session, many clients use the monthly facial membership at $199 to make staying consistent affordable. At KIAMO Skin every price is published before a booking is made — dermaplaning at $199, and the first visit with the consultation and skin analysis is $249.',
     },
     {
-      question: 'Do you treat melasma on all skin tones?',
-      answer:
-        'Yes — Fitzpatrick I through VI. Melasma is most common in deeper skin tones, and treating it safely there requires training in exactly the cases where the margin for error is smallest. Kiki built that training treating pigmentation in Black and brown skin, where a wrong move can cause more damage than it repairs, and that training is what makes the treatment safe for every tone.',
+      question: 'Does KIAMO Skin treat melasma on all skin tones?',
+      answer: 'Yes — Fitzpatrick I through VI. Melasma is most common in deeper skin tones, and treating it safely there requires training in exactly the cases where the margin for error is smallest. Kiki built that training treating pigmentation in Black and brown skin, where a wrong move can cause more damage than it repairs, and that training is what makes the treatment safe for every tone. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Why is melasma harder to treat in San Diego?',
-      answer:
-        'Because the primary trigger never stops. San Diego has year-round sun exposure and high UV even on overcast mornings, when the marine layer is present. That is why strict daily sunscreen compliance — not just in summer — is the part of the plan that decides whether pigment stays faded or comes back.',
+      answer: 'Because the primary trigger never stops. San Diego has year-round sun exposure and high UV even on overcast mornings, when the marine layer is present. That is why strict daily sunscreen compliance — not just in summer — is the part of the plan that decides whether pigment stays faded or comes back. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Should I see an esthetician or a dermatologist for melasma?',
-      answer:
-        'For most people, both, at different stages. A dermatologist prescribes the topical medications that work at the cellular level. A licensed esthetician performs the in-office correction — peels, microchanneling, enzyme therapy — and builds the home routine and maintenance plan that decides whether melasma fades or returns. For stubborn melasma, the two together produce better results than either alone.',
+      answer: 'For most people, both, at different stages. A dermatologist prescribes the topical medications that work at the cellular level. A licensed esthetician performs the in-office correction — peels, microchanneling, enzyme therapy — and builds the home routine and maintenance plan that decides whether melasma fades or returns. For stubborn melasma, the two together produce better results than either alone. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'What home routine do I need after a treatment to hold the results?',
-      answer:
-        'Three parts. Broad-spectrum SPF with iron oxides every morning, because visible light is a trigger and iron oxides are the only filters that block it. A gentle cleanser and a barrier-supporting moisturiser, nothing that strips. And no retinoids or acids while the skin is recovering. Once the correction has landed, a prescription retinoid a few nights a week and a vitamin C or niacinamide serum each morning keep the turnover moving.',
+      answer: 'Three parts. Broad-spectrum SPF with iron oxides every morning, because visible light is a trigger and iron oxides are the only filters that block it. A gentle cleanser and a barrier-supporting moisturiser, nothing that strips. And no retinoids or acids while the skin is recovering. Once the correction has landed, a prescription retinoid a few nights a week and a vitamin C or niacinamide serum each morning keep the turnover moving. KIAMO Skin closes every appointment with the home-care routine for the days immediately after, so the recovery period is specified rather than left to guesswork.',
     },
     {
       question: 'Can pregnancy melasma be treated in San Diego?',
-      answer:
-        'It can, but timing matters. Chemical peels and microchanneling are usually deferred until after pregnancy and breastfeeding, because hormones are still fluctuating and melasma is more reactive then. A gentle routine with daily mineral SPF can start immediately to prevent it worsening. Consultations are available throughout, to assess the skin and build the plan for when treatment begins.',
+      answer: 'It can, but timing matters. Chemical peels and microchanneling are usually deferred until after pregnancy and breastfeeding, because hormones are still fluctuating and melasma is more reactive then. A gentle routine with daily mineral SPF can start immediately to prevent it worsening. Consultations are available throughout, to assess the skin and build the plan for when treatment begins. KIAMO Skin maps the whole course at the first appointment — the sessions, the intervals and the total timeline — so a dermaplaning at $199 series sits around recovery rather than around a calendar.',
     },
     {
       question: 'Where can I get melasma treatment in San Diego?',
-      answer:
-        'KIAMO Skin is at 3067 Reynard Way in San Diego, minutes from Hillcrest, Bankers Hill, and Little Italy, with free on-site parking. Clients travel from across the county — Chula Vista, La Jolla, Encinitas, Carlsbad, North Park, and La Mesa — because melasma on melanin-rich skin requires specialized training most estheticians do not have.',
+      answer: 'KIAMO Skin is at 3067 Reynard Way in San Diego, minutes from Hillcrest, Bankers Hill, and Little Italy, with free on-site parking. Clients travel from across the county — Chula Vista, La Jolla, Encinitas, Carlsbad, North Park, and La Mesa — because melasma on melanin-rich skin requires specialized training most estheticians do not have.',
     },
   ],
   hydrafacial: [
     {
       question: 'How much does a HydraFacial cost in San Diego?',
-      answer:
-        'A HydraFacial at KIAMO Skin is $259. If it is your first visit, the First-Time Client Treatment is $249 and includes a full consultation, skin analysis, a customized booster, microcurrent, LED light therapy, a Hydrojelly mask and a long-term treatment plan.',
+      answer: 'A HydraFacial at KIAMO Skin is $259. For a first visit, the First-Time Client Treatment is $249 and includes a full consultation, skin analysis, a customized booster, microcurrent, LED light therapy, a Hydrojelly mask and a long-term treatment plan.',
     },
     {
       question: 'Will a HydraFacial remove blackheads?',
-      answer:
-        'A HydraFacial removes blackheads using vortex extraction, which lifts oil and debris out of the pore with gentle suction instead of manual pressure. Congestion that has been building for a long time clears gradually rather than in one visit. Closed comedones and hardened blackheads do respond, but what keeps them from returning is the home routine you leave with, not the treatment on its own.',
+      answer: 'A HydraFacial removes blackheads using vortex extraction, which lifts oil and debris out of the pore with gentle suction instead of manual pressure. Congestion that has been building for a long time clears gradually rather than in one visit. Closed comedones and hardened blackheads do respond, but what keeps them from returning is the home routine left with at the end of the appointment, not the treatment on its own. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'What are the negatives of a HydraFacial?',
-      answer:
-        'The honest limitation of a HydraFacial is that it is a resurfacing and maintenance treatment, not a corrective one. It cleanses, extracts and hydrates, but it does not remodel scarring, resolve melasma or rebuild a damaged barrier — those need microchanneling, peels or enzyme therapy. Results also soften as skin turns over, which is why it works best inside a plan rather than as a one-off. Any treatment being sold as the answer to everything is being oversold.',
+      answer: 'The honest limitation of a HydraFacial is that it is a resurfacing and maintenance treatment, not a corrective one. It cleanses, extracts and hydrates, but it does not remodel scarring, resolve melasma or rebuild a damaged barrier — those need microchanneling, peels or enzyme therapy. Results also soften as skin turns over, which is why it works best inside a plan rather than as a one-off. Any treatment being sold as the answer to everything is being oversold. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
-      question: 'What should you avoid after a HydraFacial?',
-      answer:
-        'Avoid heat, sweat and direct sun for the rest of the day — no sauna, no hot yoga, no swimming pool. Skip retinoids, acids and physical exfoliants until the skin has settled, and wear SPF daily. Skin is far more absorbent straight after a HydraFacial, which is the point, but it also means anything active goes in harder than usual. Makeup can go back on, though bare skin for the evening is better.',
+      question: 'What should a client avoid after a HydraFacial?',
+      answer: 'Avoid heat, sweat and direct sun for the rest of the day — no sauna, no hot yoga, no swimming pool. Skip retinoids, acids and physical exfoliants until the skin has settled, and wear SPF daily. Skin is far more absorbent straight after a HydraFacial, which is the point, but it also means anything active goes in harder than usual. Makeup can go back on, though bare skin for the evening is better. KIAMO Skin adjusts the plan at the consultation rather than pushing through a treatment the assessment has already ruled out.',
     },
     {
       question: 'What is the best age to start HydraFacial treatments?',
-      answer:
-        'There is no best age for a HydraFacial — it suits congested, dull or dehydrated skin at almost any age. Teenagers with active breakouts and clients decades older book it for entirely different reasons, and both are appropriate. What changes with age is the booster selected and what the treatment is paired with, not whether the treatment is right for you. That is decided at the consultation.',
+      answer: 'There is no best age for a HydraFacial — it suits congested, dull or dehydrated skin at almost any age. Teenagers with active breakouts and clients decades older book it for entirely different reasons, and both are appropriate. What changes with age is the booster selected and what the treatment is paired with, not whether the treatment is right for the skin. That is decided at the consultation. KIAMO Skin works the phases in order — barrier, then congestion, then the marks — so the treatment does not leave behind the dark marks that outlast a breakout.',
     },
     {
       question: 'Is a HydraFacial worth it for hyperpigmentation?',
-      answer:
-        'A HydraFacial improves the appearance of hyperpigmentation by removing a layer of dead, pigmented surface cells and delivering brightening serums — but it is a maintenance treatment, not a corrective one. For melasma, deep post-inflammatory pigmentation, or marks that have not responded to at-home care, a HydraFacial with a brightening booster accelerates results between deeper corrective treatments like chemical peels and microchanneling. Used on its own, it is not the right treatment for stubborn pigmentation — but paired with a corrective plan, it keeps the skin receptive and compounds progress between sessions.',
+      answer: 'A HydraFacial improves the appearance of hyperpigmentation by removing a layer of dead, pigmented surface cells and delivering brightening serums — but it is a maintenance treatment, not a corrective one. For melasma, deep post-inflammatory pigmentation, or marks that have not responded to at-home care, a HydraFacial with a brightening booster accelerates results between deeper corrective treatments like chemical peels and microchanneling. Used on its own, it is not the right treatment for stubborn pigmentation — but paired with a corrective plan, it keeps the skin receptive and compounds progress between sessions. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
-      question: 'How often do you really need a facial?',
-      answer:
-        'Once a month is the baseline for most people, which roughly aligns with the skin\'s cell turnover cycle. That frequency suits active congestion, pigmentation maintenance, and most corrective plans. Drier or more resilient skin may do well every six to eight weeks; oily, congested, or actively breaking-out skin sometimes benefits from more frequent treatment in an early corrective phase. The honest answer is that consistency matters more than frequency — sporadic facials produce less than regular ones at any interval, and the home routine between visits carries as much weight as the in-office treatment.',
+      question: 'How often do a client really need a facial?',
+      answer: 'Once a month is the baseline for most people, which roughly aligns with the skin\'s cell turnover cycle. That frequency suits active congestion, pigmentation maintenance, and most corrective plans. Drier or more resilient skin may do well every six to eight weeks; oily, congested, or actively breaking-out skin sometimes benefits from more frequent treatment in an early corrective phase. The honest answer is that consistency matters more than frequency — sporadic facials produce less than regular ones at any interval, and the home routine between visits carries as much weight as the in-office treatment. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Who is the best HydraFacial provider in San Diego?',
-      answer:
-        'The best HydraFacial provider in San Diego depends on what your skin actually needs. KIAMO Skin uses the HydraFacial Syndeo platform — the clinical-tier device with AI-powered skin impedance analysis — not the consumer models HydraFacial franchises run. Every appointment is one-to-one with Kiki, a California licensed esthetician with 7+ years on melanin-rich skin, never a rotating staff. First-Time Client Treatment is $249; return visits are $259. Both include skin analysis, customized booster, microcurrent, LED light therapy, and a Hydrojelly mask.',
+      answer: 'The best HydraFacial provider in San Diego depends on what the skin actually needs. KIAMO Skin uses the HydraFacial Syndeo platform — the clinical-tier device with AI-powered skin impedance analysis — not the consumer models HydraFacial franchises run. Every appointment is one-to-one with Kiki, a California licensed esthetician with 7+ years on melanin-rich skin, never a rotating staff. First-Time Client Treatment is $249; return visits are $259. Both include skin analysis, customized booster, microcurrent, LED light therapy, and a Hydrojelly mask.',
     },
     {
       question: 'Why do my breakouts show up days after a facial rather than right away?',
-      answer:
-        'Timing that delayed is usually a purge rather than a reaction, and the two need different responses. A purge is extraction clearing congestion that was already there, so it surfaces a day or two later, follows the pattern of what was extracted, peaks within 48 to 72 hours and then clears. A reaction looks different: new redness, tenderness, or breakouts in areas that were not congested, with sensitivity that does not settle. If it is the second kind rather than the first, call (310) 595-0872 — the modality needs adjusting rather than repeating.',
+      answer: 'Timing that delayed is usually a purge rather than a reaction, and the two need different responses. A purge is extraction clearing congestion that was already there, so it surfaces a day or two later, follows the pattern of what was extracted, peaks within 48 to 72 hours and then clears. A reaction looks different: new redness, tenderness, or breakouts in areas that were not congested, with sensitivity that does not settle. If it is the second kind rather than the first, call (310) 595-0872 — the modality needs adjusting rather than repeating. KIAMO Skin works the phases in order — barrier, then congestion, then the marks — so the treatment does not leave behind the dark marks that outlast a breakout.',
     },
   ],
 
   'microneedling': [
     {
       question: 'How much does microchanneling cost in San Diego?',
-      answer:
-        'A single Procell microchanneling session at KIAMO Skin is $475. The three-treatment series, which is how scarring and texture are usually worked through, is $1,199 in total.',
+      answer: 'A single Procell microchanneling session at KIAMO Skin is $475. The three-treatment series, which is how scarring and texture are usually worked through, is $1,199 in total.',
     },
     {
       question: 'How is Procell microchanneling different from microneedling?',
-      answer:
-        'Procell microchanneling is not a traditional needle microneedling pen — it is a different modality, not a different brand. It creates controlled microchannels and delivers a growth factor serum through them in the same pass, so the device and the serum are designed to work as one system. The channels are what allow the serum to reach past the surface. It is chosen here for melanin-rich skin because treatment depth is adjusted region by region rather than set once for the whole face.',
+      answer: 'Procell microchanneling is not a traditional needle microneedling pen — it is a different modality, not a different brand. It creates controlled microchannels and delivers a growth factor serum through them in the same pass, so the device and the serum are designed to work as one system. The channels are what allow the serum to reach past the surface. It is chosen here for melanin-rich skin because treatment depth is adjusted region by region rather than set once for the whole face. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Is microneedling worth the money?',
-      answer:
-        'Microchanneling is worth the money for acne scarring, uneven texture and early loss of firmness. It is not worth it as a one-off glow treatment, because collagen remodeling is cumulative and a single session rarely does what a series of three does. Sessions are usually spaced four to six weeks apart, which is why the three-treatment series is priced together at $1,199. If what you actually want is hydration and a clean surface, a HydraFacial is the better spend.',
+      answer: 'Microchanneling is worth the money for acne scarring, uneven texture and early loss of firmness. It is not worth it as a one-off glow treatment, because collagen remodeling is cumulative and a single session rarely does what a series of three does. Sessions are usually spaced four to six weeks apart, which is why the three-treatment series is priced together at $1,199. For a client whose priority is hydration and a clean surface, a HydraFacial is the better spend. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Is 40 too old for microchanneling?',
-      answer:
-        'Forty is not too old for microchanneling. Collagen production slows with age but does not stop, and mature skin is one of the most common reasons the treatment is chosen at all. What matters far more than age is what the skin is currently doing — active or inflamed acne, certain acne medications and a compromised barrier are all reasons to wait or to treat something else first. That is assessed at consultation, not by a number.',
+      answer: 'Forty is not too old for microchanneling. Collagen production slows with age but does not stop, and mature skin is one of the most common reasons the treatment is chosen at all. What matters far more than age is what the skin is currently doing — active or inflamed acne, certain acne medications and a compromised barrier are all reasons to wait or to treat something else first. That is assessed at consultation, not by a number. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Why does skin look worse right after microchanneling?',
-      answer:
-        'Skin often looks worse before it looks better after microchanneling, and that is the healing response rather than damage. Expect redness similar to a mild sunburn for 24 to 48 hours, then mild dryness or flaking as the surface renews. Dehydrated, flaking skin shows texture and fine lines more clearly, which is why some people read that stage as looking older. Daily SPF through that window is not optional, particularly in melanin-rich skin, where sun on healing skin is what turns a good result into pigmentation.',
+      answer: 'Skin often looks worse before it looks better after microchanneling, and that is the healing response rather than damage. Expect redness similar to a mild sunburn for 24 to 48 hours, then mild dryness or flaking as the surface renews. Dehydrated, flaking skin shows texture and fine lines more clearly, which is why some people read that stage as looking older. Daily SPF through that window is not optional, particularly in melanin-rich skin, where sun on healing skin is what turns a good result into pigmentation. KIAMO Skin clears scalp buildup at the follicle rather than dissolving it, which is what makes the result last between visits.',
     },
     {
       question: 'Is microneedling safe for dark skin?',
-      answer:
-        'Procell microchanneling is safe for dark skin when the depth is adjusted region by region and the protocol is specific to melanin-rich skin. Darker skin tones produce melanin more readily in response to inflammation, which means overly aggressive treatment can trigger post-inflammatory hyperpigmentation — more dark marks rather than fewer. At KIAMO Skin, treatment depth on melanin-rich skin is not set uniformly across the face; it varies by region depending on skin thickness, tone, and the concern being treated. The growth factor serum delivered in the same pass supports healing and shortens the inflammatory window during which pigment can form.',
+      answer: 'Procell microchanneling is safe for dark skin when the depth is adjusted region by region and the protocol is specific to melanin-rich skin. Darker skin tones produce melanin more readily in response to inflammation, which means overly aggressive treatment can trigger post-inflammatory hyperpigmentation — more dark marks rather than fewer. At KIAMO Skin, treatment depth on melanin-rich skin is not set uniformly across the face; it varies by region depending on skin thickness, tone, and the concern being treated. The growth factor serum delivered in the same pass supports healing and shortens the inflammatory window during which pigment can form.',
     },
     {
       question: 'Is microneedling worth it for acne scars?',
-      answer:
-        'Procell microchanneling is worth it for acne scars when the acne itself is under control and the scarring is textural — rolling scars, depressions, or uneven surface texture. The treatment stimulates collagen remodeling over a series of sessions, which progressively fills and smooths the tissue below the scar. Active or inflamed acne is addressed before microchanneling begins because channeling into inflamed skin risks spreading bacteria and triggering additional damage. For flat post-inflammatory hyperpigmentation — the dark marks left after breakouts clear — a chemical peel series is typically the more efficient choice: microchanneling addresses structure, peels address pigment.',
+      answer: 'Procell microchanneling is worth it for acne scars when the acne itself is under control and the scarring is textural — rolling scars, depressions, or uneven surface texture. The treatment stimulates collagen remodeling over a series of sessions, which progressively fills and smooths the tissue below the scar. Active or inflamed acne is addressed before microchanneling begins because channeling into inflamed skin risks spreading bacteria and triggering additional damage. For flat post-inflammatory hyperpigmentation — the dark marks left after breakouts clear — a chemical peel series is typically the more efficient choice: microchanneling addresses structure, peels address pigment. KIAMO Skin works the phases in order — barrier, then congestion, then the marks — so the treatment does not leave behind the dark marks that outlast a breakout.',
     },
     {
       question: 'Does KIAMO Skin offer PRP microneedling?',
-      answer:
-        'No. Kiki uses Procell microchanneling with stem cytokine growth factor serums instead. Procell\'s serums are lab-grown growth factors delivered into the channels in the same pass — no blood draw, no donor variability, no extra appointment time, and published clinical research on pigment correction. PRP is a defensible choice at many providers; it is not the choice this studio made for melanin-rich skin.',
+      answer: 'No. Kiki uses Procell microchanneling with stem cytokine growth factor serums instead. Procell\'s serums are lab-grown growth factors delivered into the channels in the same pass — no blood draw, no donor variability, no extra appointment time, and published clinical research on pigment correction. PRP is a defensible choice at many providers; it is not the choice this studio made for melanin-rich skin. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
   ],
 
   'scalp-therapy': [
     {
       question: 'How much does a Keravive scalp treatment cost in San Diego?',
-      answer:
-        'A single Keravive scalp treatment at KIAMO Skin is $599. The series of three is $1,499 in total, which is the format most scalp concerns are treated in.',
+      answer: 'A single Keravive scalp treatment at KIAMO Skin is $599. The series of three is $1,499 in total, which is the format most scalp concerns are treated in.',
     },
     {
       question: 'Where can I get Keravive scalp treatment in San Diego?',
-      answer:
-        'KIAMO Skin offers Keravive scalp treatment at its San Diego studio, centrally located and easy to reach from Pacific Beach, La Jolla, Del Mar, Encinitas, Carlsbad, North Park, Hillcrest, and Mission Valley. The studio is fifteen minutes from Pacific Beach, twenty minutes from La Jolla, and thirty minutes from Encinitas. Parking is available near the studio.',
+      answer: 'KIAMO Skin offers Keravive scalp treatment at its San Diego studio, centrally located and easy to reach from Pacific Beach, La Jolla, Del Mar, Encinitas, Carlsbad, North Park, Hillcrest, and Mission Valley. The studio is fifteen minutes from Pacific Beach, twenty minutes from La Jolla, and thirty minutes from Encinitas. Parking is available near the studio.',
     },
     {
       question: 'How long does Keravive take if coming from Pacific Beach?',
-      answer:
-        'Keravive takes forty-five minutes for the treatment itself. If driving from Pacific Beach, the studio is fifteen minutes away, so plan for ninety minutes total including travel. Clients from La Jolla, Del Mar, and Encinitas typically block off two hours to account for the drive and treatment time.',
+      answer: 'Keravive takes forty-five minutes for the treatment itself. If driving from Pacific Beach, the studio is fifteen minutes away, so plan for ninety minutes total including travel. Clients from La Jolla, Del Mar, and Encinitas typically block off two hours to account for the drive and treatment time. KIAMO Skin is at 3067 Reynard Way in Mission Hills, with free parking on site, so the appointment ends at the door.',
     },
     {
       question: 'What is the best treatment for a flaking, itchy scalp?',
-      answer:
-        'The right treatment for a flaking, itchy scalp depends on whether the cause is buildup or a medical condition. Keravive treats buildup — oil, dead skin, product residue and hard water minerals — by cleansing, exfoliating and hydrating the scalp, then feeding it a concentrated peptide complex. San Diego water runs around sixteen grains per gallon, hard enough that mineral residue on the scalp is a routine finding here. If the flaking is scaly, patchy or painful rather than dry, that belongs with a dermatologist first.',
+      answer: 'The right treatment for a flaking, itchy scalp depends on whether the cause is buildup or a medical condition. Keravive treats buildup — oil, dead skin, product residue and hard water minerals — by cleansing, exfoliating and hydrating the scalp, then feeding it a concentrated peptide complex. San Diego water runs around sixteen grains per gallon, hard enough that mineral residue on the scalp is a routine finding here. If the flaking is scaly, patchy or painful rather than dry, that belongs with a dermatologist first. KIAMO Skin clears scalp buildup at the follicle rather than dissolving it, which is what makes the result last between visits.',
     },
     {
       question: 'Does ocean water affect Keravive results?',
-      answer:
-        'Ocean water does not reduce Keravive effectiveness, but salt spray and chlorine from pools can accelerate buildup between treatments. For Pacific Beach, La Jolla, and Del Mar residents who swim or surf regularly, the take-home peptide spray is especially important for maintaining results. The treatment itself removes ocean salt deposits along with hard water minerals and product buildup.',
+      answer: 'Ocean water does not reduce Keravive effectiveness, but salt spray and chlorine from pools can accelerate buildup between treatments. For Pacific Beach, La Jolla, and Del Mar residents who swim or surf regularly, the take-home peptide spray is especially important for maintaining results. The treatment itself removes ocean salt deposits along with hard water minerals and product buildup. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Is a scalp treatment worth it?',
-      answer:
-        'A scalp treatment is worth it when the scalp is genuinely congested, flaking or tight — it is not a cure for hair loss. Keravive treats the scalp as skin, which is the one area most people skip entirely while spending on everything above it. A healthier scalp is a better environment for hair to grow in, but no scalp treatment regrows hair that has stopped for medical or genetic reasons. That distinction is made at consultation, not after a series has been paid for.',
+      answer: 'A scalp treatment is worth it when the scalp is genuinely congested, flaking or tight — it is not a cure for hair loss. Keravive treats the scalp as skin, which is the one area most people skip entirely while spending on everything above it. A healthier scalp is a better environment for hair to grow in, but no scalp treatment regrows hair that has stopped for medical or genetic reasons. That distinction is made at consultation, not after a series has been paid for. KIAMO Skin clears scalp buildup at the follicle rather than dissolving it, which is what makes the result last between visits.',
     },
     {
       question: 'What is the best scalp treatment in San Diego?',
-      answer:
-        'Depends on intent. For relaxation, a Japanese or Korean head spa is the right answer. For clinical scalp care — buildup, hard water mineral deposits, flaking, post-ocean exposure — KIAMO Skin runs HydraFacial Keravive: clinical scalp therapy with Vortex-Fusion extraction and a take-home peptide spray. Corrective, not a relaxation ritual. A Keravive session is $599; a series of three is $1,499. San Diego’s 16-grains-per-gallon water hardness and year-round UV on the part line are what drive the most common scalp concerns at this studio, and Keravive is the clinical answer to both.',
+      answer: 'Depends on intent. For relaxation, a Japanese or Korean head spa is the right answer. For clinical scalp care — buildup, hard water mineral deposits, flaking, post-ocean exposure — KIAMO Skin runs HydraFacial Keravive: clinical scalp therapy with Vortex-Fusion extraction and a take-home peptide spray. Corrective, not a relaxation ritual. A Keravive session is $599; a series of three is $1,499. San Diego’s 16-grains-per-gallon water hardness and year-round UV on the part line are what drive the most common scalp concerns at this studio, and Keravive is the clinical answer to both.',
     },
     {
       question: 'What does a Japanese scalp treatment do?',
-      answer:
-        'A Japanese head spa is a water-based cleansing and massage ritual built around relaxation, lymphatic massage and a deep rinse. KIAMO Skin does not offer Japanese or Korean method scalp treatments. The difference is intent — a head spa is primarily an experience, while Keravive is a clinical protocol aimed at buildup, scalp health and the environment hair grows in, with a take-home peptide spray to continue between visits. Both feel good; only one is corrective.',
+      answer: 'A Japanese head spa is a water-based cleansing and massage ritual built around relaxation, lymphatic massage and a deep rinse. KIAMO Skin does not offer Japanese or Korean method scalp treatments. The difference is intent — a head spa is primarily an experience, while Keravive is a clinical protocol aimed at buildup, scalp health and the environment hair grows in, with a take-home peptide spray to continue between visits. Both feel good; only one is corrective.',
     },
     {
       question: 'What do dermatologists recommend for scalp problems?',
-      answer:
-        'Scalp problems split into two groups, and the right recommendation depends on which one you are in. Medicated shampoos and prescription treatments are the medical route for conditions such as seborrheic dermatitis or psoriasis, and those belong with a dermatologist. Buildup, hard water residue, product congestion and general scalp dryness are cosmetic, and that is what Keravive is built for. If a scalp has been treated cosmetically with no change at all, the next step is medical rather than another treatment.',
+      answer: 'Scalp problems split into two groups, and the right recommendation depends on which one the client is in. Medicated shampoos and prescription treatments are the medical route for conditions such as seborrheic dermatitis or psoriasis, and those belong with a dermatologist. Buildup, hard water residue, product congestion and general scalp dryness are cosmetic, and that is what Keravive is built for. If a scalp has been treated cosmetically with no change at all, the next step is medical rather than another treatment. KIAMO Skin clears scalp buildup at the follicle rather than dissolving it, which is what makes the result last between visits.',
     },
   ],
 
   'chemical-peel': [
     {
       question: 'What should I do before a chemical peel?',
-      answer:
-        'Stop retinoids and exfoliating acids a few days before the peel, and skip waxing, threading or laser on the area. Arrive without makeup where you can. Any prescription topical, recent sun exposure or new product is raised at the consultation, because those change which peel is appropriate, and the plan is adjusted rather than pushed through.',
+      answer: 'Stop retinoids and exfoliating acids a few days before the peel, and skip waxing, threading or laser on the area. Arrive without makeup where possible. Any prescription topical, recent sun exposure or new product is raised at the consultation, because those change which peel is appropriate, and the plan is adjusted rather than pushed through. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Are chemical peels safe for melanin-rich skin?',
-      answer:
-        'Chemical peels are safe on melanin-rich skin when the acid, the strength and the pacing are selected for it. Melanin-rich skin responds to trauma by producing more pigment, so an over-aggressive peel can create the exact hyperpigmentation it was meant to clear. Every peel here is patch-tested and started gently, with strength escalating across a series rather than inside a single visit. Facials for Black and brown skin are the specialism at KIAMO Skin, and that caution is the reason why.',
+      answer: 'Chemical peels are safe on melanin-rich skin when the acid, the strength and the pacing are selected for it. Melanin-rich skin responds to trauma by producing more pigment, so an over-aggressive peel can create the exact hyperpigmentation it was meant to clear. Every peel here is patch-tested and started gently, with strength escalating across a series rather than inside a single visit. Facials for Black and brown skin are the specialism at KIAMO Skin, and that caution is the reason why.',
     },
     {
       question: 'What is the best treatment for melasma?',
-      answer:
-        'Melasma is managed rather than cured, and what works is slow and layered: gentle professional peels, prescribed home care and absolute consistency with SPF. Aggressive resurfacing is the most common way melasma is made worse, especially in melanin-rich skin. Heat and light drive melasma as well as sun, so the plan covers what you do daily, not only what happens in the treatment room. Progress on melasma is rarely linear, and that is explained honestly before anything is applied.',
+      answer: 'Melasma is managed rather than cured, and what works is slow and layered: gentle professional peels, prescribed home care and absolute consistency with SPF. Aggressive resurfacing is the most common way melasma is made worse, especially in melanin-rich skin. Heat and light drive melasma as well as sun, so the plan covers what a client does daily, not only what happens in the treatment room. Progress on melasma is rarely linear, and that is explained honestly before anything is applied. KIAMO Skin is at 3067 Reynard Way in Mission Hills, with free parking on site, so the appointment ends at the door.',
     },
     {
       question: 'Can a chemical peel remove hyperpigmentation?',
-      answer:
-        'A chemical peel can fade post-inflammatory hyperpigmentation and sun damage, but it does not remove pigmentation permanently on its own. Peels lift pigmented surface cells and accelerate turnover; what stops the pigment returning is daily SPF and the home routine between visits. Marks left behind by acne also need the acne itself controlled first, or new marks simply replace the ones being cleared. Order of operations matters more than peel strength.',
+      answer: 'A chemical peel can fade post-inflammatory hyperpigmentation and sun damage, but it does not remove pigmentation permanently on its own. Peels lift pigmented surface cells and accelerate turnover; what stops the pigment returning is daily SPF and the home routine between visits. Marks left behind by acne also need the acne itself controlled first, or new marks simply replace the ones being cleared. Order of operations matters more than peel strength. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
-      question: 'Is one peel enough, or do you need a series?',
-      answer:
-        'One peel refreshes the skin; a series is what corrects pigmentation. There is no single-session version of pigmentation treatment, and anywhere promising one is overselling it. The Gentle Renewal Peel at $199 refreshes and maintains, while the Advanced Peel at $299 goes deeper for pigmentation and scarring, with strength escalating across the series as the skin tolerates it. The home care between visits is doing as much work as the peel itself.',
+      question: 'Is one peel enough, or do a client needs a series?',
+      answer: 'One peel refreshes the skin; a series is what corrects pigmentation. There is no single-session version of pigmentation treatment, and anywhere promising one is overselling it. The Gentle Renewal Peel at $199 refreshes and maintains, while the Advanced Peel at $299 goes deeper for pigmentation and scarring, with strength escalating across the series as the skin tolerates it. The home care between visits is doing as much work as the peel itself. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Who should not get a chemical peel?',
-      answer:
-        'Chemical peels are not appropriate for active or inflamed acne, broken skin, or anyone who has recently used isotretinoin (Accutane). Peels are also contraindicated during pregnancy, on skin that has recently had laser or ablative treatments, and on skin that is currently sensitised or barrier-compromised. On melanin-rich skin, certain peel ingredients — phenol in particular — are not used because of the heightened risk of post-inflammatory hyperpigmentation. Contraindications are reviewed at every consultation, not assumed to be unchanged from the first visit.',
+      answer: 'Chemical peels are not appropriate for active or inflamed acne, broken skin, or anyone who has recently used isotretinoin (Accutane). Peels are also contraindicated during pregnancy, on skin that has recently had laser or ablative treatments, and on skin that is currently sensitised or barrier-compromised. On melanin-rich skin, certain peel ingredients — phenol in particular — are not used because of the heightened risk of post-inflammatory hyperpigmentation. Contraindications are reviewed at every consultation, not assumed to be unchanged from the first visit. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'How long does hyperpigmentation last after a chemical peel?',
-      answer:
-        'Redness and surface flaking after a chemical peel typically peak within 48 to 72 hours and settle within one to two weeks as the skin renews. Hyperpigmentation that persists beyond that window — new dark marks that were not present before — indicates a post-inflammatory response, where the peel triggered additional melanin production rather than clearing it. That outcome is significantly less common when peels are started at lower strengths and escalated gradually across a series, which is the protocol at KIAMO Skin on all skin tones. Strict daily SPF through the healing period is not optional: sun exposure on recently peeled skin is the most direct route to PIH after a peel.',
+      answer: 'Redness and surface flaking after a chemical peel typically peak within 48 to 72 hours and settle within one to two weeks as the skin renews. Hyperpigmentation that persists beyond that window — new dark marks that were not present before — indicates a post-inflammatory response, where the peel triggered additional melanin production rather than clearing it. That outcome is significantly less common when peels are started at lower strengths and escalated gradually across a series, which is the protocol at KIAMO Skin on all skin tones. Strict daily SPF through the healing period is not optional: sun exposure on recently peeled skin is the most direct route to PIH after a peel.',
     },
     {
       question: 'What is the best chemical peel provider in San Diego?',
-      answer:
-        'Best depends on what you are treating and your Fitzpatrick type. KIAMO Skin uses Lira Clinical peels calibrated to the skin tone — Gentle Renewal from $199, Advanced $299 — applied by Kiki, a California licensed esthetician with 7+ years on melanin-rich skin. The work is paced as a series with home care between visits, never a single aggressive session. First-time clients start at $249 for consultation and treatment. Standard chain-spa peel protocols applied to deeper skin tones can trigger post-inflammatory hyperpigmentation — that is the difference between a peel that works and a peel that makes the marks worse.',
+      answer: 'Best depends on what a client is treating and the client’s Fitzpatrick type. KIAMO Skin uses Lira Clinical peels calibrated to the skin tone — Gentle Renewal from $199, Advanced $299 — applied by Kiki, a California licensed esthetician with 7+ years on melanin-rich skin. The work is paced as a series with home care between visits, never a single aggressive session. First-time clients start at $249 for consultation and treatment. Standard chain-spa peel protocols applied to deeper skin tones can trigger post-inflammatory hyperpigmentation — that is the difference between a peel that works and a peel that makes the marks worse.',
     },
     {
       question: 'My skin is burning and stinging after a peel. What do I do?',
-      answer:
-        'Stop adding to it. No retinoids, no acids and no exfoliants for five to seven days while the skin settles, and nothing that strips the barrier while it is still rebuilding. Keep it moisturised and keep it out of the sun — recently peeled skin is more reactive to UV and visible light than usual, and unprotected exposure is the most direct route to post-inflammatory hyperpigmentation after a peel. Redness and flaking peaking within 48 to 72 hours and settling within one to two weeks is the expected course. If the burning is still there after a couple of days instead of settling, call (310) 595-0872, because that is not expected and the protocol needs adjusting.',
+      answer: 'Stop adding to it. No retinoids, no acids and no exfoliants for five to seven days while the skin settles, and nothing that strips the barrier while it is still rebuilding. Keep it moisturised and keep it out of the sun — recently peeled skin is more reactive to UV and visible light than usual, and unprotected exposure is the most direct route to post-inflammatory hyperpigmentation after a peel. Redness and flaking peaking within 48 to 72 hours and settling within one to two weeks is the expected course. If the burning is still there after a couple of days instead of settling, call (310) 595-0872, because that is not expected and the protocol needs adjusting. KIAMO Skin clears scalp buildup at the follicle rather than dissolving it, which is what makes the result last between visits.',
     },
     {
       question: 'What does a good home routine look like between peels?',
-      answer:
-        'Two things carry the work between sessions. Broad-spectrum SPF 50+ with iron oxides, every morning regardless of weather, because iron oxides are the only filters that block the visible light which keeps triggering pigment. And a gentle routine — nothing that strips the barrier while it is still rebuilding, and no retinoids or acids for five to seven days after a peel. Between sessions there is room to support the result with tyrosinase inhibitors such as vitamin C, niacinamide and azelaic acid, which is where the two-to-four week preparation phase before a peel comes from. The home care between visits is doing as much work as the peel itself.',
+      answer: 'Two things carry the work between sessions. Broad-spectrum SPF 50+ with iron oxides, every morning regardless of weather, because iron oxides are the only filters that block the visible light which keeps triggering pigment. And a gentle routine — nothing that strips the barrier while it is still rebuilding, and no retinoids or acids for five to seven days after a peel. Between sessions there is room to support the result with tyrosinase inhibitors such as vitamin C, niacinamide and azelaic acid, which is where the two-to-four week preparation phase before a peel comes from. The home care between visits is doing as much work as the peel itself. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
   ],
 
@@ -340,152 +280,124 @@ export const treatmentFaqs: Record<string, Faq[]> = {
     },
     {
       question: 'Is dermaplaning legal in California?',
-      answer:
-        'Dermaplaning is legal in California and sits within the scope of practice for licensed estheticians and cosmetologists. The California Board of Barbering & Cosmetology confirmed this in an industry bulletin effective January 1, 2022, following Senate Bill 803. The Board draws the line at depth — dermaplaning exfoliates the epidermis and removes vellus hair without going beyond it, which keeps it inside esthetician scope. Every blade used at KIAMO Skin is sterile and single-use.',
+      answer: 'Dermaplaning is legal in California and sits within the scope of practice for licensed estheticians and cosmetologists. The California Board of Barbering & Cosmetology confirmed this in an industry bulletin effective January 1, 2022, following Senate Bill 803. The Board draws the line at depth — dermaplaning exfoliates the epidermis and removes vellus hair without going beyond it, which keeps it inside esthetician scope. Every blade used at KIAMO Skin is sterile and single-use.',
     },
     {
       question: 'What is the downside of dermaplaning?',
-      answer:
-        'The real downside of dermaplaning is that it cannot be performed over active or inflamed acne, and those areas are worked around rather than over. It also does nothing for pigmentation, scarring or barrier damage, because it is a surface treatment and the smoothness is temporary as dead cells rebuild. There is no downtime, but the skin is more exposed afterwards, so SPF matters more than usual. If the goal is correction rather than a clean surface, a peel or microchanneling is the honest recommendation.',
+      answer: 'The real downside of dermaplaning is that it cannot be performed over active or inflamed acne, and those areas are worked around rather than over. It also does nothing for pigmentation, scarring or barrier damage, because it is a surface treatment and the smoothness is temporary as dead cells rebuild. There is no downtime, but the skin is more exposed afterwards, so SPF matters more than usual. If the goal is correction rather than a clean surface, a peel or microchanneling is the honest recommendation. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Does dermaplaning make hair grow back stubbly?',
-      answer:
-        'Vellus hair does not grow back stubbly or thicker after dermaplaning. The blade cuts the hair at the surface and never touches the follicle, and the follicle is what determines thickness, colour and rate of growth. What does change is the cut end — a blunt tip can feel different under the fingertips than a tapered one, which is where the myth comes from. The hair returns exactly as it was.',
+      answer: 'Vellus hair does not grow back stubbly or thicker after dermaplaning. The blade cuts the hair at the surface and never touches the follicle, and the follicle is what determines thickness, colour and rate of growth. What does change is the cut end — a blunt tip can feel different under the fingertips than a tapered one, which is where the myth comes from. The hair returns exactly as it was. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Is it a problem to remove peach fuzz from the face?',
-      answer:
-        'Everyone has vellus hair on the face, and removing it is a cosmetic choice with no effect on how it grows back. There is no health reason to remove peach fuzz and no health reason to keep it. Most clients choose dermaplaning because makeup stops catching on the surface and skincare absorbs into skin instead of sitting on debris. If the hair itself is not the issue, the exfoliation is still reason enough.',
+      answer: 'Everyone has vellus hair on the face, and removing it is a cosmetic choice with no effect on how it grows back. There is no health reason to remove peach fuzz and no health reason to keep it. Most clients choose dermaplaning because makeup stops catching on the surface and skincare absorbs into skin instead of sitting on debris. If the hair itself is not the issue, the exfoliation is still reason enough. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Is dermaplaning safe for melanin-rich skin?',
-      answer:
-        'Dermaplaning is safe for melanin-rich skin when the blade technique is correct and the skin is not actively inflamed or broken out. The risk in darker skin tones is not the blade itself but what happens after — sun exposure on freshly exfoliated skin can trigger post-inflammatory hyperpigmentation (PIH), which is more common in melanin-rich skin. Daily mineral SPF with at least SPF 30 is required after dermaplaning on any skin tone, but on deeper skin tones it is the difference between a smooth surface and additional dark marks. Dermaplaning at KIAMO Skin is performed by a licensed esthetician trained on Black and brown skin, where the risk of PIH is highest.',
+      answer: 'Dermaplaning is safe for melanin-rich skin when the blade technique is correct and the skin is not actively inflamed or broken out. The risk in darker skin tones is not the blade itself but what happens after — sun exposure on freshly exfoliated skin can trigger post-inflammatory hyperpigmentation (PIH), which is more common in melanin-rich skin. Daily mineral SPF with at least SPF 30 is required after dermaplaning on any skin tone, but on deeper skin tones it is the difference between a smooth surface and additional dark marks. Dermaplaning at KIAMO Skin is performed by a licensed esthetician trained on Black and brown skin, where the risk of PIH is highest.',
     },
     {
-      question: 'How often should you get dermaplaning?',
-      answer:
-        'Every 4 to 6 weeks is the standard interval. Vellus hair regrowth is part of the natural cycle and not a reason to book sooner — booking more frequently can sensitize the barrier without changing the result. San Diego clients who dermaplane monthly for events typically space the treatments with a HydraFacial between for maintenance. The Dermaplane Facial at KIAMO Skin is $199.',
+      question: 'How often should a client gets dermaplaning?',
+      answer: 'Every 4 to 6 weeks is the standard interval. Vellus hair regrowth is part of the natural cycle and not a reason to book sooner — booking more frequently can sensitize the barrier without changing the result. San Diego clients who dermaplane monthly for events typically space the treatments with a HydraFacial between for maintenance. The Dermaplane Facial at KIAMO Skin is $199.',
     },
     {
       question: 'Who is the best dermaplaning provider in San Diego?',
-      answer:
-        'The safest dermaplaning in San Diego depends on blade technique and post-care, not the brand of the studio. KIAMO Skin performs dermaplaning in a private treatment room in San Diego by Kiki, a California licensed esthetician with 7+ years on the Fitzpatrick I–VI spectrum, sterile single-use blades, and the right pre/post routine for melanin-rich skin. The Dermaplane Facial is $199.',
+      answer: 'The safest dermaplaning in San Diego depends on blade technique and post-care, not the brand of the studio. KIAMO Skin performs dermaplaning in a private treatment room in San Diego by Kiki, a California licensed esthetician with 7+ years on the Fitzpatrick I–VI spectrum, sterile single-use blades, and the right pre/post routine for melanin-rich skin. The Dermaplane Facial is $199.',
     },
     {
-      question: 'What should you avoid after dermaplaning?',
-      answer:
-        'Direct sun exposure for 24 hours, retinoids and acids for 48 to 72 hours, and any active that stings — the freshly exfoliated surface is more permeable, which is the point of the treatment, but also why anything strong goes in harder than usual. Daily mineral SPF 50+ is non-negotiable in San Diego’s year-round UV. Makeup can go back on immediately. The Dermaplane Facial at KIAMO Skin is $199.',
+      question: 'What should a client avoid after dermaplaning?',
+      answer: 'Direct sun exposure for 24 hours, retinoids and acids for 48 to 72 hours, and any active that stings — the freshly exfoliated surface is more permeable, which is the point of the treatment, but also why anything strong goes in harder than usual. Daily mineral SPF 50+ is non-negotiable in San Diego’s year-round UV. Makeup can go back on immediately. The Dermaplane Facial at KIAMO Skin is $199.',
     },
   ],
 
   'dmk-enzyme-therapy': [
     {
       question: 'What is DMK enzyme therapy?',
-      answer:
-        'DMK enzyme therapy is a corrective skin treatment that works with the skin\'s own biological processes — circulation, lymphatic activity and cellular function — rather than stripping the surface the way an acid peel does. Level 1 at KIAMO Skin in San Diego is $279 and is how every DMK plan starts, regardless of what the skin\'s longer-term goals are.',
+      answer: 'DMK enzyme therapy is a corrective skin treatment that works with the skin\'s own biological processes — circulation, lymphatic activity and cellular function — rather than stripping the surface the way an acid peel does. Level 1 at KIAMO Skin in San Diego is $279 and is how every DMK plan starts, regardless of what the skin\'s longer-term goals are.',
     },
     {
       question: 'How much does DMK enzyme therapy cost in San Diego?',
-      answer:
-        'A DMK Level 1 enzyme treatment at KIAMO Skin is $279. Level 2 and Level 3 treatments are prescribed and priced at consultation, because which one is appropriate depends on how your skin responds to Level 1.',
+      answer: 'A DMK Level 1 enzyme treatment at KIAMO Skin is $279. Level 2 and Level 3 treatments are prescribed and priced at consultation, because which one is appropriate depends on how the skin responds to Level 1.',
     },
     {
       question: 'What does DMK enzyme therapy do for the skin barrier?',
-      answer:
-        'DMK enzyme therapy works with the skin’s own function rather than stripping the surface the way an acid peel does. The enzyme masque supports circulation and lymphatic activity while the skin is encouraged to do its own repair work, which is why it suits a barrier that is already inflamed, sensitised or over-exfoliated. As the masque sets you will feel a tightening and rhythmic pulsing — that is expected, and the intensity varies from person to person. It is a corrective treatment for skin that cannot currently tolerate a corrective treatment.',
+      answer: 'DMK enzyme therapy works with the skin’s own function rather than stripping the surface the way an acid peel does. The enzyme masque supports circulation and lymphatic activity while the skin is encouraged to do its own repair work, which is why it suits a barrier that is already inflamed, sensitised or over-exfoliated. As the masque sets a client will feel a tightening and rhythmic pulsing — that is expected, and the intensity varies from person to person. It is a corrective treatment for skin that cannot currently tolerate a corrective treatment. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
-      question: 'How do you know if your skin barrier is damaged?',
-      answer:
-        'A damaged barrier usually announces itself through sensitivity rather than appearance. Products that used to be fine start to sting, skin feels tight after cleansing, redness lingers, and dehydration persists no matter how much moisturizer goes on. Slow healing after a breakout and skin that flares at small changes point the same way. Most barrier damage seen in the studio is self-inflicted by over-exfoliation, strong actives and too many products at once, which also means it is fixable.',
+      question: 'How does a client know if the skin barrier is damaged?',
+      answer: 'A damaged barrier usually announces itself through sensitivity rather than appearance. Products that used to be fine start to sting, skin feels tight after cleansing, redness lingers, and dehydration persists no matter how much moisturizer goes on. Slow healing after a breakout and skin that flares at small changes point the same way. Most barrier damage seen in the studio is self-inflicted by over-exfoliation, strong actives and too many products at once, which also means it is fixable. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'How long does it take to repair a damaged skin barrier?',
-      answer:
-        'There is no fixed timeline for repairing a skin barrier, and anyone quoting one is guessing. Recovery depends on what caused the damage, how long it has been going on, and what you are willing to stop using at home. Enzyme therapy supports the process, but a barrier will not rebuild while the products that broke it are still in rotation — which is why DMK is prescribed as a system with a home routine, not as a standalone treatment. Skin does not change overnight, but it responds when you stay consistent.',
+      answer: 'There is no fixed timeline for repairing a skin barrier, and anyone quoting one is guessing. Recovery depends on what caused the damage, how long it has been going on, and what a client is willing to stop using at home. Enzyme therapy supports the process, but a barrier will not rebuild while the products that broke it are still in rotation — which is why DMK is prescribed as a system with a home routine, not as a standalone treatment. Skin does not change overnight, but it responds when the routine stays consistent. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'What is the difference between DMK Level 1, Level 2 and Level 3?',
-      answer:
-        'Level 1 always comes first, and it is priced at $279. It prepares the skin and shows how the skin actually responds before anything deeper is considered. Levels 2 and 3 layer the enzymes for deeper correction and are prescribed only once Level 1 has done that groundwork, which is why the protocol and the price are set at consultation rather than published. Skipping to a deeper level on unprepared skin is how enzyme therapy goes wrong.',
+      answer: 'Level 1 always comes first, and it is priced at $279. It prepares the skin and shows how the skin actually responds before anything deeper is considered. Levels 2 and 3 layer the enzymes for deeper correction and are prescribed only once Level 1 has done that groundwork, which is why the protocol and the price are set at consultation rather than published. Skipping to a deeper level on unprepared skin is how enzyme therapy goes wrong. KIAMO Skin performs every treatment in one private treatment room with one practitioner, and publishes the price and the protocol so the difference can be checked rather than taken on trust.',
     },
     {
       question: 'Is DMK enzyme therapy worth it?',
-      answer:
-        'DMK enzyme therapy is worth it for skin that cannot currently tolerate corrective peels or microchanneling — a compromised barrier, chronic sensitivity, or inflammation from over-exfoliation. It is also a strong standalone treatment for skin that flares in response to active ingredients, because the enzyme masque works with the skin\'s own biological function rather than introducing a new active that could further destabilise it. For skin that is already tolerating peels and progressing well, DMK is most useful as a supporting treatment. Whether it is the right treatment for a specific skin depends on what is limiting that skin at the moment, which is determined at consultation.',
+      answer: 'DMK enzyme therapy is worth it for skin that cannot currently tolerate corrective peels or microchanneling — a compromised barrier, chronic sensitivity, or inflammation from over-exfoliation. It is also a strong standalone treatment for skin that flares in response to active ingredients, because the enzyme masque works with the skin\'s own biological function rather than introducing a new active that could further destabilise it. For skin that is already tolerating peels and progressing well, DMK is most useful as a supporting treatment. Whether it is the right treatment for a specific skin depends on what is limiting that skin at the moment, which is determined at consultation. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
-      question: 'How often should you have DMK enzyme therapy?',
-      answer:
-        'DMK enzyme therapy is typically scheduled once a month as a standalone treatment, or every four to six weeks as part of a longer corrective plan. Frequency depends on what the treatment is addressing: a compromised barrier in an active phase may benefit from more consistent early attention, while maintenance of results can stretch to every four to six weeks. At KIAMO Skin, frequency is set at consultation and adjusted based on how the skin responds rather than applied as a fixed interval. Skipping the home routine between visits limits what the in-office treatment can sustain.',
+      question: 'How often should a client has DMK enzyme therapy?',
+      answer: 'DMK enzyme therapy is typically scheduled once a month as a standalone treatment, or every four to six weeks as part of a longer corrective plan. Frequency depends on what the treatment is addressing: a compromised barrier in an active phase may benefit from more consistent early attention, while maintenance of results can stretch to every four to six weeks. At KIAMO Skin, frequency is set at consultation and adjusted based on how the skin responds rather than applied as a fixed interval. Skipping the home routine between visits limits what the in-office treatment can sustain.',
     },
     {
       question: 'My skin looks worse after a facial — is that normal?',
-      answer:
-        'Skin that looks temporarily worse after a facial is usually one of two things: a normal extraction purge, or a reaction to a product or treatment that was not matched to the skin\'s current state. A purge — small breakouts surfacing after extraction — typically peaks within 48 to 72 hours and then clears. A reaction — persistent new redness, unexpected breakouts that do not follow the normal purge pattern, or increased sensitivity that does not settle — is a different signal. If skin is consistently worse or more reactive after professional treatments, the treatments are not calibrated to that skin, and the plan should be reassessed before continuing.',
+      answer: 'Skin that looks temporarily worse after a facial is usually one of two things: a normal extraction purge, or a reaction to a product or treatment that was not matched to the skin\'s current state. A purge — small breakouts surfacing after extraction — typically peaks within 48 to 72 hours and then clears. A reaction — persistent new redness, unexpected breakouts that do not follow the normal purge pattern, or increased sensitivity that does not settle — is a different signal. If skin is consistently worse or more reactive after professional treatments, the treatments are not calibrated to that skin, and the plan should be reassessed before continuing. KIAMO Skin works the phases in order — barrier, then congestion, then the marks — so the treatment does not leave behind the dark marks that outlast a breakout.',
     },
   ],
 
   'acne-treatment': [
     {
       question: 'Does HydraFacial help with acne?',
-      answer:
-        'HydraFacial helps with acne by extracting blackheads, whiteheads, and surface congestion without manual pressure that can worsen inflammation. It is most effective for comedonal acne (clogged pores) and mild inflammatory breakouts. For cystic acne or severe hormonal acne, HydraFacial is paired with DMK Enzyme Therapy or prescribed treatments from a dermatologist, because extraction alone does not address the deeper causes of those breakout patterns.',
+      answer: 'HydraFacial helps with acne by extracting blackheads, whiteheads, and surface congestion without manual pressure that can worsen inflammation. It is most effective for comedonal acne (clogged pores) and mild inflammatory breakouts. For cystic acne or severe hormonal acne, HydraFacial is paired with DMK Enzyme Therapy or prescribed treatments from a dermatologist, because extraction alone does not address the deeper causes of those breakout patterns. KIAMO Skin works the phases in order — barrier, then congestion, then the marks — so the treatment does not leave behind the dark marks that outlast a breakout.',
     },
     {
       question: 'What is the best facial for acne in San Diego?',
-      answer:
-        'The best facial for acne depends on what phase the skin is in. HydraFacial clears congestion and blackheads, DMK Enzyme Therapy rebuilds a compromised barrier that is allowing bacteria to thrive, and chemical peels fade post-inflammatory hyperpigmentation left after breakouts clear. There is no single "best" facial for acne because active breakouts, congestion, and post-acne marks each require different treatments. The right treatment is decided at the consultation after assessing the skin.',
+      answer: 'The best facial for acne depends on what phase the skin is in. HydraFacial clears congestion and blackheads, DMK Enzyme Therapy rebuilds a compromised barrier that is allowing bacteria to thrive, and chemical peels fade post-inflammatory hyperpigmentation left after breakouts clear. There is no single "best" facial for acne because active breakouts, congestion, and post-acne marks each require different treatments. The right treatment is decided at the consultation after assessing the skin. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'How much does acne treatment cost in San Diego?',
-      answer:
-        'Acne treatment at KIAMO Skin ranges from $199 to $475 per session depending on the treatment. HydraFacial for congestion and active breakouts is $259. LIRA Chemical Peels for post-acne hyperpigmentation start at $199. DMK Enzyme Therapy for barrier repair is $279. Procell Microchanneling for acne scarring is $475, with a three-treatment series at $1,199. The cost depends on which phase of acne is being treated — active breakouts, hyperpigmentation, or scarring.',
+      answer: 'Acne treatment at KIAMO Skin ranges from $199 to $475 per session depending on the treatment. HydraFacial for congestion and active breakouts is $259. LIRA Chemical Peels for post-acne hyperpigmentation start at $199. DMK Enzyme Therapy for barrier repair is $279. Procell Microchanneling for acne scarring is $475, with a three-treatment series at $1,199. The cost depends on which phase of acne is being treated — active breakouts, hyperpigmentation, or scarring.',
     },
     {
       question: 'How long does it take for acne treatment to work?',
-      answer:
-        'Acne treatment works over weeks to months, not days. Congestion and blackheads improve after one HydraFacial session, but hormonal breakouts take 6 to 8 weeks to respond to consistent treatment because the skin cell turnover cycle is 28 days. Post-inflammatory hyperpigmentation fades over 8 to 12 weeks with a series of chemical peels. Acne scarring requires three to six Procell Microchanneling sessions spaced weeks apart. Acne is managed over time — one facial does not clear a chronic breakout pattern.',
+      answer: 'Acne treatment works over weeks to months, not days. Congestion and blackheads improve after one HydraFacial session, but hormonal breakouts take 6 to 8 weeks to respond to consistent treatment because the skin cell turnover cycle is 28 days. Post-inflammatory hyperpigmentation fades over 8 to 12 weeks with a series of chemical peels. Acne scarring requires three to six Procell Microchanneling sessions spaced weeks apart. Acne is managed over time — one facial does not clear a chronic breakout pattern. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Should I see an esthetician or dermatologist for acne?',
-      answer:
-        'See both if acne is persistent or cystic. Dermatologists prescribe medication (retinoids, antibiotics, hormonal treatments) that address acne from the inside, while licensed estheticians provide corrective facials that extract congestion, fade hyperpigmentation, and support barrier health from the outside. Estheticians cannot prescribe medication, and dermatologists rarely perform the extraction and corrective work an esthetician does. For severe acne, dermatologist care plus consistent facials produces better results than either alone.',
+      answer: 'See both if acne is persistent or cystic. Dermatologists prescribe medication (retinoids, antibiotics, hormonal treatments) that address acne from the inside, while licensed estheticians provide corrective facials that extract congestion, fade hyperpigmentation, and support barrier health from the outside. Estheticians cannot prescribe medication, and dermatologists rarely perform the extraction and corrective work an esthetician does. For severe acne, dermatologist care plus consistent facials produces better results than either alone. KIAMO Skin works the phases in order — barrier, then congestion, then the marks — so the treatment does not leave behind the dark marks that outlast a breakout.',
     },
     {
       question: 'Will chemical peels make my hyperpigmentation worse?',
-      answer:
-        'Chemical peels can make hyperpigmentation worse if applied incorrectly or at too high a strength without proper preparation. Post-inflammatory hyperpigmentation worsens when inflammation triggers additional melanin production, which is why peels for acne marks start at lower strengths and escalate gradually across a series rather than in one aggressive session. LIRA Chemical Peels at KIAMO Skin are formulated specifically to fade pigmentation without the rebound darkening that can happen with peels applied too aggressively. The strength and frequency are decided based on how the skin responds, not a fixed protocol.',
+      answer: 'Chemical peels can make hyperpigmentation worse if applied incorrectly or at too high a strength without proper preparation. Post-inflammatory hyperpigmentation worsens when inflammation triggers additional melanin production, which is why peels for acne marks start at lower strengths and escalate gradually across a series rather than in one aggressive session. LIRA Chemical Peels at KIAMO Skin are formulated specifically to fade pigmentation without the rebound darkening that can happen with peels applied too aggressively. The strength and frequency are decided based on how the skin responds, not a fixed protocol.',
     },
   ],
 
   'hyperpigmentation-treatment': [
     {
       question: 'What is post-inflammatory hyperpigmentation (PIH) and how does it form?',
-      answer:
-        'Post-inflammatory hyperpigmentation is the dark mark the skin leaves behind after inflammation — acne, eczema, psoriasis, an ingrown hair, a shaving nick, an over-aggressive peel elsewhere, or any injury. The pigment is melanin produced by the inflammatory response, sitting in the surface and mid-layers of the skin. It is more common and more severe in melanin-rich skin (Fitzpatrick types IV through VI) because deeper skin tones have more active melanocytes that respond aggressively to any perceived injury. The marks can sit for 6 to 24 months without treatment, and fade more slowly on darker skin.',
+      answer: 'Post-inflammatory hyperpigmentation is the dark mark the skin leaves behind after inflammation — acne, eczema, psoriasis, an ingrown hair, a shaving nick, an over-aggressive peel elsewhere, or any injury. The pigment is melanin produced by the inflammatory response, sitting in the surface and mid-layers of the skin. It is more common and more severe in melanin-rich skin (Fitzpatrick types IV through VI) because deeper skin tones have more active melanocytes that respond aggressively to any perceived injury. The marks can sit for 6 to 24 months without treatment, and fade more slowly on darker skin. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'How long does post-inflammatory hyperpigmentation take to fade?',
-      answer:
-        'Surface PIH usually clears in 6 to 12 months on its own; pigment that has dropped deeper can take years and resists at-home care. With a series of gentle Lira peels or Procell Microchanneling, most PIH fades 60 to 80% in 8 to 12 weeks. Melasma is different — see the melasma page. Active inflammation has to be controlled before any fading plan begins, otherwise the same marks keep returning as quickly as they fade.',
+      answer: 'Surface PIH usually clears in 6 to 12 months on its own; pigment that has dropped deeper can take years and resists at-home care. With a series of gentle Lira peels or Procell Microchanneling, most PIH fades 60 to 80% in 8 to 12 weeks. Melasma is different — see the melasma page. Active inflammation has to be controlled before any fading plan begins, otherwise the same marks keep returning as quickly as they fade. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'What is the difference between PIH and melasma?',
-      answer:
-        'PIH is what the skin does in response to inflammation — it appears as discrete marks where the breakout, eczema patch, or injury was. Melasma is hormonal and UV-driven — it appears as larger, symmetrical patches across the cheeks, forehead, or upper lip, often triggered by pregnancy, birth control, or sun. They require different treatment plans: PIH responds well to gentle peels and microchanneling once the inflammation source is controlled. Melasma is managed rather than cured, with the work paced across a long series and SPF as the foundation. The two are often confused and treated with the wrong modality — which is why the right plan starts with a consultation, not a product.',
+      answer: 'PIH is what the skin does in response to inflammation — it appears as discrete marks where the breakout, eczema patch, or injury was. Melasma is hormonal and UV-driven — it appears as larger, symmetrical patches across the cheeks, forehead, or upper lip, often triggered by pregnancy, birth control, or sun. They require different treatment plans: PIH responds well to gentle peels and microchanneling once the inflammation source is controlled. Melasma is managed rather than cured, with the work paced across a long series and SPF as the foundation. The two are often confused and treated with the wrong modality — which is why the right plan starts with a consultation, not a product. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Can acne marks be completely removed?',
-      answer:
-        'Most acne marks fade to the point where they are no longer visible. Marks that are surface PIH (the dark spot left where a pimple was) respond well to Lira peels and Procell Microchanneling, and home care with tyrosinase inhibitors and strict SPF. Indented acne scars — texture changes, not color — need collagen-stimulating treatments like Procell microchanneling across a series; they do not respond to peels. Active acne has to be controlled first, or new marks keep replacing the ones being cleared.',
+      answer: 'Most acne marks fade to the point where they are no longer visible. Marks that are surface PIH (the dark spot left where a pimple was) respond well to Lira peels and Procell Microchanneling, and home care with tyrosinase inhibitors and strict SPF. Indented acne scars — texture changes, not color — need collagen-stimulating treatments like Procell microchanneling across a series; they do not respond to peels. Active acne has to be controlled first, or new marks keep replacing the ones being cleared. KIAMO Skin works the phases in order — barrier, then congestion, then the marks — so the treatment does not leave behind the dark marks that outlast a breakout.',
     },
     {
       question: 'Is PIH treatment safe for dark skin?',
-      answer:
-        'Yes, when the peel strength, the acid, and the pacing are selected for melanin-rich skin. Melanin-rich skin responds to trauma by producing more pigment, so an over-aggressive peel can create the exact PIH it was meant to clear. Every peel here is patch-tested and started gently, with strength escalating across a series rather than inside a single visit. The same caution that applies to melasma applies here — PIH on Fitzpatrick IV through VI is the most common corrective concern at KIAMO Skin, and the protocols are built for it.',
+      answer: 'Yes, when the peel strength, the acid, and the pacing are selected for melanin-rich skin. Melanin-rich skin responds to trauma by producing more pigment, so an over-aggressive peel can create the exact PIH it was meant to clear. Every peel here is patch-tested and started gently, with strength escalating across a series rather than inside a single visit. The same caution that applies to melasma applies here — PIH on Fitzpatrick IV through VI is the most common corrective concern at KIAMO Skin, and the protocols are built for it.',
     },
   ],
 };

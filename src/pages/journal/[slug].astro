@@ -99,7 +99,7 @@ const formatDate = (iso: string): string => {
         { label: `Written by ${business.ownerName}, licensed esthetician` },
         { label: `Last updated ${formatDate(article.dateModified)}` },
         { label: `${reviewStats.count} five-star Google reviews` },
-        { label: 'Prices published before you book' },
+        { label: 'Prices published before a booking is made' },
       ]}
       reassurance={[
         business.visit.appointmentOnly,
@@ -234,10 +234,10 @@ const formatDate = (iso: string): string => {
               it is easiest to place. */}
           <div class="mt-16 border-y border-line py-10">
             <div class="max-w-[58ch]">
-              <p class="t-eyebrow text-ink-soft">Where this leaves you</p>
+              <p class="t-eyebrow text-ink-soft">Where this leaves a client</p>
               <p class="t-body mt-4">
                 A first visit is {verifiedPrices['first-time-client']} and includes the consultation
-                and skin analysis that turns any of this into a plan for your skin.
+                and skin analysis that turns any of this into a plan for the skin.
               </p>
               <p class="t-body mt-3">
                 Prices are published, the studio is appointment-only, and parking is free.

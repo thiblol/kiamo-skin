@@ -11,7 +11,7 @@
  *   price. A reader cannot tell from that whether a result is a two-visit
  *   change or a two-year commitment. That uncertainty is the thing that stops
  *   people booking, and it was being answered only in collapsed FAQ answers.
- *   This is the "results you can expect" half of the menu, sitting next to it.
+ *   This is the "results a client can expect" half of the menu, sitting next to it.
  *
  * The guard suite forbids unverified prices and rating values, so no figure
  * appears here that is not in config/business.ts. These rows carry session

@@ -81,7 +81,7 @@ const studioClaims: TreatmentTrust['claims'] = [
     detail: 'Advanced training in HydraFacial Syndeo, Procell microchanneling, DMK enzyme therapy, and LIRA Clinical peels.',
   },
   {
-    label: 'Prices published before you book',
+    label: 'Prices published before a booking is made',
     detail: 'Nothing is quoted at the door, and the first visit includes the consultation that decides the plan.',
   },
 ];
@@ -93,7 +93,7 @@ const studioClaims: TreatmentTrust['claims'] = [
  */
 function guaranteeWith(priceLine: string): TreatmentTrust['guarantee'] {
   return {
-    heading: 'Before you commit',
+    heading: 'Before a client commit',
     commitments: [
       {
         title: 'The price comes first',
@@ -101,7 +101,7 @@ function guaranteeWith(priceLine: string): TreatmentTrust['guarantee'] {
       },
       {
         title: 'Nothing is treated before it is assessed',
-        body: 'A full consultation and skin analysis come first, and the treatment is chosen around what your skin is doing that day.',
+        body: 'A full consultation and skin analysis come first, and the treatment is chosen around what the skin is doing that day.',
       },
       {
         title: 'A stated cancellation window',
@@ -114,7 +114,7 @@ function guaranteeWith(priceLine: string): TreatmentTrust['guarantee'] {
 export const treatmentTrust: Record<string, TreatmentTrust> = {
   facial: {
     quickAnswer:
-      'A facial at KIAMO Skin in San Diego is matched to the skin in front of you rather than chosen from a fixed menu. Kiki, a California licensed esthetician with 7+ years of experience, performs every treatment personally in a one-to-one private studio. The menu covers HydraFacial Syndeo, LIRA chemical peels, DMK enzyme therapy, and dermaplaning, calibrated to Fitzpatrick types I-VI. Dermaplaning is $199, a HydraFacial is $259, and a first-time client treatment is $249 including the consultation that sets the plan.',
+      'A facial at KIAMO Skin in San Diego is matched to the skin in front of the practitioner rather than chosen from a fixed menu. Kiki, a California licensed esthetician with 7+ years of experience, performs every treatment personally in a one-to-one private studio. The menu covers HydraFacial Syndeo, LIRA chemical peels, DMK enzyme therapy, and dermaplaning, calibrated to Fitzpatrick types I-VI. Dermaplaning is $199, a HydraFacial is $259, and a first-time client treatment is $249 including the consultation that sets the plan.',
     claims: studioClaims,
     guarantee: guaranteeWith(
       'Every treatment price is published on the menu, and the first-time client treatment at $249 includes the consultation that decides the plan. Nothing is quoted at the door.'
@@ -144,7 +144,7 @@ export const treatmentTrust: Record<string, TreatmentTrust> = {
       'DMK enzyme therapy at KIAMO Skin in San Diego works on skin function rather than surface — enzymatic resurfacing that clears congestion and supports barrier recovery, chosen when a peel would be too much for reactive skin. Kiki performs every session. $279 for Level 1; Levels 2 and 3 are pricing at consultation.',
     claims: studioClaims,
     guarantee: guaranteeWith(
-      'DMK enzyme therapy Level 1 is $279. Levels 2 and 3 are pricing at consultation — the level is set by what your skin is doing, not by what fits a price list.'
+      'DMK enzyme therapy Level 1 is $279. Levels 2 and 3 are pricing at consultation — the level is set by what the skin is doing, not by what fits a price list.'
     ),
     outcomeConcern: null,
   },
@@ -177,7 +177,7 @@ export const treatmentTrust: Record<string, TreatmentTrust> = {
   },
   'corrective-skin-treatments': {
     quickAnswer:
-      'Corrective skin treatments at KIAMO Skin in San Diego start with the barrier rather than the treatment. Kiki is a California licensed esthetician with 7+ years of experience, and the plan draws on HydraFacial, DMK enzyme therapy, Procell microchanneling, LIRA chemical peels, and dermaplaning — chosen by what your skin is doing, not by what is trending.',
+      'Corrective skin treatments at KIAMO Skin in San Diego start with the barrier rather than the treatment. Kiki is a California licensed esthetician with 7+ years of experience, and the plan draws on HydraFacial, DMK enzyme therapy, Procell microchanneling, LIRA chemical peels, and dermaplaning — chosen by what the skin is doing, not by what is trending.',
     claims: studioClaims,
     guarantee: guaranteeWith(
       'Every treatment price is published on the menu. Nothing is quoted at the door, and the first visit includes the consultation that decides the plan.'

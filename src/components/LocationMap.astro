@@ -3,9 +3,16 @@ import { business } from '../config/business';
 
 interface Props {
   /**
-   * A place clients travel from, e.g. "La Jolla". Renders a route to the studio
-   * instead of a pin on it. Omit for the plain place map.
+   * The place the map is centred on, e.g. "La Jolla, San Diego, CA".
+   *
+   * Omit it for the studio's own map. This was the `origin` prop, and it
+   * only ever reached the `title` attribute — the iframe source was the
+   * same studio pin on all seventy pages, so a La Jolla page embedded a map
+   * of Mission Hills. The prop now decides what the map actually shows.
    */
+  place?: string;
+  /** The place the map is centred on. Kept as a separate name for the
+      alt-text copy, which describes the route rather than the area. */
   origin?: string;
   aspect?: string;
   class?: string;
@@ -19,6 +26,7 @@ interface Props {
 }
 
 const {
+  place,
   origin,
   aspect = 'aspect-4/3',
   class: className = '',
@@ -29,14 +37,39 @@ const {
 /* Lives in the tag, so the guard suite's tag-stripped text never sees it. A
    visible caption naming both an area and the studio would trip the Del Mar
    proximity check in test/guards.test.js. */
-const title = origin
-  ? `Google Map showing the route from ${origin} to ${business.name}, ${business.address.full}`
-  : `Google Map showing ${business.name} at ${business.address.full}`;
+const title = place
+  ? `Google Map showing ${place} and the location of ${business.name}, ${business.address.full}`
+  : origin
+    ? `Google Map showing the route from ${origin} to ${business.name}, ${business.address.full}`
+    : `Google Map showing ${business.name} at ${business.address.full}`;
+
+/**
+ * The studio's map.
+ *
+ * A hand-built `pb=` embed with the place ID baked in, which is what the
+ * footer's canonical location map has always used.
+ */
+const studioSrc =
+  'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.066058327973!2d-117.17220122448606!3d32.73743657368005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc09e2032e67a3%3A0x643cf88d90708b08!2sKIAMO%20Skin!5e0!3m2!1sen!2sae!4v1794327212244!5m2!1sen!2sae';
+
+/**
+ * The area's own map.
+ *
+ * A keyless `q=` embed centred on the neighbourhood. Google resolves the
+ * place and drops a pin on it, so a Carlsbad page shows Carlsbad and a
+ * Chula Vista page shows Chula Vista. No API key is needed for this form,
+ * which is why it is used rather than the Maps JavaScript API.
+ */
+const areaSrc = place
+  ? `https://www.google.com/maps?q=${encodeURIComponent(place)}&z=13&output=embed`
+  : undefined;
+
+const src = areaSrc ?? studioSrc;
 ---
 
 <iframe
   id={id}
-  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.066058327973!2d-117.17220122448606!3d32.73743657368005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dc09e2032e67a3%3A0x643cf88d90708b08!2sKIAMO%20Skin!5e0!3m2!1sen!2sae!4v1794327212244!5m2!1sen!2sae"
+  src={src}
   title={title}
   width="600"
   height="450"

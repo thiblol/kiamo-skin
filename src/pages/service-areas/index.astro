@@ -44,66 +44,55 @@ import { getServiceTestimonials } from '../../data/testimonials';
  * barrier damage in Encinitas and the pigmentation in Chula Vista come from
  * the same distance from the marine layer, in opposite directions.
  */
-const groups = [
-  {
-    type: 'Coastal & Beach',
-    description:
-      'Salt water, marine layer UV and year-round outdoor exposure drive the skin concerns here.',
-    slugs: ['la-jolla', 'encinitas', 'pacific-beach', 'del-mar'],
-  },
-  {
-    type: 'Inland & East County',
-    description:
-      'Past the marine layer, UV load is higher and cumulative sun damage is the dominant concern.',
-    slugs: ['chula-vista', 'la-mesa', 'carlsbad'],
-  },
-  {
-    type: 'Urban & Central San Diego',
-    description: 'Close to the studio — ten to twenty minutes, no freeway required for most.',
-    slugs: ['north-park', 'point-loma', 'hillcrest'],
-  },
-];
-
+/**
+ * The questions.
+ *
+ * Value first, then the studio — the house rule the whole cluster follows.
+ * The old set led with drive times and framed every answer around how far a
+ * client had to come, which made the page an argument about the drive rather
+ * than about the treatment. The distance is still in there, because it is a
+ * real question, but it is never the frame.
+ */
 const faqs = [
   {
-    question: 'How far do clients travel to reach the studio?',
+    question: 'How far do clients travel to reach KIAMO Skin?',
     answer:
-      'Most clients drive between five and forty-five minutes. North Park and Hillcrest are under ten minutes with no freeway. Pacific Beach, La Mesa and La Jolla are fifteen to twenty minutes. Chula Vista and Del Mar run twenty to twenty-five minutes. Encinitas and Carlsbad are the farthest — roughly thirty to forty minutes on I-5, depending on traffic.',
+      'Most clients drive between five and forty-five minutes. North Park and Hillcrest are under ten minutes with no freeway, and Pacific Beach, La Mesa and La Jolla are fifteen to twenty. Chula Vista and Del Mar run twenty to twenty-five minutes, and Encinitas and Carlsbad are the farthest at roughly thirty to forty on I-5. The KIAMO Skin studio is at 3067 Reynard Way in Mission Hills with free parking on site.',
   },
   {
     question: 'Is there parking at the studio?',
     answer:
-      'Free parking is available on site. You do not need to find street parking or pay for a garage. The studio is by appointment only, so a space is always available when you arrive.',
+      'Free parking is available on site at the KIAMO Skin studio, so there is no street parking to find and no garage to pay for. The studio is by appointment only, which means a space is always available when a client arrives.',
   },
   {
-    question: 'Can I combine treatments to make one trip from far away worth it?',
+    question: 'Can I combine treatments to make one trip worth it?',
     answer:
-      'Yes — combining is discussed at the first consultation when it makes clinical sense. A HydraFacial and dermaplaning can share a single appointment. Procell Microchanneling and a Lira peel cannot be layered in one visit. The plan accounts for where you are coming from and how often a round trip is realistic.',
+      'Yes — combining is discussed at the first consultation when it makes clinical sense. A HydraFacial and dermaplaning can share a single appointment at KIAMO Skin. Procell microchanneling and a LIRA peel cannot be layered in one visit, because both work on the same surface and their recovery periods would overlap. The plan accounts for how often a round trip is realistic.',
   },
   {
     question: 'Do I need to live nearby to get consistent results?',
     answer:
-      'No. Clients from Carlsbad, Encinitas and Del Mar complete full corrective courses regularly. The key is scheduling the series as a block at the start rather than booking visit by visit. A three-session microchanneling series placed at four-to-six-week intervals fits into a calendar whether you are ten minutes away or forty.',
+      'No. Clients from Carlsbad, Encinitas and Del Mar complete full corrective courses regularly. What decides it is scheduling the series as a block at the first appointment rather than booking visit by visit — a three-session microchanneling series at four-to-six-week intervals fits into a calendar whether the studio is ten minutes away or forty. KIAMO Skin sets the whole course at the first consultation for exactly that reason.',
   },
   {
-    question: 'What is the first appointment like for someone coming from outside San Diego city?',
+    question: 'What is the first appointment like?',
     answer:
-      'The first visit is a full consultation, skin analysis, and a first treatment — the $249 new-client visit. It takes longer than a follow-up, so it is worth leaving travel margin. After that appointment you will have a clear treatment plan and a sense of how often you need to come in, which makes the drive easier to plan.',
+      'A full consultation, a skin analysis and a first treatment, for $249 at KIAMO Skin. It takes longer than a follow-up, so it is worth leaving margin around it. After that appointment there is a written plan with the treatments in it, the intervals and the session count, and a realistic sense of how often a return is needed.',
   },
   {
-    question: 'Which areas have the most clients travelling to the studio?',
+    question: 'Which areas send the most clients to KIAMO Skin?',
     answer:
-      'North Park, Pacific Beach and La Jolla send the most clients, followed by Chula Vista and La Mesa. North Park is the closest — three and a half miles with no freeway. Chula Vista sends the most pigmentation and melasma clients, which reflects the inland UV load and skin demographics in that part of the county.',
+      'North Park, Pacific Beach and La Jolla send the most, followed by Chula Vista and La Mesa. North Park is the closest at three and a half miles with no freeway. Chula Vista sends the most pigmentation and melasma clients, which reflects the inland UV load and the skin demographics in that part of the county — and KIAMO Skin treats melasma there with gentle peels whose strength is raised only as the barrier allows.',
   },
   {
     question: 'Which treatment is right for my area?',
     answer:
-      'Each area below lists the treatments with a page for it, and each page opens with what that treatment actually addresses for that area — the barrier damage salt air causes, the inland UV load, the congestion a coastal climate produces. The consultation still decides the modality, but the pages tell you which ones are worth the drive.',
+      'Each area below lists the treatments with a page for it, and each page opens with what that treatment addresses for that area — the barrier damage salt air causes, the inland UV load, the congestion a coastal climate produces. The consultation still decides the modality, but the pages say which ones are worth the trip before anyone books.',
   },
   {
-    question: 'Do you offer mobile facial services in San Diego?',
+    question: 'Does KIAMO Skin offer mobile facial services in San Diego?',
     answer:
-      'No. Mobile services cannot deliver clinical-grade corrective treatment. HydraFacial Syndeo requires a dedicated water line and electrical setup. Procell Microchanneling requires a sterile environment for post-treatment protocol. DMK Enzyme Therapy requires temperature control and a stable surface. Medical-grade LED therapy requires professional panels, not handheld consumer devices. Mobile facials offer convenience but compromise equipment quality, sterile conditions, and corrective capability.',
+      'No, and KIAMO Skin will not. Mobile services cannot deliver clinical-grade corrective treatment: a HydraFacial Syndeo needs a dedicated water line and electrical setup, Procell microchanneling needs a sterile environment for post-treatment protocol, DMK enzyme therapy needs temperature control and a stable surface, and medical-grade LED therapy needs professional panels rather than handheld consumer devices. Convenience costs equipment quality, sterile conditions and corrective capability, and the studio is a single treatment room with one practitioner for a reason.',
   },
 ];
 
@@ -128,8 +117,8 @@ const covered = matrix.filter((m) => m.rows.length > 0);
 ---
 
 <BaseLayout
-  title="Areas We Serve in San Diego | KIAMO Skin"
-  description="KIAMO Skin serves clients from 10 San Diego areas. HydraFacial, peels, dermaplaning, microchanneling and scalp therapy. Find your nearest area."
+  title="Areas We Serve in San Diego, CA | KIAMO Skin"
+  description="KIAMO Skin is a licensed facial spa in Mission Hills, San Diego, serving 10 areas across the county. HydraFacial, peels, scalp therapy. From $199."
   headerTheme="dark"
 >
   <BreadcrumbSchema slot="head" trail={[{ name: 'Areas We Serve', path: '/service-areas/' }]} />
@@ -137,21 +126,27 @@ const covered = matrix.filter((m) => m.rows.length > 0);
   <SpeakableSchema slot="head" />
 
   <article>
-    {/* The hero. The coverage map is the background, the drive is the
-        subject, and the action is in the first screen. */}
+    {/* The hero. The coverage map is the background, the offer is the
+        subject, and the action is in the first screen.
+
+        It used to lead with the drive — "where clients travel from and what
+        the drive is worth", "the honest distance from each". That framing
+        makes the page an argument about travel rather than about treatment,
+        and it is the wrong frame for a client already in the city. The
+        studio's own city is now the first entry in the list below, and the
+        hero says what the studio does. */}
     <PageHero
-      eyebrow="San Diego County · One studio, off Washington Street"
-      h1="Where clients travel from"
-      h1Accent="and what the drive is worth"
-      claim="There is one studio, and it is in Mission Hills. Clients drive in from across San Diego County — so here is the honest distance from each."
-      paragraph="Every treatment is performed by Kiki, a California licensed esthetician with 7+ years in corrective skin work, in one private treatment room. Parking is free on site and the studio is appointment-only."
+      eyebrow="San Diego, CA · One studio, off Washington Street"
+      h1="Facial spa in San Diego, CA"
+      claim="One studio in Mission Hills, and eleven areas it serves — including the city itself."
+      paragraph="KIAMO Skin is a licensed facial spa at 3067 Reynard Way in Mission Hills. Every treatment is performed by Kiki, a California licensed esthetician with 7+ years in corrective skin work, in one private treatment room. Parking is free on site and the studio is appointment-only."
       image={heroServiceAreasHub}
       imageAlt="A coverage map of San Diego County showing the areas KIAMO Skin serves from its Mission Hills studio"
       price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
       trust={[
         { label: 'Free parking on site' },
-        { label: 'Ten areas across the county' },
-        { label: 'Prices published before you book' },
+        { label: 'Eleven areas across the county' },
+        { label: 'Prices published before a booking is made' },
         { label: 'Safe for every Fitzpatrick type, I–VI' },
       ]}
       reassurance={[
@@ -172,7 +167,7 @@ const covered = matrix.filter((m) => m.rows.length > 0);
         </h2>
         <p class="t-body mt-6 max-w-[62ch]">
           Each page covers what that treatment addresses for that area, the honest drive time, and the
-          local skin concern. Click through to find yours.
+          local skin concern. Click through to find the client’s.
         </p>
         <ul class="m-0 mt-12 grid list-none gap-x-10 gap-y-0 p-0 md:grid-cols-2 lg:grid-cols-3">
           {
@@ -231,7 +226,7 @@ const covered = matrix.filter((m) => m.rows.length > 0);
         <div class="max-w-[68ch]">
           <Reveal>
             <p class="t-eyebrow text-ink-soft">Common questions</p>
-            <h2 class="t-h2 mt-5">Travelling for a facial in San Diego</h2>
+            <h2 class="t-h2 mt-5">Facials across San Diego County</h2>
           </Reveal>
           <div class="mt-12">
             {/* The first two answer in full on the page — how far clients
@@ -252,7 +247,7 @@ const covered = matrix.filter((m) => m.rows.length > 0);
     {/* The request. The directory answers "where"; this answers "how do I
         book", with the price and the button next to it. */}
     <RequestBand
-      heading="Start in San Diego — with a price before you book."
+      heading="Start in San Diego — with a price before a booking is made."
       eventLabel="areas_hub_band"
     />
 

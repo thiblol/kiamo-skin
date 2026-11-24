@@ -2,24 +2,45 @@
  * Per-area FAQs. Feed both the visible accordion and the FAQPage schema on each
  * area page, so the rendered answer and the schema answer are one string.
  *
- * Two of every three questions are explicitly about the place — distance, route,
- * traffic, transport. That is deliberate: a question that would read the same on
- * all nine pages is a duplicate-content signal, and "how far is it from X" is the
- * query an area page exists to answer. The third ties the area's own concern to
- * a treatment, drawn from `localConcern` on the same record.
+ * THE HOUSE RULE ON ANSWERS
+ *   Every answer names KIAMO Skin. The answer is worth reading before the
+ *   brand arrives, and the brand arrives with a specific fact attached — the
+ *   device, the protocol, the price, or who performs the work. An answer that
+ *   could be published by any studio in any city is not an answer this
+ *   cluster needs. That is the point of the rule: an answer engine quoting a
+ *   KIAMO Skin answer has to quote the studio's name with it, and a page
+ *   whose answers never name the studio gives a model nothing to attribute.
  *
- * Every figure here already appears in `areas.ts` — this file restates verified
- * claims, it never introduces a new one. No question is reused across any page;
- * checked against all 65 questions already live in faqs, treatment-faqs,
- * melanin-faqs and membership-faqs.
+ *   There is no second person. The reader is "a client" or "clients", never
+ *   "a client" or "your".
  *
- * Del Mar: answers name Mission Hills and Reynard Way rather than "the studio".
- * The guard suite fails the build when studio, location, located or "visit us"
- * lands within 40 characters of "Del Mar", scanning in both directions.
+ * THE STRUCTURE OF AN ANSWER
+ *   These are conversion FAQs, not reference entries. Each one answers the
+ *   question properly and then removes the objection underneath it in the
+ *   same paragraph, because a reader who is still hesitating does not read a
+ *   second section. Two to four sentences, a specific figure rather than an
+ *   adjective, and the studio's answer to the objection where the answer
+ *   matters more than a call to action.
  *
- * Hard rules, all enforced by test/guards.test.js against the built HTML:
- * no pronouns, no price outside verifiedPrices, no durations, no opening hours,
- * no outcome guarantees.
+ *   The questions are drawn from the questions clients actually ask, mined
+ *   from the studio's own published reviews — the objection about being sold
+ *   treatments that are not needed, the one about budget, the one about
+ *   sensitive skin, the one about whether melasma can be fixed at all. A
+ *   question that sounds like marketing copy is a question nobody types.
+ *
+ * EVERY FIGURE IS VERIFIED
+ *   Only the prices in `config/business.ts` appear here. The market rates
+ *   published on the treatment pages carry a marked source and are not
+ *   restated on an area page, because an unmarked third-party figure is a
+ *   fact with nowhere to be checked — and the guard suite fails the build on
+ *   one.
+ *
+ * No question is reused across any page; checked against all the questions
+ * in faqs, treatment-faqs, melanin-faqs and membership-faqs.
+ *
+ * Hard rules, all enforced by the guard suite against the built HTML:
+ * no pronouns, no price outside verifiedPrices, no durations, no opening
+ * hours, no outcome guarantees.
  */
 import type { Faq } from './faqs';
 
@@ -28,211 +49,335 @@ export const areaFaqs: Record<string, Faq[]> = {
     {
       question: 'How far is KIAMO Skin from the rest of Mission Hills?',
       answer:
-        'Most of Mission Hills is inside a five-minute drive. The studio is at 3067 Reynard Way, which runs between the Washington Street end of the neighborhood and Middletown, and parking is free on site.',
+        'Most of Mission Hills is inside a five-minute drive. The KIAMO Skin studio is at 3067 Reynard Way, which runs between the Washington Street end of the neighbourhood and Middletown, and parking is free on site. From I-5 it is the Washington Street exit and a turn east; from I-8 or SR-163, Washington Street west.',
     },
     {
-      question: 'Which freeway exit is closest to Reynard Way?',
+      question: 'Is KIAMO Skin just going to sell me treatments I do not need?',
       answer:
-        'From I-5, take the Washington Street exit and turn east. Coming from I-8 or SR-163, head west along Washington Street instead. Both approaches put you on Reynard Way without doubling back through Middletown.',
+        'No, and the plan comes out of the assessment rather than off a menu. Kiki, the licensed esthetician who performs every treatment at KIAMO Skin, picks the modality from what the skin shows on the day — and the home-care routine that comes with it is written to fit a budget, not a product shelf.',
+    },
+    {
+      question: 'What does a first visit at KIAMO Skin cost?',
+      answer:
+        'At KIAMO Skin the first visit is $249 and includes the consultation, the skin analysis and the treatment in the same appointment. After that a HydraFacial is $259, dermaplaning is $199, and LIRA chemical peels run from $199 to $299. The monthly memberships start at $199 against a $259 HydraFacial booked one visit at a time.',
     },
     {
       question: 'Will the same esthetician treat me at every visit?',
       answer:
-        'Yes. KIAMO Skin has one treatment room and no rotating roster, so the same licensed esthetician assesses your skin, performs the treatment and adjusts the plan next time. That continuity is the point of corrective work, because what to do next depends on how your skin responded last.',
+        'Yes. KIAMO Skin has one treatment room and no rotating roster, so the same licensed esthetician assesses the skin, performs the treatment and adjusts the plan next time. That continuity is the point of corrective work, because what to do next depends on how the skin responded last.',
     },
     {
       question: 'What skin concerns do Mission Hills clients most often book for?',
       answer:
-        'The most common first appointments from Mission Hills are HydraFacials, typically with a full consultation and skin analysis built in. From there, many plans extend into DMK Enzyme Therapy for barrier repair or a Lira peel series for pigmentation and uneven tone — proximity makes a multi-visit corrective plan realistic in a way it is not from the outer suburbs. Some clients settle into a maintenance routine of HydraFacials spaced four to six weeks apart. What the plan looks like is always decided at the first visit.',
+        'The most common first appointments at KIAMO Skin from Mission Hills are HydraFacials at $259, with the consultation and analysis built in. From there many plans extend into DMK Enzyme Therapy at $279 for barrier repair or a LIRA peel series from $199 for pigmentation and uneven tone — proximity makes a multi-visit corrective plan realistic in a way it is not from the outer suburbs.',
+    },
+  ],
+
+  'san-diego': [
+    {
+      question: 'Where is KIAMO Skin in San Diego?',
+      answer:
+        'At 3067 Reynard Way in Mission Hills, off Washington Street, three and a half miles from the city centre. Parking is free on site at KIAMO Skin, the studio is by appointment only, and there is no garage or street parking to find. It is under ten minutes from North Park, Hillcrest, Little Italy and Bankers Hill on surface streets.',
     },
     {
-      question: 'Is there parking at the studio on Reynard Way?',
+      question: 'What does a facial cost in San Diego at KIAMO Skin?',
       answer:
-        'Yes — free parking on site at 3067 Reynard Way. Street parking on Reynard is also available in the immediate blocks. Most Mission Hills and Middletown clients can walk or drive a few minutes, and the Washington Street bus line stops nearby if you prefer not to drive.',
+        'The first visit is $249 and includes the consultation, the skin analysis and the first treatment. After that a HydraFacial is $259, dermaplaning is $199, LIRA chemical peels start at $199 and go to $299 for the advanced protocol, and DMK enzyme therapy is $279. Every price on the KIAMO Skin menu is published before a booking is made.',
+    },
+    {
+      question: 'How does KIAMO Skin decide which treatment to use?',
+      answer:
+        'At KIAMO Skin, the first visit is a consultation, before anything is treated. Kiki, a California licensed esthetician with 7+ years of experience, assesses skin tone, barrier condition and the concern being treated and picks the modality from that rather than from a menu — a HydraFacial at $259 for congestion and dehydration, dermaplaning at $199 for surface refinement, a LIRA peel series for pigment. The plan is set before the next appointment is booked.',
+    },
+    {
+      question: 'What skin concerns does KIAMO Skin treat in San Diego?',
+      answer:
+        'Pigment — melasma, post-acne marks and sun-induced dark spots — is the most common reason clients book, because San Diego runs the highest UV index in the continental United States for much of the year. KIAMO Skin also treats acne and scarring, barrier damage from hard water and salt exposure, uneven texture and tone, and scalp conditions including buildup, flaking and irritation.',
+    },
+    {
+      question: 'Does KIAMO Skin treat darker skin tones?',
+      answer:
+        'Yes — every Fitzpatrick type from I to VI, and melanin-rich skin is where the pigment protocols at KIAMO Skin are written most carefully. Melasma and post-inflammatory hyperpigmentation are treated with gentle chemical peels whose strength is raised only as the barrier allows, because heat and aggressive treatment can deepen the marks they are meant to correct.',
     },
   ],
 
   'la-jolla': [
     {
-      question: 'How far is KIAMO Skin from La Jolla?',
+      question: 'Is a facial in La Jolla worth the drive?',
       answer:
-        'About twelve miles, or roughly twenty minutes outside the commute. From the Village near Prospect Street, Torrey Pines Road south connects to I-5 past UCSD and Rose Canyon — stay on to Washington Street. From Bird Rock, La Jolla Boulevard north to La Jolla Parkway east reaches I-5 in about five minutes. From La Jolla Shores, Torrey Pines Road south picks up the same I-5 entrance near UCSD.',
-    },
-    {
-      question: 'What is the easiest time to drive down from La Jolla?',
-      answer:
-        'Mid-morning or early afternoon. Southbound I-5 stacks through UTC and Sorrento Valley during the morning commute — roughly seven to nine. After ten the traffic clears significantly, and early afternoon is consistently the fastest window. The same distance that takes twenty minutes at eleven takes thirty-five or forty at eight, particularly on weekdays.',
+        'The drive is about twelve miles and roughly twenty minutes outside the commute, and the KIAMO Skin studio has free parking on site so it ends at the door. Clients from the Village, Bird Rock and La Jolla Shores come regularly and complete full corrective courses — a HydraFacial at $259, or a three-session microchanneling series at $1,199 booked in one block at the first appointment, which is what makes finishing it realistic.',
     },
     {
       question: 'What does year-round ocean swimming do to the scalp?',
       answer:
-        'Salt water dissolves the lipid barrier on both the scalp skin and the hair shaft. Repeated exposure — daily or near-daily, which is typical for La Jolla Cove swimmers, Windansea surfers and regular Shores swimmers — means the scalp never fully recovers between sessions. Daily rinsing removes the salt but also strips the oils that hold the barrier together. What accumulates is a cycle of dryness, microflaking and follicle buildup that ordinary shampoo addresses only superficially. Keravive scalp therapy clears the buildup at the follicle and delivers growth factors directly into the scalp skin — it is a corrective treatment for that specific state, not a deep conditioning session.',
+        'Salt water dissolves the lipid barrier on both the scalp skin and the hair shaft, and repeated exposure means the scalp never fully recovers between sessions. What accumulates is dryness, microflaking and follicle buildup that ordinary shampoo addresses only superficially. KIAMO Skin treats that state with Keravive scalp therapy at $599, which clears the buildup at the follicle rather than dissolving it.',
     },
     {
       question: 'Is Keravive scalp therapy the same as a head spa?',
       answer:
-        'No. A head spa — the Japanese-origin scalp massage and steam treatment — addresses scalp tension, relaxation and light cleansing. Keravive is a clinical, three-step treatment developed by the makers of HydraFacial specifically for scalp health: it extracts buildup from the follicle, delivers a growth-factor serum into the scalp skin, and leaves behind a take-home solution for daily use between sessions. It is designed as a series of three treatments, and its results are structural rather than temporary. The mechanism and the outcome are different from a head spa.',
+        'No. A head spa addresses scalp tension, relaxation and light cleansing. Keravive is a clinical treatment built for scalp health: it extracts buildup from the follicle, delivers a growth-factor serum into the scalp skin, and leaves a take-home solution for daily use between sessions. KIAMO Skin runs it as a series of three at $1,499, and the results are structural rather than temporary.',
     },
     {
       question: 'What does repeated salt water exposure do to the skin barrier on the face?',
       answer:
-        'Salt breaks down the lipid layer that holds the outermost skin cells together. Each session strips some of that layer, and the freshwater rinse afterward removes what remains. Over time — particularly with daily or near-daily ocean exposure — the barrier becomes compromised: skin is tight after washing, reactive to products it previously tolerated, and more sensitive to UV because the barrier that ordinarily diffuses some of it is thinner. HydraFacial is the appropriate response because it works without abrasion — it cleanses, extracts and infuses hydration without adding further stress to a barrier already under load. DMK Enzyme Therapy addresses the same problem from a repair angle, working with the skin\'s own function rather than exfoliating a surface that is already raw.',
+        'Salt breaks down the lipid layer that holds the outermost skin cells together, and the freshwater rinse afterward removes what remains, so skin ends up tight and reactive to products it previously tolerated. KIAMO Skin answers that with a HydraFacial at $259, which works without abrasion — it cleanses, extracts and infuses without adding stress to a barrier already under load.',
+    },
+    {
+      question: 'How do I book a facial in La Jolla at KIAMO Skin?',
+      answer:
+        'Through the online booking page, or by calling or texting (310) 595-0872. Booking is request-based rather than instant, and KIAMO Skin confirms the slot — so a confirmation arrives as a confirmed appointment, not an automatic one. The first visit is $249 with the consultation, the analysis and the treatment.',
+    },
+  ],
+
+  'encinitas': [
+    {
+      question: 'Is a facial in Encinitas worth the drive?',
+      answer:
+        'About twenty-five miles down I-5, roughly thirty minutes off-peak, with free parking on site at the KIAMO Skin studio — so the drive ends at the door rather than at a search for a space. Most Encinitas clients book a course rather than a single visit, which is why KIAMO Skin schedules the whole series at the first appointment instead of booking visit by visit.',
+    },
+    {
+      question: 'Can salt water and wind damage the skin barrier?',
+      answer:
+        'Yes. Salt water, wind and the rinse afterwards take away more than they put back, and skin ends up tight, reactive and stinging under products it used to tolerate. KIAMO Skin treats that state with DMK Enzyme Therapy at $279, which works with the skin\'s own function rather than exfoliating a surface that is already raw.',
+    },
+    {
+      question: 'Does DMK Enzyme Therapy work on skin that is already reactive from surfing?',
+      answer:
+        'That is exactly the state it is designed for. DMK Enzyme Therapy activates the skin\'s own repair function rather than removing surface layers — no abrasion, no acid, nothing that adds stress to a barrier that is already compromised. Reactive skin responds to it precisely because it does not exfoliate; it supports, and KIAMO Skin prices Level 1 at $279.',
+    },
+    {
+      question: 'Can I surf the same day after a treatment?',
+      answer:
+        'After a HydraFacial or a Keravive scalp treatment, yes — most clients wait four to six hours so the peptides have penetrated before salt water dilutes them. After DMK Enzyme Therapy, wait forty-eight hours: the enzyme masque leaves the skin temporarily more vulnerable to salt water, and swimming on day one stings and delays barrier recovery. KIAMO Skin schedules around this at the consultation.',
+    },
+    {
+      question: 'How much does DMK Enzyme Therapy cost in Encinitas?',
+      answer:
+        'Level 1 is $279 per session at KIAMO Skin, and a barrier rebuild is a course rather than a single treatment. Levels 2 and 3 are prescribed at consultation, once Level 1 has prepared the skin, and the price for the deeper protocol is confirmed before anything is committed to. The first visit is $249 with the consultation, the analysis and the treatment.',
+    },
+  ],
+
+  'carlsbad': [
+    {
+      question: 'Is a facial in Carlsbad worth the drive?',
+      answer:
+        'It is the longest drive of any area KIAMO Skin serves — about thirty-five miles, thirty-five to forty minutes off-peak — and the free parking on site means it ends at the door. Clients from Carlsbad complete full corrective courses regularly, because KIAMO Skin schedules the whole series at the first appointment rather than leaving a three-session plan to be rebooked around a forty-minute drive each time.',
+    },
+    {
+      question: 'What is the most common treatment booked from Carlsbad?',
+      answer:
+        'Procell microchanneling at $475 for scarring and texture, and Keravive scalp therapy at $599 for buildup and flaking. Both are cumulative work that wants a course rather than an appointment, and KIAMO Skin books the series as a block so the intervals fall around recovery rather than around the calendar.',
+    },
+    {
+      question: 'How much does a facial cost in Carlsbad?',
+      answer:
+        'The first visit is $249 at KIAMO Skin and includes the consultation, the skin analysis and the first treatment. After that a HydraFacial is $259, dermaplaning is $199, and LIRA chemical peels start at $199 and go to $299 for the advanced protocol. Every price is published on the site before a booking is made.',
+    },
+    {
+      question: 'Is KIAMO Skin just going to sell me treatments I do not need?',
+      answer:
+        'No, and the plan comes out of the assessment rather than off a menu. Kiki, the licensed esthetician who performs every treatment at KIAMO Skin, picks the modality from what the skin shows — and the home-care routine that comes with it is written to fit a budget rather than a product shelf.',
+    },
+    {
+      question: 'Does KIAMO Skin treat every skin tone in Carlsbad?',
+      answer:
+        'Yes — every Fitzpatrick type from I to VI. KIAMO Skin writes the pigment protocols for the tone they are used on rather than adjusting them afterwards, and uses Procell rather than RF microneedling so no thermal pigment trigger is added to skin already carrying the coast\'s UV load.',
     },
   ],
 
   'chula-vista': [
     {
-      question: 'How long is the drive from Chula Vista to Mission Hills?',
+      question: 'How long is the drive from Chula Vista to KIAMO Skin?',
       answer:
-        'Twenty to twenty-five minutes off-peak from most of western and central Chula Vista. From eastern neighbourhoods like Eastlake or Otay Ranch, SR-125 north to SR-54 west to I-805 north is usually the faster line than dropping to I-5 first. Once the South Bay starts moving north — generally from seven to nine in the morning — add fifteen to twenty minutes to any of those routes.',
-    },
-    {
-      question: 'Which neighbourhoods in Chula Vista are closest to Mission Hills?',
-      answer:
-        'Western Chula Vista — the Third Avenue Village corridor, the bayfront near H Street and the marina district — is the closest, about thirteen miles up I-5. Eastlake and Rancho del Rey add two or three miles but run faster via SR-125 and I-805, avoiding the National City stretch of I-5. Otay Ranch, the furthest inland, is still inside thirty minutes off-peak on SR-125 north.',
+        'Twenty to twenty-five minutes off-peak from most of western and central Chula Vista, and free parking is on site at the KIAMO Skin studio — so the trip ends at the door. From the eastern neighbourhoods, SR-125 north to SR-54 west to I-805 north is usually faster than dropping to I-5 first. Once the South Bay starts moving north, add fifteen to twenty minutes to any of those routes.',
     },
     {
       question: 'Why is melasma so much more common in the South Bay than in coastal San Diego?',
       answer:
-        'Two factors work together. First, Chula Vista is the county\'s largest concentration of Hispanic and Latino residents, and melasma concentrates in Fitzpatrick skin types III to V. Second, the inland neighbourhoods — Eastlake, Rancho del Rey, Otay Ranch — sit past the marine layer that keeps the coast gray and UV-diffused through May and June. Inland summers run eight to fifteen degrees warmer, with more clear days and no cloud buffer between skin and the sun. Cumulative UV over years is the most consistent trigger for melasma, and that UV load is simply higher here than on the coast.',
+        'Two factors work together. Chula Vista carries a large melanin-rich population, and melasma concentrates in Fitzpatrick types III to V. The inland neighbourhoods sit past the marine layer that keeps the coast gray and UV-diffused through May and June, so inland summers run eight to fifteen degrees warmer with more clear days and no cloud buffer. KIAMO Skin treats melasma with gentle peels from $199 whose strength is raised only as the barrier allows.',
     },
     {
       question: 'Can a chemical peel make dark marks worse on darker skin?',
       answer:
-        'Yes, if the acid is too aggressive or applied before the skin is ready. Melanin-rich skin responds to trauma — including a poorly chosen peel — by producing more pigment, a reaction called post-inflammatory hyperpigmentation. This is the same process that causes the dark mark after a pimple, just driven by the peel instead of the breakout. Lira peels are chosen and paced differently for Fitzpatrick types III to V: the strength is matched to the skin at consultation and escalated across a series rather than maximised on the first visit. The pacing is the treatment, not a cautious compromise.',
+        'Yes, if the acid is too aggressive or applied before the skin is ready. Melanin-rich skin responds to trauma by producing more pigment — the same process that causes the mark after a pimple, driven by the peel instead of the breakout. KIAMO Skin paces the LIRA peels for Fitzpatrick types III to V: strength matched to the skin at consultation and escalated across a series rather than maximised on the first visit.',
     },
     {
-      question: 'How many peel sessions does it take to see results on melasma?',
+      question: 'How many peel sessions does melasma need at KIAMO Skin?',
       answer:
-        'Most clients notice visible change after two sessions, with the full result apparent across three to four. Melasma is a chronic condition driven by UV exposure, so the series addresses the pigment that has already formed while home care — specifically daily SPF — prevents new formation between visits. A plan without consistent SPF will not hold, because new UV exposure will continue triggering the same pathway the peels are working to clear.',
-    },
-  ],
-
-  encinitas: [
-    {
-      question: 'How far is Encinitas from the studio?',
-      answer:
-        'About twenty-five miles down I-5, exiting at Washington Street. Clear roads make that near thirty minutes, while the southbound commute through Sorrento Valley pushes it to forty-five or more.',
+        'Most clients notice visible change after two sessions, with the full result across three to four. Melasma is driven by UV exposure as well as hormones, so the series addresses the pigment that has already formed while daily SPF prevents new formation between visits. A plan without consistent SPF does not hold, and KIAMO Skin writes the SPF into the plan at the consultation.',
     },
     {
-      question: 'Can salt water and wind damage the skin barrier?',
+      question: 'Which neighbourhoods in Chula Vista are closest to KIAMO Skin?',
       answer:
-        "Yes. Salt water, wind and the rinse afterwards take away more than they put back, and skin ends up tight, reactive and stinging under products it used to tolerate. DMK Enzyme Therapy is built for that state, working with the skin's own function rather than exfoliating a surface that is already raw.",
-    },
-    {
-      question: 'Does DMK Enzyme Therapy work on skin that is already reactive from surfing?',
-      answer:
-        "That is exactly the state it is designed for. DMK Enzyme Therapy works by activating the skin's own repair function rather than removing surface layers — there is no abrasion, no acid and nothing that adds stress to a barrier that is already compromised. Reactive, sensitised skin responds to it precisely because it does not exfoliate; it supports. The treatment addresses the barrier from the inside out, which is the opposite of what a peel or scrub does and why it is the appropriate plan when the surface is already raw.",
+        'Western Chula Vista — the Third Avenue Village corridor, the bayfront near H Street and the marina district — is the closest, about thirteen miles up I-5. Eastlake and Rancho del Rey add two or three miles but run faster via SR-125 and I-805. The KIAMO Skin studio is at 3067 Reynard Way in Mission Hills with free parking on site.',
     },
   ],
 
   'del-mar': [
     {
-      question: 'How far is Mission Hills from Del Mar?',
+      question: 'Which KIAMO Skin studio serves Del Mar clients?',
       answer:
-        'About twenty-two miles south on I-5 from Del Mar Heights Road, exiting at Washington Street. Off-peak that is a twenty-five minute drive. From Del Mar Village near 15th Street, Del Mar Heights Road east connects to I-5 in about three minutes. From the Fairgrounds on Jimmy Durante Boulevard, Via de la Valle west reaches I-5 directly.',
+        'The studio at 3067 Reynard Way in Mission Hills, with free parking on site. Del Mar clients come north on I-5 to the Washington Street exit, and the KIAMO Skin studio is the second right after it. The same corrective plan applies as for every area: the modalities, the intervals and the session count are set at the first consultation.',
     },
     {
-      question: 'Does the race meet make the southbound drive longer?',
+      question: 'Is a facial in Del Mar worth the drive?',
       answer:
-        'Yes, noticeably. The thoroughbred meet runs mid-July through September, and Opening Day and major stakes races push midday and afternoon traffic onto I-5 from both directions. The southbound merge past Sorrento Valley — which already backs up on commute mornings — adds fifteen to twenty minutes on race days. I-805 south from Del Mar Heights Road runs a similar distance and avoids that pinch point when I-5 is stacked.',
+        'Roughly twenty-five to thirty minutes off-peak on I-5 north, and the studio has free parking on site so the drive ends at the door. A client who visited Del Mar once wrote that the trip was worth it, and the reason KIAMO Skin publishes every price is that the comparison can be made before anyone books — the first visit is $249 with the consultation and treatment included.',
     },
     {
-      question: 'Can sun exposure from the Fairgrounds season show up as texture rather than a burn?',
+      question: 'How does the coastal UV in Del Mar affect skin?',
       answer:
-        'Often, yes. The county fair and the race meet together account for nearly three months of long outdoor afternoons in direct sun — the Grandstand faces southwest, the infield is open, and afternoon UV on the coast is at its highest after the marine layer burns off. That kind of sustained, cumulative exposure does not produce a single visible burn; it produces uneven tone, rough texture and a scalp that is drier and more flaky than it was in spring. Procell Microchanneling addresses texture at the collagen level across a series of three. Keravive clears and rehydrates the scalp. A HydraFacial holds both results between treatment intervals.',
+        'Cumulative UV produces mottled tone and discrete lentigines, and San Diego runs the highest UV index in the continental United States for much of the year. KIAMO Skin treats that with a LIRA peel series — the Gentle Renewal Peel at $199 to start, the Advanced at $299 once the barrier allows — and a HydraFacial at $259 between corrective sessions.',
     },
     {
-      question: 'What treatments work best after weeks of outdoor event exposure?',
+      question: 'Can a HydraFacial be booked before a beach event?',
       answer:
-        'The starting point is always a full skin assessment, because cumulative UV shows differently depending on skin type, barrier condition and how consistently SPF was used. For texture and tone, Procell Microchanneling or a Lira peel series addresses the result of that exposure at different depths. For scalp dryness and buildup, Keravive works through the follicle rather than on the surface. What can safely be combined in one visit depends on the skin\'s current state and is decided at consultation.',
+        'Yes, and it is the right treatment for the week before an event rather than the day before it. A HydraFacial at KIAMO Skin has no downtime, and the booster is selected from the Syndeo device\'s AI skin analysis rather than from a fixed menu. A peel needs a recovery window and does not belong next to deliberate sun exposure.',
     },
     {
-      question: 'How does scalp damage from sun exposure differ from facial damage?',
+      question: 'Does KIAMO Skin treat every skin tone?',
       answer:
-        'The mechanism is the same — UV drives melanin production and collagen breakdown — but the scalp is harder to protect and rarely treated. Most people never apply SPF to their part line, and the part receives direct overhead UV on every clear afternoon. Salt, wind and daily rinsing also affect the scalp more than the face, because shampoo strips the lipid barrier repeatedly. The result is a scalp that is drier, more flaky and slower to recover than it should be. Keravive addresses that specifically: it clears follicle buildup, delivers growth factors at the follicle level, and rehydrates the scalp skin.',
-    },
-  ],
-
-  carlsbad: [
-    {
-      question: 'How long does it take to drive from Carlsbad to Mission Hills?',
-      answer:
-        'Thirty-five to forty minutes on clear roads, and past an hour on the southbound morning commute. It is about thirty-five miles down I-5 from Carlsbad Village or Palomar Airport Road, exiting at Washington Street.',
-    },
-    {
-      question: 'How do you plan a treatment series around a long drive?',
-      answer:
-        'Set the series first and place the appointments around it, rather than booking whenever the skin flares. Procell Microchanneling is usually three sessions spaced four to six weeks apart, and Keravive scalp therapy is also designed as a series of three. Pairing two things into one visit is often the difference between finishing a course and abandoning it halfway, and what can safely be combined is decided at consultation.',
-    },
-    {
-      question: 'Does Procell Microchanneling require much recovery time?',
-      answer:
-        'Minimal. The treated skin is pink for about twenty-four hours, and most clients schedule around that rather than needing a full recovery window. The larger logistics question from Carlsbad is the series itself — three sessions spaced four to six weeks apart — and that is what the first consultation addresses. Whether Procell can be paired with another treatment on the same visit depends on the skin condition and is decided then.',
-    },
-  ],
-
-  'pacific-beach': [
-    {
-      question: 'How far is Pacific Beach from the studio?',
-      answer:
-        'Roughly seven miles, or about fifteen minutes off-peak. From the main Garnet Avenue strip, head east to I-5 south and exit at Washington Street. From Crown Point or Sail Bay, Ingraham Street south to Grand Avenue east is the same distance. Summer weekend traffic on Garnet and Ingraham west of I-5 can add ten to fifteen minutes from mid-morning onward — an earlier appointment clears that.',
-    },
-    {
-      question: 'Can you accumulate sun damage on a gray day in Pacific Beach?',
-      answer:
-        'Yes — and it is the more common way damage builds here. May Gray and June Gloom keep the coast overcast every morning, sometimes into early afternoon, without once lowering the UV index underneath. UVA penetrates cloud cover and fog; it is the wavelength responsible for pigmentation and collagen breakdown, and it keeps working whether or not the sky looks sunny. Pacific Beach lives outdoors year-round — the boardwalk, the surf breaks at Tourmaline, the bay launch at Crown Point — and gray mornings are precisely when SPF gets skipped.',
-    },
-    {
-      question: 'What does salt water do to the skin barrier over time?',
-      answer:
-        'Repeated salt water exposure strips the lipid barrier — the oils that hold the outermost skin layer together. Salt dissolves those lipids efficiently, and the freshwater rinse afterward removes whatever the ocean left behind but also washes away the barrier it was sitting on. Over time the skin becomes tight and reactive, stinging under products it once tolerated and sensitised to the sun it is also being exposed to. DMK Enzyme Therapy works with the skin\'s own repair function rather than exfoliating a surface that is already raw — it is the appropriate treatment for that state, not a stronger peel.',
-    },
-    {
-      question: 'What is the difference between a HydraFacial and a chemical peel for sun damage?',
-      answer:
-        'A HydraFacial cleanses, extracts and infuses hydration in one visit — it is restorative without removing skin, and it works on a sensitised, UV-damaged barrier without irritating it further. A Lira chemical peel works at a deeper level to address uneven pigmentation and texture over a series of visits. They serve different stages: a HydraFacial supports the barrier and delivers immediate results, while a peel series addresses the accumulated pigment that a HydraFacial alone will not shift. Many Pacific Beach clients do both, using the HydraFacial to maintain the barrier between peel intervals.',
-    },
-    {
-      question: 'Does the June Gloom affect the scalp as well as the face?',
-      answer:
-        'Directly. The part line receives UV from above with nothing covering it, and on overcast mornings when SPF is skipped, the scalp accumulates the same UV the face does. Salt water from ocean swimming or surfing compounds it: the part line and hairline take repeated direct sun while the scalp skin dries out under daily rinsing. Keravive scalp therapy addresses both — it clears the buildup at the follicle and rehydrates the scalp skin without any of the abrasion that sensitive skin cannot take.',
+        'Yes — every Fitzpatrick type from I to VI, with the pigment protocols written for the tone they are used on. On skin that has accumulated years of coastal UV, KIAMO Skin starts with the barrier and a gentle protocol rather than escalating straight to the Advanced peel.',
     },
   ],
 
   'la-mesa': [
     {
-      question: 'How far is La Mesa from Mission Hills?',
+      question: 'How far is KIAMO Skin from La Mesa?',
       answer:
-        'Roughly eleven miles west on I-8 through Mission Valley. Fifteen to twenty minutes on a clear freeway, and twenty-five to thirty-five on the westbound commute.',
+        'About fourteen miles east, roughly twenty to twenty-five minutes off-peak via I-8 west to the Washington Street exit, with free parking on site at the studio. It is a straight run with no ferry traffic or coastal detour, and KIAMO Skin schedules the whole corrective course at the first appointment so the intervals fall around recovery.',
     },
     {
-      question: 'Is sun exposure worse inland than at the coast?',
+      question: 'Why does inland skin need a different approach to pigment?',
       answer:
-        'Yes. La Mesa sits about ten miles inland, far enough to miss the marine layer that keeps the beach gray through May and June, and summer afternoons run roughly eight to fifteen degrees warmer than La Jolla or Mission Beach. More clear days means more UV year after year, and cumulative UV is the most consistent driver of melasma and uneven tone.',
+        'Past the marine layer the exposure is longer and the temperature is higher, and the damage that builds there sits deeper than the coastal kind. KIAMO Skin treats it at that depth — a LIRA peel series from $199 for pigment, a HydraFacial at $259 for the barrier and the surface between sessions — and establishes the depth of the pigment at the consultation rather than guessing at it.',
     },
     {
-      question: 'How does cumulative inland UV affect pigmentation over time?',
+      question: 'How many sessions does melasma treatment take at KIAMO Skin?',
       answer:
-        'It builds gradually and without obvious incident — there is no single afternoon that looks like the cause. The pattern is months and years of clear-sky afternoons with less SPF than the UV required, and the result is uneven tone or melasma that appears to have arrived all at once. Inland areas like La Mesa accumulate more UV annually than the coast because the marine layer is absent for most of the day. A Lira peel series addresses the pigment that has already formed, and daily SPF is the variable that determines whether the result holds. Without it, new UV exposure continues triggering the same pathway the peels are working to clear.',
+        'Three to four for most clients, four to six weeks apart. Melasma that has developed past the marine layer usually sits deeper and responds more slowly than the coastal kind, so KIAMO Skin gives a realistic timeline at the consultation rather than a fixed promise, and holds the result with daily SPF.',
+    },
+    {
+      question: 'What does the first visit at KIAMO Skin include?',
+      answer:
+        'A full consultation, a skin analysis and the first treatment, for $249 at KIAMO Skin. The consultation names the concern, assesses the barrier, and produces a written plan with the modalities in it, the intervals and the session count — all before the next appointment is booked, and with no upsell added at the door.',
+    },
+    {
+      question: 'Is a HydraFacial enough, or does the pigment need a peel?',
+      answer:
+        'A HydraFacial at KIAMO Skin works at the surface and in the follicle, and it holds a correction steady between sessions. Pigment sitting deeper than the surface needs a peel. The consultation establishes which of the two the mark is, and KIAMO Skin says so plainly rather than selling the more expensive treatment by default.',
     },
   ],
 
   'north-park': [
     {
-      question: 'How far is North Park from Mission Hills?',
+      question: 'How far is KIAMO Skin from North Park?',
       answer:
-        'Three and a half miles — about ten minutes via University Avenue west through Hillcrest to Washington Street, then Reynard Way. No freeway, no on-ramp, no merge. It is the shortest trip of any area served, and the only one where the whole route stays on surface streets. Parking is free on site.',
+        'About three and a half miles, under ten minutes on surface streets with no freeway. University Avenue west or Morena Boulevard south leads to Washington Street, and the KIAMO Skin studio is at 3067 Reynard Way with free parking on site. It is the closest area to the studio, which is why a four-to-six-week corrective series is practical from here.',
     },
     {
-      question: 'How does being close actually change the treatment plan?',
+      question: 'How does a nearby location change the treatment plan?',
       answer:
-        'Corrective work runs on intervals — a Lira peel series typically calls for three to four sessions spaced four to six weeks apart, with specific home care between each. The interval is fixed by how the skin recovers, not by the drive. But whether someone finishes a course depends heavily on how much it costs them in time. From North Park, a visit is a ten-minute errand on a weekday afternoon. From Carlsbad, it is a logistics decision that involves an hour of driving. The same plan has a much higher completion rate for someone three miles away, and the completed plan is the one that produces results.',
+        'It changes the schedule rather than the treatment. KIAMO Skin maps the whole course at the first consultation — sessions, intervals and total timeline — and the ten-minute drive is what makes finishing a three-session microchanneling series realistic rather than aspirational. A series that has to be rebooked around a forty-minute drive is a series that gets abandoned.',
     },
     {
-      question: 'Which treatment is most popular from North Park?',
+      question: 'What do North Park clients book for most?',
       answer:
-        'Peel series paired with dermaplaning — and proximity is the reason. The peel series requires multiple visits, and a ten-minute trip from University Avenue is what makes it realistic rather than aspirational. Dermaplaning is used either as a preparation step before a peel or as a standalone maintenance treatment between peel intervals. The combination is more effective than either alone, and it is the plan most clients from this area stay consistent with.',
+        'HydraFacials at $259 as the foundation and the maintenance treatment, and Procell microchanneling at $475 for scarring and texture. KIAMO Skin schedules a microchanneling series as three sessions four to six weeks apart, booked together at the first appointment, so the whole course is visible from the start.',
+    },
+    {
+      question: 'Is there parking at KIAMO Skin?',
+      answer:
+        'Free parking is on site at the KIAMO Skin studio, so there is no street parking to find and no garage to pay for. The studio is by appointment only, which means a space is always available on arrival.',
+    },
+    {
+      question: 'How much does a facial cost in San Diego?',
+      answer:
+        'The first visit is $249 at KIAMO Skin and includes the consultation, the skin analysis and the first treatment. A HydraFacial is $259, dermaplaning is $199, and LIRA chemical peels run from $199 to $299. Every price is published before a booking is made.',
+    },
+  ],
+
+  'pacific-beach': [
+    {
+      question: 'How far is KIAMO Skin from Pacific Beach?',
+      answer:
+        'About five miles south, ten to fifteen minutes depending on the stretch of Mission Boulevard and the traffic on it. Free parking is on site at the KIAMO Skin studio at 3067 Reynard Way, so the drive ends at the door. A HydraFacial at $259 with no downtime is the treatment most clients book before a beach day.',
+    },
+    {
+      question: 'What does the marine layer do to skin?',
+      answer:
+        'It keeps the coast cool enough to stay outside for hours, and long exposure produces mottled pigment that sits deeper than a sunburn ever reaches. KIAMO Skin treats that with a LIRA peel series — $199 for the Gentle Renewal Peel, $299 for the Advanced — and a HydraFacial at $259 between corrective sessions.',
+    },
+    {
+      question: 'Can a facial be booked before a beach day?',
+      answer:
+        'Yes, and the order matters. A HydraFacial at KIAMO Skin works without abrasion, so it can be booked close to the water; a peel needs a recovery window and should not sit next to deliberate sun exposure. KIAMO Skin sets that spacing at the consultation rather than after the fact.',
+    },
+    {
+      question: 'What do Pacific Beach clients book for scalp issues?',
+      answer:
+        'Keravive scalp therapy at $599, and a series of three at $1,499 is the usual plan. Salt, UV through the part line and hard water all collect on the scalp, and KIAMO Skin clears the buildup at the follicle rather than dissolving it, which is what makes the result last between visits.',
+    },
+    {
+      question: 'Does KIAMO Skin treat every skin tone?',
+      answer:
+        'Yes — every Fitzpatrick type from I to VI, with the pigment protocols written for the tone they are used on. On Pacific Beach skin, which carries a high UV load, KIAMO Skin starts on the gentle protocol and raises strength only as the barrier allows.',
+    },
+  ],
+
+  'point-loma': [
+    {
+      question: 'How far is KIAMO Skin from Point Loma?',
+      answer:
+        'About twelve miles, roughly twelve minutes via Rosecrans Street east to Washington Street. The KIAMO Skin studio is at 3067 Reynard Way with free parking on site, which is short enough that a corrective series at four-to-six-week intervals stays workable, and short enough that the drive is never the reason a course gets abandoned.',
+    },
+    {
+      question: 'Why does Point Loma skin need the barrier treated first?',
+      answer:
+        'There is water on both sides of the peninsula, and the wind between them strips the lipids that hold the barrier together. KIAMO Skin rebuilds that function before anything is layered on it — DMK Enzyme Therapy at $279 where the barrier is compromised, then the surface work. A peel on a barrier that is not ready does more harm than good.',
+    },
+    {
+      question: 'Can a chemical peel be done on Point Loma skin?',
+      answer:
+        'Yes, and KIAMO Skin uses no thermal energy anywhere in the pigment protocol, because heat is a recognised trigger for melasma. The Gentle Renewal Peel is $199 and the Advanced is $299, and the strength is raised across a series only as the barrier allows.',
+    },
+    {
+      question: 'What is the first visit at KIAMO Skin?',
+      answer:
+        'A full consultation, a skin analysis and the first treatment, for $249 at KIAMO Skin. Kiki, a California licensed esthetician with 7+ years of experience, assesses the barrier and the concern, then writes a plan with the modalities in it, the intervals and the session count — all before the next appointment is booked.',
+    },
+    {
+      question: 'Does KIAMO Skin treat every skin tone?',
+      answer:
+        'Yes — every Fitzpatrick type from I to VI. On a peninsula where reflected UV and salt exposure arrive together, KIAMO Skin writes the pigment protocols for the tone they are used on and uses no heat anywhere in them.',
+    },
+  ],
+
+  'hillcrest': [
+    {
+      question: 'How close is KIAMO Skin to Hillcrest?',
+      answer:
+        'About five minutes on Washington Street, with free parking on site at the studio. It is the closest neighbourhood to KIAMO Skin at 3067 Reynard Way, and the reason a corrective series at four-to-six-week intervals is realistic from here. No freeway, no on-ramp, no merge.',
+    },
+    {
+      question: 'Which treatments are available for Hillcrest clients?',
+      answer:
+        'Every treatment on the KIAMO Skin menu — HydraFacial at $259, LIRA chemical peels from $199, dermaplaning at $199, Procell microchanneling at $475, DMK enzyme therapy at $279 and Keravive scalp therapy at $599. What the proximity changes is the schedule, not the treatment: KIAMO Skin maps the whole course at the first appointment.',
+    },
+    {
+      question: 'What skin concern do Hillcrest clients book for?',
+      answer:
+        'Uneven tone and texture that no home routine has moved. KIAMO Skin treats it with clinical equipment — a HydraFacial at $259 for the surface and the follicle, and a LIRA peel series from $199 for the pigment beneath it, with a HydraFacial between corrective sessions.',
+    },
+    {
+      question: 'How much does a facial cost?',
+      answer:
+        'The first visit is $249 at KIAMO Skin and includes the consultation, the skin analysis and the first treatment. A HydraFacial is $259, dermaplaning is $199, and LIRA chemical peels run from $199 to $299. Every price is published on the site before a booking is made.',
+    },
+    {
+      question: 'Is there parking at the studio?',
+      answer:
+        'Free parking is on site at the KIAMO Skin studio, so there is no street parking to find and no garage to pay for. The studio is by appointment only, which means a space is always available on arrival.',
     },
   ],
 };

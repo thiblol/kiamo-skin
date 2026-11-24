@@ -10,6 +10,7 @@ import northPark from '../assets/hero-north-park-hydrafacial-series-melanin-rich
 import pacificBeach from '../assets/hero-pacific-beach-lira-chemical-peel-sun-damage-san-diego.jpg';
 import pointLoma from '../assets/hydrafacial-point-loma-san-diego.jpg';
 import hillcrest from '../assets/hydrafacial-hillcrest-san-diego.jpg';
+import sanDiego from '../assets/hero-mission-hills-hydrafacial-studio-reynard-way-san-diego.jpg';
 
 /**
  * The hero photograph for each area.
@@ -31,6 +32,7 @@ export const areaImages: Record<string, ImageMetadata> = {
   'pacific-beach': pacificBeach,
   'point-loma': pointLoma,
   hillcrest,
+  'san-diego': sanDiego,
 };
 
 /**
@@ -50,4 +52,6 @@ export const areaImageAlts: Record<string, string> = {
   'pacific-beach': 'LIRA chemical peel for sun damage in Pacific Beach',
   'point-loma': 'HydraFacial treatment for Point Loma clients',
   hillcrest: 'HydraFacial treatment for Hillcrest clients',
+  'san-diego':
+    'HydraFacial treatment at the KIAMO Skin studio in Mission Hills, San Diego',
 };

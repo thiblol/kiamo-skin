@@ -12,34 +12,34 @@ import type { Faq } from './faqs';
 
 export const melaninFaqs: Faq[] = [
   {
-    question: 'Where can you find a Black esthetician in San Diego?',
+    question: 'Where can a client finds a Black esthetician in San Diego?',
     answer:
       'KIAMO Skin is a Black-owned studio at 3067 Reynard Way in San Diego, and treatment is one-to-one with Kiki, a licensed esthetician. Melanin-rich skin is the specialism rather than a service line — acne, scarring, pigmentation and barrier health in Black and brown skin. The studio is minutes from Hillcrest, Bankers Hill and Little Italy, with free parking on site, and clients travel in from Chula Vista, La Jolla, North Park and across the county.',
   },
   {
     question: 'Can a Black person get a chemical peel?',
     answer:
-      'Yes — chemical peels are safe on Black skin when the acid, the strength and the pacing are chosen for it. The risk is not the peel itself but over-treatment: melanin-rich skin answers inflammation by producing more pigment, so an aggressive peel can create the exact dark marks it was meant to clear. Every peel here is patch-tested and started gently, with strength escalating across a series. Anywhere willing to put a strong peel on Black skin at a first visit is the wrong room.',
+      'Yes — chemical peels are safe on Black skin at KIAMO Skin when the acid, the strength and the pacing are chosen for it. The risk is not the peel itself but over-treatment: melanin-rich skin answers inflammation by producing more pigment, so an aggressive peel can create the exact dark marks it was meant to clear. Every peel here is patch-tested and started gently, with strength escalating across a series. Anywhere willing to put a strong peel on Black skin at a first visit is the wrong room.',
   },
   {
     question: 'What kind of facial is best for Black skin?',
     answer:
-      'The best facial for Black skin is the one matched to what the skin is actually doing, which is why the first visit is an assessment rather than a fixed protocol. Congestion and dullness usually start with a HydraFacial; post-inflammatory marks and melasma are worked through with a series of gentle peels; acne scarring and texture call for microchanneling; and skin that stings or flushes needs the barrier rebuilt before anything corrective begins. Choosing the treatment before assessing the skin is how melanin-rich skin gets damaged.',
+      'The best facial for Black skin is the one matched to what the skin is actually doing, which is why the first visit at KIAMO Skin is an assessment rather than a fixed protocol. Congestion and dullness usually start with a HydraFacial; post-inflammatory marks and melasma are worked through with a series of gentle peels; acne scarring and texture call for microchanneling; and skin that stings or flushes needs the barrier rebuilt before anything corrective begins. Choosing the treatment before assessing the skin is how melanin-rich skin gets damaged.',
   },
   {
-    question: 'What should you not use on melanin-rich skin?',
+    question: 'What should a client not use on melanin-rich skin?',
     answer:
-      'Avoid anything that burns, stings or leaves skin raw, because irritation is what triggers dark marks in the first place — the American Academy of Dermatology advises stopping any product that stings on application, since it may darken existing spots. Skip aggressive scrubs, high-strength acids used without guidance, and unregulated fade creams: researchers have found undisclosed steroids and mercury in some imported skin-lightening products, and prolonged steroid use can leave skin permanently discoloured. Gentle and consistent outperforms strong and occasional on this skin, every time.',
+      'KIAMO Skin advises avoiding anything that burns, stings or leaves skin raw, because irritation is what triggers dark marks in the first place — the American Academy of Dermatology advises stopping any product that stings on application, since it may darken existing spots. Skip aggressive scrubs, high-strength acids used without guidance, and unregulated fade creams: researchers have found undisclosed steroids and mercury in some imported skin-lightening products, and prolonged steroid use can leave skin permanently discoloured. Gentle and consistent outperforms strong and occasional on this skin, every time.',
   },
   {
     question: 'Why do dark marks last longer on Black and brown skin?',
     answer:
-      'Dark marks last longer on Black and brown skin because the melanocytes are more reactive, so any inflammation produces more pigment and produces it for longer. Post-inflammatory hyperpigmentation is most common and most severe in Fitzpatrick types IV to VI, and in people with darker skin who have acne the incidence runs as high as 65 percent. Where the pigment sits also decides the timeline: surface pigment usually clears over six to twelve months, while deeper pigment can take years and is far more resistant to treatment. This is why controlling the cause comes before fading the mark.',
+      'KIAMO Skin treats this by working with the biology rather than against it: dark marks last longer on Black and brown skin because the melanocytes are more reactive, so any inflammation produces more pigment and produces it for longer. Post-inflammatory hyperpigmentation is most common and most severe in Fitzpatrick types IV to VI, and in people with darker skin who have acne the incidence runs as high as 65 percent. Where the pigment sits also decides the timeline: surface pigment usually clears over six to twelve months, while deeper pigment can take years and is far more resistant to treatment. This is why controlling the cause comes before fading the mark.',
   },
   {
     question: 'Does sunscreen actually help with dark spots on deeper skin tones?',
     answer:
-      'Sunscreen is the treatment, not an afterthought — without it, pigment returns faster than any treatment can clear it. For deeper skin tones the specific advice is a tinted sunscreen containing iron oxide at SPF 30 or higher, because visible light worsens melasma and dark spots and a standard UVA/UVB sunscreen does not block it. San Diego makes this harder than it sounds: the overcast mornings are the usual reason people stop applying it, and the UV is still there behind the marine layer.',
+      'KIAMO Skin treats sunscreen as the treatment, not an afterthought — without it, pigment returns faster than any treatment can clear it. For deeper skin tones the specific advice is a tinted sunscreen containing iron oxide at SPF 30 or higher, because visible light worsens melasma and dark spots and a standard UVA/UVB sunscreen does not block it. San Diego makes this harder than it sounds: the overcast mornings are the usual reason people stop applying it, and the UV is still there behind the marine layer.',
   },
   {
     question: 'How far do clients travel for melanin-rich skin treatment in San Diego?',
@@ -54,31 +54,31 @@ export const melaninFaqs: Faq[] = [
   {
     question: 'Why is San Diego sun exposure especially risky for melasma and dark spots?',
     answer:
-      'San Diego has year-round sun exposure with an average of 266 sunny days per year, and UV levels remain high even on overcast mornings when the marine layer is present. This makes daily SPF essential for anyone treating melasma or post-inflammatory hyperpigmentation—skipping it even one day can reverse weeks of treatment progress. The coastal climate also means people underestimate sun exposure during morning walks, outdoor dining, and beach visits, all of which trigger pigment production in melanin-rich skin. For anyone treating pigmentation in San Diego, sunscreen is not optional.',
+      'KIAMO Skin works with the climate as it is: San Diego has year-round sun exposure with an average of 266 sunny days per year, and UV levels remain high even on overcast mornings when the marine layer is present. This makes daily SPF essential for anyone treating melasma or post-inflammatory hyperpigmentation—skipping it even one day can reverse weeks of treatment progress. The coastal climate also means people underestimate sun exposure during morning walks, outdoor dining, and beach visits, all of which trigger pigment production in melanin-rich skin. For anyone treating pigmentation in San Diego, sunscreen is not optional.',
   },
   {
-    question: 'Can you treat acne scars on Black skin in San Diego?',
+    question: 'Can a client treat acne scars on Black skin in San Diego?',
     answer:
       'Yes — acne scarring on Black skin can be treated safely with microchanneling, a technique that stimulates collagen production without the heat or light that can trigger additional pigmentation in darker skin tones. At KIAMO Skin in San Diego, Procell microchanneling is used because it works mechanically rather than with heat, making it safe for melanin-rich skin where heat-based treatments (like certain lasers) can worsen hyperpigmentation. Treatment is always paced across a series rather than performed aggressively in one session, and every pass is customized for skin tone and scar depth.',
   },
   {
     question: 'Will a peel or facial make my skin lighter permanently?',
     answer:
-      'No. A peel or a facial removes surface cells, and what grows back is the skin\'s own melanin, not a lighter version of it. Skin tone is set by melanocyte activity, and no esthetic treatment changes that. What fades is pigment sitting in the upper layers — the marks left behind by acne, a reaction or sun damage — and what changes is how evenly the surface reflects light. That is the difference between skin that looks brighter and colour that has actually changed, and it is not what any peel does.',
+      'No. KIAMO Skin does not lighten skin, and the reason is biological: a peel or a facial removes surface cells, and what grows back is the skin\'s own melanin, not a lighter version of it. Skin tone is set by melanocyte activity, and no esthetic treatment changes that. What fades is pigment sitting in the upper layers — the marks left behind by acne, a reaction or sun damage — and what changes is how evenly the surface reflects light. That is the difference between skin that looks brighter and colour that has actually changed, and it is not what any peel does.',
   },
   {
     question: 'Will my melasma come back if I stop treatment?',
     answer:
-      'It usually does, and that is not a failure of the treatment. Melasma is a chronic condition with near-certain recurrence while the triggers stay active — hormonal change and UV are both still there after the last session. So the plan does not end with the correction; it moves into maintenance. What holds it steady is daily mineral sunscreen with iron oxides, a vitamin C or niacinamide serum each morning for ongoing tyrosinase inhibition, and a retinoid a couple of nights a week once the skin is stable. Melasma is manageable rather than permanently cured, and anyone promising a cure is describing a timeline that does not exist.',
+      'It usually does at KIAMO Skin, and that is not a failure of the treatment. Melasma is a chronic condition with near-certain recurrence while the triggers stay active — hormonal change and UV are both still there after the last session. So the plan does not end with the correction; it moves into maintenance. What holds it steady is daily mineral sunscreen with iron oxides, a vitamin C or niacinamide serum each morning for ongoing tyrosinase inhibition, and a retinoid a couple of nights a week once the skin is stable. Melasma is manageable rather than permanently cured, and anyone promising a cure is describing a timeline that does not exist.',
   },
   {
     question: 'Why did nothing work for my melasma?',
     answer:
-      'Three reasons account for most of it. The wrong target — melasma is hormonal and sits deeper than sun damage, so a routine aimed at surface pigment can clear marks that were never the problem. The wrong pace — aggressive resurfacing is the most common way melasma gets made worse, and on melanin-rich skin a peel that is too strong triggers the exact darkening it was meant to clear. And the missing daily step — without sunscreen every morning, new pigment forms faster than any treatment clears it. Correct those three and the plan changes from a product list into a paced series with home care between the sessions.',
+      'Three reasons account for most of it at KIAMO Skin. The wrong target — melasma is hormonal and sits deeper than sun damage, so a routine aimed at surface pigment can clear marks that were never the problem. The wrong pace — aggressive resurfacing is the most common way melasma gets made worse, and on melanin-rich skin a peel that is too strong triggers the exact darkening it was meant to clear. And the missing daily step — without sunscreen every morning, new pigment forms faster than any treatment clears it. Correct those three and the plan changes from a product list into a paced series with home care between the sessions.',
   },
   {
     question: 'Are there treatments that work without a prescription?',
     answer:
-      'Most of them. Chemical peels, microchanneling, enzyme therapy and dermaplaning are all in-office treatments that need no prescription, and they are what a corrective plan is built from. What needs a prescription is the topical medication layer — hydroquinone, tretinoin, tranexamic acid — which works at the cellular level and is prescribed by a dermatologist. For stubborn melasma the two together produce better results than either alone: the prescription handles the cellular side, and the in-office treatments plus the home routine handle the surface and the daily trigger.',
+      'Most of them. KIAMO Skin uses chemical peels, microchanneling, enzyme therapy and dermaplaning — all in-office treatments that need no prescription, and they are what a corrective plan is built from. What needs a prescription is the topical medication layer — hydroquinone, tretinoin, tranexamic acid — which works at the cellular level and is prescribed by a dermatologist. For stubborn melasma the two together produce better results than either alone: the prescription handles the cellular side, and the in-office treatments plus the home routine handle the surface and the daily trigger.',
   },
 ];

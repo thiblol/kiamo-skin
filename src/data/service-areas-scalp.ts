@@ -154,7 +154,7 @@ export const serviceAreaContentScalp: Record<string, ServiceAreaContent> = {
     depth: {
       heading: 'What a scalp treatment does in the room',
       body:
-        "A Keravive treatment takes twenty to twenty-five minutes, and the whole appointment is a scalp treatment. The scalp is cleansed, exfoliated and extracted section by section, the peptide complex goes on to nourish the sebaceous glands, and the take-home spray leaves with you for the weeks between. For a surf-intense client that last part matters more than usual, because the water is still putting minerals back after every session in the ocean.",
+        "A Keravive treatment takes twenty to twenty-five minutes, and the whole appointment is a scalp treatment. The scalp is cleansed, exfoliated and extracted section by section, the peptide complex goes on to nourish the sebaceous glands, and the take-home spray leaves with a client for the weeks between. For a surf-intense client that last part matters more than usual, because the water is still putting minerals back after every session in the ocean.",
       process: [
         {
           step: 'Cleanse',
@@ -202,7 +202,7 @@ export const serviceAreaContentScalp: Record<string, ServiceAreaContent> = {
       {
         question: 'How much does a scalp series cost for Encinitas surfers?',
         answer:
-          "A treatment is $599. A series of three is $1,499, the number most Encinitas clients work with, because the mineral load rebuilds within weeks of every shower and one session clears rather than corrects. Sessions are spaced about a month apart, and the take-home peptide spray is included at each one so the interval does the work between appointments. If you are new, the first visit is $249 and covers the consultation and a treatment. Booking is a request, not a confirmed slot.",
+          "A treatment is $599. A series of three is $1,499, the number most Encinitas clients work with, because the mineral load rebuilds within weeks of every shower and one session clears rather than corrects. Sessions are spaced about a month apart, and the take-home peptide spray is included at each one so the interval does the work between appointments. If a client is new, the first visit is $249 and covers the consultation and a treatment. Booking is a request, not a confirmed slot.",
       },
     ],
     body: `<h2 class="t-h3 mt-12 mb-6">Where the residue actually sits</h2>
@@ -396,7 +396,7 @@ export const serviceAreaContentScalp: Record<string, ServiceAreaContent> = {
       {
         question: 'How often should I come in from Pacific Beach?',
         answer:
-          "A single treatment is $599, and it clears the scalp on the day. The series of three, spaced about a month apart, is $1,499 and is the plan that gives scalp work its best chance, because hard water puts the mineral layer back within weeks of every shower. At fifteen minutes, a monthly appointment is easy to keep, and many Pacific Beach clients continue at that interval after the series rather than stopping. If you are new, the first visit is $249 for the consultation and a treatment. Booking is a request.",
+          "A single treatment is $599, and it clears the scalp on the day. The series of three, spaced about a month apart, is $1,499 and is the plan that gives scalp work its best chance, because hard water puts the mineral layer back within weeks of every shower. At fifteen minutes, a monthly appointment is easy to keep, and many Pacific Beach clients continue at that interval after the series rather than stopping. If a client is new, the first visit is $249 for the consultation and a treatment. Booking is a request.",
       },
     ],
     body: `<h2 class="t-h3 mt-12 mb-6">Sunscreen, salt, and the part line nobody covers</h2>

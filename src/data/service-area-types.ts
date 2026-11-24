@@ -35,6 +35,24 @@ export interface AreaSlug {
 export interface AreaShell {
   slug: string;
   name: string;
+  /**
+   * True for the city the studio is in.
+   *
+   * The area pages are written for places a client drives TO — the page has
+   * to argue that the drive is worth it. The city the studio is in cannot
+   * argue that, because there is no drive, and the sections that are about
+   * the drive ("Getting to", "Other cities we serve") are wrong there. The
+   * flag marks that one case so the templates can branch on it.
+   */
+  isStudioCity?: boolean;
+  /**
+   * The full place label — "La Jolla, San Diego, CA".
+   *
+   * Overrides the default built from the name and the slug. It exists for
+   * the city the studio is in, where there is no second city to add and the
+   * default would read "San Diego, San Diego, CA".
+   */
+  placeLabel?: string;
   gettingHere: string;
   localConcern: { heading: string; body: string };
   allAbout: { body: string; facts: { label: string; value: string }[] };
@@ -102,7 +120,14 @@ export interface ServiceAreaContent {
   depth: {
     heading: string;
     body: string;
-    process: { step: string; description: string }[];
+    /**
+     * The steps.
+     *
+     * Two key names are in use across the data files — `description` in the
+     * core twenty-five and `body` in the volume-led set. Both are accepted
+     * so neither set renders an empty paragraph.
+     */
+    process: { step: string; description?: string; body?: string }[];
   };
   intent: { heading: string; body: string };
   faqs: Faq[];
@@ -122,6 +147,7 @@ export interface ServiceAreaRecord extends ServiceAreaContent {
   service: ServiceSlug;
   area: string;
   /** The area shell. */
+  placeLabel?: string;
   gettingHere: string;
   localConcern: { heading: string; body: string };
   allAbout: { body: string; facts: { label: string; value: string }[] };

@@ -1,7 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/sections/Hero.astro';
-import QuickAnswer from '../components/sections/QuickAnswer.astro';
+
 import TreatmentMarquee from '../components/sections/TreatmentMarquee.astro';
 import Credentials from '../components/sections/Credentials.astro';
 import ConcernTiles from '../components/sections/ConcernTiles.astro';
@@ -69,9 +69,25 @@ const homepageUrl = Astro.site ? new URL('/', Astro.site).href : 'https://kiamos
  * the old one ("Facial & Scalp Spa in San Diego") split. It leads with
  * "Corrective" because that is what the studio does and it addresses every
  * skin type and every concern rather than one segment.
+ *
+ * The title and the H1 no longer say the same thing. The title holds the
+ * spa wording and the H1 holds "Corrective facials" — two head terms, so
+ * the page covers two queries instead of staking one. The description opens
+ * with the brand, because the first 140 characters are what a snippet shows
+ * and a snippet that names the studio is one a reader recognises.
  */
-const title = 'Corrective Facial Spa in San Diego | KIAMO Skin';
-const description = `Corrective facial spa in San Diego. First visit $249 includes the consultation. Pigmentation, acne and scalp therapy. ${reviewStats.count} five-star Google reviews.`;
+const title = 'Corrective Facial Spa in San Diego, CA | KIAMO Skin';
+/**
+ * The description.
+ *
+ * It opens with the brand, because the first 140 characters are what a
+ * snippet shows and a snippet that names the studio is one a reader
+ * recognises. It is held at 155 characters — the guard suite's cap — with
+ * room to spare, because the review count at the end grows as reviews come
+ * in and a description that breaks the build on the next review is one
+ * nobody wants to maintain.
+ */
+const description = `KIAMO Skin — corrective facial spa in San Diego, CA. First visit $249, consultation included. Pigment, acne and scalp work. ${reviewStats.count} five-star Google reviews.`;
 ---
 
 <BaseLayout title={title} description={description} headerTheme="dark" siteInventory>
@@ -87,10 +103,11 @@ const description = `Corrective facial spa in San Diego. First visit $249 includ
 
   <Hero />
 
-  {/* The answer and the rating, in one band. The rating used to have a band
-      of its own, which put two thin strips between the hero and the first
-      real section. */}
-  <QuickAnswer />
+  {/* The prices. The quick answer that used to sit in a band between the
+      hero and the prices now lives inside the hero, with the review card
+      beside the booking button — so the first screen carries the offer, the
+      answer and the proof, and the page opens on content rather than on a
+      strip of pale colour. */}
   <TreatmentMarquee />
 
   {/* The treatments, where to start with them, and what each one costs. */}
@@ -104,7 +121,7 @@ const description = `Corrective facial spa in San Diego. First visit $249 includ
   {/* The request. The price, the proof and the button, together — and the
       membership, which used to appear on this page only inside a client's
       review quote. */}
-  <RequestBand heading="Start in San Diego with a price before you book." eventLabel="start_here" />
+  <RequestBand heading="Start in San Diego with a price before a booking is made." eventLabel="start_here" />
 
   {/* Why-us proof: the positioning line, the practitioner, the credentials. */}
   <Credentials />

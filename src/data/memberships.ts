@@ -8,7 +8,7 @@
  *
  * 1. No tier states its own saving. The a-la-carte prices are published on the
  *    treatment pages and repeated in `ledger` below; the reader does the
- *    arithmetic. Printing a computed "you save $X" would assert a number no
+ *    arithmetic. Printing a computed "a client save $X" would assert a number no
  *    menu item carries, which is exactly what the price guard exists to stop.
  * 2. `terms` is rendered as a real section, never as fine print. California's
  *    Automatic Renewal Law (Bus. & Prof. Code §17600 et seq., as amended by
@@ -64,7 +64,7 @@ export const tiers: Tier[] = [
     includes: [
       'A customized HydraFacial each month',
       'Dermaplaning or microcurrent, your choice',
-      'A corrective booster selected for your concern',
+      'A corrective booster selected for the concern',
       'LED light therapy',
       'A personalized Hydrojelly mask',
     ],
@@ -120,7 +120,7 @@ export const tiers: Tier[] = [
 export const memberBenefits = [
   {
     title: 'One personalized treatment every month',
-    body: 'Selected for what your skin is doing that month, not booked as the same protocol on repeat.',
+    body: 'Selected for what the skin is doing that month, not booked as the same protocol on repeat.',
   },
   {
     title: '15% off retail',
@@ -160,7 +160,7 @@ export const flexibility = [
   {
     question: 'What if I miss a month?',
     answer:
-      'The treatment rolls over and your membership stays active. Up to three can be banked at once — past that the point of a monthly rhythm is gone, and a plan you are three months behind on is a plan that is not working.',
+      'The treatment rolls over and your membership stays active. Up to three can be banked at once — past that the point of a monthly rhythm is gone, and a plan a client is three months behind on is a plan that is not working.',
   },
   {
     question: 'What if I want something more advanced?',
@@ -230,7 +230,7 @@ export const firstMonths = [
 export const terms = [
   'Memberships are billed automatically within the first week of each month.',
   'Membership begins with a six-month commitment, then continues month to month.',
-  'After the first six months you may cancel your membership with 30 days notice before the next month to month cycle. Text or email.',
+  'After the first six months a client may cancel the membership with 30 days notice before the next month to month cycle. Text or email.',
   'Unused monthly treatments roll over while your membership is active, up to three at a time.',
   'Memberships cannot be paused. After the first six months a membership can be cancelled and restarted later, subject to current availability and pricing.',
   'Membership treatments are for one person. A single unused treatment may be gifted to one guest.',

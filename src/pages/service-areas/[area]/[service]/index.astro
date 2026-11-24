@@ -25,9 +25,10 @@ import {
   getServiceAreasForService,
   getServiceAreasForArea,
 } from '../../../../data/service-areas-index';
-import { servicePath, areaPath, areaServicePath } from '../../../../config/urls';
+import { servicePath, areaPath, areaServicePath, areaPlaceLabel, areaMapPlace } from '../../../../config/urls';
 import { areaImages, areaImageAlts } from '../../../../data/area-images';
 import { AREA_CLUSTER, CONTENT_REVISED } from '../../../../data/page-dates';
+import { serviceAreaHeroes } from '../../../../data/service-area-heroes';
 
 export function getStaticPaths() {
   return serviceAreas.map((record) => ({
@@ -39,6 +40,48 @@ export function getStaticPaths() {
 const { record } = Astro.props;
 
 const service = services.find((s) => s.slug === record.service);
+
+/**
+ * The place label: "La Jolla, San Diego, CA".
+ *
+ * The area pages used to name the neighbourhood and sometimes the city, and
+ * never the state. A reader types the postal form, so the label carries all
+ * three parts, and the city the studio is in overrides the default because
+ * "San Diego, San Diego, CA" is not a place.
+ */
+const placeLabel = record.placeLabel ?? areaPlaceLabel(record.area, record.name);
+
+/**
+ * The place, without the state.
+ *
+ * "La Jolla, San Diego" for the heading, where the state would push the
+ * heading onto a third line. The state is still on the page — in the title,
+ * the eyebrow, the description and the body.
+ */
+const h1Place = placeLabel.replace(/, CA$/, '');
+
+/**
+ * The title, with the state.
+ *
+ * The records were written with the city but not the state, and the state is
+ * what a reader types — "facial la jolla ca". The place is added where the
+ * 60-character guard allows it. Where it does not fit, the title keeps its
+ * original wording and the place still names the page in the heading, the
+ * eyebrow, the description and the body.
+ *
+ * The local angle in the record titles — "HydraFacial for Ocean Swimmers La
+ * Jolla" — is kept. That angle is the differentiation between two pages
+ * about the same treatment, and it is a large part of what keeps the cluster
+ * from reading as a doorway page.
+ */
+const title = (() => {
+  const head = record.title.replace(/ \| KIAMO Skin$/, '');
+  if (head.includes('CA')) return record.title;
+  const withState = `${head}, CA`;
+  return withState.length + ' | KIAMO Skin'.length <= 60
+    ? `${withState} | KIAMO Skin`
+    : record.title;
+})();
 
 /** The display name of a service, for the sibling link labels. */
 const serviceName = (slug: string) => services.find((s) => s.slug === slug)?.name ?? slug;
@@ -60,16 +103,25 @@ const siblingServices = getServiceAreasForArea(record.area)
   }));
 
 /**
- * The hero paragraph for a service-and-city page.
+ * The hero for this specific pair.
  *
  * The treatment comes first and the city follows, because the city is the
  * reason THIS treatment matters here — the salt air in Encinitas, the inland
- * UV in Chula Vista. The full local context is further down the page, where
- * it is the reason to trust the drive rather than the reason to book.
+ * UV in Chula Vista, the highest UV index in the country in San Diego.
+ *
+ * The claim and the paragraph are written per pair, in
+ * `data/service-area-heroes.ts`. They used to come from the service's own
+ * hero, which meant "HydraFacial in La Jolla" and "HydraFacial in Carlsbad"
+ * opened with the same two sentences differing by one clause — the doorway
+ * pattern Google's guidance describes, and 1,329 page pairs in this cluster
+ * sharing more than a quarter of their wording. The per-pair text is what
+ * removes it, and it is also where the brand belongs: a hero that could be
+ * published by any studio in any city is not what this cluster needs.
  */
-const heroParagraph = service
-  ? `${service.hero.paragraph} ${record.heroCityLine ?? ''}`.trim()
-  : record.opener;
+const pairHero = serviceAreaHeroes[`${record.service}:${record.area}`];
+
+const heroParagraph = pairHero?.paragraph ?? service?.hero.paragraph ?? record.opener;
+const heroClaim = pairHero?.claim ?? service?.hero.claim ?? record.opener;
 
 const siblingCities = getServiceAreasForService(record.service)
   .filter((r) => r.area !== record.area)
@@ -113,7 +165,11 @@ const siblingCities = getServiceAreasForService(record.service)
     depth={record.depth}
     intent={record.intent}
     localConcern={record.localConcern}
-    gettingHere={record.gettingHere}
+    landmarks={record.landmarks}
+    gettingHereHeading={
+      record.area === 'san-diego' ? 'Landmarks across San Diego' : `Landmarks in ${record.name}`
+    }
+    mapPlace={areaMapPlace(record.area, placeLabel)}
     steps={record.depth.process}
     pricing={service?.pricing}
     planMembers={service?.planMembers}
@@ -130,10 +186,10 @@ const siblingCities = getServiceAreasForService(record.service)
     siblingServices={siblingServices}
     siblingCities={siblingCities}
     hero={{
-      eyebrow: service?.hero.eyebrow ?? record.title,
+      eyebrow: placeLabel,
       serviceName: service?.name ?? record.service,
-      cityName: record.name,
-      claim: service?.hero.claim ?? record.opener,
+      cityName: h1Place,
+      claim: heroClaim,
       paragraph: heroParagraph,
       image: areaImages[record.area],
       imageAlt: areaImageAlts[record.area],

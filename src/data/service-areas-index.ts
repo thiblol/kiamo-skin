@@ -5,6 +5,7 @@ import { serviceAreaContentMelasmaB } from './service-areas-melasma-b';
 import { serviceAreaContentHyperpigA } from './service-areas-hyperpig-a';
 import { serviceAreaContentHyperpigB } from './service-areas-hyperpig-b';
 import { serviceAreaContentScalp } from './service-areas-scalp';
+import { serviceAreaContentSanDiego } from './service-areas-san-diego';
 import type { ServiceAreaRecord, ServiceAreaContent } from './service-area-types';
 
 /**
@@ -35,10 +36,11 @@ const allContent: Record<string, ServiceAreaContent> = {
   ...serviceAreaContentHyperpigA,
   ...serviceAreaContentHyperpigB,
   ...serviceAreaContentScalp,
+  ...serviceAreaContentSanDiego,
 };
 
-export const serviceAreas: ServiceAreaRecord[] = Object.entries(allContent).map(
-  ([k, content]) => {
+export const serviceAreas: ServiceAreaRecord[] = Object.entries(allContent)
+  .map(([k, content]) => {
     const shell = shellBySlug[content.area as string];
     if (!shell) {
       throw new Error(`No area shell for "${k}" (area "${content.area}")`);
@@ -58,8 +60,17 @@ export const serviceAreas: ServiceAreaRecord[] = Object.entries(allContent).map(
        */
       ...(content.quickAnswer ? { quickAnswer: content.quickAnswer } : {}),
     } as ServiceAreaRecord;
-  },
-);
+  })
+  /**
+   * The studio's own city first.
+   *
+   * Every list that renders service-and-city records reads this array: the
+   * city links under a treatment, the sibling cities on a service-and-city
+   * page, the schema's sibling list. San Diego belongs at the top of all of
+   * them, because a reader in San Diego is not a visitor to the studio and
+   * the studio is not a drive away — it is the destination.
+   */
+  .sort((a, b) => (a.area === 'san-diego' ? -1 : b.area === 'san-diego' ? 1 : 0));
 
 /** One record. Returns undefined for a pair that does not exist. */
 export const getServiceArea = (service: string, area: string) =>

@@ -16,7 +16,7 @@ import type { AreaShell } from './service-area-types';
  * hydrafacial-areas.ts. Where the two cluster files disagreed on an area's
  * landmarks, ZIP codes, or city modifiers, the fuller list was kept.
  */
-export const areaShells: AreaShell[] = [
+const shellList: AreaShell[] = [
   {
   slug: 'la-jolla',
   name: 'La Jolla',
@@ -106,7 +106,7 @@ export const areaShells: AreaShell[] = [
   schemaDescription: 'Corrective facials and scalp therapy for La Jolla clients at the KIAMO Facial spa in Mission Hills, San Diego.',
   quickAnswer: 'KIAMO Skin treats barrier damage and scalp conditions from year-round ocean exposure at a one-room facial spa in San Diego (92103), about 12 miles south of La Jolla Village via I-5. Kiki, a California licensed esthetician with 7+ years specializing in melanin-rich skin, uses HydraFacial Syndeo vortex extraction and Keravive scalp therapy for swimmers from La Jolla Cove, Windansea, and La Jolla Shores. Treatments start at $259, with series planning for ocean swimmers who need multiple visits.',
   serviceAreaParagraph: 'KIAMO Skin serves clients from across La Jolla, including the Village near Prospect Street and Girard Avenue (92037), Bird Rock at the southern coastal edge (92037), La Jolla Shores near Scripps Institution of Oceanography and Kellogg Park (92037), the UCSD campus and graduate housing corridor (92093), and Windansea Beach neighborhoods along Neptune Place. Many clients also travel from adjacent UTC near Westfield mall and the Costa Verde shopping district, Torrey Pines Mesa above Torrey Pines Golf Course, the northern Pacific Beach border along Tourmaline Street, and University City east of I-5. The studio is in Mission Hills, San Diego County (92103), making it accessible to all coastal areas via southbound I-5 from La Jolla Village Drive (Exit 28), Gilman Drive (Exit 27), or Genesee Avenue (Exit 26).',
-  navigationContext: 'From La Jolla Cove near Coast Boulevard and the Children\'s Pool, head east on Torrey Pines Road toward I-5 — you\'ll pass UCSD Medical Center Hillcrest on the right after about three miles. Merge onto I-5 south just past the Genesee Avenue interchange (Exit 26). Stay in the center lanes through the Sorrento Valley corridor where right lanes stack during commute hours. Washington Street (Exit 17) comes up about 8 miles south of the merge, just past Old Town Transit Center. Turn left at the exit, cross over the freeway, and Reynard Way is the first right turn after you pass through the Washington Street and India Street intersection. The studio at 3067 Reynard Way sits between Mission Hills and Middletown, approximately 0.4 miles from the freeway exit with free parking on site.',
+  navigationContext: 'From La Jolla Cove near Coast Boulevard and the Children\'s Pool, head east on Torrey Pines Road toward I-5 — a client\'ll pass UCSD Medical Center Hillcrest on the right after about three miles. Merge onto I-5 south just past the Genesee Avenue interchange (Exit 26). Stay in the center lanes through the Sorrento Valley corridor where right lanes stack during commute hours. Washington Street (Exit 17) comes up about 8 miles south of the merge, just past Old Town Transit Center. Turn left at the exit, cross over the freeway, and Reynard Way is the first right turn after a client pass through the Washington Street and India Street intersection. The studio at 3067 Reynard Way sits between Mission Hills and Middletown, approximately 0.4 miles from the freeway exit with free parking on site.',
   geoData: {
     zipCodes: [
       '92037',
@@ -157,12 +157,12 @@ export const areaShells: AreaShell[] = [
     },
     {
       question: 'Can I swim at La Jolla Cove the same day after a HydraFacial?',
-      answer: 'You can, but most swimmers wait twenty-four hours. HydraFacial Syndeo uses vortex extraction and peptide infusion that leave the skin more receptive to hydration for the first few hours, which also means more vulnerable to salt water irritation during that window. Swimming immediately won\'t undo the treatment, but it does mean stripping the barrier again before it has stabilized. If you must swim the same day (morning swim, afternoon treatment, or vice versa), wait at least six hours between treatment and water entry, and apply a barrier cream like CeraVe Healing Ointment or Aquaphor to the face before entering the ocean.',
+      answer: 'You can, but most swimmers wait twenty-four hours. HydraFacial Syndeo uses vortex extraction and peptide infusion that leave the skin more receptive to hydration for the first few hours, which also means more vulnerable to salt water irritation during that window. Swimming immediately won\'t undo the treatment, but it does mean stripping the barrier again before it has stabilized. If a client must swim the same day (morning swim, afternoon treatment, or vice versa), wait at least six hours between treatment and water entry, and apply a barrier cream like CeraVe Healing Ointment or Aquaphor to the face before entering the ocean.',
       entityCount: 8,
     },
     {
       question: 'How much does Keravive scalp treatment cost for La Jolla ocean swimmers?',
-      answer: 'Keravive is $599 per session at KIAMO Skin, or $1,499 for a series of three (saving $298 compared to individual pricing). Most ocean swimmers book the three-session series because scalp buildup from daily salt water exposure requires more than one treatment to fully clear the follicles. Sessions are spaced thirty days apart to allow the scalp barrier to rebuild between treatments. The first visit includes a scalp analysis, full Keravive treatment, and take-home serum. Each session takes about twenty-five minutes with no downtime — you can swim the same day if needed.',
+      answer: 'Keravive is $599 per session at KIAMO Skin, or $1,499 for a series of three (saving $298 compared to individual pricing). Most ocean swimmers book the three-session series because scalp buildup from daily salt water exposure requires more than one treatment to fully clear the follicles. Sessions are spaced thirty days apart to allow the scalp barrier to rebuild between treatments. The first visit includes a scalp analysis, full Keravive treatment, and take-home serum. Each session takes about twenty-five minutes with no downtime — a client can swim the same day if needed.',
       entityCount: 9,
     },
     {
@@ -177,7 +177,7 @@ export const areaShells: AreaShell[] = [
     },
     {
       question: 'Do I need a consultation first or can I book a HydraFacial directly from La Jolla?',
-      answer: 'New clients always start with a consultation that includes a full treatment on the same visit — it\'s not a separate appointment. The consultation at KIAMO Skin covers skin analysis, barrier assessment, UV damage evaluation, treatment goals, and series planning if your condition requires multiple visits. You\'ll receive either a HydraFacial ($259), DMK Enzyme Therapy Level 1 ($279), or another appropriate first treatment during that same session based on what your skin needs. First-time consultation + treatment packages start at $249. You can book online at kiamoskin.com or call — we respond within 24 hours on business days. The studio is at 3067 Reynard Way in Mission Hills with free parking on site.',
+      answer: 'New clients always start with a consultation that includes a full treatment on the same visit — it\'s not a separate appointment. The consultation at KIAMO Skin covers skin analysis, barrier assessment, UV damage evaluation, treatment goals, and series planning if your condition requires multiple visits. You\'ll receive either a HydraFacial ($259), DMK Enzyme Therapy Level 1 ($279), or another appropriate first treatment during that same session based on what the skin needs. First-time consultation + treatment packages start at $249. You can book online at kiamoskin.com or call — we respond within 24 hours on business days. The studio is at 3067 Reynard Way in Mission Hills with free parking on site.',
       entityCount: 10,
     },
   ],
@@ -244,7 +244,7 @@ export const areaShells: AreaShell[] = [
         },
         {
           title: 'Enzyme masque application',
-          description: 'Thick enzyme formulation applied to face, neck, and décolletage. As it dries, the masque creates a pumping action that increases circulation and lymphatic drainage — you\'ll feel a pulsing sensation that indicates fresh blood flow to the surface (45 minutes)',
+          description: 'Thick enzyme formulation applied to face, neck, and décolletage. As it dries, the masque creates a pumping action that increases circulation and lymphatic drainage — a client\'ll feel a pulsing sensation that indicates fresh blood flow to the surface (45 minutes)',
         },
         {
           title: 'Masque removal and serum infusion',
@@ -400,17 +400,17 @@ export const areaShells: AreaShell[] = [
     },
     {
       question: 'Can I surf the same day after a HydraFacial or DMK enzyme treatment?',
-      answer: 'HydraFacial: yes, same-day surfing is fine, though most clients wait 4-6 hours to allow peptides to penetrate before salt water exposure. HydraFacial doesn\'t compromise the barrier, so ocean entry immediately after won\'t cause damage — you\'ll just rinse away some of the hydration benefit before it fully absorbs. DMK Enzyme Therapy: no, wait 48 hours before ocean entry. The enzyme masque forces plasmatic response (circulation and lymphatic drainage) that leaves skin temporarily more vulnerable to salt water irritation during the first 24-48 hours. Surfing same-day after DMK will sting and can trigger redness/inflammation that delays barrier recovery. Keravive scalp treatment: yes, can swim/surf same day, though waiting 4-6 hours allows peptide serum to penetrate scalp dermis before salt water dilutes it. Most Encinitas surfers schedule DMK on Friday so they\'re clear to surf Sunday morning, or schedule Tuesday so they\'re clear for weekend sessions.',
+      answer: 'HydraFacial: yes, same-day surfing is fine, though most clients wait 4-6 hours to allow peptides to penetrate before salt water exposure. HydraFacial doesn\'t compromise the barrier, so ocean entry immediately after won\'t cause damage — a client\'ll just rinse away some of the hydration benefit before it fully absorbs. DMK Enzyme Therapy: no, wait 48 hours before ocean entry. The enzyme masque forces plasmatic response (circulation and lymphatic drainage) that leaves skin temporarily more vulnerable to salt water irritation during the first 24-48 hours. Surfing same-day after DMK will sting and can trigger redness/inflammation that delays barrier recovery. Keravive scalp treatment: yes, can swim/surf same day, though waiting 4-6 hours allows peptide serum to penetrate scalp dermis before salt water dilutes it. Most Encinitas surfers schedule DMK on Friday so they\'re clear to surf Sunday morning, or schedule Tuesday so they\'re clear for weekend sessions.',
       entityCount: 11,
     },
     {
       question: 'How much does DMK Enzyme Therapy cost for Encinitas surfers with barrier damage?',
-      answer: 'DMK Enzyme Therapy Level 1 at KIAMO Skin is $279 per session. Most Encinitas surfers with chronic barrier damage from daily or weekly ocean exposure need a series of 4-6 treatments to rebuild the lipid matrix and restore barrier integrity, which is why a 6-session DMK barrier rebuild course is priced at consultation, with the full series cost confirmed before you commit. The first visit includes barrier integrity assessment, transephermal water loss evaluation, and home care prescriptive protocol planning. Each session takes 70-80 minutes with 10-14 day intervals between treatments. You\'ll need DMK home care products (Cleanser, Beta Gel, EFA, Herb & Mineral Spray) used daily between sessions — the enzyme treatment rebuilds circulation, the home care rebuilds the lipid barrier. Series pricing is confirmed at consultation before you commit. Most surfers see meaningful improvement after session 3-4, with full barrier restoration after completing the 6-session course. Maintenance: one DMK session every 8-12 weeks to sustain results if you continue daily/weekly surf exposure.',
+      answer: 'DMK Enzyme Therapy Level 1 at KIAMO Skin is $279 per session. Most Encinitas surfers with chronic barrier damage from daily or weekly ocean exposure need a series of 4-6 treatments to rebuild the lipid matrix and restore barrier integrity, which is why a 6-session DMK barrier rebuild course is priced at consultation, with the full series cost confirmed before a client commit. The first visit includes barrier integrity assessment, transephermal water loss evaluation, and home care prescriptive protocol planning. Each session takes 70-80 minutes with 10-14 day intervals between treatments. You\'ll need DMK home care products (Cleanser, Beta Gel, EFA, Herb & Mineral Spray) used daily between sessions — the enzyme treatment rebuilds circulation, the home care rebuilds the lipid barrier. Series pricing is confirmed at consultation before a client commit. Most surfers see meaningful improvement after session 3-4, with full barrier restoration after completing the 6-session course. Maintenance: one DMK session every 8-12 weeks to sustain results if a client continue daily/weekly surf exposure.',
       entityCount: 12,
     },
     {
       question: 'Will DMK Enzyme Therapy or chemical peels work better for sun damage from year-round surfing at Swami\'s?',
-      answer: 'It depends on your skin\'s current barrier condition. If your skin is tight, reactive, stinging, and cannot tolerate products it used to handle — that\'s barrier damage, not surface pigmentation, and DMK Enzyme Therapy is the correct treatment. DMK rebuilds the lipid matrix and plasmatic circulation that salt water strips, addressing the underlying dysfunction before treating surface pigmentation. If your barrier is intact (skin tolerates products normally, no stinging or reactivity) and you have visible pigmentation, melasma, or uneven tone from cumulative UV exposure — chemical peels (Lira Clinical) are appropriate, but only after confirming barrier stability. Most Encinitas surfers with year-round water exposure have some degree of barrier compromise, so the typical protocol is: 4-6 DMK sessions to rebuild barrier integrity, then assess whether pigmentation remains significant enough to warrant a peel series, or if the barrier rebuild alone resolved most of the uneven tone. Doing chemical peels on compromised barriers triggers more reactivity and inflammation, not pigment correction.',
+      answer: 'It depends on the skin\'s current barrier condition. If the skin is tight, reactive, stinging, and cannot tolerate products it used to handle — that\'s barrier damage, not surface pigmentation, and DMK Enzyme Therapy is the correct treatment. DMK rebuilds the lipid matrix and plasmatic circulation that salt water strips, addressing the underlying dysfunction before treating surface pigmentation. If the barrier is intact (skin tolerates products normally, no stinging or reactivity) and a client has visible pigmentation, melasma, or uneven tone from cumulative UV exposure — chemical peels (Lira Clinical) are appropriate, but only after confirming barrier stability. Most Encinitas surfers with year-round water exposure have some degree of barrier compromise, so the typical protocol is: 4-6 DMK sessions to rebuild barrier integrity, then assess whether pigmentation remains significant enough to warrant a peel series, or if the barrier rebuild alone resolved most of the uneven tone. Doing chemical peels on compromised barriers triggers more reactivity and inflammation, not pigment correction.',
       entityCount: 10,
     },
     {
@@ -420,7 +420,7 @@ export const areaShells: AreaShell[] = [
     },
     {
       question: 'Is the drive from Leucadia or Cardiff worth it for a facial in Mission Hills?',
-      answer: 'It depends on what you\'re trying to fix and whether you\'ve already tried local options. For basic relaxation facials or surface hydration, probably not — there are plenty of spas in Encinitas and Solana Beach that can provide that ten minutes from home. For barrier rebuild from chronic salt exposure, DMK Enzyme Therapy protocols, Keravive scalp treatment for surfer buildup, or corrective work on reactive skin that\'s been over-treated or mishandled — the drive is worth it if the alternative is continuing to damage your barrier with aggressive treatments that make the problem worse. KIAMO Skin specializes in barrier-compromised skin and plasmatic dysfunction, which is the specific problem year-round surfers deal with but most med spas don\'t understand or treat correctly. The thirty-minute drive matters less when you\'re completing a 4-6 session series that rebuilds function instead of repeating monthly facials that feel good but never fix the underlying reactivity. Most Leucadia and Cardiff clients schedule appointments after morning surf sessions (10 AM-12 PM) or late afternoon (3-5 PM) to avoid commute traffic on I-5 southbound.',
+      answer: 'It depends on what a client\'re trying to fix and whether a client\'ve already tried local options. For basic relaxation facials or surface hydration, probably not — there are plenty of spas in Encinitas and Solana Beach that can provide that ten minutes from home. For barrier rebuild from chronic salt exposure, DMK Enzyme Therapy protocols, Keravive scalp treatment for surfer buildup, or corrective work on reactive skin that\'s been over-treated or mishandled — the drive is worth it if the alternative is continuing to damage the barrier with aggressive treatments that make the problem worse. KIAMO Skin specializes in barrier-compromised skin and plasmatic dysfunction, which is the specific problem year-round surfers deal with but most med spas don\'t understand or treat correctly. The thirty-minute drive matters less when a client\'re completing a 4-6 session series that rebuilds function instead of repeating monthly facials that feel good but never fix the underlying reactivity. Most Leucadia and Cardiff clients schedule appointments after morning surf sessions (10 AM-12 PM) or late afternoon (3-5 PM) to avoid commute traffic on I-5 southbound.',
       entityCount: 11,
     },
   ],
@@ -441,7 +441,7 @@ export const areaShells: AreaShell[] = [
         },
         {
           title: 'Peak plasmatic effect (the pump)',
-          description: 'At 35-40 minutes, you\'ll feel intense tightness and see visible pulsing across your face — this is NOT irritation or burning, it\'s forced capillary dilation bringing fresh blood to oxygen-starved cells. For surfers with chronic barrier damage, the first session often produces the strongest pump because circulation has been compromised for months or years',
+          description: 'At 35-40 minutes, a client\'ll feel intense tightness and see visible pulsing across your face — this is NOT irritation or burning, it\'s forced capillary dilation bringing fresh blood to oxygen-starved cells. For surfers with chronic barrier damage, the first session often produces the strongest pump because circulation has been compromised for months or years',
         },
         {
           title: 'Masque removal and transdermal serum infusion',
@@ -449,7 +449,7 @@ export const areaShells: AreaShell[] = [
         },
         {
           title: 'Home prescriptives (mandatory for barrier rebuild)',
-          description: 'DMK home care products prescribed based on your specific barrier damage pattern and ocean exposure frequency — Cleanser, Beta Gel, EFA, Herb & Mineral Spray used daily between sessions. The enzyme treatment rebuilds circulation; the home care rebuilds the lipid barrier. Without daily home support, you\'re back at baseline within 72 hours of each treatment',
+          description: 'DMK home care products prescribed based on your specific barrier damage pattern and ocean exposure frequency — Cleanser, Beta Gel, EFA, Herb & Mineral Spray used daily between sessions. The enzyme treatment rebuilds circulation; the home care rebuilds the lipid barrier. Without daily home support, a client\'re back at baseline within 72 hours of each treatment',
         },
       ],
       footer: 'Total treatment time: 70-80 minutes | Downtime: Tightness for 12-24 hours, possible redness | Series: 4-6 sessions, 10-14 days apart for barrier rebuild | Can surf 48 hours post-treatment (not same day) | Expect visible skin shedding days 3-5 (normal barrier turnover, not damage)',
@@ -647,12 +647,12 @@ export const areaShells: AreaShell[] = [
   enhancedFaqs: [
     {
       question: 'How long does it take to drive from Carlsbad Village to Mission Hills for Procell Microchanneling?',
-      answer: 'About thirty-five to forty minutes off-peak via I-5 south, approximately 35 miles. From Carlsbad Village near the COASTER station on Carlsbad Village Drive, take Carlsbad Village Drive east to I-5 south on-ramp, stay in center lanes through the entire North County coastal stretch (Encinitas, Solana Beach, Del Mar, Torrey Pines, La Jolla, UTC), and exit at Washington Street (Exit 17) in Mission Hills. From La Costa or Aviara near Palomar Airport Road, the drive is shorter (30 miles, 30-35 minutes) because you\'re 5 miles closer. Early morning (8-9 AM) and midday (11 AM-2 PM) are consistently the fastest windows. During weekday morning commute southbound (7-9 AM peaks), I-5 through Encinitas and Del Mar can add 10 minutes. During spring Flower Fields season (March-May weekends), Palomar Airport Road backs up and adds another 5 minutes. Most Carlsbad clients schedule early morning or midday appointments to avoid commute traffic on the return drive north.',
+      answer: 'About thirty-five to forty minutes off-peak via I-5 south, approximately 35 miles. From Carlsbad Village near the COASTER station on Carlsbad Village Drive, take Carlsbad Village Drive east to I-5 south on-ramp, stay in center lanes through the entire North County coastal stretch (Encinitas, Solana Beach, Del Mar, Torrey Pines, La Jolla, UTC), and exit at Washington Street (Exit 17) in Mission Hills. From La Costa or Aviara near Palomar Airport Road, the drive is shorter (30 miles, 30-35 minutes) because a client\'re 5 miles closer. Early morning (8-9 AM) and midday (11 AM-2 PM) are consistently the fastest windows. During weekday morning commute southbound (7-9 AM peaks), I-5 through Encinitas and Del Mar can add 10 minutes. During spring Flower Fields season (March-May weekends), Palomar Airport Road backs up and adds another 5 minutes. Most Carlsbad clients schedule early morning or midday appointments to avoid commute traffic on the return drive north.',
       entityCount: 12,
     },
     {
       question: 'Is Procell Microchanneling worth driving from La Costa or Aviara for texture concerns?',
-      answer: 'It depends on whether you\'ve already tried local North County options and whether your texture requires series-based corrective work. For mild texture that improves with regular facials, probably not — there are many good med spas in Carlsbad and Encinitas closer to home. For moderate-to-severe texture from UV damage, acne scarring, or collagen breakdown that hasn\'t improved with surface treatments — Procell Microchanneling with consistent stamping technique (not rolling devices) is worth the 30-35 minute drive if the alternative is continuing monthly facials that feel smooth temporarily but never rebuild the underlying collagen matrix. The honest answer: Procell requires three sessions spaced 4-6 weeks apart (all scheduled at consultation as a block for La Costa/Aviara clients), 7 days of strict sun avoidance after each treatment, and cumulative investment of $1,199 for the series. Results are visible after session two, peak after session three with continued improvement for 3-6 months post-series. If that commitment is sustainable given your schedule and the drive, the results justify the distance. If not, we tell you at consultation before you pay.',
+      answer: 'It depends on whether a client\'ve already tried local North County options and whether your texture requires series-based corrective work. For mild texture that improves with regular facials, probably not — there are many good med spas in Carlsbad and Encinitas closer to home. For moderate-to-severe texture from UV damage, acne scarring, or collagen breakdown that hasn\'t improved with surface treatments — Procell Microchanneling with consistent stamping technique (not rolling devices) is worth the 30-35 minute drive if the alternative is continuing monthly facials that feel smooth temporarily but never rebuild the underlying collagen matrix. The honest answer: Procell requires three sessions spaced 4-6 weeks apart (all scheduled at consultation as a block for La Costa/Aviara clients), 7 days of strict sun avoidance after each treatment, and cumulative investment of $1,199 for the series. Results are visible after session two, peak after session three with continued improvement for 3-6 months post-series. If that commitment is sustainable given your schedule and the drive, the results justify the distance. If not, we tell a client at consultation before a client pay.',
       entityCount: 13,
     },
     {
@@ -662,17 +662,17 @@ export const areaShells: AreaShell[] = [
     },
     {
       question: 'How much does a Keravive scalp series cost for Carlsbad clients, and are all three sessions scheduled upfront?',
-      answer: 'Keravive scalp treatment at KIAMO Skin is $599 per session, or $1,499 for a three-treatment series (saves $298 vs. individual pricing). The series requires three sessions spaced 30 days apart to produce cumulative scalp health improvement — one treatment clears congestion but doesn\'t rebuild follicle function, so the full course is what delivers visible results (reduced dryness, flaking, improved hair density). For Carlsbad clients traveling 35 miles each way, all three Keravive appointments are scheduled as a complete block at the first consultation (weeks 0, 4, 8) to eliminate rebooking friction. You receive a 30-day supply of Keravive daily peptide serum at each session (included in series pricing, not an add-on) applied nightly between treatments — the serum is what sustains results, not just monthly in-office treatments. Series pricing is confirmed at consultation before you commit. Total investment: $1,499 for three sessions including take-home serums. Maintenance after series completion: one Keravive session every 3-4 months to sustain results long-term.',
+      answer: 'Keravive scalp treatment at KIAMO Skin is $599 per session, or $1,499 for a three-treatment series (saves $298 vs. individual pricing). The series requires three sessions spaced 30 days apart to produce cumulative scalp health improvement — one treatment clears congestion but doesn\'t rebuild follicle function, so the full course is what delivers visible results (reduced dryness, flaking, improved hair density). For Carlsbad clients traveling 35 miles each way, all three Keravive appointments are scheduled as a complete block at the first consultation (weeks 0, 4, 8) to eliminate rebooking friction. You receive a 30-day supply of Keravive daily peptide serum at each session (included in series pricing, not an add-on) applied nightly between treatments — the serum is what sustains results, not just monthly in-office treatments. Series pricing is confirmed at consultation before a client commit. Total investment: $1,499 for three sessions including take-home serums. Maintenance after series completion: one Keravive session every 3-4 months to sustain results long-term.',
       entityCount: 12,
     },
     {
       question: 'Can I combine HydraFacial and Procell Microchanneling in the same visit to reduce trips from Bressi Ranch?',
-      answer: 'No, Procell and HydraFacial cannot be done in the same visit because Procell creates micro-injuries that require 7-10 days of healing before any additional treatments can be performed on the same area. However, the treatments are often paired strategically across a series timeline to maximize efficiency: Procell at weeks 0, 4, and 8 for collagen stimulation, with HydraFacial at weeks 2, 6, and 10 for hydration maintenance during the collagen remodeling windows. This allows you to visit biweekly (every 2 weeks) instead of monthly, keeping skin hydrated throughout the Procell series without extending the total timeline. For Bressi Ranch clients traveling 35+ miles, this biweekly pacing (6 total visits over 10 weeks) is more efficient than monthly Procell alone (3 visits over 8 weeks with no maintenance between). What CAN be combined safely in one visit: HydraFacial + dermaplaning, Keravive scalp + HydraFacial face, consultation + first HydraFacial. What cannot: Procell + anything else on the same treatment day. Pairing options are discussed at consultation based on your concern and schedule.',
+      answer: 'No, Procell and HydraFacial cannot be done in the same visit because Procell creates micro-injuries that require 7-10 days of healing before any additional treatments can be performed on the same area. However, the treatments are often paired strategically across a series timeline to maximize efficiency: Procell at weeks 0, 4, and 8 for collagen stimulation, with HydraFacial at weeks 2, 6, and 10 for hydration maintenance during the collagen remodeling windows. This allows a client to visit biweekly (every 2 weeks) instead of monthly, keeping skin hydrated throughout the Procell series without extending the total timeline. For Bressi Ranch clients traveling 35+ miles, this biweekly pacing (6 total visits over 10 weeks) is more efficient than monthly Procell alone (3 visits over 8 weeks with no maintenance between). What CAN be combined safely in one visit: HydraFacial + dermaplaning, Keravive scalp + HydraFacial face, consultation + first HydraFacial. What cannot: Procell + anything else on the same treatment day. Pairing options are discussed at consultation based on the concern and schedule.',
       entityCount: 11,
     },
     {
       question: 'Is the drive from Calavera Hills worth it for a facial, or should I find something closer?',
-      answer: 'It depends on what you\'re trying to fix and whether your concern requires series-based corrective work with protocol consistency. For monthly relaxation facials or basic hydration, probably not — there are many excellent options in Carlsbad, Encinitas, and Oceanside within 15 minutes of Calavera Hills. For corrective series (Procell for texture, Keravive for scalp thinning, Lira peels for hyperpigmentation in melanin-rich skin, DMK for barrier rebuild) where rotating estheticians cause protocol inconsistency and uneven results — the drive is worth it if you\'ve already tried local options without success. The honest test: if you\'re booking monthly facials that feel good temporarily but the underlying problem never improves, that\'s surface treatment, not correction. KIAMO Skin specializes in series-based corrective work with single-practitioner consistency — all sessions scheduled upfront, same person every visit, protocols adjusted based on YOUR response. The 35-40 minute drive from Calavera Hills matters less when you\'re completing a series that fixes the problem (3 Procell sessions over 8 weeks, 4-6 Lira peels over 8-12 weeks) versus repeating monthly facials indefinitely that never produce lasting change.',
+      answer: 'It depends on what a client\'re trying to fix and whether the concern requires series-based corrective work with protocol consistency. For monthly relaxation facials or basic hydration, probably not — there are many excellent options in Carlsbad, Encinitas, and Oceanside within 15 minutes of Calavera Hills. For corrective series (Procell for texture, Keravive for scalp thinning, Lira peels for hyperpigmentation in melanin-rich skin, DMK for barrier rebuild) where rotating estheticians cause protocol inconsistency and uneven results — the drive is worth it if a client\'ve already tried local options without success. The honest test: if a client\'re booking monthly facials that feel good temporarily but the underlying problem never improves, that\'s surface treatment, not correction. KIAMO Skin specializes in series-based corrective work with single-practitioner consistency — all sessions scheduled upfront, same person every visit, protocols adjusted based on YOUR response. The 35-40 minute drive from Calavera Hills matters less when a client\'re completing a series that fixes the problem (3 Procell sessions over 8 weeks, 4-6 Lira peels over 8-12 weeks) versus repeating monthly facials indefinitely that never produce lasting change.',
       entityCount: 12,
     },
   ],
@@ -689,7 +689,7 @@ export const areaShells: AreaShell[] = [
         },
         {
           title: 'Topical anesthetic application (30 minutes)',
-          description: 'Compounded lidocaine cream (23-30% concentration) applied to entire treatment area and occluded with plastic wrap for 30 minutes to achieve full dermal anesthesia. Procell at collagen-stimulating depths (1.5-2.0mm) is painful without proper numbing — rushing this step means you won\'t tolerate the depth needed for results',
+          description: 'Compounded lidocaine cream (23-30% concentration) applied to entire treatment area and occluded with plastic wrap for 30 minutes to achieve full dermal anesthesia. Procell at collagen-stimulating depths (1.5-2.0mm) is painful without proper numbing — rushing this step means a client won\'t tolerate the depth needed for results',
         },
         {
           title: 'Microchanneling with perpendicular stamping technique',
@@ -807,7 +807,7 @@ export const areaShells: AreaShell[] = [
   ],
   localConcern: {
     heading: 'Why does the South Bay see more melasma than anywhere else in the county?',
-    body: 'Chula Vista is San Diego County\'s second-largest city, and roughly six in ten residents identify as Hispanic or Latino. Melasma concentrates in Fitzpatrick skin types III to V, and chronic UV exposure is its most consistent trigger — which means the county\'s largest melanin-rich population is also its strongest melasma catchment. Eastlake and Rancho del Rey sit five to ten miles inland from the coast, past the marine layer that keeps the beach gray through May and June. Summers inland run eight to fifteen degrees warmer, and those neighbourhoods fall inside the valley heat advisories the coast never gets. More clear days, year after year, is the mechanism. Lira chemical peels answer it because the acid is matched to the skin at consultation and strength escalates across a series rather than in one visit. Aggressive resurfacing on melanin-rich skin triggers post-inflammatory hyperpigmentation — the exact problem you walked in with, only deeper. Pacing is the treatment.',
+    body: 'Chula Vista is San Diego County\'s second-largest city, and roughly six in ten residents identify as Hispanic or Latino. Melasma concentrates in Fitzpatrick skin types III to V, and chronic UV exposure is its most consistent trigger — which means the county\'s largest melanin-rich population is also its strongest melasma catchment. Eastlake and Rancho del Rey sit five to ten miles inland from the coast, past the marine layer that keeps the beach gray through May and June. Summers inland run eight to fifteen degrees warmer, and those neighbourhoods fall inside the valley heat advisories the coast never gets. More clear days, year after year, is the mechanism. Lira chemical peels answer it because the acid is matched to the skin at consultation and strength escalates across a series rather than in one visit. Aggressive resurfacing on melanin-rich skin triggers post-inflammatory hyperpigmentation — the exact problem a client walked in with, only deeper. Pacing is the treatment.',
   },
   allAbout: {
     body: 'Chula Vista spans the bay to the foothills — the old walkable grid of Third Avenue Village and the bayfront waterfront in the west, the newer master-planned communities of Eastlake, Rancho del Rey and Otay Ranch spread across the inland hills. Roughly six in ten residents are Hispanic or Latino, making it the most demographically distinct major city in the county. The inland half of the city — east of I-805 — sits past the marine layer that softens UV along the coast, and summer afternoons there run measurably hotter. That combination of melanin-rich skin and cumulative inland UV is why pigmentation is the reason most Chula Vista clients book.',
@@ -901,7 +901,7 @@ export const areaShells: AreaShell[] = [
   enhancedFaqs: [
     {
       question: 'How long does it take to drive from Chula Vista Eastlake to Mission Hills for a chemical peel?',
-      answer: 'About twenty-five to thirty minutes outside commute hours. From Eastlake near Olympic Parkway, take SR-125 north (toll road) toward I-805, then I-805 north through National City to the I-5 north merge near Downtown. Exit at Washington Street (Exit 17) — total distance is 13 miles. Mid-morning (10 AM-12 PM) is the fastest window. During the northbound morning commute (7-9 AM), traffic stacks on I-5 near Downtown and can push the drive to forty-five minutes. From Otay Ranch or Bonita, you can bypass SR-125 tolls by taking Bonita Road west to I-805 north directly.',
+      answer: 'About twenty-five to thirty minutes outside commute hours. From Eastlake near Olympic Parkway, take SR-125 north (toll road) toward I-805, then I-805 north through National City to the I-5 north merge near Downtown. Exit at Washington Street (Exit 17) — total distance is 13 miles. Mid-morning (10 AM-12 PM) is the fastest window. During the northbound morning commute (7-9 AM), traffic stacks on I-5 near Downtown and can push the drive to forty-five minutes. From Otay Ranch or Bonita, a client can bypass SR-125 tolls by taking Bonita Road west to I-805 north directly.',
       entityCount: 10,
     },
     {
@@ -911,22 +911,22 @@ export const areaShells: AreaShell[] = [
     },
     {
       question: 'How much does a chemical peel cost for Chula Vista clients with melasma?',
-      answer: 'Lira Chemical Peels at KIAMO Skin start at $199 for Gentle Renewal and $299 for Advanced peel formulations. Most clients with melasma or hyperpigmentation need a series of 4-6 peels to see meaningful lightening, which is why we offer series pricing: $749 for a 4-peel series (saves $97) or $1,399 for 6 peels (saves $195). The first visit includes a skin analysis, Fitzpatrick type assessment, and discussion of realistic timelines for pigmentation reduction. Series pricing is confirmed at consultation before you commit. Each peel session takes 45-60 minutes with 3-5 days of mild flaking.',
+      answer: 'Lira Chemical Peels at KIAMO Skin start at $199 for Gentle Renewal and $299 for Advanced peel formulations. Most clients with melasma or hyperpigmentation need a series of 4-6 peels to see meaningful lightening, which is why we offer series pricing: $749 for a 4-peel series (saves $97) or $1,399 for 6 peels (saves $195). The first visit includes a skin analysis, Fitzpatrick type assessment, and discussion of realistic timelines for pigmentation reduction. Series pricing is confirmed at consultation before a client commit. Each peel session takes 45-60 minutes with 3-5 days of mild flaking.',
       entityCount: 8,
     },
     {
       question: 'Will a chemical peel remove melasma from Chula Vista inland sun exposure permanently?',
-      answer: 'No treatment removes melasma permanently — it\'s a chronic condition triggered by UV exposure, hormones, and genetic factors. What Lira Chemical Peels do is suppress melanocyte activity and lighten existing pigmentation to a more even baseline. The results can last 6-18 months if you maintain strict sun protection (mineral SPF 50+ daily, wide-brimmed hats, UV-blocking car windows). Chula Vista\'s inland location means higher UV exposure than coastal areas — summer afternoons hit 85-95°F with minimal marine layer protection. Without daily sun protection, melasma will recur within 2-4 months. Maintenance peels every 2-3 months help sustain results, but sun avoidance is the determining factor for long-term pigment control.',
+      answer: 'No treatment removes melasma permanently — it\'s a chronic condition triggered by UV exposure, hormones, and genetic factors. What Lira Chemical Peels do is suppress melanocyte activity and lighten existing pigmentation to a more even baseline. The results can last 6-18 months if a client maintains strict sun protection (mineral SPF 50+ daily, wide-brimmed hats, UV-blocking car windows). Chula Vista\'s inland location means higher UV exposure than coastal areas — summer afternoons hit 85-95°F with minimal marine layer protection. Without daily sun protection, melasma will recur within 2-4 months. Maintenance peels every 2-3 months help sustain results, but sun avoidance is the determining factor for long-term pigment control.',
       entityCount: 11,
     },
     {
       question: 'Can I get a chemical peel if I live in Chula Vista and work outdoors?',
-      answer: 'Yes, but timing and sun protection become critical. Chemical peels make skin temporarily more photosensitive for 7-14 days after treatment, which is manageable if you can avoid direct midday sun during that window. We schedule peels for Chula Vista clients with outdoor jobs during fall or winter months (October-March) when UV index is lower and days are shorter. You\'ll need mineral SPF 50+ applied every 90 minutes, a wide-brimmed hat, and long sleeves during the post-peel healing period. If your work schedule makes sun avoidance impossible, we recommend DMK Enzyme Therapy or HydraFacial instead — both strengthen the barrier without causing photosensitivity and can be done year-round regardless of outdoor exposure.',
+      answer: 'Yes, but timing and sun protection become critical. Chemical peels make skin temporarily more photosensitive for 7-14 days after treatment, which is manageable if a client can avoid direct midday sun during that window. We schedule peels for Chula Vista clients with outdoor jobs during fall or winter months (October-March) when UV index is lower and days are shorter. You\'ll need mineral SPF 50+ applied every 90 minutes, a wide-brimmed hat, and long sleeves during the post-peel healing period. If your work schedule makes sun avoidance impossible, we recommend DMK Enzyme Therapy or HydraFacial instead — both strengthen the barrier without causing photosensitivity and can be done year-round regardless of outdoor exposure.',
       entityCount: 9,
     },
     {
       question: 'Do I need a consultation before booking a chemical peel from Chula Vista?',
-      answer: 'Yes. New clients start with a consultation that includes a skin analysis and first treatment (not a separate appointment). The consultation at KIAMO Skin covers Fitzpatrick type assessment, melasma pattern analysis (centrofacial, malar, mandibular), current skincare routine review, and realistic timeline for pigment reduction. You\'ll receive either a Lira Chemical Peel, DMK Enzyme Therapy Level 1, or HydraFacial during the same visit based on your skin\'s current condition. First-time consultation + treatment starts at $249. You can book online or call — we respond within 24 hours on business days. The studio is at 3067 Reynard Way in Mission Hills with free parking.',
+      answer: 'Yes. New clients start with a consultation that includes a skin analysis and first treatment (not a separate appointment). The consultation at KIAMO Skin covers Fitzpatrick type assessment, melasma pattern analysis (centrofacial, malar, mandibular), current skincare routine review, and realistic timeline for pigment reduction. You\'ll receive either a Lira Chemical Peel, DMK Enzyme Therapy Level 1, or HydraFacial during the same visit based on the skin\'s current condition. First-time consultation + treatment starts at $249. You can book online or call — we respond within 24 hours on business days. The studio is at 3067 Reynard Way in Mission Hills with free parking.',
       entityCount: 10,
     },
   ],
@@ -1096,12 +1096,12 @@ export const areaShells: AreaShell[] = [
     },
     {
       question: 'How much does Procell Microchanneling cost for Del Mar clients with texture from fair season sun damage?',
-      answer: 'Procell Microchanneling at KIAMO Skin is $475 per session, or $1,199 for a three-treatment series (saves $226 vs. individual pricing). Most clients with texture damage from cumulative fair and race season UV exposure need the full three-session series to see meaningful collagen rebuild — one treatment produces minimal visible improvement. The first visit includes texture severity assessment, treatment depth determination, and series timeline discussion. Each Procell session takes 60-75 minutes including 30-minute numbing time, with 24-48 hours of redness and 3-7 days of flaking. Sessions are spaced 4-6 weeks apart (treatments at weeks 0, 4-6, and 8-12) to allow full collagen remodeling between treatments. Series pricing is confirmed at consultation before you commit, and all three appointments are scheduled as a block at the first visit to eliminate rebooking friction for clients traveling from North County. Results visible after session two, peak after session three with continued improvement for 3-6 months post-series.',
+      answer: 'Procell Microchanneling at KIAMO Skin is $475 per session, or $1,199 for a three-treatment series (saves $226 vs. individual pricing). Most clients with texture damage from cumulative fair and race season UV exposure need the full three-session series to see meaningful collagen rebuild — one treatment produces minimal visible improvement. The first visit includes texture severity assessment, treatment depth determination, and series timeline discussion. Each Procell session takes 60-75 minutes including 30-minute numbing time, with 24-48 hours of redness and 3-7 days of flaking. Sessions are spaced 4-6 weeks apart (treatments at weeks 0, 4-6, and 8-12) to allow full collagen remodeling between treatments. Series pricing is confirmed at consultation before a client commit, and all three appointments are scheduled as a block at the first visit to eliminate rebooking friction for clients traveling from North County. Results visible after session two, peak after session three with continued improvement for 3-6 months post-series.',
       entityCount: 13,
     },
     {
       question: 'Can Procell Microchanneling be done during fair season or race meet, or do I need to wait until fall?',
-      answer: 'Procell requires strict sun avoidance for 7 days post-treatment and SPF 50+ reapplied every 90 minutes for 30 days after each session, which makes it incompatible with prolonged fair or race meet attendance where you\'d be outdoors 6-8 hours in direct sun. If you attend Opening Day, Pacific Classic, or multiple race days weekly, Procell should be scheduled for fall (October-November) or winter (December-February) when UV index is lower and you\'re not spending full afternoons at outdoor events. Doing Procell during summer event season means accepting higher PIH risk (even though Procell is safer than lasers, fresh micro-injuries are still photosensitive) and compromised results because collagen remodeling is disrupted by UV exposure during the healing window. Most clients from the Del Mar area schedule Procell series in fall after race season ends or in late winter before fair season begins. Alternative: HydraFacial has zero photosensitivity and can be done monthly year-round, including during summer events — it won\'t rebuild texture like Procell, but it maintains hydration and skin health until you\'re ready to commit to a corrective series.',
+      answer: 'Procell requires strict sun avoidance for 7 days post-treatment and SPF 50+ reapplied every 90 minutes for 30 days after each session, which makes it incompatible with prolonged fair or race meet attendance where a client\'d be outdoors 6-8 hours in direct sun. If a client attend Opening Day, Pacific Classic, or multiple race days weekly, Procell should be scheduled for fall (October-November) or winter (December-February) when UV index is lower and a client\'re not spending full afternoons at outdoor events. Doing Procell during summer event season means accepting higher PIH risk (even though Procell is safer than lasers, fresh micro-injuries are still photosensitive) and compromised results because collagen remodeling is disrupted by UV exposure during the healing window. Most clients from the Del Mar area schedule Procell series in fall after race season ends or in late winter before fair season begins. Alternative: HydraFacial has zero photosensitivity and can be done monthly year-round, including during summer events — it won\'t rebuild texture like Procell, but it maintains hydration and skin health until a client\'re ready to commit to a corrective series.',
       entityCount: 12,
     },
     {
@@ -1111,12 +1111,12 @@ export const areaShells: AreaShell[] = [
     },
     {
       question: 'Should I do HydraFacial or Procell Microchanneling for texture after a full summer at the races?',
-      answer: 'It depends on your texture severity and whether your skin barrier is intact. If you have visible rough texture, enlarged pores from collagen breakdown, or tactile roughness that doesn\'t improve with moisturizers — that\'s structural damage from UV collagen degradation, and Procell Microchanneling is the correct treatment. Procell stimulates fibroblasts to produce new collagen and rebuild the matrix that UV exposure damaged. Results require three sessions spaced 4-6 weeks apart with 7 days of strict sun avoidance after each treatment. If your skin feels dry or dull but texture is only mildly rough — HydraFacial provides clinical hydration, peptide infusion, and surface smoothing without downtime or photosensitivity, meaning you can do it monthly year-round. HydraFacial won\'t rebuild collagen like Procell, but it\'s the gentler option for mild texture or for clients who can\'t commit to the sun avoidance and downtime Procell requires. Most clients from the Del Mar area with moderate-to-severe texture from cumulative fair and race season sun do Procell three-treatment series in fall, then maintain with HydraFacial monthly through the following summer.',
+      answer: 'It depends on your texture severity and whether the skin barrier is intact. If a client has visible rough texture, enlarged pores from collagen breakdown, or tactile roughness that doesn\'t improve with moisturizers — that\'s structural damage from UV collagen degradation, and Procell Microchanneling is the correct treatment. Procell stimulates fibroblasts to produce new collagen and rebuild the matrix that UV exposure damaged. Results require three sessions spaced 4-6 weeks apart with 7 days of strict sun avoidance after each treatment. If the skin feels dry or dull but texture is only mildly rough — HydraFacial provides clinical hydration, peptide infusion, and surface smoothing without downtime or photosensitivity, meaning a client can do it monthly year-round. HydraFacial won\'t rebuild collagen like Procell, but it\'s the gentler option for mild texture or for clients who can\'t commit to the sun avoidance and downtime Procell requires. Most clients from the Del Mar area with moderate-to-severe texture from cumulative fair and race season sun do Procell three-treatment series in fall, then maintain with HydraFacial monthly through the following summer.',
       entityCount: 11,
     },
     {
       question: 'Is the drive from Del Mar worth it for a facial series, or should I find something closer in North County?',
-      answer: 'It depends on what you\'re trying to fix and whether you\'ve already tried closer options. For basic hydration facials or relaxation treatments, probably not — there are many med spas in Del Mar, Solana Beach, and Encinitas that can provide that closer to home. For Procell Microchanneling with consistent stamping technique, DMK Enzyme Therapy protocols, or corrective series for melanin-rich skin where protocol inconsistency triggers PIH — the drive is worth it if the alternative is continuing to see practitioners who either over-treat and cause rebound pigmentation, or under-treat and produce no visible results. KIAMO Skin specializes in corrective work on sun-damaged and melanin-rich skin, which is the specific concern fair and race season attendees deal with but many coastal med spas treat cosmetically rather than correctively. The twenty-five-minute drive matters less when you\'re completing a three-session Procell series that rebuilds collagen (scheduled at consultation as a block) instead of booking monthly facials that feel good but never fix the underlying texture damage. Most clients traveling from the Del Mar area schedule appointments early morning or midday to avoid event-season traffic on I-5, and they complete series that would be abandoned halfway through if rebooking friction existed.',
+      answer: 'It depends on what a client\'re trying to fix and whether a client\'ve already tried closer options. For basic hydration facials or relaxation treatments, probably not — there are many med spas in Del Mar, Solana Beach, and Encinitas that can provide that closer to home. For Procell Microchanneling with consistent stamping technique, DMK Enzyme Therapy protocols, or corrective series for melanin-rich skin where protocol inconsistency triggers PIH — the drive is worth it if the alternative is continuing to see practitioners who either over-treat and cause rebound pigmentation, or under-treat and produce no visible results. KIAMO Skin specializes in corrective work on sun-damaged and melanin-rich skin, which is the specific concern fair and race season attendees deal with but many coastal med spas treat cosmetically rather than correctively. The twenty-five-minute drive matters less when a client\'re completing a three-session Procell series that rebuilds collagen (scheduled at consultation as a block) instead of booking monthly facials that feel good but never fix the underlying texture damage. Most clients traveling from the Del Mar area schedule appointments early morning or midday to avoid event-season traffic on I-5, and they complete series that would be abandoned halfway through if rebooking friction existed.',
       entityCount: 12,
     },
   ],
@@ -1133,7 +1133,7 @@ export const areaShells: AreaShell[] = [
         },
         {
           title: 'Topical anesthetic application (30 minutes)',
-          description: 'Compounded lidocaine cream (23-30% concentration) applied to entire treatment area and occluded with plastic wrap for 30 minutes to achieve full dermal anesthesia. Procell at effective depths (1.5-2.0mm) is painful without anesthetic — skipping this or rushing it means you won\'t tolerate the treatment depth needed for collagen stimulation',
+          description: 'Compounded lidocaine cream (23-30% concentration) applied to entire treatment area and occluded with plastic wrap for 30 minutes to achieve full dermal anesthesia. Procell at effective depths (1.5-2.0mm) is painful without anesthetic — skipping this or rushing it means a client won\'t tolerate the treatment depth needed for collagen stimulation',
         },
         {
           title: 'Microchanneling with stamping technique',
@@ -1145,7 +1145,7 @@ export const areaShells: AreaShell[] = [
         },
         {
           title: 'Post-treatment protocol and healing timeline',
-          description: 'Face will be red and swollen for 24-48 hours (like moderate sunburn). Mineral makeup can be applied after 24 hours. Flaking/peeling days 3-7 as micro-injuries heal. Zero sun exposure for 7 days, mineral SPF 50+ reapplied every 90 minutes after day 7. Collagen production peaks 4-6 weeks post-treatment, which is why sessions are spaced monthly — you need full collagen remodeling before the next injury stimulus',
+          description: 'Face will be red and swollen for 24-48 hours (like moderate sunburn). Mineral makeup can be applied after 24 hours. Flaking/peeling days 3-7 as micro-injuries heal. Zero sun exposure for 7 days, mineral SPF 50+ reapplied every 90 minutes after day 7. Collagen production peaks 4-6 weeks post-treatment, which is why sessions are spaced monthly — a client needs full collagen remodeling before the next injury stimulus',
         },
       ],
       footer: 'Total treatment time: 60-75 minutes (includes 30-minute numbing) | Downtime: Redness 24-48 hours, flaking days 3-7 | Series: 3 treatments, 4-6 weeks apart | Zero sun exposure for 7 days post-treatment | Results visible after treatment 2, peak after treatment 3 with continued improvement for 3-6 months post-series',
@@ -1296,7 +1296,7 @@ export const areaShells: AreaShell[] = [
   schemaDescription: 'Corrective facials for sun damage and pigmentation, for La Mesa clients, at the KIAMO Facial spa in Mission Hills, San Diego.',
   quickAnswer: 'KIAMO Skin treats cumulative UV damage and pigmentation from inland heat exposure at a one-room corrective facility in Mission Hills, San Diego (92103), about 11 miles west of La Mesa via I-8 (20 minutes). Kiki, a California licensed esthetician with 7+ years specializing in melanin-rich skin (Fitzpatrick types III-VI), uses Lira Chemical Peels for melasma and sun-induced hyperpigmentation that accumulates from year-round clear days and valley heat, DMK Enzyme Therapy for barrier repair in dehydrated inland skin, and HydraFacial for gentle corrective hydration. Clients travel from La Mesa Village on La Mesa Boulevard, Mt. Helix, Grossmont Center, Spring Valley, and Fletcher Hills. Treatments start at $199, with series planning that accounts for the fact that La Mesa sits 10 miles inland beyond the marine layer, where summer afternoons run 8-15°F warmer than coastal areas and cumulative UV load drives the pigmentation patterns inland clients present with.',
   serviceAreaParagraph: 'KIAMO Skin serves clients from across La Mesa and East County, including La Mesa Village along La Mesa Boulevard and Spring Street near the Spring Street trolley station and weekly farmers market (91942), Mt. Helix neighborhoods surrounding the Mt. Helix cross and summit at Fuerte Drive and Mt. Helix Drive (91941), Grossmont commercial area near Grossmont Center mall at Jackson Drive and Grossmont Center Drive (91942), Fletcher Hills residential neighborhoods between Fletcher Parkway and Baltimore Drive (91942), Spring Valley communities along Sweetwater Road and Bancroft Drive east of SR-125 (91977), and the eastern neighborhoods near Lake Murray and San Carlos bordering Mission Valley. Many clients also travel from neighboring El Cajon along Main Street and from Lemon Grove south of SR-94. The treatment room is in Mission Hills, San Diego County (92103), accessible via I-8 west from La Mesa Boulevard, Jackson Drive, or SR-125 north — approximately 11 miles and 20 minutes off-peak, exiting at Taylor Street or Hotel Circle and heading north into Mission Hills.',
-  navigationContext: 'From La Mesa Village on La Mesa Boulevard near Spring Street and the trolley station, take Spring Street west 0.5 miles to I-8 westbound on-ramp. Merge onto I-8 west and stay in center or left lanes through Mission Valley. The freeway passes Grossmont Center to your right after 2 miles, then descends into Mission Valley past SDSU (San Diego State University) stadium and Mission Valley Center mall. Continue on I-8 west past the SR-163 interchange (stay on I-8, don\'t merge to SR-163), and take Exit 3 (Taylor Street) or Exit 1 (Hotel Circle/Friars Road) after approximately 11 miles total. If you take Taylor Street exit, turn right onto Taylor Street north, which becomes Bachman Place and then crosses into Mission Hills. If you take Hotel Circle exit, turn right onto Hotel Circle North, then left onto Taylor Street north. Follow Taylor Street/Bachman Place north to Washington Street, turn right, then left onto Reynard Way. The treatment room at 3067 Reynard Way is 0.3 miles south on the right with free parking on site. From Grossmont Center near Jackson Drive, take Jackson Drive north to I-8 westbound (adds 3 miles to the route, same exits). From Mt. Helix, take Fuerte Drive north to connect with Grossmont area roads, then Jackson Drive to I-8 west. From Spring Valley, take SR-125 north to I-8 west interchange at El Cajon, then follow I-8 west. Off-peak travel time: 20 minutes from La Mesa Village, 25 minutes from Spring Valley. During weekday morning westbound commute (7-9 AM), I-8 through Mission Valley backs up significantly and can add 10-15 minutes — early morning appointments before 7 AM or midday (10 AM-2 PM) avoid the worst congestion.',
+  navigationContext: 'From La Mesa Village on La Mesa Boulevard near Spring Street and the trolley station, take Spring Street west 0.5 miles to I-8 westbound on-ramp. Merge onto I-8 west and stay in center or left lanes through Mission Valley. The freeway passes Grossmont Center to your right after 2 miles, then descends into Mission Valley past SDSU (San Diego State University) stadium and Mission Valley Center mall. Continue on I-8 west past the SR-163 interchange (stay on I-8, don\'t merge to SR-163), and take Exit 3 (Taylor Street) or Exit 1 (Hotel Circle/Friars Road) after approximately 11 miles total. If a client take Taylor Street exit, turn right onto Taylor Street north, which becomes Bachman Place and then crosses into Mission Hills. If a client take Hotel Circle exit, turn right onto Hotel Circle North, then left onto Taylor Street north. Follow Taylor Street/Bachman Place north to Washington Street, turn right, then left onto Reynard Way. The treatment room at 3067 Reynard Way is 0.3 miles south on the right with free parking on site. From Grossmont Center near Jackson Drive, take Jackson Drive north to I-8 westbound (adds 3 miles to the route, same exits). From Mt. Helix, take Fuerte Drive north to connect with Grossmont area roads, then Jackson Drive to I-8 west. From Spring Valley, take SR-125 north to I-8 west interchange at El Cajon, then follow I-8 west. Off-peak travel time: 20 minutes from La Mesa Village, 25 minutes from Spring Valley. During weekday morning westbound commute (7-9 AM), I-8 through Mission Valley backs up significantly and can add 10-15 minutes — early morning appointments before 7 AM or midday (10 AM-2 PM) avoid the worst congestion.',
   geoData: {
     zipCodes: [
       '91942',
@@ -1349,12 +1349,12 @@ export const areaShells: AreaShell[] = [
     },
     {
       question: 'Are chemical peels safe for melanin-rich skin in La Mesa, or will they make pigmentation worse?',
-      answer: 'Chemical peels are safe for melanin-rich skin ONLY when using formulations designed specifically for melanin-rich skin (Fitzpatrick types III-VI) with controlled-release acids, tyrosinase inhibitors, and conservative pacing. Standard glycolic or TCA peels at typical med spa strengths trigger post-inflammatory hyperpigmentation (PIH) in darker skin tones — making your melasma or dark marks worse, not better. Lira Clinical peels use lactic acid (gentle), mandelic acid (large molecule, shallow penetration), and kojic acid (blocks melanin production) with contact times adjusted to your specific Fitzpatrick type and melanocyte reactivity. Series is paced at 14-21 day intervals (not weekly) to allow full barrier recovery between treatments. Pre-treatment prep with barrier-stabilizing serums is mandatory, not optional. Post-treatment tyrosinase inhibitor protocol prevents rebound pigmentation. This conservative approach takes longer (4-6 peels over 8-12 weeks) but prevents the PIH that ruins outcomes on melanin-rich skin. If you\'ve had PIH from previous peels, that means the protocol was wrong for your skin tone — not that your skin can\'t tolerate peels.',
+      answer: 'Chemical peels are safe for melanin-rich skin ONLY when using formulations designed specifically for melanin-rich skin (Fitzpatrick types III-VI) with controlled-release acids, tyrosinase inhibitors, and conservative pacing. Standard glycolic or TCA peels at typical med spa strengths trigger post-inflammatory hyperpigmentation (PIH) in darker skin tones — making your melasma or dark marks worse, not better. Lira Clinical peels use lactic acid (gentle), mandelic acid (large molecule, shallow penetration), and kojic acid (blocks melanin production) with contact times adjusted to your specific Fitzpatrick type and melanocyte reactivity. Series is paced at 14-21 day intervals (not weekly) to allow full barrier recovery between treatments. Pre-treatment prep with barrier-stabilizing serums is mandatory, not optional. Post-treatment tyrosinase inhibitor protocol prevents rebound pigmentation. This conservative approach takes longer (4-6 peels over 8-12 weeks) but prevents the PIH that ruins outcomes on melanin-rich skin. If a client\'ve had PIH from previous peels, that means the protocol was wrong for the skin tone — not that the skin can\'t tolerate peels.',
       entityCount: 13,
     },
     {
       question: 'How much does a Lira peel series cost for La Mesa clients with melasma from inland sun exposure?',
-      answer: 'Lira Clinical Peels at KIAMO Skin start at $199 for Gentle Renewal (entry-level lactic/mandelic blend) and $299 for Advanced formulations (higher concentration with additional brightening agents). Most La Mesa clients with melasma or sun-induced pigmentation from cumulative inland UV exposure need a series of 4-6 peels to see meaningful lightening, which is why a peel series is priced at consultation, with the full series cost confirmed before you commit. The first visit includes Fitzpatrick type classification, pigmentation pattern mapping, and realistic timeline discussion — melasma from years of valley heat and clear days doesn\'t resolve in one peel. Series pricing is confirmed at consultation before you commit. Each peel session takes 45-60 minutes with 3-5 days of mild flaking and strict 7-day sun avoidance. Chemical peels on melanin-rich skin should be scheduled for fall, winter, or early spring to minimize UV exposure during inland valley heat — not June-August when La Mesa reaches 85-95°F daily.',
+      answer: 'Lira Clinical Peels at KIAMO Skin start at $199 for Gentle Renewal (entry-level lactic/mandelic blend) and $299 for Advanced formulations (higher concentration with additional brightening agents). Most La Mesa clients with melasma or sun-induced pigmentation from cumulative inland UV exposure need a series of 4-6 peels to see meaningful lightening, which is why a peel series is priced at consultation, with the full series cost confirmed before a client commit. The first visit includes Fitzpatrick type classification, pigmentation pattern mapping, and realistic timeline discussion — melasma from years of valley heat and clear days doesn\'t resolve in one peel. Series pricing is confirmed at consultation before a client commit. Each peel session takes 45-60 minutes with 3-5 days of mild flaking and strict 7-day sun avoidance. Chemical peels on melanin-rich skin should be scheduled for fall, winter, or early spring to minimize UV exposure during inland valley heat — not June-August when La Mesa reaches 85-95°F daily.',
       entityCount: 12,
     },
     {
@@ -1364,12 +1364,12 @@ export const areaShells: AreaShell[] = [
     },
     {
       question: 'Should I do HydraFacial or Lira peels first for melasma from living in La Mesa?',
-      answer: 'It depends on your barrier condition. If your skin is dehydrated from inland heat and low humidity (tight, reactive, can\'t tolerate products it used to handle) — start with HydraFacial or DMK Enzyme Therapy to rebuild the barrier first, then escalate to Lira peels once the barrier is stable. Doing chemical peels on dehydrated barriers triggers more reactivity, inflammation, and PIH (post-inflammatory hyperpigmentation) — making your melasma worse, not better. If your barrier is intact (skin tolerates products normally, no stinging or reactivity) and you have visible pigmentation — Lira peels are appropriate immediately, starting with conservative strength and escalating across the series. Most La Mesa clients with melanin-rich skin and years of inland UV exposure have some degree of barrier compromise, so the typical sequence is: 2-3 HydraFacial sessions to hydrate and stabilize the barrier, then 4-6 Lira peels to address pigmentation. Trying to skip the barrier prep step is what causes PIH and treatment failure on melanin-rich skin. The consultation determines which path is correct for YOUR specific Fitzpatrick type and barrier condition.',
+      answer: 'It depends on the barrier condition. If the skin is dehydrated from inland heat and low humidity (tight, reactive, can\'t tolerate products it used to handle) — start with HydraFacial or DMK Enzyme Therapy to rebuild the barrier first, then escalate to Lira peels once the barrier is stable. Doing chemical peels on dehydrated barriers triggers more reactivity, inflammation, and PIH (post-inflammatory hyperpigmentation) — making your melasma worse, not better. If the barrier is intact (skin tolerates products normally, no stinging or reactivity) and a client has visible pigmentation — Lira peels are appropriate immediately, starting with conservative strength and escalating across the series. Most La Mesa clients with melanin-rich skin and years of inland UV exposure have some degree of barrier compromise, so the typical sequence is: 2-3 HydraFacial sessions to hydrate and stabilize the barrier, then 4-6 Lira peels to address pigmentation. Trying to skip the barrier prep step is what causes PIH and treatment failure on melanin-rich skin. The consultation determines which path is correct for YOUR specific Fitzpatrick type and barrier condition.',
       entityCount: 11,
     },
     {
       question: 'Can I take the trolley from La Mesa to Mission Hills for my facial appointments?',
-      answer: 'Partially. The MTS Orange Line trolley runs from La Mesa (Spring Street station) to downtown San Diego (12th & Imperial Transit Center or Santa Fe Depot) in approximately 25-30 minutes, then it\'s a 10-12 minute rideshare from Santa Fe Depot to the treatment room at 3067 Reynard Way in Mission Hills. Total travel time via trolley + rideshare: about 40-45 minutes one-way versus 20 minutes driving on I-8 west. The trolley runs frequently (every 7-15 minutes) during peak hours, less frequently evenings and weekends. Most La Mesa clients drive because total travel time is half as long, but trolley + rideshare is a viable option if you don\'t drive or want to avoid I-8 westbound commute traffic (7-9 AM). The trolley eliminates freeway stress and parking concerns, though total time commitment is nearly double. Monthly trolley pass holders sometimes prefer train for series appointments (Lira 4-6 peels, DMK 4-6 sessions) to avoid repeated 22-mile round-trip drives.',
+      answer: 'Partially. The MTS Orange Line trolley runs from La Mesa (Spring Street station) to downtown San Diego (12th & Imperial Transit Center or Santa Fe Depot) in approximately 25-30 minutes, then it\'s a 10-12 minute rideshare from Santa Fe Depot to the treatment room at 3067 Reynard Way in Mission Hills. Total travel time via trolley + rideshare: about 40-45 minutes one-way versus 20 minutes driving on I-8 west. The trolley runs frequently (every 7-15 minutes) during peak hours, less frequently evenings and weekends. Most La Mesa clients drive because total travel time is half as long, but trolley + rideshare is a viable option if a client don\'t drive or want to avoid I-8 westbound commute traffic (7-9 AM). The trolley eliminates freeway stress and parking concerns, though total time commitment is nearly double. Monthly trolley pass holders sometimes prefer train for series appointments (Lira 4-6 peels, DMK 4-6 sessions) to avoid repeated 22-mile round-trip drives.',
       entityCount: 11,
     },
   ],
@@ -1398,7 +1398,7 @@ export const areaShells: AreaShell[] = [
         },
         {
           title: 'Interval pacing for melanocyte recovery',
-          description: 'Next peel not scheduled until barrier has fully recovered (14-21 days minimum) and you\'ve completed the home care protocol. Rushing the series by peeling weekly or every 10 days is what causes PIH in melanin-rich skin — the barrier doesn\'t recover, melanocytes stay reactive, and the next peel triggers darker marks instead of lightening existing ones',
+          description: 'Next peel not scheduled until barrier has fully recovered (14-21 days minimum) and a client\'ve completed the home care protocol. Rushing the series by peeling weekly or every 10 days is what causes PIH in melanin-rich skin — the barrier doesn\'t recover, melanocytes stay reactive, and the next peel triggers darker marks instead of lightening existing ones',
         },
       ],
       footer: 'Total treatment time: 45-60 minutes | Downtime: Mild flaking days 3-5 | Series: 4-6 peels, 14-21 days apart | Zero sun exposure for 7 days post-peel | Fitzpatrick III-IV can peel fall/winter/spring; V-VI schedule for fall/winter only to minimize UV exposure risk during inland valley heat',
@@ -1415,11 +1415,11 @@ export const areaShells: AreaShell[] = [
         },
         {
           title: 'Enzyme masque application for plasmatic response',
-          description: 'Thick enzyme formulation (proprietary blend of peptidase, protease, amylase) applied to face, neck, décolletage in upward strokes. As it dries over 10-15 minutes, the masque creates a pumping/pulsing sensation — that\'s reverse osmosis driving oxygenated blood to the surface and forcing capillary dilation. Total contact time: 45 minutes. The stronger the pulse, the more dehydrated and oxygen-starved your skin was before treatment',
+          description: 'Thick enzyme formulation (proprietary blend of peptidase, protease, amylase) applied to face, neck, décolletage in upward strokes. As it dries over 10-15 minutes, the masque creates a pumping/pulsing sensation — that\'s reverse osmosis driving oxygenated blood to the surface and forcing capillary dilation. Total contact time: 45 minutes. The stronger the pulse, the more dehydrated and oxygen-starved the skin was before treatment',
         },
         {
           title: 'Peak plasmatic effect (the tightening/pulsing phase)',
-          description: 'At 35-40 minutes, you\'ll feel intense tightness and see visible pulsing — this is NOT burning or irritation, it\'s forced circulatory response bringing fresh blood to dehydrated cells. For La Mesa clients with chronic dehydration from inland heat, the first session often produces the strongest pump because circulation has been compromised for months or years',
+          description: 'At 35-40 minutes, a client\'ll feel intense tightness and see visible pulsing — this is NOT burning or irritation, it\'s forced circulatory response bringing fresh blood to dehydrated cells. For La Mesa clients with chronic dehydration from inland heat, the first session often produces the strongest pump because circulation has been compromised for months or years',
         },
         {
           title: 'Masque removal and barrier-rebuilding serum infusion',
@@ -1427,7 +1427,7 @@ export const areaShells: AreaShell[] = [
         },
         {
           title: 'Home prescriptives (mandatory for barrier rebuild)',
-          description: 'DMK home care products prescribed based on your specific dehydration pattern and indoor/outdoor exposure — Cleanser, Beta Gel, EFA, Herb & Mineral Spray used daily between sessions. The enzyme treatment rebuilds circulation; the home care rebuilds the lipid barrier. Without daily home support, you\'re back at dehydrated baseline within 72 hours',
+          description: 'DMK home care products prescribed based on your specific dehydration pattern and indoor/outdoor exposure — Cleanser, Beta Gel, EFA, Herb & Mineral Spray used daily between sessions. The enzyme treatment rebuilds circulation; the home care rebuilds the lipid barrier. Without daily home support, a client\'re back at dehydrated baseline within 72 hours',
         },
       ],
       footer: 'Total treatment time: 70-80 minutes | Downtime: Tightness for 12-24 hours, possible redness | Series: 4-6 sessions, 10-14 days apart for barrier rebuild | Can be done year-round in inland heat | Expect visible skin shedding days 3-5 (normal barrier turnover, not damage) | Often required before Lira peels on dehydrated melanin-rich skin',
@@ -1550,7 +1550,7 @@ export const areaShells: AreaShell[] = [
   schemaDescription: 'Corrective facials, peel series and scalp therapy for North Park clients, ten minutes away at the KIAMO Facial spa in Mission Hills, San Diego.',
   quickAnswer: 'KIAMO Skin treats pigmentation and acne scarring in melanin-rich skin at a one-room facial spa in San Diego (92103), just 3.5 miles west of North Park via University Avenue and Washington Street — ten minutes with no freeway required. Kiki, a California licensed esthetician with 7+ years specializing in melanin-rich skin (Fitzpatrick types III-VI), uses Lira Chemical Peels for post-inflammatory hyperpigmentation, Dermaplaning for surface prep and peel pairing, and DMK Enzyme Therapy for barrier repair. Clients travel from 30th & University, South Park, Normal Heights, and Golden Hill. Treatments start at $199, with series planning that accounts for the proximity advantage — ten-minute visits are the ones clients actually complete.',
   serviceAreaParagraph: 'KIAMO Skin serves clients from across North Park, including the 30th Street and University Avenue commercial corridor near the North Park Theatre and Observatory North Park (92104), the residential craftsman neighborhoods along Park Boulevard and Idaho Street (92104), South Park along Fern Street and Grape Street near the Golden Hill border (92102), Normal Heights along Adams Avenue and El Cajon Boulevard (92116), University Heights around Texas Street and Park Boulevard near Trolley Barn Park (92103), Golden Hill neighborhoods between 25th Street and 28th Street near Balboa Park\'s southeastern edge (92102), and the eastern Hillcrest border along University Avenue. The studio is in Mission Hills, San Diego County (92103), accessible via University Avenue west through Hillcrest, bearing left onto Washington Street, then left onto Reynard Way — 3.5 miles with zero freeway on-ramps required, approximately 10 minutes door-to-door off-peak.',
-  navigationContext: 'From the 30th Street and University Avenue intersection — the heart of North Park\'s commercial district near the North Park sign and landmark water tower — head west on University Avenue toward Hillcrest. You\'ll pass through North Park\'s residential blocks, then enter the Hillcrest commercial corridor along University between Park Boulevard and Vermont Street. At the intersection where University Avenue meets Washington Street (just past the Hillcrest sign), bear left to stay on Washington Street heading west. Continue on Washington through the residential stretch — you\'ll pass over I-5 without merging (the freeway runs beneath you). Immediately after crossing the I-5 overpass, turn left onto Reynard Way. The studio at 3067 Reynard Way is 0.3 miles south on the right side with free parking on site. Total distance: 3.5 miles. Total time: 10 minutes off-peak, 15 minutes during Hillcrest commercial hours. This is the only area served where no freeway merge is required — University Avenue and Washington Street form a direct surface-street connection from North Park\'s center to Mission Hills. From South Park, take Fern Street or 30th Street north to University and follow the route above. From Golden Hill, take 25th Street or 28th Street north to University and continue west. From Normal Heights, University Avenue west is the entire route.',
+  navigationContext: 'From the 30th Street and University Avenue intersection — the heart of North Park\'s commercial district near the North Park sign and landmark water tower — head west on University Avenue toward Hillcrest. You\'ll pass through North Park\'s residential blocks, then enter the Hillcrest commercial corridor along University between Park Boulevard and Vermont Street. At the intersection where University Avenue meets Washington Street (just past the Hillcrest sign), bear left to stay on Washington Street heading west. Continue on Washington through the residential stretch — a client\'ll pass over I-5 without merging (the freeway runs beneath a client). Immediately after crossing the I-5 overpass, turn left onto Reynard Way. The studio at 3067 Reynard Way is 0.3 miles south on the right side with free parking on site. Total distance: 3.5 miles. Total time: 10 minutes off-peak, 15 minutes during Hillcrest commercial hours. This is the only area served where no freeway merge is required — University Avenue and Washington Street form a direct surface-street connection from North Park\'s center to Mission Hills. From South Park, take Fern Street or 30th Street north to University and follow the route above. From Golden Hill, take 25th Street or 28th Street north to University and continue west. From Normal Heights, University Avenue west is the entire route.',
   geoData: {
     zipCodes: [
       '92104',
@@ -1609,22 +1609,22 @@ export const areaShells: AreaShell[] = [
     },
     {
       question: 'How much does a chemical peel series cost for North Park clients with hyperpigmentation?',
-      answer: 'Lira Chemical Peels at KIAMO Skin start at $199 for Gentle Renewal (entry-level) and $299 for Advanced formulations. Most North Park clients with PIH or melasma need a series of 4-6 peels to see meaningful lightening, which is why a peel series is priced at consultation, with the full series cost confirmed before you commit. The first visit includes Fitzpatrick type classification, PIH pattern mapping, and realistic timeline discussion — hyperpigmentation from acne, sun damage, or hormones doesn\'t resolve in one peel. Series pricing is confirmed at consultation before you commit. Each peel session takes 45-60 minutes with 3-5 days of mild flaking and strict 7-day sun avoidance. Proximity advantage: North Park\'s ten-minute drive makes completing the full series logistically realistic, while clients traveling from Carlsbad or Encinitas often abandon treatment after peel two when the biweekly commitment becomes unsustainable.',
+      answer: 'Lira Chemical Peels at KIAMO Skin start at $199 for Gentle Renewal (entry-level) and $299 for Advanced formulations. Most North Park clients with PIH or melasma need a series of 4-6 peels to see meaningful lightening, which is why a peel series is priced at consultation, with the full series cost confirmed before a client commit. The first visit includes Fitzpatrick type classification, PIH pattern mapping, and realistic timeline discussion — hyperpigmentation from acne, sun damage, or hormones doesn\'t resolve in one peel. Series pricing is confirmed at consultation before a client commit. Each peel session takes 45-60 minutes with 3-5 days of mild flaking and strict 7-day sun avoidance. Proximity advantage: North Park\'s ten-minute drive makes completing the full series logistically realistic, while clients traveling from Carlsbad or Encinitas often abandon treatment after peel two when the biweekly commitment becomes unsustainable.',
       entityCount: 11,
     },
     {
       question: 'Should I get dermaplaning before or after a chemical peel in North Park?',
-      answer: 'Dermaplaning comes 7-10 days BEFORE a chemical peel, not after. The purpose is to remove the dead cell layer (stratum corneum) so the peel acid penetrates evenly across your entire face. Without dermaplaning prep, acid penetrates deeply where dead cell buildup is thin and barely penetrates where buildup is thick — resulting in patchy lightening where some areas improve and others don\'t, requiring corrective treatments. The typical sequence: dermaplaning visit one, chemical peel visit two (7-10 days later), second peel visit three (14-21 days after first peel), optional second dermaplaning before third peel if needed. Each dermaplaning session is $199; each Lira peel is $199-$299 depending on formulation strength. Some clients dermaplane before every peel in a series, others dermaplane only before peel one and peel three. The protocol is decided at consultation based on your skin\'s dead cell turnover rate and how evenly the first peel penetrated. North Park\'s proximity makes this multi-step protocol realistic — it\'s ten minutes each way for every visit.',
+      answer: 'Dermaplaning comes 7-10 days BEFORE a chemical peel, not after. The purpose is to remove the dead cell layer (stratum corneum) so the peel acid penetrates evenly across your entire face. Without dermaplaning prep, acid penetrates deeply where dead cell buildup is thin and barely penetrates where buildup is thick — resulting in patchy lightening where some areas improve and others don\'t, requiring corrective treatments. The typical sequence: dermaplaning visit one, chemical peel visit two (7-10 days later), second peel visit three (14-21 days after first peel), optional second dermaplaning before third peel if needed. Each dermaplaning session is $199; each Lira peel is $199-$299 depending on formulation strength. Some clients dermaplane before every peel in a series, others dermaplane only before peel one and peel three. The protocol is decided at consultation based on the skin\'s dead cell turnover rate and how evenly the first peel penetrated. North Park\'s proximity makes this multi-step protocol realistic — it\'s ten minutes each way for every visit.',
       entityCount: 10,
     },
     {
       question: 'Can I walk from North Park to Mission Hills for my facial appointment?',
-      answer: 'Yes, it\'s 3.5 miles via University Avenue west to Washington Street, then south on Reynard Way — about 65-75 minutes walking at average pace. The route is entirely on sidewalks through Hillcrest\'s commercial corridor, then residential blocks approaching Mission Hills. Many North Park residents who live car-free or car-light walk or bike to appointments, especially for monthly maintenance treatments like HydraFacial where there\'s no post-treatment photosensitivity. For chemical peel series where you need to avoid sun exposure for 7 days post-treatment, walking home in direct sun immediately after a peel defeats the purpose — we recommend ride service, driving, or scheduling peels in late afternoon so the walk home happens after peak UV hours. Alternative: take the Route 7 bus from 30th & University to Washington & Reynard (runs every 15 minutes, about 20-minute ride). North Park is the only area served where public transit and walking are genuinely realistic options, though most clients drive the ten minutes.',
+      answer: 'Yes, it\'s 3.5 miles via University Avenue west to Washington Street, then south on Reynard Way — about 65-75 minutes walking at average pace. The route is entirely on sidewalks through Hillcrest\'s commercial corridor, then residential blocks approaching Mission Hills. Many North Park residents who live car-free or car-light walk or bike to appointments, especially for monthly maintenance treatments like HydraFacial where there\'s no post-treatment photosensitivity. For chemical peel series where a client needs to avoid sun exposure for 7 days post-treatment, walking home in direct sun immediately after a peel defeats the purpose — we recommend ride service, driving, or scheduling peels in late afternoon so the walk home happens after peak UV hours. Alternative: take the Route 7 bus from 30th & University to Washington & Reynard (runs every 15 minutes, about 20-minute ride). North Park is the only area served where public transit and walking are genuinely realistic options, though most clients drive the ten minutes.',
       entityCount: 11,
     },
     {
       question: 'Do I need a consultation first or can I book a chemical peel directly from North Park?',
-      answer: 'New clients always start with a consultation that includes a first treatment on the same visit — it\'s not a separate appointment. The consultation at KIAMO Skin covers Fitzpatrick type classification (determines which peel formulation and strength is safe for your skin tone), hyperpigmentation pattern analysis (where dark marks concentrate and why), barrier condition assessment, and series planning if multiple treatments are needed. You\'ll receive either a HydraFacial ($259), Lira Chemical Peel ($199-$299), or DMK Enzyme Therapy Level 1 ($279) during that same session based on what your skin can tolerate and what your concern requires. First-time consultation + treatment packages start at $249. You can book online at kiamoskin.com or call — we respond within 24 hours on business days. The studio is at 3067 Reynard Way in Mission Hills with free parking on site. From North Park, it\'s ten minutes via University Avenue west to Washington Street.',
+      answer: 'New clients always start with a consultation that includes a first treatment on the same visit — it\'s not a separate appointment. The consultation at KIAMO Skin covers Fitzpatrick type classification (determines which peel formulation and strength is safe for the skin tone), hyperpigmentation pattern analysis (where dark marks concentrate and why), barrier condition assessment, and series planning if multiple treatments are needed. You\'ll receive either a HydraFacial ($259), Lira Chemical Peel ($199-$299), or DMK Enzyme Therapy Level 1 ($279) during that same session based on what the skin can tolerate and what the concern requires. First-time consultation + treatment packages start at $249. You can book online at kiamoskin.com or call — we respond within 24 hours on business days. The studio is at 3067 Reynard Way in Mission Hills with free parking on site. From North Park, it\'s ten minutes via University Avenue west to Washington Street.',
       entityCount: 12,
     },
   ],
@@ -1653,7 +1653,7 @@ export const areaShells: AreaShell[] = [
         },
         {
           title: 'Interval pacing for melanin-rich skin',
-          description: 'Next peel not scheduled until barrier has fully recovered (14-21 days minimum) and you\'ve completed the home care protocol. Rushing the series is what causes PIH, not the peel itself. North Park\'s proximity makes this pacing realistic — biweekly visits for 8-12 weeks total',
+          description: 'Next peel not scheduled until barrier has fully recovered (14-21 days minimum) and a client\'ve completed the home care protocol. Rushing the series is what causes PIH, not the peel itself. North Park\'s proximity makes this pacing realistic — biweekly visits for 8-12 weeks total',
         },
       ],
       footer: 'Total treatment time: 45-60 minutes | Downtime: Mild flaking days 3-5 | Series: 4-6 peels, 14-21 days apart | Zero sun exposure for 7 days post-peel | Fitzpatrick III-IV can peel year-round; V-VI schedule for fall/winter/spring to minimize UV exposure risk',
@@ -1807,7 +1807,7 @@ export const areaShells: AreaShell[] = [
   schemaDescription: 'Sun damage, barrier repair and scalp therapy for Pacific Beach clients at the KIAMO Facial spa in Mission Hills, San Diego.',
   quickAnswer: 'KIAMO Skin treats sun damage and barrier damage from year-round outdoor exposure at a one-room facial spa in San Diego (92103), about 15 minutes east of Pacific Beach via Garnet Avenue and I-5. Kiki, a California licensed esthetician with 7+ years specializing in melanin-rich skin, uses Lira Chemical Peels for UVA-induced pigmentation, DMK Enzyme Therapy for salt-stripped barriers, and Keravive scalp therapy for clients from Crystal Pier, Crown Point, Sail Bay, and the Mission Bay boardwalk. Treatments start at $199, with series planning for May Gray and June Gloom damage that accumulates without visible burns.',
   serviceAreaParagraph: 'KIAMO Skin serves clients from across Pacific Beach, including the boardwalk corridor from Law Street south to Mission Beach (92109), the Garnet Avenue commercial district near Crystal Pier and Fanuel Street Cove (92109), Crown Point and Sail Bay neighborhoods surrounding Mission Bay Park (92109), the residential blocks around Kate Sessions Park near Grand Avenue and Lamont Street (92109), Tourmaline Surf Park at the northern edge near Tourmaline Street and La Jolla Boulevard, and the Mission Beach peninsula south toward Belmont Park and the Giant Dipper roller coaster. Many clients also travel from northern Mission Bay near De Anza Cove and Fiesta Island, the Clairemont border along Balboa Avenue, and Bay Park east of Mission Bay Drive. The studio is in Mission Hills, San Diego County (92103), accessible via Garnet Avenue east to I-5 south, exiting at Washington Street (Exit 17), approximately 7 miles and 15 minutes off-peak.',
-  navigationContext: 'From Crystal Pier at the west end of Garnet Avenue near Ocean Boulevard, head east on Garnet Avenue away from the beach — you\'ll pass the commercial strip, then residential blocks, then cross I-5 after about 3 miles. Once over the freeway, immediately merge onto I-5 south (right lanes). Stay in center lanes through the merge; right lanes back up with beach traffic on summer weekends. Washington Street (Exit 17) comes up in about 4 miles, just past the Old Town Transit Center on your left. Turn right at the exit, cross over the freeway, and Reynard Way is the first right turn after you pass the Washington Street and India Street intersection. From Crown Point or Sail Bay near Riviera Drive, take Ingraham Street south to Grand Avenue east, then merge onto I-5 south — same Washington Street exit. From Mission Beach or Belmont Park, head north on Mission Boulevard to Garnet Avenue, then follow the route above. The studio at 3067 Reynard Way sits between Mission Hills and Middletown, approximately 0.5 miles from the Washington Street exit with free parking on site. Summer beach traffic clogs Garnet and Ingraham west of I-5 from late morning through evening — appointments before 10 AM or after 3 PM avoid the thickest congestion.',
+  navigationContext: 'From Crystal Pier at the west end of Garnet Avenue near Ocean Boulevard, head east on Garnet Avenue away from the beach — a client\'ll pass the commercial strip, then residential blocks, then cross I-5 after about 3 miles. Once over the freeway, immediately merge onto I-5 south (right lanes). Stay in center lanes through the merge; right lanes back up with beach traffic on summer weekends. Washington Street (Exit 17) comes up in about 4 miles, just past the Old Town Transit Center on your left. Turn right at the exit, cross over the freeway, and Reynard Way is the first right turn after a client pass the Washington Street and India Street intersection. From Crown Point or Sail Bay near Riviera Drive, take Ingraham Street south to Grand Avenue east, then merge onto I-5 south — same Washington Street exit. From Mission Beach or Belmont Park, head north on Mission Boulevard to Garnet Avenue, then follow the route above. The studio at 3067 Reynard Way sits between Mission Hills and Middletown, approximately 0.5 miles from the Washington Street exit with free parking on site. Summer beach traffic clogs Garnet and Ingraham west of I-5 from late morning through evening — appointments before 10 AM or after 3 PM avoid the thickest congestion.',
   geoData: {
     zipCodes: [
       '92109',
@@ -1853,7 +1853,7 @@ export const areaShells: AreaShell[] = [
   enhancedFaqs: [
     {
       question: 'How long does it take to drive from Pacific Beach to Mission Hills for a facial?',
-      answer: 'About fifteen minutes off-peak, closer to twenty-five during beach traffic. From Crystal Pier or the Garnet Avenue strip, take Garnet Avenue east to I-5 south (crosses the freeway near Balboa Avenue), then I-5 south to Washington Street (Exit 17) — 7 miles total. Mid-morning (10 AM-12 PM) and early afternoon (1-3 PM) are the fastest windows. During summer weekends and afternoons (late May through September), beach traffic backs up Garnet and Ingraham west of I-5 from noon onward, which can push the drive to thirty minutes or more. If you\'re coming from Crown Point, Sail Bay, or Mission Beach, add about five minutes to reach Garnet Avenue first. Early morning appointments (8-10 AM) or late afternoon (after 4 PM) avoid the worst of the beach congestion.',
+      answer: 'About fifteen minutes off-peak, closer to twenty-five during beach traffic. From Crystal Pier or the Garnet Avenue strip, take Garnet Avenue east to I-5 south (crosses the freeway near Balboa Avenue), then I-5 south to Washington Street (Exit 17) — 7 miles total. Mid-morning (10 AM-12 PM) and early afternoon (1-3 PM) are the fastest windows. During summer weekends and afternoons (late May through September), beach traffic backs up Garnet and Ingraham west of I-5 from noon onward, which can push the drive to thirty minutes or more. If a client\'re coming from Crown Point, Sail Bay, or Mission Beach, add about five minutes to reach Garnet Avenue first. Early morning appointments (8-10 AM) or late afternoon (after 4 PM) avoid the worst of the beach congestion.',
       entityCount: 12,
     },
     {
@@ -1863,22 +1863,22 @@ export const areaShells: AreaShell[] = [
     },
     {
       question: 'How much do chemical peels cost for Pacific Beach clients with sun damage from May Gray?',
-      answer: 'Lira Chemical Peels at KIAMO Skin start at $199 for Gentle Renewal (entry-level lactic/mandelic blend) and $299 for Advanced formulations (higher acid concentration with additional brightening agents). Most Pacific Beach clients with UVA-induced pigmentation need a series of 4-6 peels to see meaningful tone evening, which is why we offer series pricing: $749 for a 4-peel series (saves $97 compared to individual pricing) or $1,399 for 6 peels (saves $195). The first visit includes Fitzpatrick type assessment, UV damage pattern analysis, and discussion of realistic timelines — melasma from years of May Gray exposure doesn\'t resolve in one peel. Series pricing is confirmed at consultation before you commit. Each peel session takes 45-60 minutes with 3-5 days of mild flaking and strict 7-day sun avoidance. Chemical peels cannot be safely done during peak summer beach season (June-August) due to photosensitivity risk — we schedule for fall, winter, or early spring.',
+      answer: 'Lira Chemical Peels at KIAMO Skin start at $199 for Gentle Renewal (entry-level lactic/mandelic blend) and $299 for Advanced formulations (higher acid concentration with additional brightening agents). Most Pacific Beach clients with UVA-induced pigmentation need a series of 4-6 peels to see meaningful tone evening, which is why we offer series pricing: $749 for a 4-peel series (saves $97 compared to individual pricing) or $1,399 for 6 peels (saves $195). The first visit includes Fitzpatrick type assessment, UV damage pattern analysis, and discussion of realistic timelines — melasma from years of May Gray exposure doesn\'t resolve in one peel. Series pricing is confirmed at consultation before a client commit. Each peel session takes 45-60 minutes with 3-5 days of mild flaking and strict 7-day sun avoidance. Chemical peels cannot be safely done during peak summer beach season (June-August) due to photosensitivity risk — we schedule for fall, winter, or early spring.',
       entityCount: 13,
     },
     {
       question: 'Will a chemical peel remove May Gray sun damage permanently or does it come back?',
-      answer: 'No treatment removes sun damage permanently — UV exposure is ongoing, and melanocytes retain the capacity to produce pigment throughout your life. What Lira Chemical Peels do is suppress melanocyte activity and lighten existing pigmentation to a more even baseline tone. Results can last 6-18 months if you maintain strict daily sun protection: mineral SPF 50+ applied every 90 minutes during outdoor time, wide-brimmed hat for boardwalk walking, UV-blocking car windows for Garnet Avenue commutes, and avoiding peak UV hours (10 AM-3 PM) during summer. Pacific Beach lifestyle makes this challenging — the boardwalk, Tourmaline surf sessions, Crown Point kayaking, and Sail Bay paddleboarding all involve prolonged UV exposure. Without daily sun protection compliance, melasma will recur within 2-4 months, often darker than before treatment because melanocytes rebound more aggressively after peel series. Maintenance peels every 2-3 months help sustain results, but daily SPF compliance is the determining factor for long-term pigment control, not the peel itself.',
+      answer: 'No treatment removes sun damage permanently — UV exposure is ongoing, and melanocytes retain the capacity to produce pigment throughout your life. What Lira Chemical Peels do is suppress melanocyte activity and lighten existing pigmentation to a more even baseline tone. Results can last 6-18 months if a client maintains strict daily sun protection: mineral SPF 50+ applied every 90 minutes during outdoor time, wide-brimmed hat for boardwalk walking, UV-blocking car windows for Garnet Avenue commutes, and avoiding peak UV hours (10 AM-3 PM) during summer. Pacific Beach lifestyle makes this challenging — the boardwalk, Tourmaline surf sessions, Crown Point kayaking, and Sail Bay paddleboarding all involve prolonged UV exposure. Without daily sun protection compliance, melasma will recur within 2-4 months, often darker than before treatment because melanocytes rebound more aggressively after peel series. Maintenance peels every 2-3 months help sustain results, but daily SPF compliance is the determining factor for long-term pigment control, not the peel itself.',
       entityCount: 14,
     },
     {
       question: 'Is Keravive scalp treatment safe for surfers and ocean swimmers in Pacific Beach?',
-      answer: 'Yes, and it\'s specifically designed for year-round ocean exposure. Keravive uses HydraFacial\'s vortex extraction technology (vacuum-based suction) rather than chemical exfoliation, so there\'s no photosensitivity risk like with scalp peels. You can swim in the ocean the same day after treatment if needed, though most clients wait 12-24 hours to allow the peptide serum to penetrate fully before stripping it with salt water. The treatment clears salt crystals, mineral deposits from San Diego\'s hard water (which leaves calcium/magnesium buildup in follicles), and oxidized sebum from UV exposure along the part line — all of which accumulate when you\'re surfing at Tourmaline or swimming at Crown Point year-round. Keravive works as a three-session series spaced 30 days apart because one treatment clears the buildup but doesn\'t rebuild the scalp barrier — cumulative improvement happens across the full course. Most Pacific Beach surfers and ocean swimmers book the series in fall or winter when water is cold enough that missing a few swim days doesn\'t impact training, though the treatment itself doesn\'t require ocean avoidance.',
+      answer: 'Yes, and it\'s specifically designed for year-round ocean exposure. Keravive uses HydraFacial\'s vortex extraction technology (vacuum-based suction) rather than chemical exfoliation, so there\'s no photosensitivity risk like with scalp peels. You can swim in the ocean the same day after treatment if needed, though most clients wait 12-24 hours to allow the peptide serum to penetrate fully before stripping it with salt water. The treatment clears salt crystals, mineral deposits from San Diego\'s hard water (which leaves calcium/magnesium buildup in follicles), and oxidized sebum from UV exposure along the part line — all of which accumulate when a client\'re surfing at Tourmaline or swimming at Crown Point year-round. Keravive works as a three-session series spaced 30 days apart because one treatment clears the buildup but doesn\'t rebuild the scalp barrier — cumulative improvement happens across the full course. Most Pacific Beach surfers and ocean swimmers book the series in fall or winter when water is cold enough that missing a few swim days doesn\'t impact training, though the treatment itself doesn\'t require ocean avoidance.',
       entityCount: 13,
     },
     {
       question: 'Can I get a chemical peel if I live in Pacific Beach and spend time on the boardwalk daily?',
-      answer: 'Yes, but timing and strict sun avoidance during the healing window become critical. Chemical peels make skin temporarily more photosensitive for 7-14 days after treatment, which is manageable if you can avoid direct midday sun during that period. We schedule peels for Pacific Beach clients during fall, winter, or early spring (October-April) when UV index is lower and marine layer coverage is longer each day. You\'ll need mineral SPF 50+ reapplied every 90 minutes, a wide-brimmed hat for any boardwalk time, and ideally zero direct sun exposure from 10 AM-3 PM during the first 7 days post-peel. If your lifestyle or work makes that impossible — daily boardwalk running, beach volleyball, surf coaching, outdoor lifeguarding — we recommend DMK Enzyme Therapy or HydraFacial instead. Both strengthen the barrier and address pigmentation without causing photosensitivity, meaning you can maintain your beach routine year-round. If you must peel during summer, you\'re accepting higher PIH risk and slower results because compliance with sun avoidance is nearly impossible when you live walking distance from Crystal Pier.',
+      answer: 'Yes, but timing and strict sun avoidance during the healing window become critical. Chemical peels make skin temporarily more photosensitive for 7-14 days after treatment, which is manageable if a client can avoid direct midday sun during that period. We schedule peels for Pacific Beach clients during fall, winter, or early spring (October-April) when UV index is lower and marine layer coverage is longer each day. You\'ll need mineral SPF 50+ reapplied every 90 minutes, a wide-brimmed hat for any boardwalk time, and ideally zero direct sun exposure from 10 AM-3 PM during the first 7 days post-peel. If your lifestyle or work makes that impossible — daily boardwalk running, beach volleyball, surf coaching, outdoor lifeguarding — we recommend DMK Enzyme Therapy or HydraFacial instead. Both strengthen the barrier and address pigmentation without causing photosensitivity, meaning a client can maintain your beach routine year-round. If a client must peel during summer, a client\'re accepting higher PIH risk and slower results because compliance with sun avoidance is nearly impossible when a client live walking distance from Crystal Pier.',
       entityCount: 12,
     },
   ],
@@ -1907,7 +1907,7 @@ export const areaShells: AreaShell[] = [
         },
         {
           title: 'Home care compliance verification',
-          description: 'Next peel not scheduled until you\'ve completed the full post-peel protocol and the barrier has fully recovered — rushing the series is what causes PIH, not the peel itself',
+          description: 'Next peel not scheduled until a client\'ve completed the full post-peel protocol and the barrier has fully recovered — rushing the series is what causes PIH, not the peel itself',
         },
       ],
       footer: 'Total treatment time: 45-60 minutes | Downtime: Mild flaking days 3-5 | Series: 4-6 peels, 14-21 days apart | Zero sun exposure for 7 days post-peel | Not suitable during summer beach season — schedule for fall/winter/early spring',
@@ -1928,7 +1928,7 @@ export const areaShells: AreaShell[] = [
         },
         {
           title: 'Plasmatic response peak',
-          description: 'At peak effect (around 35-40 minutes), your face will feel tight and you\'ll see visible pulsing — this is not a chemical burn, it\'s reverse osmosis pulling fluid into the dermis and forcing capillary dilation. The stronger the pulse, the more compromised your barrier was before treatment',
+          description: 'At peak effect (around 35-40 minutes), your face will feel tight and a client\'ll see visible pulsing — this is not a chemical burn, it\'s reverse osmosis pulling fluid into the dermis and forcing capillary dilation. The stronger the pulse, the more compromised the barrier was before treatment',
         },
         {
           title: 'Masque removal and transdermal serum infusion',
@@ -2150,7 +2150,7 @@ export const areaShells: AreaShell[] = [
       'Balboa Park',
     ],
   },
-  melaninNote: 'Hillcrest clients with melanin-rich skin are treated on protocols selected for the tone in front of you, not on a general pigment protocol.',
+  melaninNote: 'Hillcrest clients with melanin-rich skin are treated on protocols selected for the tone in front of the practitioner, not on a general pigment protocol.',
   schemaDescription: 'Corrective facials for Hillcrest clients — HydraFacial, peel series, and dermaplaning at a one-room facial spa in San Diego, five minutes away on Washington Street.',
   quickAnswer: 'KIAMO Skin is five minutes from Hillcrest on Washington Street, with free parking on site. Kiki, a California licensed esthetician with 7+ years of experience, treats uneven tone, texture, and pigment with HydraFacial at $259, dermaplaning at $199, and LIRA chemical peels from $199 for pigmentation. Because the drive is short, corrective series at four-to-six-week intervals are practical from Hillcrest — the schedule is mapped before the first appointment.',
   serviceAreaParagraph: 'KIAMO Skin serves clients from across Hillcrest, including the University Avenue village, the Fifth Avenue corridor, the residential streets behind Balboa Park along Upas and Delaware, and the eastern edges toward North Park. The studio is in San Diego, five minutes away on Washington Street, with free parking on site.',
@@ -2173,4 +2173,195 @@ export const areaShells: AreaShell[] = [
   heroCityLine:
     'For Hillcrest that means the uneven tone and texture that no home routine has moved, treated with clinical equipment.',
  },
+  {
+  slug: 'san-diego',
+  name: 'San Diego',
+  isStudioCity: true,
+  placeLabel: 'San Diego, CA',
+  gettingHere: 'The studio is in San Diego, at 3067 Reynard Way in Mission Hills — off Washington Street, three and a half miles from the city centre. From the airport, take I-5 north to Washington Street and turn west; the studio is the second right after the freeway exit, about twelve minutes. From downtown, take Washington Street west to Reynard Way and turn right, about eight minutes with no freeway. From North Park, Hillcrest and Little Italy, it is under ten minutes on surface streets. From La Jolla, Encinitas and Carlsbad, take I-5 south to the Washington Street exit and turn west, fifteen to thirty-five minutes depending on traffic. Free parking on site — no street parking, no garage.',
+  landmarks: [
+    'Mission Hills',
+    'Balboa Park',
+    'Little Italy',
+    'Gaslamp Quarter',
+    'North Park',
+    'Hillcrest',
+    'Kensington',
+    'University Heights',
+    'Bankers Hill',
+    'Old Town',
+    'Mission Bay',
+    'Mission Beach',
+    'Pacific Beach',
+    'Ocean Beach',
+    'Sunset Cliffs',
+    'Point Loma',
+    'Coronado',
+    'Clairemont',
+    'University City',
+    'Kearny Mesa',
+    'Mira Mesa',
+    'Linda Vista',
+    'Mission Valley',
+    'San Diego Zoo',
+    'Embarcadero',
+  ],
+  adjacentAreas: [
+    'la-jolla',
+    'encinitas',
+    'carlsbad',
+    'pacific-beach',
+    'north-park',
+    'hillcrest',
+    'point-loma',
+    'chula-vista',
+    'la-mesa',
+  ],
+  geo: {
+    latitude: 32.7157,
+    longitude: -117.1611,
+  },
+  geoRadius: '25000',
+  postalCodes: [
+    '92101',
+    '92102',
+    '92103',
+    '92104',
+    '92106',
+    '92107',
+    '92108',
+    '92109',
+    '92111',
+    '92113',
+    '92114',
+    '92115',
+    '92117',
+    '92118',
+    '92120',
+    '92122',
+    '92126',
+    '92130',
+    '92132',
+    '92134',
+    '92139',
+    '92140',
+  ],
+  cityModifiers: [
+    'Highest UV index in the continental United States for a large share of the year',
+    'Marine layer on the coast, dry heat inland, and both within one county',
+    'Hard water across most of the city, which dries the barrier faster than soft water',
+    'Outdoor lifestyle year-round, from the bay to the trails to the courts',
+    'The widest range of skin types and tones of any market the studio serves',
+    'A single-room studio in Mission Hills serving the whole county',
+  ],
+  localConcern: {
+    heading: 'What the San Diego climate does to a skin barrier over ten years',
+    body: 'San Diego runs the highest UV index in the continental United States for much of the year, and the light here is the kind that leaves a mark. A client who spends a decade in this city accumulates more cumulative UV than the same ten years anywhere else in the country, and cumulative UV is the slow, quiet driver of the uneven tone, the early lines and the lentigines that show up in a photo in your thirties. Three things make it worse here than inland heat alone would. The first is the marine layer: it keeps the coast cool enough to stay outside for hours, which means the exposure is long rather than intense, and long exposure is what produces the mottled pigmentation that sits deeper than a sunburn ever reaches. The second is the water. Most of San Diego runs on hard water, and hard water strips the lipids that hold a barrier together in the twenty minutes after a shower — the same twenty minutes most people spend doing everything else to the skin. The third is the salt, for the clients who swim, surf or work on the water. KIAMO Skin treats the barrier first and the pigment second, because a peel on a compromised barrier produces the post-inflammatory marks the client came in asking to remove. The assessment at the first visit is where the depth is set — the same treatment on a barrier that is holding and on one that is not is two different treatments, and the difference is not in the protocol. It is in the concentration, the interval and the order.',
+  },
+  allAbout: {
+    body: 'San Diego is the studio\'s city. KIAMO Skin sits at 3067 Reynard Way in Mission Hills, off Washington Street, and clients come from every part of the county — from Clairemont and Kearny Mesa in the north, to Point Loma and Ocean Beach in the west, to Chula Vista and La Mesa in the east, and from the whole coastal strip in between. One treatment room, one practitioner, and a plan mapped before anything is booked. The studio serves the whole city because the drive is short from most of it and because the corrective work that actually changes skin runs on a schedule — four to six weeks between sessions, several sessions in a course — that only holds if the travel is manageable.',
+    facts: [
+      {
+        label: 'The studio',
+        value: '3067 Reynard Way, Mission Hills, San Diego',
+      },
+      {
+        label: 'Reach',
+        value: 'Under ten minutes from North Park, Hillcrest and Little Italy',
+      },
+      {
+        label: 'The climate',
+        value: 'Highest UV index in the continental US for much of the year',
+      },
+      {
+        label: 'Booked most',
+        value: 'Pigment correction and barrier repair',
+      },
+    ],
+  },
+  proximity: 'In the city — the studio is at 3067 Reynard Way, Mission Hills, off Washington Street',
+  pricingNote: 'A HydraFacial is $259. A first visit with consultation is $249. Dermaplaning starts at $199. Full pricing is on each treatment page.',
+  featured: [
+    'facial',
+    'hydrafacial',
+    'chemical-peel',
+    'microneedling',
+    'dermaplaning',
+    'scalp-therapy',
+    'dmk-enzyme-therapy',
+    'acne-treatment',
+    'hyperpigmentation-treatment',
+    'melasma-treatment',
+    'corrective-skin-treatments',
+  ],
+  crossLinkLabel: 'San Diego — the studio is in the city',
+  keywordContext: {
+    primaryKeyword: 'facial san diego',
+    treatmentPhrases: [
+      'facial spa san diego',
+      'HydraFacial san diego',
+      'microneedling san diego',
+      'chemical peel san diego',
+      'corrective facial san diego',
+    ],
+    neighborhoodMentions: [
+      'Mission Hills',
+      'Hillcrest',
+      'Balboa Park',
+      'North Park',
+      'Pacific Beach',
+      'Point Loma',
+      'Little Italy',
+      'Gaslamp Quarter',
+      'Clairemont',
+      'Kearny Mesa',
+    ],
+  },
+  melaninNote: 'KIAMO Skin treats every Fitzpatrick type from I to VI, and the pigment protocols are written for the tone they are used on rather than adjusted afterwards.',
+  schemaDescription: 'Corrective facials in San Diego, CA — HydraFacial, chemical peels, microneedling, dermaplaning and scalp therapy at KIAMO Skin, a licensed facial spa in Mission Hills.',
+  quickAnswer: 'KIAMO Skin is a licensed facial spa in Mission Hills, San Diego, at 3067 Reynard Way off Washington Street, with free parking on site. Kiki, a California licensed esthetician with 7+ years of experience, performs every treatment in one private treatment room — corrective facials, HydraFacial at $259, LIRA chemical peels from $199, Procell microchanneling at $475, dermaplaning from $199 and Keravive scalp therapy at $599. The first visit is $249 and includes the consultation and skin analysis that set the plan. KIAMO Skin treats every skin type, Fitzpatrick I to VI, and the protocols are calibrated to the tone in front of the practitioner rather than adjusted afterwards.',
+  serviceAreaParagraph: 'KIAMO Skin is in San Diego itself, at 3067 Reynard Way in Mission Hills off Washington Street, and serves clients across the city — from Clairemont, Kearny Mesa and University City in the north, through North Park, Hillcrest, Little Italy and Bankers Hill, to Mission Bay, Mission Beach, Pacific Beach and Point Loma in the west, and out to Chula Vista and La Mesa in the east. Free parking is on site, the studio is appointment-only, and the same consultation that decides the treatment is the one that decides the series.',
+  navigationContext: 'From the San Diego International Airport, take I-5 north to the Washington Street exit and turn west; the studio is 0.4 miles from the freeway exit, about twelve minutes. From downtown and the Gaslamp Quarter, take Washington Street west to Reynard Way and turn right, about eight minutes on surface streets with no freeway. From Balboa Park and Hillcrest, come south on Date Street or Park Boulevard to Washington Street. From Mission Valley and Kearny Mesa, take I-8 west to the Washington Street exit. From Point Loma and Ocean Beach, take Rosecrans Street east to Washington Street and turn left. From North Park, take University Avenue west or Morena Boulevard south to Washington Street. Free parking is on site at 3067 Reynard Way.',
+  enhancedFaqs: [
+    {
+      question: 'Where is KIAMO Skin in San Diego?',
+      answer: 'At 3067 Reynard Way in Mission Hills, off Washington Street, three and a half miles from the city centre. Parking is free on site, the studio is by appointment only, and there is no garage or street parking to find. It is under ten minutes from North Park, Hillcrest, Little Italy and Bankers Hill on surface streets.',
+    },
+    {
+      question: 'What does a facial cost in San Diego at KIAMO Skin?',
+      answer: 'The first visit is $249 and includes the consultation, the skin analysis and the first treatment. After that a HydraFacial is $259, dermaplaning starts at $199, LIRA chemical peels start at $199 and go to $299 for the advanced protocol, Procell microchanneling is $475 or $1,199 for a series of three, and Keravive scalp therapy is $599 or $1,499 for a series of three. Every price is published on the site before a booking is made.',
+    },
+    {
+      question: 'How does KIAMO Skin decide which treatment to use?',
+      answer: 'At the first visit, before anything is treated. Kiki assesses skin tone, barrier condition and the concern being treated, and picks the modality from that rather than from a menu. A HydraFacial at $259 for congestion and dehydration, dermaplaning at $199 for surface refinement, a LIRA peel series for pigment, Procell microchanneling at $475 for scarring and texture. The plan — number of sessions, intervals and timeline — is set before the next appointment is booked.',
+    },
+    {
+      question: 'What skin concerns does KIAMO Skin treat in San Diego?',
+      answer: 'Pigment — melasma, post-acne marks and sun-induced dark spots — which is the most common reason clients book, because San Diego runs the highest UV index in the continental United States for much of the year. Also acne and scarring, barrier damage from hard water and salt exposure, uneven texture and tone, and scalp conditions including buildup, flaking and irritation treated with Keravive scalp therapy at $599.',
+    },
+    {
+      question: 'Does KIAMO Skin treat darker skin tones?',
+      answer: 'Yes — every Fitzpatrick type from I to VI, and melanin-rich skin is where the pigment protocols are written most carefully. Melasma and post-inflammatory hyperpigmentation are treated with gentle chemical peels whose strength is raised only as the barrier allows, because heat and aggressive treatment can deepen the marks they are meant to correct.',
+    },
+  ],
+
+  heroCityLine:
+    'For San Diego that means the highest UV index in the continental United States, and a pigment protocol written for the tone in front of the practitioner.',
+ },
+];
+
+/**
+ * The shells, with the studio's own city first.
+ *
+ * San Diego is not one neighbourhood among ten — it is where the studio is,
+ * and it is the answer to the query the whole cluster is built around. Every
+ * list that renders areas reads this array: the areas hub, the homepage's
+ * "where clients come from" band, the services index, the inventory and
+ * llms.txt. Putting San Diego at the top of the array puts it at the top of
+ * all of them, which is the internal-linking rule the site should have been
+ * following since the city was added.
+ */
+export const areaShells: AreaShell[] = [
+  ...shellList.filter((shell) => shell.slug === 'san-diego'),
+  ...shellList.filter((shell) => shell.slug !== 'san-diego'),
 ];

@@ -65,7 +65,7 @@ const note = dark ? 'text-porcelain/75' : 'text-ink-soft';
 <div
   class={`border p-8 md:p-10 ${dark ? 'border-porcelain/20 bg-porcelain/[0.04]' : 'border-line bg-ivory'}`}
 >
-  <h3 class="t-h3 text-[1.375rem] md:text-[1.625rem]">Ask before you decide</h3>
+  <h3 class="t-h3 text-[1.375rem] md:text-[1.625rem]">Ask before the first visit</h3>
   <p class={`t-body mt-4 text-[0.9375rem] ${note}`}>
     Not sure which treatment fits, or what it would take? Send the question. It goes straight
     to the studio, and the reply comes from the person who would be doing the work.
@@ -130,7 +130,7 @@ const note = dark ? 'text-porcelain/75' : 'text-ink-soft';
         name="message"
         rows="3"
         class={`${field} resize-y`}
-        placeholder="What is your skin doing, and what have you already tried?"></textarea>
+        placeholder="What is the skin doing, and what have a client already tried?"></textarea>
     </div>
 
     <button
@@ -142,7 +142,7 @@ const note = dark ? 'text-porcelain/75' : 'text-ink-soft';
     </button>
 
     <p class={`t-meta mt-4 ${dark ? 'text-porcelain/50' : 'text-ink-soft'}`}>
-      No obligation. Or call {business.phone.display} if you would rather talk it through.
+      No obligation. Or call {business.phone.display} to talk it through.
     </p>
   </form>
 
@@ -183,7 +183,7 @@ const note = dark ? 'text-porcelain/75' : 'text-ink-soft';
 
         form.classList.add('hidden');
         status.textContent =
-          'Thank you — your request is with the studio. If you need an answer sooner, call or text ' +
+          'Thank you — the request is with the studio. If a client needs an answer sooner, call or text ' +
           phone +
           '.';
       } catch {

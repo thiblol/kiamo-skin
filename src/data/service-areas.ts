@@ -34,7 +34,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   quickAnswer: '',
   authority: {
     heading: 'Why La Jolla clients trust KIAMO Skin for facials',
-    body: 'La Jolla\'s coastal exposure, year-round UV, and proximity to UCSD create a specific set of skin concerns — barrier damage from coastal humidity, pigmentation from constant UV reflection off the ocean, and post-inflammatory recovery from active outdoor lifestyles. KIAMO Skin uses HydraFacial Syndeo with AI-powered skin analysis (the current-generation device, not older consumer-grade equipment), Lira chemical peels at Fitzpatrick-calibrated concentrations, DMK Enzyme Therapy for barrier-first protocols, and dermaplaning when surface refinement is the goal. Kiki has 7+ years of experience treating every skin tone. The one-practitioner model means the person who assesses your skin is the one who treats it — no rotation between junior staff, no handoff between consultation and treatment.',
+    body: 'La Jolla\'s coastal exposure, year-round UV, and proximity to UCSD create a specific set of skin concerns — barrier damage from coastal humidity, pigmentation from constant UV reflection off the ocean, and post-inflammatory recovery from active outdoor lifestyles. KIAMO Skin uses HydraFacial Syndeo with AI-powered skin analysis (the current-generation device, not older consumer-grade equipment), Lira chemical peels at Fitzpatrick-calibrated concentrations, DMK Enzyme Therapy for barrier-first protocols, and dermaplaning when surface refinement is the goal. Kiki has 7+ years of experience treating every skin tone. The one-practitioner model means the person who assesses the skin is the one who treats it — no rotation between junior staff, no handoff between consultation and treatment.',
   },
   uniqueness: {
     heading: 'Facials customized for La Jolla skin and lifestyle',
@@ -53,11 +53,11 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
     process: [
       {
         step: 'Assessment',
-        description: 'Kiki evaluates your skin tone (Fitzpatrick I-VI), primary concern (congestion, dehydration, dullness, sun damage, hyperpigmentation, barrier damage), and the modality that fits — HydraFacial Syndeo, Lira chemical peel, DMK enzyme therapy, or dermaplaning. For La Jolla clients, the assessment factors in coastal UV exposure from Village Drive walks, beach time at Windansea or La Jolla Shores, and any current corrective plan.',
+        description: 'Kiki evaluates the skin tone (Fitzpatrick I-VI), primary concern (congestion, dehydration, dullness, sun damage, hyperpigmentation, barrier damage), and the modality that fits — HydraFacial Syndeo, Lira chemical peel, DMK enzyme therapy, or dermaplaning. For La Jolla clients, the assessment factors in coastal UV exposure from Village Drive walks, beach time at Windansea or La Jolla Shores, and any current corrective plan.',
       },
       {
         step: 'Treatment',
-        description: 'Sessions run 45-75 minutes depending on modality. HydraFacial Syndeo pairs Vortex-Fusion extraction with AI analysis and selected boosters. Lira peels use lactic, mandelic, or TCA at concentrations matched to your skin tone. DMK enzyme therapy rebuilds barrier function. Dermaplaning removes the surface layer of dead skin and vellus hair before serum infusion. No modality is selected without checking it is safe for your Fitzpatrick type.',
+        description: 'Sessions run 45-75 minutes depending on modality. HydraFacial Syndeo pairs Vortex-Fusion extraction with AI analysis and selected boosters. Lira peels use lactic, mandelic, or TCA at concentrations matched to the skin tone. DMK enzyme therapy rebuilds barrier function. Dermaplaning removes the surface layer of dead skin and vellus hair before serum infusion. No modality is selected without checking it is safe for the Fitzpatrick type.',
       },
       {
         step: 'Homecare',
@@ -72,19 +72,19 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'Is a facial safe before a La Jolla beach event?',
-      answer: 'Yes. HydraFacial Syndeo has zero downtime — you can attend a beach event, gallery opening, or wedding the same day. Dermaplaning and Lira chemical peels may leave mild flush for a few hours; Kiki will advise based on the specific event timing. Most La Jolla clients book facials 1-2 days before major events for the best glow window.',
+      answer: 'Yes. HydraFacial Syndeo has zero downtime — a client can attend a beach event, gallery opening, or wedding the same day. Dermaplaning and Lira chemical peels may leave mild flush for a few hours; Kiki advises based on the specific event timing. Most La Jolla clients book facials 1-2 days before major events for the best glow window. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'What should La Jolla clients expect after a facial?',
-      answer: 'No downtime — return to the beach or boat activities immediately. Skin may look slightly flushed for 30-60 minutes. Most La Jolla clients notice smoother texture, smaller pores, and a glow lasting 5-7 days. The hydration and barrier protection is especially noticeable if you have been dealing with coastal dryness and salt water.',
+      answer: 'No downtime — return to the beach or boat activities immediately. Skin may look slightly flushed for 30-60 minutes. Most La Jolla clients notice smoother texture, smaller pores, and a glow lasting 5-7 days. The hydration and barrier protection is especially noticeable where a client has been dealing with coastal dryness and salt water. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'What facial addresses sun damage from La Jolla coastal exposure?',
-      answer: 'For cumulative sun damage, KIAMO Skin pairs HydraFacial Syndeo maintenance with Lira chemical peels calibrated to your Fitzpatrick type. Brightening boosters in the HydraFacial step (Britenol, peptides, growth factors) address tone, while a series of peels targets pigment at the cellular level. Homecare includes broad-spectrum SPF 50+ and tyrosinase inhibitors where appropriate.',
+      answer: 'For cumulative sun damage, KIAMO Skin pairs HydraFacial Syndeo maintenance with Lira chemical peels calibrated to the Fitzpatrick type in front of the practitioner. Brightening boosters in the HydraFacial step (Britenol, peptides, growth factors) address tone, while a series of peels targets pigment at the cellular level. Homecare includes broad-spectrum SPF 50+ and tyrosinase inhibitors where appropriate.',
     },
     {
-      question: 'Do you offer evening appointments for La Jolla professionals?',
-      answer: 'Yes. Many La Jolla clients work in the UTC business district, the research corridor, or downtown and book after-work appointments. Evening slots are limited because the studio is single-room and single-practitioner — booking 2-3 weeks ahead is recommended for specific times.',
+      question: 'Does KIAMO Skin offer evening appointments for La Jolla professionals?',
+      answer: 'Yes. Many La Jolla clients work in the UTC business district, the research corridor, or downtown and book after-work appointments. Evening slots are limited because the studio is single-room and single-practitioner — booking 2-3 weeks ahead is recommended for specific times. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Can I get a facial if I am visiting La Jolla from out of town?',
@@ -103,7 +103,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   quickAnswer: '',
   authority: {
     heading: 'Coastal and surfer-lifestyle facial protocols',
-    body: 'Encinitas is one of San Diego\'s most surf-intensive communities — Swami\'s, Cardiff Reef, and the Moonlight Beach breaks produce clients who spend hours in salt water daily. That lifestyle creates barrier breakdown, mineral and zinc-oxide buildup, and accelerated photoaging. KIAMO Skin uses HydraFacial Syndeo with AI skin analysis to identify and treat coastal damage, Lira chemical peels at Fitzpatrick-calibrated concentrations for pigmentation, and DMK enzyme therapy for barrier repair. Kiki has 7+ years treating coastal skin and understands the difference between daily surfers and occasional beachgoers. The single-practitioner model means continuity — the person who reads your skin today is the one who treats it.',
+    body: 'Encinitas is one of San Diego\'s most surf-intensive communities — Swami\'s, Cardiff Reef, and the Moonlight Beach breaks produce clients who spend hours in salt water daily. That lifestyle creates barrier breakdown, mineral and zinc-oxide buildup, and accelerated photoaging. KIAMO Skin uses HydraFacial Syndeo with AI skin analysis to identify and treat coastal damage, Lira chemical peels at Fitzpatrick-calibrated concentrations for pigmentation, and DMK enzyme therapy for barrier repair. Kiki has 7+ years treating coastal skin and understands the difference between daily surfers and occasional beachgoers. The single-practitioner model means continuity — the person who reads the skin today is the one who treats it.',
   },
   uniqueness: {
     heading: 'Facials for Encinitas coastal living',
@@ -118,11 +118,11 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   },
   depth: {
     heading: 'How a facial works at KIAMO Skin',
-    body: 'Every facial follows a three-step structure with modality chosen to match your skin on the day.',
+    body: 'Every facial follows a three-step structure with modality chosen to match the skin on the day.',
     process: [
       {
         step: 'Assessment',
-        description: 'Kiki evaluates your skin tone (Fitzpatrick I-VI), concern, and the right modality. For Encinitas clients, this includes salt-exposure history, current surf or beach frequency, and UV history.',
+        description: 'Kiki evaluates the skin tone (Fitzpatrick I-VI), concern, and the right modality. For Encinitas clients, this includes salt-exposure history, current surf or beach frequency, and UV history.',
       },
       {
         step: 'Treatment',
@@ -145,19 +145,19 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
     },
     {
       question: 'How far is KIAMO Skin from Encinitas?',
-      answer: 'About 25 minutes via I-5 south to the Washington Street exit. The studio is at 3067 Reynard Way in Mission Hills with free parking. Monthly maintenance is realistic for Encinitas residents.',
+      answer: 'About 25 minutes via I-5 south to the Washington Street exit. The studio is at 3067 Reynard Way in Mission Hills with free parking. Monthly maintenance is realistic for Encinitas residents. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Is a facial safe for melanin-rich skin in Encinitas?',
-      answer: 'Yes. Every modality at KIAMO Skin is calibrated to your Fitzpatrick type. Standard peels and aggressive exfoliation can trigger post-inflammatory hyperpigmentation in melanin-rich skin. Kiki has 7+ years of experience across every Fitzpatrick type and uses concentrations matched to the skin on the day.',
+      answer: 'Yes. Every modality at KIAMO Skin is calibrated to the Fitzpatrick type in front of the practitioner. Standard peels and aggressive exfoliation can trigger post-inflammatory hyperpigmentation in melanin-rich skin. Kiki has 7+ years of experience across every Fitzpatrick type and uses concentrations matched to the skin on the day.',
     },
     {
       question: 'Can I get a facial if I surf every morning in Encinitas?',
-      answer: 'Yes — and the treatment plan will account for your surf schedule. Kiki typically schedules facials on lower-exposure days or post-sunscreen-recovery windows. Homecare focuses on barrier repair and mineral buildup clearance.',
+      answer: 'Yes — and the treatment plan accounts for the client’s surf schedule. Kiki typically schedules facials on lower-exposure days or post-sunscreen-recovery windows. Homecare focuses on barrier repair and mineral buildup clearance. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'What facial helps with melasma from Encinitas sun exposure?',
-      answer: 'Lira chemical peels at Fitzpatrick-calibrated concentrations are the workhorse treatment for melasma. HydraFacial Syndeo maintenance between peels keeps the barrier hydrated. Daily homecare includes broad-spectrum SPF 50+ and tyrosinase inhibitors (kojic acid, tranexamic acid, alpha arbutin). Most Encinitas clients see measurable fading in 8-12 weeks with monthly treatments.',
+      answer: 'Lira chemical peels at Fitzpatrick-calibrated concentrations are the workhorse treatment for melasma. HydraFacial Syndeo maintenance between peels keeps the barrier hydrated. Daily homecare includes broad-spectrum SPF 50+ and tyrosinase inhibitors (kojic acid, tranexamic acid, alpha arbutin). Most Encinitas clients see measurable fading in 8-12 weeks with monthly treatments. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
   ],
   },
@@ -172,7 +172,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   quickAnswer: '',
   authority: {
     heading: 'Facials for Carlsbad coastal and family-lifestyle skin',
-    body: 'Carlsbad clients include young families, beach-regular professionals, and retirees whose skin rhythm reflects year-round coastal exposure. KIAMO Skin offers the full facial menu (HydraFacial Syndeo, Lira chemical peels, dermaplaning, DMK enzyme therapy) with protocols calibrated to each client\'s skin tone and concern. Kiki has 7+ years treating every Fitzpatrick type, including melanin-rich skin where aggressive exfoliation risks post-inflammatory hyperpigmentation. The one-practitioner model means your skin gets consistent attention — the same person assessing, treating, and adjusting the plan over time.',
+    body: 'Carlsbad clients include young families, beach-regular professionals, and retirees whose skin rhythm reflects year-round coastal exposure. KIAMO Skin offers the full facial menu (HydraFacial Syndeo, Lira chemical peels, dermaplaning, DMK enzyme therapy) with protocols calibrated to each client\'s skin tone and concern. Kiki has 7+ years treating every Fitzpatrick type, including melanin-rich skin where aggressive exfoliation risks post-inflammatory hyperpigmentation. The one-practitioner model means the skin gets consistent attention — the same person assessing, treating, and adjusting the plan over time.',
   },
   uniqueness: {
     heading: 'Facials for Carlsbad coastal skin',
@@ -191,7 +191,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
     process: [
       {
         step: 'Assessment',
-        description: 'Kiki evaluates your skin tone, primary concern, and the modality that fits. For Carlsbad clients, this includes accounting for beach frequency, UV history, and any current corrective work.',
+        description: 'Kiki evaluates the skin tone, primary concern, and the modality that fits. For Carlsbad clients, this includes accounting for beach frequency, UV history, and any current corrective work.',
       },
       {
         step: 'Treatment',
@@ -210,23 +210,23 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'How does Carlsbad coastal living affect my skin?',
-      answer: 'Year-round salt air exposure strips the skin barrier, mineral SPF buildup clogs pores, and UV reflection off the water intensifies photoaging. KIAMO Skin\'s facials address barrier repair, extraction, and pigmentation support — calibrated to your Fitzpatrick type.',
+      answer: 'Year-round salt air exposure strips the skin barrier, mineral SPF buildup clogs pores, and UV reflection off the water intensifies photoaging. KIAMO Skin\'s facials address barrier repair, extraction, and pigmentation support — calibrated to the Fitzpatrick type in front of the practitioner.',
     },
     {
       question: 'How far is KIAMO Skin from Carlsbad?',
-      answer: 'About 30 minutes via I-5 south to the Washington Street exit. The studio is at 3067 Reynard Way in Mission Hills with free parking. Monthly maintenance is realistic for Carlsbad residents.',
+      answer: 'About 30 minutes via I-5 south to the Washington Street exit. The studio is at 3067 Reynard Way in Mission Hills with free parking. Monthly maintenance is realistic for Carlsbad residents. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Is a facial safe for melanin-rich skin in Carlsbad?',
-      answer: 'Yes. Every modality at KIAMO Skin is calibrated to your Fitzpatrick type. Standard peels and aggressive exfoliation can trigger post-inflammatory hyperpigmentation in melanin-rich skin. Kiki has 7+ years of experience across every Fitzpatrick type.',
+      answer: 'Yes. Every modality at KIAMO Skin is calibrated to the Fitzpatrick type in front of the practitioner. Standard peels and aggressive exfoliation can trigger post-inflammatory hyperpigmentation in melanin-rich skin. Kiki has 7+ years of experience across every Fitzpatrick type.',
     },
     {
       question: 'Can I get a facial before a Carlsbad wedding or event?',
-      answer: 'Yes. HydraFacial Syndeo is the most popular pre-event facial — zero downtime, visible glow within hours. Book 1-2 days before the event for the best window. Same-week appointments are often available.',
+      answer: 'Yes. HydraFacial Syndeo is the most popular pre-event facial — zero downtime, visible glow within hours. Book 1-2 days before the event for the best window. Same-week appointments are often available. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
-      question: 'Do you offer facials for sensitive skin in Carlsbad?',
-      answer: 'Yes. DMK enzyme therapy is the gentlest corrective option for sensitive, reactive, or barrier-compromised skin. HydraFacial Syndeo is also safe for sensitive skin — the AI analysis calibrates pressure and serum selection to avoid irritation.',
+      question: 'Does KIAMO Skin offer facials for sensitive skin in Carlsbad?',
+      answer: 'Yes. DMK enzyme therapy is the gentlest corrective option for sensitive, reactive, or barrier-compromised skin. HydraFacial Syndeo is also safe for sensitive skin — the AI analysis calibrates pressure and serum selection to avoid irritation. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
   ],
   },
@@ -237,7 +237,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   description: 'Facials for Chula Vista clients at KIAMO Skin in San Diego. Melasma and pigmentation care for melanin-rich skin. From $199. Book a visit.',
   h1: 'Facial in Chula Vista — Corrective Care for Melanin-Rich Skin',
   opener: 'A facial that treats the melasma and uneven tone Chula Vista clients come in with, not a refresh that flattens the problem. Performed by Kiki, a California licensed esthetician.',
-  intro: 'Chula Vista is the largest melanin-rich catchment in San Diego County, and it is also inland — far enough from the marine layer that the sun is doing more work here than it does on the coast. That combination is what produces the county\'s most common pigmentation concern: melasma driven by hormones and sustained by UV, on skin that marks easily when a treatment is wrong. KIAMO Skin was built around exactly this. Kiki has 7+ years treating pigmentation in Black and brown skin, where an over-aggressive peel causes more damage than it repairs, and the protocols here are selected for the tone in front of you rather than chosen from a menu. The studio is about thirteen miles north — twenty to twenty-five minutes off-peak — with free parking on site. For a plan that runs across a series, that distance is part of the decision, and it is worth booking the course before the first appointment rather than testing whether the drive is workable.',
+  intro: 'Chula Vista is the largest melanin-rich catchment in San Diego County, and it is also inland — far enough from the marine layer that the sun is doing more work here than it does on the coast. That combination is what produces the county\'s most common pigmentation concern: melasma driven by hormones and sustained by UV, on skin that marks easily when a treatment is wrong. KIAMO Skin was built around exactly this. Kiki has 7+ years treating pigmentation in Black and brown skin, where an over-aggressive peel causes more damage than it repairs, and the protocols here are selected for the tone in front of the practitioner rather than chosen from a menu. The studio is about thirteen miles north — twenty to twenty-five minutes off-peak — with free parking on site. For a plan that runs across a series, that distance is part of the decision, and it is worth booking the course before the first appointment rather than testing whether the drive is workable.',
   quickAnswer: 'KIAMO Skin treats melasma and pigmentation for Chula Vista clients at a one-room facial spa in San Diego, about thirteen miles north off-peak. Kiki, a California licensed esthetician with 7+ years in melanin-rich skin, uses LIRA chemical peels, HydraFacial, and DMK enzyme therapy for clients from Eastlake, Otay Ranch, and Rancho del Rey. Peels start at $199, and a first-time consultation and treatment is $249. Every plan is paced to the skin tone and the barrier, because strength escalated too fast is what causes the dark marks clients are trying to clear.',
   authority: {
     heading: 'Why Chula Vista clients choose a studio that specialises in melanin-rich skin',
@@ -264,7 +264,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
       },
       {
         step: 'Treatment',
-        description: 'Sessions run 45-75 minutes depending on modality. LIRA chemical peels use Fitzpatrick-calibrated acid concentrations with strength escalated across a series. HydraFacial Syndeo pairs Vortex-Fusion extraction with a brightening booster for the maintenance layer. DMK enzyme therapy rebuilds barrier function when the skin is too compromised for a peel. No modality is selected without checking it is safe for your skin tone.',
+        description: 'Sessions run 45-75 minutes depending on modality. LIRA chemical peels use Fitzpatrick-calibrated acid concentrations with strength escalated across a series. HydraFacial Syndeo pairs Vortex-Fusion extraction with a brightening booster for the maintenance layer. DMK enzyme therapy rebuilds barrier function when the skin is too compromised for a peel. No modality is selected without checking it is safe for the skin tone.',
       },
       {
         step: 'Homecare',
@@ -279,23 +279,23 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'How far is KIAMO Skin from Chula Vista?',
-      answer: 'About thirteen miles, twenty to twenty-five minutes north off-peak via I-5, with free parking on site at the studio. Off-peak times are notably lighter than the evening commute, which matters for a client booking a series.',
+      answer: 'About thirteen miles, twenty to twenty-five minutes north off-peak via I-5, with free parking on site at the studio. Off-peak times are notably lighter than the evening commute, which matters for a client booking a series. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'What is the best facial for melasma on melanin-rich skin?',
-      answer: 'A facial that treats pigment rather than exfoliating it. LIRA chemical peels are the backbone of a melasma plan because strength escalates across a series and the peel is selected for the skin tone. HydraFacial with a brightening booster holds the result between corrective sessions, and DMK enzyme therapy comes first when the barrier is too compromised for a peel. A first-time consultation and treatment is $249.',
+      answer: 'A facial that treats pigment rather than exfoliating it. LIRA chemical peels are the backbone of a melasma plan because strength escalates across a series and the peel is selected for the skin tone. HydraFacial with a brightening booster holds the result between corrective sessions, and DMK enzyme therapy comes first when the barrier is too compromised for a peel. A first-time consultation and treatment is $249. KIAMO Skin runs every treatment on the tone in front of the practitioner, because heat and aggressive treatment are what deepen pigment on the skin that marks most easily.',
     },
     {
       question: 'Will a facial make my melasma worse?',
-      answer: 'Not if the treatment is selected for your skin tone and the barrier is assessed first. Melanin-rich skin produces more pigment in response to trauma, and that is exactly why strength is escalated only as the barrier allows, and why nothing is scheduled closer together than the skin can recover from. The KIAMO Skin protocols for melanin-rich skin were built around avoiding the trigger that causes post-inflammatory hyperpigmentation in the first place.',
+      answer: 'Not if the treatment is selected for the client’s skin tone and the barrier is assessed first. Melanin-rich skin produces more pigment in response to trauma, and that is exactly why strength is escalated only as the barrier allows, and why nothing is scheduled closer together than the skin can recover from. The KIAMO Skin protocols for melanin-rich skin were built around avoiding the trigger that causes post-inflammatory hyperpigmentation in the first place.',
     },
     {
       question: 'How often should I come in from Chula Vista?',
-      answer: 'Pigment is treated as a series — most plans run every four to six weeks — and the calendar is set at the first appointment so the schedule works around recovery rather than around convenience. A monthly membership at $199 is often the practical way to keep a course consistent, and it applies toward peels and microchanneling by paying the difference.',
+      answer: 'Pigment is treated as a series — most plans run every four to six weeks — and the calendar is set at the first appointment so the schedule works around recovery rather than around convenience. A monthly membership at $199 is often the practical way to keep a course consistent, and it applies toward peels and microchanneling by paying the difference. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
-      question: 'Do you treat skin types beyond what Chula Vista clients usually have?',
-      answer: 'Yes. Every treatment is calibrated to Fitzpatrick type I through VI, and Kiki has 7+ years treating the full spectrum. The protocols are not written for one population and adjusted for another — the pigment treatment on deeper skin is a different protocol, not the same one with a different booster.',
+      question: 'Does KIAMO Skin treat skin types beyond what Chula Vista clients usually have?',
+      answer: 'Yes. Every treatment is calibrated to Fitzpatrick type I through VI, and Kiki has 7+ years treating the full spectrum. The protocols are not written for one population and adjusted for another — the pigment treatment on deeper skin is a different protocol, not the same one with a different booster. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
   ],
   },
@@ -310,7 +310,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   quickAnswer: '',
   authority: {
     heading: 'Facials that match Del Mar skin and the fair-season calendar',
-    body: 'Del Mar\'s coastal climate, horse-racing social calendar, and fair-season UV produce a specific skin rhythm — increased UV exposure between mid-July and Labor Day, indoor events the rest of the year, and constant coastal humidity. KIAMO Skin offers the full facial menu (HydraFacial Syndeo, Lira chemical peels, dermaplaning, DMK enzyme therapy) with protocols calibrated to your Fitzpatrick type. Kiki has 7+ years treating the full spectrum of skin tones, including melanin-rich skin where standard peels trigger post-inflammatory hyperpigmentation. The single-practitioner studio means continuity across every visit — the same person assessing your skin and treating it.',
+    body: 'Del Mar\'s coastal climate, horse-racing social calendar, and fair-season UV produce a specific skin rhythm — increased UV exposure between mid-July and Labor Day, indoor events the rest of the year, and constant coastal humidity. KIAMO Skin offers the full facial menu (HydraFacial Syndeo, Lira chemical peels, dermaplaning, DMK enzyme therapy) with protocols calibrated to the Fitzpatrick type. Kiki has 7+ years treating the full spectrum of skin tones, including melanin-rich skin where standard peels trigger post-inflammatory hyperpigmentation. The single-practitioner studio means continuity across every visit — the same person assessing the skin and treating it.',
   },
   uniqueness: {
     heading: 'Facials for Del Mar coastal and fair-season lifestyles',
@@ -325,11 +325,11 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   },
   depth: {
     heading: 'How a facial works at KIAMO Skin',
-    body: 'Every facial follows the same three-step structure, with modality selected to match your concern.',
+    body: 'Every facial follows the same three-step structure, with modality selected to match the concern.',
     process: [
       {
         step: 'Assessment',
-        description: 'Kiki evaluates your skin tone, primary concern, and the modality that fits. For Del Mar clients, this includes accounting for fair-season UV history, current event calendar, and any ongoing corrective work.',
+        description: 'Kiki evaluates the skin tone, primary concern, and the modality that fits. For Del Mar clients, this includes accounting for fair-season UV history, current event calendar, and any ongoing corrective work.',
       },
       {
         step: 'Treatment',
@@ -348,11 +348,11 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'When should Del Mar clients book facials around the fair?',
-      answer: 'Most Del Mar clients book a HydraFacial Syndeo 1-2 weeks before opening day and another 2 weeks after closing day for UV recovery. Lira chemical peels are scheduled 4-6 weeks apart, so a series aligns naturally with the racing calendar. Kiki will plan the cadence with you at the consultation.',
+      answer: 'Most Del Mar clients book a HydraFacial Syndeo 1-2 weeks before opening day and another 2 weeks after closing day for UV recovery. Lira chemical peels are scheduled 4-6 weeks apart, so a series aligns naturally with the racing calendar. Kiki plans the cadence at the consultation. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'How far is KIAMO Skin from Del Mar?',
-      answer: 'About 20 minutes via I-5 south to the Washington Street exit. The studio is at 3067 Reynard Way in Mission Hills with free parking. Monthly maintenance is realistic for Del Mar residents.',
+      answer: 'About 20 minutes via I-5 south to the Washington Street exit. The studio is at 3067 Reynard Way in Mission Hills with free parking. Monthly maintenance is realistic for Del Mar residents. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Is a facial safe for melanin-rich skin in Del Mar?',
@@ -360,11 +360,11 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
     },
     {
       question: 'Can I get a facial before a Del Mar wedding or event?',
-      answer: 'Yes. HydraFacial Syndeo is the most popular pre-event facial — zero downtime, visible glow within hours, results last 5-7 days. Book 1-2 days before the event for the best window. Same-week appointments are often available.',
+      answer: 'Yes. HydraFacial Syndeo is the most popular pre-event facial — zero downtime, visible glow within hours, results last 5-7 days. Book 1-2 days before the event for the best window. Same-week appointments are often available. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
-      question: 'Do you treat Del Mar seasonal residents?',
-      answer: 'Yes. Many Del Mar clients are seasonal residents whose skin care shifts with their location. KIKI coordinates a treatment plan that works whether you are in Del Mar full-time, part-time, or visiting.',
+      question: 'Does KIAMO Skin treat Del Mar seasonal residents?',
+      answer: 'Yes. Many Del Mar clients are seasonal residents whose skin care shifts with their location. KIAMO Skin coordinates a treatment plan that works whether a client is in Del Mar full-time, part-time, or visiting.',
     },
   ],
   },
@@ -402,7 +402,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
       },
       {
         step: 'Treatment',
-        description: 'Sessions run 45-75 minutes depending on modality. LIRA chemical peels use Fitzpatrick-calibrated acid concentrations with strength escalated across a series. HydraFacial Syndeo pairs Vortex-Fusion extraction with a brightening booster. DMK enzyme therapy rebuilds barrier function when the skin is too compromised for a peel. No modality is selected without checking it is safe for your skin tone.',
+        description: 'Sessions run 45-75 minutes depending on modality. LIRA chemical peels use Fitzpatrick-calibrated acid concentrations with strength escalated across a series. HydraFacial Syndeo pairs Vortex-Fusion extraction with a brightening booster. DMK enzyme therapy rebuilds barrier function when the skin is too compromised for a peel. No modality is selected without checking it is safe for the skin tone.',
       },
       {
         step: 'Homecare',
@@ -417,22 +417,22 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'How far is KIAMO Skin from La Mesa?',
-      answer: 'About eleven miles, fifteen to twenty minutes west on I-8 off-peak, with free parking on site at the studio. The drive runs through Mission Valley, so the evening commute is the slow part — morning and midday appointments are noticeably quicker.',
+      answer: 'About eleven miles, fifteen to twenty minutes west on I-8 off-peak, with free parking on site at the studio. The drive runs through Mission Valley, so the evening commute is the slow part — morning and midday appointments are noticeably quicker. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Why is melasma harder to treat in La Mesa than on the coast?',
-      answer: 'Because the primary trigger never stops. La Mesa misses the marine layer that buffers the coast, so the UV load is higher and the clear days are more frequent. That is why strict daily sunscreen compliance — not just in summer — is the part of the plan that decides whether pigment stays faded or comes back.',
+      answer: 'Because the primary trigger never stops. La Mesa misses the marine layer that buffers the coast, so the UV load is higher and the clear days are more frequent. That is why strict daily sunscreen compliance — not just in summer — is the part of the plan that decides whether pigment stays faded or comes back. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'What is the best facial for cumulative sun damage?',
-      answer: 'LIRA chemical peels, because the damage sits deeper than a surface treatment reaches and strength escalates across a series rather than in one visit. A HydraFacial with a brightening booster holds the result between corrective sessions. A first-time consultation and treatment is $249, and a peel starts at $199.',
+      answer: 'LIRA chemical peels, because the damage sits deeper than a surface treatment reaches and strength escalates across a series rather than in one visit. A HydraFacial with a brightening booster holds the result between corrective sessions. A first-time consultation and treatment is $249, and a peel starts at $199. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Can I come in from La Mesa for maintenance rather than a corrective course?',
-      answer: 'Yes, and for a client twenty minutes west it is often the more sustainable commitment. The HydraFacial at $259 is the maintenance treatment, and the monthly membership at $199 includes one facial per month plus discounts on additional treatments — which for a client on a peel series is usually the cheaper way to stay consistent.',
+      answer: 'Yes, and for a client twenty minutes west it is often the more sustainable commitment. The HydraFacial at $259 is the maintenance treatment, and the monthly membership at $199 includes one facial per month plus discounts on additional treatments — which for a client on a peel series is usually the cheaper way to stay consistent. KIAMO Skin maps the whole course at the first appointment — the sessions, the intervals and the total timeline — so a a facial from $199 series sits around recovery rather than around a calendar.',
     },
     {
-      question: 'Do you treat all skin tones at this studio?',
+      question: 'Does KIAMO Skin treat all skin tones at this studio?',
       answer: 'Yes — Fitzpatrick I through VI. Kiki has 7+ years treating the full spectrum, and the pigment protocols are written for melanin-rich skin rather than adjusted for it. The peel protocols in particular are not the same on deeper skin, and that is the case KIAMO Skin was built around.',
     },
   ],
@@ -467,7 +467,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
     process: [
       {
         step: 'Assessment',
-        description: 'Kiki evaluates your skin tone, concern, and the right modality. For North Park clients, this includes outdoor lifestyle, UV history, and any current corrective work.',
+        description: 'Kiki evaluates the skin tone, concern, and the right modality. For North Park clients, this includes outdoor lifestyle, UV history, and any current corrective work.',
       },
       {
         step: 'Treatment',
@@ -490,19 +490,19 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
     },
     {
       question: 'How far is KIAMO Skin from North Park?',
-      answer: 'About 10 minutes via 30th Street to Washington Street. The studio is at 3067 Reynard Way in Mission Hills with free parking. Monthly maintenance is realistic for North Park residents.',
+      answer: 'About 10 minutes via 30th Street to Washington Street. The studio is at 3067 Reynard Way in Mission Hills with free parking. Monthly maintenance is realistic for North Park residents. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Can I get a facial before an Observatory concert or gallery night?',
-      answer: 'Yes. HydraFacial Syndeo has zero downtime — you can attend an Observatory show, gallery opening, or restaurant event the same day. Book 1-2 days before for the best glow window.',
+      answer: 'Yes. HydraFacial Syndeo has zero downtime — a client can attend an Observatory show, gallery opening, or restaurant event the same day. Book 1-2 days before for the best glow window. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Is a facial safe for melanin-rich skin in North Park?',
-      answer: 'Yes. Every modality at KIAMO Skin is calibrated to your Fitzpatrick type. Kiki has 7+ years of experience across every skin tone.',
+      answer: 'Yes. Every modality at KIAMO Skin is calibrated to the Fitzpatrick type in front of the practitioner. Kiki has 7+ years of experience across every skin tone.',
     },
     {
-      question: 'Do you offer evening appointments for North Park professionals?',
-      answer: 'Yes. Many North Park clients work in service, creative, or hospitality industries with non-traditional schedules. Evening slots are limited because the studio is single-room and single-practitioner — booking 2-3 weeks ahead is recommended for specific times.',
+      question: 'Does KIAMO Skin offer evening appointments for North Park professionals?',
+      answer: 'Yes. Many North Park clients work in service, creative, or hospitality industries with non-traditional schedules. Evening slots are limited because the studio is single-room and single-practitioner — booking 2-3 weeks ahead is recommended for specific times. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
   ],
   },
@@ -536,7 +536,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
     process: [
       {
         step: 'Assessment',
-        description: 'Kiki evaluates your skin tone, concern, and the right modality. For Point Loma clients, this includes maritime exposure history, current beach or boat frequency, and UV history.',
+        description: 'Kiki evaluates the skin tone, concern, and the right modality. For Point Loma clients, this includes maritime exposure history, current beach or boat frequency, and UV history.',
       },
       {
         step: 'Treatment',
@@ -559,19 +559,19 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
     },
     {
       question: 'How long does it take to get to KIAMO Skin from Point Loma?',
-      answer: 'About 10 minutes from Liberty Station via Rosecrans Street to Washington Street. From Ocean Beach or Sunset Cliffs, plan 12-15 minutes. The studio is at 3067 Reynard Way in Mission Hills with free parking.',
+      answer: 'About 10 minutes from Liberty Station via Rosecrans Street to Washington Street. From Ocean Beach or Sunset Cliffs, plan 12-15 minutes. The studio is at 3067 Reynard Way in Mission Hills with free parking. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Can a facial help with sun damage in Point Loma?',
-      answer: 'Yes. HydraFacial Syndeo includes antioxidant and brightening serums that address sun damage. For significant photoaging, it is paired with Lira chemical peels. Point Loma clients dealing with beach sun and water reflection often notice brighter tone and reduced dark spots with consistent monthly treatment.',
+      answer: 'Yes. HydraFacial Syndeo includes antioxidant and brightening serums that address sun damage. For significant photoaging, it is paired with Lira chemical peels. Point Loma clients dealing with beach sun and water reflection often notice brighter tone and reduced dark spots with consistent monthly treatment. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Is a facial safe for melanin-rich skin in Point Loma?',
-      answer: 'Yes. Every modality at KIAMO Skin is calibrated to your Fitzpatrick type. Kiki has 7+ years of experience across every skin tone.',
+      answer: 'Yes. Every modality at KIAMO Skin is calibrated to the Fitzpatrick type in front of the practitioner. Kiki has 7+ years of experience across every skin tone.',
     },
     {
       question: 'What should Point Loma residents expect after a facial?',
-      answer: 'No downtime — return to beach or boat activities immediately. Skin may look slightly flushed for 30-60 minutes. Most Point Loma clients notice smoother texture, smaller pores, and a glow lasting 5-7 days. The hydration and barrier protection is especially noticeable if you have been dealing with coastal dryness.',
+      answer: 'No downtime — return to beach or boat activities immediately. Skin may look slightly flushed for 30-60 minutes. Most Point Loma clients notice smoother texture, smaller pores, and a glow lasting 5-7 days. The hydration and barrier protection is especially noticeable where a client has been dealing with coastal dryness. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
   ],
   },
@@ -605,7 +605,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
     process: [
       {
         step: 'Assessment',
-        description: 'Kiki evaluates your skin tone, concern, and the right modality. For Pacific Beach clients, this includes salt-exposure history, current beach or surf frequency, and UV history.',
+        description: 'Kiki evaluates the skin tone, concern, and the right modality. For Pacific Beach clients, this includes salt-exposure history, current beach or surf frequency, and UV history.',
       },
       {
         step: 'Treatment',
@@ -624,11 +624,11 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'How far is KIAMO Skin from Pacific Beach?',
-      answer: 'About 15 minutes via I-8 east to Highway 163 south, exiting Washington Street. The studio is at 3067 Reynard Way in Mission Hills with free parking. Monthly maintenance is realistic for Pacific Beach residents.',
+      answer: 'About 15 minutes via I-8 east to Highway 163 south, exiting Washington Street. The studio is at 3067 Reynard Way in Mission Hills with free parking. Monthly maintenance is realistic for Pacific Beach residents. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Is a facial safe for melanin-rich skin in Pacific Beach?',
-      answer: 'Yes. Every modality at KIAMO Skin is calibrated to your Fitzpatrick type. Kiki has 7+ years of experience across every skin tone, and the protocol is the same regardless of beach exposure level.',
+      answer: 'Yes. Every modality at KIAMO Skin is calibrated to the Fitzpatrick type in front of the practitioner. Kiki has 7+ years of experience across every skin tone, and the protocol is the same regardless of beach exposure level.',
     },
     {
       question: 'What facial addresses sun damage from beach living in Pacific Beach?',
@@ -636,11 +636,11 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
     },
     {
       question: 'How often should Pacific Beach residents get facials?',
-      answer: 'Monthly treatments maintain the barrier against constant coastal exposure. Pacific Beach clients who swim, surf, or spend daily time on the beach often notice their skin becomes reactive or tight between monthly sessions — that is the salt air and UV compromising the barrier. Regular facials keep the protective layer strong.',
+      answer: 'Monthly treatments maintain the barrier against constant coastal exposure. Pacific Beach clients who swim, surf, or spend daily time on the beach often notice their skin becomes reactive or tight between monthly sessions — that is the salt air and UV compromising the barrier. Regular facials keep the protective layer strong. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Can I get a facial and go back to the beach the same day?',
-      answer: 'Yes — HydraFacial Syndeo has zero downtime. Dermaplaning and Lira chemical peels may leave mild flush for a few hours; Kiki will advise based on the specific treatment and your beach plans for the day. Most Pacific Beach clients book facials in the morning and return to beach activities in the afternoon.',
+      answer: 'Yes — HydraFacial Syndeo has zero downtime. Dermaplaning and Lira chemical peels may leave mild flush for a few hours; Kiki advises based on the specific treatment and the day’s plans. Most Pacific Beach clients book facials in the morning and return to beach activities in the afternoon. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
   ],
   },
@@ -674,7 +674,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
     process: [
       {
         step: 'Assessment',
-        description: 'Kiki evaluates your skin tone, concern, and the right modality. For Hillcrest clients, this includes outdoor lifestyle on University Avenue, UV history, and any current corrective work.',
+        description: 'Kiki evaluates the skin tone, concern, and the right modality. For Hillcrest clients, this includes outdoor lifestyle on University Avenue, UV history, and any current corrective work.',
       },
       {
         step: 'Treatment',
@@ -701,15 +701,15 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
     },
     {
       question: 'Can I get a facial before Pride or a Hillcrest event?',
-      answer: 'Yes. HydraFacial Syndeo has zero downtime — you can attend the Pride parade, a Hillcrest Farmers Market morning, or a restaurant event the same day. Book 1-2 days before for the best glow window.',
+      answer: 'Yes. HydraFacial Syndeo has zero downtime — a client can attend the Pride parade, a Hillcrest Farmers Market morning, or a restaurant event the same day. Book 1-2 days before for the best glow window. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Is a facial safe for melanin-rich skin in Hillcrest?',
-      answer: 'Yes. Every modality at KIAMO Skin is calibrated to your Fitzpatrick type. Kiki has 7+ years of experience across every skin tone.',
+      answer: 'Yes. Every modality at KIAMO Skin is calibrated to the Fitzpatrick type in front of the practitioner. Kiki has 7+ years of experience across every skin tone.',
     },
     {
-      question: 'Do you offer evening appointments near Hillcrest?',
-      answer: 'Yes. Many Hillcrest clients work in service, hospitality, or creative industries with non-traditional schedules. The 5-minute proximity makes after-work appointments realistic. Book online or call (310) 595-0872.',
+      question: 'Does KIAMO Skin offer evening appointments near Hillcrest?',
+      answer: 'Yes. Many Hillcrest clients work in service, hospitality, or creative industries with non-traditional schedules. The 5-minute proximity makes after-work appointments realistic. Book online or call (310) 595-0872. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
   ],
   },
@@ -717,15 +717,15 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   service: 'hydrafacial',
   area: 'la-jolla',
   title: 'HydraFacial for Ocean Swimmers La Jolla | KIAMO Skin',
-  description: 'Daily ocean swimming strips your barrier. HydraFacial at KIAMO Skin in Mission Hills rebuilds hydration for La Jolla Cove swimmers. Request an appointment.',
+  description: 'Daily ocean swimming strips the barrier. HydraFacial at KIAMO Skin in Mission Hills rebuilds hydration for La Jolla Cove swimmers. Request an appointment.',
   h1: 'HydraFacial for Ocean Swimmers in La Jolla: Barrier Repair After Salt Water',
   opener: 'Medical-grade extraction and hydration for ocean-exposed skin, with a booster chosen for the barrier. Performed by Kiki, a California licensed esthetician.',
   intro: `<h2 class="t-h3 mt-12 mb-6">Why Ocean Swimming Damages Skin</h2>
 <p>
   The Pacific Ocean contains roughly 35 parts per thousand of dissolved salt—primarily
   sodium chloride, but also magnesium, calcium, and potassium salts. When salt water
-  dries on skin, those minerals bond with sebum, the natural oil your skin produces to
-  protect itself. The rinse you take after swimming removes the salt, but it also
+  dries on skin, those minerals bond with sebum, the natural oil the skin produces to
+  protect itself. The rinse a client take after swimming removes the salt, but it also
   washes away the sebum-salt complex. Over one session, that is manageable. Over weeks
   and months of daily swimming, the cumulative effect leaves skin tight, reactive, and
   chronically dehydrated.
@@ -739,8 +739,8 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
 </p>
 <p>
   Wind off the bluffs compounds the issue. The cliffs above the Cove and the open
-  exposure at Windansea mean wind hits wet skin while you are still dripping,
-  accelerating evaporation and pulling moisture out before you even towel off. The
+  exposure at Windansea mean wind hits wet skin while a client is still dripping,
+  accelerating evaporation and pulling moisture out before a client even towel off. The
   combination of salt, wind, and repeated rinsing creates a state dermatologists call
   transepidermal water loss—the skin cannot hold hydration because the barrier that
   would normally prevent evaporation is no longer intact.
@@ -765,13 +765,13 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   Second, vortex extraction vacuums salt deposits and mineral buildup out of follicles
   at controlled pressure—30 to 70 millimeters of mercury, calibrated to remove
   congestion without traumatizing the skin. San Diego's municipal water contains 280 to
-  320 parts per million of dissolved minerals, which means even the rinse you take after
+  320 parts per million of dissolved minerals, which means even the rinse a client take after
   swimming leaves calcium and magnesium deposits in your pores. Standard cleansing does
   not clear those. Vortex extraction does.
 </p>
 <p>
   Third, peptide infusion floods the skin with hydration and growth factors while pores
-  are still open and receptive. The booster serum is selected based on what your skin
+  are still open and receptive. The booster serum is selected based on what the skin
   needs that day—for swimmers, that usually means hyaluronic acid to bind water into the
   tissue and peptides to support barrier repair. The infusion happens under the same
   vacuum pressure that just cleared the follicles, which drives the active ingredients
@@ -809,20 +809,20 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
 <p>
   Home care between sessions matters. A barrier repair serum applied morning and night
   supports the work the HydraFacial started, and mineral sunscreen prevents UV from
-  undoing it. The serum recommendation is specific to what your skin showed during the
+  undoing it. The serum recommendation is specific to what the skin showed during the
   treatment—KIAMO Skin does not sell a fixed product line, so the recommendation is clinical,
   not commercial.
 </p>
 <p>
   The timeline for full barrier restoration depends on how compromised the skin is when
-  you start. Two to three treatments over two to three months is the usual plan for
+  a client start. Two to three treatments over two to three months is the usual plan for
   swimmers with moderate damage. Severe cases—skin that stings under everything, flakes
   despite moisturizer, or stays red for hours after swimming—may need enzyme therapy
   instead of or in addition to HydraFacial. That is a consultation call, not something
-  you can self-diagnose.
+  a client can self-diagnose.
 </p>
 <p>
-  Results hold as long as you maintain them. A monthly HydraFacial during swimming
+  Results hold as long as a client maintains them. A monthly HydraFacial during swimming
   season keeps the barrier ahead of the damage cycle. Stop the maintenance, and the
   tightness returns within weeks. This is not a cure—it is management of an ongoing
   exposure.
@@ -830,7 +830,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
 
 <h2 class="t-h3 mt-12 mb-6">When HydraFacial Is Not Enough</h2>
 <p>
-  HydraFacial works for barriers that are damaged but still functional. If your skin has
+  HydraFacial works for barriers that are damaged but still functional. If the skin has
   crossed into a state where it reacts to almost everything—stinging under plain
   moisturizer, staying red for hours after swimming, flaking despite hydration—that is a
   compromised barrier that needs enzymatic repair, not just hydration.
@@ -857,7 +857,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   </a> addresses the same salt buildup on the scalp that HydraFacial clears from the face.
   The part line takes as much salt and UV as the cheeks, and daily rinsing never fully clears
   it. Keravive uses the same vortex technology to extract buildup from the scalp and deliver
-  peptides directly to the follicles. If your scalp feels tight, flaky, or dry despite regular
+  peptides directly to the follicles. If the scalp feels tight, flaky, or dry despite regular
   shampooing, that is salt residue and mineral deposits—not dandruff.
 </p>
 
@@ -877,7 +877,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
 </p>
 <p>
   The studio is at 3067 Reynard Way in Mission Hills, off Washington Street. Free
-  parking on site. By appointment only, so a space is always available when you arrive.
+  parking on site. By appointment only, so a space is always available when a client arrive.
   Appointments are one-to-one with Kiki, a California licensed esthetician with seven
   years treating barrier damage and pigmentation in all skin types, including
   melanin-rich skin.
@@ -891,7 +891,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   quickAnswer: 'Daily ocean swimming at La Jolla Cove, Windansea, and La Jolla Shores strips the skin barrier with salt water and repeated rinsing. HydraFacial at KIAMO Skin in Mission Hills uses vortex extraction to remove salt deposits from follicles and peptide infusion to rebuild hydration—twenty minutes south on I-5 from La Jolla Village.',
   authority: {
     heading: 'Why La Jolla clients book the HydraFacial Syndeo',
-    body: 'La Jolla has a genuine year-round ocean swimming culture — the Cove Swim Club has run since 1916 and a group swims every morning regardless of season. Windansea has a year-round surf community, La Jolla Shores draws swimmers and divers, and the blufftop above the Cove gets direct afternoon sun with no tree cover. That is a specific combination of exposure, and it is what the Syndeo is built for: enzymatic resurfacing that clears what salt and wind leave behind, vortex extraction calibrated to 30-70 mmHg rather than set to a fixed pressure, and AI skin analysis that reads hydration and congestion before anything is chosen. Kiki has 7+ years performing every session personally, and the protocols are selected for the skin tone in front of you.',
+    body: 'La Jolla has a genuine year-round ocean swimming culture — the Cove Swim Club has run since 1916 and a group swims every morning regardless of season. Windansea has a year-round surf community, La Jolla Shores draws swimmers and divers, and the blufftop above the Cove gets direct afternoon sun with no tree cover. That is a specific combination of exposure, and it is what the Syndeo is built for: enzymatic resurfacing that clears what salt and wind leave behind, vortex extraction calibrated to 30-70 mmHg rather than set to a fixed pressure, and AI skin analysis that reads hydration and congestion before anything is chosen. Kiki has 7+ years performing every session personally, and the protocols are selected for the skin tone in front of the practitioner.',
   },
   uniqueness: {
     heading: 'What a HydraFacial in La Jolla actually does',
@@ -929,31 +929,31 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'How soon after swimming can I get a HydraFacial?',
-      answer: 'Same day is fine if the skin is not actively irritated. Most swimmers book morning appointments before their swim, or afternoon appointments a few hours after getting out. If your skin is red, stinging, or visibly inflamed from a long session in rough water, wait twenty-four hours to let the acute inflammation settle. The HydraFacial will not make inflamed skin worse, but it works better on skin that is damaged but calm.',
+      answer: 'Same day is fine if the skin is not actively irritated. Most swimmers book morning appointments before their swim, or afternoon appointments a few hours after getting out. If the skin is red, stinging, or visibly inflamed from a long session in rough water, wait twenty-four hours to let the acute inflammation settle. The HydraFacial will not make inflamed skin worse, but it works better on skin that is damaged but calm. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Will HydraFacial prevent salt buildup or just treat it?',
-      answer: 'It treats existing buildup and temporarily prevents accumulation by clearing the follicles, but it does not stop salt from bonding with sebum the next time you swim. Think of it as resetting the baseline. Monthly treatments keep the buildup from reaching the point where it affects how your skin feels and functions. Between treatments, barrier repair serums and thorough rinsing after swimming help slow the rate at which salt re-accumulates.',
+      answer: 'It treats existing buildup and temporarily prevents accumulation by clearing the follicles, but it does not stop salt from bonding with sebum the next time a client swims. Think of it as resetting the baseline. Monthly treatments keep the buildup from reaching the point where it affects how the skin feels and functions. Between treatments, barrier repair serums and thorough rinsing after swimming help slow the rate at which salt re-accumulates. KIAMO Skin clears scalp buildup at the follicle rather than dissolving it, which is what makes the result last between visits.',
     },
     {
       question: 'How often do La Jolla ocean swimmers need HydraFacial?',
-      answer: 'Monthly maintenance is the standard plan for swimmers in the water four to six days a week year-round. If you swim less frequently—two to three times a week, or only during warmer months—every six to eight weeks may be enough. The cadence is set at consultation based on how quickly your barrier recovers between sessions, not on a fixed protocol.',
+      answer: 'Monthly maintenance is the standard plan for swimmers in the water four to six days a week year-round. For a client who swims less frequently—two to three times a week, or only during warmer months—every six to eight weeks may be enough. The cadence is set at consultation based on how quickly the barrier recovers between sessions, not on a fixed protocol. KIAMO Skin maps the whole course at the first appointment — the sessions, the intervals and the total timeline — so a a HydraFacial at $259 series sits around recovery rather than around a calendar.',
     },
     {
       question: 'Can I swim the same day after HydraFacial treatment?',
-      answer: 'You can, but most people wait twenty-four hours. The vortex extraction and peptide infusion leave the skin more receptive than usual, which also means more vulnerable to irritation for the first few hours. Swimming immediately after treatment will not undo the HydraFacial, but it does mean you are stripping the barrier again before it has had a chance to stabilize. If you must swim the same day, wait at least six hours and apply a barrier cream before entering the water.',
+      answer: 'A client can, but most wait twenty-four hours. The vortex extraction and peptide infusion leave the skin more receptive than usual, which also means more vulnerable to irritation for the first few hours. Swimming immediately after treatment will not undo the HydraFacial, but it does mean the barrier is stripped again before it has had a chance to stabilize. For a same-day swim, wait at least six hours and apply a barrier cream before entering the water. KIAMO Skin decides at the consultation what can safely share an appointment, and says so plainly rather than selling a longer visit.',
     },
     {
       question: 'What is the difference between this and a spa facial after swimming?',
-      answer: 'Spa facials use steam, manual extraction, and massage. Steam opens pores but does not remove mineral deposits. Manual extraction can traumatize skin that is already compromised from salt exposure. Massage feels good but does not address the barrier damage that is causing the tightness in the first place. HydraFacial Syndeo uses a medical-grade device with controlled vacuum pressure calibrated to remove salt and mineral buildup without trauma. The peptide infusion is delivered under pressure, which drives hydration deeper than topical application. This is clinical equipment designed for barrier repair, not relaxation. The goal is functional skin, not a relaxing hour.',
+      answer: 'Spa facials use steam, manual extraction, and massage. Steam opens pores but does not remove mineral deposits. Manual extraction can traumatize skin that is already compromised from salt exposure. Massage feels good but does not address the barrier damage that is causing the tightness in the first place. HydraFacial Syndeo uses a medical-grade device with controlled vacuum pressure calibrated to remove salt and mineral buildup without trauma. The peptide infusion is delivered under pressure, which drives hydration deeper than topical application. This is clinical equipment designed for barrier repair, not relaxation. The goal is functional skin, not a relaxing hour. KIAMO Skin performs every treatment in one private treatment room with one practitioner, and publishes the price and the protocol so the difference can be checked rather than taken on trust.',
     },
   ],
   body: `<h2 class="t-h3 mt-12 mb-6">Why Ocean Swimming Damages Skin</h2>
 <p>
   The Pacific Ocean contains roughly 35 parts per thousand of dissolved salt—primarily
   sodium chloride, but also magnesium, calcium, and potassium salts. When salt water
-  dries on skin, those minerals bond with sebum, the natural oil your skin produces to
-  protect itself. The rinse you take after swimming removes the salt, but it also
+  dries on skin, those minerals bond with sebum, the natural oil the skin produces to
+  protect itself. The rinse a client take after swimming removes the salt, but it also
   washes away the sebum-salt complex. Over one session, that is manageable. Over weeks
   and months of daily swimming, the cumulative effect leaves skin tight, reactive, and
   chronically dehydrated.
@@ -967,8 +967,8 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
 </p>
 <p>
   Wind off the bluffs compounds the issue. The cliffs above the Cove and the open
-  exposure at Windansea mean wind hits wet skin while you are still dripping,
-  accelerating evaporation and pulling moisture out before you even towel off. The
+  exposure at Windansea mean wind hits wet skin while a client is still dripping,
+  accelerating evaporation and pulling moisture out before a client even towel off. The
   combination of salt, wind, and repeated rinsing creates a state dermatologists call
   transepidermal water loss—the skin cannot hold hydration because the barrier that
   would normally prevent evaporation is no longer intact.
@@ -993,13 +993,13 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   Second, vortex extraction vacuums salt deposits and mineral buildup out of follicles
   at controlled pressure—30 to 70 millimeters of mercury, calibrated to remove
   congestion without traumatizing the skin. San Diego's municipal water contains 280 to
-  320 parts per million of dissolved minerals, which means even the rinse you take after
+  320 parts per million of dissolved minerals, which means even the rinse a client take after
   swimming leaves calcium and magnesium deposits in your pores. Standard cleansing does
   not clear those. Vortex extraction does.
 </p>
 <p>
   Third, peptide infusion floods the skin with hydration and growth factors while pores
-  are still open and receptive. The booster serum is selected based on what your skin
+  are still open and receptive. The booster serum is selected based on what the skin
   needs that day—for swimmers, that usually means hyaluronic acid to bind water into the
   tissue and peptides to support barrier repair. The infusion happens under the same
   vacuum pressure that just cleared the follicles, which drives the active ingredients
@@ -1037,20 +1037,20 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
 <p>
   Home care between sessions matters. A barrier repair serum applied morning and night
   supports the work the HydraFacial started, and mineral sunscreen prevents UV from
-  undoing it. The serum recommendation is specific to what your skin showed during the
+  undoing it. The serum recommendation is specific to what the skin showed during the
   treatment—KIAMO Skin does not sell a fixed product line, so the recommendation is clinical,
   not commercial.
 </p>
 <p>
   The timeline for full barrier restoration depends on how compromised the skin is when
-  you start. Two to three treatments over two to three months is the usual plan for
+  a client start. Two to three treatments over two to three months is the usual plan for
   swimmers with moderate damage. Severe cases—skin that stings under everything, flakes
   despite moisturizer, or stays red for hours after swimming—may need enzyme therapy
   instead of or in addition to HydraFacial. That is a consultation call, not something
-  you can self-diagnose.
+  a client can self-diagnose.
 </p>
 <p>
-  Results hold as long as you maintain them. A monthly HydraFacial during swimming
+  Results hold as long as a client maintains them. A monthly HydraFacial during swimming
   season keeps the barrier ahead of the damage cycle. Stop the maintenance, and the
   tightness returns within weeks. This is not a cure—it is management of an ongoing
   exposure.
@@ -1058,7 +1058,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
 
 <h2 class="t-h3 mt-12 mb-6">When HydraFacial Is Not Enough</h2>
 <p>
-  HydraFacial works for barriers that are damaged but still functional. If your skin has
+  HydraFacial works for barriers that are damaged but still functional. If the skin has
   crossed into a state where it reacts to almost everything—stinging under plain
   moisturizer, staying red for hours after swimming, flaking despite hydration—that is a
   compromised barrier that needs enzymatic repair, not just hydration.
@@ -1085,7 +1085,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   </a> addresses the same salt buildup on the scalp that HydraFacial clears from the face.
   The part line takes as much salt and UV as the cheeks, and daily rinsing never fully clears
   it. Keravive uses the same vortex technology to extract buildup from the scalp and deliver
-  peptides directly to the follicles. If your scalp feels tight, flaky, or dry despite regular
+  peptides directly to the follicles. If the scalp feels tight, flaky, or dry despite regular
   shampooing, that is salt residue and mineral deposits—not dandruff.
 </p>
 
@@ -1105,7 +1105,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
 </p>
 <p>
   The studio is at 3067 Reynard Way in Mission Hills, off Washington Street. Free
-  parking on site. By appointment only, so a space is always available when you arrive.
+  parking on site. By appointment only, so a space is always available when a client arrive.
   Appointments are one-to-one with Kiki, a California licensed esthetician with seven
   years treating barrier damage and pigmentation in all skin types, including
   melanin-rich skin.
@@ -1170,23 +1170,23 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'How far is KIAMO Skin from La Mesa?',
-      answer: 'About eleven miles, fifteen to twenty minutes west on I-8 off-peak, with free parking on site. Morning and midday appointments avoid the Mission Valley commute entirely, which is what makes a regular schedule workable from La Mesa.',
+      answer: 'About eleven miles, fifteen to twenty minutes west on I-8 off-peak, with free parking on site. Morning and midday appointments avoid the Mission Valley commute entirely, which is what makes a regular schedule workable from La Mesa. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'What does a HydraFacial cost in San Diego?',
-      answer: '$259 per session. A first-time client treatment is $249 including the consultation, skin analysis, and the plan for what comes next. The monthly facial membership is $199 a month and includes one HydraFacial monthly plus discounts on additional treatments.',
+      answer: '$259 per session. A first-time client treatment is $249 including the consultation, skin analysis, and the plan for what comes next. The monthly facial membership is $199 a month and includes one HydraFacial monthly plus discounts on additional treatments. KIAMO Skin maps the whole course at the first appointment — the sessions, the intervals and the total timeline — so a a HydraFacial at $259 series sits around recovery rather than around a calendar.',
     },
     {
       question: 'Is a HydraFacial enough for melasma or sun damage?',
-      answer: 'No — it is a resurfacing and maintenance treatment, and saying otherwise would be selling something it is not. For melasma and sun damage the correction is done with LIRA chemical peels or Procell microchanneling, and the HydraFacial is the layer that holds the result between sessions. For dehydration, congestion, and general texture, it is the right treatment on its own.',
+      answer: 'No — it is a resurfacing and maintenance treatment, and saying otherwise would be selling something it is not. For melasma and sun damage the correction is done with LIRA chemical peels or Procell microchanneling, and the HydraFacial is the layer that holds the result between sessions. For dehydration, congestion, and general texture, it is the right treatment on its own. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Can I combine a HydraFacial with a peel?',
-      answer: 'Frequently, and often for good reason — a HydraFacial between peel appointments clears the surface so the acid works evenly rather than over debris. What can safely be combined and when is decided at consultation, because the sequence depends on how the barrier responds.',
+      answer: 'Frequently, and often for good reason — a HydraFacial between peel appointments clears the surface so the acid works evenly rather than over debris. What can safely be combined and when is decided at consultation, because the sequence depends on how the barrier responds. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Is a HydraFacial safe for melanin-rich skin?',
-      answer: 'Yes, because it uses no heat, no lasers, and no aggressive peeling agents. The exfoliating acids are at concentrations proven safe for melanin-rich skin, and the vortex extraction does not cause the trauma that can trigger post-inflammatory hyperpigmentation. The booster is selected for the skin tone in front of you.',
+      answer: 'Yes, because it uses no heat, no lasers, and no aggressive peeling agents. The exfoliating acids are at concentrations proven safe for melanin-rich skin, and the vortex extraction does not cause the trauma that can trigger post-inflammatory hyperpigmentation. The booster is selected for the skin tone in front of the practitioner. KIAMO Skin runs every treatment on the tone in front of the practitioner, because heat and aggressive treatment are what deepen pigment on the skin that marks most easily.',
     },
   ],
   },
@@ -1196,7 +1196,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   title: 'HydraFacial in Carlsbad, San Diego | KIAMO Skin',
   description: 'HydraFacial in Carlsbad from KIAMO Skin in San Diego. Medical-grade extraction and hydration for north county skin. $259. Request an appointment.',
   h1: 'HydraFacial in Carlsbad — North County Skin, Treated Properly',
-  opener: 'Medical-grade extraction and hydration on a HydraFacial Syndeo, with a booster chosen for your skin. Performed by Kiki, a California licensed esthetician.',
+  opener: 'Medical-grade extraction and hydration on a HydraFacial Syndeo, with a booster chosen for the skin. Performed by Kiki, a California licensed esthetician.',
   intro: 'Carlsbad is a north county catchment with its own weather, and the difference shows in the skin. The fog that sits over the coast most mornings clears further north, and the inland edge of the county runs drier and brighter through the middle of the day — so the UV exposure is intermittent rather than constant, and the dehydration it produces is the kind that arrives on a plane rather than a drive. The Vortex-Fusion extraction handles the mineral side of that: Carlsbad water is hard, and those deposits sit in the follicles where they cause congestion. The AI skin analysis reads the rest. The studio is thirty to thirty-five miles south, about thirty-five to forty minutes off-peak, with free parking on site — a real drive, which is why a HydraFacial here is most often booked as a monthly maintenance slot rather than a spontaneous one.',
   quickAnswer: 'A HydraFacial in Carlsbad at KIAMO Skin is performed on the Syndeo device by Kiki, a California licensed esthetician with 7+ years of experience — medical-grade extraction, a booster selected from the AI skin analysis, and LED light therapy, $259 per session or $249 for a first-time client including the consultation. Carlsbad clients are about thirty-five minutes south off-peak with free parking on site. The drive is real, so the treatment is usually booked as a monthly maintenance slot rather than a one-off.',
   authority: {
@@ -1239,23 +1239,23 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'How far is KIAMO Skin from Carlsbad?',
-      answer: 'About thirty to thirty-five miles, thirty-five to forty minutes south off-peak on I-5, with free parking on site. It is a genuine drive, and it is why a monthly slot is the way most Carlsbad clients use it.',
+      answer: 'About thirty to thirty-five miles, thirty-five to forty minutes south off-peak on I-5, with free parking on site. It is a genuine drive, and it is why a monthly slot is the way most Carlsbad clients use it. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'What does a HydraFacial cost in San Diego?',
-      answer: '$259 per session. A first-time client treatment is $249 including the consultation, skin analysis, and the plan for what comes next. The monthly facial membership is $199 a month and includes one HydraFacial monthly plus discounts on additional treatments.',
+      answer: '$259 per session. A first-time client treatment is $249 including the consultation, skin analysis, and the plan for what comes next. The monthly facial membership is $199 a month and includes one HydraFacial monthly plus discounts on additional treatments. KIAMO Skin maps the whole course at the first appointment — the sessions, the intervals and the total timeline — so a a HydraFacial at $259 series sits around recovery rather than around a calendar.',
     },
     {
       question: 'Is a HydraFacial worth the drive from Carlsbad?',
-      answer: 'It depends what you are booking it for. For congestion, dehydration, and texture it is the right treatment and nothing else in the market does the same thing. For melasma or scarring it is the maintenance layer, not the correction — a peel series or Procell microchanneling does that work, and the HydraFacial holds the result between sessions.',
+      answer: 'It depends what the treatment is being booked for. For congestion, dehydration, and texture it is the right treatment and nothing else in the market does the same thing. For melasma or scarring it is the maintenance layer, not the correction — a peel series or Procell microchanneling does that work, and the HydraFacial holds the result between sessions. KIAMO Skin is at 3067 Reynard Way in Mission Hills, with free parking on site, so the appointment ends at the door.',
     },
     {
       question: 'How often should I come in from Carlsbad?',
-      answer: 'Monthly is the usual cadence, and every four to six weeks for a corrective plan. Because the drive is real, the full course is mapped and scheduled at the first appointment so the appointments are placed around recovery rather than booked one at a time.',
+      answer: 'Monthly is the usual cadence, and every four to six weeks for a corrective plan. Because the drive is real, the full course is mapped and scheduled at the first appointment so the appointments are placed around recovery rather than booked one at a time. KIAMO Skin is at 3067 Reynard Way in Mission Hills, with free parking on site, so the appointment ends at the door.',
     },
     {
       question: 'Is a HydraFacial safe on all skin tones?',
-      answer: 'Yes, for Fitzpatrick I through VI. It uses no heat, no lasers, and no aggressive peeling agents, and the extraction does not cause the trauma that can trigger post-inflammatory hyperpigmentation. The booster is selected for the skin tone in front of you.',
+      answer: 'Yes, for Fitzpatrick I through VI. It uses no heat, no lasers, and no aggressive peeling agents, and the extraction does not cause the trauma that can trigger post-inflammatory hyperpigmentation. The booster is selected for the skin tone in front of the practitioner. KIAMO Skin runs every treatment on the tone in front of the practitioner, because heat and aggressive treatment are what deepen pigment on the skin that marks most easily.',
     },
   ],
   },
@@ -1265,9 +1265,9 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   title: 'HydraFacial in Chula Vista, San Diego | KIAMO Skin',
   description: 'HydraFacial in Chula Vista from KIAMO Skin in San Diego. Medical-grade extraction with a brightening booster for melanin-rich skin. $259. Book a visit.',
   h1: 'HydraFacial in Chula Vista — Extraction That Respects Melanin-Rich Skin',
-  opener: 'Medical-grade extraction and hydration on a HydraFacial Syndeo, with a booster chosen for your skin. Performed by Kiki, a California licensed esthetician.',
+  opener: 'Medical-grade extraction and hydration on a HydraFacial Syndeo, with a booster chosen for the skin. Performed by Kiki, a California licensed esthetician.',
   intro: 'Chula Vista clients bring a specific combination to this treatment: skin that congests easily in the humidity, that marks when products are pushed too hard, and that spends most of the year under inland sun the coast never sees. That combination is where a HydraFacial earns its place. The Syndeo\'s enzymatic resurfacing clears congestion without the abrasion that sensitises deeper skin, the vortex extraction works at calibrated suction rather than a fixed setting, and the AI skin analysis determines the booster — Britenol for pigment on Fitzpatrick IV-VI skin, barrier support where the skin is reactive. Nothing here creates the trauma that produces post-inflammatory hyperpigmentation, which is the failure mode that matters most for this client base. The studio is about thirteen miles north off-peak, with free parking on site.',
-  quickAnswer: 'A HydraFacial in Chula Vista at KIAMO Skin is performed on the Syndeo device by Kiki, a California licensed esthetician with 7+ years in melanin-rich skin — enzymatic resurfacing, calibrated vortex extraction, a booster selected from the AI skin analysis, and LED light therapy. $259 per session, or $249 for a first-time client including the consultation. Chula Vista clients are about thirteen miles north, twenty to twenty-five minutes off-peak, with free parking on site. The booster is the part that matters for deeper skin: it is selected for the tone in front of you, and it contains no hydroquinone.',
+  quickAnswer: 'A HydraFacial in Chula Vista at KIAMO Skin is performed on the Syndeo device by Kiki, a California licensed esthetician with 7+ years in melanin-rich skin — enzymatic resurfacing, calibrated vortex extraction, a booster selected from the AI skin analysis, and LED light therapy. $259 per session, or $249 for a first-time client including the consultation. Chula Vista clients are about thirteen miles north, twenty to twenty-five minutes off-peak, with free parking on site. The booster is the part that matters for deeper skin: it is selected for the tone in front of the practitioner, and it contains no hydroquinone.',
   authority: {
     heading: 'Why Chula Vista clients book the Syndeo',
     body: 'Melanin-rich skin responds to trauma by producing more pigment, so the safest treatment is the one that creates the least. The Syndeo is that treatment: no heat, no lasers, and no aggressive peeling agents, with exfoliating acids at concentrations proven safe on Fitzpatrick IV-VI skin. What remains is the judgement — and Kiki has 7+ years of it in exactly the skin types Chula Vista clients have. The booster is selected from the AI reading, and for deeper skin that means a brightening formula built around alpha-arbutin and bearberry extract rather than hydroquinone, which can cause rebound pigmentation in darker skin tones. One practitioner performs every session, so the second visit is informed by the first.',
@@ -1297,34 +1297,34 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
       },
       {
         step: 'Boost',
-        body: 'A customised booster is selected from the AI analysis. For deeper skin that means a brightening formula chosen for the tone in front of you. LED light therapy follows, included in every appointment.',
+        body: 'A customised booster is selected from the AI analysis. For deeper skin that means a brightening formula chosen for the tone in front of the practitioner. LED light therapy follows, included in every appointment.',
       },
     ],
   },
   intent: {
     heading: 'Who books a HydraFacial in Chula Vista',
-    body: 'Chula Vista clients most often book for congestion, dehydration, and the dullness that comes with skin that has been worked hard in the sun. Many are already in a corrective plan and book the HydraFacial as the maintenance layer between peel appointments — a cleared surface lets the acid work evenly rather than over debris. Others book it as the first step, because the AI analysis gives them a reading of their own skin that no product has been able to give them. KIAMO Skin fits when the priority is protocols calibrated for the tone in front of you, published pricing, and one practitioner across the whole course.',
+    body: 'Chula Vista clients most often book for congestion, dehydration, and the dullness that comes with skin that has been worked hard in the sun. Many are already in a corrective plan and book the HydraFacial as the maintenance layer between peel appointments — a cleared surface lets the acid work evenly rather than over debris. Others book it as the first step, because the AI analysis gives them a reading of their own skin that no product has been able to give them. KIAMO Skin fits when the priority is protocols calibrated for the tone in front of the practitioner, published pricing, and one practitioner across the whole course.',
   },
   faqs: [
     {
       question: 'How far is KIAMO Skin from Chula Vista?',
-      answer: 'About thirteen miles, twenty to twenty-five minutes north off-peak via I-5, with free parking on site. Morning and midday appointments are the quicker option, since the commute through Mission Valley is the slow part.',
+      answer: 'About thirteen miles, twenty to twenty-five minutes north off-peak via I-5, with free parking on site. Morning and midday appointments are the quicker option, since the commute through Mission Valley is the slow part. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'What does a HydraFacial cost in San Diego?',
-      answer: '$259 per session. A first-time client treatment is $249 including the consultation, skin analysis, and the plan for what comes next. The monthly facial membership is $199 a month and includes one HydraFacial monthly plus discounts on additional treatments.',
+      answer: '$259 per session. A first-time client treatment is $249 including the consultation, skin analysis, and the plan for what comes next. The monthly facial membership is $199 a month and includes one HydraFacial monthly plus discounts on additional treatments. KIAMO Skin maps the whole course at the first appointment — the sessions, the intervals and the total timeline — so a a HydraFacial at $259 series sits around recovery rather than around a calendar.',
     },
     {
       question: 'Is a HydraFacial safe for melanin-rich skin?',
-      answer: 'Yes — because it uses no heat, no lasers, and no aggressive peeling agents. The exfoliating acids are at concentrations proven safe for melanin-rich skin, and the vortex extraction does not cause the trauma that can trigger post-inflammatory hyperpigmentation. For deeper skin the booster is selected from the AI reading, and it is built around alpha-arbutin and bearberry extract rather than hydroquinone.',
+      answer: 'Yes — because it uses no heat, no lasers, and no aggressive peeling agents. The exfoliating acids are at concentrations proven safe for melanin-rich skin, and the vortex extraction does not cause the trauma that can trigger post-inflammatory hyperpigmentation. For deeper skin the booster is selected from the AI reading, and it is built around alpha-arbutin and bearberry extract rather than hydroquinone. KIAMO Skin runs every treatment on the tone in front of the practitioner, because heat and aggressive treatment are what deepen pigment on the skin that marks most easily.',
     },
     {
       question: 'Can I get a HydraFacial and a peel in the same month?',
-      answer: 'Frequently, and often for good reason — the HydraFacial clears the surface between peel appointments so the acid works evenly. What can safely be combined and when is decided at consultation, because the sequence depends on how the barrier responds.',
+      answer: 'Frequently, and often for good reason — the HydraFacial clears the surface between peel appointments so the acid works evenly. What can safely be combined and when is decided at consultation, because the sequence depends on how the barrier responds. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Does a HydraFacial fix melasma?',
-      answer: 'No, and it would be wrong to say so. A HydraFacial is a resurfacing and maintenance treatment. Melasma is corrected with LIRA chemical peels, and the HydraFacial is the layer that holds the result between sessions. For dehydration, congestion, and texture, it is the right treatment on its own.',
+      answer: 'No, and it would be wrong to say so. A HydraFacial is a resurfacing and maintenance treatment. Melasma is corrected with LIRA chemical peels, and the HydraFacial is the layer that holds the result between sessions. For dehydration, congestion, and texture, it is the right treatment on its own. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
   ],
   },
@@ -1334,7 +1334,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   title: 'HydraFacial in Encinitas, San Diego | KIAMO Skin',
   description: 'HydraFacial in Encinitas from KIAMO Skin in San Diego. Medical-grade extraction and hydration for surf-exposed skin. $259. Request an appointment.',
   h1: 'HydraFacial in Encinitas — Recovery for Salt-Water Skin',
-  opener: 'Medical-grade extraction and hydration on a HydraFacial Syndeo, with a booster chosen for your skin. Performed by Kiki, a California licensed esthetician.',
+  opener: 'Medical-grade extraction and hydration on a HydraFacial Syndeo, with a booster chosen for the skin. Performed by Kiki, a California licensed esthetician.',
   intro: 'Encinitas has a specific relationship with salt water, and it shows up in the skin. The rinse after a surf session removes the salt but also strips the oils that hold the barrier together, and the result is skin that feels tight after the water and reactive to products it tolerated the week before. A HydraFacial is the treatment built for exactly that: enzymatic resurfacing that clears what the ocean and the wind leave behind, calibrated vortex extraction that removes the mineral deposits hard water leaves in the follicles, and precision infusion that puts the hydration back before the barrier can react to the next session. The studio is about twenty-five miles south, roughly thirty minutes off-peak, with free parking on site.',
   quickAnswer: 'A HydraFacial in Encinitas at KIAMO Skin is performed on the Syndeo device by Kiki, a California licensed esthetician with 7+ years of experience — enzymatic resurfacing, calibrated vortex extraction, a booster selected from the AI skin analysis, and LED light therapy. $259 per session, or $249 for a first-time client including the consultation. Encinitas clients are about twenty-five miles south, roughly thirty minutes off-peak, with free parking on site. For surf-exposed skin the treatment is about restoring the barrier as much as clearing the surface.',
   authority: {
@@ -1377,23 +1377,23 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'How far is KIAMO Skin from Encinitas?',
-      answer: 'About twenty-five miles, roughly thirty minutes south off-peak on I-5, with free parking on site. For a client booking monthly, the appointment is easier to place early in the day, before the north county commute builds.',
+      answer: 'About twenty-five miles, roughly thirty minutes south off-peak on I-5, with free parking on site. For a client booking monthly, the appointment is easier to place early in the day, before the north county commute builds. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'What does a HydraFacial cost in San Diego?',
-      answer: '$259 per session. A first-time client treatment is $249 including the consultation, skin analysis, and the plan for what comes next. The monthly facial membership is $199 a month and includes one HydraFacial monthly plus discounts on additional treatments.',
+      answer: '$259 per session. A first-time client treatment is $249 including the consultation, skin analysis, and the plan for what comes next. The monthly facial membership is $199 a month and includes one HydraFacial monthly plus discounts on additional treatments. KIAMO Skin maps the whole course at the first appointment — the sessions, the intervals and the total timeline — so a a HydraFacial at $259 series sits around recovery rather than around a calendar.',
     },
     {
       question: 'Can a HydraFacial fix skin damaged by salt water?',
-      answer: 'It restores the barrier and clears what the ocean leaves behind, which is the treatment for the problem. If the barrier is badly compromised — reactive, stinging, tight after cleansing — DMK enzyme therapy is often the right first move, because it rebuilds skin function rather than resurfacing a surface that is not ready for it.',
+      answer: 'It restores the barrier and clears what the ocean leaves behind, which is the treatment for the problem. If the barrier is badly compromised — reactive, stinging, tight after cleansing — DMK enzyme therapy is often the right first move, because it rebuilds skin function rather than resurfacing a surface that is not ready for it. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'Is a HydraFacial safe for melanin-rich skin?',
-      answer: 'Yes, because it uses no heat, no lasers, and no aggressive peeling agents. The exfoliating acids are at concentrations proven safe for melanin-rich skin, and the extraction does not cause the trauma that can trigger post-inflammatory hyperpigmentation.',
+      answer: 'Yes, because it uses no heat, no lasers, and no aggressive peeling agents. The exfoliating acids are at concentrations proven safe for melanin-rich skin, and the extraction does not cause the trauma that can trigger post-inflammatory hyperpigmentation. KIAMO Skin runs every treatment on the tone in front of the practitioner, because heat and aggressive treatment are what deepen pigment on the skin that marks most easily.',
     },
     {
       question: 'How often should I come in from Encinitas?',
-      answer: 'Monthly is the usual cadence, and every four to six weeks for a corrective plan. The full course is mapped and scheduled at the first appointment, so the appointments sit around recovery rather than being booked one at a time.',
+      answer: 'Monthly is the usual cadence, and every four to six weeks for a corrective plan. The full course is mapped and scheduled at the first appointment, so the appointments sit around recovery rather than being booked one at a time. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
   ],
   },
@@ -1408,7 +1408,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   quickAnswer: 'Pacific Beach sits inside the May Gray marine layer belt, and the UV that penetrates thin cloud is the most consistent cause of new pigmentation in the clients we see from the neighborhood. HydraFacial at KIAMO Skin in Mission Hills uses enzymatic resurfacing and peptide infusion to lift the UV-loaded surface cells and replace hydration, with LED light therapy included in every session — about fifteen minutes east on I-8 from Pacific Beach.',
   authority: {
     heading: 'Coastal lifestyle skin specialists',
-    body: 'Pacific Beach sits directly on the Pacific Ocean between Mission Bay and La Jolla, which means year-round exposure to salt air, ocean wind, and UV intensified by water reflection. KIAMO Skin uses HydraFacial Syndeo with AI-powered skin analysis to customize treatments for the specific barrier breakdown, dehydration, and sun-related pigmentation that beach-lifestyle skin develops. Kiki has 7+ years of experience treating coastal skin and understands the difference between beach-area clients who swim, surf, or run on the boardwalk daily and those whose exposure is occasional. The 15-minute drive from Pacific Beach via I-8 makes monthly barrier maintenance realistic, and the single-practitioner model means you build a treatment relationship rather than explaining your skin to a new provider each visit.',
+    body: 'Pacific Beach sits directly on the Pacific Ocean between Mission Bay and La Jolla, which means year-round exposure to salt air, ocean wind, and UV intensified by water reflection. KIAMO Skin uses HydraFacial Syndeo with AI-powered skin analysis to customize treatments for the specific barrier breakdown, dehydration, and sun-related pigmentation that beach-lifestyle skin develops. Kiki has 7+ years of experience treating coastal skin and understands the difference between beach-area clients who swim, surf, or run on the boardwalk daily and those whose exposure is occasional. The 15-minute drive from Pacific Beach via I-8 makes monthly barrier maintenance realistic, and the single-practitioner model means a client build a treatment relationship rather than explaining the skin to a new provider each visit.',
   },
   uniqueness: {
     heading: 'HydraFacial for beach-lifestyle skin',
@@ -1454,15 +1454,15 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
     },
     {
       question: 'Can HydraFacial help with sun damage from beach living in Pacific Beach?',
-      answer: 'Yes. Anti-aging hydrafacial in Pacific Beach addresses accumulated sun damage through brightening boosters (Britenol for tone, peptides for firmness, growth factors for barrier repair) applied after the extraction step. For significant photoaging, HydraFacial is typically paired with corrective treatments like Lira chemical peels, with HydraFacial maintaining results between peel sessions and keeping the barrier hydrated against ongoing UV exposure.',
+      answer: 'Yes. Anti-aging hydrafacial in Pacific Beach addresses accumulated sun damage through brightening boosters (Britenol for tone, peptides for firmness, growth factors for barrier repair) applied after the extraction step. For significant photoaging, HydraFacial is typically paired with corrective treatments like Lira chemical peels, with HydraFacial maintaining results between peel sessions and keeping the barrier hydrated against ongoing UV exposure. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Does dermaplaning help with Pacific Beach skin?',
-      answer: 'Yes - dermaplaning pairs naturally with HydraFacial for Pacific Beach clients. The blade removes the sunscreen-loaded surface layer (mineral SPF, zinc oxide, and sebum) that daily cleansing cannot fully clear, and the immediately following HydraFacial then hydrates and infuses the freshly exposed skin. The <a href="/journal/dermaplaning-safe-dark-skin-san-diego/">dermaplaning guide for melanin-rich skin</a> covers technique and timing in more detail.',
+      answer: 'Yes - dermaplaning pairs naturally with HydraFacial for Pacific Beach clients. The blade removes the sunscreen-loaded surface layer (mineral SPF, zinc oxide, and sebum) that daily cleansing cannot fully clear, and the immediately following HydraFacial then hydrates and infuses the freshly exposed skin. The <a href="/journal/dermaplaning-safe-dark-skin-san-diego/">dermaplaning guide for melanin-rich skin</a> covers technique and timing in more detail. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'How often should Pacific Beach residents get HydraFacial?',
-      answer: 'Monthly treatments maintain the barrier against constant coastal exposure. Pacific Beach clients who swim, surf, or spend daily time on the beach often notice their skin becomes reactive or tight between monthly sessions - that is the salt air and UV compromising the barrier. Regular HydraFacial keeps the protective layer strong and addresses accumulated sun damage before it becomes harder to reverse.',
+      answer: 'Monthly treatments maintain the barrier against constant coastal exposure. Pacific Beach clients who swim, surf, or spend daily time on the beach often notice their skin becomes reactive or tight between monthly sessions - that is the salt air and UV compromising the barrier. Regular HydraFacial keeps the protective layer strong and addresses accumulated sun damage before it becomes harder to reverse. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
   ],
   body: `<h2 class="t-h3 mt-12 mb-6">Why Pacific Beach Skin Shows UV Damage</h2>
@@ -1470,7 +1470,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   Pacific Beach sits inside the May Gray belt, the stretch of San Diego coastline where the marine layer sits heaviest from late May through July. The light looks dim and the air feels cool, and the natural assumption is that there is nothing to protect against. The UV index across Pacific Beach in those months still hits 8 to 10, and UVA passes through thin marine layer with very little loss. Pigment cells respond to UVA and to heat as well as to UVB, and in melanin-rich skin that response is enthusiastic.
 </p>
 <p>
-  The damage is cumulative rather than acute. A single overcast morning on the boardwalk does not produce a visible change. The pattern that produces pigmentation is the one that runs for six to eight weeks: daily exposure without the sensory cue that would normally trigger sunscreen, followed by a clear-signal day that arrives without warning. The pigment shows up in August, by which point the exposure that caused it is months behind you and the trigger is invisible.
+  The damage is cumulative rather than acute. A single overcast morning on the boardwalk does not produce a visible change. The pattern that produces pigmentation is the one that runs for six to eight weeks: daily exposure without the sensory cue that would normally trigger sunscreen, followed by a clear-signal day that arrives without warning. The pigment shows up in August, by which point the exposure that caused it is months behind a client and the trigger is invisible.
 </p>
 <p>
   Pacific Beach adds heat to the equation. The boardwalk and the Belmont Park area run several degrees warmer than the cliffs at La Jolla, and heat is its own pigmentation driver independent of UV. Melasma in particular responds to a combination of UVA, heat, and hormones. Pacific Beach is a more aggressive UV environment than the geography suggests, and the skin that lives in it year-round is paying for the misread.
@@ -1487,7 +1487,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   Second, vortex extraction vacuums mineral deposits and oxidized sebum out of follicles at controlled pressure. Pacific Beach residents who are also in the water get the same salt buildup as La Jolla swimmers. Residents who are not in the water still get the mineral residue from San Diego's hard water — local supply runs 16 grains per gallon, which means every rinse leaves calcium and magnesium in the pores. Standard cleansing does not clear it.
 </p>
 <p>
-  Third, peptide infusion floods the skin with hydration while the pores are still open and receptive. The booster serum is selected at consultation based on what your skin is doing that day — for Pacific Beach clients in late summer, that usually means a pigment-calming peptide stack layered over hyaluronic acid. The infusion happens under the same vacuum pressure that just cleared the follicles, which drives the active ingredients deeper than topical application alone would reach.
+  Third, peptide infusion floods the skin with hydration while the pores are still open and receptive. The booster serum is selected at consultation based on what the skin is doing that day — for Pacific Beach clients in late summer, that usually means a pigment-calming peptide stack layered over hyaluronic acid. The infusion happens under the same vacuum pressure that just cleared the follicles, which drives the active ingredients deeper than topical application alone would reach.
 </p>
 <p>
   LED light therapy follows every HydraFacial at KIAMO Skin. Red and near-infrared wavelengths reduce the inflammation UV has been driving at the cellular level, and they support the repair the peptides just initiated. This is included in every session, not an add-on.
@@ -1532,7 +1532,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   Mid-morning and early afternoon are the easier windows for the drive. The morning rush from Pacific Beach into Mission Hills stacks on I-5 through La Jolla, and the evening commute reverses it. Most Pacific Beach clients book mid-morning appointments and are back home within the hour.
 </p>
 <p>
-  The studio is at 3067 Reynard Way in Mission Hills, off Washington Street. Free parking on site. By appointment only, so a space is always available when you arrive. Appointments are one-to-one with Kiki, a California licensed esthetician with seven years treating UV damage and pigmentation in all skin types, including melanin-rich skin.
+  The studio is at 3067 Reynard Way in Mission Hills, off Washington Street. Free parking on site. By appointment only, so a space is always available when a client arrive. Appointments are one-to-one with Kiki, a California licensed esthetician with seven years treating UV damage and pigmentation in all skin types, including melanin-rich skin.
 </p>
 <p>
   Full directions, neighborhood context, and what to expect at a first visit are on the <a href="/service-areas/pacific-beach/facial/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">Pacific Beach service area page</a>.
@@ -1548,12 +1548,12 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   title: 'Chemical Peel in Carlsbad, San Diego | KIAMO Skin',
   description: 'Chemical peels in Carlsbad from KIAMO Skin in San Diego. LIRA peels for sun damage and melasma, paced across a series of treatments. From $199.',
   h1: 'Chemical Peel in Carlsbad — Pigmentation Correction, Paced for North County',
-  opener: 'Professional peels selected for the skin tone in front of you, with the strength raised only as the barrier allows. Performed by Kiki, a California licensed esthetician.',
+  opener: 'Professional peels selected for the skin tone in front of the practitioner, with the strength raised only as the barrier allows. Performed by Kiki, a California licensed esthetician.',
   intro: 'Carlsbad clients book peels for the pigmentation that a bright, dry inland climate produces, and for the specific reason the treatment has to be paced rather than escalated. A LIRA chemical peel is layered and timed to the skin\'s response on the day, and the strength increases across a series — never inside one visit. On melanin-rich skin that pacing is the whole safety mechanism, because the wrong peel at the wrong strength produces exactly the post-inflammatory hyperpigmentation a client came in to clear. The studio is about thirty-five minutes south off-peak with free parking on site, and because a corrective course runs every four to six weeks, the series is scheduled in full at the first appointment.',
   quickAnswer: 'LIRA chemical peels in Carlsbad are professional-grade peels selected for the skin tone and paced across a series — strength escalated only as the barrier allows, never escalated in one visit. Kiki, a California licensed esthetician with 7+ years in melanin-rich skin, performs every session at the San Diego studio, about thirty-five minutes south off-peak with free parking. $199 for the Gentle Renewal peel and $299 for the Advanced peel. The pacing is the safety mechanism on deeper skin: the wrong peel at the wrong strength produces the dark marks clients are trying to clear.',
   authority: {
     heading: 'Why Carlsbad clients choose a peel that is paced, not fast',
-    body: 'The drive is what shapes a Carlsbad plan, and so is the biology. Corrective work runs on intervals — a peel series, a microchanneling course, a scalp series — and the honest approach is to set the course first and place the appointments around it, rather than booking whenever the skin flares. Pairing two things into one visit is often the difference between finishing a course and abandoning it halfway. On the biology side, Kiki has 7+ years treating pigmentation in melanin-rich skin, where an over-aggressive peel causes more damage than it repairs, and the LIRA range is built for exactly the control that requires — strength selected for the tone in front of you, escalated only as the barrier allows.',
+    body: 'The drive is what shapes a Carlsbad plan, and so is the biology. Corrective work runs on intervals — a peel series, a microchanneling course, a scalp series — and the honest approach is to set the course first and place the appointments around it, rather than booking whenever the skin flares. Pairing two things into one visit is often the difference between finishing a course and abandoning it halfway. On the biology side, Kiki has 7+ years treating pigmentation in melanin-rich skin, where an over-aggressive peel causes more damage than it repairs, and the LIRA range is built for exactly the control that requires — strength selected for the tone in front of the practitioner, escalated only as the barrier allows.',
   },
   uniqueness: {
     heading: 'What a chemical peel in Carlsbad actually does',
@@ -1591,23 +1591,23 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'How far is KIAMO Skin from Carlsbad?',
-      answer: 'About thirty to thirty-five miles, thirty-five to forty minutes south off-peak on I-5, with free parking on site. Because a peel series runs every four to six weeks, the full course is scheduled at the first appointment rather than booked one at a time.',
+      answer: 'About thirty to thirty-five miles, thirty-five to forty minutes south off-peak on I-5, with free parking on site. Because a peel series runs every four to six weeks, the full course is scheduled at the first appointment rather than booked one at a time. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'How much does a chemical peel cost in San Diego?',
-      answer: 'The LIRA Gentle Renewal Peel is $199 and the Advanced Peel is $299. A first-time consultation and treatment is $249. Pigmentation is treated as a series — most plans run every four to six weeks — so a monthly membership at $199 is often the cheaper way to stay on schedule.',
+      answer: 'The LIRA Gentle Renewal Peel is $199 and the Advanced Peel is $299. A first-time consultation and treatment is $249. Pigmentation is treated as a series — most plans run every four to six weeks — so a monthly membership at $199 is often the cheaper way to stay on schedule. At KIAMO Skin every price is published before a booking is made — a LIRA peel from $199, and the first visit with the consultation and skin analysis is $249.',
     },
     {
       question: 'Are chemical peels safe for melanin-rich skin?',
-      answer: 'Yes, when the peel is selected for the tone and the pacing is right. Melanin-rich skin responds to trauma by producing more pigment, so strength is escalated only as the barrier allows and the first step is usually gentle. The LIRA range is built around that control rather than applied from a fixed menu.',
+      answer: 'Yes, when the peel is selected for the tone and the pacing is right. Melanin-rich skin responds to trauma by producing more pigment, so strength is escalated only as the barrier allows and the first step is usually gentle. The LIRA range is built around that control rather than applied from a fixed menu. KIAMO Skin runs every treatment on the tone in front of the practitioner, because heat and aggressive treatment are what deepen pigment on the skin that marks most easily.',
     },
     {
       question: 'How many peels will I need?',
-      answer: 'It depends on the depth of the pigment and the skin tone. Most clients see visible change across three to four sessions, with the full result across six to eight. The timeline is set at consultation once the skin has been assessed.',
+      answer: 'It depends on the depth of the pigment and the skin tone. Most clients see visible change across three to four sessions, with the full result across six to eight. The timeline is set at consultation once the skin has been assessed. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'What should I do between peel appointments?',
-      answer: 'Home care does as much work as the treatment. Broad-spectrum SPF 50+ daily, no retinoids or acids while the skin is recovering, and the home routine Kiki prescribes at the first appointment. A monthly membership at $199 applies toward peels by paying the difference.',
+      answer: 'Home care does as much work as the treatment. Broad-spectrum SPF 50+ daily, no retinoids or acids while the skin is recovering, and the home routine Kiki prescribes at the first appointment. A monthly membership at $199 applies toward peels by paying the difference. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
   ],
   },
@@ -1617,12 +1617,12 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   title: 'Chemical Peel in La Jolla, San Diego | KIAMO Skin',
   description: 'Chemical peels in La Jolla from KIAMO Skin in San Diego. LIRA peels for sun damage and melasma in melanin-rich skin. From $199. Book a visit.',
   h1: 'Chemical Peel in La Jolla — Correcting Coastal UV Without New Marks',
-  opener: 'Professional peels selected for the skin tone in front of you, with the strength raised only as the barrier allows. Performed by Kiki, a California licensed esthetician.',
-  intro: 'La Jolla has more than one kind of sun exposure, and they work against each other. There is the year-round ocean swimming — salt water, salt air, and a part line that takes UV directly — and there is the blufftop above the Cove, which gets direct afternoon sun with no tree cover and reflects back off the water. That combination produces a kind of pigmentation that peels can address but cannot fix on their own, because the trigger keeps arriving. The LIRA approach is built for exactly that: strength escalates across a series rather than in one visit, the peel is selected for the skin tone in front of you, and daily SPF is what holds the result. The studio is about twenty minutes south off-peak, with free parking on site.',
-  quickAnswer: 'LIRA chemical peels in La Jolla correct sun damage and melasma on melanin-rich skin, with strength escalated across a series rather than in one visit and the peel selected for the tone in front of you. Kiki, a California licensed esthetician with 7+ years in melanin-rich skin, performs every session at the San Diego studio — about twenty minutes south off-peak, free parking on site. $199 for the Gentle Renewal peel and $299 for the Advanced. La Jolla has two sun exposures at once — ocean swimming and blufftop UV — and the daily SPF in the plan is what decides whether the pigment stays faded.',
+  opener: 'Professional peels selected for the skin tone in front of the practitioner, with the strength raised only as the barrier allows. Performed by Kiki, a California licensed esthetician.',
+  intro: 'La Jolla has more than one kind of sun exposure, and they work against each other. There is the year-round ocean swimming — salt water, salt air, and a part line that takes UV directly — and there is the blufftop above the Cove, which gets direct afternoon sun with no tree cover and reflects back off the water. That combination produces a kind of pigmentation that peels can address but cannot fix on their own, because the trigger keeps arriving. The LIRA approach is built for exactly that: strength escalates across a series rather than in one visit, the peel is selected for the skin tone in front of the practitioner, and daily SPF is what holds the result. The studio is about twenty minutes south off-peak, with free parking on site.',
+  quickAnswer: 'LIRA chemical peels in La Jolla correct sun damage and melasma on melanin-rich skin, with strength escalated across a series rather than in one visit and the peel selected for the tone in front of the practitioner. Kiki, a California licensed esthetician with 7+ years in melanin-rich skin, performs every session at the San Diego studio — about twenty minutes south off-peak, free parking on site. $199 for the Gentle Renewal peel and $299 for the Advanced. La Jolla has two sun exposures at once — ocean swimming and blufftop UV — and the daily SPF in the plan is what decides whether the pigment stays faded.',
   authority: {
     heading: 'Why La Jolla clients need a peel that respects the skin tone',
-    body: 'La Jolla clients spend a lot of time in water and a lot of time in direct sun, and the skin records both. Salt water strips the barrier; blufftop UV drives pigment into it. On melanin-rich skin that combination is where the wrong treatment does lasting damage — an over-aggressive peel creates precisely the post-inflammatory hyperpigmentation the client came in to clear. Kiki has 7+ years treating exactly this, and the LIRA range is built for the control it requires: strength selected for the tone in front of you, escalated only as the barrier allows, and never escalated inside a single visit. The single-practitioner model matters across a series — the esthetician who assessed the pigment performs every session and adjusts the plan from what the skin shows.',
+    body: 'La Jolla clients spend a lot of time in water and a lot of time in direct sun, and the skin records both. Salt water strips the barrier; blufftop UV drives pigment into it. On melanin-rich skin that combination is where the wrong treatment does lasting damage — an over-aggressive peel creates precisely the post-inflammatory hyperpigmentation the client came in to clear. Kiki has 7+ years treating exactly this, and the LIRA range is built for the control it requires: strength selected for the tone in front of the practitioner, escalated only as the barrier allows, and never escalated inside a single visit. The single-practitioner model matters across a series — the esthetician who assessed the pigment performs every session and adjusts the plan from what the skin shows.',
   },
   uniqueness: {
     heading: 'What a chemical peel in La Jolla actually does',
@@ -1660,23 +1660,23 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'How far is KIAMO Skin from La Jolla?',
-      answer: 'About twelve miles, twenty minutes south off-peak on I-5, with free parking on site at the studio. It is a short drive, which is what makes a series at four-to-six-week intervals realistic.',
+      answer: 'About twelve miles, twenty minutes south off-peak on I-5, with free parking on site at the studio. It is a short drive, which is what makes a series at four-to-six-week intervals realistic. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'How much does a chemical peel cost in San Diego?',
-      answer: 'The LIRA Gentle Renewal Peel is $199 and the Advanced Peel is $299. A first-time consultation and treatment is $249. Pigmentation is treated as a series — most plans run every four to six weeks — so a monthly membership at $199 is often the cheaper way to stay on schedule.',
+      answer: 'The LIRA Gentle Renewal Peel is $199 and the Advanced Peel is $299. A first-time consultation and treatment is $249. Pigmentation is treated as a series — most plans run every four to six weeks — so a monthly membership at $199 is often the cheaper way to stay on schedule. At KIAMO Skin every price is published before a booking is made — a LIRA peel from $199, and the first visit with the consultation and skin analysis is $249.',
     },
     {
       question: 'Are chemical peels safe for melanin-rich skin?',
-      answer: 'Yes, when the peel is selected for the tone and the pacing is right. Melanin-rich skin responds to trauma by producing more pigment, so strength is escalated only as the barrier allows and the first step is usually gentle. The LIRA range is built around that control rather than applied from a fixed menu.',
+      answer: 'Yes, when the peel is selected for the tone and the pacing is right. Melanin-rich skin responds to trauma by producing more pigment, so strength is escalated only as the barrier allows and the first step is usually gentle. The LIRA range is built around that control rather than applied from a fixed menu. KIAMO Skin runs every treatment on the tone in front of the practitioner, because heat and aggressive treatment are what deepen pigment on the skin that marks most easily.',
     },
     {
       question: 'How many peels will I need?',
-      answer: 'It depends on the depth of the pigment and the skin tone. Most clients see visible change across three to four sessions, with the full result across six to eight. The timeline is set at consultation once the skin has been assessed.',
+      answer: 'It depends on the depth of the pigment and the skin tone. Most clients see visible change across three to four sessions, with the full result across six to eight. The timeline is set at consultation once the skin has been assessed. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Can I keep swimming while I am having peels?',
-      answer: 'Salt water and a peel do not belong in the same week — salt water strips the barrier the peel is working on. The plan sets a recovery window, and how long it runs depends on the peel depth. Getting this wrong is the most common reason a series stalls and the pigment comes back.',
+      answer: 'Salt water and a peel do not belong in the same week — salt water strips the barrier the peel is working on. The plan sets a recovery window, and how long it runs depends on the peel depth. Getting this wrong is the most common reason a series stalls and the pigment comes back. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
   ],
   },
@@ -1686,7 +1686,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   title: 'Lira Chemical Peel for La Mesa Melasma | KIAMO Skin',
   description: 'La Mesa heat is inland heat — different UV than the coast. Lira peels at KIAMO Skin in Mission Hills recalibrate melasma in melanin-rich skin. From $199.',
   h1: 'Lira Chemical Peel for La Mesa Melasma: The Inland Valley Heat Protocol',
-  opener: 'Professional peels selected for the skin tone in front of you, with the strength raised only as the barrier allows. Performed by Kiki, a California licensed esthetician.',
+  opener: 'Professional peels selected for the skin tone in front of the practitioner, with the strength raised only as the barrier allows. Performed by Kiki, a California licensed esthetician.',
   intro: `<h2 class="t-h3 mt-12 mb-6">Why La Mesa Heat Drives Melasma Differently</h2>
 <p>
   La Mesa sits far enough inland that the marine layer no longer moderates its UV. The neighborhood runs ten to fifteen degrees hotter than the coast through July and August, and the heat component of melasma — independent of UV — kicks in for clients with Fitzpatrick III to V skin. Melasma concentrates in the pigment cells that respond enthusiastically to three triggers at once: hormones, heat, and UVA. La Mesa supplies two of those three on a regular afternoon in August.
@@ -1751,7 +1751,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   Mid-morning and early afternoon are the easier windows. The evening commute on I-15 north from Mission Hills back to La Mesa stacks in the Santee area, and the morning rush reverses it. Most La Mesa clients book mid-morning and are home before the heat of the afternoon.
 </p>
 <p>
-  The studio is at 3067 Reynard Way in Mission Hills, off Washington Street. Free parking on site. By appointment only, so a space is always available when you arrive. Appointments are one-to-one with Kiki, a California licensed esthetician with seven years treating melasma in all skin types, including melanin-rich skin.
+  The studio is at 3067 Reynard Way in Mission Hills, off Washington Street. Free parking on site. By appointment only, so a space is always available when a client arrive. Appointments are one-to-one with Kiki, a California licensed esthetician with seven years treating melasma in all skin types, including melanin-rich skin.
 </p>
 <p>
   Full directions, neighborhood context, and what to expect at a first visit are on the <a href="/service-areas/la-mesa/facial/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">La Mesa service area page</a>.
@@ -1797,19 +1797,19 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'How does La Mesa heat make melasma worse?',
-      answer: 'Melasma is driven by three triggers acting together: hormones, UVA, and heat. La Mesa supplies the second and third reliably from May through September, and the combination is what produces the symmetric darkening on the upper lip, cheeks, and forehead that melasma is known for. The marine layer that moderates coastal UV does not reach La Mesa most summer mornings, and the temperature differential between the coast and La Mesa is what produces the heat-driven pigment that the coastline does not see at the same rate.',
+      answer: 'Melasma is driven by three triggers acting together: hormones, UVA, and heat. La Mesa supplies the second and third reliably from May through September, and the combination is what produces the symmetric darkening on the upper lip, cheeks, and forehead that melasma is known for. The marine layer that moderates coastal UV does not reach La Mesa most summer mornings, and the temperature differential between the coast and La Mesa is what produces the heat-driven pigment that the coastline does not see at the same rate. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Why is the Lira peel calibrated differently for melanin-rich skin?',
-      answer: 'Depth determines whether a peel helps or hurts. A peel that goes too deep triggers the wound response that produces post-inflammatory hyperpigmentation, and the resulting pigment is often darker and more persistent than the melasma it was meant to treat. The Lira protocol is built around staying above that threshold, and the consultation determines the starting depth based on the Fitzpatrick type and the depth of the pigment. For Fitzpatrick III-V skin — the most common La Mesa client base — the depth is set shallower than it would be for Fitzpatrick I-II skin, and the home-care protocol includes a pigment-calming serum with arbutin and a mineral sunscreen with iron oxides.',
+      answer: 'Depth determines whether a peel helps or hurts. A peel that goes too deep triggers the wound response that produces post-inflammatory hyperpigmentation, and the resulting pigment is often darker and more persistent than the melasma it was meant to treat. The Lira protocol is built around staying above that threshold, and the consultation determines the starting depth based on the Fitzpatrick type and the depth of the pigment. For Fitzpatrick III-V skin — the most common La Mesa client base — the depth is set shallower than it would be for Fitzpatrick I-II skin, and the home-care protocol includes a pigment-calming serum with arbutin and a mineral sunscreen with iron oxides. KIAMO Skin runs every treatment on the tone in front of the practitioner, because heat and aggressive treatment are what deepen pigment on the skin that marks most easily.',
     },
     {
       question: 'How many Lira peels does it take to lift melasma?',
-      answer: 'One peel produces a measurable change. Three peels over six months is the standard protocol for entrenched melasma, and the results compound. The protocol is set at consultation based on how the first peel responds, and the cadence is adjusted as the pigment lifts. Most La Mesa clients see visible reduction by the second peel, with continued improvement through the third. The expectation is reduction, not elimination — melasma is managed, not cured, and the La Mesa client who understands that is the one who gets the result they came for.',
+      answer: 'One peel produces a measurable change. Three peels over six months is the standard protocol for entrenched melasma, and the results compound. The protocol is set at consultation based on how the first peel responds, and the cadence is adjusted as the pigment lifts. Most La Mesa clients see visible reduction by the second peel, with continued improvement through the third. The expectation is reduction, not elimination — melasma is managed, not cured, and the La Mesa client who understands that is the one who gets the result they came for. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'Can I be in the sun during Lira peel recovery?',
-      answer: 'No, not for seven to ten days post-peel. The peel leaves the skin temporarily more reactive to UV, and unprotected exposure during that window can undo the work and produce rebound hyperpigmentation. The studio schedules peels with the recovery window in mind, and the home-care protocol during recovery includes a pigment-calming serum and a mineral sunscreen with iron oxides reapplied every two hours during any outdoor time. Iron oxides block visible light, which is its own pigmentation driver that clear sunscreens do not address.',
+      answer: 'No, not for seven to ten days post-peel. The peel leaves the skin temporarily more reactive to UV, and unprotected exposure during that window can undo the work and produce rebound hyperpigmentation. The studio schedules peels with the recovery window in mind, and the home-care protocol during recovery includes a pigment-calming serum and a mineral sunscreen with iron oxides reapplied every two hours during any outdoor time. Iron oxides block visible light, which is its own pigmentation driver that clear sunscreens do not address. KIAMO Skin corrects pigment without thermal energy anywhere in the protocol, because heat is itself a pigment trigger on deeper skin tones.',
     },
     {
       question: 'What happens if the melasma has been present for years?',
@@ -1880,7 +1880,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   Mid-morning and early afternoon are the easier windows. The evening commute on I-15 north from Mission Hills back to La Mesa stacks in the Santee area, and the morning rush reverses it. Most La Mesa clients book mid-morning and are home before the heat of the afternoon.
 </p>
 <p>
-  The studio is at 3067 Reynard Way in Mission Hills, off Washington Street. Free parking on site. By appointment only, so a space is always available when you arrive. Appointments are one-to-one with Kiki, a California licensed esthetician with seven years treating melasma in all skin types, including melanin-rich skin.
+  The studio is at 3067 Reynard Way in Mission Hills, off Washington Street. Free parking on site. By appointment only, so a space is always available when a client arrive. Appointments are one-to-one with Kiki, a California licensed esthetician with seven years treating melasma in all skin types, including melanin-rich skin.
 </p>
 <p>
   Full directions, neighborhood context, and what to expect at a first visit are on the <a href="/service-areas/la-mesa/facial/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">La Mesa service area page</a>.
@@ -1947,23 +1947,23 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'How far is KIAMO Skin from Encinitas?',
-      answer: 'About twenty-five miles, roughly thirty minutes south off-peak on I-5, with free parking on site at the studio. Microchanneling is usually a series of three, and the full course is scheduled at the first appointment so the appointments sit around recovery rather than being booked one at a time.',
+      answer: 'About twenty-five miles, roughly thirty minutes south off-peak on I-5, with free parking on site at the studio. Microchanneling is usually a series of three, and the full course is scheduled at the first appointment so the appointments sit around recovery rather than being booked one at a time. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'How much does microneedling cost in San Diego?',
-      answer: '$475 for a single session, or $1,199 for a series of three — which costs less than three single sessions. Sessions are spaced four to six weeks apart, and growth factor serums and LED therapy are included at each one.',
+      answer: '$475 for a single session, or $1,199 for a series of three — which costs less than three single sessions. Sessions are spaced four to six weeks apart, and growth factor serums and LED therapy are included at each one. At KIAMO Skin every price is published before a booking is made — Procell microchanneling at $475, and the first visit with the consultation and skin analysis is $249.',
     },
     {
       question: 'Is microchanneling safe on dark skin?',
-      answer: 'It works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger. RF microneedling devices activate melanocytes near the treatment zone and can trigger post-inflammatory hyperpigmentation. Procell uses mechanical channels only, with no thermal component.',
+      answer: 'It works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger. RF microneedling devices activate melanocytes near the treatment zone and can trigger post-inflammatory hyperpigmentation. Procell uses mechanical channels only, with no thermal component. KIAMO Skin runs every treatment on the tone in front of the practitioner, because heat and aggressive treatment are what deepen pigment on the skin that marks most easily.',
     },
     {
       question: 'How many treatments will I need for acne scars?',
-      answer: 'A series of three is the usual plan, spaced four to six weeks apart. The depth and number of passes are set per session based on how the skin responded last time, so the second appointment is informed by the first.',
+      answer: 'A series of three is the usual plan, spaced four to six weeks apart. The depth and number of passes are set per session based on how the skin responded last time, so the second appointment is informed by the first. KIAMO Skin works the phases in order — barrier, then congestion, then the marks — so the treatment does not leave behind the dark marks that outlast a breakout.',
     },
     {
       question: 'What should I avoid after a session?',
-      answer: 'Retinoids, vitamin A derivatives, and strong exfoliants while the skin is recovering, and direct sun — UV-sensitivity stays elevated for 7-10 days after microchanneling even though the channels close within hours. SPF is non-negotiable in that window.',
+      answer: 'Retinoids, vitamin A derivatives, and strong exfoliants while the skin is recovering, and direct sun — UV-sensitivity stays elevated for 7-10 days after microchanneling even though the channels close within hours. SPF is non-negotiable in that window. KIAMO Skin adjusts the plan at the consultation rather than pushing through a treatment the assessment has already ruled out.',
     },
   ],
   },
@@ -2024,23 +2024,23 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'How far is KIAMO Skin from Carlsbad?',
-      answer: 'About thirty to thirty-five miles, thirty-five to forty minutes south off-peak on I-5, with free parking on site at the studio. Microchanneling is usually a series of three, scheduled in full at the first appointment.',
+      answer: 'About thirty to thirty-five miles, thirty-five to forty minutes south off-peak on I-5, with free parking on site at the studio. Microchanneling is usually a series of three, scheduled in full at the first appointment. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'How much does microneedling cost in San Diego?',
-      answer: '$475 for a single session, or $1,199 for a series of three — which costs less than three single sessions. Sessions are spaced four to six weeks apart, and growth factor serums and LED therapy are included at each one.',
+      answer: '$475 for a single session, or $1,199 for a series of three — which costs less than three single sessions. Sessions are spaced four to six weeks apart, and growth factor serums and LED therapy are included at each one. At KIAMO Skin every price is published before a booking is made — Procell microchanneling at $475, and the first visit with the consultation and skin analysis is $249.',
     },
     {
       question: 'Will microchanneling help my acne scars?',
-      answer: 'It helps the indented kind — atrophic scars left by cysts or deep inflammatory breakouts — by stimulating collagen production. Texture irregularities and enlarged pores respond as well. It does not lift a scar the way a surgical revision would, and it is not the treatment for active inflammatory acne, which has to be controlled first.',
+      answer: 'It helps the indented kind — atrophic scars left by cysts or deep inflammatory breakouts — by stimulating collagen production. Texture irregularities and enlarged pores respond as well. It does not lift a scar the way a surgical revision would, and it is not the treatment for active inflammatory acne, which has to be controlled first. KIAMO Skin works the phases in order — barrier, then congestion, then the marks — so the treatment does not leave behind the dark marks that outlast a breakout.',
     },
     {
       question: 'Is microchanneling safe on melanin-rich skin?',
-      answer: 'It works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger. RF microneedling devices activate melanocytes near the treatment zone and can trigger post-inflammatory hyperpigmentation. Procell uses mechanical channels only, with no thermal component.',
+      answer: 'It works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger. RF microneedling devices activate melanocytes near the treatment zone and can trigger post-inflammatory hyperpigmentation. Procell uses mechanical channels only, with no thermal component. KIAMO Skin runs every treatment on the tone in front of the practitioner, because heat and aggressive treatment are what deepen pigment on the skin that marks most easily.',
     },
     {
       question: 'How many treatments will I need?',
-      answer: 'A series of three is the usual plan, spaced four to six weeks apart. Depth and the number of passes are set per session based on how the skin responded last time, so the second appointment is informed by the first.',
+      answer: 'A series of three is the usual plan, spaced four to six weeks apart. Depth and the number of passes are set per session based on how the skin responded last time, so the second appointment is informed by the first. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
   ],
   },
@@ -2101,23 +2101,23 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'How far is KIAMO Skin from La Jolla?',
-      answer: 'About twelve miles, twenty minutes south off-peak on I-5, with free parking on site at the studio. Microchanneling is usually a series of three spaced four to six weeks apart, scheduled in full at the first appointment.',
+      answer: 'About twelve miles, twenty minutes south off-peak on I-5, with free parking on site at the studio. Microchanneling is usually a series of three spaced four to six weeks apart, scheduled in full at the first appointment. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'How much does microneedling cost in San Diego?',
-      answer: '$475 for a single session, or $1,199 for a series of three — which costs less than three single sessions. Sessions are spaced four to six weeks apart, and growth factor serums and LED therapy are included at each one.',
+      answer: '$475 for a single session, or $1,199 for a series of three — which costs less than three single sessions. Sessions are spaced four to six weeks apart, and growth factor serums and LED therapy are included at each one. At KIAMO Skin every price is published before a booking is made — Procell microchanneling at $475, and the first visit with the consultation and skin analysis is $249.',
     },
     {
       question: 'Will microchanneling help my acne scars?',
-      answer: 'It helps the indented kind — atrophic scars left by cysts or deep inflammatory breakouts — by stimulating collagen production. Texture irregularities and enlarged pores respond as well. It does not lift a scar the way a surgical revision would, and it is not the treatment for active inflammatory acne, which has to be controlled first.',
+      answer: 'It helps the indented kind — atrophic scars left by cysts or deep inflammatory breakouts — by stimulating collagen production. Texture irregularities and enlarged pores respond as well. It does not lift a scar the way a surgical revision would, and it is not the treatment for active inflammatory acne, which has to be controlled first. KIAMO Skin works the phases in order — barrier, then congestion, then the marks — so the treatment does not leave behind the dark marks that outlast a breakout.',
     },
     {
       question: 'Is microchanneling safe on melanin-rich skin?',
-      answer: 'It works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger. RF microneedling devices activate melanocytes near the treatment zone and can trigger post-inflammatory hyperpigmentation. Procell uses mechanical channels only, with no thermal component.',
+      answer: 'It works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger. RF microneedling devices activate melanocytes near the treatment zone and can trigger post-inflammatory hyperpigmentation. Procell uses mechanical channels only, with no thermal component. KIAMO Skin runs every treatment on the tone in front of the practitioner, because heat and aggressive treatment are what deepen pigment on the skin that marks most easily.',
     },
     {
       question: 'How many treatments will I need?',
-      answer: 'A series of three is the usual plan, spaced four to six weeks apart. Depth and the number of passes are set per session based on how the skin responded last time, so the second appointment is informed by the first.',
+      answer: 'A series of three is the usual plan, spaced four to six weeks apart. Depth and the number of passes are set per session based on how the skin responded last time, so the second appointment is informed by the first. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
   ],
   },
@@ -2178,23 +2178,23 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'How far is KIAMO Skin from Chula Vista?',
-      answer: 'About thirteen miles, twenty to twenty-five minutes north off-peak via I-5, with free parking on site. Microchanneling is usually a series of three spaced four to six weeks apart, scheduled in full at the first appointment.',
+      answer: 'About thirteen miles, twenty to twenty-five minutes north off-peak via I-5, with free parking on site. Microchanneling is usually a series of three spaced four to six weeks apart, scheduled in full at the first appointment. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
     {
       question: 'How much does microneedling cost in San Diego?',
-      answer: '$475 for a single session, or $1,199 for a series of three — which costs less than three single sessions. Growth factor serums and LED therapy are included at each one.',
+      answer: '$475 for a single session, or $1,199 for a series of three — which costs less than three single sessions. Growth factor serums and LED therapy are included at each one. At KIAMO Skin every price is published before a booking is made — Procell microchanneling at $475, and the first visit with the consultation and skin analysis is $249.',
     },
     {
       question: 'Is microchanneling safe on melanin-rich skin?',
-      answer: 'It works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger. RF microneedling devices activate melanocytes near the treatment zone and can trigger post-inflammatory hyperpigmentation. Procell uses mechanical channels only, with no thermal component, and the depth of each pass is set region by region.',
+      answer: 'It works without heat or light, which matters on melanin-rich skin because heat is itself a pigment trigger. RF microneedling devices activate melanocytes near the treatment zone and can trigger post-inflammatory hyperpigmentation. Procell uses mechanical channels only, with no thermal component, and the depth of each pass is set region by region. KIAMO Skin runs every treatment on the tone in front of the practitioner, because heat and aggressive treatment are what deepen pigment on the skin that marks most easily.',
     },
     {
       question: 'Can microchanneling remove marks left by another treatment?',
-      answer: 'It can improve them, because the growth factor serum drives collagen synthesis and the renewed turnover brings pigment up and out. How much depends on how deep the pigment sits and how long it has been there, which is established at consultation before the first session.',
+      answer: 'It can improve them, because the growth factor serum drives collagen synthesis and the renewed turnover brings pigment up and out. How much depends on how deep the pigment sits and how long it has been there, which is established at consultation before the first session. KIAMO Skin adjusts the plan at the consultation rather than pushing through a treatment the assessment has already ruled out.',
     },
     {
       question: 'How many treatments will I need?',
-      answer: 'A series of three is the usual plan, spaced four to six weeks apart. Depth and the number of passes are set per session based on how the skin responded last time, so the second appointment is informed by the first.',
+      answer: 'A series of three is the usual plan, spaced four to six weeks apart. Depth and the number of passes are set per session based on how the skin responded last time, so the second appointment is informed by the first. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
   ],
   },
@@ -2266,12 +2266,12 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   Mid-morning and early afternoon are the easier windows. The evening commute on I-805 north from Mission Hills back to North Park stacks in the Hillcrest area, and the morning rush reverses it. Most North Park clients book mid-morning and are back home before the afternoon heat builds.
 </p>
 <p>
-  The studio is at 3067 Reynard Way in Mission Hills, off Washington Street. Free parking on site. By appointment only, so a space is always available when you arrive. Appointments are one-to-one with Kiki, a California licensed esthetician with seven years treating acne scarring and pigmentation in all skin types, including melanin-rich skin.
+  The studio is at 3067 Reynard Way in Mission Hills, off Washington Street. Free parking on site. By appointment only, so a space is always available when a client arrive. Appointments are one-to-one with Kiki, a California licensed esthetician with seven years treating acne scarring and pigmentation in all skin types, including melanin-rich skin.
 </p>
 <p>
   Full directions, neighborhood context, and what to expect at a first visit are on the <a href="/service-areas/north-park/facial/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">North Park service area page</a>.
 </p>`,
-  quickAnswer: 'Acne scar revision in melanin-rich skin is depth-controlled work. Too shallow and the scars do not respond. Too deep and you risk post-inflammatory hyperpigmentation that is worse than the scars. Procell microchanneling at KIAMO Skin in Mission Hills is set to a depth calibrated at consultation based on scar type and Fitzpatrick — the same studio, ten minutes south of North Park via I-805.',
+  quickAnswer: 'Acne scar revision in melanin-rich skin is depth-controlled work. Too shallow and the scars do not respond. Too deep and a client risk post-inflammatory hyperpigmentation that is worse than the scars. Procell microchanneling at KIAMO Skin in Mission Hills is set to a depth calibrated at consultation based on scar type and Fitzpatrick — the same studio, ten minutes south of North Park via I-805.',
   authority: {
     heading: 'Why North Park clients choose depth control over a fixed setting',
     body: 'North Park is three and a half miles from the studio with no freeway between them, and that proximity changes what a corrective plan can be. A microchanneling course runs three sessions spaced four to six weeks apart, and the people who complete it are almost always the ones for whom a visit costs ten minutes rather than an afternoon. On the treatment itself, Procell sets the depth of each pass region by region according to skin thickness and the concern being treated — which a fixed-depth device cannot do — and applies the growth factor serum directly into the channels in the same pass, so the repair is directed rather than left to chance. There is no RF heat anywhere in it, which matters on melanin-rich skin where heat is itself a pigment trigger.',
@@ -2324,11 +2324,11 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
     },
     {
       question: 'How many Procell sessions does acne scar revision take?',
-      answer: 'Three to six sessions spaced four to six weeks apart is the standard plan, with visible change by the third or fourth session and continued improvement through the sixth. The wound-healing cascade the microchanneling initiates continues for weeks after each session, and the collagen remodeling that fills atrophic scars is cumulative. A client who expects one session and quits after two misses the result the protocol was built to produce. PIH responds faster — often within two to three peel sessions — and the consultation determines which protocol fits the concern.',
+      answer: 'Three to six sessions spaced four to six weeks apart is the standard plan, with visible change by the third or fourth session and continued improvement through the sixth. The wound-healing cascade the microchanneling initiates continues for weeks after each session, and the collagen remodeling that fills atrophic scars is cumulative. A client who expects one session and quits after two misses the result the protocol was built to produce. PIH responds faster — often within two to three peel sessions — and the consultation determines which protocol fits the concern. KIAMO Skin works the phases in order — barrier, then congestion, then the marks — so the treatment does not leave behind the dark marks that outlast a breakout.',
     },
     {
       question: 'Is microchanneling safe with active acne?',
-      answer: 'No. Microchanneling over active breakouts spreads inflammation and risks driving bacteria deeper into the skin. The protocol requires that active acne be controlled before the series begins, which often means a separate <a href="/services/hydrafacial/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">HydraFacial</a> series or <a href="/services/chemical-peel/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">Lira peel</a> protocol to clear the active state before microchanneling begins. The studio sequences the protocols based on what the skin shows at consultation, and the timeline runs from the active-clear phase through the scar-revision phase.',
+      answer: 'No. Microchanneling over active breakouts spreads inflammation and risks driving bacteria deeper into the skin. The protocol requires that active acne be controlled before the series begins, which often means a separate <a href="/services/hydrafacial/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">HydraFacial</a> series or <a href="/services/chemical-peel/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">Lira peel</a> protocol to clear the active state before microchanneling begins. The studio sequences the protocols based on what the skin shows at consultation, and the timeline runs from the active-clear phase through the scar-revision phase. KIAMO Skin works the phases in order — barrier, then congestion, then the marks — so the treatment does not leave behind the dark marks that outlast a breakout.',
     },
     {
       question: 'What is the difference between Procell and other microchanneling devices?',
@@ -2336,7 +2336,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
     },
     {
       question: 'Will my acne scars come back after the series?',
-      answer: 'No. Atrophic scars that have been revised through collagen remodeling do not return. The collagen the microchanneling stimulated is structural, and it persists. Active acne can produce new scars in the same area, which is why the protocol requires that active acne be controlled before the series begins. The maintenance phase after the series is a pigment-calming home-care protocol and a mineral sunscreen, not ongoing microchanneling. The work is done when the scars are filled.',
+      answer: 'No. Atrophic scars that have been revised through collagen remodeling do not return. The collagen the microchanneling stimulated is structural, and it persists. Active acne can produce new scars in the same area, which is why the protocol requires that active acne be controlled before the series begins. The maintenance phase after the series is a pigment-calming home-care protocol and a mineral sunscreen, not ongoing microchanneling. The work is done when the scars are filled. KIAMO Skin works the phases in order — barrier, then congestion, then the marks — so the treatment does not leave behind the dark marks that outlast a breakout.',
     },
   ],
   body: `<h2 class="t-h3 mt-12 mb-6">Why Acne Scars in North Park Need Depth-Controlled Work</h2>
@@ -2400,7 +2400,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   Mid-morning and early afternoon are the easier windows. The evening commute on I-805 north from Mission Hills back to North Park stacks in the Hillcrest area, and the morning rush reverses it. Most North Park clients book mid-morning and are back home before the afternoon heat builds.
 </p>
 <p>
-  The studio is at 3067 Reynard Way in Mission Hills, off Washington Street. Free parking on site. By appointment only, so a space is always available when you arrive. Appointments are one-to-one with Kiki, a California licensed esthetician with seven years treating acne scarring and pigmentation in all skin types, including melanin-rich skin.
+  The studio is at 3067 Reynard Way in Mission Hills, off Washington Street. Free parking on site. By appointment only, so a space is always available when a client arrive. Appointments are one-to-one with Kiki, a California licensed esthetician with seven years treating acne scarring and pigmentation in all skin types, including melanin-rich skin.
 </p>
 <p>
   Full directions, neighborhood context, and what to expect at a first visit are on the <a href="/service-areas/north-park/facial/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">North Park service area page</a>.
@@ -2480,7 +2480,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   Southbound I-5 stacks through UTC and Sorrento Valley during the morning commute, so mid-morning and early afternoon are consistently the easier windows for the drive down from the Village or the Cove. Most La Jolla clients book mid-morning, which also means arriving before the afternoon blufftop sun has had a chance to undo the work.
 </p>
 <p>
-  The studio is at 3067 Reynard Way in Mission Hills, off Washington Street, with free parking on site. Every appointment is one-to-one with Kiki, a licensed esthetician with seven years of experience treating sun-damaged skin and melanin-rich skin across all Fitzpatrick types. By appointment only, so a space is always there when you arrive.
+  The studio is at 3067 Reynard Way in Mission Hills, off Washington Street, with free parking on site. Every appointment is one-to-one with Kiki, a licensed esthetician with seven years of experience treating sun-damaged skin and melanin-rich skin across all Fitzpatrick types. By appointment only, so a space is always there when a client arrive.
 </p>
 <p>
   Full directions, neighborhood context, and what to expect at a first visit are on the <a href="/service-areas/la-jolla/facial/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">La Jolla service area page</a>.
@@ -2527,23 +2527,23 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   faqs: [
     {
       question: 'Does dermaplaning help with sun damage or only with texture?',
-      answer: 'Only with texture, and it is worth being precise about the difference. Dermaplaning removes dead surface cells and vellus hair with a sterile blade, so it improves the feel of the skin, evens the way makeup sits, and lets serums absorb better. It does not reach the pigment or the structural change that years of UV exposure cause in the deeper layers. For brown patches, mottled tone, or melasma, the treatment that addresses the pigment is a chemical peel series — the Lira Gentle Renewal peel is $199 and the Advanced peel is $299, with strength escalating every four to six weeks. Dermaplaning is frequently paired with a peel, because a cleared surface lets the acid work evenly.',
+      answer: 'Only with texture, and it is worth being precise about the difference. Dermaplaning removes dead surface cells and vellus hair with a sterile blade, so it improves the feel of the skin, evens the way makeup sits, and lets serums absorb better. It does not reach the pigment or the structural change that years of UV exposure cause in the deeper layers. For brown patches, mottled tone, or melasma, the treatment that addresses the pigment is a chemical peel series — the Lira Gentle Renewal peel is $199 and the Advanced peel is $299, with strength escalating every four to six weeks. Dermaplaning is frequently paired with a peel, because a cleared surface lets the acid work evenly. KIAMO Skin performs every treatment in one private treatment room with one practitioner, and publishes the price and the protocol so the difference can be checked rather than taken on trust.',
     },
     {
       question: 'Is dermaplaning safe on skin that has been sunburned?',
-      answer: 'Not while the skin is still reacting. A sunburn is inflammation, and adding mechanical exfoliation to inflamed skin is the wrong sequence. Skin that is still hot, tender, or visibly pink gets no blade at all — the studio works around it or skips the treatment entirely. Once the skin has returned to normal and the barrier has settled, dermaplaning is safe. That is the reason every treatment closes with SPF and why recent sun exposure comes up at consultation. For skin that reacts this way regularly, the DMK Enzyme Therapy protocol rebuilds the barrier before any blade work begins.',
+      answer: 'Not while the skin is still reacting. A sunburn is inflammation, and adding mechanical exfoliation to inflamed skin is the wrong sequence. Skin that is still hot, tender, or visibly pink gets no blade at all — the studio works around it or skips the treatment entirely. Once the skin has returned to normal and the barrier has settled, dermaplaning is safe. That is the reason every treatment closes with SPF and why recent sun exposure comes up at consultation. For skin that reacts this way regularly, the DMK Enzyme Therapy protocol rebuilds the barrier before any blade work begins. KIAMO Skin runs every treatment on the tone in front of the practitioner, because heat and aggressive treatment are what deepen pigment on the skin that marks most easily.',
     },
     {
       question: 'What does dermaplaning do to the dark marks left behind by old acne?',
-      answer: 'It removes the dead surface layer sitting on top of the mark, which makes it look less obvious right away, but it does not remove the pigment itself. Post-inflammatory hyperpigmentation sits in the upper layers of skin and responds to pigment-calming peels rather than to a blade. A Lira peel series is the protocol that fades those marks. Dermaplaning is still useful alongside it, because a cleared surface means the peel acid reaches evenly and the mark fades more predictably. The three kinds of dark mark journal piece explains how to tell post-inflammatory marks from melasma and from true scarring before choosing a protocol.',
+      answer: 'It removes the dead surface layer sitting on top of the mark, which makes it look less obvious right away, but it does not remove the pigment itself. Post-inflammatory hyperpigmentation sits in the upper layers of skin and responds to pigment-calming peels rather than to a blade. A Lira peel series is the protocol that fades those marks. Dermaplaning is still useful alongside it, because a cleared surface means the peel acid reaches evenly and the mark fades more predictably. The three kinds of dark mark journal piece explains how to tell post-inflammatory marks from melasma and from true scarring before choosing a protocol. KIAMO Skin works the phases in order — barrier, then congestion, then the marks — so the treatment does not leave behind the dark marks that outlast a breakout.',
     },
     {
       question: 'Is dermaplaning worth it for La Jolla clients who spend every day outdoors?',
-      answer: 'It depends on what you want it to do. If you want smoother texture, makeup that stops catching on vellus hair, and product that actually absorbs, dermaplaning is one of the few treatments that delivers all three with zero downtime and an immediate glow — the full facial is $199. If you want the sun damage itself to change, a peel series is the treatment that reaches the pigment, and daily SPF is the only thing that stops new exposure from undoing the result. Clients who combine the two do better than clients who book either one alone. The consultation is where that sequence gets decided.',
+      answer: 'It depends on what the treatment is being booked to do. For smoother texture, makeup that stops catching on vellus hair, and product that actually absorbs, dermaplaning is one of the few treatments that delivers all three with zero downtime and an immediate glow — the full facial is $199. To change the sun damage itself, a peel series is the treatment that reaches the pigment, and daily SPF is the only thing that stops new exposure from undoing the result. Clients who combine the two do better than clients who book either one alone. The consultation is where that sequence gets decided. KIAMO Skin performs every treatment in one private treatment room with one practitioner, and publishes the price and the protocol so the difference can be checked rather than taken on trust.',
     },
     {
-      question: 'Does dermaplaning work if you swim in the ocean the same week?',
-      answer: 'Yes, but order it. Salt water strips the skin barrier, so swimming the day after a dermaplane puts freshly treated skin in contact with salt and sun with no barrier of its own. The better sequence is dermaplaning first, then SPF, then the swim — and a hydra facial in the same cycle to rebuild what the salt took out. The studio asks about recent swimming at consultation, because ocean exposure changes the plan. The La Jolla service area page covers how the swim culture and the treatment calendar interact across a full week.',
+      question: 'Does dermaplaning work if a client swim in the ocean the same week?',
+      answer: 'Yes, but order it. Salt water strips the skin barrier, so swimming the day after a dermaplane puts freshly treated skin in contact with salt and sun with no barrier of its own. The better sequence is dermaplaning first, then SPF, then the swim — and a hydra facial in the same cycle to rebuild what the salt took out. The studio asks about recent swimming at consultation, because ocean exposure changes the plan. The La Jolla service area page covers how the swim culture and the treatment calendar interact across a full week. KIAMO Skin performs every treatment in one private treatment room, by one licensed esthetician, with the plan written down before the next appointment is booked.',
     },
   ],
   body: `<h2 class="t-h3 mt-12 mb-6">Why La Jolla Skin Needs a Calibrated Exfoliation</h2>
@@ -2609,7 +2609,7 @@ export const serviceAreaContent: Record<string, ServiceAreaContent> = {
   Southbound I-5 stacks through UTC and Sorrento Valley during the morning commute, so mid-morning and early afternoon are consistently the easier windows for the drive down from the Village or the Cove. Most La Jolla clients book mid-morning, which also means arriving before the afternoon blufftop sun has had a chance to undo the work.
 </p>
 <p>
-  The studio is at 3067 Reynard Way in Mission Hills, off Washington Street, with free parking on site. Every appointment is one-to-one with Kiki, a licensed esthetician with seven years of experience treating sun-damaged skin and melanin-rich skin across all Fitzpatrick types. By appointment only, so a space is always there when you arrive.
+  The studio is at 3067 Reynard Way in Mission Hills, off Washington Street, with free parking on site. Every appointment is one-to-one with Kiki, a licensed esthetician with seven years of experience treating sun-damaged skin and melanin-rich skin across all Fitzpatrick types. By appointment only, so a space is always there when a client arrive.
 </p>
 <p>
   Full directions, neighborhood context, and what to expect at a first visit are on the <a href="/service-areas/la-jolla/facial/" class="border-b border-ink pb-1 hover:border-rose hover:text-rose">La Jolla service area page</a>.

@@ -23,11 +23,11 @@ import { getServiceTestimonials } from '../data/testimonials';
 const values = [
   {
     title: 'Education first',
-    body: 'You should leave knowing what was done and why, and what to do at home. A treatment you do not understand is a treatment you will not repeat correctly.',
+    body: 'Clients leave knowing what was done and why, and what to do at home. A treatment a client does not understand is a treatment a client will not repeat correctly.',
   },
   {
     title: 'Every skin tone, with depth in the hardest ones',
-    body: 'Every treatment protocol is selected for your Fitzpatrick type, from I to VI. Melanin-rich skin carries its own risks — post-inflammatory hyperpigmentation above all — and the protocols are built around avoiding them.',
+    body: 'Every treatment protocol is selected for the Fitzpatrick type, from I to VI. Melanin-rich skin carries its own risks — post-inflammatory hyperpigmentation above all — and the protocols are built around avoiding them.',
   },
   {
     title: 'Consistency over intensity',
@@ -82,14 +82,14 @@ const scope = [
   },
   {
     title: 'One room, one practitioner, no rotation',
-    body: 'There is a single treatment room and a single practitioner. The person who assesses your skin is the person who treats it, at every visit in the series, which is what makes the plan adjustable — the same plan cannot be adjusted by whoever happens to be working that day.',
+    body: 'There is a single treatment room and a single practitioner. The person who assesses the skin is the person who treats it, at every visit in the series, which is what makes the plan adjustable — the same plan cannot be adjusted by whoever happens to be working that day.',
   },
   {
     title: 'By appointment only',
-    body: 'The studio is open by appointment rather than on a timetable, which means no waiting, no overlapping clients in the room, and a space free in the car park when you arrive. It also means the request is reviewed before it is confirmed.',
+    body: 'The studio is open by appointment rather than on a timetable, which means no waiting, no overlapping clients in the room, and a space free in the car park when a client arrive. It also means the request is reviewed before it is confirmed.',
   },
   {
-    title: 'Every price published before you book',
+    title: 'Every price published before a booking is made',
     body: 'Nothing is quoted at the door. The treatment menu carries a price against every treatment on it, and the first visit includes the consultation that decides the plan — so the cost of a first appointment is known before it is booked, not after.',
   },
 ];
@@ -113,7 +113,7 @@ const scope = [
     eyebrow={`${business.ownerName} · ${business.ownerCredential}`}
     h1="A studio built around correction."
     claim="Correction begins by understanding what is causing the concern, not simply covering it up."
-    paragraph="Every treatment is designed to strengthen the skin and scalp from the inside out through advanced technology, evidence-based care, and a plan that evolves with you."
+    paragraph="Every treatment is designed to strengthen the skin and scalp from the inside out through advanced technology, evidence-based care, and a plan that evolves with a client."
     image={portrait}
     imageAlt={`${business.ownerName}, licensed esthetician and owner of KIAMO Skin, in the treatment room`}
     price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
@@ -121,7 +121,7 @@ const scope = [
       { label: `${business.experience} of corrective skin work` },
       { label: 'One practitioner, every visit' },
       { label: 'One private treatment room' },
-      { label: 'Prices published before you book' },
+      { label: 'Prices published before a booking is made' },
     ]}
     reassurance={[
       business.visit.appointmentOnly,
@@ -246,7 +246,7 @@ const scope = [
         <a
           href="/journal/three-kinds-of-dark-mark/"
           class="border-b border-porcelain/40 hover:border-blush hover:text-blush"
-          >knowing which kind of dark mark you have</a
+          >knowing which kind of dark mark a client has</a
         >.
       </p>
     </div>

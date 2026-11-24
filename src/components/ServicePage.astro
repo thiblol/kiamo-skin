@@ -7,7 +7,7 @@
  *
  * Why one component: the two pages answer the same question at different
  * resolutions. A service page says what the treatment is and whether it is
- * right for you; a service-and-city page says what it is, why the drive is
+ * right for a client; a service-and-city page says what it is, why the drive is
  * worth it, and what the local skin concern is. Nearly every section is the
  * same section at a different resolution, and splitting them was how the four
  * old geo clusters ended up as four near-duplicate templates.
@@ -62,7 +62,7 @@ interface Props {
   /** What the service addresses. */
   concerns?: string[];
   /** The plan's steps. */
-  steps?: { step: string; description: string }[];
+  steps?: { step: string; description?: string; body?: string }[];
   /** The pricing table. */
   pricing?: { label: string; price: string; description?: string }[];
   /**
@@ -97,7 +97,31 @@ interface Props {
   depth?: { heading: string; body: string };
   intent?: { heading: string; body: string };
   localConcern?: { heading: string; body: string };
-  gettingHere?: string;
+  /**
+   * The landmarks of the area this page is about.
+   *
+   * They are the real nouns of the neighbourhood — the cove, the
+   * university, the village street — and they are what makes a page read as
+   * being about a place rather than about a treatment with a place stapled
+   * to it.
+   */
+  landmarks?: string[];
+  /**
+   * The heading over the directions block.
+   *
+   * "How to reach us from {city}" is the right heading when the city is
+   * somewhere the reader has to drive to. It is the wrong heading for the
+   * city the studio is in, where the block is about finding the door.
+   */
+  gettingHereHeading?: string;
+  /**
+   * The map to embed.
+   *
+   * The neighbourhood pages embed their own neighbourhood — a La Jolla page
+   * with a map of La Jolla. The San Diego pages omit it and get the studio's
+   * own map, because there the studio is the place.
+   */
+  mapPlace?: string;
   /** The long-form body. */
   body?: string;
   faqs: { question: string; answer: string }[];
@@ -169,7 +193,9 @@ const {
   depth,
   intent,
   localConcern,
-  gettingHere,
+  landmarks,
+  gettingHereHeading,
+  mapPlace,
   body,
   faqs,
   guide,
@@ -254,8 +280,8 @@ const priceRows = pricing?.length
  */
 const bandHeading =
   isArea && cityName
-    ? `${hero.serviceName} in ${cityName} — with the price before you book.`
-    : `${hero.serviceName} in San Diego — with the price before you book.`;
+    ? `${hero.serviceName} in ${cityName} — with the price before a booking is made.`
+    : `${hero.serviceName} in San Diego — with the price before a booking is made.`;
 ---
 
 <article>
@@ -325,9 +351,29 @@ const bandHeading =
             <h2 class="t-h2 mt-4">{localConcern.heading}</h2>
             <p class="t-body mt-6 leading-relaxed">{localConcern.body}</p>
           </Reveal>
+          {/* The landmarks. They are the real nouns of the neighbourhood, and
+              they are what makes a page read as being about a place rather
+              than about a treatment with a place stapled to it. */}
+          {landmarks && landmarks.length > 0 && (
+            <Reveal>
+              <p class="t-eyebrow mt-10 text-ink-soft">
+                {gettingHereHeading ?? 'Around this area'}
+              </p>
+              <ul class="t-body m-0 mt-4 list-none space-y-2 p-0">
+                {landmarks.slice(0, 8).map((landmark) => (
+                  <li class="flex gap-4">
+                    <span aria-hidden="true" class="text-rose">
+                      —
+                    </span>
+                    <span>{landmark}</span>
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+          )}
         </div>
         {
-          resultImage && (
+          resultImage ? (
             <Reveal>
               <Image
                 src={resultImage}
@@ -339,6 +385,15 @@ const bandHeading =
               />
               {resultCaption && <p class="t-meta mt-4">{resultCaption}</p>}
             </Reveal>
+          ) : (
+            /* The area's own map, beside the local concern it explains.
+               On a national service page there is no local concern and so no
+               map — the treatment page is not about a place. */
+            mapPlace && (
+              <Reveal>
+                <LocationMap place={mapPlace} id="route-map" />
+              </Reveal>
+            )
           )
         }
       </div>
@@ -387,7 +442,9 @@ const bandHeading =
                   <li class="border-t border-line pt-7">
                     <p class="t-meta text-rose">{String(i + 1).padStart(2, '0')}</p>
                     <h3 class="t-service mt-3 text-[1.125rem] md:text-[1.3125rem]">{step.step}</h3>
-                    <p class="t-body mt-3 text-[0.9375rem]">{step.description}</p>
+                    <p class="t-body mt-3 text-[0.9375rem]">
+                      {step.description ?? step.body}
+                    </p>
                   </li>
                 </Reveal>
               ))
@@ -462,7 +519,7 @@ const bandHeading =
             Pricing in San Diego
           </h2>
           <p class="t-body mt-6 max-w-[58ch] leading-relaxed">
-            Every price below is published before you book. Nothing is quoted at the door, and the
+            Every price below is published before a booking is made. Nothing is quoted at the door, and the
             first visit includes the consultation that decides the plan.
           </p>
           {/* The market rate.
@@ -624,22 +681,28 @@ const bandHeading =
     </section>
   )}
 
-  {gettingHere && (
-    <section class="bg-ivory py-20 md:py-28">
-      <div class="wrap grid items-center gap-12 md:grid-cols-[1fr_0.9fr] md:gap-16">
-        <div>
-          <Reveal>
-            <p class="t-eyebrow text-ink-soft">Getting here</p>
-            <h2 class="t-h2 mt-4">How to reach us from {current}</h2>
-            <p class="t-body mt-6 leading-relaxed">{gettingHere}</p>
-          </Reveal>
-        </div>
-        <Reveal>
-          <LocationMap origin={current} id="route-map" />
-        </Reveal>
-      </div>
-    </section>
-  )}
+  {/* The route prose is gone.
+      It used to sit here: seventy-one words per area of turn-by-turn
+      directions, headed "How to reach us from {city}", with a map that
+      showed the studio pin. Three things were wrong with it at once.
+
+      It contradicted itself — the section was about reaching the studio
+      while the heading named the reader's own city, and the map beside it
+      showed the studio rather than the area. It was redundant, because the
+      NAP block on every page carries the address and the free parking and
+      the footer carries a Google Maps directions link — so the journey was
+      described three times and useful in none. And it was the wrong content
+      for the page: per the GEO playbook, what an answer engine quotes is a
+      self-contained answer carrying a brand and a specific fact, and
+      navigation instructions give it nothing to attribute.
+
+      The map and the landmarks moved up into the local-concern section,
+      where they describe the same place the copy does, and the distance
+      stays as one fact in the area's facts table. The client gets a map
+      that shows their own neighbourhood and a link that opens the route.
+
+      The route copy itself is still in the shell data — it was written for
+      this and it may be wanted again — but it is no longer rendered. */}
 
   {/* The proof. Quick answer, published case, client quote and the risk
       reversal together, so a reader has met the studio before the questions
@@ -657,7 +720,7 @@ const bandHeading =
       <div class="wrap section-y">
         <div class="max-w-[68ch]">
           <Reveal>
-            <p class="t-eyebrow text-ink-soft">Before you book</p>
+            <p class="t-eyebrow text-ink-soft">Before a booking is made</p>
             <h2 class="t-h2 mt-5">
               {isArea && cityName
                 ? `${current} questions, answered`
@@ -700,7 +763,7 @@ const bandHeading =
             <h2 class="t-h2 mt-4">
               {isArea && cityName
                 ? `What to read before booking ${hero.serviceName}`
-                : 'What to read before you book'}
+                : 'What to read before a booking is made'}
             </h2>
           </Reveal>
 

@@ -107,5 +107,33 @@ export const TREATMENT_TO_SERVICE: Record<string, string> = {
 /** The three landing pages that keep their original `/facial/` URLs. */
 export const facialLandingPath = (slug: string) => `/facial/${slug}/`;
 
+/**
+ * The full place label for an area — "La Jolla, San Diego, CA".
+ *
+ * The area pages used to name the neighbourhood and sometimes the city, and
+ * never the state. A reader types the postal form, and a query for "facial
+ * la jolla ca" is a real thing — so the label carries all three parts.
+ *
+ * The city the studio is in is the exception: there is no second city to
+ * add, so its label is "San Diego, CA" and it overrides this default.
+ */
+export const areaPlaceLabel = (slug: string, name: string) =>
+  slug === 'san-diego' ? 'San Diego, CA' : `${name}, San Diego, CA`;
+
+/**
+ * The map query for an area's own map, or undefined for the studio's.
+ *
+ * A neighbourhood page embeds the neighbourhood it is about. The `origin`
+ * prop on the map component used to reach only the title attribute, so every
+ * page on the site embedded a byte-identical iframe showing a pin on the
+ * studio in Mission Hills — a La Jolla page with a map of La Jolla's own
+ * neighbourhood is a different thing entirely.
+ *
+ * The San Diego pages embed the studio's own map instead, because there the
+ * studio IS the place — there is nowhere else to point at.
+ */
+export const areaMapPlace = (slug: string, placeLabel: string) =>
+  slug === 'san-diego' ? undefined : placeLabel;
+
 /** A journal article. */
 export const journalPath = (slug: string) => `/journal/${slug}/`;

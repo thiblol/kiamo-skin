@@ -22,15 +22,15 @@ import { CTA_LABEL } from '../config/nav';
 const steps = [
   {
     title: 'Send the request',
-    body: 'Pick the treatment you think you need and send it through. If you are not sure which one, choose the First-Time Client Treatment — that visit exists to work it out.',
+    body: 'Pick the treatment a client thinks the treatment needed and send it through. If a client is not sure which one, choose the First-Time Client Treatment — that visit exists to work it out.',
   },
   {
     title: 'Wait for confirmation',
-    body: 'Requests are reviewed and confirmed directly, so the time you pick is not booked until you hear back. Check your email and phone for the confirmation.',
+    body: 'Requests are reviewed and confirmed directly, so the time a client pick is not booked until a client hear back. Check the email and phone for the confirmation.',
   },
   {
     title: 'Arrive with clean skin',
-    body: `Please arrive with clean skin if possible. Before your appointment, text photos of the skincare products you currently use to ${business.phone.display}. Reviewing your routine beforehand allows us to provide more personalized recommendations from the moment you arrive.`,
+    body: `Please arrive with clean skin if possible. Before the appointment, text photos of the skincare products a client is currently using to ${business.phone.display}. Reviewing your routine beforehand allows us to provide more personalized recommendations from the moment a client arrives.`,
   },
 ];
 
@@ -58,7 +58,7 @@ const faqs = [
   {
     question: 'Is a peel safe if I am on a retinoid?',
     answer:
-      'Retinoids come off before a peel, not during. Stop tretinoin, Retin-A, adapalene and retinol a few days beforehand — the protocol here is three to five days — and leave them off for five to seven days afterwards while the peel does its work, because retinoids and acids together strip the barrier faster than either would alone. Isotretinoin is a different category: peels are not performed during a course of isotretinoin or soon after one, because the skin is rebuilding from nothing while that is happening. Bring the name of what you are using to the consultation and the timing is set around it.',
+      'Retinoids come off before a peel, not during. Stop tretinoin, Retin-A, adapalene and retinol a few days beforehand — the protocol here is three to five days — and leave them off for five to seven days afterwards while the peel does its work, because retinoids and acids together strip the barrier faster than either would alone. Isotretinoin is a different category: peels are not performed during a course of isotretinoin or soon after one, because the skin is rebuilding from nothing while that is happening. Bring the name of what a client is using to the consultation and the timing is set around it.',
   },
 ];
 
@@ -87,13 +87,13 @@ const sent = Astro.url.searchParams.get('sent') === '1';
   <PageHero
     eyebrow="By appointment only · Free parking"
     h1="Request an appointment."
-    claim="Booking runs through Vagaro as a request — you choose a time, and it is confirmed back to you rather than held automatically."
-    paragraph="The first visit is a full consultation and treatment together: a proper look at what your skin is doing, a plan for the next few months, and the home routine to run between visits. Nothing is treated before it has been looked at."
+    claim="Booking runs through Vagaro as a request — a client choose a time, and it is confirmed back to a client rather than held automatically."
+    paragraph="The first visit is a full consultation and treatment together: a proper look at what the skin is doing, a plan for the next few months, and the home routine to run between visits. Nothing is treated before it has been looked at."
     image={studio}
     imageAlt="Inside the KIAMO Skin treatment room in Mission Hills, San Diego"
     price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
     trust={[
-      { label: 'Prices published before you book' },
+      { label: 'Prices published before a booking is made' },
       { label: 'One practitioner, every visit' },
       { label: 'Free cancellation up to 48 hours before' },
       { label: 'Free parking on site' },
@@ -101,7 +101,7 @@ const sent = Astro.url.searchParams.get('sent') === '1';
     reassurance={[
       business.visit.appointmentOnly,
       business.visit.parking,
-      'Consultations included — the plan is set before you book',
+      'Consultations included — the plan is set before a booking is made',
     ]}
     ancestors={[{ name: 'Appointments', path: '/book/' }]}
     current="Request"
@@ -115,7 +115,7 @@ const sent = Astro.url.searchParams.get('sent') === '1';
         <h2 class="t-h3 mt-4 max-w-[34ch]">Your request is with the studio.</h2>
         <p class="t-body mt-5 max-w-[58ch] text-porcelain/75">
           A request is confirmed by the studio rather than held automatically, so the appointment
-          is yours once you hear back. Check your email and your phone. If it is urgent, call{' '}
+          is the client’s once a client hear back. Check your email and your phone. If it is urgent, call{' '}
           {business.phone.display}.
         </p>
       </div>
@@ -145,7 +145,7 @@ const sent = Astro.url.searchParams.get('sent') === '1';
         </ol>
 
         <div class="mt-14 border-t border-line pt-9">
-          <p class="t-eyebrow text-ink-soft">Or choose a time yourself</p>
+          <p class="t-eyebrow text-ink-soft">Or choose a time the client</p>
           <p class="t-body mt-4 max-w-[54ch]">
             The booking calendar below shows every open slot. A request made there is confirmed the
             same way as one sent through the form.
@@ -171,7 +171,7 @@ const sent = Astro.url.searchParams.get('sent') === '1';
     <div class="wrap">
       <div class="max-w-[68ch]">
         <Reveal>
-          <p class="t-eyebrow text-ink-soft">Your first visit</p>
+          <p class="t-eyebrow text-ink-soft">The first visit</p>
           <h2 class="t-h2 mt-4 max-w-[26ch]">
             The consultation is the treatment, in the sense that it is where the decision is made.
           </h2>
@@ -234,7 +234,7 @@ const sent = Astro.url.searchParams.get('sent') === '1';
         <p class="t-body mt-12 max-w-[62ch]">
           Corrective work is planned across a series rather than sold as a single session, and
           the plan is mapped at the first appointment — the number of sessions, the intervals and
-          the total timeline, so nothing about the commitment is a surprise later. If you expect
+          the total timeline, so nothing about the commitment is a surprise later. If a client expect
           to come back monthly, a{' '}
           <a href="/membership/" class="border-b border-ink/40 hover:border-rose hover:text-rose">
             monthly skin membership</a
@@ -250,7 +250,7 @@ const sent = Astro.url.searchParams.get('sent') === '1';
         <h2 class="t-h3">First time here?</h2>
         <p class="t-body mt-6">
           The First-Time Client Treatment is a full consultation and treatment together: a proper
-          look at what your skin is doing, a plan for the next few months, and a deep dive into
+          look at what the skin is doing, a plan for the next few months, and a deep dive into
           the right routine to run at home.
         </p>
         <p class="t-price mt-7">{firstVisit?.price}</p>
@@ -259,7 +259,7 @@ const sent = Astro.url.searchParams.get('sent') === '1';
           skin can take. The three set prices are listed on the
           <a href="/services/" class="border-b border-ink hover:border-rose hover:text-rose"
             >treatments page</a
-          >. If you expect to come back monthly, a
+          >. If a client expect to come back monthly, a
           <a href="/membership/" class="border-b border-ink hover:border-rose hover:text-rose"
             >skin membership</a
           > costs less than booking the same treatments individually.
@@ -282,7 +282,7 @@ const sent = Astro.url.searchParams.get('sent') === '1';
     <div class="wrap">
       <div class="mx-auto max-w-[68ch]">
         <Reveal>
-          <p class="t-eyebrow text-ink-soft">Before you request</p>
+          <p class="t-eyebrow text-ink-soft">Before a client request</p>
           <h2 class="t-h2 mt-4 max-w-[26ch]">What clients say once they have been in the room.</h2>
         </Reveal>
         <div class="mt-10">
