@@ -221,7 +221,7 @@ export const services: Service[] = [
     category: 'Facials',
     title: 'Corrective Facials for Every Skin Type | KIAMO Skin',
     description:
-      'Facial treatments in San Diego from KIAMO Skin. HydraFacial, peels, dermaplaning and enzyme therapy, calibrated for every skin type. From $199.',
+      'Facial treatments from KIAMO Skin. HydraFacial, peels, dermaplaning and enzyme therapy, calibrated for every skin type. From $199. Request an appointment.',
     headline: 'The Right Facial for the Skin in Front of the Practitioner',
     opener:
       'There is no single best facial. The right one depends on the skin tone, the concern, and the condition of the skin on the day. Performed by Kiki, a California licensed esthetician.',
@@ -276,7 +276,8 @@ export const services: Service[] = [
     hero: {
       eyebrow: "HydraFacial · Chemical Peels · Dermaplaning",
       claim: "The right facial for the skin tone, the concern, and the day a client comes in.",
-      paragraph: "There is no single best facial. The right one depends on the skin tone, the concern, and the condition of the barrier that day — so Kiki assesses it and picks the modality to match. Dermaplaning starts at $199, a HydraFacial is $259, and the first visit includes the consultation that decides the plan.",
+      paragraph:
+        '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> runs the full facial menu from one private treatment room in Mission Hills. There is no single best facial — the right one depends on the skin tone, the concern, and the condition of the barrier that day, so Kiki assesses it and picks the modality to match. Dermaplaning starts at $199, a HydraFacial is $259, and the first visit includes the consultation that decides the plan.',
       trust: [
         { label: "Safe for every Fitzpatrick type, I–VI" },
         { label: "Prices published before a booking is made" },
@@ -292,8 +293,8 @@ export const services: Service[] = [
     category: 'Facials',
     title: 'HydraFacial: Extraction, Hydration and LED | KIAMO Skin',
     description:
-      'HydraFacial in San Diego on the Syndeo device. Medical-grade extraction, custom booster and LED therapy. First visit $249. Request an appointment.',
-    headline: 'HydraFacial — Medical-Grade, With a Booster for Your Skin',
+      'A HydraFacial at KIAMO Skin combines medical-grade extraction, a booster chosen from AI skin analysis and LED therapy in one appointment. From $249.',
+    headline: 'HydraFacial — Medical-Grade, With a Booster Chosen for the Skin',
     opener:
       'Medical-grade extraction and hydration on a HydraFacial Syndeo, with a booster chosen for the skin. Performed by Kiki, a California licensed esthetician.',
     menuPrice: '$259',
@@ -360,12 +361,13 @@ export const services: Service[] = [
     hero: {
       eyebrow: "Syndeo Device · Custom Booster · LED Included",
       claim: "Medical-grade extraction with a booster chosen for the skin.",
-      paragraph: "Enzymatic resurfacing, calibrated vortex extraction, and precision infusion of hydration and antioxidants — in one 45-minute appointment with no downtime. The booster is selected from the device’s skin analysis, and LED light therapy is included rather than sold as an add-on. $259 per session, or $249 for a first visit with the consultation.",
+      paragraph:
+        '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> runs the HydraFacial on a Syndeo device — enzymatic resurfacing, calibrated vortex extraction, and precision infusion of hydration and antioxidants — in one 45-minute appointment with no downtime. The booster is selected from the device’s skin analysis, and LED light therapy is included rather than sold as an add-on. $259 per session, or $249 for a first visit with the consultation.',
       trust: [
         { label: "HydraFacial Syndeo — AI skin analysis" },
         { label: "Safe for melanin-rich skin, no heat or laser" },
         { label: "LED light therapy included every visit" },
-        { label: "No downtime — back to your day" },
+        { label: "No downtime — the client leaves the same day" },
       ],
     },
   },
@@ -376,7 +378,7 @@ export const services: Service[] = [
     category: 'Peels',
     title: 'Chemical Peels for Pigmentation and Texture | KIAMO Skin',
     description:
-      'Chemical peels in San Diego for pigmentation and melasma in melanin-rich skin. LIRA Gentle Renewal $199, Advanced Peel $299. Request an appointment.',
+      'LIRA chemical peels at KIAMO Skin for pigmentation and melasma in melanin-rich skin, strength raised only as the barrier allows. From $199. Book a visit.',
     headline: 'Chemical Peels — Brighten Without Damaging Skin',
     opener:
       'Professional peels selected for the skin tone in front of the practitioner, with the strength raised only as the barrier allows. Performed by Kiki, a California licensed esthetician.',
@@ -401,7 +403,7 @@ export const services: Service[] = [
       },
       {
         title: 'Apply',
-        body: 'The peel is layered and timed to your skins response on the day. Strength escalates across a series rather than in one visit.',
+        body: 'The peel is layered and timed to the skin\'s response on the day. Strength escalates across a series rather than in one visit.',
       },
       {
         title: 'Protect',
@@ -427,14 +429,15 @@ export const services: Service[] = [
     melaninNote:
       'Peels on Black and brown skin are chosen differently — the pacing is the whole point.',
     guide: {
-      lead: 'A peel and microchanneling work in opposite directions. Which one your dark spots need, and what it costs.',
+      lead: 'A peel and microchanneling work in opposite directions. Which one dark marks need, and what it costs.',
       label: 'Chemical peel vs microchanneling in San Diego',
       href: '/journal/chemical-peel-vs-microneedling-san-diego/',
     },
     hero: {
       eyebrow: "Gentle Renewal $199 · Advanced $299",
       claim: "Peels paced across a series, never escalated in one visit.",
-      paragraph: "Pigmentation is where the wrong treatment does lasting damage, so strength is raised only as the barrier allows and each peel is layered and timed to the skin’s response that day. LIRA’s range is calibrated for deeper skin tones. Most clients see visible change across three to four sessions, six to eight for the full result.",
+      paragraph:
+        '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> layers LIRA chemical peels to the strength the barrier can hold — pigmentation is where the wrong treatment does lasting damage, so strength is raised only as the barrier allows and each peel is layered and timed to the skin’s response that day. LIRA’s range is calibrated for deeper skin tones. Most clients see visible change across three to four sessions, six to eight for the full result.',
       trust: [
         { label: "Calibrated for melanin-rich skin" },
         { label: "Patch-tested and started gently" },
@@ -451,7 +454,7 @@ export const services: Service[] = [
     category: 'Advanced',
     title: 'Procell Microchanneling for Acne Scars | KIAMO Skin',
     description:
-      'Microneedling in San Diego for melanin-rich skin. No RF heat. Acne scars, hyperpigmentation, texture. Procell microchanneling. Request an appointment.',
+      'Procell microchanneling from KIAMO Skin for acne scars and texture in melanin-rich skin. No RF heat. $475 a session. Request an appointment.',
     headline: 'Procell Microchanneling — Reduce Acne Scars and Texture',
     opener:
       'Controlled microchannels and a growth factor serum, with no RF heat at all. Performed by Kiki, a California licensed esthetician.',
@@ -489,7 +492,7 @@ export const services: Service[] = [
       },
       {
         title: 'Barrier protection and post-care',
-        body: 'A calming, occlusive barrier product is applied. You leave with clean, protected skin — no foundation, no active products on day of treatment. Expect redness similar to a mild sunburn for 24-48 hours. Mild dryness or flaking may occur as the skin renews itself. SPF is non-negotiable post-treatment. The channels close within hours, but skin UV-sensitivity is elevated for 7–10 days after microchanneling.',
+        body: 'A calming, occlusive barrier product is applied. The client leaves with clean, protected skin — no foundation, no active products on day of treatment. Expect redness similar to a mild sunburn for 24-48 hours. Mild dryness or flaking may occur as the skin renews itself. SPF is non-negotiable post-treatment. The channels close within hours, but skin UV-sensitivity is elevated for 7–10 days after microchanneling.',
       },
     ],
     pricing: [
@@ -521,14 +524,15 @@ export const services: Service[] = [
       'A series of three is the usual plan, and membership treatments can be applied to it by paying the difference.',
     membershipAnchor: 'Membership pricing and what each plan includes',
     guide: {
-      lead: 'Microchanneling and a chemical peel work in opposite directions. Which one your dark spots need, and what it costs.',
+      lead: 'Microchanneling and a chemical peel work in opposite directions. Which one dark marks need, and what it costs.',
       label: 'Chemical peel vs microchanneling in San Diego',
       href: '/journal/chemical-peel-vs-microneedling-san-diego/',
     },
     hero: {
       eyebrow: "No RF Heat · Growth Factor Serum · 3-Session Series",
       claim: "Scarring and texture, corrected without the heat that causes pigment.",
-      paragraph: "Procell creates thousands of microscopic channels and delivers its stem cytokine serum straight into them, so the repair is directed rather than left to chance. There is no radiofrequency heat anywhere in the treatment — which is what makes it safe on melanin-rich skin, where thermal trauma is itself a pigment trigger. $475 a session, or $1,199 for a series of three.",
+      paragraph:
+        '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> uses Procell microchanneling to create thousands of microscopic channels and deliver its stem cytokine serum straight into them, so the repair is directed rather than left to chance. There is no radiofrequency heat anywhere in the treatment — which is what makes it safe on melanin-rich skin, where thermal trauma is itself a pigment trigger. $475 a session, or $1,199 for a series of three.',
       trust: [
         { label: "No RF heat — no thermal pigment trigger" },
         { label: "Safe for Fitzpatrick types IV–VI" },
@@ -544,7 +548,7 @@ export const services: Service[] = [
     category: 'Facials',
     title: 'Dermaplaning — Safe for Every Skin Tone | KIAMO Skin',
     description:
-      'Dermaplaning in San Diego at KIAMO Skin. Expert technique on melanin-rich and dark skin, $199 a session. By appointment only.',
+      'Dermaplaning at KIAMO Skin. A sterile blade removes the dead surface layer, $199 a session, safe on every skin tone. Request an appointment.',
     headline: 'Dermaplaning — Smoother Skin, No Downtime',
     opener:
       'Physical exfoliation that clears surface buildup, so everything layered after it works better. Performed by Kiki, a California licensed esthetician.',
@@ -594,7 +598,8 @@ export const services: Service[] = [
     hero: {
       eyebrow: "$199 · No Downtime · All Skin Tones",
       claim: "A cleared surface, so everything applied after it works.",
-      paragraph: "A sterile surgical blade removes the dead surface layer and fine vellus hair in one pass, so serums reach live tissue instead of sitting on debris and makeup stops catching on texture. No downtime — the glow is immediate, which is why clients book it before events. Correct blade angle and pressure make it safe on darker skin tones.",
+      paragraph:
+        '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> passes a sterile surgical blade once across the skin to remove the dead surface layer and fine vellus hair, so serums reach live tissue instead of sitting on debris and makeup stops catching on texture. No downtime — the glow is immediate, which is why clients book it before events. Correct blade angle and pressure make it safe on darker skin tones.',
       trust: [
         { label: "Sterile single-use blade" },
         { label: "Safe for melanin-rich skin" },
@@ -610,7 +615,7 @@ export const services: Service[] = [
     category: 'Scalp',
     title: 'Keravive Scalp Therapy for Buildup and Flaking | KIAMO Skin',
     description:
-      'Keravive scalp treatment in San Diego for dandruff, flaking, hair thinning and hard water buildup. $599. Request an appointment.',
+      'Keravive scalp treatment from KIAMO Skin for dandruff, flaking, hair thinning and hard water buildup. $599. Request an appointment.',
     headline: 'Keravive Scalp Therapy — Clear Flaking, Buildup, and Irritation',
     opener:
       'Clinical scalp therapy for buildup, flaking, and the hard water residue San Diego scalps collect. Performed by Kiki, a California licensed esthetician.',
@@ -639,7 +644,7 @@ export const services: Service[] = [
       },
       {
         title: 'Continue at home',
-        body: 'Your take-home peptide spray helps nourish the scalp between treatments to extend and support your results.',
+        body: 'The take-home peptide spray nourishes the scalp between treatments to extend and support the result.',
       },
     ],
     pricing: [
@@ -657,8 +662,9 @@ export const services: Service[] = [
     },
     hero: {
       eyebrow: "Hard Water Buildup · Flaking · Hair Support",
-      claim: "Your scalp treated as skin, not as an accessory.",
-      paragraph: "Keravive cleanses, exfoliates and hydrates the scalp while clearing the buildup shampoo cannot reach, and a peptide complex supports the environment hair grows in. San Diego’s water runs 16 grains per gallon, so that buildup is the rule here, not the exception. $599 a session, or $1,499 for a series of three.",
+      claim: "The scalp treated as skin, not as an accessory.",
+      paragraph:
+        '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> runs Keravive to cleanse, exfoliate and hydrate the scalp while clearing the buildup shampoo cannot reach, and a peptide complex supports the environment hair grows in. San Diego’s water runs 16 grains per gallon, so that buildup is the rule here, not the exception. $599 a session, or $1,499 for a series of three.',
       trust: [
         { label: "Hard water and mineral buildup cleared" },
         { label: "Peptide complex nourishes the scalp" },
@@ -674,7 +680,7 @@ export const services: Service[] = [
     category: 'Advanced',
     title: 'DMK Enzyme Therapy to Rebuild a Broken Barrier | KIAMO Skin',
     description:
-      'DMK enzyme therapy in San Diego. Enzymatic resurfacing that rebuilds a damaged barrier. Level 1 is $279; Level 2 and 3 at consultation.',
+      'DMK enzyme therapy at KIAMO Skin. Enzymatic resurfacing that restores barrier function, for skin a peel would be too much for. From $279. Request a visit.',
     headline: 'DMK Enzyme Therapy — Restore Skin Function',
     opener:
       'Enzymatic resurfacing that rebuilds a damaged barrier instead of stripping a healthy one. Performed by Kiki, a California licensed esthetician.',
@@ -703,7 +709,7 @@ export const services: Service[] = [
       },
       {
         title: 'Home care',
-        body: 'DMK is designed as a complete system. Your personalized home routine supports the work done in the treatment room, helping a client achieve the best possible results between visits.',
+        body: 'DMK is designed as a complete system. The home-care routine written for the client supports the work done in the treatment room, helping a client achieve the best possible results between visits.',
       },
     ],
     pricing: [
@@ -722,7 +728,8 @@ export const services: Service[] = [
     hero: {
       eyebrow: "Barrier Repair · Enzyme Masque · Level 1 $279",
       claim: "Rebuilds a compromised barrier instead of stripping a healthy one.",
-      paragraph: "Enzymatic resurfacing that works with the skin’s own processes to restore barrier function, circulation and lymphatic activity — the right first move for skin that stings, reddens or has been stripped by a strong product. Levels 2 and 3 are prescribed only once Level 1 has prepared the skin. Level 1 is $279.",
+      paragraph:
+        '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> uses DMK enzyme therapy to restore barrier function, circulation and lymphatic activity with the skin’s own processes — the right first move for skin that stings, reddens or has been stripped by a strong product. Levels 2 and 3 are prescribed only once Level 1 has prepared the skin. Level 1 is $279.',
       trust: [
         { label: "Level 1 from $279" },
         { label: "Customised to the skin that day" },
@@ -738,7 +745,7 @@ export const services: Service[] = [
     category: 'Facials',
     title: 'Acne Treatment: Breakouts, Marks, and Scarring | KIAMO Skin',
     description:
-      'Acne treatment in San Diego from KIAMO Skin. HydraFacial for breakouts, peels for dark marks, microchanneling for scars. Request an appointment.',
+      'KIAMO Skin treats acne with three instruments, not one: a HydraFacial for congestion, a peel series for the marks, microchanneling for scars. From $199.',
     headline: 'Acne Treatment — Clear Breakouts, Fade the Marks',
     opener:
       'Corrective facials, peels for the marks they leave behind, and microchanneling for scarring. Performed by Kiki, a California licensed esthetician.',
@@ -811,7 +818,8 @@ export const services: Service[] = [
     hero: {
       eyebrow: "Breakouts · Congestion · Scarring",
       claim: "Clear the breakouts, fade the marks, soften the scarring.",
-      paragraph: "Acne is three problems, and each needs a different instrument. HydraFacial clears congestion without the pressure that spreads inflammation, enzyme therapy rebuilds the barrier keeping breakouts active, and peels or microchanneling work through what they leave behind. Every protocol avoids triggering the dark marks that last longer than the breakout.",
+      paragraph:
+        '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> treats acne as three problems, and each needs a different instrument. HydraFacial clears congestion without the pressure that spreads inflammation, enzyme therapy rebuilds the barrier keeping breakouts active, and peels or microchanneling work through what they leave behind. Every KIAMO Skin protocol avoids triggering the dark marks that last longer than the breakout.',
       trust: [
         { label: "Three phases, three different treatments" },
         { label: "Priced from $199 to $475" },
@@ -827,7 +835,7 @@ export const services: Service[] = [
     category: 'Corrective',
     title: 'Hyperpigmentation Treatment for Post-Acne Marks | KIAMO Skin',
     description:
-      'Hyperpigmentation treatment in San Diego — dark marks after acne faded with a corrective plan, not a routine facial. Licensed esthetician, all skin tones.',
+      'Hyperpigmentation treatment from KIAMO Skin. Dark marks after acne faded with a corrective plan, not a routine facial. All skin tones.',
     headline: 'Hyperpigmentation Treatment — Clear Post-Acne Marks',
     opener:
       'A series of gentle LIRA peels or Procell microchanneling, paired with daily SPF. Performed by Kiki, a California licensed esthetician.',
@@ -917,7 +925,8 @@ export const services: Service[] = [
     hero: {
       eyebrow: "Post-Acne Marks · Melasma · Sun Damage",
       claim: "Dark marks faded without creating new ones.",
-      paragraph: "Post-inflammatory hyperpigmentation is what the skin does in response to inflammation, so the inflammation has to be addressed first — otherwise the same marks return. The plan is a series of gentle peels or Procell microchanneling with strict daily SPF, matched to the Fitzpatrick type rather than a generic protocol.",
+      paragraph:
+        '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> addresses post-inflammatory hyperpigmentation by treating the inflammation that caused it first — otherwise the same marks return. The plan is a series of gentle peels or Procell microchanneling with strict daily SPF, matched to the Fitzpatrick type rather than a generic protocol.',
       trust: [
         { label: "Calibrated for every Fitzpatrick type" },
         { label: "SPF with iron oxides built into the plan" },
@@ -933,7 +942,7 @@ export const services: Service[] = [
     category: 'Corrective',
     title: 'Melasma Treatment Without Triggering More | KIAMO Skin',
     description:
-      'Melasma treatment in San Diego — a paced series of gentle peels, not one aggressive visit. Licensed esthetician, all skin tones. Request an appointment.',
+      'Melasma treatment from KIAMO Skin. A paced series of gentle peels, not one aggressive visit. All skin tones. Request an appointment.',
     headline: 'Melasma Treatment — Visible Results Without Triggering More',
     opener:
       'Gentle LIRA peels spaced four to six weeks apart, and daily SPF with iron oxides to hold the result. Performed by Kiki, a California licensed esthetician.',
@@ -1016,7 +1025,8 @@ export const services: Service[] = [
     hero: {
       eyebrow: "Hormonal Pigment · Peels · Daily SPF",
       claim: "A paced series that clears pigment and stops it returning.",
-      paragraph: "Melasma is driven by hormones and sustained by UV, so it is managed rather than cured — which is why one aggressive session makes it worse. Gentle peels spaced four to six weeks apart, with Procell added for texture and daily SPF with iron oxides to hold the result. Most clients see change after three to four sessions.",
+      paragraph:
+        '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> manages melasma rather than curing it — it is driven by hormones and sustained by UV, which is why one aggressive session makes it worse. Gentle peels spaced four to six weeks apart, with Procell added for texture and daily SPF with iron oxides to hold the result. Most clients see change after three to four sessions.',
       trust: [
         { label: "Safe for melanin-rich skin" },
         { label: "Paced, never escalated in one visit" },
@@ -1032,7 +1042,7 @@ export const services: Service[] = [
     category: 'Corrective',
     title: 'Corrective Treatments Built Around the Skin | KIAMO Skin',
     description:
-      'Corrective skin treatments in San Diego — a plan built around the skin, not a trend. Peels, microchanneling, enzyme therapy. All skin tones.',
+      'Corrective skin treatments from KIAMO Skin — a plan built around the skin, not a trend. Peels, microchanneling, enzyme therapy. All skin tones.',
     headline: 'Corrective Skin Treatments — Built Around the Skin',
     opener:
       'Every treatment is selected for what the skin is doing, and paced to what it can tolerate. Performed by Kiki, a California licensed esthetician.',
@@ -1040,7 +1050,7 @@ export const services: Service[] = [
     menuLine:
       'Every treatment is selected for what the skin is doing, and paced to what it can tolerate.',
     intro:
-      'KIAMO Skin provides corrective skin treatments designed to address specific skin concerns while considering the condition, history, and needs of the skin. Rather than treating every client or concern exactly the same way, the goal is to understand what is happening beneath the surface and select treatments that make sense for your current skin health. Corrective skincare may include treatments such as HydraFacial, DMK Enzyme Therapy, Procell Microchanneling, Lira Chemical Peels, Dermaplaning, and Keravive Scalp Therapy, depending on the concern being addressed.',
+      'KIAMO Skin provides corrective skin treatments designed to address specific skin concerns while considering the condition, history, and needs of the skin. Rather than treating every client or concern exactly the same way, the goal is to understand what is happening beneath the surface and select treatments that make sense for the current skin health. Corrective skincare may include treatments such as HydraFacial, DMK Enzyme Therapy, Procell Microchanneling, Lira Chemical Peels, Dermaplaning, and Keravive Scalp Therapy, depending on the concern being addressed.',
     image: correctiveHero,
     resultImage: correctiveSkin,
     resultImageAlt:
@@ -1130,7 +1140,8 @@ export const services: Service[] = [
     hero: {
       eyebrow: "Pigmentation · Acne · Barrier Repair",
       claim: "A plan built around the skin, not a package.",
-      paragraph: "The first visit is an assessment: what a client wants to change, and what the skin can currently tolerate. From there the modality is chosen — HydraFacial, peels, microchanneling, enzyme therapy or scalp work — and paced to how the skin responds. Because corrective work runs across a series, the plan is mapped before a client commit.",
+      paragraph:
+        '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> builds every corrective plan around an assessment: what a client wants to change, and what the skin can currently tolerate. From there the modality is chosen — HydraFacial, peels, microchanneling, enzyme therapy or scalp work — and paced to how the skin responds. Because corrective work runs across a series, the plan is mapped before a client commit.',
       trust: [
         { label: "Assessment before any treatment" },
         { label: "Every price published" },

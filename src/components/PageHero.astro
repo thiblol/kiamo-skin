@@ -174,7 +174,16 @@ const {
           )
         }
 
-        {paragraph && <p class="t-body mt-6 max-w-[56ch] text-[1.0625rem] text-porcelain/85">{paragraph}</p>}
+        {/* The paragraph. Rendered as HTML so the brand name can link to the
+            homepage — the same opening move the service pages make. */}
+        {
+          paragraph && (
+            <p
+              class="t-body mt-6 max-w-[56ch] text-[1.0625rem] text-porcelain/85"
+              set:html={paragraph}
+            />
+          )
+        }
 
         {prices && <p class="t-body mt-4 max-w-[56ch] text-[1.0625rem] text-blush">{prices}</p>}
       </div>

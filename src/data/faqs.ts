@@ -64,11 +64,11 @@ export interface Faq {
 
 export const faqs: Faq[] = [
   {
-    question: 'How much does a facial cost in San Diego?',
+    question: 'What does a facial cost at KIAMO Skin?',
     answer: `The first visit is ${verifiedPrices['first-time-client']} at KIAMO Skin, and it includes the consultation, the skin analysis and the treatment — not a separate appointment that has to be booked twice. After that a HydraFacial is ${verifiedPrices.hydrafacial}, dermaplaning is ${verifiedPrices['dermaplane-facial']}, LIRA chemical peels run from ${verifiedPrices['lira-light-peel']} to ${verifiedPrices['lira-advanced-peel']}, and the monthly memberships start at $199. Every price is published, because comparing studios in San Diego is impossible when nobody lists one.`,
   },
   {
-    question: 'What happens at your first corrective facial in San Diego?',
+    question: 'What happens at a first corrective facial in San Diego?',
     answer:
       'A consultation and a skin analysis come first, then a treatment chosen around what the skin is actually doing that day, and a plan for the home routine that supports it. Nothing is treated before it has been looked at, and the plan is written down before the next appointment is booked. At KIAMO Skin the first visit is $249 and the consultation, the analysis and the treatment all happen in the same appointment.',
   },

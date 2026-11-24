@@ -104,7 +104,7 @@ const writtenArticles: Article[] = [
   {
     slug: 'three-kinds-of-dark-mark',
     headline: 'Three kinds of dark mark, and why one facial cannot fix all three',
-    title: 'Facials for Hyperpigmentation in San Diego | KIAMO Skin',
+    title: 'Why One Facial Cannot Fix All Three Dark Marks | KIAMO Skin',
     description:
       'Post-inflammatory marks, melasma and sun damage look alike and respond differently. How to tell them apart, and what a facial can honestly do.',
     standfirst:

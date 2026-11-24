@@ -25,6 +25,7 @@ import FaqSchema from '../../components/schema/FaqSchema.astro';
 import FaqList from '../../components/FaqList.astro';
 import RequestBand from '../../components/sections/RequestBand.astro';
 import PageHero from '../../components/PageHero.astro';
+import BrandFacts from '../../components/BrandFacts.astro';
 import SpeakableSchema from '../../components/schema/SpeakableSchema.astro';
 import { areaShells } from '../../data/area-shells';
 import { services } from '../../data/services';
@@ -134,10 +135,17 @@ const covered = matrix.filter((m) => m.rows.length > 0);
         makes the page an argument about travel rather than about treatment,
         and it is the wrong frame for a client already in the city. The
         studio's own city is now the first entry in the list below, and the
-        hero says what the studio does. */}
+        hero says what the studio does.
+
+        The H1 used to be "Facial spa in San Diego, CA", which is the phrase
+        the homepage is now built around — "Corrective Facial Spa in San
+        Diego, CA". The homepage owns the business-type query, because that
+        is what a person who wants a spa types. This page is the map: which
+        places KIAMO Skin serves, and where the studio is. So the heading
+        says what the page actually is. */}
     <PageHero
       eyebrow="San Diego, CA · One studio, off Washington Street"
-      h1="Facial spa in San Diego, CA"
+      h1="Areas We Serve in San Diego County"
       claim="One studio in Mission Hills, and eleven areas it serves — including the city itself."
       paragraph="KIAMO Skin is a licensed facial spa at 3067 Reynard Way in Mission Hills. Every treatment is performed by Kiki, a California licensed esthetician with 7+ years in corrective skin work, in one private treatment room. Parking is free on site and the studio is appointment-only."
       image={heroServiceAreasHub}
@@ -158,6 +166,9 @@ const covered = matrix.filter((m) => m.rows.length > 0);
       current="San Diego County"
       eventLabel="areas_hero"
     />
+
+    {/* The entity block, directly under the hero. */}
+    <BrandFacts class="bg-ivory" />
 
     <section class="bg-porcelain">
       <div class="wrap section-y">

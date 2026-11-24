@@ -9,13 +9,28 @@ interface Props {
 
 const { faqs = homepageFaqs } = Astro.props;
 
+/**
+ * The answer, as plain text.
+ *
+ * A treatment page's FAQ answers carry links to the sibling treatments, so
+ * the answer string holds markup. The schema's `acceptedAnswer.text` is
+ * plain text by contract — a search engine reads it as prose, and markup in
+ * it is both invalid and useless. So the tags come out here, and the text
+ * that remains is the same answer a reader sees.
+ */
+const plain = (answer: string) =>
+  answer
+    .replace(/<[^>]+>/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
 const schema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: faqs.map((faq) => ({
     '@type': 'Question',
     name: faq.question,
-    acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    acceptedAnswer: { '@type': 'Answer', text: plain(faq.answer) },
   })),
 };
 ---

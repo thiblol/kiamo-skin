@@ -93,7 +93,7 @@ const studioClaims: TreatmentTrust['claims'] = [
  */
 function guaranteeWith(priceLine: string): TreatmentTrust['guarantee'] {
   return {
-    heading: 'Before a client commit',
+    heading: 'Before a client commits to KIAMO Skin',
     commitments: [
       {
         title: 'The price comes first',
@@ -114,7 +114,7 @@ function guaranteeWith(priceLine: string): TreatmentTrust['guarantee'] {
 export const treatmentTrust: Record<string, TreatmentTrust> = {
   facial: {
     quickAnswer:
-      'A facial at KIAMO Skin in San Diego is matched to the skin in front of the practitioner rather than chosen from a fixed menu. Kiki, a California licensed esthetician with 7+ years of experience, performs every treatment personally in a one-to-one private studio. The menu covers HydraFacial Syndeo, LIRA chemical peels, DMK enzyme therapy, and dermaplaning, calibrated to Fitzpatrick types I-VI. Dermaplaning is $199, a HydraFacial is $259, and a first-time client treatment is $249 including the consultation that sets the plan.',
+      'A facial at KIAMO Skin is matched to the skin in front of the practitioner rather than chosen from a fixed menu. Kiki, a California licensed esthetician with 7+ years of experience, performs every treatment personally in a one-to-one private studio. The menu covers HydraFacial Syndeo, LIRA chemical peels, DMK enzyme therapy, and dermaplaning, calibrated to Fitzpatrick types I-VI. Dermaplaning is $199, a HydraFacial is $259, and a first-time client treatment is $249 including the consultation that sets the plan.',
     claims: studioClaims,
     guarantee: guaranteeWith(
       'Every treatment price is published on the menu, and the first-time client treatment at $249 includes the consultation that decides the plan. Nothing is quoted at the door.'
@@ -123,7 +123,7 @@ export const treatmentTrust: Record<string, TreatmentTrust> = {
   },
   hydrafacial: {
     quickAnswer:
-      'A HydraFacial at KIAMO Skin in San Diego is a medical-grade facial performed on a HydraFacial Syndeo device by Kiki, a California licensed esthetician with 7+ years of experience. It combines cleansing, exfoliation, extraction, and hydration with a customized booster, followed by LED light therapy — $259 per session, or $249 for a first-time client including the consultation that sets the plan.',
+      'A HydraFacial at KIAMO Skin is a medical-grade facial performed on a HydraFacial Syndeo device by Kiki, a California licensed esthetician with 7+ years of experience. It combines cleansing, exfoliation, extraction, and hydration with a customized booster, followed by LED light therapy — $259 per session, or $249 for a first-time client including the consultation that sets the plan.',
     claims: studioClaims,
     guarantee: guaranteeWith(
       'A HydraFacial is $259, and the first-time client treatment is $249 including the consultation that decides the plan. Nothing is quoted at the door.'
@@ -132,7 +132,7 @@ export const treatmentTrust: Record<string, TreatmentTrust> = {
   },
   'scalp-therapy': {
     quickAnswer:
-      'Keravive scalp therapy at KIAMO Skin in San Diego treats the scalp as skin — cleansing, extracting, and nourishing a scalp that has flaking, buildup, or thinning. Kiki performs every session. $599 per session, or $1,499 for a series of three.',
+      'Keravive scalp therapy at KIAMO Skin treats the scalp as skin — cleansing, extracting, and nourishing a scalp that has flaking, buildup, or thinning. Kiki performs every session. $599 per session, or $1,499 for a series of three.',
     claims: studioClaims,
     guarantee: guaranteeWith(
       'Keravive scalp therapy is $599 per session, or $1,499 for a series of three. Nothing is quoted at the door.'
@@ -141,7 +141,7 @@ export const treatmentTrust: Record<string, TreatmentTrust> = {
   },
   'dmk-enzyme-therapy': {
     quickAnswer:
-      'DMK enzyme therapy at KIAMO Skin in San Diego works on skin function rather than surface — enzymatic resurfacing that clears congestion and supports barrier recovery, chosen when a peel would be too much for reactive skin. Kiki performs every session. $279 for Level 1; Levels 2 and 3 are pricing at consultation.',
+      'DMK enzyme therapy at KIAMO Skin works on skin function rather than surface — enzymatic resurfacing that clears congestion and supports barrier recovery, chosen when a peel would be too much for reactive skin. Kiki performs every session. $279 for Level 1; Levels 2 and 3 are pricing at consultation.',
     claims: studioClaims,
     guarantee: guaranteeWith(
       'DMK enzyme therapy Level 1 is $279. Levels 2 and 3 are pricing at consultation — the level is set by what the skin is doing, not by what fits a price list.'
@@ -150,7 +150,7 @@ export const treatmentTrust: Record<string, TreatmentTrust> = {
   },
   'microneedling': {
     quickAnswer:
-      'Procell microchanneling at KIAMO Skin in San Diego treats acne scarring and textural change with controlled microchannels and a growth factor serum, working mechanically with no heat or light — which is why it suits melanin-rich skin, where heat-based resurfacing can trigger more pigment. Kiki performs every session. $475 per session, or $1,199 for a series of three.',
+      'Procell microchanneling at KIAMO Skin treats acne scarring and textural change with controlled microchannels and a growth factor serum, working mechanically with no heat or light — which is why it suits melanin-rich skin, where heat-based resurfacing can trigger more pigment. Kiki performs every session. $475 per session, or $1,199 for a series of three.',
     claims: studioClaims,
     guarantee: guaranteeWith(
       'Procell microchanneling is $475 per session, or $1,199 for a series of three — a series costs less than three single sessions. Nothing is quoted at the door.'
@@ -159,7 +159,7 @@ export const treatmentTrust: Record<string, TreatmentTrust> = {
   },
   'chemical-peel': {
     quickAnswer:
-      'LIRA chemical peels at KIAMO Skin in San Diego are professional-grade peels selected for the concern and the skin tone, with strength escalated across a series rather than in one aggressive visit. Kiki performs every session. $199 for a Gentle Renewal peel, $299 for an Advanced peel.',
+      'LIRA chemical peels at KIAMO Skin are professional-grade peels selected for the concern and the skin tone, with strength escalated across a series rather than in one aggressive visit. Kiki performs every session. $199 for a Gentle Renewal peel, $299 for an Advanced peel.',
     claims: studioClaims,
     guarantee: guaranteeWith(
       'LIRA chemical peels are $199 for a Gentle Renewal peel and $299 for an Advanced peel. Nothing is quoted at the door.'
@@ -168,7 +168,7 @@ export const treatmentTrust: Record<string, TreatmentTrust> = {
   },
   dermaplaning: {
     quickAnswer:
-      'Dermaplaning at KIAMO Skin in San Diego is a physical exfoliation that removes surface buildup and vellus hair with a sterile blade, creating a smoother surface that lets everything after it work better. Kiki performs every session. $199 as a dermaplane facial.',
+      'Dermaplaning at KIAMO Skin is a physical exfoliation that removes surface buildup and vellus hair with a sterile blade, creating a smoother surface that lets everything after it work better. Kiki performs every session. $199 as a dermaplane facial.',
     claims: studioClaims,
     guarantee: guaranteeWith(
       'The Dermaplane Facial is $199. Nothing is quoted at the door.'
@@ -177,7 +177,7 @@ export const treatmentTrust: Record<string, TreatmentTrust> = {
   },
   'corrective-skin-treatments': {
     quickAnswer:
-      'Corrective skin treatments at KIAMO Skin in San Diego start with the barrier rather than the treatment. Kiki is a California licensed esthetician with 7+ years of experience, and the plan draws on HydraFacial, DMK enzyme therapy, Procell microchanneling, LIRA chemical peels, and dermaplaning — chosen by what the skin is doing, not by what is trending.',
+      'Corrective skin treatments at KIAMO Skin start with the barrier rather than the treatment. Kiki is a California licensed esthetician with 7+ years of experience, and the plan draws on HydraFacial, DMK enzyme therapy, Procell microchanneling, LIRA chemical peels, and dermaplaning — chosen by what the skin is doing, not by what is trending.',
     claims: studioClaims,
     guarantee: guaranteeWith(
       'Every treatment price is published on the menu. Nothing is quoted at the door, and the first visit includes the consultation that decides the plan.'
@@ -186,7 +186,7 @@ export const treatmentTrust: Record<string, TreatmentTrust> = {
   },
   'acne-treatment': {
     quickAnswer:
-      'Acne treatment at KIAMO Skin in San Diego is corrective rather than extraction-only: HydraFacial clears congestion, LIRA chemical peels address the marks acne leaves behind, and Procell microchanneling softens scarring. Kiki is a California licensed esthetician with 7+ years of experience, and treats all skin types from Fitzpatrick I to VI.',
+      'Acne treatment at KIAMO Skin is corrective rather than extraction-only: HydraFacial clears congestion, LIRA chemical peels address the marks acne leaves behind, and Procell microchanneling softens scarring. Kiki is a California licensed esthetician with 7+ years of experience, and treats all skin types from Fitzpatrick I to VI.',
     claims: studioClaims,
     guarantee: guaranteeWith(
       'Every treatment price is published on the menu. Nothing is quoted at the door, and the first visit includes the consultation that decides the plan.'
@@ -195,7 +195,7 @@ export const treatmentTrust: Record<string, TreatmentTrust> = {
   },
   'hyperpigmentation-treatment': {
     quickAnswer:
-      'Post-inflammatory hyperpigmentation treatment at KIAMO Skin in San Diego targets the dark marks acne, eczema, ingrown hairs, and injury leave behind. Kiki is a California licensed esthetician with 7+ years of experience, and protocols are calibrated for every Fitzpatrick type from I to VI — including melanin-rich skin, where an incorrect peel causes more damage than it repairs.',
+      'Post-inflammatory hyperpigmentation treatment at KIAMO Skin targets the dark marks acne, eczema, ingrown hairs, and injury leave behind. Kiki is a California licensed esthetician with 7+ years of experience, and protocols are calibrated for every Fitzpatrick type from I to VI — including melanin-rich skin, where an incorrect peel causes more damage than it repairs.',
     claims: studioClaims,
     guarantee: guaranteeWith(
       'Every treatment price is published on the menu. Nothing is quoted at the door, and the first visit includes the consultation that decides the plan.'
@@ -204,7 +204,7 @@ export const treatmentTrust: Record<string, TreatmentTrust> = {
   },
   'melasma-treatment': {
     quickAnswer:
-      'Melasma treatment at KIAMO Skin in San Diego is a paced series of gentle LIRA chemical peels, with Procell microchanneling added where texture is part of the picture and HydraFacial with a brightening booster used for maintenance between corrective sessions. Kiki is a California licensed esthetician with 7+ years of experience. Most clients see change after 3-4 sessions, 6-8 spaced 4-6 weeks apart.',
+      'Melasma treatment at KIAMO Skin is a paced series of gentle LIRA chemical peels, with Procell microchanneling added where texture is part of the picture and HydraFacial with a brightening booster used for maintenance between corrective sessions. Kiki is a California licensed esthetician with 7+ years of experience. Most clients see change after 3-4 sessions, 6-8 spaced 4-6 weeks apart.',
     claims: studioClaims,
     guarantee: guaranteeWith(
       'LIRA chemical peels run $199 to $299, Procell microchanneling is $475 per session or $1,199 for a series of three, and the monthly facial membership is $199. Nothing is quoted at the door.'

@@ -132,6 +132,18 @@ const reviewsUrl = gbpReviewsUrl(business.gbpPlaceId);
         </a>
       </div>
 
+      {/* The question the answers do not cover. /contact/ is the only page on
+          the site with no contextual inbound link — reachable from the nav
+          and nowhere else — so it gets one from here, where a reader has
+          just finished the questions and may have another one. */}
+      <p class="t-body mt-7 text-[0.9375rem] text-ink-soft">
+        A question these answers do not cover?{' '}
+        <a href="/contact/" class="border-b border-ink/40 hover:border-rose hover:text-rose">
+          Ask KIAMO Skin
+        </a>
+        .
+      </p>
+
       {/* Trust repeats. The band under the hero carries one quote; this is the
           second one, next to the booking form, so a reader who scrolls
           straight to the CTA still meets a client before they meet the

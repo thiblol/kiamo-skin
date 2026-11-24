@@ -20,6 +20,7 @@ import LocationMap from '../../../components/LocationMap.astro';
 import BreadcrumbSchema from '../../../components/schema/BreadcrumbSchema.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import PageHero from '../../../components/PageHero.astro';
+import BrandFacts from '../../../components/BrandFacts.astro';
 import FaqSchema from '../../../components/schema/FaqSchema.astro';
 import FaqList from '../../../components/FaqList.astro';
 import RequestBand from '../../../components/sections/RequestBand.astro';
@@ -108,9 +109,34 @@ const placeLabel = shell.placeLabel ?? areaPlaceLabel(shell.slug, shell.name);
  * label leaves: the longer labels get the shorter CTA, so every area lands
  * inside the cap instead of some running past it and others running short of
  * the snippet.
+ *
+ * It used to open "KIAMO Skin. Corrective facials in ${placeLabel}." — the
+ * H1's own words, repeated. A description that echoes the heading tells a
+ * search engine the page has nothing else to say, and it handed the city
+ * page the same first line the homepage used. It now says where the studio
+ * is and what it does from there, which is a different fact from the
+ * heading's.
+ *
+ * The service list dropped dermaplaning to keep the longest place label —
+ * "Pacific Beach, San Diego, CA" — inside the 155-character cap at 152. The
+ * page body and the treatment list below the fold still carry it.
+ *
+ * THE STUDIO'S OWN CITY GETS A DIFFERENT TITLE
+ *   The San Diego hub was "Facials in San Diego, CA | KIAMO Skin" and its own
+ *   facial leaf page is "Facial in San Diego, CA | KIAMO Skin" — one word
+ *   apart, on two pages that both answer "facial in San Diego".
+ *
+ *   The studio's city page is the one that carries the corrective
+ *   positioning, so it says so: "Corrective Facials in San Diego, CA". The
+ *   neighbourhood hubs keep the general "Facials in …" form, because a
+ *   neighbourhood page argues that the drive is worth it rather than that
+ *   the work is corrective, and "Corrective Facials in Pacific Beach, San
+ *   Diego, CA" would not fit inside the 60-character title cap anyway.
  */
-const title = `Facials in ${placeLabel} | KIAMO Skin`;
-const description = `KIAMO Skin. Corrective facials in ${placeLabel}. HydraFacial, peels, dermaplaning and scalp therapy. From $199. Request a visit.`;
+const title = shell.isStudioCity
+  ? `Corrective Facials in ${placeLabel} | KIAMO Skin`
+  : `Facials in ${placeLabel} | KIAMO Skin`;
+const description = `KIAMO Skin serves ${placeLabel} from Mission Hills. Corrective facials, HydraFacial, peels and scalp therapy. From $199. Request a visit.`;
 ---
 
 <BaseLayout
@@ -147,7 +173,7 @@ const description = `KIAMO Skin. Corrective facials in ${placeLabel}. HydraFacia
       h1Accent={`in ${placeLabel}`}
       h1Width="24ch"
       claim={shell.localConcern.body.split('. ')[0] + '.'}
-      paragraph={`${shell.proximity}. Free parking on site, by appointment only, and a corrective plan mapped before a booking is made.`}
+      paragraph={`<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> treats clients from ${shell.name} at its Mission Hills studio — ${shell.proximity}. Free parking on site, by appointment only, and a corrective plan mapped before a booking is made.`}
       image={areaImages[shell.slug]}
       imageAlt={areaImageAlts[shell.slug]}
       price={{ label: 'First-time client treatment', price: verifiedPrices['first-time-client'] }}
@@ -166,6 +192,11 @@ const description = `KIAMO Skin. Corrective facials in ${placeLabel}. HydraFacia
       current={shell.name}
       eventLabel="area_hub"
     />
+
+    {/* The entity block, directly under the hero. The hero argues that the
+        drive is worth it; this says what the studio is, with the brand as
+        the subject of every sentence. */}
+    <BrandFacts class="bg-ivory" />
 
     {/* The place. The hero carries the offer; the geography sits here,
         where it is the reason to trust the drive rather than the reason to

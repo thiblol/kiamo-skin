@@ -1038,7 +1038,7 @@ export const serviceAreaContentSanDiego: Record<string, ServiceAreaContent> = {
           'A corrective plan is assembled from several treatments, so the price is set at the consultation — KIAMO Skin does not quote a single figure for a plan that uses more than one modality. Every component is published: HydraFacial $259, DMK enzyme therapy $279, LIRA chemical peels from $199, Procell microchanneling $475 or $1,199 for a series of three, dermaplaning $199, Keravive scalp therapy $599. The first visit is $249 with the consultation, analysis and treatment included.',
       },
       {
-        question: 'How do I know which corrective treatment I need?',
+        question: 'How does KIAMO Skin decide which corrective treatment a San Diego client needs?',
         answer:
           'That is what the first visit is for, and it is why the consultation comes before any treatment. The concern is named first — pigment, scarring, congestion, barrier damage, scalp condition — and then the barrier is assessed, because the barrier often explains the concern. KIAMO Skin then writes a plan with named treatments, named intervals and a session count, and it is set before the next appointment is booked.',
       },

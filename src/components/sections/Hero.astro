@@ -73,14 +73,25 @@ const fallback = await getImage({ src: heroWide, format: 'jpeg', width: 1920, qu
  * tool that reads the heading's text. The H1 now carries the geo phrase the
  * site's own rule gives a homepage, and the claim is a paragraph under it.
  *
- * AND THE H1 NO LONGER REPEATS THE TITLE
- *   The title says "Corrective Facial Spa in San Diego" and the H1 says
- *   "Corrective Facials in San Diego, CA" — two different head terms, so the
- *   page covers two queries instead of staking one. It also names the state,
- *   which the title now does too.
+ * AND THE H1 NOW MATCHES THE TITLE
+ *   The title says "Corrective Facial Spa in San Diego, CA" and the H1 now
+ *   says the same thing. They used to differ — the title held the spa
+ *   wording and the H1 held "Corrective Facials in San Diego, CA" — which
+ *   was two head terms on one page, and the H1 half of it was a word-for-word
+ *   duplicate of the H1 on /service-areas/san-diego/.
+ *
+ *   Now the homepage is the business-type page: a facial SPA in San Diego,
+ *   with the corrective work as the differentiator underneath it. The city
+ *   page at /service-areas/san-diego/ keeps "Corrective facials in San
+ *   Diego, CA" and owns that query. One page, one query.
+ *
+ * THE CLAIM NAMES THE STUDIO
+ *   "Skin and scalp treatment planned as a series, not a one-off" is true of
+ *   any clinic in any city. The brand-anchored rule says every factual
+ *   claim names KIAMO Skin, so the claim now does.
  */
 const eyebrow = 'Melasma · Post-acne marks · Compromised barriers';
-const claim = 'Skin and scalp treatment planned as a series, not a one-off.';
+const claim = 'KIAMO Skin plans skin and scalp treatment as a series, not a one-off.';
 
 /**
  * The brand paragraph.
@@ -92,9 +103,16 @@ const claim = 'Skin and scalp treatment planned as a series, not a one-off.';
  * it is, where it is, who does the work, and how long they have been doing
  * it. A model asked "who does corrective facials in San Diego" has to find
  * the name in the sentence that answers it.
+ *
+ * The brand name is a link to the homepage. That is the pattern the
+ * reference service pages use — "Upstate Auto Detailing applies ceramic
+ * coating at our shop in…" with the brand linking to "/" — and it is worth
+ * copying for a reason beyond navigation: the link is the one place on the
+ * page where the relationship between this page and the studio's home is
+ * stated in markup rather than implied.
  */
 const paragraph =
-  'KIAMO Skin is a licensed facial spa in Mission Hills, San Diego. Kiki, a California licensed esthetician with 7+ years in corrective skin work, treats melasma and post-acne marks, acne and scarring, and scalps carrying hard water buildup — in one treatment room, with the plan mapped before anything is booked.';
+  '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> is a licensed facial spa in Mission Hills, San Diego. Kiki, a California licensed esthetician with 7+ years in corrective skin work, treats melasma and post-acne marks, acne and scarring, and scalps carrying hard water buildup — in one treatment room, with the plan mapped before anything is booked.';
 
 /**
  * The quick answer, inside the hero.
@@ -175,16 +193,22 @@ const trust = [
       <div class="lg:col-start-1 lg:row-start-1">
         <p class="t-eyebrow text-blush">{eyebrow}</p>
 
-        {/* The H1. The service leads and the city follows — the order a
-            reader holds the two facts in.
+        {/* The H1. The page title carries the same phrase, and the H1 now
+            does too — "Corrective Facial Spa in San Diego, CA" on both.
 
-            "Corrective facials" rather than "Corrective facial spa": the
-            title already carries the spa wording, and repeating it here
-            meant the page staked one query instead of two. The measure
-            widens to 20ch so the heading breaks across two lines rather
-            than three. */}
+            It used to say "Corrective facials in San Diego, CA", which was
+            word-for-word identical to the H1 on /service-areas/san-diego/.
+            Two pages, one heading, one query: the homepage and the city's
+            own page were competing for the same thing.
+
+            The split now is by intent. The homepage owns the business type —
+            "facial spa in San Diego" — because that is what a person who
+            wants a spa types. The San Diego city page owns "corrective
+            facials in San Diego", because that is what a person with a
+            pigmentation problem types. Both are still true of both pages;
+            only the one each page is built around changes. */}
         <h1 class="t-hero mt-5 max-w-[20ch] text-porcelain">
-          Corrective facials <span class="text-blush">in San Diego, CA</span>
+          Corrective Facial Spa <span class="text-blush">in San Diego, CA</span>
         </h1>
 
         {/* The claim. Outside the H1, so the heading carries one sentence. */}
@@ -194,8 +218,9 @@ const trust = [
           {claim}
         </p>
 
-        {/* The paragraph. Who the studio is, what it does, and who does it. */}
-        <p class="t-body mt-6 max-w-[56ch] text-[1.0625rem] text-porcelain/85">{paragraph}</p>
+        {/* The paragraph. Who the studio is, what it does, and who does it.
+            Rendered as HTML because the brand name links to the homepage. */}
+        <p class="t-body mt-6 max-w-[56ch] text-[1.0625rem] text-porcelain/85" set:html={paragraph} />
 
         {/* The prices, on their own line. */}
         <p class="t-body mt-4 max-w-[56ch] text-[1.0625rem] text-blush">{prices}</p>

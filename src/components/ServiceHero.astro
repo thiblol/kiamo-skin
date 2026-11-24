@@ -163,10 +163,16 @@ const {
         </p>
 
         {/* The paragraph. Two or three lines on the treatment itself. The
-            local context has its own section further down. */}
-        <p class="t-body mt-6 max-w-[56ch] text-[1.0625rem] text-porcelain/85">
-          {paragraph}
-        </p>
+            local context has its own section further down.
+
+            Rendered as HTML because the brand name links to the homepage —
+            the same opening move the reference service pages make, so the
+            first sentence of every service page names the studio and
+            points back at it. */}
+        <p
+          class="t-body mt-6 max-w-[56ch] text-[1.0625rem] text-porcelain/85"
+          set:html={paragraph}
+        />
       </div>
 
       {/* ---- the conversion rail ---- */}

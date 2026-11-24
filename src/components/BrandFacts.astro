@@ -1,0 +1,63 @@
+---
+/**
+ * BrandFacts
+ * ----------
+ * The entity block that sits directly under the hero.
+ *
+ * It is the studio's own house style for the shape the reference service
+ * pages use: a short run of declarative statements in which the brand is
+ * the subject of every sentence, closing with the date they were last
+ * checked.
+ *
+ *   "Upstate Auto Detailing is a detailing shop at 40 North Street in
+ *    Saratoga Springs, NY. Upstate Auto Detailing does mobile detailing at
+ *    homes, workplaces and apartment lots. … Last updated October 22, 2026."
+ *
+ * The brand is not mentioned once in that block. It is the subject of every
+ * sentence. That is the whole point — a sentence with no entity in it
+ * cannot be attributed to anybody.
+ *
+ * It renders on the homepage, on every service page and on every area hub,
+ * because the same five facts answer the same five questions on all of
+ * them: what is this, where is it, who does the work, what does it cost,
+ * and how do I get in.
+ */
+import { brandFacts, brandFactsUpdated } from '../data/brand-facts';
+
+interface Props {
+  /** `dark` inverts the type for a dark band. */
+  tone?: 'light' | 'dark';
+  /** The band's background. Defaults to the ivory the site alternates on. */
+  class?: string;
+}
+
+const { tone = 'light', class: className = '' } = Astro.props;
+
+const muted = tone === 'dark' ? 'text-porcelain/70' : 'text-ink-soft';
+const rule = tone === 'dark' ? 'border-porcelain/20' : 'border-line';
+const dot = tone === 'dark' ? 'bg-blush' : 'bg-rose';
+---
+
+<section class={`py-12 md:py-16 ${className}`}>
+  <div class="wrap">
+    <div class="grid gap-8 md:grid-cols-[15rem_1fr] md:gap-14">
+      <div>
+        <p class={`t-eyebrow ${tone === 'dark' ? 'text-porcelain/60' : 'text-ink-soft'}`}>
+          About KIAMO Skin
+        </p>
+        <p class={`t-meta mt-4 ${muted}`}>Last updated {brandFactsUpdated}</p>
+      </div>
+
+      <ul class={`m-0 list-none grid gap-x-12 gap-y-4 border-t p-0 pt-8 sm:grid-cols-2 ${rule}`}>
+        {
+          brandFacts.map((fact) => (
+            <li class="flex items-start gap-3">
+              <span class={`mt-2 h-1.5 w-1.5 shrink-0 rounded-full ${dot}`} aria-hidden="true" />
+              <span class={`t-body text-[0.9375rem] leading-relaxed ${muted}`}>{fact}</span>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+  </div>
+</section>

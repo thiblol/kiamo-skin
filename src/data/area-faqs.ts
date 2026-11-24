@@ -52,9 +52,9 @@ export const areaFaqs: Record<string, Faq[]> = {
         'Most of Mission Hills is inside a five-minute drive. The KIAMO Skin studio is at 3067 Reynard Way, which runs between the Washington Street end of the neighbourhood and Middletown, and parking is free on site. From I-5 it is the Washington Street exit and a turn east; from I-8 or SR-163, Washington Street west.',
     },
     {
-      question: 'Is KIAMO Skin just going to sell me treatments I do not need?',
+      question: 'Does KIAMO Skin let a client decline a treatment on the day?',
       answer:
-        'No, and the plan comes out of the assessment rather than off a menu. Kiki, the licensed esthetician who performs every treatment at KIAMO Skin, picks the modality from what the skin shows on the day — and the home-care routine that comes with it is written to fit a budget, not a product shelf.',
+        'Yes. Nothing is applied that the assessment has not ruled out, and the home-care routine that comes with it is written to fit a budget rather than a product shelf. If a modality is not right for the skin on the day, KIAMO Skin says so rather than booking it.',
     },
     {
       question: 'What does a first visit at KIAMO Skin cost?',
@@ -95,7 +95,7 @@ export const areaFaqs: Record<string, Faq[]> = {
         'Pigment — melasma, post-acne marks and sun-induced dark spots — is the most common reason clients book, because San Diego runs the highest UV index in the continental United States for much of the year. KIAMO Skin also treats acne and scarring, barrier damage from hard water and salt exposure, uneven texture and tone, and scalp conditions including buildup, flaking and irritation.',
     },
     {
-      question: 'Does KIAMO Skin treat darker skin tones?',
+      question: 'Does KIAMO Skin treat every skin tone in San Diego?',
       answer:
         'Yes — every Fitzpatrick type from I to VI, and melanin-rich skin is where the pigment protocols at KIAMO Skin are written most carefully. Melasma and post-inflammatory hyperpigmentation are treated with gentle chemical peels whose strength is raised only as the barrier allows, because heat and aggressive treatment can deepen the marks they are meant to correct.',
     },
@@ -174,9 +174,9 @@ export const areaFaqs: Record<string, Faq[]> = {
         'The first visit is $249 at KIAMO Skin and includes the consultation, the skin analysis and the first treatment. After that a HydraFacial is $259, dermaplaning is $199, and LIRA chemical peels start at $199 and go to $299 for the advanced protocol. Every price is published on the site before a booking is made.',
     },
     {
-      question: 'Is KIAMO Skin just going to sell me treatments I do not need?',
+      question: 'Does the price at KIAMO Skin change for clients from Carlsbad?',
       answer:
-        'No, and the plan comes out of the assessment rather than off a menu. Kiki, the licensed esthetician who performs every treatment at KIAMO Skin, picks the modality from what the skin shows — and the home-care routine that comes with it is written to fit a budget rather than a product shelf.',
+        'The price is the same for every client. The first visit at KIAMO Skin is $249 whatever part of the county a client drives from, and the price that follows depends on what the vehicle of the skin needs rather than on the distance.',
     },
     {
       question: 'Does KIAMO Skin treat every skin tone in Carlsbad?',
@@ -235,7 +235,7 @@ export const areaFaqs: Record<string, Faq[]> = {
         'Yes, and it is the right treatment for the week before an event rather than the day before it. A HydraFacial at KIAMO Skin has no downtime, and the booster is selected from the Syndeo device\'s AI skin analysis rather than from a fixed menu. A peel needs a recovery window and does not belong next to deliberate sun exposure.',
     },
     {
-      question: 'Does KIAMO Skin treat every skin tone?',
+      question: 'Does KIAMO Skin treat every skin tone in Del Mar?',
       answer:
         'Yes — every Fitzpatrick type from I to VI, with the pigment protocols written for the tone they are used on. On skin that has accumulated years of coastal UV, KIAMO Skin starts with the barrier and a gentle protocol rather than escalating straight to the Advanced peel.',
     },
@@ -291,9 +291,9 @@ export const areaFaqs: Record<string, Faq[]> = {
         'Free parking is on site at the KIAMO Skin studio, so there is no street parking to find and no garage to pay for. The studio is by appointment only, which means a space is always available on arrival.',
     },
     {
-      question: 'How much does a facial cost in San Diego?',
+      question: 'Is the price at KIAMO Skin the same for North Park clients?',
       answer:
-        'The first visit is $249 at KIAMO Skin and includes the consultation, the skin analysis and the first treatment. A HydraFacial is $259, dermaplaning is $199, and LIRA chemical peels run from $199 to $299. Every price is published before a booking is made.',
+        'The price is the same for every client. The first visit at KIAMO Skin is $249 whatever part of the county a client drives from, and the price that follows depends on what the skin needs rather than on the distance. A HydraFacial is $259, dermaplaning is $199, and LIRA chemical peels run from $199 to $299. Every price is published before a booking is made.',
     },
   ],
 
@@ -319,7 +319,7 @@ export const areaFaqs: Record<string, Faq[]> = {
         'Keravive scalp therapy at $599, and a series of three at $1,499 is the usual plan. Salt, UV through the part line and hard water all collect on the scalp, and KIAMO Skin clears the buildup at the follicle rather than dissolving it, which is what makes the result last between visits.',
     },
     {
-      question: 'Does KIAMO Skin treat every skin tone?',
+      question: 'Does KIAMO Skin treat every skin tone in Pacific Beach?',
       answer:
         'Yes — every Fitzpatrick type from I to VI, with the pigment protocols written for the tone they are used on. On Pacific Beach skin, which carries a high UV load, KIAMO Skin starts on the gentle protocol and raises strength only as the barrier allows.',
     },
@@ -347,7 +347,7 @@ export const areaFaqs: Record<string, Faq[]> = {
         'A full consultation, a skin analysis and the first treatment, for $249 at KIAMO Skin. Kiki, a California licensed esthetician with 7+ years of experience, assesses the barrier and the concern, then writes a plan with the modalities in it, the intervals and the session count — all before the next appointment is booked.',
     },
     {
-      question: 'Does KIAMO Skin treat every skin tone?',
+      question: 'Does KIAMO Skin treat every skin tone in Point Loma?',
       answer:
         'Yes — every Fitzpatrick type from I to VI. On a peninsula where reflected UV and salt exposure arrive together, KIAMO Skin writes the pigment protocols for the tone they are used on and uses no heat anywhere in them.',
     },
@@ -370,12 +370,12 @@ export const areaFaqs: Record<string, Faq[]> = {
         'Uneven tone and texture that no home routine has moved. KIAMO Skin treats it with clinical equipment — a HydraFacial at $259 for the surface and the follicle, and a LIRA peel series from $199 for the pigment beneath it, with a HydraFacial between corrective sessions.',
     },
     {
-      question: 'How much does a facial cost?',
+      question: 'What does a facial cost for Hillcrest clients?',
       answer:
         'The first visit is $249 at KIAMO Skin and includes the consultation, the skin analysis and the first treatment. A HydraFacial is $259, dermaplaning is $199, and LIRA chemical peels run from $199 to $299. Every price is published on the site before a booking is made.',
     },
     {
-      question: 'Is there parking at the studio?',
+      question: 'Is there parking at the KIAMO Skin studio in Mission Hills?',
       answer:
         'Free parking is on site at the KIAMO Skin studio, so there is no street parking to find and no garage to pay for. The studio is by appointment only, which means a space is always available on arrival.',
     },

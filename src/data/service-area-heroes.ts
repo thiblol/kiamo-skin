@@ -294,56 +294,56 @@ export const serviceAreaHeroes: Record<string, ServiceAreaHero> = {
   'facial:san-diego': {
     claim: 'The right facial for San Diego skin.',
     paragraph:
-      'The city runs the highest UV index in the continental United States for much of the year, and the water is among the hardest in California. KIAMO Skin reads both at the assessment and picks the modality from it — a HydraFacial at $259 for congestion and dehydration, dermaplaning at $199 for texture, a peel series from $199 for pigment. The first visit is $249.',
+      '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> reads the city at the assessment and picks the modality from it. San Diego runs the highest UV index in the continental United States for much of the year, and the water is among the hardest in California, so both are part of the plan — a HydraFacial at $259 for congestion and dehydration, dermaplaning at $199 for texture, a peel series from $199 for pigment. The first visit is $249.',
   },
   'hydrafacial:san-diego': {
     claim: 'Extraction calibrated to San Diego water.',
     paragraph:
-      'The municipal supply here runs 280–320 parts per million of dissolved calcium and magnesium, which binds with sebum into deposits ordinary cleansing cannot shift. KIAMO Skin runs the HydraFacial on a Syndeo, where vortex extraction lifts them from the follicle and the booster is chosen from an AI skin analysis. $259, or $249 for a first visit.',
+      '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> runs the HydraFacial on a Syndeo, where vortex extraction lifts the deposits from the follicle and the booster is chosen from an AI skin analysis. The municipal supply here runs 280–320 parts per million of dissolved calcium and magnesium, which binds with sebum into deposits ordinary cleansing cannot shift. $259, or $249 for a first visit.',
   },
   'chemical-peel:san-diego': {
     claim: 'Pigment, corrected at its depth.',
     paragraph:
-      'Melasma, post-acne marks and sun spots respond to different treatments, and the one that fixes one can deepen another. KIAMO Skin identifies which is present at the consultation, starts on the Gentle Renewal Peel at $199, and raises the strength only as the barrier allows. The Advanced Peel is $299.',
+      '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> identifies which mark is present at the consultation, starts on the Gentle Renewal Peel at $199, and raises the strength only as the barrier allows. Melasma, post-acne marks and sun spots respond to different treatments, and the one that fixes one can deepen another. The Advanced Peel is $299.',
   },
   'microneedling:san-diego': {
     claim: 'Scarring, corrected without the heat.',
     paragraph:
-      'RF microneedling is the standard answer for scarring, and on melanin-rich skin the heat in it can leave more marks than it removes. KIAMO Skin uses Procell instead — mechanical channels with no thermal component and a growth factor serum applied straight into them. $475 a session, or $1,199 for a series of three.',
+      '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> uses Procell instead of RF microneedling — mechanical channels with no thermal component and a growth factor serum applied straight into them. RF is the standard answer for scarring, and on melanin-rich skin the heat in it can leave more marks than it removes. $475 a session, or $1,199 for a series of three.',
   },
   'dermaplaning:san-diego': {
     claim: 'A cleared surface, and what follows it.',
     paragraph:
-      'A sterile single-use blade lifts the dead surface layer and fine vellus hair so serums reach live tissue, then the treatment closes with SPF — which matters more here than almost anywhere. KIAMO Skin sets the blade angle and pressure for the skin tone in front of the practitioner. $199 as a full facial, with no downtime.',
+      '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> sets the blade angle and pressure for the skin tone in front of the practitioner. A sterile single-use blade lifts the dead surface layer and fine vellus hair so serums reach live tissue, then the treatment closes with SPF — which matters more here than almost anywhere. $199 as a full facial, with no downtime.',
   },
   'scalp-therapy:san-diego': {
     claim: 'The scalp, treated as skin.',
     paragraph:
-      'San Diego\'s water runs about 16 grains per gallon, and that mineral film binds with sebum into a build-up shampoo removes on the day and rebuilds by the next. KIAMO Skin clears it at the appointment and supports the environment with a peptide complex and a take-home spray. Keravive scalp therapy is $599, or $1,499 for three.',
+      '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> clears the build-up at the appointment and supports the environment with a peptide complex and a take-home spray. San Diego\'s water runs about 16 grains per gallon, and that mineral film binds with sebum into a build-up shampoo removes on the day and rebuilds by the next. Keravive scalp therapy is $599, or $1,499 for three.',
   },
   'dmk-enzyme-therapy:san-diego': {
     claim: 'Function restored before anything is added.',
     paragraph:
-      'A barrier stripped by hard water, salt, wind or an aggressive home routine has to hold water again before a peel or an extraction will do any good. KIAMO Skin uses DMK enzyme therapy to rebuild that function, at $279 for Level 1, with deeper levels prescribed only once Level 1 has prepared the skin.',
+      '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> uses DMK enzyme therapy to rebuild a compromised barrier — at $279 for Level 1, with deeper levels prescribed only once Level 1 has prepared the skin. A barrier stripped by hard water, salt, wind or an aggressive home routine has to hold water again before a peel or an extraction will do any good.',
   },
   'acne-treatment:san-diego': {
     claim: 'Three problems, three instruments.',
     paragraph:
-      'Active breakouts, congestion, and the marks and scarring left behind each need a different treatment. KIAMO Skin clears congestion with a HydraFacial at $259, rebuilds the barrier with enzyme therapy at $279, fades dark marks with a peel at $199, and softens scarring with microchanneling at $475 — in that order, because the order is what keeps the correction from making new marks.',
+      '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> clears congestion with a HydraFacial at $259, rebuilds the barrier with enzyme therapy at $279, fades dark marks with a peel at $199, and softens scarring with microchanneling at $475 — in that order, because the order is what keeps the correction from making new marks. Active breakouts, congestion, and the marks and scarring left behind each need a different treatment.',
   },
   'hyperpigmentation-treatment:san-diego': {
     claim: 'Which mark it is decides the treatment.',
     paragraph:
-      'Post-acne marks, sun-induced spots and melasma look alike and behave nothing alike. KIAMO Skin establishes which one is present at the consultation, then builds the plan from peels, microchanneling and a HydraFacial with a brightening booster, and writes daily SPF into it. The plan and its price are set there.',
+      '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> establishes which mark is present at the consultation, then builds the plan from peels, microchanneling and a HydraFacial with a brightening booster, and writes daily SPF into it. Post-acne marks, sun-induced spots and melasma look alike and behave nothing alike. The plan and its price are set there.',
   },
   'melasma-treatment:san-diego': {
     claim: 'Even tone, without lightening.',
     paragraph:
-      'Melasma is hormonal as well as solar, and heat is one of the triggers that deepens it. KIAMO Skin uses no thermal energy anywhere in the protocol, starts on the Gentle Renewal Peel at $199, and raises the strength only as the barrier allows. A HydraFacial at $259 sits between corrective sessions, and daily SPF holds the result.',
+      '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> uses no thermal energy anywhere in the protocol, starts on the Gentle Renewal Peel at $199, and raises the strength only as the barrier allows. Melasma is hormonal as well as solar, and heat is one of the triggers that deepens it. A HydraFacial at $259 sits between corrective sessions, and daily SPF holds the result.',
   },
   'corrective-skin-treatments:san-diego': {
     claim: 'One concern, sometimes several causes.',
     paragraph:
-      'A corrective plan is assembled from the modalities the skin actually needs, and the barrier usually explains more of the problem than the client expects. KIAMO Skin assesses the concern and the barrier at the first visit, then sets the plan — treatments, intervals and session count — before the next appointment is booked. The first visit is $249.',
+      '<a href="/" class="border-b border-blush/60 hover:text-blush">KIAMO Skin</a> assesses the concern and the barrier at the first visit, then sets the plan — treatments, intervals and session count — before the next appointment is booked. A corrective plan is assembled from the modalities the skin actually needs, and the barrier usually explains more of the problem than the client expects. The first visit is $249.',
   },
 };

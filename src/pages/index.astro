@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Hero from '../components/sections/Hero.astro';
+import BrandFacts from '../components/BrandFacts.astro';
 
 import TreatmentMarquee from '../components/sections/TreatmentMarquee.astro';
 import Credentials from '../components/sections/Credentials.astro';
@@ -102,6 +103,13 @@ const description = `KIAMO Skin — corrective facial spa in San Diego, CA. Firs
   />
 
   <Hero />
+
+  {/* The entity block, directly under the hero. Five declarative statements
+      in which KIAMO Skin is the subject of every sentence, closing with the
+      date they were last checked. It answers the questions a client has
+      before the prices — what is this, where is it, who does the work — and
+      it is the block an answer engine can attribute. */}
+  <BrandFacts class="bg-ivory" />
 
   {/* The prices. The quick answer that used to sit in a band between the
       hero and the prices now lives inside the hero, with the review card
