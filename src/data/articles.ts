@@ -11,6 +11,7 @@ import hyperpigmentationHero from '../assets/hyperpigmentation-melasma-treatment
 import liraPeel from '../assets/lira-peel-chemical-peel-hyperpigmentation-san-diego.jpg';
 import acneScars from '../assets/acne-scar-revision-procell-microchanneling-melanin-rich-skin-san-diego.jpg';
 import sunscreen from '../assets/sunscreen-for-pigmentation-melanin-rich-skin-san-diego.jpg';
+import barrierRepair from '../assets/skin-barrier-repair-treatment-san-diego.jpg';
 import { facialCostArticle } from './facial-cost-article';
 import { howToArticles } from './articles-howto';
 import { verifiedPrices } from '../config/business';
@@ -2826,6 +2827,271 @@ const writtenArticles: Article[] = [
     ],
     faqHeading: 'Dark spot questions',
     cta: { label: 'Book a consultation', href: '/book/' },
+  },
+  /**
+   * THE SENSITIVE-SKIN ARTICLE
+   *
+   * "facial for sensitive skin" runs around 480 searches a month in the
+   * United States at a keyword difficulty of 0 — the lowest difficulty term
+   * on the whole map — and it carries 496 searches a month in AI/LLM
+   * queries. The competitive field is thin: on the San Diego SERP the
+   * organic results are a directory listing, a Facebook answers page, an
+   * Instagram post and a Yelp listicle, and on the national SERP the
+   * pages that rank are Lemon8, Instagram and a "Top 10 in Las Vegas"
+   * listicle. No local studio holds the query.
+   *
+   * The keyword map already assigns this term to the DMK page, and the
+   * reason it gives is the right one: DMK enzyme therapy is the
+   * barrier-repair answer for exactly this skin state. This article is the
+   * supporting piece for that page, so it answers the question the money
+   * page cannot answer on its own — which modality, in what order, for
+   * which kind of reactive skin — and links back to the DMK page with
+   * the keyword as the anchor.
+   *
+   * The questions answered in the FAQ block are the ones Google surfaces
+   * for this query in People Also Ask.
+   */
+  {
+    slug: 'facial-for-sensitive-skin',
+    headline:
+      'Facial for sensitive skin: which modality suits a reactive barrier, and what each one costs',
+    title: 'Facial for Sensitive Skin (2026) | KIAMO Skin',
+    description:
+      'A facial for sensitive skin depends on what is actually reacting. DMK enzyme therapy, HydraFacial, peels and dermaplaning compared, with prices.',
+    standfirst:
+      'Sensitive skin is not a skin type, it is a condition — and the treatment that calms it can be the treatment that makes it worse.',
+    readingTime: '10 min read',
+    datePublished: '2026-11-25',
+    dateModified: '2026-11-25',
+    image: barrierRepair,
+    imageAlt:
+      'Barrier repair treatment in progress at the KIAMO Skin studio in Mission Hills, San Diego',
+    quickAnswer:
+      'For sensitive skin, KIAMO Skin starts with DMK enzyme therapy when the barrier is compromised — it rebuilds barrier function rather than stripping the skin, which is why it suits reactive skin that a chemical peel would inflame. HydraFacial suits sensitive skin that is also congested. A chemical peel waits until the barrier holds, and dermaplaning suits sensitive skin with surface texture. Level 1 DMK enzyme therapy is $279.',
+    body: [
+      {
+        p: 'Most people arrive at this question after something has already gone wrong. A peel that left the face hot for two days. A new serum that burned. A spa facial that was right for a friend and left the skin tight and red for a week.',
+        p: 'The reason those experiences feel random is that the word sensitive covers more than one condition, and the treatments that help one of them can worsen another.',
+      },
+      {
+        p: 'So the useful answer to "which facial is safe for sensitive skin" is not a single treatment. It is a way of telling apart the reasons skin reacts, because each one rules a treatment in or out.',
+        p: 'KIAMO Skin runs the full facial menu for exactly this reason: <a href="/services/dmk-enzyme-therapy/">DMK enzyme therapy</a> for a compromised barrier, <a href="/services/hydrafacial/">HydraFacial</a> for reactive skin that is also congested, <a href="/services/chemical-peel/">chemical peels</a> for pigment once the skin can take them, and <a href="/services/dermaplaning/">dermaplaning</a> for surface texture. Kiki assesses the skin on the day and selects the modality to match it.',
+      },
+      {
+        p: 'What follows is that selection, written out, so it can be applied before an appointment rather than during one.',
+      },
+
+      { h2: 'How do I know if my facial skin is sensitive?' },
+      {
+        answer:
+          'Sensitive skin reacts before the treatment does much. The signs are stinging within seconds of applying a product, redness that lingers for longer than the product took to dry, tightness that persists for hours afterwards, and flaking in patches rather than evenly. If the reaction is immediate and specific to a product, that is a contact reaction. If the skin reacts to nearly everything and has for months, the barrier itself is the problem.',
+      },
+      {
+        p: 'The distinction matters because the two are treated differently. A contact reaction means one product is removed and the skin is fine. A barrier that reacts to everything needs rebuilding before anything else is applied to it.',
+        p: 'KIAMO Skin tests for this at the first visit: the skin is assessed before any modality is chosen, because the wrong choice on a compromised barrier is what turns a sensitivity into a burn.',
+      },
+
+      { h2: 'Why sensitive skin reacts in the first place' },
+      {
+        answer:
+          'The barrier is the outermost layer of the skin, and it holds water in and keeps irritants out. When it is damaged, that function breaks down, and water escapes while anything applied to the surface gets in more readily. That is why compromised skin feels tight and reacts to products that were fine a month earlier — the sensitivity is a symptom of the barrier failing, not of the skin being delicate by nature.',
+      },
+      {
+        p: 'The common causes KIAMO Skin sees most often are over-exfoliation, sun exposure, a reaction to a strong product, and inflammation from an active condition. In San Diego there is a fifth worth naming, because it applies to anyone who swims, surfs or spends the summer outdoors.',
+      },
+      {
+        p: 'Salt water and coastal air strip the skin of its own lipids. San Diego\'s tap water runs around 16 grains per gallon, in the hard band, which leaves a mineral film on the skin that binds with sebum and clogs the follicle. The result is a face that is dehydrated, congested and reactive at the same time — a combination that no single-modality facial addresses well.',
+        p: 'KIAMO Skin wrote about that in detail in <a href="/journal/san-diego-hard-water-and-your-scalp/">what San Diego\'s hard water does to your scalp</a>, and the face carries the same mineral load as the scalp.',
+      },
+      {
+        p: 'For the clients who live in the water, the two exposures stack. Salt spray and coastal humidity strip the skin of its own lipids outdoors while the mineral film builds indoors, and together they leave the face dehydrated, congested and reactive at the same time. <a href="/service-areas/la-jolla/facial/">Barrier repair facials in La Jolla</a> and <a href="/service-areas/encinitas/facial/">sensitive skin treatments in Encinitas</a> are the bookings KIAMO Skin writes most often for that pattern.',
+      },
+
+      { h2: 'Which treatment for sensitive skin, and which to avoid' },
+      {
+        p: 'The four modalities KIAMO Skin performs each have a defined place for reactive skin, and each has a defined place where it does not belong.',
+      },
+      {
+        table: {
+          caption: 'Matching a treatment to a reactive barrier',
+          head: ['Treatment', 'For sensitive skin when', 'Not for sensitive skin when', 'Price'],
+          rows: [
+            [
+              'DMK enzyme therapy',
+              'The barrier is compromised: stinging, redness, tightness, or skin recovering from over-exfoliation',
+              'It is never the wrong answer here — this is the modality the others wait for',
+              '$279',
+            ],
+            [
+              'HydraFacial',
+              'The skin is reactive and also congested, and the goal is maintenance and glow',
+              'The skin is actively inflamed or freshly damaged — the treatment needs a calm surface first',
+              '$259',
+            ],
+            [
+              'Chemical peel',
+              'The barrier holds and the concern is pigmentation or texture',
+              'The skin reacts to most products. A peel on a compromised barrier inflames it',
+              '$199–$299',
+            ],
+            [
+              'Dermaplaning',
+              'Sensitive skin also has vellus hair or surface texture to refine',
+              'The skin is inflamed, or there is a history of keloid scarring',
+              '$199',
+            ],
+          ],
+        },
+      },
+
+      { h2: 'DMK enzyme therapy for a barrier that has been stripped' },
+      {
+        answer:
+          'DMK enzyme therapy is the right first treatment for compromised sensitive skin because it works on barrier function rather than on the surface. Enzymatic resurfacing removes what needs removing without the mechanical or thermal insult that leaves a reactive face burning, which is why it is the modality that can be used on skin a peel would inflame.',
+      },
+      {
+        p: 'KIAMO Skin uses DMK enzyme therapy as the first move for skin that stings, reddens or has been stripped by a strong product. The masque is applied and left to set; as it works, a client feels a tightening and rhythmic pulsing sensation, which is an expected part of the treatment and varies from person to person.',
+        p: 'Level 1 is $279, and it comes first by design. Levels 2 and 3 layer the enzymes for deeper correction and are prescribed only once Level 1 has prepared the skin, so the protocol and the price are set at consultation. The <a href="/services/dmk-enzyme-therapy/">DMK enzyme therapy page</a> sets out the full protocol.',
+      },
+      {
+        p: 'Two things follow from that protocol that are worth stating plainly. The first is that DMK is not a substitute for home care — the treatment room and the daily routine do the work together, and a client who skips the second half will see the result fade. The second is that DMK is not the answer to every kind of dark mark, and KIAMO Skin says so on the <a href="/journal/three-kinds-of-dark-mark/">guide to the three kinds of dark mark</a> rather than claiming every pigment responds to one protocol.',
+      },
+
+      { h2: 'HydraFacial for sensitive skin that is also congested' },
+      {
+        answer:
+          'A HydraFacial suits sensitive skin when the skin is reactive but not actively inflamed, because the treatment cleanses, exfoliates, extracts and hydrates in a single pass, and the extraction step clears congestion that no barrier-first treatment reaches.',
+      },
+      {
+        p: 'This is the modality for reactive skin with a second problem. Sensitive skin in a coastal climate is rarely only sensitive — the mineral film and daily sunscreen leave it congested as well, and a treatment that only rebuilds the barrier will not clear that.',
+        p: 'That combination is the one KIAMO Skin sees most in San Diego: a face that is dehydrated and reactive from salt and hard water, and congested underneath from a year of sunscreen and mineral residue. It is also the combination that responds best to a HydraFacial, because the extraction step clears what no barrier-first treatment reaches.',
+        p: 'The HydraFacial Syndeo at KIAMO Skin pairs Vortex-Fusion extraction with AI skin analysis, which is what makes it usable on reactive skin: pressure and serum selection are calibrated rather than fixed. It is $259.',
+      },
+
+      { h2: 'Chemical peels: the right treatment, in the wrong order' },
+      {
+        answer:
+          'A chemical peel is a strong treatment for pigmentation and texture, and it is the wrong treatment for a barrier that is currently compromised. On reactive skin, a peel adds inflammation, and inflammation is itself a pigment trigger — so the treatment intended to clear a dark mark can deepen it.',
+      },
+      {
+        p: 'KIAMO Skin does perform peels on melanin-rich skin, and does it well, because the pacing is the whole point: a prepared series at escalating strength, never one strong session. But that preparation assumes a barrier that can hold.',
+        p: 'The Lira gentle renewal peel is $199 and the advanced peel is $299. Both are quoted on the <a href="/services/chemical-peel/">chemical peel page</a>, along with what each concentration treats and how the series is staged.',
+      },
+      {
+        p: 'For a client who arrives with compromised skin, the sequence is usually barrier first, then a peel once the skin can take it. That sequence is the opposite of the one most studios sell, and it is why KIAMO Skin asks for the assessment to come before the booking rather than after it.',
+      },
+
+      { h2: 'Dermaplaning for surface texture on reactive skin' },
+      {
+        p: 'Dermaplaning removes the surface layer of dead skin cells and fine vellus hair with a sterile blade, and it is the gentlest of the four on skin that is merely sensitive. It refines texture and gives the treatment that follows it a clean surface to act on.',
+        p: 'It is $199 at KIAMO Skin. Two conditions rule it out: an actively inflamed barrier, and a history of keloid scarring. On a barrier that is compromised but not inflamed, dermaplaning is often paired with a hydrating modality in the same plan.',
+      },
+
+      { h2: 'What sensitive skin needs at home between visits' },
+      {
+        p: 'The daily routine is where a compromised barrier is rebuilt, and it is where most of the work happens. Kiki writes a regimen for every client at the first visit, because the products that repair a barrier are the ones that need to be chosen against a specific skin state rather than picked off a shelf.',
+      },
+      {
+        ul: [
+          'A ceramide-rich moisturiser for barrier repair — ceramides are the lipids the barrier is built from, and a compromised one cannot replace them fast enough on its own.',
+          'A gentle cleanser, used once in the evening rather than twice. Over-cleansing is one of the most common causes of the sensitivity in the first place.',
+          'Broad-spectrum SPF 50+ every day, year-round. Sun exposure keeps a damaged barrier damaged.',
+          'Nothing active on the skin that is currently reacting. Retinoids, exfoliating acids and vitamin C all belong in the plan once the skin is calm, not during.',
+        ],
+      },
+      {
+        p: 'What to leave out matters as much as what to add. KIAMO Skin writes those instructions down at the visit so the routine between appointments is the one that was chosen for the skin, rather than the one assembled from whatever was on offer.',
+        p: 'The daily SPF instruction carries more weight in San Diego than the same instruction would inland. The marine layer hides UV rather than blocking it, and the UV index across the county regularly sits at 8 to 10 through late spring and summer — including on overcast mornings when it never feels bright. KIAMO Skin covers that in <a href="/journal/june-gloom-is-not-sun-protection/">why June Gloom is not sun protection</a>, and it is the single most common reason a client who thought the skin was simply sensitive is actually dealing with ongoing UV damage.',
+      },
+
+      { h2: 'How much does a facial for sensitive skin cost in San Diego?' },
+      {
+        p: `Every price at KIAMO Skin is published before a booking is made. DMK enzyme therapy Level 1 is ${verifiedPrices['dmk-enzyme-1']}, a HydraFacial is ${verifiedPrices.hydrafacial}, dermaplaning is ${verifiedPrices['dermaplane-facial']}, and the Lira peels run from ${verifiedPrices['lira-light-peel']} to ${verifiedPrices['lira-advanced-peel']}. A first visit is ${verifiedPrices['first-time-client']} and includes the consultation and skin analysis that decide which of these is right.`,
+        p: 'Every price is published on the <a href="/services/">treatment menu</a> rather than quoted at the door, because comparing studios in San Diego is difficult when nobody lists a price. The <a href="/journal/how-much-does-a-facial-cost-san-diego/">price article</a> sets the published market rates against the studio\'s own.',
+      },
+
+      { h2: 'How to choose, in three questions' },
+      {
+        p: 'The order below is how KIAMO Skin decides at a first visit, and it is short because the skin answers it.',
+      },
+      {
+        ul: [
+          '<strong>Is the barrier compromised?</strong> If skin stings, reddens or is tight without a product to blame, the answer is <a href="/services/dmk-enzyme-therapy/">DMK enzyme therapy</a>. Nothing else is safe to apply first, and starting anywhere else is what turns sensitivity into a burn.',
+          '<strong>Is it also congested?</strong> If the skin is reactive but there is congestion, mineral film or a sunscreen build-up on top, a <a href="/services/hydrafacial/">HydraFacial</a> clears what the barrier work cannot reach, and the two are often used in sequence rather than instead of each other.',
+          '<strong>Is the concern pigment or texture rather than reactivity?</strong> If the skin can hold a treatment without flaring, then <a href="/services/chemical-peel/">chemical peels</a> are the strongest option available and <a href="/services/dermaplaning/">dermaplaning</a> refines the surface. This is the only branch where a peel is the first move.',
+        ],
+      },
+      {
+        p: 'If the answers to the first two questions are both no, the client is not asking for sensitive-skin treatment at all, and a booking built on that assumption is a booking that will disappoint. KIAMO Skin writes that decision down at the first visit rather than leaving it to the day.',
+      },
+
+      { h2: 'Choosing a studio for sensitive skin in San Diego' },
+      {
+        p: 'Two things matter more than the treatment list when the skin reacts. The first is whether the studio assesses before it treats — a facial chosen off a menu is a guess, and a guess is what causes the burn-and-recover cycle. The second is whether the studio will treat the condition as one to be managed over months rather than a single appointment.',
+      },
+      {
+        p: 'KIAMO Skin treats every Fitzpatrick type from I to VI, and raises peel strength only as the barrier allows. Kiki is a California licensed esthetician with 7+ years in corrective skin work, and performs every treatment personally in one private treatment room in Mission Hills.',
+      },
+
+      { h2: 'The short answer' },
+      {
+        answer:
+          'A facial for sensitive skin is not one treatment. When the barrier is compromised the answer is DMK enzyme therapy, because it is the only one of the four that rebuilds barrier function instead of stripping it. When the skin is reactive and also congested the answer is a HydraFacial. When the skin can hold a treatment and the concern is pigment or texture, the answer is a chemical peel or dermaplaning. In San Diego the local conditions — salt air, hard water at around 16 grains per gallon, and a UV index that sits at 8 to 10 through overcast summers — are why so many clients arrive with a barrier that has been quietly stripped.',
+      },
+      {
+        p: 'The part that matters more than the modality is what happens after it. KIAMO Skin writes a home-care routine for every client at the first visit, because a ceramide-rich moisturiser, gentle cleansing, daily SPF 50+ and a period without actives is the part that rebuilds a barrier. A treatment that is not defended at home fades, and the next client to arrive with the same complaint is the one who booked the peel before the barrier work.',
+        p: 'A first visit at KIAMO Skin is $249 and includes the consultation and skin analysis that decide which of these applies. The <a href="/services/dmk-enzyme-therapy/">DMK enzyme therapy page</a> sets out the barrier-repair protocol in full, and the <a href="/journal/how-much-does-a-facial-cost-san-diego/">price article</a> sets every published rate against the market.',
+      },
+    ],
+    faqs: [
+      {
+        question: 'How do I know if my facial skin is sensitive?',
+        answer:
+          'The signs are stinging within seconds of applying a product, redness that lasts longer than the product took to dry, tightness that persists for hours, and patchy flaking. If the reaction is immediate and tied to one product, that is a contact reaction and removing the product resolves it. If the skin reacts to nearly everything and has for months, the barrier itself is the problem, and KIAMO Skin rebuilds that first at the first visit rather than applying a treatment to skin that is still reacting.',
+      },
+      {
+        question: 'What type of facial is best for skin?',
+        answer:
+          'There is no single best facial, because the right one depends on the condition of the skin on the day rather than the concern that brought the client in. For a compromised barrier, KIAMO Skin uses DMK enzyme therapy, which rebuilds barrier function instead of stripping it. For reactive skin that is also congested, a HydraFacial is the better choice because the extraction clears what a barrier-first treatment cannot reach. For pigmentation on a barrier that holds, a chemical peel is the strongest option. The assessment at the first visit decides which of these applies, and the consultation is included in the first-visit price.',
+      },
+      {
+        question: 'How to fix dry, sensitive skin on face?',
+        answer:
+          'Start by stopping what is stripping it: gentler cleansing, fewer actives, and no exfoliating acids or retinoids on skin that is currently reacting. Then rebuild the barrier with a ceramide-rich moisturiser, since ceramides are the lipids the barrier is made of and a damaged one cannot replace them quickly enough alone. Daily broad-spectrum SPF 50+ keeps a damaged barrier damaged. And the professional half of the fix matters too: DMK enzyme therapy at KIAMO Skin removes the damaged surface through enzymatic rather than mechanical or thermal means, which is why it can be used on skin that a peel would inflame.',
+      },
+      {
+        question: 'What do dermatologists recommend for sensitive skin?',
+        answer:
+          'The dermatological recommendation for sensitive skin is generally to identify and remove the trigger, support the barrier, and avoid anything that causes inflammation — which is the same territory KIAMO Skin works in as an esthetician, approached from the treatment room rather than the clinic. The honest difference is scope. A dermatologist can prescribe, diagnose and treat disease, and KIAMO Skin does not prescribe or claim to. What KIAMO Skin does is assess skin condition, select the modality from four, and rebuild barrier function over a series of visits, at prices published in advance.',
+      },
+      {
+        question: 'What aggravates rosacea on the face?',
+        answer:
+          'Heat, alcohol-based products, strong exfoliants, and UV are the usual aggravators, which is why rosacea is managed rather than treated cosmetically. A facial is still compatible with rosacea once a dermatologist is managing it, and it is often the part that makes the daily routine more tolerable. KIAMO Skin treats rosacea-prone skin with the gentlest modalities available — DMK enzyme therapy and HydraFacial — and does not use heat or aggressive exfoliation on a reactive face. KIAMO Skin treats every Fitzpatrick type from I to VI and does not claim to treat the condition itself.',
+      },
+      {
+        question: 'How often should I do DMK enzyme therapy?',
+        answer:
+          'The cadence depends on the state the skin arrives in, and Kiki sets it at the first visit rather than selling a fixed package. A barrier that has been actively stripped usually needs closer spacing at first, and the interval lengthens as the barrier rebuilds. Because a barrier rebuilds over months rather than visits, DMK enzyme therapy at KIAMO Skin suits a standing monthly slot — and the membership plans are built around that cadence. Level 1 is $279, and Levels 2 and 3 are prescribed only once Level 1 has prepared the skin.',
+      },
+      {
+        question: 'What to expect after a DMK enzyme facial?',
+        answer:
+          'During the treatment, the enzyme masque is left to set and a client feels a tightening and rhythmic pulsing sensation, which is expected and varies from person to person. Afterward the skin is left protected and calm rather than raw — the difference from a peel is that there is no peel-down and no downtime window where the skin cannot be left in the sun. The home-care routine written at the visit is what carries the result between appointments, and that routine is prescribed rather than assembled from a shelf. KIAMO Skin publishes the full protocol on the DMK enzyme therapy page.',
+      },
+      {
+        question: 'Is an enzyme facial worth it?',
+        answer:
+          'For a barrier that has been stripped, yes — it is the treatment that can be used at all, because the alternatives would inflame the same skin. DMK enzyme therapy at KIAMO Skin is $279 for Level 1, and Level 1 comes first by design, with Levels 2 and 3 prescribed only once Level 1 has prepared the skin. It is worth it when the goal is to make the other treatments usable: a client whose skin cannot currently tolerate a HydraFacial or a peel is not choosing between them and enzyme therapy, they are choosing between starting the barrier work and continuing to react. What it is not is a substitute for the daily routine — Kiki writes that routine at the first visit because the treatment room and the home care do the work together.',
+      },
+      {
+        question: 'Is an enzyme peel different from a chemical peel?',
+        answer:
+          'Yes, and the difference is what makes enzyme therapy the safer choice on reactive skin. A chemical peel uses a controlled acid to disrupt the surface, and the disruption is the point — which is also why it inflames a compromised barrier. An enzyme peel uses enzymes to break down what needs removing, so it works on the skin function rather than on the surface itself. That is the reason DMK enzyme therapy at KIAMO Skin can be used on skin that a Lira chemical peel would leave burning. The cost of the gentler route is that it works on barrier function and congestion rather than on pigment directly, so a client whose concern is a dark mark is usually treated with the peel once the skin can take it.',
+      },
+    ],
+    faqHeading: 'Facial for sensitive skin questions',
+    cta: { label: 'See DMK enzyme therapy', href: '/services/dmk-enzyme-therapy/' },
   },
     /**
    * The price article. It lives in its own file because it is the one piece
